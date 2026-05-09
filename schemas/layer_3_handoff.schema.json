@@ -13,6 +13,7 @@
     "source_input",
     "pinterest_intelligence",
     "floor_plan",
+    "vibe_report",
     "creative_spec",
     "room_generation_jobs",
     "delivery",
@@ -31,6 +32,7 @@
     "source_input": { "$ref": "#/$defs/source_input" },
     "pinterest_intelligence": { "$ref": "#/$defs/pinterest_intelligence" },
     "floor_plan": { "$ref": "#/$defs/floor_plan" },
+    "vibe_report": { "$ref": "#/$defs/vibe_report" },
     "creative_spec": { "$ref": "#/$defs/creative_spec" },
     "room_generation_jobs": {
       "type": "array",
@@ -366,6 +368,52 @@
     "export_format": {
       "type": "string",
       "enum": ["16:9", "9:16", "1:1"]
+    },
+    "vibe_report": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "aesthetic_name",
+        "summary",
+        "palette_rationale",
+        "lighting_mood",
+        "materials",
+        "textures",
+        "furniture_language",
+        "styling_rules",
+        "avoid",
+        "room_guidance",
+        "confidence",
+        "warnings"
+      ],
+      "properties": {
+        "aesthetic_name": { "type": "string" },
+        "summary": { "type": "string" },
+        "palette_rationale": { "type": "string" },
+        "lighting_mood": { "type": "string" },
+        "materials": { "type": "array", "items": { "type": "string" } },
+        "textures": { "type": "array", "items": { "type": "string" } },
+        "furniture_language": { "type": "array", "items": { "type": "string" } },
+        "styling_rules": { "type": "array", "items": { "type": "string" } },
+        "avoid": { "type": "array", "items": { "type": "string" } },
+        "room_guidance": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["room_id", "headline", "guidance", "must_include", "must_avoid"],
+            "properties": {
+              "room_id": { "type": "string" },
+              "headline": { "type": "string" },
+              "guidance": { "type": "string" },
+              "must_include": { "type": "array", "items": { "type": "string" } },
+              "must_avoid": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "warnings": { "type": "array", "items": { "type": "string" } }
+      }
     },
     "room_generation_job": {
       "type": "object",

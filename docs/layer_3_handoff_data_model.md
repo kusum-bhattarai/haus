@@ -25,6 +25,7 @@ interface Layer3Handoff {
   source_input: SourceInput;
   pinterest_intelligence: PinterestIntelligence;
   floor_plan: FloorPlanData;
+  vibe_report: VibeReport;
   creative_spec: CreativeSpec;
   room_generation_jobs: RoomGenerationJob[];
   delivery: DeliverySpec;
@@ -200,10 +201,34 @@ type RoomType =
 
 ## Creative Spec
 
-This is the Layer 3 creative direction in compact form. Room-specific prompts
-live in `room_generation_jobs` so Layer 3.5 can iterate over one array.
+Layer 3 emits both a structured vibe report and executable generation spec. The
+vibe report explains the creative direction from Pinterest analysis; the
+generation spec and room jobs are the machine contract for Layers 3.5-5.
 
 ```typescript
+interface VibeReport {
+  aesthetic_name: string;
+  summary: string;
+  palette_rationale: string;
+  lighting_mood: string;
+  materials: string[];
+  textures: string[];
+  furniture_language: string[];
+  styling_rules: string[];
+  avoid: string[];
+  room_guidance: RoomVibeGuidance[];
+  confidence: number;
+  warnings: string[];
+}
+
+interface RoomVibeGuidance {
+  room_id: string;
+  headline: string;
+  guidance: string;
+  must_include: string[];
+  must_avoid: string[];
+}
+
 interface CreativeSpec {
   overall_mood: string;
   room_sequence: string[]; // room_ids in render/order sequence

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://haus.local/schemas/layer3_creative_plan.schema.json",
+  "title": "Haus Layer 3 Creative Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["vibe_report", "overall_mood", "global_style_notes", "negative_prompt", "room_plans", "warnings"],
+  "properties": {
+    "vibe_report": { "$ref": "layer_3_handoff.schema.json#/$defs/vibe_report" },
+    "overall_mood": { "type": "string" },
+    "global_style_notes": { "type": "array", "items": { "type": "string" } },
+    "negative_prompt": { "type": "string" },
+    "room_plans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "room_id",
+          "lighting_instruction",
+          "dalle_scene_details",
+          "autohdr_prompt",
+          "camera_motion",
+          "duration_seconds",
+          "must_include",
+          "must_avoid"
+        ],
+        "properties": {
+          "room_id": { "type": "string" },
+          "lighting_instruction": { "type": "string" },
+          "dalle_scene_details": { "type": "string" },
+          "autohdr_prompt": { "type": "string" },
+          "camera_motion": {
+            "type": "string",
+            "enum": ["slow_dolly", "orbital_pan", "aerial_drift", "static_zoom"]
+          },
+          "duration_seconds": { "type": "integer", "minimum": 1 },
+          "must_include": { "type": "array", "items": { "type": "string" } },
+          "must_avoid": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "warnings": { "type": "array", "items": { "type": "string" } }
+  }
+}
