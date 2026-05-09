@@ -225,6 +225,10 @@ Return ONLY valid JSON.
 }
 ```
 
+**Downstream handoff:** Layers 1-3 should emit a single `Layer3Handoff` bundle
+for Layers 3.5-5. See
+[docs/layer_3_handoff_data_model.md](docs/layer_3_handoff_data_model.md).
+
 **Camera motion selection logic:**
 | Room Type | Default Motion | Luxury Override |
 |-----------|---------------|-----------------|

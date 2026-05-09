@@ -1,0 +1,490 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://haus.local/schemas/layer_3_handoff.schema.json",
+  "title": "Haus Layer 3 Handoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "handoff_id",
+    "session_id",
+    "created_at",
+    "status",
+    "source_input",
+    "pinterest_intelligence",
+    "floor_plan",
+    "creative_spec",
+    "room_generation_jobs",
+    "delivery",
+    "provenance",
+    "warnings"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "handoff_id": { "type": "string", "format": "uuid" },
+    "session_id": { "type": "string", "format": "uuid" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "status": {
+      "type": "string",
+      "enum": ["ready_for_room_images", "partial_ready", "blocked"]
+    },
+    "source_input": { "$ref": "#/$defs/source_input" },
+    "pinterest_intelligence": { "$ref": "#/$defs/pinterest_intelligence" },
+    "floor_plan": { "$ref": "#/$defs/floor_plan" },
+    "creative_spec": { "$ref": "#/$defs/creative_spec" },
+    "room_generation_jobs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/room_generation_job" }
+    },
+    "delivery": { "$ref": "#/$defs/delivery" },
+    "provenance": { "$ref": "#/$defs/provenance" },
+    "warnings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/warning" }
+    }
+  },
+  "$defs": {
+    "source_input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["floor_plan_url", "pinterest_board_url", "brief", "objects", "platform"],
+      "properties": {
+        "floor_plan_url": { "type": "string", "format": "uri" },
+        "pinterest_board_url": { "type": "string", "format": "uri" },
+        "brief": { "type": ["string", "null"] },
+        "objects": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/object_selection" }
+        },
+        "platform": { "$ref": "#/$defs/delivery_platform" }
+      }
+    },
+    "object_selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_type", "room_id", "label"],
+      "properties": {
+        "object_type": { "$ref": "#/$defs/object_type" },
+        "room_id": { "type": ["string", "null"] },
+        "label": { "type": "string" }
+      }
+    },
+    "object_type": {
+      "type": "string",
+      "enum": [
+        "standing_desk",
+        "crib",
+        "wine_rack",
+        "bookshelf",
+        "yoga_mat",
+        "home_studio",
+        "dining_table",
+        "home_gym"
+      ]
+    },
+    "delivery_platform": {
+      "type": "string",
+      "enum": ["all", "instagram", "tiktok", "listing", "portfolio"]
+    },
+    "pinterest_intelligence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["aesthetic_profile", "pins", "cluster_summary"],
+      "properties": {
+        "aesthetic_profile": { "$ref": "#/$defs/aesthetic_profile" },
+        "pins": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/pinterest_pin" }
+        },
+        "cluster_summary": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/pinterest_cluster" }
+        }
+      }
+    },
+    "aesthetic_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "palette",
+        "lighting",
+        "density",
+        "style_era",
+        "dominant_colors",
+        "mood_words",
+        "pinterest_cluster_labels",
+        "confidence"
+      ],
+      "properties": {
+        "palette": {
+          "type": "string",
+          "enum": ["warm_neutral", "cool_neutral", "earthy", "monochrome", "bold"]
+        },
+        "lighting": {
+          "type": "string",
+          "enum": ["golden_hour", "soft_ambient", "bright_natural", "dramatic", "artificial"]
+        },
+        "density": {
+          "type": "string",
+          "enum": ["minimal", "balanced", "layered", "maximalist"]
+        },
+        "style_era": {
+          "type": "string",
+          "enum": [
+            "japandi",
+            "mid_century",
+            "scandinavian",
+            "coastal",
+            "industrial",
+            "maximalist",
+            "traditional"
+          ]
+        },
+        "dominant_colors": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 6,
+          "items": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+        },
+        "mood_words": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "pinterest_cluster_labels": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "pinterest_pin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pin_id",
+        "source_url",
+        "image_url",
+        "title",
+        "description",
+        "save_count",
+        "hashtags",
+        "cluster_label",
+        "selected_for_mood_board"
+      ],
+      "properties": {
+        "pin_id": { "type": "string" },
+        "source_url": { "type": "string", "format": "uri" },
+        "image_url": { "type": "string", "format": "uri" },
+        "title": { "type": ["string", "null"] },
+        "description": { "type": ["string", "null"] },
+        "save_count": { "type": ["integer", "null"], "minimum": 0 },
+        "hashtags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "cluster_label": { "type": ["string", "null"] },
+        "selected_for_mood_board": { "type": "boolean" }
+      }
+    },
+    "pinterest_cluster": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "pin_ids", "visual_notes", "weight"],
+      "properties": {
+        "label": { "type": "string" },
+        "pin_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "visual_notes": { "type": "string" },
+        "weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "floor_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["layout_type", "total_rooms", "rooms"],
+      "properties": {
+        "layout_type": {
+          "type": "string",
+          "enum": ["open_plan", "traditional", "studio"]
+        },
+        "total_rooms": { "type": "integer", "minimum": 1 },
+        "rooms": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/floor_plan_room" }
+        }
+      }
+    },
+    "floor_plan_room": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "room_id",
+        "name",
+        "room_type",
+        "area_estimate",
+        "windows",
+        "natural_light",
+        "adjoins",
+        "generation_priority"
+      ],
+      "properties": {
+        "room_id": { "type": "string" },
+        "name": { "type": "string" },
+        "room_type": { "$ref": "#/$defs/room_type" },
+        "area_estimate": {
+          "type": "string",
+          "enum": ["large", "medium", "small"]
+        },
+        "windows": { "type": "string" },
+        "natural_light": {
+          "type": "string",
+          "enum": ["high", "medium", "low", "unknown"]
+        },
+        "adjoins": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "generation_priority": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "room_type": {
+      "type": "string",
+      "enum": ["living_room", "bedroom", "kitchen", "bathroom", "office", "dining_room", "other"]
+    },
+    "creative_spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["overall_mood", "room_sequence", "global_style_notes", "negative_prompt", "export_formats"],
+      "properties": {
+        "overall_mood": { "type": "string" },
+        "room_sequence": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "global_style_notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "negative_prompt": { "type": "string" },
+        "export_formats": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/export_format" }
+        }
+      }
+    },
+    "export_format": {
+      "type": "string",
+      "enum": ["16:9", "9:16", "1:1"]
+    },
+    "room_generation_job": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "job_id",
+        "room_id",
+        "room_name",
+        "room_type",
+        "sequence_index",
+        "dalle",
+        "autohdr",
+        "staging",
+        "quality_gate"
+      ],
+      "properties": {
+        "job_id": { "type": "string", "format": "uuid" },
+        "room_id": { "type": "string" },
+        "room_name": { "type": "string" },
+        "room_type": { "$ref": "#/$defs/room_type" },
+        "sequence_index": { "type": "integer", "minimum": 0 },
+        "dalle": { "$ref": "#/$defs/dalle_image_spec" },
+        "autohdr": { "$ref": "#/$defs/autohdr_spec" },
+        "staging": { "$ref": "#/$defs/staging_spec" },
+        "quality_gate": { "$ref": "#/$defs/room_quality_gate" }
+      }
+    },
+    "dalle_image_spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prompt", "size", "quality", "style", "expected_aspect_ratio"],
+      "properties": {
+        "prompt": { "type": "string" },
+        "size": { "const": "1792x1024" },
+        "quality": { "type": "string", "enum": ["hd", "standard"] },
+        "style": { "type": "string", "enum": ["natural", "vivid"] },
+        "expected_aspect_ratio": { "const": "16:9" }
+      }
+    },
+    "autohdr_spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prompt", "camera_motion", "duration_seconds", "format"],
+      "properties": {
+        "prompt": { "type": "string" },
+        "camera_motion": {
+          "type": "string",
+          "enum": ["slow_dolly", "orbital_pan", "aerial_drift", "static_zoom"]
+        },
+        "duration_seconds": { "type": "integer", "minimum": 1 },
+        "format": { "const": "16:9" }
+      }
+    },
+    "staging_spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lighting_instruction", "objects_to_include", "must_include", "must_avoid"],
+      "properties": {
+        "lighting_instruction": { "type": "string" },
+        "objects_to_include": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/object_selection" }
+        },
+        "must_include": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "must_avoid": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "room_quality_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min_eval_score", "max_autohdr_attempts", "regenerate_image_if"],
+      "properties": {
+        "min_eval_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "max_autohdr_attempts": { "type": "integer", "minimum": 1 },
+        "regenerate_image_if": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["visible_people", "wrong_room_type", "major_style_mismatch", "object_missing"]
+          }
+        }
+      }
+    },
+    "delivery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["requested_platforms", "video_formats", "caption_context", "mood_board"],
+      "properties": {
+        "requested_platforms": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/delivery_platform" }
+        },
+        "video_formats": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/export_format" }
+        },
+        "caption_context": { "$ref": "#/$defs/caption_context" },
+        "mood_board": { "$ref": "#/$defs/mood_board" }
+      }
+    },
+    "caption_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["property_brief", "aesthetic_summary", "featured_objects", "tone"],
+      "properties": {
+        "property_brief": { "type": ["string", "null"] },
+        "aesthetic_summary": { "type": "string" },
+        "featured_objects": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "tone": {
+          "type": "string",
+          "enum": ["luxury_listing", "social_shortform", "portfolio"]
+        }
+      }
+    },
+    "mood_board": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["include_pin_ids", "include_room_ids", "annotations"],
+      "properties": {
+        "include_pin_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "include_room_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "annotations": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mood_board_annotation" }
+        }
+      }
+    },
+    "mood_board_annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "value"],
+      "properties": {
+        "label": { "type": "string" },
+        "value": { "type": "string" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["layer_1_payload_created_at", "pinterest_scrape", "models"],
+      "properties": {
+        "layer_1_payload_created_at": { "type": "string", "format": "date-time" },
+        "pinterest_scrape": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["provider", "item_count", "fallback_used", "fallback_reason"],
+          "properties": {
+            "provider": { "const": "apify" },
+            "item_count": { "type": "integer", "minimum": 0 },
+            "fallback_used": { "type": "boolean" },
+            "fallback_reason": { "type": ["string", "null"] }
+          }
+        },
+        "models": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["aesthetic_extraction", "floor_plan_parsing", "creative_spec"],
+          "properties": {
+            "aesthetic_extraction": { "type": "string" },
+            "floor_plan_parsing": { "type": "string" },
+            "creative_spec": { "type": "string" }
+          }
+        }
+      }
+    },
+    "warning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message", "severity", "affected_room_ids"],
+      "properties": {
+        "code": { "type": "string" },
+        "message": { "type": "string" },
+        "severity": { "type": "string", "enum": ["info", "warning", "error"] },
+        "affected_room_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}
