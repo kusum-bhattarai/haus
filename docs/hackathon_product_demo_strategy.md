@@ -155,6 +155,12 @@ Suggested screens:
 5. Final video result
 6. AI edit agent for post-video room-specific changes
 
+Current integrated demo floor plans:
+
+- `1b1`: 1 Bedroom / 1 Bath, 689 sq ft
+- `2b2`: 2 Bedroom / 2 Bath, 988 sq ft
+- `3b2`: 3 Bedroom / 2 Bath, 1,250 sq ft
+
 ## Post-Video Edit Agent
 
 After the user watches the generated video, they should be able to ask for a
