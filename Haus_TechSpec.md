@@ -219,6 +219,11 @@ User:   [floor_plan_image]
 
 **Output:** `aesthetic_profile.json` — the contract between Layer 2 and Layer 3.
 
+Implementation note: Layer 2 persists a full `Layer2Profile` bundle containing
+the aesthetic profile, normalized pins, cluster summaries, parsed floor plan
+structure, Layer 1 payload, and provenance. See
+[schemas/layer2_profile.schema.json](schemas/layer2_profile.schema.json).
+
 ---
 
 ### Layer 3 — Creative Spec Agent
