@@ -9,7 +9,7 @@ Machine-readable validation lives at
 
 The downstream services should treat this object as read-only source of truth.
 Layer 3.5 can generate staged room images directly from `room_generation_jobs`.
-Layer 4 can animate those images with the same room ids and AutoHDR prompts.
+Layer 4 can animate those images with the same room ids and fal video prompts.
 Layer 5 can package the final output using `delivery`.
 
 ## Top-Level Contract
@@ -254,7 +254,7 @@ interface RoomGenerationJob {
   sequence_index: number;
 
   dalle: DalleImageSpec;
-  autohdr: AutoHdrSpec;
+  video_generation: FalVideoGenerationSpec;
   staging: StagingSpec;
   quality_gate: RoomQualityGate;
 }
@@ -267,11 +267,13 @@ interface DalleImageSpec {
   expected_aspect_ratio: '16:9';
 }
 
-interface AutoHdrSpec {
+interface FalVideoGenerationSpec {
+  provider: 'fal';
+  model: string;
   prompt: string;
   camera_motion: 'slow_dolly' | 'orbital_pan' | 'aerial_drift' | 'static_zoom';
   duration_seconds: number;
-  format: '16:9';
+  aspect_ratio: '16:9' | '9:16' | '1:1';
 }
 
 interface StagingSpec {
@@ -283,7 +285,7 @@ interface StagingSpec {
 
 interface RoomQualityGate {
   min_eval_score: number; // default 7.0, demo default 6.5
-  max_autohdr_attempts: number; // default 3, demo default 2
+  max_video_attempts: number; // default 3, demo default 2
   regenerate_image_if: ImageRegenReason[];
 }
 
@@ -481,11 +483,13 @@ interface HandoffWarning {
         "style": "natural",
         "expected_aspect_ratio": "16:9"
       },
-      "autohdr": {
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
         "prompt": "Slow cinematic dolly through a warm Japandi living room, emphasizing cream linen, oak textures, and golden natural light.",
         "camera_motion": "slow_dolly",
         "duration_seconds": 5,
-        "format": "16:9"
+        "aspect_ratio": "16:9"
       },
       "staging": {
         "lighting_instruction": "golden natural light from south-facing windows",
@@ -495,7 +499,7 @@ interface HandoffWarning {
       },
       "quality_gate": {
         "min_eval_score": 7,
-        "max_autohdr_attempts": 3,
+        "max_video_attempts": 3,
         "regenerate_image_if": ["visible_people", "wrong_room_type", "major_style_mismatch"]
       }
     }

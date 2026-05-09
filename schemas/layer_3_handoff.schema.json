@@ -425,7 +425,7 @@
         "room_type",
         "sequence_index",
         "dalle",
-        "autohdr",
+        "video_generation",
         "staging",
         "quality_gate"
       ],
@@ -436,7 +436,7 @@
         "room_type": { "$ref": "#/$defs/room_type" },
         "sequence_index": { "type": "integer", "minimum": 0 },
         "dalle": { "$ref": "#/$defs/dalle_image_spec" },
-        "autohdr": { "$ref": "#/$defs/autohdr_spec" },
+        "video_generation": { "$ref": "#/$defs/fal_video_generation_spec" },
         "staging": { "$ref": "#/$defs/staging_spec" },
         "quality_gate": { "$ref": "#/$defs/room_quality_gate" }
       }
@@ -453,18 +453,20 @@
         "expected_aspect_ratio": { "const": "16:9" }
       }
     },
-    "autohdr_spec": {
+    "fal_video_generation_spec": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["prompt", "camera_motion", "duration_seconds", "format"],
+      "required": ["provider", "model", "prompt", "camera_motion", "duration_seconds", "aspect_ratio"],
       "properties": {
+        "provider": { "const": "fal" },
+        "model": { "type": "string" },
         "prompt": { "type": "string" },
         "camera_motion": {
           "type": "string",
           "enum": ["slow_dolly", "orbital_pan", "aerial_drift", "static_zoom"]
         },
         "duration_seconds": { "type": "integer", "minimum": 1 },
-        "format": { "const": "16:9" }
+        "aspect_ratio": { "type": "string", "enum": ["16:9", "9:16", "1:1"] }
       }
     },
     "staging_spec": {
@@ -490,14 +492,14 @@
     "room_quality_gate": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["min_eval_score", "max_autohdr_attempts", "regenerate_image_if"],
+      "required": ["min_eval_score", "max_video_attempts", "regenerate_image_if"],
       "properties": {
         "min_eval_score": {
           "type": "number",
           "minimum": 0,
           "maximum": 10
         },
-        "max_autohdr_attempts": { "type": "integer", "minimum": 1 },
+        "max_video_attempts": { "type": "integer", "minimum": 1 },
         "regenerate_image_if": {
           "type": "array",
           "items": {

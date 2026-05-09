@@ -65,7 +65,7 @@ export const CREATIVE_PLAN_SCHEMA = {
           'room_id',
           'lighting_instruction',
           'dalle_scene_details',
-          'autohdr_prompt',
+          'video_prompt',
           'camera_motion',
           'duration_seconds',
           'must_include',
@@ -75,7 +75,7 @@ export const CREATIVE_PLAN_SCHEMA = {
           room_id: { type: 'string' },
           lighting_instruction: { type: 'string' },
           dalle_scene_details: { type: 'string' },
-          autohdr_prompt: { type: 'string' },
+          video_prompt: { type: 'string' },
           camera_motion: {
             type: 'string',
             enum: ['slow_dolly', 'orbital_pan', 'aerial_drift', 'static_zoom']

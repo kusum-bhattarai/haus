@@ -5,7 +5,8 @@ import {
   DEFAULT_NEGATIVE_PROMPT,
   LUXURY_CAMERA_MOTION_BY_ROOM_TYPE,
   OBJECT_LABELS,
-  OBJECT_ROOM_PREFERENCES
+  OBJECT_ROOM_PREFERENCES,
+  DEFAULT_FAL_VIDEO_MODEL
 } from './constants.js';
 
 export function buildLayer3Handoff(profile, creativePlan, options = {}) {
@@ -57,11 +58,13 @@ export function buildLayer3Handoff(profile, creativePlan, options = {}) {
         style: 'natural',
         expected_aspect_ratio: '16:9'
       },
-      autohdr: {
-        prompt: roomPlan.autohdr_prompt ?? buildAutoHdrPrompt(profile, room, cameraMotion),
+      video_generation: {
+        provider: 'fal',
+        model: options.falVideoModel ?? DEFAULT_FAL_VIDEO_MODEL,
+        prompt: roomPlan.video_prompt ?? buildVideoPrompt(profile, room, cameraMotion),
         camera_motion: cameraMotion,
         duration_seconds: roomPlan.duration_seconds ?? 5,
-        format: '16:9'
+        aspect_ratio: '16:9'
       },
       staging: {
         lighting_instruction: lightingInstruction,
@@ -71,7 +74,7 @@ export function buildLayer3Handoff(profile, creativePlan, options = {}) {
       },
       quality_gate: {
         min_eval_score: options.demoMode ? 6.5 : 7,
-        max_autohdr_attempts: options.demoMode ? 2 : 3,
+        max_video_attempts: options.demoMode ? 2 : 3,
         regenerate_image_if: ['visible_people', 'wrong_room_type', 'major_style_mismatch', 'object_missing']
       }
     };
@@ -232,7 +235,7 @@ function buildDallePrompt({ profile, creativePlan, room, roomPlan, lightingInstr
   ].filter(Boolean).join(', ');
 }
 
-function buildAutoHdrPrompt(profile, room, cameraMotion) {
+function buildVideoPrompt(profile, room, cameraMotion) {
   return [
     `Cinematic ${cameraMotion.replaceAll('_', ' ')} through the ${room.name}`,
     `${profile.aesthetic_profile.style_era} interior styling`,

@@ -1,4 +1,5 @@
-export const DEFAULT_CREATIVE_MODEL = 'gpt-4.1-mini';
+export const DEFAULT_CREATIVE_MODEL = 'gpt-5-mini';
+export const DEFAULT_FAL_VIDEO_MODEL = 'fal-ai/kling-video/v1.6/pro/image-to-video';
 
 export const CAMERA_MOTION_BY_ROOM_TYPE = {
   living_room: 'slow_dolly',

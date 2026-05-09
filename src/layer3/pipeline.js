@@ -1,4 +1,4 @@
-import { DEFAULT_CREATIVE_MODEL } from './constants.js';
+import { DEFAULT_CREATIVE_MODEL, DEFAULT_FAL_VIDEO_MODEL } from './constants.js';
 import { createCreativePlan } from './creativePlanner.js';
 import { layer3CreativePlanCacheKey } from './cacheKeys.js';
 import { buildLayer3Handoff } from './handoffBuilder.js';
@@ -8,6 +8,7 @@ import { validateCreativePlan, validateLayer3Handoff } from './validation.js';
 export async function createLayer3Handoff(profile, options = {}) {
   const storage = createLayer3Storage(options);
   const creativeModel = options.openAiCreativeModel ?? process.env.OPENAI_CREATIVE_MODEL ?? DEFAULT_CREATIVE_MODEL;
+  const falVideoModel = options.falVideoModel ?? process.env.FAL_VIDEO_MODEL ?? DEFAULT_FAL_VIDEO_MODEL;
   const cacheKey = layer3CreativePlanCacheKey(profile, creativeModel);
 
   let creativePlan = await storage.readCreativePlan(cacheKey);
@@ -30,7 +31,8 @@ export async function createLayer3Handoff(profile, options = {}) {
     jobIdFactory: options.jobIdFactory,
     now: options.now,
     demoMode: options.demoMode,
-    creativeModel
+    creativeModel,
+    falVideoModel
   }));
 
   if (options.persist !== false) {
