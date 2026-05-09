@@ -6,6 +6,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { loadEnvFile } from './src/env.js';
+import { createAgentRuntime } from './src/agent/index.js';
 import { FLOOR_PLANS, findFloorPlan } from './src/floorPlans.js';
 import { createLayer1Payload, Layer1ValidationError } from './src/layer1/index.js';
 import { createLayer2Profile, Layer2ValidationError } from './src/layer2/index.js';
@@ -18,33 +19,65 @@ const frontendDir = path.join(__dirname, 'frontend');
 const port = Number(process.env.PORT ?? 3000);
 const host = process.env.HOST ?? '127.0.0.1';
 
-const server = http.createServer(async (req, res) => {
-  try {
-    const url = new URL(req.url, `http://${req.headers.host}`);
+export function createHausServer(options = {}) {
+  const runtimePromise = Promise.resolve(options.agentRuntime ?? createAgentRuntime({ rootDir: __dirname }));
 
-    if (req.method === 'GET' && url.pathname === '/api/floor-plans') {
-      return sendJson(res, {
-        floor_plans: FLOOR_PLANS.map(({ imagePath, ...plan }) => plan)
-      });
+  return http.createServer(async (req, res) => {
+    try {
+      const url = new URL(req.url, `http://${req.headers.host}`);
+      const agentRuntime = await runtimePromise;
+
+      if (req.method === 'GET' && url.pathname === '/api/floor-plans') {
+        return sendJson(res, {
+          floor_plans: FLOOR_PLANS.map(({ imagePath, ...plan }) => plan)
+        });
+      }
+
+      if (req.method === 'POST' && url.pathname === '/api/pipeline/layers-1-3') {
+        return await handlePipeline(req, res);
+      }
+
+      if (req.method === 'POST' && url.pathname === '/api/jobs') {
+        return await handleCreateJob(req, res, agentRuntime);
+      }
+
+      const jobEventsMatch = url.pathname.match(/^\/api\/jobs\/([^/]+)\/events$/);
+      if (req.method === 'GET' && jobEventsMatch) {
+        return await handleJobEvents(req, res, agentRuntime, jobEventsMatch[1]);
+      }
+
+      const jobMatch = url.pathname.match(/^\/api\/jobs\/([^/]+)$/);
+      if (req.method === 'GET' && jobMatch) {
+        return await handleGetJob(res, agentRuntime, jobMatch[1]);
+      }
+
+      const approvalMatch = url.pathname.match(/^\/api\/jobs\/([^/]+)\/rooms\/([^/]+)\/still-approval$/);
+      if (req.method === 'POST' && approvalMatch) {
+        return await handleStillApproval(req, res, agentRuntime, approvalMatch[1], approvalMatch[2]);
+      }
+
+      const retryMatch = url.pathname.match(/^\/api\/jobs\/([^/]+)\/rooms\/([^/]+)\/retry$/);
+      if (req.method === 'POST' && retryMatch) {
+        return await handleRetryRoom(req, res, agentRuntime, retryMatch[1], retryMatch[2]);
+      }
+
+      if (req.method === 'GET') {
+        return serveStatic(url.pathname, res);
+      }
+
+      return sendJson(res, { error: 'Not found' }, 404);
+    } catch (error) {
+      return sendError(res, error);
     }
+  });
+}
 
-    if (req.method === 'POST' && url.pathname === '/api/pipeline/layers-1-3') {
-      return await handlePipeline(req, res);
-    }
-
-    if (req.method === 'GET') {
-      return serveStatic(url.pathname, res);
-    }
-
-    return sendJson(res, { error: 'Not found' }, 404);
-  } catch (error) {
-    return sendError(res, error);
-  }
-});
-
-server.listen(port, host, () => {
-  console.log(`Haus demo server running at http://${host}:${port}`);
-});
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const server = createHausServer();
+  server.listen(port, host, () => {
+    console.log(`Haus demo server running at http://${host}:${port}`);
+  });
+}
 
 async function handlePipeline(req, res) {
   const body = await readJsonBody(req);
@@ -71,6 +104,69 @@ async function handlePipeline(req, res) {
     profile,
     handoff
   });
+}
+
+async function handleCreateJob(req, res, agentRuntime) {
+  const body = await readJsonBody(req);
+  const job = await agentRuntime.createJob({
+    floor_plan_id: body.floor_plan_id,
+    pinterest_board_url: body.pinterest_board_url,
+    brief: body.brief ?? null,
+    objects: Array.isArray(body.objects) ? body.objects : [],
+    platform: body.platform ?? 'all'
+  });
+
+  return sendJson(res, {
+    job_id: job.job_id,
+    status: job.status,
+    current_state: job.current_state
+  }, 202);
+}
+
+async function handleGetJob(res, agentRuntime, jobId) {
+  const job = await agentRuntime.getJob(jobId);
+  return sendJson(res, job);
+}
+
+async function handleJobEvents(req, res, agentRuntime, jobId) {
+  const job = await agentRuntime.getJob(jobId);
+  res.writeHead(200, {
+    'Content-Type': 'text/event-stream; charset=utf-8',
+    'Cache-Control': 'no-cache, no-transform',
+    Connection: 'keep-alive'
+  });
+
+  for (const event of job.events) {
+    res.write(`data: ${JSON.stringify(event)}\n\n`);
+  }
+
+  const unsubscribe = agentRuntime.subscribe(jobId, (event) => {
+    res.write(`data: ${JSON.stringify(event)}\n\n`);
+  });
+  req.on('close', unsubscribe);
+}
+
+async function handleStillApproval(req, res, agentRuntime, jobId, roomId) {
+  const body = await readJsonBody(req);
+  setImmediate(() => {
+    agentRuntime.approveStill(jobId, roomId, {
+      approved: Boolean(body.approved),
+      note: body.note ?? null
+    }).catch((error) => console.error(error));
+  });
+  return sendJson(res, { ok: true, job_id: jobId, room_id: roomId }, 202);
+}
+
+async function handleRetryRoom(req, res, agentRuntime, jobId, roomId) {
+  const body = await readJsonBody(req);
+  setImmediate(() => {
+    agentRuntime.retryRoom(jobId, roomId, {
+      target: body.target ?? 'video',
+      note: body.note ?? null,
+      referencePinIds: Array.isArray(body.reference_pin_ids) ? body.reference_pin_ids : []
+    }).catch((error) => console.error(error));
+  });
+  return sendJson(res, { ok: true, job_id: jobId, room_id: roomId }, 202);
 }
 
 function floorPlanForClient({ imagePath, ...plan }) {

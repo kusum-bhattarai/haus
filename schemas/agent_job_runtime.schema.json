@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://haus.local/schemas/agent_job_runtime.schema.json",
+  "title": "Haus Agent Job Runtime",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "job_id",
+    "session_id",
+    "status",
+    "current_state",
+    "created_at",
+    "updated_at",
+    "layer3_handoff_path",
+    "rooms",
+    "artifacts",
+    "events",
+    "warnings"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "job_id": { "type": "string", "format": "uuid" },
+    "session_id": { "type": "string", "format": "uuid" },
+    "status": {
+      "type": "string",
+      "enum": ["queued", "running", "waiting", "completed", "failed", "partial_ready"]
+    },
+    "current_state": { "$ref": "#/$defs/job_state" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "layer3_handoff_path": { "type": "string" },
+    "rooms": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/room_runtime" }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["final_video_path", "caption_paths", "mood_board_url"],
+      "properties": {
+        "final_video_path": { "type": ["string", "null"] },
+        "caption_paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "mood_board_url": { "type": ["string", "null"] }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/job_event" }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/warning" }
+    }
+  },
+  "$defs": {
+    "job_state": {
+      "type": "string",
+      "enum": [
+        "CREATED",
+        "VALIDATING_INPUTS",
+        "LAYER1_READY",
+        "LAYER2_READY",
+        "LAYER3_READY",
+        "ROOM_IMAGE_GENERATING",
+        "ROOM_IMAGE_REVIEW",
+        "ROOM_VIDEO_GENERATING",
+        "ROOM_VIDEO_EVALUATING",
+        "ROOM_VIDEO_RETRYING",
+        "ROOM_APPROVED",
+        "PACKAGING_OUTPUTS",
+        "WAITING_FOR_USER_APPROVAL",
+        "FALLBACK_MODE",
+        "PARTIAL_READY",
+        "COMPLETED",
+        "FAILED"
+      ]
+    },
+    "room_state": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "IMAGE_GENERATING",
+        "IMAGE_READY",
+        "IMAGE_RESTYLE_RETRYING",
+        "VIDEO_GENERATING",
+        "VIDEO_READY",
+        "EVALUATING",
+        "VIDEO_RETRYING",
+        "APPROVED",
+        "FALLBACK_APPROVED",
+        "FAILED"
+      ]
+    },
+    "room_runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "room_id",
+        "room_name",
+        "sequence_index",
+        "state",
+        "attempt_count",
+        "max_attempts",
+        "current_motion_mode",
+        "scores",
+        "artifacts"
+      ],
+      "properties": {
+        "room_id": { "type": "string" },
+        "room_name": { "type": "string" },
+        "sequence_index": { "type": "integer", "minimum": 0 },
+        "state": { "$ref": "#/$defs/room_state" },
+        "attempt_count": { "type": "integer", "minimum": 0 },
+        "max_attempts": { "type": "integer", "minimum": 1 },
+        "current_motion_mode": {
+          "type": ["string", "null"],
+          "enum": ["slow_dolly", "orbital_pan", "aerial_drift", "static_zoom", null]
+        },
+        "scores": { "$ref": "#/$defs/room_scores" },
+        "artifacts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_image_path", "styled_image_path", "video_clip_path"],
+          "properties": {
+            "source_image_path": { "type": ["string", "null"] },
+            "styled_image_path": { "type": ["string", "null"] },
+            "video_clip_path": { "type": ["string", "null"] }
+          }
+        }
+      }
+    },
+    "room_scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "style_match",
+        "architecture_stability",
+        "motion_quality",
+        "lighting_realism",
+        "overall"
+      ],
+      "properties": {
+        "style_match": { "type": ["number", "null"], "minimum": 0, "maximum": 10 },
+        "architecture_stability": { "type": ["number", "null"], "minimum": 0, "maximum": 10 },
+        "motion_quality": { "type": ["number", "null"], "minimum": 0, "maximum": 10 },
+        "lighting_realism": { "type": ["number", "null"], "minimum": 0, "maximum": 10 },
+        "overall": { "type": ["number", "null"], "minimum": 0, "maximum": 10 }
+      }
+    },
+    "job_event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["event_id", "at", "type", "state", "message"],
+      "properties": {
+        "event_id": { "type": "string", "format": "uuid" },
+        "at": { "type": "string", "format": "date-time" },
+        "type": { "type": "string" },
+        "room_id": { "type": ["string", "null"] },
+        "state": { "$ref": "#/$defs/job_state" },
+        "message": { "type": "string" }
+      }
+    },
+    "warning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message", "severity"],
+      "properties": {
+        "code": { "type": "string" },
+        "message": { "type": "string" },
+        "severity": { "type": "string", "enum": ["info", "warning", "error"] }
+      }
+    }
+  }
+}

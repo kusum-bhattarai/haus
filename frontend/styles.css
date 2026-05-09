@@ -247,6 +247,7 @@ button {
 .truth-note,
 .video-panel,
 .vibe-report,
+.reference-gallery,
 .room-strip article,
 .chat-panel,
 .placement-panel,
@@ -414,6 +415,64 @@ dd {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 18px;
+}
+
+.reference-gallery {
+  padding: 18px;
+}
+
+.reference-gallery-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.reference-gallery-header h3 {
+  margin: 4px 0 0;
+  font-size: 20px;
+}
+
+.reference-gallery-header span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.reference-grid,
+.runtime-reference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.reference-card,
+.runtime-reference-card {
+  display: grid;
+  gap: 10px;
+}
+
+.reference-card img,
+.runtime-reference-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+
+.reference-card strong,
+.runtime-reference-card strong {
+  display: block;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.reference-card span,
+.runtime-reference-card span {
+  color: var(--muted);
+  font-size: 12px;
 }
 
 .floorplan-detail {
@@ -705,6 +764,108 @@ legend {
   overflow: hidden;
 }
 
+.runtime-rooms {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.runtime-room-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 12px;
+}
+
+.runtime-media {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  min-height: 132px;
+  border-radius: 8px;
+  background: #edf1ef;
+}
+
+.runtime-media img,
+.runtime-media video,
+.room-strip video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.runtime-placeholder {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.runtime-room-body {
+  display: grid;
+  gap: 12px;
+}
+
+.runtime-room-body strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.runtime-room-body span {
+  color: var(--muted);
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.runtime-room-body dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+}
+
+.runtime-room-body dt {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.runtime-room-body dd {
+  margin: 2px 0 0;
+  font-weight: 800;
+}
+
+.runtime-reference-panel {
+  display: grid;
+  gap: 10px;
+}
+
+.runtime-reference-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.runtime-reference-card {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8faf8;
+}
+
+.runtime-reference-card.is-selected {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(23, 107, 91, 0.12);
+}
+
+.runtime-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .room-strip img {
   aspect-ratio: 4 / 3;
 }
@@ -834,8 +995,15 @@ legend {
   }
 
   .floorplan-grid,
-  .room-strip {
+  .room-strip,
+  .runtime-room-card,
+  .runtime-room-body dl {
     grid-template-columns: 1fr;
+  }
+
+  .reference-gallery-header {
+    align-items: start;
+    flex-direction: column;
   }
 
   .property-hero,

@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://haus.local/schemas/agent_runtime_handoff.schema.json",
+  "title": "Haus Agent Runtime Handoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "handoff_id",
+    "job_id",
+    "created_at",
+    "from_agent",
+    "to_agent",
+    "purpose",
+    "state_before",
+    "expected_state_after",
+    "job_context",
+    "inputs",
+    "instructions",
+    "retry_policy"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "handoff_id": { "type": "string", "format": "uuid" },
+    "job_id": { "type": "string", "format": "uuid" },
+    "room_id": { "type": ["string", "null"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "from_agent": {
+      "type": "string",
+      "enum": ["orchestrator", "creative_agent", "eval_agent", "system"]
+    },
+    "to_agent": {
+      "type": "string",
+      "enum": ["orchestrator", "creative_agent", "eval_agent"]
+    },
+    "purpose": {
+      "type": "string",
+      "enum": [
+        "plan_room",
+        "plan_image_refinement",
+        "plan_video_prompt",
+        "evaluate_room_image",
+        "evaluate_room_video",
+        "refine_after_failure",
+        "approve_room",
+        "fallback_decision",
+        "package_outputs"
+      ]
+    },
+    "state_before": { "$ref": "#/$defs/job_state" },
+    "expected_state_after": { "$ref": "#/$defs/job_state" },
+    "job_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["attempt", "max_attempts", "room_sequence_index", "target_platforms"],
+      "properties": {
+        "attempt": { "type": "integer", "minimum": 1 },
+        "max_attempts": { "type": "integer", "minimum": 1 },
+        "room_sequence_index": { "type": ["integer", "null"], "minimum": 0 },
+        "target_platforms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["all", "instagram", "tiktok", "listing", "portfolio"]
+          }
+        }
+      }
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "layer3_handoff_path",
+        "room_job_key",
+        "aesthetic_profile_summary",
+        "artifacts",
+        "failure_context"
+      ],
+      "properties": {
+        "layer3_handoff_path": { "type": "string" },
+        "room_job_key": { "type": ["string", "null"] },
+        "aesthetic_profile_summary": { "type": "string" },
+        "artifacts": { "$ref": "#/$defs/artifacts" },
+        "failure_context": { "$ref": "#/$defs/failure_context" }
+      }
+    },
+    "instructions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["task", "must_preserve", "must_avoid", "skill_refs"],
+      "properties": {
+        "task": { "type": "string" },
+        "must_preserve": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "must_avoid": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "skill_refs": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "retry_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allow_retry", "escalate_to_image_restyle_after", "fallback_motion_mode"],
+      "properties": {
+        "allow_retry": { "type": "boolean" },
+        "escalate_to_image_restyle_after": { "type": ["integer", "null"], "minimum": 1 },
+        "fallback_motion_mode": {
+          "type": ["string", "null"],
+          "enum": ["slow_dolly", "orbital_pan", "aerial_drift", "static_zoom", null]
+        }
+      }
+    },
+    "output_contract": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "expected_keys": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "persist_to": { "type": ["string", "null"] }
+      }
+    }
+  },
+  "$defs": {
+    "job_state": {
+      "type": "string",
+      "enum": [
+        "CREATED",
+        "VALIDATING_INPUTS",
+        "LAYER1_READY",
+        "LAYER2_READY",
+        "LAYER3_READY",
+        "ROOM_IMAGE_GENERATING",
+        "ROOM_IMAGE_REVIEW",
+        "ROOM_VIDEO_GENERATING",
+        "ROOM_VIDEO_EVALUATING",
+        "ROOM_VIDEO_RETRYING",
+        "ROOM_APPROVED",
+        "PACKAGING_OUTPUTS",
+        "WAITING_FOR_USER_APPROVAL",
+        "FALLBACK_MODE",
+        "PARTIAL_READY",
+        "COMPLETED",
+        "FAILED"
+      ]
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_image_path", "styled_image_path", "video_path", "reference_image_paths"],
+      "properties": {
+        "source_image_path": { "type": ["string", "null"] },
+        "styled_image_path": { "type": ["string", "null"] },
+        "video_path": { "type": ["string", "null"] },
+        "reference_image_paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "failure_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["previous_score", "failure_modes", "last_prompt_used"],
+      "properties": {
+        "previous_score": { "type": ["number", "null"], "minimum": 0, "maximum": 10 },
+        "failure_modes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "architecture_warp",
+              "layout_drift",
+              "lighting_unrealistic",
+              "motion_unstable",
+              "style_mismatch",
+              "muddy_exposure",
+              "object_missing"
+            ]
+          }
+        },
+        "last_prompt_used": { "type": ["string", "null"] }
+      }
+    }
+  }
+}
