@@ -46,10 +46,47 @@ the original request payload.
 ```typescript
 interface SourceInput {
   floor_plan_url: string;
+  floor_plan_metadata: FloorPlanMetadata;
+  floor_plan_measurements: FloorPlanMeasurements;
   pinterest_board_url: string;
   brief: string | null;
   objects: ObjectSelection[];
   platform: DeliveryPlatform;
+}
+
+interface FloorPlanMetadata {
+  source: 'local_upload' | 'remote_url';
+  mime_type: 'image/png' | 'image/jpeg' | null;
+  size_bytes: number | null;
+  width_px: number | null;
+  height_px: number | null;
+  sha256: string | null;
+  cache_key: string | null;
+}
+
+interface FloorPlanMeasurements {
+  source: 'user_provided' | 'ocr' | 'ml_parser' | 'not_provided';
+  unit: 'ft' | 'm' | null;
+  scale: FloorPlanScale | null;
+  rooms: MeasuredRoom[];
+  notes: string | null;
+}
+
+interface FloorPlanScale {
+  pixels: number;
+  units: number;
+}
+
+interface MeasuredRoom {
+  room_id: string | null;
+  name: string;
+  dimensions: {
+    width: number;
+    length: number;
+    area: number;
+  };
+  unit: 'ft' | 'm' | null;
+  confidence: number | null;
 }
 
 interface ObjectSelection {
@@ -143,6 +180,8 @@ interface FloorPlanRoom {
   name: string; // display name, for example "living room"
   room_type: RoomType;
   area_estimate: 'large' | 'medium' | 'small';
+  measured_dimensions: MeasuredRoom['dimensions'] | null;
+  measured_unit: 'ft' | 'm' | null;
   windows: string;
   natural_light: 'high' | 'medium' | 'low' | 'unknown';
   adjoins: string[];
@@ -302,6 +341,34 @@ interface HandoffWarning {
   "status": "ready_for_room_images",
   "source_input": {
     "floor_plan_url": "https://cdn.example.com/floorplans/unit-4b.png",
+    "floor_plan_metadata": {
+      "source": "remote_url",
+      "mime_type": null,
+      "size_bytes": null,
+      "width_px": null,
+      "height_px": null,
+      "sha256": null,
+      "cache_key": null
+    },
+    "floor_plan_measurements": {
+      "source": "user_provided",
+      "unit": "ft",
+      "scale": null,
+      "rooms": [
+        {
+          "room_id": "living_room_1",
+          "name": "living room",
+          "dimensions": {
+            "width": 14,
+            "length": 18,
+            "area": 252
+          },
+          "unit": "ft",
+          "confidence": 1
+        }
+      ],
+      "notes": null
+    },
     "pinterest_board_url": "https://www.pinterest.com/example/warm-japandi-home/",
     "brief": "Two-bedroom downtown condo for a young family.",
     "objects": [
@@ -355,6 +422,12 @@ interface HandoffWarning {
         "name": "living room",
         "room_type": "living_room",
         "area_estimate": "large",
+        "measured_dimensions": {
+          "width": 14,
+          "length": 18,
+          "area": 252
+        },
+        "measured_unit": "ft",
         "windows": "south-facing",
         "natural_light": "high",
         "adjoins": ["kitchen_1"],
