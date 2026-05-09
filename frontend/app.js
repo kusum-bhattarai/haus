@@ -54,6 +54,7 @@ const views = {
 const floorplanGrid = document.querySelector('#floorplan-grid');
 const selectedPlanTitle = document.querySelector('#selected-plan-title');
 const selectedPlanPreview = document.querySelector('#selected-plan-preview');
+const resultsPlanPreview = document.querySelector('#results-plan-preview');
 const selectedPlanMeta = document.querySelector('#selected-plan-meta');
 const generationPlanChip = document.querySelector('#generation-plan-chip');
 const progressList = document.querySelector('#progress-list');
@@ -150,7 +151,7 @@ function renderFloorPlans() {
           <div><dt>Rent</dt><dd>${plan.price}</dd></div>
           <div><dt>Status</dt><dd>${plan.available}</dd></div>
         </dl>
-        <button class="primary-button" type="button" data-plan-id="${plan.id}">Visualize this floor plan</button>
+        <button class="primary-button" type="button" data-plan-id="${plan.id}">Visualize with your style</button>
       </div>
     </article>
   `).join('');
@@ -169,6 +170,7 @@ function renderSelectedPlan() {
   selectedPlanTitle.textContent = `${selectedPlan.name} · ${selectedPlan.layout}`;
   generationPlanChip.textContent = selectedPlan.name;
   selectedPlanPreview.innerHTML = renderPlanDiagram(selectedPlan);
+  resultsPlanPreview.innerHTML = renderPlanDiagram(selectedPlan);
   selectedPlanMeta.innerHTML = `
     <span>${selectedPlan.sqft}</span>
     <span>${selectedPlan.price}</span>

@@ -244,6 +244,7 @@ button {
 .floorplan-card,
 .floorplan-detail,
 .personalization-panel,
+.truth-note,
 .video-panel,
 .vibe-report,
 .room-strip article,
@@ -390,6 +391,7 @@ dd {
 }
 
 .two-column,
+.before-after-grid,
 .results-grid,
 .agent-layout,
 .progress-layout {
@@ -436,6 +438,13 @@ dd {
 .vibe-report h3 {
   margin: 0;
   font-size: 22px;
+}
+
+.field-help {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 label,
@@ -563,6 +572,42 @@ legend {
   background: rgba(20, 30, 32, 0.76);
   color: #fff;
   font-weight: 700;
+}
+
+.truth-note {
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.before-after-grid {
+  grid-template-columns: 0.82fr 1.18fr;
+  margin-bottom: 18px;
+}
+
+.before-panel {
+  overflow: hidden;
+}
+
+.before-panel .floorplan-preview {
+  min-height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.before-panel .diagram-grid {
+  width: min(100%, 420px);
+}
+
+.panel-label {
+  border-bottom: 1px solid var(--line);
+  padding: 12px 14px;
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .video-panel {
@@ -765,6 +810,7 @@ legend {
 
   .section-grid,
   .two-column,
+  .before-after-grid,
   .results-grid,
   .agent-layout,
   .progress-layout {

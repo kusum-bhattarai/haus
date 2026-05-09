@@ -33,7 +33,7 @@
           <div class="property-hero-overlay">
             <div class="property-kicker">Now leasing</div>
             <h1>Springmarc at San Marcos</h1>
-            <p>Choose a floor plan, connect your Pinterest board, and preview a personalized lifestyle video before touring.</p>
+            <p>Choose a floor plan, paste your Pinterest aesthetic, and preview how your future life could feel in the space.</p>
             <div class="property-meta">
               <span>San Marcos, TX</span>
               <span>Pet friendly</span>
@@ -46,7 +46,7 @@
         <section class="section-grid">
           <div class="section-copy">
             <h2>Available floor plans</h2>
-            <p>Select a unit plan to start a Haus visualization. The preview uses your own inspiration board to stage the space around your taste.</p>
+            <p>Select a unit plan to start a Haus visualization. Your public Pinterest board becomes the style signal for a room-aware preview grounded in the real layout.</p>
           </div>
           <div class="floorplan-grid" id="floorplan-grid"></div>
         </section>
@@ -68,7 +68,7 @@
           </article>
 
           <form class="personalization-panel" id="personalization-form">
-            <h3>Personalize the preview</h3>
+            <h3>Bring your Pinterest aesthetic into this floor plan</h3>
             <label>
               Pinterest board URL
               <input
@@ -78,6 +78,7 @@
                 value="https://www.pinterest.com/example/warm-japandi-home/"
                 required
               >
+              <span class="field-help">Paste a public board with interiors, furniture, colors, or lifestyle inspiration.</span>
             </label>
             <label>
               Lifestyle brief
@@ -92,7 +93,7 @@
                 <label><input type="checkbox" name="objects" value="yoga_mat"> Yoga mat</label>
               </div>
             </fieldset>
-            <button class="primary-button" type="submit">Generate my lifestyle preview</button>
+            <button class="primary-button" type="submit">Create my personalized preview</button>
           </form>
         </div>
       </section>
@@ -126,8 +127,16 @@
           <button class="primary-button" id="open-agent" type="button">Chat with AI edit agent</button>
         </div>
 
-        <div class="results-grid">
+        <div class="truth-note">Personalized visualization, not an exact furnished unit photo. Styling preserves the selected unit layout and room structure.</div>
+
+        <div class="before-after-grid">
+          <article class="floorplan-detail before-panel">
+            <div class="panel-label">Before · selected floor plan</div>
+            <div class="floorplan-preview" id="results-plan-preview"></div>
+          </article>
+
           <article class="video-panel">
+            <div class="panel-label">After · styled to your Pinterest aesthetic</div>
             <div class="video-frame">
               <img
                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85"
@@ -137,7 +146,9 @@
               <div class="video-status">Final video assembled · 16:9 · 22 seconds</div>
             </div>
           </article>
+        </div>
 
+        <div class="results-grid">
           <aside class="vibe-report">
             <h3>Vibe report</h3>
             <div class="vibe-name">Warm Japandi Family Calm</div>

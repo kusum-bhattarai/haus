@@ -12,6 +12,7 @@ board, brief, and optional room objects.
 - [Layer 3 handoff data model](docs/layer_3_handoff_data_model.md)
 - [Layer 3 handoff JSON Schema](schemas/layer_3_handoff.schema.json)
 - [Hackathon product demo strategy](docs/hackathon_product_demo_strategy.md)
+- [Business positioning](docs/business_positioning.md)
 
 ## Frontend Demo
 
@@ -25,7 +26,6 @@ video preview, and an AI edit-agent interface for room-specific regeneration.
 Create a Layer 1 payload from a JSON input file:
 
 ```bash
-source .env
 npm run layer1:create-payload -- --input ./input.json
 ```
 
@@ -70,7 +70,6 @@ structured result under `.haus-cache/floor-plan-vision/`. Set
 Create a Layer 2 profile from a Layer 1 payload:
 
 ```bash
-source .env
 npm run layer2:create-profile -- --payload ./.haus-cache/payloads/{session_id}.json
 ```
 
@@ -83,7 +82,6 @@ context, and writes `.haus-cache/layer2-profiles/{session_id}.json`.
 Create a Layer 3 handoff from a Layer 2 profile:
 
 ```bash
-source .env
 npm run layer3:create-handoff -- --profile ./.haus-cache/layer2-profiles/{session_id}.json
 ```
 
