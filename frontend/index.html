@@ -170,6 +170,7 @@
           </aside>
         </div>
         <section class="reference-gallery" id="results-pinterest-gallery"></section>
+        <section class="reference-gallery" id="generated-stills-gallery"></section>
 
         <section class="room-strip" id="room-strip">
           <article>
@@ -227,6 +228,15 @@
         </div>
       </section>
     </main>
+
+    <div class="media-modal is-hidden" id="media-modal" aria-hidden="true">
+      <div class="media-modal-backdrop" data-close-media-modal></div>
+      <div class="media-modal-panel">
+        <button class="ghost-button media-modal-close" id="close-media-modal" type="button">Close</button>
+        <h3 id="media-modal-title">Generated still</h3>
+        <img id="media-modal-image" alt="Generated still preview">
+      </div>
+    </div>
 
     <script src="./app.js" type="module"></script>
   </body>

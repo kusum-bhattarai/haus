@@ -88,6 +88,60 @@ function samplePayload() {
   };
 }
 
+function sampleTwoRoomHandoff() {
+  return {
+    ...sampleHandoff(),
+    creative_spec: {
+      ...sampleHandoff().creative_spec,
+      room_sequence: ['living_room_1', 'bedroom_1']
+    },
+    floor_plan: {
+      rooms: [
+        {
+          room_id: 'living_room_1',
+          name: 'living room',
+          measured_dimensions: { width: 12, length: 16 },
+          measured_unit: 'ft'
+        },
+        {
+          room_id: 'bedroom_1',
+          name: 'bedroom',
+          measured_dimensions: { width: 11, length: 13 },
+          measured_unit: 'ft'
+        }
+      ]
+    },
+    room_generation_jobs: [
+      sampleHandoff().room_generation_jobs[0],
+      {
+        room_id: 'bedroom_1',
+        room_name: 'bedroom',
+        room_type: 'bedroom',
+        sequence_index: 1,
+        dalle: {
+          prompt: 'Photorealistic interior photograph of an 11 by 13 ft bedroom.'
+        },
+        video_generation: {
+          provider: 'fal',
+          model: 'fal-ai/kling-video/v3/pro/image-to-video',
+          prompt: 'Slow cinematic move through a calm Japandi bedroom.',
+          camera_motion: 'static_zoom',
+          duration_seconds: 5,
+          aspect_ratio: '16:9'
+        },
+        staging: {
+          lighting_instruction: 'soft daylight through east-facing window',
+          must_include: ['oak nightstand'],
+          must_avoid: ['visible brand logos']
+        },
+        quality_gate: {
+          max_video_attempts: 2
+        }
+      }
+    ]
+  };
+}
+
 test('loads AutoHDR skill restored from stash', async () => {
   const skill = await loadAutohdrSkill(process.cwd());
   assert.match(skill.skillText, /AutoHDR Fal Flow/);
@@ -298,6 +352,67 @@ test('orchestrator blocks video before still approval', async () => {
   current = await runtime.getJob(job.job_id);
   assert.equal(current.rooms[0].state, 'APPROVED');
   assert.equal(generated.some((endpoint) => endpoint.includes('image-to-video')), true);
+});
+
+test('orchestrator fans out stills, waits for mass review, then starts videos after all approvals', async () => {
+  const cacheDir = await tempCacheDir();
+  const generated = [];
+  const runtime = await createAgentRuntime({
+    cacheDir,
+    evalMode: 'mock',
+    autoApproveStills: false,
+    findFloorPlan: () => ({ id: '1b1', name: 'Unit A1', imagePath: '/tmp/floor.png' }),
+    createLayer1Payload: async () => samplePayload(),
+    createLayer2Profile: async () => ({ session_id: 'session_1' }),
+    createLayer3Handoff: async () => sampleTwoRoomHandoff(),
+    genmedia: {
+      executeCached: async ({ endpointId, params }) => {
+        generated.push({ endpointId, params });
+        return endpointId.includes('image-to-video')
+          ? { cache_hit: false, path: `/tmp/${params.prompt.includes('bedroom') ? 'bedroom' : 'living'}-video.mp4`, url: 'https://cdn.example.com/video.mp4', result: {} }
+          : { cache_hit: false, path: `/tmp/${params.prompt.includes('bedroom') ? 'bedroom' : 'living'}-still.png`, url: `https://cdn.example.com/${params.prompt.includes('bedroom') ? 'bedroom' : 'living'}.png`, result: {} };
+      },
+      upload: async () => ({ url: 'https://cdn.example.com/uploaded.png' })
+    }
+  });
+
+  const job = await runtime.createJob({
+    floor_plan_id: '1b1',
+    pinterest_board_url: 'https://www.pinterest.com/example/board/',
+    objects: [],
+    platform: 'all'
+  });
+
+  await waitFor(async () => {
+    const current = await runtime.getJob(job.job_id);
+    return current.rooms.length === 2 && current.rooms.every((room) => room.state === 'STILL_REVIEW_READY');
+  });
+
+  let current = await runtime.getJob(job.job_id);
+  assert.equal(current.status, 'waiting');
+  assert.equal(current.current_state, 'WAITING_FOR_HUMAN_REVIEW');
+  assert.equal(generated.filter(({ endpointId }) => !endpointId.includes('image-to-video')).length, 2);
+  assert.equal(generated.some(({ endpointId }) => endpointId.includes('image-to-video')), false);
+
+  await runtime.approveStill(job.job_id, 'living_room_1', { approved: true });
+  await waitFor(async () => {
+    const next = await runtime.getJob(job.job_id);
+    return next.rooms.find((room) => room.room_id === 'living_room_1')?.review.still_approved;
+  });
+
+  current = await runtime.getJob(job.job_id);
+  assert.equal(generated.some(({ endpointId }) => endpointId.includes('image-to-video')), false);
+  assert.equal(current.status, 'waiting');
+
+  await runtime.approveStill(job.job_id, 'bedroom_1', { approved: true });
+  await waitFor(async () => {
+    const next = await runtime.getJob(job.job_id);
+    return next.status === 'completed';
+  }, 2000);
+
+  current = await runtime.getJob(job.job_id);
+  assert.equal(current.rooms.every((room) => room.state === 'APPROVED'), true);
+  assert.equal(generated.filter(({ endpointId }) => endpointId.includes('image-to-video')).length, 2);
 });
 
 test('POST /api/jobs creates a backend job from frontend payload', async () => {

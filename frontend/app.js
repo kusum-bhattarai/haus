@@ -72,6 +72,10 @@ const runtimeRoomList = document.querySelector('#runtime-room-list');
 const roomStrip = document.querySelector('#room-strip');
 const generationPinterestGallery = document.querySelector('#generation-pinterest-gallery');
 const resultsPinterestGallery = document.querySelector('#results-pinterest-gallery');
+const generatedStillsGallery = document.querySelector('#generated-stills-gallery');
+const mediaModal = document.querySelector('#media-modal');
+const mediaModalImage = document.querySelector('#media-modal-image');
+const mediaModalTitle = document.querySelector('#media-modal-title');
 
 loadFloorPlans();
 renderProgressSteps();
@@ -81,6 +85,10 @@ addChatMessage('agent', 'After you watch the video, ask for a specific change. I
 document.querySelector('#back-to-plans').addEventListener('click', () => setView('portal'));
 document.querySelector('#open-agent').addEventListener('click', () => setView('agent'));
 document.querySelector('#back-to-results').addEventListener('click', () => setView('results'));
+document.querySelector('#close-media-modal').addEventListener('click', closeMediaModal);
+document.querySelectorAll('[data-close-media-modal]').forEach((element) => {
+  element.addEventListener('click', closeMediaModal);
+});
 
 document.querySelector('#personalization-form').addEventListener('submit', (event) => {
   event.preventDefault();
@@ -134,6 +142,12 @@ regenerateButton.addEventListener('click', () => {
 });
 
 runtimeRoomList.addEventListener('click', async (event) => {
+  const preview = event.target.closest('[data-preview-image-url]');
+  if (preview) {
+    openMediaModal(preview.dataset.previewImageUrl, preview.dataset.previewTitle ?? 'Generated still');
+    return;
+  }
+
   const button = event.target.closest('[data-room-action]');
   if (!button || !currentJobId) return;
 
@@ -158,6 +172,12 @@ runtimeRoomList.addEventListener('click', async (event) => {
     progressCaption.textContent = error.message;
     button.disabled = false;
   }
+});
+
+generatedStillsGallery?.addEventListener('click', (event) => {
+  const preview = event.target.closest('[data-preview-image-url]');
+  if (!preview) return;
+  openMediaModal(preview.dataset.previewImageUrl, preview.dataset.previewTitle ?? 'Generated still');
 });
 
 document.querySelectorAll('[data-view-jump]').forEach((button) => {
@@ -336,6 +356,7 @@ async function refreshJob(jobId) {
   currentPipelineResult = job;
   renderPipelineResult(job);
   renderPinterestReferences(job);
+  renderGeneratedStills(job);
   renderRuntimeRooms(job);
 
   if (job.status === 'completed') {
@@ -411,6 +432,39 @@ function renderPinterestReferences(job) {
   if (resultsPinterestGallery) resultsPinterestGallery.innerHTML = markup;
 }
 
+function renderGeneratedStills(job) {
+  const rooms = (job.rooms ?? []).filter((room) => room.artifacts?.styled_image_url);
+  if (!generatedStillsGallery) return;
+
+  if (rooms.length === 0) {
+    generatedStillsGallery.innerHTML = '';
+    return;
+  }
+
+  generatedStillsGallery.innerHTML = `
+    <div class="reference-gallery-header">
+      <div>
+        <div class="eyebrow">Generated stills</div>
+        <h3>Room images</h3>
+      </div>
+      <span>${rooms.length} stills ready</span>
+    </div>
+    <div class="reference-grid">
+      ${rooms.map((room) => `
+        <article class="reference-card">
+          <button class="image-preview-button" data-preview-image-url="${escapeHtml(room.artifacts.styled_image_url)}" data-preview-title="${escapeHtml(room.room_name)} still" type="button">
+            <img src="${escapeHtml(room.artifacts.styled_image_url)}" alt="${escapeHtml(room.room_name)} still">
+          </button>
+          <div>
+            <strong>${escapeHtml(room.room_name)}</strong>
+            <span>${escapeHtml(room.state.replaceAll('_', ' ').toLowerCase())}</span>
+          </div>
+        </article>
+      `).join('')}
+    </div>
+  `;
+}
+
 function renderRuntimeRooms(job) {
   if (!runtimeRoomList || !Array.isArray(job.rooms)) return;
   const pins = (job.handoff?.pinterest_intelligence?.pins ?? []).filter((pin) => pin.image_url).slice(0, 9);
@@ -427,7 +481,7 @@ function renderRuntimeRooms(job) {
     return `
       <article class="runtime-room-card">
         <div class="runtime-media">
-          ${hasVideo ? `<video src="${escapeHtml(videoUrl)}" controls playsinline></video>` : stillUrl ? `<img src="${escapeHtml(stillUrl)}" alt="${escapeHtml(room.room_name)} still">` : '<div class="runtime-placeholder">Waiting for media</div>'}
+          ${hasVideo ? `<video src="${escapeHtml(videoUrl)}" controls playsinline></video>` : stillUrl ? `<button class="image-preview-button" data-preview-image-url="${escapeHtml(stillUrl)}" data-preview-title="${escapeHtml(room.room_name)} still" type="button"><img src="${escapeHtml(stillUrl)}" alt="${escapeHtml(room.room_name)} still"></button>` : '<div class="runtime-placeholder">Waiting for media</div>'}
         </div>
         <div class="runtime-room-body">
           <div>
@@ -488,6 +542,22 @@ function renderPinterestPin(pin) {
       </div>
     </article>
   `;
+}
+
+function openMediaModal(url, title) {
+  if (!mediaModal || !mediaModalImage || !mediaModalTitle) return;
+  mediaModalImage.src = url;
+  mediaModalImage.alt = title;
+  mediaModalTitle.textContent = title;
+  mediaModal.classList.remove('is-hidden');
+  mediaModal.setAttribute('aria-hidden', 'false');
+}
+
+function closeMediaModal() {
+  if (!mediaModal || !mediaModalImage) return;
+  mediaModal.classList.add('is-hidden');
+  mediaModal.setAttribute('aria-hidden', 'true');
+  mediaModalImage.removeAttribute('src');
 }
 
 function setView(viewName) {

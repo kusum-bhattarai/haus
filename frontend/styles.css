@@ -35,6 +35,10 @@ button {
   cursor: pointer;
 }
 
+button img {
+  display: block;
+}
+
 .is-hidden {
   display: none !important;
 }
@@ -451,6 +455,20 @@ dd {
 .runtime-reference-card {
   display: grid;
   gap: 10px;
+}
+
+.image-preview-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.image-preview-button img {
+  transition: transform 180ms ease;
+}
+
+.image-preview-button:hover img {
+  transform: scale(1.02);
 }
 
 .reference-card img,
@@ -971,6 +989,50 @@ legend {
   padding: 14px 16px;
   color: var(--muted);
   line-height: 1.5;
+}
+
+.media-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+}
+
+.media-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 19, 21, 0.76);
+}
+
+.media-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: min(960px, calc(100% - 32px));
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  border-radius: var(--radius);
+  background: #fff;
+  padding: 18px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.media-modal-close {
+  margin-left: auto;
+  display: block;
+}
+
+.media-modal-panel h3 {
+  margin: 10px 0 14px;
+  font-size: 20px;
+}
+
+.media-modal-panel img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #f3f5f4;
 }
 
 @media (max-width: 960px) {

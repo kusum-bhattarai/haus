@@ -74,23 +74,41 @@ export async function createAgentRuntime(options = {}) {
       message: 'Layer 3 handoff is ready.'
     });
 
-    await processNextRoom(jobId);
+    await startStillPhase(jobId);
   }
 
-  async function processNextRoom(jobId) {
+  async function startStillPhase(jobId) {
+    await jobManager.updateJob(jobId, async (job) => {
+      job.status = 'running';
+      job.current_state = JOB_STATES.ROOM_QUEUE_RUNNING;
+      job.runtime.still_review_announced = false;
+      job.runtime.video_phase_started = false;
+    });
+
+    const job = await jobManager.getJob(jobId);
+    await Promise.allSettled(
+      job.rooms
+        .filter((room) => room.state === ROOM_STATES.PENDING || room.state === ROOM_STATES.STILL_RETRYING)
+        .sort((left, right) => left.sequence_index - right.sequence_index)
+        .map((room) => runStillForRoom(jobId, room.room_id))
+    );
+  }
+
+  async function processNextVideoRoom(jobId) {
     const job = await jobManager.getJob(jobId);
     const room = job.rooms
-      .filter((candidate) => candidate.state !== ROOM_STATES.APPROVED && candidate.state !== ROOM_STATES.FAILED)
+      .filter((candidate) => candidate.review.still_approved && !candidate.review.video_approved && candidate.state !== ROOM_STATES.FAILED)
       .sort((left, right) => left.sequence_index - right.sequence_index)[0];
 
     if (!room) return completeJob(jobId);
-    await runStillForRoom(jobId, room.room_id);
+    await runVideoForRoom(jobId, room.room_id);
   }
 
   async function runStillForRoom(jobId, roomId, failureContext = null) {
     await jobManager.updateJob(jobId, async (job) => {
       job.status = 'running';
       job.current_state = JOB_STATES.ROOM_QUEUE_RUNNING;
+      job.runtime.video_phase_started = false;
     });
     await jobManager.updateRoom(jobId, roomId, async (room) => {
       room.state = failureContext ? ROOM_STATES.STILL_RETRYING : ROOM_STATES.STILL_PLANNING;
@@ -161,10 +179,6 @@ export async function createAgentRuntime(options = {}) {
       }
     }
 
-    await jobManager.updateJob(jobId, async (currentJob) => {
-      currentJob.status = autoApproveStills ? 'running' : 'waiting';
-      currentJob.current_state = autoApproveStills ? JOB_STATES.ROOM_QUEUE_RUNNING : JOB_STATES.WAITING_FOR_HUMAN_REVIEW;
-    });
     await jobManager.updateRoom(jobId, roomId, async (currentRoom) => {
       currentRoom.state = ROOM_STATES.STILL_REVIEW_READY;
     });
@@ -174,6 +188,10 @@ export async function createAgentRuntime(options = {}) {
       state: autoApproveStills ? JOB_STATES.ROOM_QUEUE_RUNNING : JOB_STATES.WAITING_FOR_HUMAN_REVIEW,
       message: autoApproveStills ? 'Still auto-approved.' : 'Still ready for human review.'
     });
+
+    if (!autoApproveStills) {
+      await syncStillReviewPhase(jobId);
+    }
 
     if (autoApproveStills) {
       await approveStill(jobId, roomId, { approved: true, note: 'Auto-approved by HAUS_AUTO_APPROVE_STILLS.' });
@@ -207,9 +225,9 @@ export async function createAgentRuntime(options = {}) {
       type: 'room.still.approved',
       room_id: roomId,
       state: JOB_STATES.ROOM_QUEUE_RUNNING,
-      message: 'Still approved. Starting video.'
+      message: 'Still approved.'
     });
-    return runVideoForRoom(jobId, roomId);
+    return syncStillReviewPhase(jobId);
   }
 
   async function runVideoForRoom(jobId, roomId, failureContext = null) {
@@ -273,7 +291,7 @@ export async function createAgentRuntime(options = {}) {
 
     if (decision === 'pass') {
       await approveRoom(jobId, roomId);
-      return processNextRoom(jobId);
+      return processNextVideoRoom(jobId);
     }
 
     const latest = await jobManager.getJob(jobId);
@@ -320,6 +338,9 @@ export async function createAgentRuntime(options = {}) {
     });
 
     if (target === 'still') {
+      await jobManager.updateJob(jobId, async (job) => {
+        job.runtime.still_review_announced = false;
+      });
       return runStillForRoom(jobId, roomId, {
         failure_classes: ['style_mismatch'],
         message: note,
@@ -350,6 +371,49 @@ export async function createAgentRuntime(options = {}) {
       state: JOB_STATES.ROOM_QUEUE_RUNNING,
       message: 'Room clip approved.'
     });
+  }
+
+  async function syncStillReviewPhase(jobId) {
+    const job = await jobManager.getJob(jobId);
+    const rooms = job.rooms ?? [];
+    const stillsInFlight = rooms.some((room) => [
+      ROOM_STATES.PENDING,
+      ROOM_STATES.STILL_PLANNING,
+      ROOM_STATES.STILL_GENERATING,
+      ROOM_STATES.STILL_VALIDATING,
+      ROOM_STATES.STILL_RETRYING
+    ].includes(room.state));
+
+    if (stillsInFlight) return;
+
+    const allStillsApproved = rooms.every((room) => room.review.still_approved);
+    if (allStillsApproved) {
+      if (job.runtime.video_phase_started) return;
+      await jobManager.updateJob(jobId, async (currentJob) => {
+        currentJob.status = 'running';
+        currentJob.current_state = JOB_STATES.ROOM_QUEUE_RUNNING;
+        currentJob.runtime.video_phase_started = true;
+      });
+      await jobManager.emitEvent(jobId, {
+        type: 'job.stills.approved',
+        state: JOB_STATES.ROOM_QUEUE_RUNNING,
+        message: 'All room stills approved. Starting videos.'
+      });
+      return processNextVideoRoom(jobId);
+    }
+
+    if (!job.runtime.still_review_announced) {
+      await jobManager.updateJob(jobId, async (currentJob) => {
+        currentJob.status = 'waiting';
+        currentJob.current_state = JOB_STATES.WAITING_FOR_HUMAN_REVIEW;
+        currentJob.runtime.still_review_announced = true;
+      });
+      await jobManager.emitEvent(jobId, {
+        type: 'job.stills.review_ready',
+        state: JOB_STATES.WAITING_FOR_HUMAN_REVIEW,
+        message: 'All room stills are ready for review.'
+      });
+    }
   }
 
   async function completeJob(jobId) {
@@ -401,7 +465,8 @@ export async function createAgentRuntime(options = {}) {
     approveStill,
     retryRoom,
     runJob,
-    processNextRoom,
+    processNextVideoRoom,
+    startStillPhase,
     delay
   };
 }
