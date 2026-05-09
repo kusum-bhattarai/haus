@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Haus | Springmarc at San Marcos</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-block">
+        <div class="brand-mark">H</div>
+        <div>
+          <div class="brand-name">Haus</div>
+          <div class="brand-subtitle">Springmarc at San Marcos</div>
+        </div>
+      </div>
+      <nav class="topnav" aria-label="Demo sections">
+        <button class="nav-button is-active" data-view-jump="portal">Floor plans</button>
+        <button class="nav-button" data-view-jump="results">Preview</button>
+        <button class="nav-button" data-view-jump="agent">AI edit agent</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="portal-shell" id="portal-view">
+        <div class="property-hero">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85"
+            alt="Modern apartment community exterior"
+            class="property-hero-image"
+          >
+          <div class="property-hero-overlay">
+            <div class="property-kicker">Now leasing</div>
+            <h1>Springmarc at San Marcos</h1>
+            <p>Choose a floor plan, connect your Pinterest board, and preview a personalized lifestyle video before touring.</p>
+            <div class="property-meta">
+              <span>San Marcos, TX</span>
+              <span>Pet friendly</span>
+              <span>Resort pool</span>
+              <span>Available now</span>
+            </div>
+          </div>
+        </div>
+
+        <section class="section-grid">
+          <div class="section-copy">
+            <h2>Available floor plans</h2>
+            <p>Select a unit plan to start a Haus visualization. The preview uses your own inspiration board to stage the space around your taste.</p>
+          </div>
+          <div class="floorplan-grid" id="floorplan-grid"></div>
+        </section>
+      </section>
+
+      <section class="workspace is-hidden" id="personalize-view" aria-live="polite">
+        <div class="workspace-header">
+          <button class="ghost-button" id="back-to-plans" type="button">Back to floor plans</button>
+          <div>
+            <div class="eyebrow">Selected floor plan</div>
+            <h2 id="selected-plan-title">Unit B2</h2>
+          </div>
+        </div>
+
+        <div class="two-column">
+          <article class="floorplan-detail">
+            <div class="floorplan-preview" id="selected-plan-preview"></div>
+            <div class="detail-row" id="selected-plan-meta"></div>
+          </article>
+
+          <form class="personalization-panel" id="personalization-form">
+            <h3>Personalize the preview</h3>
+            <label>
+              Pinterest board URL
+              <input
+                id="pinterest-url"
+                name="pinterestUrl"
+                type="url"
+                value="https://www.pinterest.com/example/warm-japandi-home/"
+                required
+              >
+            </label>
+            <label>
+              Lifestyle brief
+              <textarea id="brief" name="brief" rows="3">Warm, calm home for a young family that needs a cozy work corner.</textarea>
+            </label>
+            <fieldset>
+              <legend>Objects to include</legend>
+              <div class="object-grid">
+                <label><input type="checkbox" name="objects" value="crib" checked> Crib</label>
+                <label><input type="checkbox" name="objects" value="standing_desk" checked> Standing desk</label>
+                <label><input type="checkbox" name="objects" value="bookshelf"> Bookshelf</label>
+                <label><input type="checkbox" name="objects" value="yoga_mat"> Yoga mat</label>
+              </div>
+            </fieldset>
+            <button class="primary-button" type="submit">Generate my lifestyle preview</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="workspace is-hidden" id="generation-view" aria-live="polite">
+        <div class="workspace-header">
+          <div>
+            <div class="eyebrow">Haus pipeline</div>
+            <h2>Creating your personalized preview</h2>
+          </div>
+          <div class="selected-chip" id="generation-plan-chip">Unit B2</div>
+        </div>
+        <div class="progress-layout">
+          <div class="progress-list" id="progress-list"></div>
+          <div class="progress-visual">
+            <img
+              src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85"
+              alt="Warm staged living room"
+            >
+            <div class="progress-caption">Building room-aware visuals from your Pinterest style and selected floor plan.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace is-hidden" id="results-view">
+        <div class="workspace-header">
+          <div>
+            <div class="eyebrow">Personalized result</div>
+            <h2 id="results-title">Your Springmarc lifestyle preview</h2>
+          </div>
+          <button class="primary-button" id="open-agent" type="button">Chat with AI edit agent</button>
+        </div>
+
+        <div class="results-grid">
+          <article class="video-panel">
+            <div class="video-frame">
+              <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85"
+                alt="Generated apartment lifestyle video preview"
+              >
+              <button class="play-button" type="button" aria-label="Play generated video">▶</button>
+              <div class="video-status">Final video assembled · 16:9 · 22 seconds</div>
+            </div>
+          </article>
+
+          <aside class="vibe-report">
+            <h3>Vibe report</h3>
+            <div class="vibe-name">Warm Japandi Family Calm</div>
+            <p>A calm warm-neutral direction with oak, linen, rounded silhouettes, and soft golden light.</p>
+            <div class="palette-row">
+              <span style="--swatch:#f2e8da"></span>
+              <span style="--swatch:#c7aa7a"></span>
+              <span style="--swatch:#7d6b58"></span>
+              <span style="--swatch:#f7f4ee"></span>
+            </div>
+            <dl class="vibe-details">
+              <div><dt>Lighting</dt><dd>Golden natural</dd></div>
+              <div><dt>Density</dt><dd>Minimal, lived-in</dd></div>
+              <div><dt>Materials</dt><dd>Oak, linen, ceramic</dd></div>
+              <div><dt>Avoid</dt><dd>Gloss, clutter, busy pattern</dd></div>
+            </dl>
+          </aside>
+        </div>
+
+        <section class="room-strip">
+          <article>
+            <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=900&q=85" alt="Generated living room still">
+            <div><strong>Living room</strong><span>Orbital pan · 5 sec</span></div>
+          </article>
+          <article>
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85" alt="Generated bedroom still">
+            <div><strong>Bedroom</strong><span>Slow dolly · 5 sec</span></div>
+          </article>
+          <article>
+            <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=900&q=85" alt="Generated kitchen still">
+            <div><strong>Kitchen</strong><span>Aerial drift · 5 sec</span></div>
+          </article>
+        </section>
+      </section>
+
+      <section class="workspace is-hidden" id="agent-view">
+        <div class="workspace-header">
+          <div>
+            <div class="eyebrow">AI edit agent</div>
+            <h2>Refine one room without rebuilding everything</h2>
+          </div>
+          <button class="ghost-button" id="back-to-results" type="button">Back to result</button>
+        </div>
+
+        <div class="agent-layout">
+          <aside class="chat-panel">
+            <div class="chat-log" id="chat-log"></div>
+            <form class="chat-input" id="chat-form">
+              <input id="chat-message" value="Add a tall whiteboard in the living room" aria-label="Message AI edit agent">
+              <button class="primary-button" type="submit">Send</button>
+            </form>
+          </aside>
+
+          <article class="placement-panel">
+            <div class="placement-toolbar">
+              <div>
+                <strong>Living room image</strong>
+                <span id="placement-instruction">Send an edit request to begin.</span>
+              </div>
+              <button class="primary-button" id="regenerate-section" type="button" disabled>Regenerate living room section</button>
+            </div>
+            <div class="placement-canvas" id="placement-canvas" aria-label="Click desired placement in living room image">
+              <img
+                src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1400&q=85"
+                alt="Living room placement canvas"
+              >
+              <div class="placement-marker is-hidden" id="placement-marker">Whiteboard</div>
+            </div>
+            <div class="cache-note" id="cache-note">
+              Previous final video is cached. Only the living room image and video segment will be regenerated, then the final video is reassembled.
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
