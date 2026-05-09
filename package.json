@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "node server.js",
     "test": "node --test",
     "layer1:create-payload": "node scripts/layer1-create-payload.js",
     "layer2:create-profile": "node scripts/layer2-create-profile.js",

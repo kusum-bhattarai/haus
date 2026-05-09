@@ -13,13 +13,26 @@ board, brief, and optional room objects.
 - [Layer 3 handoff JSON Schema](schemas/layer_3_handoff.schema.json)
 - [Hackathon product demo strategy](docs/hackathon_product_demo_strategy.md)
 - [Business positioning](docs/business_positioning.md)
+- [Integrated Layers 1-3](docs/integrated_layers_1_3.md)
 
 ## Frontend Demo
 
-Open [frontend/index.html](frontend/index.html) in a browser to run the mock
-Springmarc at San Marcos property portal. The static demo includes floor plan
-selection, Pinterest personalization, generation progress, vibe report, final
-video preview, and an AI edit-agent interface for room-specific regeneration.
+Run the local app server to use the integrated Springmarc at San Marcos demo:
+
+```bash
+npm run dev
+```
+
+Then open `http://localhost:3000`. The demo includes floor plan selection,
+Pinterest personalization, a Layer 1-3 backend run, generation progress, vibe
+report, final video preview shell, and an AI edit-agent interface for
+room-specific regeneration.
+
+Current floor plan assets:
+
+- `1b1`: 1 Bedroom / 1 Bath, 689 sq ft
+- `2b2`: 2 Bedroom / 2 Bath, 988 sq ft
+- `3b2`: 3 Bedroom / 2 Bath, 1,250 sq ft
 
 ## Layer 1
 
