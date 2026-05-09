@@ -99,7 +99,9 @@ AutoHDR never receives a floor plan. It only ever receives a photorealistic stag
 
 ### Layer 1 — Input Collection
 
-**Responsibility:** Collect, validate, and package user inputs. No transformation.
+**Responsibility:** Collect, validate, cache, and package user inputs. Layer 1
+also extracts structured floor plan measurements with a vision model so later
+layers do not need to infer architectural dimensions from raw image pixels.
 
 **Inputs:**
 | Field | Type | Required | Notes |
@@ -109,11 +111,36 @@ AutoHDR never receives a floor plan. It only ever receives a photorealistic stag
 | `brief` | String | No | Max 200 chars. Parsed by Layer 3. |
 | `objects` | String[] | No | From predefined list. Max 3 objects per room. |
 | `platform` | Enum | No | `instagram` / `tiktok` / `listing` / `portfolio`. Defaults to all. |
+| `floor_plan_measurements` | Object | No | Optional structured measurements. If omitted, Layer 1 extracts them with vision. |
 
 **Output schema:** `payload.json`
 ```json
 {
   "floor_plan_url": "string",
+  "floor_plan_metadata": {
+    "source": "local_upload",
+    "mime_type": "image/png",
+    "size_bytes": 123456,
+    "width_px": 2400,
+    "height_px": 1600,
+    "sha256": "string",
+    "cache_key": "string"
+  },
+  "floor_plan_measurements": {
+    "source": "ml_parser",
+    "unit": "ft",
+    "scale": null,
+    "rooms": [
+      {
+        "room_id": null,
+        "name": "Living Room",
+        "dimensions": { "width": 12, "length": 16, "area": 192 },
+        "unit": "ft",
+        "confidence": 0.86
+      }
+    ],
+    "notes": "Visible dimensions extracted from floor plan."
+  },
   "pinterest_board_url": "string",
   "brief": "string | null",
   "objects": ["standing_desk", "crib"],
@@ -125,6 +152,9 @@ AutoHDR never receives a floor plan. It only ever receives a photorealistic stag
 
 **Validation rules:**
 - Floor plan must be an image file (reject PDFs)
+- Local floor plan image metadata is extracted deterministically
+- If measurements are not supplied, call the configured OpenAI vision model and
+  cache the result by floor plan cache key
 - Pinterest URL must match `pinterest.com/*/` pattern
 - Objects list must only contain items from the predefined catalogue
 - If Pinterest URL fails, fall back to keyword search using the brief
@@ -462,12 +492,44 @@ await mcp.call('miro/create-board-items', {
 ```typescript
 interface Payload {
   floor_plan_url: string;
+  floor_plan_metadata: FloorPlanMetadata;
+  floor_plan_measurements: FloorPlanMeasurements;
   pinterest_board_url: string;
   brief: string | null;
   objects: ObjectType[];
   platform: 'all' | 'instagram' | 'tiktok' | 'listing' | 'portfolio';
   timestamp: string; // ISO8601
   session_id: string; // uuid
+}
+
+interface FloorPlanMetadata {
+  source: 'local_upload' | 'remote_url';
+  mime_type: 'image/png' | 'image/jpeg' | null;
+  size_bytes: number | null;
+  width_px: number | null;
+  height_px: number | null;
+  sha256: string | null;
+  cache_key: string | null;
+}
+
+interface FloorPlanMeasurements {
+  source: 'user_provided' | 'ocr' | 'ml_parser' | 'not_provided';
+  unit: 'ft' | 'm' | null;
+  scale: { pixels: number; units: number } | null;
+  rooms: MeasuredRoom[];
+  notes: string | null;
+}
+
+interface MeasuredRoom {
+  room_id: string | null;
+  name: string;
+  dimensions: {
+    width: number;
+    length: number;
+    area: number;
+  };
+  unit: 'ft' | 'm' | null;
+  confidence: number | null;
 }
 
 type ObjectType = 

@@ -1,0 +1,13 @@
+{
+  "name": "haus",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "layer1:create-payload": "node scripts/layer1-create-payload.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

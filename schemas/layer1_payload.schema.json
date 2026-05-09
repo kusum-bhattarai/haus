@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://haus.local/schemas/layer1_payload.schema.json",
+  "title": "Haus Layer 1 Payload",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "floor_plan_url",
+    "floor_plan_metadata",
+    "floor_plan_measurements",
+    "pinterest_board_url",
+    "brief",
+    "objects",
+    "platform",
+    "timestamp",
+    "session_id"
+  ],
+  "properties": {
+    "floor_plan_url": {
+      "type": "string",
+      "description": "HTTP(S) or file URL for the validated floor plan image."
+    },
+    "floor_plan_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "mime_type",
+        "size_bytes",
+        "width_px",
+        "height_px",
+        "sha256",
+        "cache_key"
+      ],
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": ["local_upload", "remote_url"]
+        },
+        "mime_type": {
+          "type": ["string", "null"],
+          "enum": ["image/png", "image/jpeg", null]
+        },
+        "size_bytes": {
+          "type": ["integer", "null"],
+          "minimum": 1
+        },
+        "width_px": {
+          "type": ["integer", "null"],
+          "minimum": 1
+        },
+        "height_px": {
+          "type": ["integer", "null"],
+          "minimum": 1
+        },
+        "sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "cache_key": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "floor_plan_measurements": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "unit", "scale", "rooms", "notes"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": ["user_provided", "ocr", "ml_parser", "not_provided"]
+        },
+        "unit": {
+          "type": ["string", "null"],
+          "enum": ["ft", "m", null]
+        },
+        "scale": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["pixels", "units"],
+          "properties": {
+            "pixels": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "units": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          }
+        },
+        "rooms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["room_id", "name", "dimensions", "unit", "confidence"],
+            "properties": {
+              "room_id": {
+                "type": ["string", "null"]
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dimensions": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["width", "length", "area"],
+                "properties": {
+                  "width": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "length": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "area": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  }
+                }
+              },
+              "unit": {
+                "type": ["string", "null"],
+                "enum": ["ft", "m", null]
+              },
+              "confidence": {
+                "type": ["number", "null"],
+                "minimum": 0,
+                "maximum": 1
+              }
+            }
+          }
+        },
+        "notes": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "pinterest_board_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "brief": {
+      "type": ["string", "null"],
+      "maxLength": 200
+    },
+    "objects": {
+      "type": "array",
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "standing_desk",
+          "crib",
+          "wine_rack",
+          "bookshelf",
+          "yoga_mat",
+          "home_studio",
+          "dining_table",
+          "home_gym"
+        ]
+      }
+    },
+    "platform": {
+      "type": "string",
+      "enum": ["all", "instagram", "tiktok", "listing", "portfolio"]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "session_id": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

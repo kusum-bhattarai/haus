@@ -48,9 +48,19 @@
     "source_input": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["floor_plan_url", "pinterest_board_url", "brief", "objects", "platform"],
+      "required": [
+        "floor_plan_url",
+        "floor_plan_metadata",
+        "floor_plan_measurements",
+        "pinterest_board_url",
+        "brief",
+        "objects",
+        "platform"
+      ],
       "properties": {
         "floor_plan_url": { "type": "string", "format": "uri" },
+        "floor_plan_metadata": { "$ref": "#/$defs/floor_plan_metadata" },
+        "floor_plan_measurements": { "$ref": "#/$defs/floor_plan_measurements" },
         "pinterest_board_url": { "type": "string", "format": "uri" },
         "brief": { "type": ["string", "null"] },
         "objects": {
@@ -58,6 +68,65 @@
           "items": { "$ref": "#/$defs/object_selection" }
         },
         "platform": { "$ref": "#/$defs/delivery_platform" }
+      }
+    },
+    "floor_plan_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "mime_type", "size_bytes", "width_px", "height_px", "sha256", "cache_key"],
+      "properties": {
+        "source": { "type": "string", "enum": ["local_upload", "remote_url"] },
+        "mime_type": { "type": ["string", "null"], "enum": ["image/png", "image/jpeg", null] },
+        "size_bytes": { "type": ["integer", "null"], "minimum": 1 },
+        "width_px": { "type": ["integer", "null"], "minimum": 1 },
+        "height_px": { "type": ["integer", "null"], "minimum": 1 },
+        "sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+        "cache_key": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "floor_plan_measurements": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "unit", "scale", "rooms", "notes"],
+      "properties": {
+        "source": { "type": "string", "enum": ["user_provided", "ocr", "ml_parser", "not_provided"] },
+        "unit": { "type": ["string", "null"], "enum": ["ft", "m", null] },
+        "scale": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["pixels", "units"],
+          "properties": {
+            "pixels": { "type": "number", "exclusiveMinimum": 0 },
+            "units": { "type": "number", "exclusiveMinimum": 0 }
+          }
+        },
+        "rooms": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/measured_room" }
+        },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "measured_room": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["room_id", "name", "dimensions", "unit", "confidence"],
+      "properties": {
+        "room_id": { "type": ["string", "null"] },
+        "name": { "type": "string", "minLength": 1 },
+        "dimensions": { "$ref": "#/$defs/measured_dimensions" },
+        "unit": { "type": ["string", "null"], "enum": ["ft", "m", null] },
+        "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 }
+      }
+    },
+    "measured_dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["width", "length", "area"],
+      "properties": {
+        "width": { "type": "number", "exclusiveMinimum": 0 },
+        "length": { "type": "number", "exclusiveMinimum": 0 },
+        "area": { "type": "number", "exclusiveMinimum": 0 }
       }
     },
     "object_selection": {
@@ -234,6 +303,8 @@
         "name",
         "room_type",
         "area_estimate",
+        "measured_dimensions",
+        "measured_unit",
         "windows",
         "natural_light",
         "adjoins",
@@ -247,6 +318,13 @@
           "type": "string",
           "enum": ["large", "medium", "small"]
         },
+        "measured_dimensions": {
+          "anyOf": [
+            { "$ref": "#/$defs/measured_dimensions" },
+            { "type": "null" }
+          ]
+        },
+        "measured_unit": { "type": ["string", "null"], "enum": ["ft", "m", null] },
         "windows": { "type": "string" },
         "natural_light": {
           "type": "string",
