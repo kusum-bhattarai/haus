@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 
 const OPENAI_RESPONSES_URL = 'https://api.openai.com/v1/responses';
-const DEFAULT_VISION_MODEL = 'gpt-4.1-mini';
+const DEFAULT_VISION_MODEL = 'gpt-5-mini';
 
 const FLOOR_PLAN_MEASUREMENTS_SCHEMA = {
   type: 'object',

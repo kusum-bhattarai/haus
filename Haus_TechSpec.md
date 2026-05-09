@@ -37,7 +37,7 @@ Floor Plan + Pinterest Board + Brief + Objects
         ↓   generation_spec.json + per-room DALL-E prompts
 [Layer 3.5] Room Image Agent (DALL-E 3)
         ↓   staged_room_photos[]
-[Layer 4]  AutoHDR Generation + Eval Loop
+[Layer 4]  fal Generation + Eval Loop
         ↓   approved_video_clips[]
 [Layer 5]  Output Packaging Agent
         ↓
@@ -45,7 +45,7 @@ Final Output: Lifestyle Video + Captions + Miro Mood Board
 ```
 
 ### Key Architectural Insight
-AutoHDR never receives a floor plan. It only ever receives a photorealistic staged room image. This is the design decision that makes the quality defensible — each tool in the chain receives the input format it is optimized for.
+fal never receives a floor plan. It only ever receives a photorealistic staged room image. This is the design decision that makes the quality defensible — each tool in the chain receives the input format it is optimized for.
 
 ---
 
@@ -79,7 +79,7 @@ AutoHDR never receives a floor plan. It only ever receives a photorealistic stag
 │  (shown to user as intermediate step)                 │
 │                       ↓                               │
 │  LAYER 4 ─────────────────────────────────────────    │
-│  AutoHDR → video clip                                 │
+│  fal → video clip                                 │
 │  Eval Agent scores 0-10                               │
 │  < 7 → refine prompt → retry (max 3)                  │
 │  ≥ 7 → pass                                           │
@@ -219,6 +219,11 @@ User:   [floor_plan_image]
 
 **Output:** `aesthetic_profile.json` — the contract between Layer 2 and Layer 3.
 
+Implementation note: Layer 2 persists a full `Layer2Profile` bundle containing
+the aesthetic profile, normalized pins, cluster summaries, parsed floor plan
+structure, Layer 1 payload, and provenance. See
+[schemas/layer2_profile.schema.json](schemas/layer2_profile.schema.json).
+
 ---
 
 ### Layer 3 — Creative Spec Agent
@@ -244,7 +249,7 @@ Return ONLY valid JSON.
     {
       "name": "living_room",
       "dalle_prompt": "string",
-      "autohdr_prompt": "string",
+      "video_prompt": "string",
       "camera_motion": "slow_dolly | orbital_pan | aerial_drift | static_zoom",
       "lighting_instruction": "string",
       "duration_seconds": 5
@@ -272,7 +277,7 @@ for Layers 3.5-5. See
 
 ### Layer 3.5 — Room Image Agent
 
-**Responsibility:** Generate a photorealistic staged room image per room using DALL-E 3. This image becomes the direct input to AutoHDR.
+**Responsibility:** Generate a photorealistic staged room image per room using DALL-E 3. This image becomes the direct input to fal.
 
 **Tools used:** OpenAI DALL-E 3
 
@@ -321,14 +326,14 @@ resolution, sharp focus, photo taken for a luxury property listing
 
 ### Layer 4 — Generation + Eval Loop
 
-**Responsibility:** Animate staged room photos via AutoHDR, evaluate output quality, retry with refined prompts if below threshold.
+**Responsibility:** Animate staged room photos via fal, evaluate output quality, retry with refined prompts if below threshold.
 
-**Tools used:** AutoHDR API, GPT-4o Vision (eval judge)
+**Tools used:** fal API, GPT-4o Vision (eval judge)
 
-**Step 1 — AutoHDR call (per room)**
+**Step 1 — fal call (per room)**
 ```
 Input:  staged_room_photo (from Layer 3.5)
-        autohdr_prompt (from generation_spec.json)
+        video_prompt (from generation_spec.json)
         camera_motion instruction
 Output: video_clip (5-second .mp4)
 ```
@@ -369,7 +374,7 @@ if composite_score < 7.0 and attempts < 3:
       - If palette_match low: increase color descriptor specificity
       - If lighting_match low: add explicit lighting instruction
       - If motion low: change camera_motion type
-    retry AutoHDR call
+    retry fal call
 
 if attempts == 3 and score < 7.0:
     accept best result, flag for user review
@@ -459,11 +464,11 @@ const pins = await mcp.call('apify/pinterest-scraper', {
 
 Cost: ~$0.03 per scrape. $50 Apify credit = 1,600+ scrapes.
 
-### AutoHDR API
+### fal API
 ```javascript
-const video = await autohdr.generate({
+const video = await video_generation.generate({
   image_url: staged_room_photo_url,
-  prompt: generation_spec.rooms[i].autohdr_prompt,
+  prompt: generation_spec.rooms[i].video_prompt,
   motion: generation_spec.rooms[i].camera_motion,
   duration: 5,
   format: '16:9'
@@ -577,7 +582,7 @@ interface GenerationSpec {
 interface RoomSpec {
   name: string;
   dalle_prompt: string;
-  autohdr_prompt: string;
+  video_prompt: string;
   camera_motion: 'slow_dolly' | 'orbital_pan' | 'aerial_drift' | 'static_zoom';
   lighting_instruction: string;
   duration_seconds: number;
@@ -750,7 +755,7 @@ sharp focus, high resolution, photo taken for a luxury property listing
 | yoga_mat | a rolled-out yoga mat in a clear open area with a meditation cushion |
 | home_studio | a microphone setup on a desk arm, acoustic foam panels on one wall |
 
-### AutoHDR Prompt Templates
+### fal Prompt Templates
 
 **Per camera motion type:**
 ```
@@ -816,7 +821,7 @@ function refinePrompt(spec: RoomSpec, evalResult: EvalResult): RoomSpec {
 
   if (scores.palette_match < 6) {
     // Add explicit color instruction
-    refined.autohdr_prompt += ` Emphasize ${aesthetic.dominant_colors.join(', ')} color tones throughout.`;
+    refined.video_prompt += ` Emphasize ${aesthetic.dominant_colors.join(', ')} color tones throughout.`;
   }
 
   if (scores.lighting_match < 6) {
@@ -864,9 +869,9 @@ Fallback 2: Pre-generated room images from aesthetic library
 User sees: "Using curated reference for this room"
 ```
 
-### AutoHDR Fails or Times Out
+### fal Fails or Times Out
 ```
-Primary:  AutoHDR API
+Primary:  fal API
 Fallback: Display DALL-E 3 staged photo with Ken Burns effect (CSS animation)
           as a "still lifestyle image" — not ideal but demo-safe
 User sees: "Lifestyle image ready" (not "video") — honest framing
@@ -883,7 +888,7 @@ User sees: "Best match — 6.8/10 aesthetic fit"
 ```
 OpenAI:   Implement exponential backoff (1s, 2s, 4s)
 Apify:    Pre-cache all demo scrapes before taking stage
-AutoHDR:  One request at a time (no parallel room generation)
+fal:  One request at a time (no parallel room generation)
           Sequential generation: room 1 → room 2 → room 3
 ```
 
@@ -898,10 +903,10 @@ AutoHDR:  One request at a time (no parallel room generation)
 [ ] Haus sidebar panel shell — input state only
 [ ] Environment variables: OPENAI_KEY, APIFY_KEY, AUTOHDR_KEY, MIRO_KEY
 [ ] Test Apify MCP: scrape one Pinterest board end to end
-[ ] Test AutoHDR API: one call with a real photo
+[ ] Test fal API: one call with a real photo
 ```
 
-**Checkpoint:** Portal renders, Apify returns pins, AutoHDR returns a clip.
+**Checkpoint:** Portal renders, Apify returns pins, fal returns a clip.
 
 ### Phase 2 — Core Pipeline (Hours 5–16, Fri 8:30 AM)
 ```
@@ -910,7 +915,7 @@ AutoHDR:  One request at a time (no parallel room generation)
 [ ] Layer 3: Creative spec agent → generation_spec.json + DALL-E prompts
 [ ] Layer 3.5: DALL-E 3 room image generation (one room first)
 [ ] Layer 3.5: Scale to all rooms, display intermediate results in UI
-[ ] Layer 4: AutoHDR call with staged photo input
+[ ] Layer 4: fal call with staged photo input
 [ ] Layer 4: Eval agent scoring
 [ ] Layer 4: Retry loop (refinePrompt function)
 [ ] Wire Layers 2–4 end to end with one test property + one Pinterest board
@@ -939,7 +944,7 @@ AutoHDR:  One request at a time (no parallel room generation)
 [ ] Calibrate eval threshold: 6.5 for demo mode, max 2 retries
 [ ] Polish UI — loading states, transitions, typography
 [ ] Prepare Miro board manually as fallback if MCP integration is fragile
-[ ] Write 3-sentence pitch for each bounty (AutoHDR, Miro, DeepInvent)
+[ ] Write 3-sentence pitch for each bounty (fal, Miro, DeepInvent)
 ```
 
 **Checkpoint:** Demo runs perfectly 5 times in a row. Videos are beautiful.
@@ -950,7 +955,7 @@ The non-negotiable core:
 ✓ Pinterest board → aesthetic extraction
 ✓ Floor plan → room parsing
 ✓ DALL-E 3 room image generation (at least 1 room)
-✓ AutoHDR video from DALL-E image
+✓ fal video from DALL-E image
 ✓ Eval loop with one retry
 ✓ Video displayed to user
 ```
@@ -972,7 +977,7 @@ Cut if needed (in this order):
 [ ] Have backup videos ready in a local folder (in case of API failure)
 [ ] Open Miro board in a third tab, pre-positioned
 [ ] Silence all notifications
-[ ] Test AutoHDR and DALL-E APIs with one live call each — confirm working
+[ ] Test fal and DALL-E APIs with one live call each — confirm working
 [ ] Brief teammate on fallback: if API fails mid-demo, switch to pre-recorded video smoothly
 ```
 
@@ -1016,7 +1021,7 @@ Play 10 seconds of the nursery bedroom video. Done.
 |---------|--------|
 | API timeout during demo | "While that processes, let me show you the output from our earlier test run" → play pre-recorded video |
 | DALL-E images look poor | Skip the intermediate step, go straight to video |
-| AutoHDR fails | "Here's the lifestyle image version" → show DALL-E room photo with Ken Burns CSS animation |
+| fal fails | "Here's the lifestyle image version" → show DALL-E room photo with Ken Burns CSS animation |
 | Miro MCP fails | Switch to pre-built static Miro board screenshot |
 | Total internet failure | Full pre-recorded demo video ready to play |
 

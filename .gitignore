@@ -1,1 +1,3 @@
 .haus-cache/
+.env
+.env.local
