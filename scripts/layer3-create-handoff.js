@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 import { readFile } from 'node:fs/promises';
 
+import { loadEnvFile } from '../src/env.js';
 import { createLayer3Handoff, Layer3ValidationError } from '../src/layer3/index.js';
+
+loadEnvFile();
 
 function usage() {
   return [

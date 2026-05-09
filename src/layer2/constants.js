@@ -1,5 +1,6 @@
 export const DEFAULT_PIN_LIMIT = 20;
 export const DEFAULT_APIFY_TIMEOUT_SECONDS = 120;
+export const DEFAULT_APIFY_MAX_TOTAL_CHARGE_USD = 1;
 export const DEFAULT_AESTHETIC_MODEL = 'gpt-4.1-mini';
 export const DEFAULT_FLOOR_PLAN_MODEL = 'gpt-4.1-mini';
 

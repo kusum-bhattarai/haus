@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 import { readFile } from 'node:fs/promises';
 
+import { loadEnvFile } from '../src/env.js';
 import { createLayer2Profile, Layer2ValidationError } from '../src/layer2/index.js';
+
+loadEnvFile();
 
 function usage() {
   return [

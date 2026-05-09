@@ -1,10 +1,15 @@
-import { DEFAULT_APIFY_TIMEOUT_SECONDS, DEFAULT_PIN_LIMIT } from './constants.js';
+import {
+  DEFAULT_APIFY_MAX_TOTAL_CHARGE_USD,
+  DEFAULT_APIFY_TIMEOUT_SECONDS,
+  DEFAULT_PIN_LIMIT
+} from './constants.js';
 
 const APIFY_BASE_URL = 'https://api.apify.com/v2';
 
 export async function scrapePinterestBoard({
   boardUrl,
   limit = DEFAULT_PIN_LIMIT,
+  maxTotalChargeUsd = Number(process.env.APIFY_MAX_TOTAL_CHARGE_USD ?? DEFAULT_APIFY_MAX_TOTAL_CHARGE_USD),
   actorId = process.env.APIFY_PINTEREST_ACTOR_ID,
   token = process.env.APIFY_TOKEN,
   fetchImpl = globalThis.fetch
@@ -29,6 +34,7 @@ export async function scrapePinterestBoard({
   url.searchParams.set('limit', String(limit));
   url.searchParams.set('timeout', String(DEFAULT_APIFY_TIMEOUT_SECONDS));
   url.searchParams.set('maxItems', String(limit));
+  url.searchParams.set('maxTotalChargeUsd', String(maxTotalChargeUsd));
 
   const response = await fetchImpl(url, {
     method: 'POST',
@@ -71,12 +77,33 @@ function normalizePinterestPin(item, index) {
     item.image,
     item.imageURL,
     item.media?.images?.orig?.url,
-    item.images?.orig?.url
+    item.images?.orig?.url,
+    item.pin?.images?.orig?.url,
+    item.pin?.images?.originals?.url,
+    item.pin?.story?.pages_preview?.[0]?.blocks?.[0]?.image?.images?.originals?.url,
+    item.pin?.story?.pages_preview?.[0]?.blocks?.[0]?.image?.images?.['1200x']?.url,
+    item.pin?.story?.pages?.[0]?.blocks?.[0]?.image?.images?.originals?.url,
+    item.pin?.story?.pages?.[0]?.blocks?.[0]?.image?.images?.['1200x']?.url
   );
 
   const sourceUrl = firstString(item.source_url, item.sourceUrl, item.url, item.pinUrl, item.link) ?? imageUrl;
-  const title = firstString(item.title, item.name, item.grid_title);
-  const description = firstString(item.description, item.descriptionText, item.altText, item.closeup_description);
+  const title = firstString(
+    item.title,
+    item.name,
+    item.grid_title,
+    item.pin?.title,
+    item.pin?.title?.format,
+    item.pin?.story?.metadata?.root_title
+  );
+  const description = firstString(
+    item.description,
+    item.descriptionText,
+    item.altText,
+    item.closeup_description,
+    item.pin?.description,
+    item.pin?.grid_description,
+    item.pin?.story?.metadata?.root_description
+  );
   const saveCount = firstNumber(item.save_count, item.saveCount, item.repin_count, item.repinCount);
 
   return {
@@ -93,7 +120,17 @@ function normalizePinterestPin(item, index) {
 }
 
 function firstString(...values) {
-  return values.find((value) => typeof value === 'string' && value.trim() !== '')?.trim();
+  for (const value of values) {
+    if (typeof value === 'string' && value.trim() !== '') {
+      return value.trim();
+    }
+
+    if (typeof value?.format === 'string' && value.format.trim() !== '') {
+      return value.format.trim();
+    }
+  }
+
+  return undefined;
 }
 
 function firstNumber(...values) {

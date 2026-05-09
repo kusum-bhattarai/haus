@@ -135,6 +135,41 @@ test('normalizes Pinterest actor output and sorts by save count', () => {
   assert.equal(pins[1].pin_id, '2');
 });
 
+test('normalizes nested Pinterest story image output', () => {
+  const pins = normalizePinterestPins([
+    {
+      id: '1012465559998684270',
+      url: 'https://www.pinterest.com/pin/1012465559998684270/',
+      title: 'Japandi Dining Room with Neutral Decor',
+      source_url: 'https://www.pinterest.com/tarive22/japandi-interior-design/',
+      pin: {
+        story: {
+          pages_preview: [
+            {
+              blocks: [
+                {
+                  image: {
+                    images: {
+                      originals: {
+                        url: 'https://i.pinimg.com/originals/87/c2/ff/example.jpg'
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]);
+
+  assert.equal(pins.length, 1);
+  assert.equal(pins[0].image_url, 'https://i.pinimg.com/originals/87/c2/ff/example.jpg');
+  assert.equal(pins[0].title, 'Japandi Dining Room with Neutral Decor');
+});
+
+
 test('Pinterest scraper calls Apify synchronous dataset endpoint', async () => {
   let requestUrl;
   let requestBody;
@@ -157,6 +192,7 @@ test('Pinterest scraper calls Apify synchronous dataset endpoint', async () => {
   });
 
   assert.match(requestUrl, /\/v2\/acts\/owner~pinterest-scraper\/run-sync-get-dataset-items/);
+  assert.match(requestUrl, /maxTotalChargeUsd=1/);
   assert.equal(requestBody.startUrls[0].url, 'https://www.pinterest.com/example/board/');
   assert.equal(requestBody.maxItems, 1);
   assert.equal(pins.length, 1);
