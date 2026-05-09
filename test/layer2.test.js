@@ -150,6 +150,9 @@ test('normalizes nested Pinterest story image output', () => {
                 {
                   image: {
                     images: {
+                      '736x': {
+                        url: 'https://i.pinimg.com/736x/87/c2/ff/example.jpg'
+                      },
                       originals: {
                         url: 'https://i.pinimg.com/originals/87/c2/ff/example.jpg'
                       }
@@ -165,7 +168,7 @@ test('normalizes nested Pinterest story image output', () => {
   ]);
 
   assert.equal(pins.length, 1);
-  assert.equal(pins[0].image_url, 'https://i.pinimg.com/originals/87/c2/ff/example.jpg');
+  assert.equal(pins[0].image_url, 'https://i.pinimg.com/736x/87/c2/ff/example.jpg');
   assert.equal(pins[0].title, 'Japandi Dining Room with Neutral Decor');
 });
 

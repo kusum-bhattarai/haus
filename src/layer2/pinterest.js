@@ -79,11 +79,15 @@ function normalizePinterestPin(item, index) {
     item.media?.images?.orig?.url,
     item.images?.orig?.url,
     item.pin?.images?.orig?.url,
+    item.pin?.story?.pages_preview?.[0]?.blocks?.[0]?.image?.images?.['1200x']?.url,
+    item.pin?.story?.pages_preview?.[0]?.blocks?.[0]?.image?.images?.['736x']?.url,
+    item.pin?.story?.pages_preview?.[0]?.blocks?.[0]?.image?.images?.['474x']?.url,
+    item.pin?.story?.pages?.[0]?.blocks?.[0]?.image?.images?.['1200x']?.url,
+    item.pin?.story?.pages?.[0]?.blocks?.[0]?.image?.images?.['736x']?.url,
+    item.pin?.story?.pages?.[0]?.blocks?.[0]?.image?.images?.['474x']?.url,
     item.pin?.images?.originals?.url,
     item.pin?.story?.pages_preview?.[0]?.blocks?.[0]?.image?.images?.originals?.url,
-    item.pin?.story?.pages_preview?.[0]?.blocks?.[0]?.image?.images?.['1200x']?.url,
-    item.pin?.story?.pages?.[0]?.blocks?.[0]?.image?.images?.originals?.url,
-    item.pin?.story?.pages?.[0]?.blocks?.[0]?.image?.images?.['1200x']?.url
+    item.pin?.story?.pages?.[0]?.blocks?.[0]?.image?.images?.originals?.url
   );
 
   const sourceUrl = firstString(item.source_url, item.sourceUrl, item.url, item.pinUrl, item.link) ?? imageUrl;

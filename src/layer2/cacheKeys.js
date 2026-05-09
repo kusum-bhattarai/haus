@@ -5,7 +5,7 @@ export function hashJson(value) {
 }
 
 export function pinterestCacheKey(boardUrl, limit) {
-  return hashJson({ boardUrl, limit });
+  return hashJson({ version: 2, boardUrl, limit });
 }
 
 export function aestheticCacheKey(pins, model) {
