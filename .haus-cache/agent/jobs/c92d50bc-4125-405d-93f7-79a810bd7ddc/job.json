@@ -5,7 +5,7 @@
   "status": "completed",
   "current_state": "COMPLETED",
   "created_at": "2026-05-10T06:18:23.030Z",
-  "updated_at": "2026-05-10T06:23:21.082Z",
+  "updated_at": "2026-05-10T06:46:04.678Z",
   "input": {
     "floor_plan_id": "1b1",
     "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
@@ -1586,8 +1586,8 @@
       "room_type": "living_room",
       "sequence_index": 0,
       "state": "APPROVED",
-      "still_attempt_count": 2,
-      "video_attempt_count": 1,
+      "still_attempt_count": 3,
+      "video_attempt_count": 2,
       "max_still_attempts": 2,
       "max_video_attempts": 3,
       "current_motion_mode": "slow_dolly",
@@ -1602,10 +1602,10 @@
       },
       "artifacts": {
         "source_image_path": null,
-        "styled_image_path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/cd20adfcda9657f64bbd60f857436e26ea3af46257a9edfbffc2b45894d0e022/still-0.png",
-        "styled_image_url": "https://v3b.fal.media/files/b/0a999d27/v1ECGAUrPbMqwbu9rqfr7_7TXLRQJS.png",
-        "video_clip_path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/e04f977ffd56b6d6861522435ecdad68a848e11589149dbc4b5578562f3428ca/video-0.mp4",
-        "video_url": "https://v3b.fal.media/files/b/0a999d3b/J7K2kshgBdZlqg1YBcb-0_video.mp4"
+        "styled_image_path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/6352e1b1a05bd7068f19804db02c2ec5f3e8694164400a330eaaf363e6a6ca88/still-0.png",
+        "styled_image_url": "https://v3b.fal.media/files/b/0a999d86/tpKW8GpAEdt_l3dpehe-j_DDX123e9.png",
+        "video_clip_path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/9140ee5a113b5b8cf6ede54c622fe1cb3da8a1fbd6746b01a888a6ff382f4124/video-0.mp4",
+        "video_url": "https://v3b.fal.media/files/b/0a999dc3/GRnHcY-LOQ2sQTS6WvoQV_video.mp4"
       },
       "plans": {
         "still_plan": {
@@ -1613,19 +1613,19 @@
           "strategy": "refine_existing_still",
           "provider": "fal",
           "model": "fal-ai/gemini-3.1-flash-image-preview/edit",
-          "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest (living area). Daylight-first: emphasize strong directional light from the front exterior windows and the large glass opening toward the Relax patio. Balance with a warm floor lamp near sofa (2700K) and a small desk task lamp for the standing desk. Keep interior midtones slightly lifted while preserving sculpted shadows from window light. A warm, restrained Japandi scheme that balances Scandinavian lightness with Japanese restraint: soft warm neutrals, light oak, sculpted simple forms, and layered natural textures. Prioritize low, grounded furniture, a focused family work corner, and meditative vignette corners for tea/reading. Maintain uncluttered composition and honest, visible light sources. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The Dine (dining) visible through the open-plan dining area must show exactly the same dining table, pendant light above the dining area, dining chairs, round oak dining table, woven rattan pendant, clear bay window view, 3-panel bay windows unobstructed as in the reference image — do not invent different furniture. The Taste (kitchen) visible through the open kitchen beyond the dining area must show exactly the same kitchen cabinets, range hood, kitchen island or counter, matte countertops, open shelving with curated ceramics, under-cabinet lighting as in the reference image — do not invent different furniture. The sofa, coffee table, area rug, standing_desk, bookshelf, low linen sofa, sculptural coffee table, visible window-to-patio sightline, low-profile linen sofa, sculptural wooden coffee table, potted plant near window in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. Previous failure modes to correct: object_missing, major_style_mismatch, lighting_unrealistic. The image demonstrates some elements of the intended design but fails to include all required objects (including the standing desk and sculpture coffee table), and has noticeable style mismatches with the Japandi aesthetic. Lighting appears too bright and lacks the realistic directional quality specified.",
+          "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest (living area). Daylight-first: emphasize strong directional light from the front exterior windows and the large glass opening toward the Relax patio. Balance with a warm floor lamp near sofa (2700K) and a small desk task lamp for the standing desk. Keep interior midtones slightly lifted while preserving sculpted shadows from window light. A warm, restrained Japandi scheme that balances Scandinavian lightness with Japanese restraint: soft warm neutrals, light oak, sculpted simple forms, and layered natural textures. Prioritize low, grounded furniture, a focused family work corner, and meditative vignette corners for tea/reading. Maintain uncluttered composition and honest, visible light sources. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The Dine (dining) visible through the open-plan dining area must show exactly the same dining table, pendant light above the dining area, dining chairs, round oak dining table, woven rattan pendant, clear bay window view, 3-panel bay windows unobstructed as in the reference image — do not invent different furniture. The Taste (kitchen) visible through the open kitchen beyond the dining area must show exactly the same kitchen cabinets, range hood, kitchen island or counter, matte countertops, open shelving with curated ceramics, under-cabinet lighting as in the reference image — do not invent different furniture. The sofa, coffee table, area rug, standing_desk, bookshelf, low linen sofa, sculptural coffee table, visible window-to-patio sightline, low-profile linen sofa, sculptural wooden coffee table, potted plant near window in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. Add a tall whiteboard in the living room — at approximately 18% across and 85% down",
           "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift",
           "preserve_layout": true,
           "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55",
           "fast_mode": true,
           "params": {
             "image_urls": [
-              "https://v3b.fal.media/files/b/0a999d24/Kn7EBGTTMBjgjjvewCviF_Mf16RHLT.png",
+              "https://v3b.fal.media/files/b/0a999d27/v1ECGAUrPbMqwbu9rqfr7_7TXLRQJS.png",
               "https://v3b.fal.media/files/b/0a999d22/R_GljrHhz4i16sOe9uvFh_rEzS2NaF.png",
               "https://v3b.fal.media/files/b/0a999d22/Uc2oHoQn8oVCFXyQuNZUN_fBA17W7j.png",
               "https://v3b.fal.media/files/b/0a999d22/Y8-0We2xxZwwgehzQrCV7_GCq8ac6z.png"
             ],
-            "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest (living area). Daylight-first: emphasize strong directional light from the front exterior windows and the large glass opening toward the Relax patio. Balance with a warm floor lamp near sofa (2700K) and a small desk task lamp for the standing desk. Keep interior midtones slightly lifted while preserving sculpted shadows from window light. A warm, restrained Japandi scheme that balances Scandinavian lightness with Japanese restraint: soft warm neutrals, light oak, sculpted simple forms, and layered natural textures. Prioritize low, grounded furniture, a focused family work corner, and meditative vignette corners for tea/reading. Maintain uncluttered composition and honest, visible light sources. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The Dine (dining) visible through the open-plan dining area must show exactly the same dining table, pendant light above the dining area, dining chairs, round oak dining table, woven rattan pendant, clear bay window view, 3-panel bay windows unobstructed as in the reference image — do not invent different furniture. The Taste (kitchen) visible through the open kitchen beyond the dining area must show exactly the same kitchen cabinets, range hood, kitchen island or counter, matte countertops, open shelving with curated ceramics, under-cabinet lighting as in the reference image — do not invent different furniture. The sofa, coffee table, area rug, standing_desk, bookshelf, low linen sofa, sculptural coffee table, visible window-to-patio sightline, low-profile linen sofa, sculptural wooden coffee table, potted plant near window in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. Previous failure modes to correct: object_missing, major_style_mismatch, lighting_unrealistic. The image demonstrates some elements of the intended design but fails to include all required objects (including the standing desk and sculpture coffee table), and has noticeable style mismatches with the Japandi aesthetic. Lighting appears too bright and lacks the realistic directional quality specified.",
+            "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest (living area). Daylight-first: emphasize strong directional light from the front exterior windows and the large glass opening toward the Relax patio. Balance with a warm floor lamp near sofa (2700K) and a small desk task lamp for the standing desk. Keep interior midtones slightly lifted while preserving sculpted shadows from window light. A warm, restrained Japandi scheme that balances Scandinavian lightness with Japanese restraint: soft warm neutrals, light oak, sculpted simple forms, and layered natural textures. Prioritize low, grounded furniture, a focused family work corner, and meditative vignette corners for tea/reading. Maintain uncluttered composition and honest, visible light sources. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The Dine (dining) visible through the open-plan dining area must show exactly the same dining table, pendant light above the dining area, dining chairs, round oak dining table, woven rattan pendant, clear bay window view, 3-panel bay windows unobstructed as in the reference image — do not invent different furniture. The Taste (kitchen) visible through the open kitchen beyond the dining area must show exactly the same kitchen cabinets, range hood, kitchen island or counter, matte countertops, open shelving with curated ceramics, under-cabinet lighting as in the reference image — do not invent different furniture. The sofa, coffee table, area rug, standing_desk, bookshelf, low linen sofa, sculptural coffee table, visible window-to-patio sightline, low-profile linen sofa, sculptural wooden coffee table, potted plant near window in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. Add a tall whiteboard in the living room — at approximately 18% across and 85% down",
             "resolution": "2K",
             "aspect_ratio": "16:9",
             "output_format": "png",
@@ -1642,11 +1642,11 @@
           "camera_motion": "slow_dolly",
           "duration_seconds": 5,
           "aspect_ratio": "16:9",
-          "source_still_url": "https://v3b.fal.media/files/b/0a999d27/v1ECGAUrPbMqwbu9rqfr7_7TXLRQJS.png",
+          "source_still_url": "https://v3b.fal.media/files/b/0a999d86/tpKW8GpAEdt_l3dpehe-j_DDX123e9.png",
           "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55",
           "fast_mode": true,
           "params": {
-            "image_url": "https://v3b.fal.media/files/b/0a999d27/v1ECGAUrPbMqwbu9rqfr7_7TXLRQJS.png",
+            "image_url": "https://v3b.fal.media/files/b/0a999d86/tpKW8GpAEdt_l3dpehe-j_DDX123e9.png",
             "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Wide interior shot with a slow and smooth dolly in. Camera moves forward through the living space, directional sunlight shifts across floor and textiles, small practical lamps remain consistent, shadows move gradually, consistent exposure, cinematic, photorealistic Nest (living area), Calm, warm, and restrained — meditative family home with functional pockets for work and quiet moments. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest (living area). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
             "duration": "5",
             "aspect_ratio": "16:9",
@@ -1694,6 +1694,38 @@
             "object_missing"
           ],
           "message": "The image is aesthetically pleasing with good lighting and style, but it does not fully match the required room specifications, including missing some key objects and having slight discrepancies in room identity."
+        },
+        {
+          "kind": "video",
+          "decision": "pass",
+          "scores": {
+            "style_match": 7.4,
+            "room_correctness": 7.4,
+            "architecture_stability": 7.4,
+            "lighting_realism": 7.4,
+            "object_completeness": 7.4,
+            "motion_quality": 7.4,
+            "overall": 7.4
+          },
+          "overall": 7.4,
+          "failure_classes": [],
+          "message": "Video is usable for the room sequence."
+        },
+        {
+          "kind": "still",
+          "decision": "pass",
+          "scores": {
+            "style_match": 9,
+            "room_correctness": 10,
+            "architecture_stability": 9,
+            "lighting_realism": 8,
+            "object_completeness": 9,
+            "motion_quality": 10,
+            "overall": 9
+          },
+          "overall": 9,
+          "failure_classes": [],
+          "message": "The image effectively captures the intended room style and layout, with appropriate furniture and lighting. The Japandi aesthetic is well represented, and all required elements are present."
         },
         {
           "kind": "video",
@@ -2204,8 +2236,8 @@
       },
       {
         "room_id": "nest_living_room",
-        "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/e04f977ffd56b6d6861522435ecdad68a848e11589149dbc4b5578562f3428ca/video-0.mp4",
-        "url": "https://v3b.fal.media/files/b/0a999d3b/J7K2kshgBdZlqg1YBcb-0_video.mp4"
+        "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/9140ee5a113b5b8cf6ede54c622fe1cb3da8a1fbd6746b01a888a6ff382f4124/video-0.mp4",
+        "url": "https://v3b.fal.media/files/b/0a999dc3/GRnHcY-LOQ2sQTS6WvoQV_video.mp4"
       }
     ],
     "final_video_path": "/Users/quamos/Repos/haus/.haus-cache/agent/jobs/c92d50bc-4125-405d-93f7-79a810bd7ddc/layer5/final_16x9.mp4",
@@ -2232,8 +2264,8 @@
       },
       {
         "room_id": "nest_living_room",
-        "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/e04f977ffd56b6d6861522435ecdad68a848e11589149dbc4b5578562f3428ca/video-0.mp4",
-        "url": "https://v3b.fal.media/files/b/0a999d3b/J7K2kshgBdZlqg1YBcb-0_video.mp4"
+        "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/9140ee5a113b5b8cf6ede54c622fe1cb3da8a1fbd6746b01a888a6ff382f4124/video-0.mp4",
+        "url": "https://v3b.fal.media/files/b/0a999dc3/GRnHcY-LOQ2sQTS6WvoQV_video.mp4"
       }
     ],
     "anchors": [
@@ -2327,9 +2359,9 @@
       }
     ],
     "captions": {
-      "instagram": "Embrace serenity in this Warm Japandi home, where family and focus harmonize beautifully. 🏡✨ #HomeSweetHome #JapandiStyle #FamilyLiving",
-      "tiktok": "A family haven designed for work and calm. Experience the warmth! 🛋️✨ #Japandi #CozyVibes #Home",
-      "listing": "Discover this exquisite Warm Japandi home, featuring a cozy work corner and serene spaces that blend comfort and elegance for modern family living."
+      "instagram": "Embrace serenity in this warm Japandi oasis. Perfect blend of calm & style for your family! #Japandi #FamilyHome #CozyVibes",
+      "tiktok": "Find your zen in this warm Japandi haven! 🏡✨ #CalmHome #JapandiStyle #FamilyDefined",
+      "listing": "Discover tranquility in this warm Japandi home, featuring a cozy work corner and sculpted simplicity. Perfect for family life!"
     }
   },
   "events": [
@@ -11728,6 +11760,4422 @@
     {
       "event_id": "44c646c3-b30f-4082-9565-9d8a021aba4f",
       "at": "2026-05-10T06:23:21.082Z",
+      "room_id": null,
+      "type": "job.completed",
+      "state": "COMPLETED",
+      "message": "Your space is ready."
+    },
+    {
+      "event_id": "64e20aad-5c72-4abe-991c-944e68e56bb7",
+      "at": "2026-05-10T06:35:42.690Z",
+      "room_id": null,
+      "type": "job.edit.started",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Regenerating 1 room: Add a tall whiteboard in the living room — at approximately 18% across and 85% down"
+    },
+    {
+      "event_id": "21652efd-96fd-455f-9382-1864a25c085e",
+      "at": "2026-05-10T06:35:42.705Z",
+      "room_id": "nest_living_room",
+      "type": "room.still.planning",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Planning room still."
+    },
+    {
+      "event_id": "b5f285f5-4f8e-4470-b7fe-a816ff458f39",
+      "at": "2026-05-10T06:35:42.726Z",
+      "room_id": "nest_living_room",
+      "type": "room.still.started",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Generating room still."
+    },
+    {
+      "event_id": "ea2bd2f7-5135-4fda-80eb-831967bfeb60",
+      "at": "2026-05-10T06:36:15.580Z",
+      "room_id": "nest_living_room",
+      "type": "room.still.review_ready",
+      "state": "WAITING_FOR_HUMAN_REVIEW",
+      "message": "Still ready for human review."
+    },
+    {
+      "event_id": "a3ce53d0-6891-436d-a30e-61a003e3df90",
+      "at": "2026-05-10T06:36:15.589Z",
+      "room_id": null,
+      "type": "job.stills.review_ready",
+      "state": "WAITING_FOR_HUMAN_REVIEW",
+      "message": "All room stills are ready for review."
+    },
+    {
+      "event_id": "ea0b93cc-5543-4ad4-8f4e-d83f8071eec3",
+      "at": "2026-05-10T06:40:01.466Z",
+      "room_id": "nest_living_room",
+      "type": "room.still.approved",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Still approved."
+    },
+    {
+      "event_id": "9102b526-b4e0-454f-b293-598d39736e1b",
+      "at": "2026-05-10T06:40:01.482Z",
+      "room_id": null,
+      "type": "job.stills.approved",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "All room stills approved. Starting videos."
+    },
+    {
+      "event_id": "3ede3c41-85fe-48a3-a61c-ebafd9640f5e",
+      "at": "2026-05-10T06:40:01.545Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.started",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Generating room video."
+    },
+    {
+      "event_id": "4ccfa4dd-fe36-4def-b974-7d74b1988af4",
+      "at": "2026-05-10T06:40:02.277Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "b2e1d573-5992-4bae-a566-f20cdbe5f79a",
+      "at": "2026-05-10T06:40:03.084Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "c3f86b0c-d630-4cff-8470-40b71d811747",
+      "at": "2026-05-10T06:40:03.898Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "1825815d-85bc-41c9-a19a-b87ffc76e515",
+      "at": "2026-05-10T06:40:04.461Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "2eabcdfe-8f58-4533-80e5-434d79acc176",
+      "at": "2026-05-10T06:40:05.017Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "138f2506-c77e-461d-afa9-aad2a58ae8f8",
+      "at": "2026-05-10T06:40:05.640Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "6fc721f8-a51e-40c8-937a-1383f8eeb1eb",
+      "at": "2026-05-10T06:40:06.210Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "672e4dd1-323a-4c0a-8d88-ad3e4e6d1c25",
+      "at": "2026-05-10T06:40:06.779Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "61b67fcc-c4fe-4ed1-8ab0-5ab1e9fa0a3b",
+      "at": "2026-05-10T06:40:07.352Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "45e5f3ba-9ac1-45ca-8d0f-f151a5e35ec5",
+      "at": "2026-05-10T06:40:07.946Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "d5a3dc02-9494-4ab2-8bab-be0dcaefa224",
+      "at": "2026-05-10T06:40:08.553Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "ea70c559-a1ed-4fe5-932e-6de010d66a42",
+      "at": "2026-05-10T06:40:09.124Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "32380a68-7e36-41ca-b0f1-287a6002e58e",
+      "at": "2026-05-10T06:40:09.819Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "dd5a6a31-ea08-4b39-87e0-4c95864e565f",
+      "at": "2026-05-10T06:40:10.433Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "e176157b-b046-4d88-b9ac-23524f1d7b99",
+      "at": "2026-05-10T06:40:11.019Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "b25a6c98-315f-4b74-b4fd-0b0401525b3a",
+      "at": "2026-05-10T06:40:11.593Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "5eaa124e-1787-4999-bdb6-ffd2bfa8d388",
+      "at": "2026-05-10T06:40:12.158Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "ad491f11-8173-40b2-8673-75815bb604b6",
+      "at": "2026-05-10T06:40:12.732Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "c4c6dae0-0e8b-41a3-8a91-155c6ce4071a",
+      "at": "2026-05-10T06:40:13.297Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "b57dc9a7-973d-456b-abaf-b2dd66da2fa2",
+      "at": "2026-05-10T06:40:13.903Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "67822ce4-d9d9-49f5-a3b7-3cfc4a6287d8",
+      "at": "2026-05-10T06:40:14.595Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "80809542-de49-444a-bf2b-0500e5d86a75",
+      "at": "2026-05-10T06:40:15.208Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "249193c4-a6ea-4558-a85f-c859d1c02414",
+      "at": "2026-05-10T06:40:16.023Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "c83b5369-3d4c-41f8-9a8c-c7c4d68eaf4f",
+      "at": "2026-05-10T06:40:16.636Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "f28ea22c-7492-4b96-b23c-b3a82d74ee34",
+      "at": "2026-05-10T06:40:17.264Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "0e2aa176-bff5-45cb-aa0f-addbcaea8732",
+      "at": "2026-05-10T06:40:17.879Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "ce814a35-ca5b-4fc8-9598-c29014a5483e",
+      "at": "2026-05-10T06:40:18.481Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "af8c2d4d-0491-479b-9778-940f1580c156",
+      "at": "2026-05-10T06:40:19.074Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "9a004300-b922-4f63-8e07-616a4734a94d",
+      "at": "2026-05-10T06:40:19.759Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "39ef7f73-a7ba-4d7a-8712-10904005dc1c",
+      "at": "2026-05-10T06:40:20.379Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "b3160697-2697-4d35-a262-33010e8d3bc8",
+      "at": "2026-05-10T06:40:20.993Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "5f11a4f0-01bd-433a-ac3c-58ce2d64d223",
+      "at": "2026-05-10T06:40:21.768Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "1eae80d7-b76d-4e6c-82a8-9eb5cf96d65a",
+      "at": "2026-05-10T06:40:22.393Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "a80c2f0f-1003-4214-81bc-472d0f251713",
+      "at": "2026-05-10T06:40:22.996Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "d99060a4-8c64-43b6-8b4e-46b0ecb5041b",
+      "at": "2026-05-10T06:40:23.608Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "5eb1263f-9346-4a01-841f-58abcb183b6e",
+      "at": "2026-05-10T06:40:24.428Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "ba105afc-e74e-4211-a489-ce8a9a004c98",
+      "at": "2026-05-10T06:40:25.003Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "e48f7a1d-796d-4353-9457-133572af7dc5",
+      "at": "2026-05-10T06:40:25.581Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "3157a538-0cdb-4b70-bcfa-a25fd7b8b1fe",
+      "at": "2026-05-10T06:40:26.179Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "041bcba6-bb0b-498e-81ef-02f63e476cbb",
+      "at": "2026-05-10T06:40:26.784Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "9d2c23b0-1527-42da-92fe-0dd7c7663ce4",
+      "at": "2026-05-10T06:40:27.417Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "17632d92-66ba-4238-b942-3c0670a5c6e0",
+      "at": "2026-05-10T06:40:28.019Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "d0802c19-7cdd-49ca-b7f4-e931f99391dc",
+      "at": "2026-05-10T06:40:28.612Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "ace674a1-d28b-45ec-9558-9954cedf5016",
+      "at": "2026-05-10T06:40:29.224Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "66a749c5-4c57-43dc-8cbc-e43f6ba4cac6",
+      "at": "2026-05-10T06:40:29.815Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "a741dd60-8e02-4191-8d77-a30d4df90cea",
+      "at": "2026-05-10T06:40:30.408Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "6a110d7f-2518-458b-ab73-1041c0fcc6ab",
+      "at": "2026-05-10T06:40:30.978Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "28dfc2c3-f8d6-4a56-9a79-b8eeb6b39f31",
+      "at": "2026-05-10T06:40:31.557Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "dd680115-0a82-42c0-a1da-8c89dbd37687",
+      "at": "2026-05-10T06:40:32.118Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "a61b78ba-394e-46c6-934e-be54baa3211e",
+      "at": "2026-05-10T06:40:32.815Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "7a42036a-442b-4e5d-88c7-1e6d10109c74",
+      "at": "2026-05-10T06:40:33.385Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "a20a15bb-4f1a-4346-a7f0-6ffbca83f73e",
+      "at": "2026-05-10T06:40:34.502Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "0f369625-ab50-42aa-a541-73f3ac7abdd1",
+      "at": "2026-05-10T06:40:35.121Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "c6a39ff1-61f8-403a-98a5-4f2d7fe7c548",
+      "at": "2026-05-10T06:40:35.712Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "f0f4f4e8-cdbf-4b99-91bd-eae8439d975e",
+      "at": "2026-05-10T06:40:36.344Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "b885aa43-a0fd-4d42-b995-3258b802a45f",
+      "at": "2026-05-10T06:40:36.948Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "cb4a7dfe-9f97-457f-93f7-24c21043afd0",
+      "at": "2026-05-10T06:40:37.629Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "9561c684-46d3-4a15-878b-574915766952",
+      "at": "2026-05-10T06:40:38.188Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "6f8a4f37-2e71-48c2-b8d5-75912c39e873",
+      "at": "2026-05-10T06:40:38.773Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "5f6d5d2e-fef8-4bf7-a561-a78e7cca352f",
+      "at": "2026-05-10T06:40:39.372Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "0eeb2871-0125-43f6-b1a5-f6314e19f597",
+      "at": "2026-05-10T06:40:39.953Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "a54b2f95-0048-4e9a-baed-697d3c56f0de",
+      "at": "2026-05-10T06:40:40.537Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "44d14350-b24e-4c25-a3aa-58aae9adfd00",
+      "at": "2026-05-10T06:40:41.106Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "f38fe77c-52c4-46f9-b81e-792af58ae245",
+      "at": "2026-05-10T06:40:41.738Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "377f599a-7829-480b-86e8-0c594e938a5b",
+      "at": "2026-05-10T06:40:42.339Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "8d70ac84-4ea9-41c0-ac53-5fc3597b6799",
+      "at": "2026-05-10T06:40:42.919Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "442c4636-af9d-400a-bb36-256488c8ae99",
+      "at": "2026-05-10T06:40:43.497Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "b1c5124f-f9fc-4d8c-9908-2fc38c73386e",
+      "at": "2026-05-10T06:40:44.073Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "4906c3f7-f391-4c7f-8086-49b02bf844b4",
+      "at": "2026-05-10T06:40:44.634Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "1c28310a-0710-4a01-843a-2fbfd3e113de",
+      "at": "2026-05-10T06:40:45.724Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "f0870d55-4f0b-471e-9d12-37a4c93b2544",
+      "at": "2026-05-10T06:40:46.277Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "c4f9af55-a525-4122-bfc3-bfd1c00c780f",
+      "at": "2026-05-10T06:40:46.886Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "41b43701-4ca0-4c25-a137-0dc7f41ee292",
+      "at": "2026-05-10T06:40:47.444Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "a6794a76-f0a2-4a23-93d3-66c6e0f3cfd7",
+      "at": "2026-05-10T06:40:48.048Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "10218c4e-ab29-40ca-a348-98db3e499c01",
+      "at": "2026-05-10T06:40:48.631Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "ca9e9e1a-b06f-49dc-b1fd-7935f92c20d6",
+      "at": "2026-05-10T06:40:49.247Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "b586c271-efef-4374-b725-133a447b1e3f",
+      "at": "2026-05-10T06:40:49.835Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "22993dfa-740f-47a9-9172-bacc858e8aef",
+      "at": "2026-05-10T06:40:50.435Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "051493c5-971c-449b-b3a0-64e01de440d4",
+      "at": "2026-05-10T06:40:50.989Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "22e99487-1064-4b13-b1fe-f91db738ad2a",
+      "at": "2026-05-10T06:40:51.599Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "2accb1a5-61b6-4381-8a13-ec00fd4444a6",
+      "at": "2026-05-10T06:40:52.168Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "93009f38-799a-47e7-8113-289aa01f7637",
+      "at": "2026-05-10T06:40:52.729Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "944e41c4-f5de-47c1-bf5a-b75d3fde70c9",
+      "at": "2026-05-10T06:40:53.308Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "0386f0b7-0d1a-473d-ba08-9675f9685643",
+      "at": "2026-05-10T06:40:53.873Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "21c19d13-580b-4cdc-b2a8-79e3b57e7fbe",
+      "at": "2026-05-10T06:40:54.441Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "febdfe55-8ff0-4004-beb8-283a576f86e0",
+      "at": "2026-05-10T06:40:54.998Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "023cb93f-9592-4d86-94c7-35cb5f067549",
+      "at": "2026-05-10T06:40:55.582Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "129d6891-96c1-4931-9382-cd16ed39dda7",
+      "at": "2026-05-10T06:40:56.142Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "452704b6-5a12-4150-aae7-72c2c6c00ce4",
+      "at": "2026-05-10T06:40:56.700Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "0d5c89ef-7888-4483-8ec5-5bd29d76e473",
+      "at": "2026-05-10T06:40:57.292Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "bbdf83ee-c0af-469c-b96b-3133938ba784",
+      "at": "2026-05-10T06:40:57.854Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "4976b6a1-e159-420e-ba35-90c6629cd74e",
+      "at": "2026-05-10T06:40:58.452Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "1453adfa-27ef-4473-8cef-0d8f2d2bb76f",
+      "at": "2026-05-10T06:40:59.064Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "9fdf3a2a-e6d0-4fae-87f2-570b64a4f725",
+      "at": "2026-05-10T06:40:59.629Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "6a08d363-63ea-45de-bf6d-b3da569d192a",
+      "at": "2026-05-10T06:41:00.199Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "30c551ee-6cae-4be2-aa10-67454a00ca78",
+      "at": "2026-05-10T06:41:00.779Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "1a1e5d50-16ff-436d-a673-a0bc61be7c33",
+      "at": "2026-05-10T06:41:01.358Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "9a51a50d-5a5f-4c34-ad4c-aa973441fad1",
+      "at": "2026-05-10T06:41:02.000Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "8299e4fc-b39e-482f-b008-3eba25352794",
+      "at": "2026-05-10T06:41:02.584Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "5babd364-6e68-419f-a341-c4997ebe76f5",
+      "at": "2026-05-10T06:41:03.192Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "0bd12d52-4545-4da4-afb6-4ea543a9294a",
+      "at": "2026-05-10T06:41:03.768Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "1aebdda7-59f1-4d8c-a6a7-34dec233cd20",
+      "at": "2026-05-10T06:41:04.392Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "8d1ff574-8927-49d3-8c8f-3bc001821cf2",
+      "at": "2026-05-10T06:41:04.988Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "b53e49e4-ffc1-4b87-bd96-e7cda83e4aff",
+      "at": "2026-05-10T06:41:05.580Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "fd26ed54-14dd-497e-91c6-066ba2e12fe9",
+      "at": "2026-05-10T06:41:06.154Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "6d0b17f5-f32f-4603-b96d-65f47c8323b6",
+      "at": "2026-05-10T06:41:06.724Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "317395c8-2afa-4cd1-8a59-76f48bfaa8a2",
+      "at": "2026-05-10T06:41:07.318Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "801620df-ccdc-47f7-94bf-c7a3e2177589",
+      "at": "2026-05-10T06:41:07.868Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "e0217f47-63d1-4d6a-a0cd-30455b222489",
+      "at": "2026-05-10T06:41:08.427Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "67f46a38-70c0-4806-9994-c89f3124e2b6",
+      "at": "2026-05-10T06:41:09.030Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "0b6973d9-ef2c-4c0b-98ca-35a151912129",
+      "at": "2026-05-10T06:41:09.926Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "8fdf6020-a2e7-48e3-a518-b587f3686c40",
+      "at": "2026-05-10T06:41:10.589Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "77c9d8ae-3f55-4506-867f-295023bcd123",
+      "at": "2026-05-10T06:41:11.151Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "c5b4d911-fce0-4408-88e8-a47549c3db94",
+      "at": "2026-05-10T06:41:11.868Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "8061e3e4-2efb-450e-8da4-cfa180c50d25",
+      "at": "2026-05-10T06:41:12.540Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "4482edf6-1264-441f-be99-ba4235f8d17f",
+      "at": "2026-05-10T06:41:13.199Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "1543c0b5-00d0-445e-883e-17ec1204f089",
+      "at": "2026-05-10T06:41:13.803Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "ec8a3ea0-b25a-44a1-94f9-b0e50e21f16e",
+      "at": "2026-05-10T06:41:14.374Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "f3091526-3cb0-4edd-bdd7-3823d3c8746d",
+      "at": "2026-05-10T06:41:15.002Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "86aa77df-c3c6-47f3-be9e-07b464a426c9",
+      "at": "2026-05-10T06:41:15.732Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "3884b169-ce12-4355-803d-fdcf34239d50",
+      "at": "2026-05-10T06:41:16.430Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "0f8e9f41-9bd1-41f5-a71f-a915c5493ef8",
+      "at": "2026-05-10T06:41:17.033Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "d865380b-1792-4db7-9d87-abe9fb671065",
+      "at": "2026-05-10T06:41:17.609Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "c50fd79d-4412-4c27-9367-f77370334cea",
+      "at": "2026-05-10T06:41:18.224Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "427f89a7-c41f-4def-b8fc-40671f4d418b",
+      "at": "2026-05-10T06:41:18.802Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "a5960662-42e6-407c-ab45-c120cabcfc89",
+      "at": "2026-05-10T06:41:19.402Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "132873c3-d4ad-44e8-87a2-13c93bb2b272",
+      "at": "2026-05-10T06:41:20.070Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "a4f9a42b-0abb-4c63-b8e9-ccafe3978910",
+      "at": "2026-05-10T06:41:20.702Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "dbd3f35f-924d-41ba-a3a4-9eeb1fd20783",
+      "at": "2026-05-10T06:41:21.386Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "94e15393-7d5d-442b-990c-f0a147634500",
+      "at": "2026-05-10T06:41:22.037Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "aaedfe24-0393-4311-a7a3-962c8a04191c",
+      "at": "2026-05-10T06:41:22.618Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "8ee96452-1be5-4c1f-8a5f-e7138a04ef3a",
+      "at": "2026-05-10T06:41:23.184Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "c72bc0f4-e558-431b-9bbe-29ea70ae5aa9",
+      "at": "2026-05-10T06:41:24.033Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "b3a95741-d6f7-47de-a18e-3c87b8da7a35",
+      "at": "2026-05-10T06:41:24.711Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "ef1ee9b9-dc9d-40b6-a322-26665b17bc62",
+      "at": "2026-05-10T06:41:25.352Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "acfd71d1-4dd0-442b-9e25-5aa09f284833",
+      "at": "2026-05-10T06:41:25.992Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "411a9741-b8ec-4e2b-9faa-ecb1da7659cd",
+      "at": "2026-05-10T06:41:26.584Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "6457c4e5-2d30-4c35-a912-fbd7032623b9",
+      "at": "2026-05-10T06:41:27.268Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "8ad1baf2-0282-48ef-bd11-66de8201d26f",
+      "at": "2026-05-10T06:41:27.842Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "c7012bd1-0f1e-427c-8a43-082c6134c576",
+      "at": "2026-05-10T06:41:28.505Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "2d257a4f-33e2-434b-8684-0fb7ffe8170b",
+      "at": "2026-05-10T06:41:29.087Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "e4037ebb-be2b-49bc-a899-f0f69fa3114c",
+      "at": "2026-05-10T06:41:29.711Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "d9bdaccb-5515-4784-8dc8-19de7e060bd0",
+      "at": "2026-05-10T06:41:30.336Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "a2012f24-a6c7-4617-a91c-595b3ee7e7df",
+      "at": "2026-05-10T06:41:30.933Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "32b5f78e-8251-4449-8f53-2911f6c53cad",
+      "at": "2026-05-10T06:41:31.633Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "0531f661-e389-4812-b5c1-86a98143b382",
+      "at": "2026-05-10T06:41:32.278Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "bb8b21df-61d4-42c1-93a8-17b66a75d27e",
+      "at": "2026-05-10T06:41:32.850Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "a93d069a-0667-4a8d-a26c-00279cabc2ed",
+      "at": "2026-05-10T06:41:33.511Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "f3c05195-e100-4d48-be8b-3e8c1fdc5262",
+      "at": "2026-05-10T06:41:34.187Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "3c77d2bd-ecf8-4d64-8c51-915d5764c77f",
+      "at": "2026-05-10T06:41:34.753Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "75d7eae6-a6a1-4c40-8869-ece2d2186fc4",
+      "at": "2026-05-10T06:41:35.398Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "b83ca8dd-25bf-40dd-9364-489ad652de48",
+      "at": "2026-05-10T06:41:35.973Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "341cf92a-8d63-4894-98c6-5d6e239f7035",
+      "at": "2026-05-10T06:41:36.587Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "c1030d2c-a7cf-4e4f-b3d6-928dc1d2acc4",
+      "at": "2026-05-10T06:41:37.151Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "f06fbc98-0292-4942-9dac-12c2e9c26b09",
+      "at": "2026-05-10T06:41:37.773Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "bc49952f-29ff-48ed-84e4-eb2bc51e3727",
+      "at": "2026-05-10T06:41:38.365Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "7a1133cb-d504-4357-9a3d-c7212b186c16",
+      "at": "2026-05-10T06:41:39.011Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "dc4456b2-4c18-41a7-a57e-34eecbb2fb72",
+      "at": "2026-05-10T06:41:39.606Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "f532135f-dbff-40a8-859b-d2c377c3f53a",
+      "at": "2026-05-10T06:41:40.334Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "27f08302-805c-48b9-b629-00cc07673b5e",
+      "at": "2026-05-10T06:41:40.938Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "2ee1776b-ea9b-4485-9eae-d3593ec0d96a",
+      "at": "2026-05-10T06:41:41.558Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "bd2a2bf0-6c22-4eeb-b2bb-1c8ab2ffdcd5",
+      "at": "2026-05-10T06:41:42.221Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "9ac01ab9-4fbd-406b-9a97-c10be23991f4",
+      "at": "2026-05-10T06:41:42.835Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "8338fb2f-74c6-4a37-a257-0db35ce5d4b7",
+      "at": "2026-05-10T06:41:43.417Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "48151969-dba9-4d89-931a-a872d82a9bae",
+      "at": "2026-05-10T06:41:44.075Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "f28776d3-4384-452e-a983-035bf74b0a3c",
+      "at": "2026-05-10T06:41:44.640Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "fca649d5-5798-42c6-9743-22d1ac9e1b0f",
+      "at": "2026-05-10T06:41:45.352Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "2555b397-c5b7-4e08-9659-196ea8ae37d8",
+      "at": "2026-05-10T06:41:45.986Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "cca2725e-721f-46ff-954a-d53bbf4ceed0",
+      "at": "2026-05-10T06:41:46.589Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "0901b9d9-789c-4115-b3e5-6e73089cdc51",
+      "at": "2026-05-10T06:41:47.176Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "47abff25-689a-4e4d-9bf5-e610f557cafb",
+      "at": "2026-05-10T06:41:47.748Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "0caeb338-a76b-4e43-9ee3-768143c4de1d",
+      "at": "2026-05-10T06:41:48.343Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "fd27ee64-1a04-4804-80c5-99a7b6acec92",
+      "at": "2026-05-10T06:41:48.936Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "624e99ac-60ac-494b-8446-a665bb510554",
+      "at": "2026-05-10T06:41:49.573Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "866fb9cf-56c4-4bbc-b994-9585d12aaa2b",
+      "at": "2026-05-10T06:41:50.148Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "8cbd98ed-bfb0-495e-ae34-dedfa761655e",
+      "at": "2026-05-10T06:41:50.789Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "d6d006e5-0920-44d6-92ef-99852d703ad4",
+      "at": "2026-05-10T06:41:51.382Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "4758d619-7fad-4dd0-b5e3-74cff7bde79a",
+      "at": "2026-05-10T06:41:52.036Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "c18132b6-95ae-4da6-8f70-9e75d49834fb",
+      "at": "2026-05-10T06:41:52.626Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "3e139651-7585-4e09-9d47-451532e1347c",
+      "at": "2026-05-10T06:41:53.218Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "fd3cc5a7-d14f-4aa3-9c81-6af74486647c",
+      "at": "2026-05-10T06:41:53.825Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "d1643dff-816a-44bb-8531-068b04389e14",
+      "at": "2026-05-10T06:41:54.453Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "c34a875d-fa44-47dd-9e96-827b222d425c",
+      "at": "2026-05-10T06:41:55.073Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "bbc66826-f9ed-4922-9fb6-2e05c4f4bda4",
+      "at": "2026-05-10T06:41:55.642Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "4e288d22-0118-4dcd-a0d6-30b2a841a788",
+      "at": "2026-05-10T06:41:56.217Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "a1e43ed9-49c3-47f8-b5f6-965a3680d16d",
+      "at": "2026-05-10T06:41:56.835Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "8b7642d7-5937-44bb-baf6-4cf7d166e2e1",
+      "at": "2026-05-10T06:41:57.412Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "600e02fe-b6fd-4037-b69a-ca970ec53884",
+      "at": "2026-05-10T06:41:57.999Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "618f1e7d-46c5-48c6-9a3d-321ad4de91f8",
+      "at": "2026-05-10T06:41:58.626Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "8277c0e3-3eb3-4864-bdb3-b60fb4c43b81",
+      "at": "2026-05-10T06:41:59.257Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "a284c19b-66c5-4ce9-8eeb-a4dd0cd49f50",
+      "at": "2026-05-10T06:41:59.861Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "dfe9f829-a068-41cd-a598-2b287ecfd5b9",
+      "at": "2026-05-10T06:42:00.502Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "f45f1750-efbd-49c7-b1d0-840faff8df56",
+      "at": "2026-05-10T06:42:01.759Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "afe2b9c8-4a65-4fe6-a8a6-bc43062d4ff2",
+      "at": "2026-05-10T06:42:03.043Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "873de67a-67c0-493d-9484-2fb91dbebf35",
+      "at": "2026-05-10T06:42:04.019Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "e4fa0733-0203-4e16-adae-8fde2ac4cee4",
+      "at": "2026-05-10T06:42:04.654Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "1e6d6e42-c910-42fe-81d0-3359d2722dd1",
+      "at": "2026-05-10T06:42:05.317Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "9d49e3a4-3828-4c56-ab38-5e0a5c85061a",
+      "at": "2026-05-10T06:42:06.020Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "21b80fbd-4a5b-4c33-939d-10930ab5763f",
+      "at": "2026-05-10T06:42:06.822Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "e018acd7-6ae2-4d49-a25f-706e77b89909",
+      "at": "2026-05-10T06:42:08.083Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "b3c6304d-0209-40dd-8c40-744809b3860d",
+      "at": "2026-05-10T06:42:09.387Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "4136ff6c-7077-48e6-accc-36c0c345c59e",
+      "at": "2026-05-10T06:42:10.716Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "12d39987-9f06-4734-bac7-f1bebbc934c1",
+      "at": "2026-05-10T06:42:11.975Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "b7fa4e0a-bf96-4b3d-8670-6a9763a169d3",
+      "at": "2026-05-10T06:42:13.138Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "f3ce5180-451b-4b2d-9ed8-f68358837ff8",
+      "at": "2026-05-10T06:42:14.327Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "25d142d8-265b-4cba-8a11-e7ed398461e3",
+      "at": "2026-05-10T06:42:16.485Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "dbdeeca3-e681-4326-9af7-b6b9978fb094",
+      "at": "2026-05-10T06:42:17.074Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video in queue."
+    },
+    {
+      "event_id": "31a6bb1f-3f1b-4c10-bf15-abec68247d9c",
+      "at": "2026-05-10T06:42:17.719Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "35a9faa4-11eb-4d6b-9b30-78f2108e3296",
+      "at": "2026-05-10T06:42:18.348Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "1ee9151b-df44-4e10-b6a6-ba9d2cf06556",
+      "at": "2026-05-10T06:42:18.945Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f39c511f-dbdc-4da7-b1ba-8ddb6876aef4",
+      "at": "2026-05-10T06:42:19.579Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "18f055ab-2a3d-4254-b9c4-3d96560b5917",
+      "at": "2026-05-10T06:42:20.157Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "5b0e404a-bde2-4a3c-97e1-d5b84811d796",
+      "at": "2026-05-10T06:42:20.870Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "846c070f-8ed5-4bed-87c1-c3e5ffd3277d",
+      "at": "2026-05-10T06:42:21.576Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "ec83687d-c09a-4dbe-8e58-55c22cb7eaae",
+      "at": "2026-05-10T06:42:22.221Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "fd889848-ac1e-4762-a15b-fc51d39f81c1",
+      "at": "2026-05-10T06:42:22.935Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "026e7578-0c65-4037-8d49-9021ad81b9c1",
+      "at": "2026-05-10T06:42:23.508Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "1ab0ed8b-9dd8-42dd-a497-5e9d06d3d9c6",
+      "at": "2026-05-10T06:42:24.064Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4be3ab53-c323-4b97-9310-73897b204553",
+      "at": "2026-05-10T06:42:24.655Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9db6deef-80ec-4657-9d92-976c6a7dc83b",
+      "at": "2026-05-10T06:42:25.251Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "e8170d81-997f-4142-9f79-4e353496491b",
+      "at": "2026-05-10T06:42:26.404Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "dd4f6ec9-172c-42fc-a3cb-b5c916de3145",
+      "at": "2026-05-10T06:42:27.693Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f03a99c4-fb11-4a16-80af-3c908d6703fd",
+      "at": "2026-05-10T06:42:28.541Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "82a57cfe-addb-45ab-abe9-24ee552e3e23",
+      "at": "2026-05-10T06:42:29.103Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9ef1e886-2bcd-47ab-98b6-23cb4e39f5a8",
+      "at": "2026-05-10T06:42:29.699Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9a3f755f-eaba-4143-8854-8404084b8c02",
+      "at": "2026-05-10T06:42:30.300Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d7acbe9a-ffa1-4f35-bb1b-466c6a9f718b",
+      "at": "2026-05-10T06:42:30.985Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4b201138-e282-4927-be59-5a8cbd4a505b",
+      "at": "2026-05-10T06:42:32.164Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "ee905e0e-3a66-47db-90bf-c4f57dbcbd38",
+      "at": "2026-05-10T06:42:33.262Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4a884f09-c5e9-4915-8405-83f63375194a",
+      "at": "2026-05-10T06:42:33.829Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "0ccd0216-40b1-4ce7-a70b-c534b9ac9d4e",
+      "at": "2026-05-10T06:42:34.669Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "935b3e61-7b52-4e6d-a774-577ffb04c20d",
+      "at": "2026-05-10T06:42:35.425Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "1047dd18-a861-470b-9e3f-08d76d769652",
+      "at": "2026-05-10T06:42:36.060Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "48dc5648-44bb-4ba5-83a6-43e81ca5057c",
+      "at": "2026-05-10T06:42:36.819Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "c48a9ca6-fca2-478e-a925-c6321a1d8f04",
+      "at": "2026-05-10T06:42:37.480Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "0bd7e8cc-d71a-40b3-9760-77184efbe4ae",
+      "at": "2026-05-10T06:42:38.190Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d57ab038-485c-4ef3-8d24-fcffc3f7f9a4",
+      "at": "2026-05-10T06:42:39.205Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "5654de4d-7bb0-4259-95fd-a3542a946aa5",
+      "at": "2026-05-10T06:42:39.941Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "86576193-15d0-4fa1-bcb5-25ffba21c1f4",
+      "at": "2026-05-10T06:42:40.548Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "2c8bb2f5-b233-4803-bac0-57fc35354fa7",
+      "at": "2026-05-10T06:42:41.430Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "b11b6d74-bff4-4ced-ab32-d3fecd7758a8",
+      "at": "2026-05-10T06:42:42.127Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "45177dbf-aca0-4c1a-aa44-2daf0c34bc8d",
+      "at": "2026-05-10T06:42:42.701Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4f01f2c0-aa11-4c08-8d9a-8c8157a04ba3",
+      "at": "2026-05-10T06:42:43.269Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4ad24227-3b70-43db-9c9b-8b6fcd080232",
+      "at": "2026-05-10T06:42:44.033Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "14e01a5a-d986-44d6-b634-4a4b5b6773e5",
+      "at": "2026-05-10T06:42:45.226Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "476e5ef4-e724-4377-a8f5-02a38b65b840",
+      "at": "2026-05-10T06:42:46.420Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7badecd1-7a37-4b0d-b23d-04acb82bb372",
+      "at": "2026-05-10T06:42:47.024Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "b2d2f462-b4e1-491f-85b1-c98a13d93cb2",
+      "at": "2026-05-10T06:42:47.875Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "5468a8ad-94f1-410d-9cef-c4ea850af25e",
+      "at": "2026-05-10T06:42:48.525Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9bbc2f9d-aa49-4492-b53c-91d67df4a84f",
+      "at": "2026-05-10T06:42:49.452Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "267b6d1e-f440-4b68-b372-894f06d322bb",
+      "at": "2026-05-10T06:42:50.066Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "ed71adaa-e044-4662-ba12-04c781430336",
+      "at": "2026-05-10T06:42:50.818Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "fccfa1c2-de7e-4ecf-bf71-1e3be2810a67",
+      "at": "2026-05-10T06:42:51.556Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4a8f3d35-1187-4d35-ae5e-0185931829e8",
+      "at": "2026-05-10T06:42:52.225Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "c6358597-1cff-4b5e-a479-05c09d45467b",
+      "at": "2026-05-10T06:42:53.021Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "134025e8-2a0e-4fcc-88bc-504556ecc16e",
+      "at": "2026-05-10T06:42:53.958Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f3abcf8c-e155-4920-8eb8-4acd86e46fa0",
+      "at": "2026-05-10T06:42:54.721Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "dd249bcc-bcfc-403c-bb10-3de19643b734",
+      "at": "2026-05-10T06:42:55.331Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f0f2f030-8dda-4e63-aa06-4ee2bc43ce4c",
+      "at": "2026-05-10T06:42:56.110Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "27a4bf8d-a4e0-4373-a5c9-93fc5609c64c",
+      "at": "2026-05-10T06:42:56.864Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "e8fb50da-4ef9-472a-b54a-7bbec15b3104",
+      "at": "2026-05-10T06:42:57.979Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "db71e248-3ff2-445d-88ef-8b1319315cda",
+      "at": "2026-05-10T06:42:58.720Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f874c12b-5451-4751-a83d-f199644002a6",
+      "at": "2026-05-10T06:42:59.298Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "015ef2d8-bc88-40f1-a8a6-8c04e164c419",
+      "at": "2026-05-10T06:42:59.923Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7c54cffb-3c21-41fb-997b-a2bc2aeb3377",
+      "at": "2026-05-10T06:43:00.516Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "ab55ad23-1ecf-4934-98b3-a4528a90f738",
+      "at": "2026-05-10T06:43:01.099Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "df3d669e-2a22-47af-88f3-f930ba9abc29",
+      "at": "2026-05-10T06:43:01.708Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "28e48ac4-d77b-4cab-9fb5-2bdde6f236d6",
+      "at": "2026-05-10T06:43:02.313Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "1f795e38-46d1-4d7e-b6cf-6aabc2d6223d",
+      "at": "2026-05-10T06:43:03.107Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "27365cd7-9f21-4dc0-a65e-d634b84a2578",
+      "at": "2026-05-10T06:43:03.864Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d3de0e8b-b606-4a61-9922-69c5b67e6388",
+      "at": "2026-05-10T06:43:04.527Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f9c7fcc2-bda3-4424-94b2-7c4bc0328d79",
+      "at": "2026-05-10T06:43:05.450Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "5172d2d3-300d-40ff-8a35-af0803deed50",
+      "at": "2026-05-10T06:43:06.094Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "2602a075-9de8-4468-87a9-88acd7f2b0f9",
+      "at": "2026-05-10T06:43:06.864Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "45c80b21-8be7-4324-9df5-20ba88c7299a",
+      "at": "2026-05-10T06:43:07.582Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "bff573bd-09c2-42d9-98f2-8f98861e1ff3",
+      "at": "2026-05-10T06:43:08.301Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "37f5b074-48f0-4749-9f1b-3f13ad0aeb70",
+      "at": "2026-05-10T06:43:08.986Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "6bb299f2-3b07-4eb9-b2e7-819ab67144ca",
+      "at": "2026-05-10T06:43:09.616Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "231e02b9-9c98-4e14-bddc-6c6daed291f6",
+      "at": "2026-05-10T06:43:10.329Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "913d0323-cc72-4a3c-a141-0e3e0279b7dd",
+      "at": "2026-05-10T06:43:11.039Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7274d2e8-87b5-40a3-8f6f-80ecd0e94d8e",
+      "at": "2026-05-10T06:43:11.791Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "3bdc15e1-5c15-4a21-a452-b77d8a487bdc",
+      "at": "2026-05-10T06:43:12.497Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8d107aa4-858f-4b74-bee4-e5a95ba8b442",
+      "at": "2026-05-10T06:43:13.306Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "753ff3ed-fc5a-41c6-8f2c-33831d34c09d",
+      "at": "2026-05-10T06:43:13.980Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "04ec7cba-138d-472d-9bc1-902a44b5a276",
+      "at": "2026-05-10T06:43:14.601Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d17d7095-fb1b-4e73-a134-2708f1bf4674",
+      "at": "2026-05-10T06:43:15.273Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "a5cb4b6f-3a8a-4358-bfdb-263ffc26a58f",
+      "at": "2026-05-10T06:43:15.841Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "477b1c8c-d2da-4882-ae2c-8351504fa427",
+      "at": "2026-05-10T06:43:16.490Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "29733bcb-b4b9-4b2d-a8fe-fc417c606c98",
+      "at": "2026-05-10T06:43:17.080Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7a1d61ac-5f1f-48cd-9809-cbf0418e036b",
+      "at": "2026-05-10T06:43:17.991Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "df51894a-11c2-4a15-927f-d75bb8058791",
+      "at": "2026-05-10T06:43:18.648Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "bca98275-2e3e-4d1d-af34-2b575554bfcb",
+      "at": "2026-05-10T06:43:19.289Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "44c6d5ef-7146-430b-80e7-3dfaa2884be1",
+      "at": "2026-05-10T06:43:19.914Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "cea8370d-b3f9-4c29-b5af-e9f127dfdea9",
+      "at": "2026-05-10T06:43:20.553Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f9e53a8f-a01a-4dd6-836b-4ca0a8d4c151",
+      "at": "2026-05-10T06:43:21.118Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7a6152d0-e97f-4b67-8018-6f0a93cdb256",
+      "at": "2026-05-10T06:43:21.841Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "a8740ad7-4160-4437-b532-e6621c1df766",
+      "at": "2026-05-10T06:43:22.478Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f82fe7e9-1404-4d41-80d9-df7a8ac109e1",
+      "at": "2026-05-10T06:43:23.113Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "2ff4e2a9-618c-446b-9531-cba454715f36",
+      "at": "2026-05-10T06:43:23.752Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "21a07516-c483-424b-a9d0-24061ed38b23",
+      "at": "2026-05-10T06:43:24.393Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "edb8a68d-5af0-480f-bf3d-bb590cf006ed",
+      "at": "2026-05-10T06:43:24.984Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "1c160976-258a-4438-b237-c44de40fb5c2",
+      "at": "2026-05-10T06:43:25.544Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7d85a1d9-e931-44fb-a34f-8868b0158f0a",
+      "at": "2026-05-10T06:43:26.107Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "dae6cd9b-444e-4470-bd8a-43204dad3a5a",
+      "at": "2026-05-10T06:43:26.702Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "37f8961b-cfca-499e-83c2-7e9140d6ef62",
+      "at": "2026-05-10T06:43:28.141Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "ee88f031-4c2d-4c07-9f00-92fb41b180ee",
+      "at": "2026-05-10T06:43:28.727Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "e2815d80-0410-4b9a-95ab-3cdf1e77f506",
+      "at": "2026-05-10T06:43:29.296Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "234935d7-354e-48c2-a5d3-951ffd827987",
+      "at": "2026-05-10T06:43:29.993Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "05076088-ab32-431f-a47a-5cc64c3433dd",
+      "at": "2026-05-10T06:43:30.580Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "77ae4715-5206-4e8a-8b73-42df6eab9115",
+      "at": "2026-05-10T06:43:31.169Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "5d8be62a-dda3-4ff7-b16b-8f5312471b4b",
+      "at": "2026-05-10T06:43:31.733Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "a7b9120a-f3e6-43a8-9f75-8490e961b255",
+      "at": "2026-05-10T06:43:32.304Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "909964a5-22ef-44c9-b658-64c2d8ae909b",
+      "at": "2026-05-10T06:43:32.912Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "193ab9b5-a686-4365-beaa-4466fc3e2f50",
+      "at": "2026-05-10T06:43:33.504Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "c5614617-63a1-40d0-9ae6-29e6c59083ab",
+      "at": "2026-05-10T06:43:34.094Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "e42fe798-a826-40df-af6c-3f3ad8049450",
+      "at": "2026-05-10T06:43:34.688Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "30bc7d35-fbd8-4320-b52a-4de1ea44f6ae",
+      "at": "2026-05-10T06:43:35.271Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "36cbbd57-2694-4b34-865f-84ae00f81538",
+      "at": "2026-05-10T06:43:35.840Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "bd323253-2fef-46a6-8bc2-4da311f33941",
+      "at": "2026-05-10T06:43:36.440Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d58c79e2-7bd1-4967-8971-dc50f4f2d6a8",
+      "at": "2026-05-10T06:43:37.024Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "b7fb6b84-e2f9-4008-ad67-7662a4111a7d",
+      "at": "2026-05-10T06:43:37.602Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "0d79a31a-fbc3-4c92-9358-1e3f1531cf75",
+      "at": "2026-05-10T06:43:38.188Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "326dfdb0-6425-4e91-b0a7-688146ed018b",
+      "at": "2026-05-10T06:43:38.764Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "34806ad4-3062-45ed-a976-85dd68a38c8a",
+      "at": "2026-05-10T06:43:39.357Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "782429ae-3a56-4c61-a58b-7208af5fbdee",
+      "at": "2026-05-10T06:43:39.942Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "fa797eba-d962-4c35-895b-70cf2ad83f36",
+      "at": "2026-05-10T06:43:40.514Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "aa596f0a-cb8c-419e-a7a1-03365597e865",
+      "at": "2026-05-10T06:43:41.103Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "c29f02d9-e288-4be1-a8f7-40f3a2f7ff55",
+      "at": "2026-05-10T06:43:41.675Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "3a62bfd4-423d-4824-88f4-56f0ac3794af",
+      "at": "2026-05-10T06:43:42.349Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "96f079fa-1d55-46af-a298-b3ac287634c5",
+      "at": "2026-05-10T06:43:42.954Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4697347b-e702-4445-bda8-d27a071322b8",
+      "at": "2026-05-10T06:43:43.534Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "61dda76e-ba58-4099-8cbd-3968869678ca",
+      "at": "2026-05-10T06:43:44.112Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "c2b90512-3028-403a-82f0-b7c4b1d7e742",
+      "at": "2026-05-10T06:43:44.866Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "b5e52488-0c65-43e3-a52c-6dab83e2e857",
+      "at": "2026-05-10T06:43:45.457Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "ad3db2ad-bc0c-4a72-99cb-3165d7834df8",
+      "at": "2026-05-10T06:43:46.040Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8269df30-43a8-4082-94d5-06860872eb53",
+      "at": "2026-05-10T06:43:46.613Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "38b5c2b7-acc8-4b25-8c29-68b8e5fc54d7",
+      "at": "2026-05-10T06:43:47.254Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "0dbcc90f-fdee-4ebb-ae1a-395c4de3997c",
+      "at": "2026-05-10T06:43:47.926Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "20891a38-6c04-4d92-a56f-451b3a0e00ea",
+      "at": "2026-05-10T06:43:48.548Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "e5af9239-7ada-419b-94ae-12345c73566a",
+      "at": "2026-05-10T06:43:49.144Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "ce767dba-d8e9-4301-bf9f-b75573d53b25",
+      "at": "2026-05-10T06:43:49.730Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "210094cf-ce53-43f5-ba8e-3344a72e7397",
+      "at": "2026-05-10T06:43:50.336Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "140dbd1e-def7-493e-8bfb-d0d588cc22fd",
+      "at": "2026-05-10T06:43:50.924Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d6fc830e-da7e-4a29-886c-68c485a9ce7c",
+      "at": "2026-05-10T06:43:51.559Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "35f48bfb-21ee-436c-91da-2250c524d017",
+      "at": "2026-05-10T06:43:52.157Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "e466ccc1-df41-4a42-a881-022d7e176214",
+      "at": "2026-05-10T06:43:52.754Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "33709344-ed31-4e17-8b66-dfa865d46e95",
+      "at": "2026-05-10T06:43:53.353Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f3e3d992-5a55-432c-b04e-20b029cbd2ed",
+      "at": "2026-05-10T06:43:53.978Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8d89386e-e996-475c-8380-64df09016973",
+      "at": "2026-05-10T06:43:54.568Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9ef8e3d9-0df2-4f11-a565-2c22495034ef",
+      "at": "2026-05-10T06:43:55.173Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d99a1cc5-d093-4ecc-a202-eaefea6d99b8",
+      "at": "2026-05-10T06:43:55.990Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "dff165b3-24d0-4fba-8160-79e33fa5dc64",
+      "at": "2026-05-10T06:43:56.594Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "6900a978-6796-4803-8aaf-2a53ca817796",
+      "at": "2026-05-10T06:43:57.191Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "c0a3416b-3571-4f12-8ff1-2bf90df923ee",
+      "at": "2026-05-10T06:43:57.848Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "62074a2e-aea7-46dd-909a-d5ea093c5b91",
+      "at": "2026-05-10T06:43:58.494Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8234225b-d940-48f0-96ef-70ef2146a003",
+      "at": "2026-05-10T06:43:59.094Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "ac17ae73-50d5-43ae-99c6-55c7f0b2f929",
+      "at": "2026-05-10T06:43:59.768Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "12337917-68f8-4728-9c72-e0ce38d51730",
+      "at": "2026-05-10T06:44:00.398Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "bf0ab933-1121-4eb8-901a-122a1166e866",
+      "at": "2026-05-10T06:44:01.048Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "c5a827a6-ed57-4bef-b1b0-8716d6536d5d",
+      "at": "2026-05-10T06:44:01.689Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4491e781-fa1c-4bb6-98dc-6e95480c5ff0",
+      "at": "2026-05-10T06:44:02.313Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "920b6806-b32b-4e7e-9714-06ebb6a66d06",
+      "at": "2026-05-10T06:44:02.968Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "ce7a89ca-ad23-45ae-aca0-1f1be5cd4738",
+      "at": "2026-05-10T06:44:03.587Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "2979ab40-2096-4b11-bfb9-5d913dc8cca1",
+      "at": "2026-05-10T06:44:04.178Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "3a7cde91-c738-4f64-9934-8a7746262d02",
+      "at": "2026-05-10T06:44:04.889Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "da43aeed-59d9-42de-a13d-8698fc616bc5",
+      "at": "2026-05-10T06:44:05.517Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "26332bc2-f88a-4d6f-88ca-6c841d3404ee",
+      "at": "2026-05-10T06:44:06.166Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "a2bd110b-a24d-442a-8bfe-74e55f4be4e2",
+      "at": "2026-05-10T06:44:06.746Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f3761389-1578-4e38-b043-1345c5a8604d",
+      "at": "2026-05-10T06:44:07.453Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "288f0e1a-490d-49f0-af45-23f277c494a3",
+      "at": "2026-05-10T06:44:08.094Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "6f22c4ad-7cc1-4fe0-8478-29e249a410a7",
+      "at": "2026-05-10T06:44:08.732Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "15cae987-0e8e-4777-b29c-348c1ad72668",
+      "at": "2026-05-10T06:44:09.376Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "12d0d8cb-d699-4fdc-9063-de741a8c8951",
+      "at": "2026-05-10T06:44:10.009Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7668299e-1349-494d-94d3-231be6859247",
+      "at": "2026-05-10T06:44:10.652Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "583812e8-c137-45bc-bcb4-c6bc860cfad9",
+      "at": "2026-05-10T06:44:11.260Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "2c61025a-dfba-478f-b5c7-fef538af1a47",
+      "at": "2026-05-10T06:44:11.854Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "1f5ea000-fa15-4ed8-ae7c-58769aff3aeb",
+      "at": "2026-05-10T06:44:12.437Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "0fc58c83-65c1-4ba9-99f6-6f7127d038a0",
+      "at": "2026-05-10T06:44:13.190Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "5cfb17a6-e942-48ab-98fb-76bbd84bc5be",
+      "at": "2026-05-10T06:44:13.848Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "2e583ddd-c77c-4525-8ee4-5865e67e59cc",
+      "at": "2026-05-10T06:44:14.489Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "0816c66b-6ab8-4a28-986a-0d52798589cc",
+      "at": "2026-05-10T06:44:15.122Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "6686239b-5ec9-4ac2-9173-4f40fdda82b0",
+      "at": "2026-05-10T06:44:15.769Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "86ac5a71-44f3-4cef-825d-c42066974428",
+      "at": "2026-05-10T06:44:16.358Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "2b084422-b3aa-4009-a162-3928f4701c6b",
+      "at": "2026-05-10T06:44:17.268Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "51e490d0-2fe3-4621-a30d-db2c99ea0c3b",
+      "at": "2026-05-10T06:44:18.036Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f425ec36-6a34-42e5-8dc8-1fd6764703a0",
+      "at": "2026-05-10T06:44:18.600Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "6a32e910-bd48-4779-a062-f93ca3c75d19",
+      "at": "2026-05-10T06:44:19.179Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "102a1815-b0cb-468f-b0ac-711361107a66",
+      "at": "2026-05-10T06:44:19.771Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9eaea568-b698-426b-b4ae-122b3c9676ec",
+      "at": "2026-05-10T06:44:20.378Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "aa1a6951-092c-4e89-ae51-8cfb6cff03ae",
+      "at": "2026-05-10T06:44:20.969Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7f376be9-d1fc-4d04-be2d-a4e9b5aa9964",
+      "at": "2026-05-10T06:44:21.560Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "fca6a9d6-d51c-4dbd-81f0-ba001ffae0fb",
+      "at": "2026-05-10T06:44:22.182Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "50922703-95d4-43bb-98b9-b9a6b572c976",
+      "at": "2026-05-10T06:44:22.799Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "db6b0a25-c492-483b-90d6-25f0e382cc0f",
+      "at": "2026-05-10T06:44:23.474Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8dfb8c52-b35c-4f04-a787-5e83f124b6f6",
+      "at": "2026-05-10T06:44:24.053Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7256ebc5-af99-4ef9-8d5a-408f56ef594f",
+      "at": "2026-05-10T06:44:24.612Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "dc75fedb-e93e-44a0-9655-36ba7bd8882b",
+      "at": "2026-05-10T06:44:25.188Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8b11175d-e348-4909-ab9b-b102aee5338e",
+      "at": "2026-05-10T06:44:25.779Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9b366cd9-42bf-4bb0-b199-a3fa119641c1",
+      "at": "2026-05-10T06:44:26.371Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4550bd02-7ea3-4316-98a1-19c926438445",
+      "at": "2026-05-10T06:44:26.960Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "3198fc91-171e-4013-b8d9-5acde2e9226f",
+      "at": "2026-05-10T06:44:27.558Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "030bea1c-4c01-4703-9dc4-63b890fab8d3",
+      "at": "2026-05-10T06:44:28.149Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "2ff98070-38a5-4525-8dad-07ca31825453",
+      "at": "2026-05-10T06:44:28.756Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "92e36fef-248b-495d-89c9-a452532ba54f",
+      "at": "2026-05-10T06:44:29.359Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "0625b6d8-a2cc-4386-a5ce-7a047fad6a15",
+      "at": "2026-05-10T06:44:30.015Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8d7ce362-27c7-4580-ab3b-f00674b45633",
+      "at": "2026-05-10T06:44:30.633Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "07cdf026-9d73-4322-a2ab-1fd5b9b51a64",
+      "at": "2026-05-10T06:44:31.273Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "57409f59-41cb-4773-9770-815f77f65aa2",
+      "at": "2026-05-10T06:44:31.912Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "490bd431-d28a-488c-b91a-115f690f1851",
+      "at": "2026-05-10T06:44:32.495Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4c90ce51-da5c-4b1c-8662-94d73ec91abc",
+      "at": "2026-05-10T06:44:33.084Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "90dc57d7-61dd-4c61-a59e-681b5849910f",
+      "at": "2026-05-10T06:44:33.716Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "541be439-69f1-4c61-9e60-13c0ba451129",
+      "at": "2026-05-10T06:44:34.294Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "66bd36b8-85b4-48a1-8093-6458c554fe68",
+      "at": "2026-05-10T06:44:34.873Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "0872cdab-0ebb-4970-a518-48318a8b1417",
+      "at": "2026-05-10T06:44:35.459Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "c7c968c4-82ff-4f3d-bebe-16ad587beda8",
+      "at": "2026-05-10T06:44:36.074Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "e4fe63a6-0451-4c4d-af66-5f1630f4d19a",
+      "at": "2026-05-10T06:44:36.661Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "26e26f3b-ca86-4b75-ad42-1abb80499560",
+      "at": "2026-05-10T06:44:37.254Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "5b1f735f-2a23-424b-a9fc-8af3e3eaee6e",
+      "at": "2026-05-10T06:44:38.008Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "350eeabd-17e3-4b7d-b979-8a103ead2b86",
+      "at": "2026-05-10T06:44:38.622Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9d3e9b8b-68b0-4c61-b229-b02728716a41",
+      "at": "2026-05-10T06:44:39.209Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "de9d139f-bbca-4363-8554-bf84b8ade40d",
+      "at": "2026-05-10T06:44:39.802Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "bcc31fc8-77c8-4146-b2a6-410f82ec8f66",
+      "at": "2026-05-10T06:44:40.411Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "eb6af81d-493b-4878-8643-2f3cda49e1df",
+      "at": "2026-05-10T06:44:41.052Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9e4ad8d7-d4a0-42f7-b2fe-114747a16bff",
+      "at": "2026-05-10T06:44:41.674Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8bb86afb-0d9b-480e-860c-906c7b164c0a",
+      "at": "2026-05-10T06:44:42.242Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "6d4c913c-5854-4c83-bcdc-870fccca1f21",
+      "at": "2026-05-10T06:44:42.822Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d2d5ca8e-c379-4896-b96e-10efed5fe2a8",
+      "at": "2026-05-10T06:44:43.428Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "b9e71792-6387-44f5-b086-dc666fa161b8",
+      "at": "2026-05-10T06:44:43.988Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "43c3cfe1-8782-4272-9fc8-00c4000bf38f",
+      "at": "2026-05-10T06:44:44.571Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "081a3338-d651-48c4-a421-18f5b313404a",
+      "at": "2026-05-10T06:44:45.585Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "05e702db-11a1-4c5d-9796-f23dcc0cfffb",
+      "at": "2026-05-10T06:44:46.755Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "290d30cf-0a6c-432c-8272-7ddb8aac7a4c",
+      "at": "2026-05-10T06:44:47.338Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "27ce1e45-4ebc-4063-b4fe-f771b0ede1f9",
+      "at": "2026-05-10T06:44:48.143Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "cae0d5c1-84f3-4fe3-8f51-d629a1101279",
+      "at": "2026-05-10T06:44:48.770Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d7aa8641-1350-4110-b55d-8fb6ea33da51",
+      "at": "2026-05-10T06:44:49.345Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "a2c4810c-8e6e-457b-9a24-e4127cbc2fd4",
+      "at": "2026-05-10T06:44:49.969Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f87dd436-a20d-44fc-8021-a71d3e5322d9",
+      "at": "2026-05-10T06:44:50.544Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "86ee0f3a-48eb-49ca-8be3-bde70a841ccf",
+      "at": "2026-05-10T06:44:51.128Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8d95423d-27c3-41bd-931e-b21086d7b6d4",
+      "at": "2026-05-10T06:44:51.697Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "0cb119b8-2d20-44d0-8864-00fecf396876",
+      "at": "2026-05-10T06:44:52.265Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4d3f049a-dd8c-4764-b167-568a2ac32871",
+      "at": "2026-05-10T06:44:52.851Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "5d817d16-d4ee-4714-a7fc-439b2b5963e5",
+      "at": "2026-05-10T06:44:53.460Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "473d5bcf-bfa4-49b1-a50a-d5e24d847f91",
+      "at": "2026-05-10T06:44:54.050Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "ec1cd000-306d-432e-84c8-9f9cc775bc50",
+      "at": "2026-05-10T06:44:54.615Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "b2f94cac-1ffb-4725-8f9b-8d07b80444be",
+      "at": "2026-05-10T06:44:55.218Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "cb087f3b-d1cd-47e1-9076-79aba70d3323",
+      "at": "2026-05-10T06:44:55.784Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4ca068aa-de0f-4f6f-bc82-1202289d734e",
+      "at": "2026-05-10T06:44:56.370Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "21e4fa10-8deb-4066-95c2-d8e5f2ffaee7",
+      "at": "2026-05-10T06:44:56.975Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "da5a2b14-a188-4bc2-8136-86937ea663e0",
+      "at": "2026-05-10T06:44:57.544Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "871ec551-6263-4a03-b1dc-ee772e4e51b7",
+      "at": "2026-05-10T06:44:58.104Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "5f63de43-187d-4e48-b9cc-18dd65cf0a3b",
+      "at": "2026-05-10T06:44:58.686Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "fc44fdbe-658c-4eb6-accc-b171086e30ef",
+      "at": "2026-05-10T06:44:59.262Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "69f3bf5c-76e1-4051-b2d4-dc4f429cf3d5",
+      "at": "2026-05-10T06:44:59.861Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "911d19fd-cc82-4663-9234-a0ce64cd1d2e",
+      "at": "2026-05-10T06:45:00.894Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9ae1d8e0-23b7-4a19-bd96-7e973cade4da",
+      "at": "2026-05-10T06:45:01.516Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "fa4aa116-9b46-4181-a404-d8352980fe32",
+      "at": "2026-05-10T06:45:02.094Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "3fdbbd0a-7aac-47f1-b90f-8b827fce9577",
+      "at": "2026-05-10T06:45:02.761Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7433c81e-1c02-4bbe-b5a8-05052f1a17fe",
+      "at": "2026-05-10T06:45:03.357Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "a1aaa1d7-dabe-4119-a1be-7987314eb3e5",
+      "at": "2026-05-10T06:45:04.026Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "2f8b5100-6810-4037-ae2e-be84488af111",
+      "at": "2026-05-10T06:45:04.632Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "23446245-58c5-4ff7-b98c-a7325a6fe9e9",
+      "at": "2026-05-10T06:45:05.277Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "923de891-8ad4-4813-8f57-b0135d1213dd",
+      "at": "2026-05-10T06:45:05.912Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "5381e022-058d-4677-b8f2-126eaec987a5",
+      "at": "2026-05-10T06:45:06.585Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "45e3bb80-0ad1-4f82-8b0c-53adcacf8216",
+      "at": "2026-05-10T06:45:07.192Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f5ab7aed-4182-4b8f-a628-7524e259a659",
+      "at": "2026-05-10T06:45:07.780Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "30a69a0f-1e74-44a4-b9bf-43c7a13941b7",
+      "at": "2026-05-10T06:45:08.473Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "ebac32bb-4e1e-458f-9c54-8c132930cb66",
+      "at": "2026-05-10T06:45:09.114Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "3a5f1771-ccec-4bff-a570-923b025bf053",
+      "at": "2026-05-10T06:45:09.757Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "98aeac56-dc89-49b2-a7eb-62ccb4d9d27c",
+      "at": "2026-05-10T06:45:10.398Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d7e82e75-448e-4d3b-a759-a7b779712867",
+      "at": "2026-05-10T06:45:10.963Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d02962a5-590a-46f8-8b2b-672e957c327a",
+      "at": "2026-05-10T06:45:11.533Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "0814ae08-562b-4c74-80eb-2ffb905a41a1",
+      "at": "2026-05-10T06:45:12.118Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "153d34da-b9ab-4cf2-a50b-cdde8c79e687",
+      "at": "2026-05-10T06:45:12.718Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "1387cc09-3d5a-490c-81b6-8d314edd769e",
+      "at": "2026-05-10T06:45:13.520Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8627cb23-7328-4c7a-9ea3-ccd72c69122b",
+      "at": "2026-05-10T06:45:14.231Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8fc591a9-b2ce-40bb-b60a-ebeb4ca88310",
+      "at": "2026-05-10T06:45:14.818Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f33eaaa9-1644-4ccf-9d4a-d2c37b1f028b",
+      "at": "2026-05-10T06:45:15.425Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f7212763-64d2-4119-a4c9-de32620af37e",
+      "at": "2026-05-10T06:45:16.018Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "db4c6261-b0be-43c9-be9c-6b14b6c98129",
+      "at": "2026-05-10T06:45:16.639Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "e4528123-6d13-4df2-8b09-a353fd4e2da1",
+      "at": "2026-05-10T06:45:17.271Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "c6342a3d-b861-4fd1-8d60-f78564ef6a70",
+      "at": "2026-05-10T06:45:17.917Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "77149dcf-6ae1-43ec-a922-527e1d84a176",
+      "at": "2026-05-10T06:45:18.557Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "e2d5ff0a-228c-46b7-be3e-a8de149fada7",
+      "at": "2026-05-10T06:45:19.148Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7843a7e4-5a19-4e1f-a583-cb90cb46c564",
+      "at": "2026-05-10T06:45:19.714Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "3f99459f-90cf-45cf-b8ea-6058e2a490b5",
+      "at": "2026-05-10T06:45:20.303Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f08bb1eb-b38c-4504-b72a-3e6b7ed91b0b",
+      "at": "2026-05-10T06:45:20.894Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "ebc2ed39-fbdb-4cb4-ab2f-d22cc66e0672",
+      "at": "2026-05-10T06:45:21.472Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "cda1363b-afbe-486b-b64e-45b9fb7eb3d9",
+      "at": "2026-05-10T06:45:22.074Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "5f6f667b-ddf0-47a4-b3e9-01d88d99fa7a",
+      "at": "2026-05-10T06:45:22.664Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f1bc9844-b3f7-4283-b73b-ae40955ed032",
+      "at": "2026-05-10T06:45:23.253Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "6a85b22e-c5c6-455b-b441-14779c2c290f",
+      "at": "2026-05-10T06:45:23.845Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9dc413f6-3fa0-434b-b66d-75604fd4c565",
+      "at": "2026-05-10T06:45:24.424Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "98a4e283-91a4-49a8-8eb7-947cb4e17824",
+      "at": "2026-05-10T06:45:25.019Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "3609ad99-783b-45de-8ff2-72a0a14629b2",
+      "at": "2026-05-10T06:45:25.618Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "940305bb-f18e-4bff-a73b-e2ea59e9e4bb",
+      "at": "2026-05-10T06:45:26.194Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "fc39fd47-5141-4b23-a4fd-b5dd5d63071e",
+      "at": "2026-05-10T06:45:26.759Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "2c29fb26-becb-4c10-89f6-85019f0ce89f",
+      "at": "2026-05-10T06:45:27.343Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "324be867-4453-4aa5-841a-cceddb7d2b80",
+      "at": "2026-05-10T06:45:27.928Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "056c3ed5-2591-4d00-aa36-6747f2e1842b",
+      "at": "2026-05-10T06:45:28.518Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d5f773b5-97f7-4780-8812-12307f209c25",
+      "at": "2026-05-10T06:45:29.102Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7e7dedc7-971a-4298-8552-4078abcdd5f2",
+      "at": "2026-05-10T06:45:29.698Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "b2ad47ee-3a4a-45b4-8901-521b76541ce4",
+      "at": "2026-05-10T06:45:30.276Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "96386e2e-aacd-4c9f-bc1c-dcf86b178a68",
+      "at": "2026-05-10T06:45:30.868Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "606f9ce3-0096-42cf-bbc8-a51d42b365cc",
+      "at": "2026-05-10T06:45:31.429Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "98793324-0f08-4153-90e6-34418eadfd3f",
+      "at": "2026-05-10T06:45:32.033Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "dc49bb47-9f86-45c8-9b1c-fa184d68a460",
+      "at": "2026-05-10T06:45:32.612Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "535d1f00-7559-4e76-bca4-3ee02e35249d",
+      "at": "2026-05-10T06:45:33.184Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "1ea92f4a-00b7-48d2-a824-ba9dce83496f",
+      "at": "2026-05-10T06:45:33.767Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "4d6c0729-d0a0-452f-b398-d27273e9dc11",
+      "at": "2026-05-10T06:45:34.344Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "965052bb-b26d-42f1-9e0b-057d7ae13bbf",
+      "at": "2026-05-10T06:45:34.938Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7779d38a-24a4-4ee5-af39-2b893d5b72b0",
+      "at": "2026-05-10T06:45:35.510Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "0f7fc4eb-b10b-4f26-9858-cbfc3aca59ac",
+      "at": "2026-05-10T06:45:36.104Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "0ad773ba-991c-46dc-839b-90c3312ce10f",
+      "at": "2026-05-10T06:45:36.665Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "859c27f1-46f6-4944-9f91-477d4afa0916",
+      "at": "2026-05-10T06:45:37.249Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "7247b77f-9045-45c7-b159-5411b0dc3554",
+      "at": "2026-05-10T06:45:37.839Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8976d328-6a79-4fc7-bfd5-19ca8b2bc0d5",
+      "at": "2026-05-10T06:45:38.678Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "447413ec-7d62-4e0a-9b5e-45b61d1ad0b1",
+      "at": "2026-05-10T06:45:39.280Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "edd456f3-4d69-4fe6-b1db-c07a3dca2ceb",
+      "at": "2026-05-10T06:45:39.889Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "c08f6341-fc4a-4c02-ac8e-905bddc1c3a7",
+      "at": "2026-05-10T06:45:40.497Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f0cbcd20-8992-4772-954e-446826a61391",
+      "at": "2026-05-10T06:45:41.089Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "b9f7637b-a3e2-4c3b-8f35-ab737e651fb7",
+      "at": "2026-05-10T06:45:41.669Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "f9e7690d-f1c5-4099-abf7-207defebcdbf",
+      "at": "2026-05-10T06:45:42.279Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "e993f21d-52a3-484a-9950-7cf3109d9683",
+      "at": "2026-05-10T06:45:42.883Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "8211999a-9eb4-4a13-9783-d3b612668143",
+      "at": "2026-05-10T06:45:43.484Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "e4a1da7e-53f4-465c-8273-efbdbe563d51",
+      "at": "2026-05-10T06:45:44.083Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "14ea1d31-09e1-45b0-80e7-0103972c6c88",
+      "at": "2026-05-10T06:45:44.660Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "e6b60855-cfa5-42fe-9ca4-72b7e5c7db22",
+      "at": "2026-05-10T06:45:45.813Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "bc541208-f428-459d-bc2f-6c3e997e1e74",
+      "at": "2026-05-10T06:45:46.808Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "009b825a-1352-4006-a9e7-0920b07d91c1",
+      "at": "2026-05-10T06:45:47.398Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "2a6f7d5a-e0cf-476f-90a6-1edbb0bbe9e7",
+      "at": "2026-05-10T06:45:47.974Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9512940d-56d8-43cc-b7c0-9a946616f8b4",
+      "at": "2026-05-10T06:45:48.598Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "b804dad1-eb6b-4538-9737-130a39a3d93a",
+      "at": "2026-05-10T06:45:49.205Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "28dbb359-8632-4947-b10a-39943d461133",
+      "at": "2026-05-10T06:45:49.775Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "b822c1fa-da7e-4142-b019-f38cee35d6f0",
+      "at": "2026-05-10T06:45:50.384Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "02924b1c-5ce8-4e96-b71f-3516c00eaad2",
+      "at": "2026-05-10T06:45:51.019Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "19199f73-fa54-41c7-9d3f-80199f607ed1",
+      "at": "2026-05-10T06:45:51.609Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "a8eaaa75-6f3d-4021-b1f1-dd5156dda3e5",
+      "at": "2026-05-10T06:45:52.188Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "9122fa50-30a4-4f36-a209-54e535f965f2",
+      "at": "2026-05-10T06:45:52.774Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "250ac7e1-57ad-48b1-a7ff-d909fb48f7fb",
+      "at": "2026-05-10T06:45:53.355Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "d35c563e-fc93-408e-a3d4-47b80cf80dcb",
+      "at": "2026-05-10T06:45:53.939Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "976ea349-7094-4cc0-a725-aaad74194f8d",
+      "at": "2026-05-10T06:45:54.529Z",
+      "room_id": "nest_living_room",
+      "type": "room.video.progress",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest (living area) video is rendering..."
+    },
+    {
+      "event_id": "528d1b5c-6fd5-4998-bdc4-7e147dad8ff9",
+      "at": "2026-05-10T06:45:56.308Z",
+      "room_id": "nest_living_room",
+      "type": "room.approved",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Room clip approved."
+    },
+    {
+      "event_id": "c4f9b178-8367-4217-a892-692052259a3a",
+      "at": "2026-05-10T06:45:56.320Z",
+      "room_id": null,
+      "type": "job.packaging",
+      "state": "PACKAGING_OUTPUTS",
+      "message": "Assembling final video and generating captions."
+    },
+    {
+      "event_id": "9f9f2512-9298-442a-8967-b54d11a9d030",
+      "at": "2026-05-10T06:46:04.678Z",
       "room_id": null,
       "type": "job.completed",
       "state": "COMPLETED",
