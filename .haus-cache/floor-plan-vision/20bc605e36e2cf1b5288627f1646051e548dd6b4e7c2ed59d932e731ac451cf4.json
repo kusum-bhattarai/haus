@@ -1,0 +1,74 @@
+{
+  "source": "ml_parser",
+  "unit": "ft",
+  "scale": null,
+  "rooms": [
+    {
+      "room_id": null,
+      "name": "Nest",
+      "dimensions": {
+        "width": 12.166666666666666,
+        "length": 14.666666666666666,
+        "area": 178.44444444444446
+      },
+      "unit": "ft",
+      "confidence": 0.95
+    },
+    {
+      "room_id": null,
+      "name": "Taste (Kitchen)",
+      "dimensions": {
+        "width": 9.5,
+        "length": 10.583333333333334,
+        "area": 100.54166666666667
+      },
+      "unit": "ft",
+      "confidence": 0.95
+    },
+    {
+      "room_id": null,
+      "name": "Dining (Dine)",
+      "dimensions": {
+        "width": 9.333333333333334,
+        "length": 12,
+        "area": 112
+      },
+      "unit": "ft",
+      "confidence": 0.8
+    },
+    {
+      "room_id": null,
+      "name": "Bedroom (Dream) - upper-left",
+      "dimensions": {
+        "width": 10,
+        "length": 10,
+        "area": 100
+      },
+      "unit": "ft",
+      "confidence": 0.95
+    },
+    {
+      "room_id": null,
+      "name": "Bedroom (Dream) - right",
+      "dimensions": {
+        "width": 11.25,
+        "length": 11.333333333333334,
+        "area": 127.5
+      },
+      "unit": "ft",
+      "confidence": 0.9
+    },
+    {
+      "room_id": null,
+      "name": "Bedroom (Dream) - bottom",
+      "dimensions": {
+        "width": 11.333333333333334,
+        "length": 13.75,
+        "area": 155.83333333333334
+      },
+      "unit": "ft",
+      "confidence": 0.9
+    }
+  ],
+  "notes": null
+}

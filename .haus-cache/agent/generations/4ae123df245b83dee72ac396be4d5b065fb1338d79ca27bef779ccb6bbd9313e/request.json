@@ -1,0 +1,12 @@
+{
+  "endpoint_id": "fal-ai/nano-banana-2",
+  "params": {
+    "prompt": "Photorealistic editorial interior reference photograph of a Nest. Focus tightly on: sofa, coffee table, area rug, bay exterior glazing with directional daylight, smoked-oak vertical slat wall with amber cove, charcoal low sectional, monolithic black stone coffee table, bookshelf (sparse), visible floor lamp, smoked oak vertical slat wall with amber cove, bonsai (single), bookshelf. Styled in japandi aesthetic, monochrome palette, dramatic lighting. A refined, low-contrast monochrome palette layered with warm wood and brass accents. The overall direction is meditative and textural: matte black walls and smoked oak slatted panels anchor low-profile furniture, amber cove and recessed strip lights provide warm contrast to exterior daylight, and sparse sculptural objects (bonsai, ceramic vessels, a single bookshelf) give the scenes a calm, curated feel. Maintain architectural fidelity, keep verticals true, and derive all light from visible windows and practical fixtures. This image is a visual consistency reference — every detail of the featured furniture and fixtures must be clearly visible and precisely rendered. No people. No visible brand logos. Sharp architectural photography. Luxury real estate staging.",
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

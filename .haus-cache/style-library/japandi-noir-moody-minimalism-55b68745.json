@@ -1,0 +1,370 @@
+{
+  "schema_version": "1.0",
+  "style_id": "japandi-noir-moody-minimalism-55b68745",
+  "created_at": "2026-05-10T12:00:27.713Z",
+  "source": {
+    "session_id": "d5df6218-91c9-4f79-8ae2-8d81846876f2",
+    "handoff_id": "e34663e3-376b-47d0-8d71-71ae8bd0663f",
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/dark-interior/",
+    "floor_plan_url": "file:///Users/tarive/haus/haus/.haus-cache/floor-plans/20bc605e36e2cf1b5288627f1646051e548dd6b4e7c2ed59d932e731ac451cf4.png"
+  },
+  "aesthetic_profile": {
+    "palette": "monochrome",
+    "lighting": "dramatic",
+    "density": "layered",
+    "style_era": "japandi",
+    "dominant_colors": [
+      "#0B0B0B",
+      "#2F2F2F",
+      "#6B3F2A",
+      "#C48A48",
+      "#E7E6E4"
+    ],
+    "mood_words": [
+      "moody",
+      "meditative",
+      "textural warmth",
+      "calm minimalism",
+      "refined luxury",
+      "zen"
+    ],
+    "pinterest_cluster_labels": [
+      "matte-black walls + vertical wood slats",
+      "low-profile platform bed with charcoal linens",
+      "amber cove/strip lighting for warm contrast",
+      "brass bedside accents & sculptural lamps",
+      "monolithic black stone coffee table + bonsai / shoji"
+    ],
+    "confidence": 0.92
+  },
+  "vibe_report": {
+    "aesthetic_name": "Japandi Noir — Moody Minimalism",
+    "summary": "A refined, low-contrast monochrome palette layered with warm wood and brass accents. The overall direction is meditative and textural: matte black walls and smoked oak slatted panels anchor low-profile furniture, amber cove and recessed strip lights provide warm contrast to exterior daylight, and sparse sculptural objects (bonsai, ceramic vessels, a single bookshelf) give the scenes a calm, curated feel. Maintain architectural fidelity, keep verticals true, and derive all light from visible windows and practical fixtures.",
+    "palette_rationale": "A base of deep charcoals and near-black (anchors and negative space) balanced by mid-tone warm wood (smoked oak/walnut) and restrained brass highlights for small accents. A pale neutral linen/stone acts only as occasional contrast to prevent loss of detail in shadowed areas.",
+    "lighting_mood": "Dramatic, directional, editorial. Primary illumination comes from exterior windows (daylight) with controlled warm supplement from amber cove/strip LEDs and a few sculptural brass lamp practicals. Shadows should be crisp and sculptural; avoid flat or evenly lit interiors.",
+    "materials": [
+      "matte tadelakt-like plaster (charcoal)",
+      "smoked oak vertical slats / walnut",
+      "black stone / honed marble (low tables)",
+      "charcoal linen upholstery",
+      "warm brass fixtures and lamp bases",
+      "warm LED strip (amber) recessed coves"
+    ],
+    "textures": [
+      "microcement / matte stone floors",
+      "coarse linen throws & bedding",
+      "soft wool rugs in muted charcoal tones",
+      "fluted or hand-textured ceramics",
+      "satin brass (low sheen)"
+    ],
+    "furniture_language": [
+      "low-profile platform beds and sofas",
+      "solid slab coffee tables (monolithic black stone)",
+      "minimal open bookshelves with curated volumes",
+      "slab dining table with slender brass/wood pendant",
+      "integrated built-ins with vertical slat faces"
+    ],
+    "styling_rules": [
+      "Keep furnishings low and horizontal to emphasize calm planes.",
+      "Limit palette to five primary neutrals/accents; no saturated color pops beyond subtle brass or wood grain.",
+      "Curate accessories: one bonsai or sculptural object per vignette, a small stack of books, one ceramic vessel.",
+      "Use warm amber strip lighting behind slats or headboards — always visible as a practical source.",
+      "Preserve visible light-source logic: every warm accent must be explained by a visible fixture or recessed strip."
+    ],
+    "avoid": [
+      "high-gloss reflective finishes",
+      "bright saturated primary colors",
+      "over-styled cluttered shelves",
+      "added windows or light sources not on the floor plan",
+      "floating/warped furniture or bent verticals"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living_room",
+        "headline": "Japandi Noir Living — low, meditative, & sculptural",
+        "guidance": "Stage a low charcoal linen sectional centered on a large muted rug facing the bay/exterior glazing. Add a monolithic black stone coffee table with a single bonsai and one stack of books. Smoked oak vertical slat panel on the main wall with recessed amber cove behind the slats. Use frosted shoji panel as a soft partition (if plan allows) to frame light without adding new openings. Include a recessed floor lamp or brass table lamp as a visible warm practical.",
+        "must_include": [
+          "charcoal low sectional",
+          "monolithic black stone coffee table",
+          "smoked oak vertical slat wall with amber cove",
+          "bonsai (single)",
+          "bookshelf (sparse)"
+        ],
+        "must_avoid": [
+          "multiple small decorative plants",
+          "bright upholstery or patterned textiles"
+        ]
+      },
+      {
+        "room_id": "dream_bottom_bedroom",
+        "headline": "Primary Bedroom — platform calm with strip light drama",
+        "guidance": "Low walnut platform bed with charcoal linens and textured throws. Fluted headboard panel or vertical slats behind the bed with a recessed warm LED strip that reads as the practical light source. Brass dome bedside lamp on one side only for asymmetry. Keep bedside surfaces minimal: one ceramic tray and one book.",
+        "must_include": [
+          "low walnut platform bed",
+          "vertical slat/fluted headboard",
+          "amber recessed LED strip behind headboard",
+          "brass bedside lamp (single)",
+          "charcoal rug underfoot"
+        ],
+        "must_avoid": [
+          "oversized artwork with bright colors",
+          "excess bedside lamps or pendant clusters"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Minimal dark kitchen — tactile surfaces, warm accents",
+        "guidance": "Matte black cabinet faces with warm wood open shelving and a narrow, integrated bookshelf niche for cookbooks. Countertops in honed dark stone. Add a single pendant in satin brass above the sink or prep area and under-cabinet warm strip light to create practical amber fills. Keep styling minimal: one ceramic pitcher, a small stack of plates, and 3–4 curated books on the shelf.",
+        "must_include": [
+          "matte black cabinetry",
+          "open smoked-oak shelving",
+          "under-cabinet warm LED strip",
+          "bookshelf niche with curated volumes"
+        ],
+        "must_avoid": [
+          "stainless-steel glare",
+          "bright appliance finishes",
+          "cluttered counters"
+        ]
+      },
+      {
+        "room_id": "dine_dining_room",
+        "headline": "Bay dining vignette — intimate, warm, and sculptural",
+        "guidance": "A low-profile rectangular dining table in smoked oak with slender dark chairs. Pendant cluster: one low satin-brass pendant centered above the table (visible practical). Bay windows allow directional daylight; add amber strip recessed in the bay seat or ceiling reveal for evening mood. Keep tabletop minimal: a single fluted ceramic vessel or a small stack of books.",
+        "must_include": [
+          "smoked oak dining table",
+          "satin-brass pendant (single)",
+          "bay window seating or reveal with amber strip",
+          "minimal tabletop vessel"
+        ],
+        "must_avoid": [
+          "overly ornate light fixtures",
+          "heavy patterned table linens"
+        ]
+      },
+      {
+        "room_id": "dream_right_bedroom",
+        "headline": "Guest/secondary bedroom — refined restraint",
+        "guidance": "Smaller platform bed with charcoal linens, a narrow bookshelf against the wall (to meet 'bookshelf' requirement), and a single sculptural lamp. Vertical slat detail as a partial headboard is optional. Keep accessories sparse to preserve calm.",
+        "must_include": [
+          "charcoal platform bed",
+          "narrow bookshelf with curated volumes",
+          "one sculptural lamp",
+          "textured throw"
+        ],
+        "must_avoid": [
+          "two bedside lamps",
+          "bright patterned cushions"
+        ]
+      },
+      {
+        "room_id": "dream_upper_left_bedroom",
+        "headline": "Compact restful room — textured and minimal",
+        "guidance": "Simple low bed or daybed with charcoal linen, a single wall-mounted reading lamp (brass), and a small open shelf for books. Use a narrow smoked-oak slatted accent to tie back to main palette. Keep circulation clear — minimal furniture.",
+        "must_include": [
+          "low bed/daybed",
+          "brass wall-mounted reading lamp",
+          "small open bookshelf",
+          "smoked-oak slat accent"
+        ],
+        "must_avoid": [
+          "large bulky furniture",
+          "bright decorative accents"
+        ]
+      }
+    ],
+    "confidence": 0.88,
+    "warnings": [
+      "Natural light varies by room; do not introduce additional window openings in staging or video lighting.",
+      "Preserve exact room geometry and measured furniture footprints to avoid scale drift in video.",
+      "Avoid glossy reflective materials that will create specular hotspots against matte finishes."
+    ]
+  },
+  "creative_spec": {
+    "overall_mood": "Moody, calm, textural luxury — cinematic Japandi noir with warm amber accents",
+    "room_sequence": [
+      "nest_living_room",
+      "dream_bottom_bedroom",
+      "taste_kitchen",
+      "dine_dining_room",
+      "dream_right_bedroom",
+      "dream_upper_left_bedroom"
+    ],
+    "global_style_notes": [
+      "Preserve all architectural lines and measured room geometry; correct perspective but do not alter layout.",
+      "Image-pass recommended for all rooms to achieve editorial, directional light and maintain vertical integrity.",
+      "Derive all lighting behavior from visible windows and practicals (pendants, recessed strips, lamps).",
+      "Keep camera motion slow and deliberate to match the meditative vibe; prefer low-angle framing for horizontal emphasis."
+    ],
+    "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, added windows",
+    "export_formats": [
+      "16:9",
+      "9:16",
+      "1:1"
+    ]
+  },
+  "pins": [
+    {
+      "pin_id": "1012465559998726563",
+      "source_url": "https://www.pinterest.com/tarive22/dark-interior/",
+      "image_url": "https://i.pinimg.com/1200x/7f/df/9e/7fdf9ec235ea3ea3f988f2c8f333e939.jpg",
+      "title": "Dark Bedroom with Wooden Touches.",
+      "description": "Warm, moody tones meet natural wood for a cozy and elegant bedroom.  #DarkBedroom #WoodDetails #CozyHome",
+      "save_count": null,
+      "hashtags": [
+        "darkbedroom",
+        "wooddetails",
+        "cozyhome"
+      ],
+      "cluster_label": "Minimal platform bedroom with vertical wood slat accent",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726531",
+      "source_url": "https://www.pinterest.com/tarive22/dark-interior/",
+      "image_url": "https://i.pinimg.com/1200x/fd/16/07/fd1607ee5737fd4e7e5442e29da17978.jpg",
+      "title": "Moody Black Luxe Bedroom — Dark, Cozy & Ultra-Chic 🖤🔥",
+      "description": "Bold black tones and gold accents elevate this modern moody bedroom into a luxury retreat. Save this dramatic and elegant look for your dream room inspiration! #moodybedroom #blackbedroomdecor #modernluxestyle",
+      "save_count": null,
+      "hashtags": [
+        "moodybedroom",
+        "blackbedroomdecor",
+        "modernluxestyle"
+      ],
+      "cluster_label": "Moody luxe bedroom with brass accents and recessed strip light",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726506",
+      "source_url": "https://www.pinterest.com/tarive22/dark-interior/",
+      "image_url": "https://i.pinimg.com/1200x/66/44/0f/66440f59643908d20dedfae5765924a0.jpg",
+      "title": "Japandi Noir Living Room Ideas: Dark Minimal Decor with Black Tadelakt & Smoked Oak (2025 Trend)",
+      "description": "Discover Japandi Noir: a serene, moody living room with matte black tadelakt walls, smoked oak slats, a charcoal linen sectional, and a monolithic black stone coffee table. Warm gray microcement floors, frosted shoji screens, a single bonsai, and soft skylight glow deliver calm, textural minimalism. Save for dark interior design ideas, modern wabi-sabi styling, and Scandinavian–Japanese living room inspiration.",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Japandi noir living room with shoji screens and monolithic black stone table",
+      "selected_for_mood_board": true
+    }
+  ],
+  "cluster_summary": [
+    {
+      "label": "Minimal platform bedroom with vertical wood slat accent",
+      "pin_ids": [
+        "1012465559998726563"
+      ],
+      "visual_notes": "Matte black walls and ceiling, vertical warm wood slat panel, low walnut platform bed, charcoal bedding and rug, amber cove light along ceiling edge — minimal furnishings, emphasis on horizontal planes and warm wood contrast.",
+      "weight": 0.34
+    },
+    {
+      "label": "Moody luxe bedroom with brass accents and recessed strip light",
+      "pin_ids": [
+        "1012465559998726531"
+      ],
+      "visual_notes": "Charcoal upholstered bed and fluted headboard panel, layered gray bedding, brass dome bedside lamps, recessed warm LED strip behind headboard, textured throws and rugs — layered textiles and metallic highlights for a luxe yet restrained look.",
+      "weight": 0.33
+    },
+    {
+      "label": "Japandi noir living room with shoji screens and monolithic black stone table",
+      "pin_ids": [
+        "1012465559998726506"
+      ],
+      "visual_notes": "Matte black tadelakt-like walls, smoked oak slatted wall, charcoal linen sectional, low black marble coffee table with white veining, frosted shoji screens and single bonsai — Japanese minimalism meets Scandinavian texture and warm wood tones.",
+      "weight": 0.33
+    }
+  ],
+  "room_guidance": [
+    {
+      "room_id": "nest_living_room",
+      "headline": "Japandi Noir Living — low, meditative, & sculptural",
+      "guidance": "Stage a low charcoal linen sectional centered on a large muted rug facing the bay/exterior glazing. Add a monolithic black stone coffee table with a single bonsai and one stack of books. Smoked oak vertical slat panel on the main wall with recessed amber cove behind the slats. Use frosted shoji panel as a soft partition (if plan allows) to frame light without adding new openings. Include a recessed floor lamp or brass table lamp as a visible warm practical.",
+      "must_include": [
+        "charcoal low sectional",
+        "monolithic black stone coffee table",
+        "smoked oak vertical slat wall with amber cove",
+        "bonsai (single)",
+        "bookshelf (sparse)"
+      ],
+      "must_avoid": [
+        "multiple small decorative plants",
+        "bright upholstery or patterned textiles"
+      ]
+    },
+    {
+      "room_id": "dream_bottom_bedroom",
+      "headline": "Primary Bedroom — platform calm with strip light drama",
+      "guidance": "Low walnut platform bed with charcoal linens and textured throws. Fluted headboard panel or vertical slats behind the bed with a recessed warm LED strip that reads as the practical light source. Brass dome bedside lamp on one side only for asymmetry. Keep bedside surfaces minimal: one ceramic tray and one book.",
+      "must_include": [
+        "low walnut platform bed",
+        "vertical slat/fluted headboard",
+        "amber recessed LED strip behind headboard",
+        "brass bedside lamp (single)",
+        "charcoal rug underfoot"
+      ],
+      "must_avoid": [
+        "oversized artwork with bright colors",
+        "excess bedside lamps or pendant clusters"
+      ]
+    },
+    {
+      "room_id": "taste_kitchen",
+      "headline": "Minimal dark kitchen — tactile surfaces, warm accents",
+      "guidance": "Matte black cabinet faces with warm wood open shelving and a narrow, integrated bookshelf niche for cookbooks. Countertops in honed dark stone. Add a single pendant in satin brass above the sink or prep area and under-cabinet warm strip light to create practical amber fills. Keep styling minimal: one ceramic pitcher, a small stack of plates, and 3–4 curated books on the shelf.",
+      "must_include": [
+        "matte black cabinetry",
+        "open smoked-oak shelving",
+        "under-cabinet warm LED strip",
+        "bookshelf niche with curated volumes"
+      ],
+      "must_avoid": [
+        "stainless-steel glare",
+        "bright appliance finishes",
+        "cluttered counters"
+      ]
+    },
+    {
+      "room_id": "dine_dining_room",
+      "headline": "Bay dining vignette — intimate, warm, and sculptural",
+      "guidance": "A low-profile rectangular dining table in smoked oak with slender dark chairs. Pendant cluster: one low satin-brass pendant centered above the table (visible practical). Bay windows allow directional daylight; add amber strip recessed in the bay seat or ceiling reveal for evening mood. Keep tabletop minimal: a single fluted ceramic vessel or a small stack of books.",
+      "must_include": [
+        "smoked oak dining table",
+        "satin-brass pendant (single)",
+        "bay window seating or reveal with amber strip",
+        "minimal tabletop vessel"
+      ],
+      "must_avoid": [
+        "overly ornate light fixtures",
+        "heavy patterned table linens"
+      ]
+    },
+    {
+      "room_id": "dream_right_bedroom",
+      "headline": "Guest/secondary bedroom — refined restraint",
+      "guidance": "Smaller platform bed with charcoal linens, a narrow bookshelf against the wall (to meet 'bookshelf' requirement), and a single sculptural lamp. Vertical slat detail as a partial headboard is optional. Keep accessories sparse to preserve calm.",
+      "must_include": [
+        "charcoal platform bed",
+        "narrow bookshelf with curated volumes",
+        "one sculptural lamp",
+        "textured throw"
+      ],
+      "must_avoid": [
+        "two bedside lamps",
+        "bright patterned cushions"
+      ]
+    },
+    {
+      "room_id": "dream_upper_left_bedroom",
+      "headline": "Compact restful room — textured and minimal",
+      "guidance": "Simple low bed or daybed with charcoal linen, a single wall-mounted reading lamp (brass), and a small open shelf for books. Use a narrow smoked-oak slatted accent to tie back to main palette. Keep circulation clear — minimal furniture.",
+      "must_include": [
+        "low bed/daybed",
+        "brass wall-mounted reading lamp",
+        "small open bookshelf",
+        "smoked-oak slat accent"
+      ],
+      "must_avoid": [
+        "large bulky furniture",
+        "bright decorative accents"
+      ]
+    }
+  ]
+}

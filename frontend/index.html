@@ -77,10 +77,13 @@
                 name="pinterestUrl"
                 type="url"
                 value="https://www.pinterest.com/example/warm-japandi-home/"
+                list="cached-pinterest-boards"
                 required
               >
+              <datalist id="cached-pinterest-boards"></datalist>
               <span class="field-help">Paste a public board with interiors, furniture, colors, or lifestyle inspiration.</span>
             </label>
+            <div class="cache-summary-panel" id="pinterest-cache-summary"></div>
             <label>
               Lifestyle brief
               <textarea id="brief" name="brief" rows="3">Warm, calm home for a young family that needs a cozy work corner.</textarea>
@@ -118,6 +121,7 @@
           </div>
         </div>
         <section class="reference-gallery" id="generation-pinterest-gallery"></section>
+        <section class="cache-dashboard" id="generation-cache-dashboard"></section>
         <section class="runtime-rooms" id="runtime-room-list" aria-live="polite"></section>
       </section>
 
@@ -234,6 +238,7 @@
             </aside>
           </div>
 
+          <div class="cache-reel-browser" id="cache-reel-browser"></div>
           <div class="scene-editor-list" id="scene-editor-list"></div>
         </section>
       </section>
@@ -275,7 +280,7 @@
               <div class="placement-marker is-hidden" id="placement-marker">+</div>
             </div>
             <div class="cache-note" id="cache-note">
-              Previous final video is cached. Only the living room image and video segment will be regenerated, then the final video is reassembled.
+              Previous final video is ready. Only the living room image and video segment will be regenerated, then the final video is reassembled.
             </div>
           </article>
         </div>
@@ -291,6 +296,6 @@
       </div>
     </div>
 
-    <script src="./app.js" type="module"></script>
+    <script src="./app.js?v=preview-cache-layers-2" type="module"></script>
   </body>
 </html>

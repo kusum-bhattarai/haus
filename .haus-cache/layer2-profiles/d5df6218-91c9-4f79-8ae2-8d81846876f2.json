@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "88850d1d-e41a-44e5-a7f2-02fe4edc0d94",
+  "session_id": "d5df6218-91c9-4f79-8ae2-8d81846876f2",
+  "created_at": "2026-05-10T11:59:44.473Z",
+  "source_payload": {
+    "floor_plan_url": "file:///Users/tarive/haus/haus/.haus-cache/floor-plans/20bc605e36e2cf1b5288627f1646051e548dd6b4e7c2ed59d932e731ac451cf4.png",
+    "floor_plan_metadata": {
+      "source": "local_upload",
+      "mime_type": "image/png",
+      "size_bytes": 63643,
+      "width_px": 448,
+      "height_px": 480,
+      "sha256": "20bc605e36e2cf1b5288627f1646051e548dd6b4e7c2ed59d932e731ac451cf4",
+      "cache_key": "20bc605e36e2cf1b5288627f1646051e548dd6b4e7c2ed59d932e731ac451cf4"
+    },
+    "floor_plan_measurements": {
+      "source": "ml_parser",
+      "unit": "ft",
+      "scale": null,
+      "rooms": [
+        {
+          "room_id": null,
+          "name": "Nest",
+          "dimensions": {
+            "width": 12.166666666666666,
+            "length": 14.666666666666666,
+            "area": 178.44444444444446
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Taste (Kitchen)",
+          "dimensions": {
+            "width": 9.5,
+            "length": 10.583333333333334,
+            "area": 100.54166666666667
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Dining (Dine)",
+          "dimensions": {
+            "width": 9.333333333333334,
+            "length": 12,
+            "area": 112
+          },
+          "unit": "ft",
+          "confidence": 0.8
+        },
+        {
+          "room_id": null,
+          "name": "Bedroom (Dream) - upper-left",
+          "dimensions": {
+            "width": 10,
+            "length": 10,
+            "area": 100
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Bedroom (Dream) - right",
+          "dimensions": {
+            "width": 11.25,
+            "length": 11.333333333333334,
+            "area": 127.5
+          },
+          "unit": "ft",
+          "confidence": 0.9
+        },
+        {
+          "room_id": null,
+          "name": "Bedroom (Dream) - bottom",
+          "dimensions": {
+            "width": 11.333333333333334,
+            "length": 13.75,
+            "area": 155.83333333333334
+          },
+          "unit": "ft",
+          "confidence": 0.9
+        }
+      ],
+      "notes": null
+    },
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/dark-interior/",
+    "brief": "dark, batman style",
+    "objects": [
+      "bookshelf"
+    ],
+    "platform": "all",
+    "timestamp": "2026-05-10T11:58:22.923Z",
+    "session_id": "d5df6218-91c9-4f79-8ae2-8d81846876f2"
+  },
+  "aesthetic_profile": {
+    "palette": "monochrome",
+    "lighting": "dramatic",
+    "density": "layered",
+    "style_era": "japandi",
+    "dominant_colors": [
+      "#0B0B0B",
+      "#2F2F2F",
+      "#6B3F2A",
+      "#C48A48",
+      "#E7E6E4"
+    ],
+    "mood_words": [
+      "moody",
+      "meditative",
+      "textural warmth",
+      "calm minimalism",
+      "refined luxury",
+      "zen"
+    ],
+    "pinterest_cluster_labels": [
+      "matte-black walls + vertical wood slats",
+      "low-profile platform bed with charcoal linens",
+      "amber cove/strip lighting for warm contrast",
+      "brass bedside accents & sculptural lamps",
+      "monolithic black stone coffee table + bonsai / shoji"
+    ],
+    "confidence": 0.92
+  },
+  "pins": [
+    {
+      "pin_id": "1012465559998726563",
+      "source_url": "https://www.pinterest.com/tarive22/dark-interior/",
+      "image_url": "https://i.pinimg.com/1200x/7f/df/9e/7fdf9ec235ea3ea3f988f2c8f333e939.jpg",
+      "title": "Dark Bedroom with Wooden Touches.",
+      "description": "Warm, moody tones meet natural wood for a cozy and elegant bedroom.  #DarkBedroom #WoodDetails #CozyHome",
+      "save_count": null,
+      "hashtags": [
+        "darkbedroom",
+        "wooddetails",
+        "cozyhome"
+      ],
+      "cluster_label": "Minimal platform bedroom with vertical wood slat accent",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726531",
+      "source_url": "https://www.pinterest.com/tarive22/dark-interior/",
+      "image_url": "https://i.pinimg.com/1200x/fd/16/07/fd1607ee5737fd4e7e5442e29da17978.jpg",
+      "title": "Moody Black Luxe Bedroom — Dark, Cozy & Ultra-Chic 🖤🔥",
+      "description": "Bold black tones and gold accents elevate this modern moody bedroom into a luxury retreat. Save this dramatic and elegant look for your dream room inspiration! #moodybedroom #blackbedroomdecor #modernluxestyle",
+      "save_count": null,
+      "hashtags": [
+        "moodybedroom",
+        "blackbedroomdecor",
+        "modernluxestyle"
+      ],
+      "cluster_label": "Moody luxe bedroom with brass accents and recessed strip light",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726506",
+      "source_url": "https://www.pinterest.com/tarive22/dark-interior/",
+      "image_url": "https://i.pinimg.com/1200x/66/44/0f/66440f59643908d20dedfae5765924a0.jpg",
+      "title": "Japandi Noir Living Room Ideas: Dark Minimal Decor with Black Tadelakt & Smoked Oak (2025 Trend)",
+      "description": "Discover Japandi Noir: a serene, moody living room with matte black tadelakt walls, smoked oak slats, a charcoal linen sectional, and a monolithic black stone coffee table. Warm gray microcement floors, frosted shoji screens, a single bonsai, and soft skylight glow deliver calm, textural minimalism. Save for dark interior design ideas, modern wabi-sabi styling, and Scandinavian–Japanese living room inspiration.",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Japandi noir living room with shoji screens and monolithic black stone table",
+      "selected_for_mood_board": true
+    }
+  ],
+  "cluster_summary": [
+    {
+      "label": "Minimal platform bedroom with vertical wood slat accent",
+      "pin_ids": [
+        "1012465559998726563"
+      ],
+      "visual_notes": "Matte black walls and ceiling, vertical warm wood slat panel, low walnut platform bed, charcoal bedding and rug, amber cove light along ceiling edge — minimal furnishings, emphasis on horizontal planes and warm wood contrast.",
+      "weight": 0.34
+    },
+    {
+      "label": "Moody luxe bedroom with brass accents and recessed strip light",
+      "pin_ids": [
+        "1012465559998726531"
+      ],
+      "visual_notes": "Charcoal upholstered bed and fluted headboard panel, layered gray bedding, brass dome bedside lamps, recessed warm LED strip behind headboard, textured throws and rugs — layered textiles and metallic highlights for a luxe yet restrained look.",
+      "weight": 0.33
+    },
+    {
+      "label": "Japandi noir living room with shoji screens and monolithic black stone table",
+      "pin_ids": [
+        "1012465559998726506"
+      ],
+      "visual_notes": "Matte black tadelakt-like walls, smoked oak slatted wall, charcoal linen sectional, low black marble coffee table with white veining, frosted shoji screens and single bonsai — Japanese minimalism meets Scandinavian texture and warm wood tones.",
+      "weight": 0.33
+    }
+  ],
+  "floor_plan": {
+    "rooms": [
+      {
+        "room_id": "nest_living_room",
+        "name": "Nest",
+        "room_type": "living_room",
+        "area_estimate": "large",
+        "measured_dimensions": {
+          "width": 12.166666666666666,
+          "length": 14.666666666666666,
+          "area": 178.44444444444446
+        },
+        "measured_unit": "ft",
+        "windows": "exterior windows/bay at north wall and glazing toward right-side 'relax' area",
+        "natural_light": "high",
+        "adjoins": [
+          "taste_kitchen"
+        ],
+        "generation_priority": 1
+      },
+      {
+        "room_id": "dream_bottom_bedroom",
+        "name": "Dream (bottom)",
+        "room_type": "bedroom",
+        "area_estimate": "large",
+        "measured_dimensions": {
+          "width": 11.333333333333334,
+          "length": 13.75,
+          "area": 155.83333333333334
+        },
+        "measured_unit": "ft",
+        "windows": "exterior windows along bottom wall",
+        "natural_light": "medium",
+        "adjoins": [
+          "taste_kitchen",
+          "dream_right_bedroom",
+          "dream_upper_left_bedroom"
+        ],
+        "generation_priority": 2
+      },
+      {
+        "room_id": "taste_kitchen",
+        "name": "Taste (Kitchen)",
+        "room_type": "kitchen",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 9.5,
+          "length": 10.583333333333334,
+          "area": 100.54166666666667
+        },
+        "measured_unit": "ft",
+        "windows": "partial exterior glazing toward dining side; no large dedicated window shown",
+        "natural_light": "medium",
+        "adjoins": [
+          "nest_living_room",
+          "dine_dining_room",
+          "dream_right_bedroom",
+          "dream_bottom_bedroom"
+        ],
+        "generation_priority": 3
+      },
+      {
+        "room_id": "dine_dining_room",
+        "name": "Dining (Dine)",
+        "room_type": "dining_room",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 9.333333333333334,
+          "length": 12,
+          "area": 112
+        },
+        "measured_unit": "ft",
+        "windows": "bay/angled exterior windows on right-side elevation",
+        "natural_light": "high",
+        "adjoins": [
+          "taste_kitchen"
+        ],
+        "generation_priority": 4
+      },
+      {
+        "room_id": "dream_right_bedroom",
+        "name": "Dream (right)",
+        "room_type": "bedroom",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 11.25,
+          "length": 11.333333333333334,
+          "area": 127.5
+        },
+        "measured_unit": "ft",
+        "windows": "exterior window(s) on right elevation",
+        "natural_light": "medium",
+        "adjoins": [
+          "taste_kitchen",
+          "dream_bottom_bedroom"
+        ],
+        "generation_priority": 5
+      },
+      {
+        "room_id": "dream_upper_left_bedroom",
+        "name": "Dream (upper-left)",
+        "room_type": "bedroom",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 10,
+          "length": 10,
+          "area": 100
+        },
+        "measured_unit": "ft",
+        "windows": "exterior window on left elevation",
+        "natural_light": "medium",
+        "adjoins": [
+          "dream_bottom_bedroom"
+        ],
+        "generation_priority": 6
+      }
+    ],
+    "total_rooms": 6,
+    "layout_type": "traditional",
+    "confidence": 0.91,
+    "notes": "Rooms, windows, and adjacencies inferred from provided plan image and measurements. Adjacencies include direct connections and likely shared-wall/corridor relationships; excluded service/circulation spaces (bathrooms, hallways, closets, pantries, laundry, storage). Natural light levels are estimations based on exterior wall/window placements."
+  },
+  "provenance": {
+    "pinterest": {
+      "provider": "apify",
+      "requested_limit": 10,
+      "returned_count": 3,
+      "actor_id": "fatihtahta~pinterest-scraper-search"
+    },
+    "models": {
+      "aesthetic_extraction": "gpt-5-mini",
+      "floor_plan_parsing": "gpt-5-mini"
+    }
+  },
+  "warnings": []
+}

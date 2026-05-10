@@ -1,18 +1,22 @@
 #!/usr/bin/env node
 import { execFile } from 'node:child_process';
-import { accessSync, readFileSync } from 'node:fs';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { accessSync, createWriteStream, readFileSync } from 'node:fs';
+import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { pipeline } from 'node:stream/promises';
 import { promisify } from 'node:util';
+import { fileURLToPath } from 'node:url';
 import { deflateSync } from 'node:zlib';
 import { fal } from '@fal-ai/client';
+
+import { extractFirstMediaUrl } from '../src/agent/genmediaAdapter.js';
 
 const execFileAsync = promisify(execFile);
 const ROOT = process.cwd();
 const DEFAULT_JOB_ID = 'a9c86517-d38d-4db0-9bc9-5ca967d2316c';
 let OUT_W = 1080;
 let OUT_H = 1920;
-const FPS = 30;
+const FPS = 24;
 const ELEVENLABS_API_BASE = 'https://api.elevenlabs.io/v1';
 const DEFAULT_ELEVENLABS_MODEL = 'eleven_multilingual_v2';
 const DEFAULT_ELEVENLABS_VOICE_ID = 'eXpIbVcVbLo8ZJQDlDnl';
@@ -22,6 +26,7 @@ const DEFAULT_OPENAI_TTS_VOICE = 'alloy';
 const DEFAULT_THUMBNAIL_MODEL = 'fal-ai/gemini-3.1-flash-image-preview/edit';
 const DEFAULT_FAL_TTS_MODEL = 'fal-ai/dia-tts';
 const DEFAULT_MAX_CLIP_SECONDS = 2.8;
+const DEFAULT_TARGET_SECONDS = 20;
 const SAFE_REEL_X_PAD = 72;
 const SAFE_REEL_Y_PAD = 310;
 
@@ -31,12 +36,12 @@ const FLOOR_PLANS = [
   { id: '3b2', image: 'frontend/floor_plans/3b2.png', name: 'Unit C3', layout: '3 BED / 2 BATH', sqft: '1,250 SQ FT', price: 'STARTING AT $3,180' }
 ];
 
-function buildVibeCopy(job) {
-  const vibe = job.handoff?.vibe_report ?? {};
+function buildVibeCopy(job, style = null) {
+  const vibe = style?.vibe_report ?? job.handoff?.vibe_report ?? {};
   const guidanceMap = new Map((vibe.room_guidance ?? []).map((g) => [g.room_id, g]));
   return {
     guidanceMap,
-    aestheticName: vibe.aesthetic_name ?? 'Your Style',
+    aestheticName: vibe.aesthetic_name ?? style?.aesthetic_profile?.style_name ?? style?.style_id ?? 'Your Style',
     summary: vibe.summary ?? null,
     topMaterial: (vibe.materials ?? [])[0] ?? null
   };
@@ -51,15 +56,31 @@ async function main() {
     return;
   }
   const job = await loadJob(args.jobId ?? DEFAULT_JOB_ID);
+  const style = await loadStyleEntry(args);
   const edit = args.editJson ? JSON.parse(await readFile(path.resolve(args.editJson), 'utf8')) : null;
   const outputDir = path.resolve(args.outputDir ?? `.haus-cache/reel-assembler/springmarc-${timestamp()}`);
   await mkdir(outputDir, { recursive: true });
 
-  const scenes = applySceneEdit(buildScenePlan(job), edit);
+  const assetResolution = await resolveRoomAssets(job, outputDir);
+  await writeJson(path.join(outputDir, 'asset_manifest.json'), assetResolution.manifest);
+  if (assetResolution.clipsByRoomId.size < 1) {
+    throw new Error(`No usable room videos found for job ${job.job_id}. See ${path.join(outputDir, 'asset_manifest.json')} for skipped rooms.`);
+  }
+  const scenes = applySceneEdit(buildScenePlan(job, {
+    style,
+    clipsByRoomId: assetResolution.clipsByRoomId,
+    reels: args.reels,
+    targetDuration: args.duration ?? DEFAULT_TARGET_SECONDS
+  }), edit);
   validateScenes(scenes);
   await writeJson(path.join(outputDir, 'scene_plan.json'), { job_id: job.job_id, scenes });
   if (args.dryRun) {
-    console.log(JSON.stringify({ output_dir: outputDir, scene_count: scenes.length, scene_plan: path.join(outputDir, 'scene_plan.json') }, null, 2));
+    console.log(JSON.stringify({
+      output_dir: outputDir,
+      scene_count: scenes.length,
+      asset_manifest: path.join(outputDir, 'asset_manifest.json'),
+      scene_plan: path.join(outputDir, 'scene_plan.json')
+    }, null, 2));
     return;
   }
 
@@ -74,15 +95,38 @@ async function main() {
   console.log(JSON.stringify({ output_dir: outputDir, final_video_path: finalPath, scenes: scenes.length }, null, 2));
 }
 
-function buildScenePlan(job) {
-  const clips = new Map((job.artifacts?.approved_room_clips ?? []).map((clip) => [clip.room_id, clip.path]));
+function buildScenePlan(job, options = {}) {
+  const clips = options.clipsByRoomId ?? new Map((job.artifacts?.approved_room_clips ?? []).map((clip) => [clip.room_id, { path: clip.path }]));
   const order = job.handoff?.creative_spec?.room_sequence ?? [];
   const roomJobs = new Map((job.handoff?.room_generation_jobs ?? []).map((room) => [room.room_id, room]));
-  const { guidanceMap, aestheticName, summary, topMaterial } = buildVibeCopy(job);
+  const { guidanceMap, aestheticName, summary, topMaterial } = buildVibeCopy(job, options.style);
 
   const hookNarration = summary
     ? `${summary.slice(0, 130).replace(/\s\S+$/, '')}. That is what Haus builds for Springmarc.`
     : 'At Springmarc, your future home starts as a floor plan you can actually see.';
+
+  const priceScenes = options.reels
+    ? [{
+      id: 'price_summary',
+      type: 'price_summary',
+      title: 'FLOOR PLANS',
+      lines: ['1B1 FROM $2,040', '2B2 FROM $2,620', '3B2 FROM $3,180'],
+      plans: FLOOR_PLANS,
+      style_name: aestheticName,
+      narration: 'Choose one, two, or three bedrooms, with pricing matched to each plan.',
+      fallback_narration: 'Compare one, two, and three bedroom plans with clear starting prices.',
+      subtitle: '1B1, 2B2, AND 3B2 AVAILABLE'
+      }]
+    : FLOOR_PLANS.map((plan) => ({
+        id: plan.id,
+        type: 'price_card',
+        title: plan.name,
+        lines: [plan.layout, plan.sqft, plan.price],
+        plan,
+        style_name: aestheticName,
+        narration: `${plan.name}: ${plan.layout.toLowerCase()}, ${plan.sqft.toLowerCase()}, ${plan.price.toLowerCase()}.`,
+        subtitle: `${plan.name}: ${plan.price}`
+      }));
 
   const scenes = [
     {
@@ -91,43 +135,38 @@ function buildScenePlan(job) {
       title: 'SPRINGMARC',
       lines: ['PICK A FLOOR PLAN', 'SEE THE HOME FIRST'],
       narration: hookNarration,
+      fallback_narration: 'Tour the floor plan, pick a style, and see the apartment before it exists.',
       subtitle: 'SEE IT BEFORE IT IS BUILT.'
     },
-    {
+    ...(options.reels ? [] : [{
       id: 'style_feature',
       type: 'card',
       title: 'CHOOSE ANY STYLE',
       lines: ['PASTE A PINTEREST BOARD', 'HAUS APPLIES THE STYLE'],
       narration: `Paste a Pinterest board. Haus reads the aesthetic — ${aestheticName} — and stages every room to match.`,
       subtitle: `${aestheticName.toUpperCase()}. APPLIED.`
-    },
-    ...FLOOR_PLANS.map((plan) => ({
-      id: plan.id,
-      type: 'price_card',
-      title: plan.name,
-      lines: [plan.layout, plan.sqft, plan.price],
-      plan,
-      narration: `${plan.name}: ${plan.layout.toLowerCase()}, ${plan.sqft.toLowerCase()}, ${plan.price.toLowerCase()}.`,
-      subtitle: `${plan.name}: ${plan.price}`
-    }))
+    }]),
+    ...priceScenes
   ];
 
   for (const roomId of order) {
-    const clipPath = clips.get(roomId);
-    if (!clipPath) continue;
+    const clip = clips.get(roomId);
+    if (!clip?.path) continue;
     const room = roomJobs.get(roomId);
     const guidance = guidanceMap.get(roomId);
     const titleWord = roomId.split('_')[0].toUpperCase();
-    const narration = guidance?.headline
-      ?? (topMaterial ? `${titleWord.slice(0, 1) + titleWord.slice(1).toLowerCase()} styled with ${topMaterial}.` : `${titleWord.slice(0, 1) + titleWord.slice(1).toLowerCase()} — ${aestheticName}.`);
+    const fallbackNarration = roomFallbackLine(titleWord, guidance, aestheticName, topMaterial);
+    const narration = guidance?.headline ?? fallbackNarration;
     const subtitleSource = guidance?.must_include?.[0] ?? aestheticName;
     const subtitle = subtitleSource.toUpperCase().replace(/[^A-Z0-9 '$.,:;!?-]/g, '').slice(0, 40);
     scenes.push({
       id: roomId,
       type: 'clip',
       title: titleWord,
-      clip_path: clipPath,
+      clip_path: clip.path,
+      asset_duration: clip.duration ?? null,
       narration,
+      fallback_narration: fallbackNarration,
       subtitle,
       motion: room?.video_generation?.camera_motion ?? null,
       must_include: room?.staging?.must_include ?? [],
@@ -145,9 +184,246 @@ function buildScenePlan(job) {
     title: 'HAUS FOR SPRINGMARC',
     lines: ['REAL ESTATE REELS', 'FROM A FLOOR PLAN'],
     narration: closeNarration,
+    fallback_narration: 'From floor plan to finished reel, Haus turns the vision into a tour.',
     subtitle: 'FROM FLOOR PLAN TO BUYER REEL.'
   });
-  return scenes.map((scene, index) => ({ ...scene, index }));
+  return applyTimingBudgets(scenes, {
+    reels: options.reels,
+    targetSeconds: options.targetDuration ?? DEFAULT_TARGET_SECONDS
+  }).map((scene, index) => ({ ...scene, index }));
+}
+
+async function loadStyleEntry(args, options = {}) {
+  const rootDir = options.rootDir ?? ROOT;
+  const styleDir = path.join(rootDir, '.haus-cache', 'style-library');
+  if (args.fromStyle) return JSON.parse(await readFile(path.resolve(args.fromStyle), 'utf8'));
+  if (!args.styleId) return null;
+
+  const localPath = path.join(styleDir, `${args.styleId}.json`);
+  if (existsSyncLite(localPath)) return JSON.parse(await readFile(localPath, 'utf8'));
+
+  const index = await readJsonSafe(path.join(styleDir, 'index.json')) ?? { styles: [] };
+  const match = (index.styles ?? []).find((style) => style.style_id === args.styleId);
+  if (!match) throw new Error(`Style not found: ${args.styleId}`);
+
+  const staleBasenamePath = match.path ? path.join(styleDir, path.basename(match.path)) : null;
+  if (staleBasenamePath && existsSyncLite(staleBasenamePath)) return JSON.parse(await readFile(staleBasenamePath, 'utf8'));
+  if (match.path && existsSyncLite(match.path)) return JSON.parse(await readFile(match.path, 'utf8'));
+  throw new Error(`Style index entry is stale and local file is missing: ${args.styleId}`);
+}
+
+async function resolveRoomAssets(job, outputDir, options = {}) {
+  const rootDir = options.rootDir ?? ROOT;
+  const downloadFn = options.downloadFn ?? downloadRemoteAsset;
+  const durationFn = options.mediaDurationFn ?? mediaDuration;
+  const clipsByRoomId = new Map();
+  const manifest = { job_id: job.job_id, generated_at: new Date().toISOString(), rooms: [] };
+  const approved = new Map((job.artifacts?.approved_room_clips ?? []).map((clip) => [clip.room_id, clip]));
+  const runtimeRooms = new Map((job.rooms ?? []).map((room) => [room.room_id, room]));
+  const roomJobs = new Map((job.handoff?.room_generation_jobs ?? []).map((room) => [room.room_id, room]));
+  const roomIds = unique([
+    ...(job.handoff?.creative_spec?.room_sequence ?? []),
+    ...approved.keys(),
+    ...runtimeRooms.keys(),
+    ...roomJobs.keys()
+  ]);
+
+  for (const roomId of roomIds) {
+    const clip = approved.get(roomId) ?? {};
+    const runtimeRoom = runtimeRooms.get(roomId) ?? {};
+    const roomJob = roomJobs.get(roomId) ?? {};
+    const resolved = await resolveOneRoomAsset({ roomId, clip, runtimeRoom, roomJob, outputDir, rootDir, downloadFn, durationFn });
+    manifest.rooms.push(resolved.manifest);
+    if (resolved.path) clipsByRoomId.set(roomId, { path: resolved.path, duration: resolved.duration, source_type: resolved.manifest.source_type });
+  }
+
+  return { clipsByRoomId, manifest };
+}
+
+async function resolveOneRoomAsset({ roomId, clip, runtimeRoom, roomJob, outputDir, rootDir, downloadFn, durationFn }) {
+  const artifacts = runtimeRoom.artifacts ?? {};
+  const base = {
+    room_id: roomId,
+    room_name: roomJob.room_name ?? runtimeRoom.room_name ?? null,
+    state: runtimeRoom.state ?? null,
+    source_type: null,
+    source_url: null,
+    local_path: null,
+    duration: null,
+    skipped_reason: null
+  };
+
+  for (const candidate of [
+    { type: 'approved_local_path', path: clip.path },
+    { type: 'approved_url', url: clip.url },
+    { type: 'room_local_path', path: artifacts.video_clip_path },
+    { type: 'room_video_url', url: artifacts.video_url },
+    await generationResultFromStalePath(clip.path ?? artifacts.video_clip_path, rootDir),
+    await generationResultByRequest(runtimeRoom.plans?.video_plan, rootDir)
+  ].filter(Boolean)) {
+    try {
+      const localPath = candidate.path && existsSyncLite(candidate.path)
+        ? candidate.path
+        : candidate.url ? await downloadResolvedVideo(candidate.url, roomId, outputDir, downloadFn) : null;
+      if (!localPath) continue;
+      const duration = await durationFn(localPath).catch(() => null);
+      return {
+        path: localPath,
+        duration,
+        manifest: { ...base, source_type: candidate.type, source_url: candidate.url ?? null, local_path: localPath, duration }
+      };
+    } catch (error) {
+      base.skipped_reason = `download_failed: ${error.message}`;
+    }
+  }
+
+  const pending = await pendingGenerationReason(runtimeRoom.plans?.video_plan, rootDir);
+  return { path: null, duration: null, manifest: { ...base, skipped_reason: base.skipped_reason ?? pending ?? 'missing_video' } };
+}
+
+async function generationResultFromStalePath(filePath, rootDir) {
+  const hash = generationHashFromPath(filePath);
+  if (!hash) return null;
+  const result = await readJsonSafe(path.join(rootDir, '.haus-cache', 'agent', 'generations', hash, 'result.json'));
+  const url = extractFirstMediaUrl(result);
+  return url ? { type: 'generation_result_by_stale_path', url } : null;
+}
+
+async function generationResultByRequest(videoPlan, rootDir) {
+  if (!videoPlan?.model || !videoPlan?.params) return null;
+  const match = await findGenerationRequest(rootDir, (request) =>
+    request.endpoint_id === videoPlan.model && stableJson(request.params) === stableJson(videoPlan.params)
+  , { preferResult: true });
+  if (!match?.dir) return null;
+  const result = await readJsonSafe(path.join(match.dir, 'result.json'));
+  const url = extractFirstMediaUrl(result);
+  return url ? { type: 'generation_result_by_request', url } : null;
+}
+
+async function pendingGenerationReason(videoPlan, rootDir) {
+  if (!videoPlan?.model || !videoPlan?.params) return null;
+  const match = await findGenerationRequest(rootDir, (request) =>
+    request.endpoint_id === videoPlan.model && stableJson(request.params) === stableJson(videoPlan.params)
+  );
+  if (!match) return null;
+  if (match.request?.request_id || match.request?.status_url || match.request?.response_url) return 'pending_with_request_metadata';
+  return 'pending_unrecoverable';
+}
+
+async function findGenerationRequest(rootDir, predicate, options = {}) {
+  const generationsDir = path.join(rootDir, '.haus-cache', 'agent', 'generations');
+  let entries = [];
+  try {
+    entries = await readdir(generationsDir, { withFileTypes: true });
+  } catch {
+    return null;
+  }
+  const matches = [];
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    const dir = path.join(generationsDir, entry.name);
+    const request = await readJsonSafe(path.join(dir, 'request.json'));
+    if (request && predicate(request)) matches.push({ dir, request, hasResult: existsSyncLite(path.join(dir, 'result.json')) });
+  }
+  if (!matches.length) return null;
+  if (options.preferResult) return matches.find((match) => match.hasResult) ?? matches[0];
+  return matches[0];
+}
+
+async function downloadResolvedVideo(url, roomId, outputDir, downloadFn) {
+  const localPath = path.join(outputDir, 'assets', 'remote', `${roomId}.mp4`);
+  if (existsSyncLite(localPath)) return localPath;
+  await downloadFn(url, localPath);
+  return localPath;
+}
+
+async function downloadRemoteAsset(url, destPath) {
+  await mkdir(path.dirname(destPath), { recursive: true });
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  await pipeline(response.body, createWriteStream(destPath));
+}
+
+function generationHashFromPath(filePath) {
+  if (!filePath) return null;
+  const parts = path.normalize(filePath).split(path.sep);
+  const index = parts.lastIndexOf('generations');
+  return index >= 0 ? parts[index + 1] ?? null : null;
+}
+
+function applyTimingBudgets(scenes, options = {}) {
+  if (options.reels) {
+    return scenes.map((scene) => {
+      const budget = scene.id === 'hook' || scene.id === 'price_summary' || scene.id === 'close' ? 5 : scene.type === 'clip' ? 3 : 5;
+      const maxWords = wordsForDuration(budget);
+      const fallback = scene.fallback_narration ?? deterministicFallback(scene);
+      return {
+        ...scene,
+        budget_seconds: budget,
+        max_words: maxWords,
+        original_narration: scene.narration,
+        fallback_narration: fallback,
+        narration: fitNarrationToBudget(scene.narration, budget, fallback)
+      };
+    });
+  }
+  const maxClipSeconds = Number(process.env.HAUS_REEL_MAX_CLIP_SECONDS ?? DEFAULT_MAX_CLIP_SECONDS);
+  const planned = scenes.map((scene) => {
+    const cap = scene.type === 'clip'
+      ? Math.min(Number(scene.asset_duration ?? maxClipSeconds), maxClipSeconds)
+      : scene.type === 'price_card' ? 2.0 : 2.4;
+    return { ...scene, budget_seconds: Math.max(1.6, Math.min(cap, scene.type === 'clip' ? maxClipSeconds : 3.0)) };
+  });
+  const total = planned.reduce((sum, scene) => sum + scene.budget_seconds, 0);
+  const scale = total > options.targetSeconds ? options.targetSeconds / total : 1;
+  return planned.map((scene) => {
+    const floor = scene.type === 'clip' ? 1.8 : 1.4;
+    const budget = Number(Math.max(floor, scene.budget_seconds * scale).toFixed(2));
+    const maxWords = wordsForDuration(budget);
+    const fallback = scene.fallback_narration ?? deterministicFallback(scene);
+    return {
+      ...scene,
+      budget_seconds: budget,
+      max_words: maxWords,
+      original_narration: scene.narration,
+      fallback_narration: fallback,
+      narration: fitNarrationToBudget(scene.narration, budget, fallback)
+    };
+  });
+}
+
+function fitNarrationToBudget(text, budgetSeconds, fallback) {
+  const maxWords = wordsForDuration(budgetSeconds);
+  return wordCount(text) <= maxWords ? text : limitWords(fallback, maxWords);
+}
+
+function wordsForDuration(seconds) {
+  if (seconds <= 2.1) return 5;
+  if (seconds <= 3.1) return 9;
+  if (seconds <= 3.8) return 11;
+  if (seconds <= 5.1) return 15;
+  return Math.max(11, Math.floor(seconds * 3));
+}
+
+function roomFallbackLine(titleWord, guidance, aestheticName, topMaterial) {
+  const room = titleWord.slice(0, 1) + titleWord.slice(1).toLowerCase();
+  const material = guidance?.must_include?.[0] ?? topMaterial ?? aestheticName;
+  return `${room}: ${material}.`;
+}
+
+function deterministicFallback(scene) {
+  if (scene.type === 'price_summary') return 'One, two, and three bedroom plans are available.';
+  if (scene.type === 'price_card') return `${scene.plan.name}: ${scene.plan.price}.`;
+  if (scene.type === 'card') return scene.subtitle ?? scene.title;
+  return `${scene.title}: ${scene.subtitle}.`;
+}
+
+function limitWords(text, maxWords) {
+  return String(text ?? '').split(/\s+/).filter(Boolean).slice(0, maxWords).join(' ').replace(/[.,:;!?-]+$/, '') + '.';
+}
+
+function wordCount(text) {
+  return String(text ?? '').split(/\s+/).filter(Boolean).length;
 }
 
 function applyRenderPreset(args) {
@@ -184,11 +460,18 @@ async function generateSceneAssets(scenes, outputDir, args) {
   await mkdir(path.join(outputDir, 'price_prompts'), { recursive: true });
   await mkdir(path.join(outputDir, 'thumbnails'), { recursive: true });
   const priceTemplate = await loadPricePromptTemplate();
+  const priceSummaryTemplate = await loadPriceSummaryPromptTemplate();
   for (const scene of scenes) {
     scene.voiceover_path = path.join(outputDir, 'voiceovers', `${pad(scene.index)}-${scene.id}.mp3`);
     scene.caption_path = path.join(outputDir, 'captions', `${pad(scene.index)}-${scene.id}.png`);
     scene.voiceover_provider = await generateVoiceover(scene.narration, scene.voiceover_path, args);
     scene.duration = await mediaDuration(scene.voiceover_path);
+    if (scene.budget_seconds && scene.duration > scene.budget_seconds + 0.15 && scene.narration !== scene.fallback_narration) {
+      scene.narration = fitNarrationToBudget(scene.fallback_narration, scene.budget_seconds, scene.fallback_narration);
+      scene.voiceover_rewritten = true;
+      scene.voiceover_provider = await generateVoiceover(scene.narration, scene.voiceover_path, args);
+      scene.duration = await mediaDuration(scene.voiceover_path);
+    }
     await writeFile(scene.caption_path, renderTextPng({
       eyebrow: scene.title,
       lines: [scene.subtitle],
@@ -204,7 +487,7 @@ async function generateSceneAssets(scenes, outputDir, args) {
         layout: scene.plan.layout,
         sqft: scene.plan.sqft,
         price: scene.plan.price,
-        style_name: 'Japandi',
+        style_name: scene.style_name ?? 'Your Style',
         floor_plan_image: scene.floor_plan_path
       });
       await writeFile(scene.price_prompt_path, pricePrompt);
@@ -221,12 +504,45 @@ async function generateSceneAssets(scenes, outputDir, args) {
         scene.thumbnail_url = thumbnail.url;
         scene.thumbnail_model = thumbnail.model;
       }
+    } else if (scene.type === 'price_summary') {
+      scene.price_prompt_path = path.join(outputDir, 'price_prompts', `${pad(scene.index)}-${scene.id}.txt`);
+      scene.card_path = path.join(outputDir, 'cards', `${pad(scene.index)}-${scene.id}.png`);
+      const pricePrompt = renderTemplate(priceSummaryTemplate, {
+        community_name: 'Springmarc',
+        style_name: scene.style_name ?? 'Your Style',
+        plan_1_name: scene.plans[0].name,
+        plan_1_layout: scene.plans[0].layout,
+        plan_1_sqft: scene.plans[0].sqft,
+        plan_1_price: scene.plans[0].price,
+        plan_2_name: scene.plans[1].name,
+        plan_2_layout: scene.plans[1].layout,
+        plan_2_sqft: scene.plans[1].sqft,
+        plan_2_price: scene.plans[1].price,
+        plan_3_name: scene.plans[2].name,
+        plan_3_layout: scene.plans[2].layout,
+        plan_3_sqft: scene.plans[2].sqft,
+        plan_3_price: scene.plans[2].price
+      });
+      await writeFile(scene.price_prompt_path, pricePrompt);
+      const thumbnailPath = path.join(outputDir, 'thumbnails', `${pad(scene.index)}-${scene.id}.png`);
+      const reusedThumbnail = args.reuseThumbnailsFrom
+        ? path.resolve(args.reuseThumbnailsFrom, 'thumbnails', `${pad(scene.index)}-${scene.id}.png`)
+        : null;
+      if (reusedThumbnail && existsSyncLite(reusedThumbnail)) {
+        scene.card_path = reusedThumbnail;
+        scene.thumbnail_model = 'reused';
+      } else {
+        const thumbnail = await generateTextThumbnail(pricePrompt, thumbnailPath, scene.plans.map((plan) => path.join(ROOT, plan.image)));
+        scene.card_path = thumbnail.path;
+        scene.thumbnail_url = thumbnail.url;
+        scene.thumbnail_model = thumbnail.model;
+      }
     } else if (scene.type === 'card') {
       scene.card_path = path.join(outputDir, 'cards', `${pad(scene.index)}-${scene.id}.png`);
       await writeFile(scene.card_path, renderTextPng({
         eyebrow: scene.title,
         lines: scene.lines,
-        footer: 'Springmarc at San Marcos',
+        footer: 'SpringMarc at San Marcos',
         mode: 'card'
       }));
     }
@@ -235,11 +551,9 @@ async function generateSceneAssets(scenes, outputDir, args) {
 
 async function renderScene(scene, outputDir, edit = null) {
   const out = path.join(outputDir, `${pad(scene.index)}-${scene.id}.mp4`);
-  const audioDuration = Math.max(1.8, Number(scene.duration ?? 3));
-  const maxClipSeconds = Number(edit?.max_clip_seconds ?? process.env.HAUS_REEL_MAX_CLIP_SECONDS ?? DEFAULT_MAX_CLIP_SECONDS);
-  const duration = scene.type === 'clip' ? Math.min(audioDuration, maxClipSeconds) : Math.min(audioDuration, 3.7);
+  const duration = renderDurationForScene(scene, edit);
   const fadeOutAt = Math.max(0, duration - 0.18).toFixed(3);
-  if (scene.type === 'card' || scene.type === 'price_card') {
+  if (scene.type === 'card' || scene.type === 'price_card' || scene.type === 'price_summary') {
     const cardFilter = scene.type === 'price_card'
       ? `[0:v]scale=${OUT_W}:${OUT_H}:force_original_aspect_ratio=decrease,pad=${OUT_W}:${OUT_H}:(ow-iw)/2:(oh-ih)/2:color=black,fps=${FPS},fade=t=in:st=0:d=0.12,fade=t=out:st=${fadeOutAt}:d=0.18,format=yuv420p[v]`
       : `[0:v]scale=${OUT_W}:${OUT_H},fps=${FPS},fade=t=in:st=0:d=0.12,fade=t=out:st=${fadeOutAt}:d=0.18,format=yuv420p[v]`;
@@ -249,8 +563,9 @@ async function renderScene(scene, outputDir, edit = null) {
       '-i', scene.voiceover_path,
       '-filter_complex', cardFilter,
       '-map', '[v]', '-map', '1:a',
+      '-t', String(duration),
       '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20',
-      '-c:a', 'aac', '-b:a', '160k', '-shortest', out
+      '-c:a', 'aac', '-b:a', '160k', out
     ]);
     return out;
   }
@@ -266,10 +581,18 @@ async function renderScene(scene, outputDir, edit = null) {
       `[tmp][2:v]overlay=0:0:format=auto,fade=t=in:st=0:d=0.10,fade=t=out:st=${fadeOutAt}:d=0.18,trim=duration=${duration.toFixed(3)},setpts=PTS-STARTPTS[v]`
     ].join(';'),
     '-map', '[v]', '-map', '1:a',
+    '-t', String(duration),
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20',
-    '-c:a', 'aac', '-b:a', '160k', '-shortest', out
+    '-c:a', 'aac', '-b:a', '160k', out
   ]);
   return out;
+}
+
+function renderDurationForScene(scene, edit = null) {
+  if (scene.budget_seconds) return Number(scene.budget_seconds);
+  const audioDuration = Math.max(1.8, Number(scene.duration ?? 3));
+  const maxClipSeconds = Number(edit?.max_clip_seconds ?? process.env.HAUS_REEL_MAX_CLIP_SECONDS ?? DEFAULT_MAX_CLIP_SECONDS);
+  return scene.type === 'clip' ? Math.min(audioDuration, maxClipSeconds) : Math.min(audioDuration, 3.7);
 }
 
 function preserveAssetFilters(inputLabel) {
@@ -287,7 +610,11 @@ async function concatSegments(paths, outputDir) {
   const out = path.join(outputDir, 'final_reel.mp4');
   await execFileAsync('ffmpeg', [
     '-y', '-f', 'concat', '-safe', '0', '-i', listPath,
-    '-c', 'copy', '-movflags', '+faststart', out
+    '-vf', `fps=${FPS},format=yuv420p`,
+    '-af', 'aresample=async=1:first_pts=0',
+    '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20',
+    '-c:a', 'aac', '-b:a', '160k',
+    '-movflags', '+faststart', out
   ]);
   return out;
 }
@@ -420,6 +747,10 @@ async function loadPricePromptTemplate() {
   return readFile(path.join(ROOT, 'prompts', 'thumbnail_price.jinja'), 'utf8');
 }
 
+async function loadPriceSummaryPromptTemplate() {
+  return readFile(path.join(ROOT, 'prompts', 'thumbnail_price_summary.jinja'), 'utf8');
+}
+
 function renderTemplate(template, values) {
   return template.replace(/\{\{\s*([A-Za-z0-9_]+)\s*\}\}/g, (_, key) => values[key] ?? '');
 }
@@ -451,6 +782,40 @@ async function generatePriceThumbnail(floorPlanPath, prompt, out) {
   if (!url) throw new Error(`No thumbnail image returned from ${thumbnailModel}.`);
   const response = await fetch(url);
   if (!response.ok) throw new Error(`Failed to download thumbnail: ${response.status} ${await response.text()}`);
+  await writeFile(out, Buffer.from(await response.arrayBuffer()));
+  return { path: out, url, model: thumbnailModel };
+}
+
+async function generateTextThumbnail(prompt, out, imagePaths = []) {
+  if (!process.env.FAL_KEY) throw new Error('FAL_KEY is required to generate price summary thumbnails.');
+  const thumbnailModel = process.env.THUMBNAIL_MODEL ?? DEFAULT_THUMBNAIL_MODEL;
+  fal.config({ credentials: process.env.FAL_KEY });
+  const imageUrls = [];
+  for (const imagePath of imagePaths) {
+    const image = new Blob([await readFile(imagePath)], { type: mimeFromPath(imagePath) });
+    const uploaded = await fal.storage.upload(image, { filename: path.basename(imagePath) });
+    imageUrls.push(typeof uploaded === 'string' ? uploaded : uploaded?.url ?? String(uploaded));
+  }
+  const result = await fal.subscribe(thumbnailModel, {
+    input: {
+      image_urls: imageUrls,
+      prompt,
+      resolution: '2K',
+      aspect_ratio: '9:16',
+      output_format: 'png',
+      num_images: 1
+    },
+    logs: true,
+    onQueueUpdate(update) {
+      if (update.status === 'IN_PROGRESS') {
+        for (const log of update.logs ?? []) console.log(`[price_summary] ${log.message}`);
+      }
+    }
+  });
+  const url = extractFirstImageUrl(result?.data ?? result);
+  if (!url) throw new Error(`No price summary image returned from ${thumbnailModel}.`);
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`Failed to download price summary: ${response.status} ${await response.text()}`);
   await writeFile(out, Buffer.from(await response.arrayBuffer()));
   return { path: out, url, model: thumbnailModel };
 }
@@ -619,6 +984,9 @@ function parseArgs(argv) {
     else if (arg === '--edit-json') args.editJson = argv[++i];
     else if (arg === '--reuse-thumbnails-from') args.reuseThumbnailsFrom = argv[++i];
     else if (arg === '--job-id') args.jobId = argv[++i];
+    else if (arg === '--style-id') args.styleId = argv[++i];
+    else if (arg === '--from-style') args.fromStyle = argv[++i];
+    else if (arg === '--duration') args.duration = Number(argv[++i]);
     else if (arg === '--output-dir') args.outputDir = argv[++i];
   }
   return args;
@@ -634,6 +1002,14 @@ function loadDotEnv() {
   } catch {}
 }
 
+async function readJsonSafe(filePath) {
+  try {
+    return JSON.parse(await readFile(filePath, 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
 function existsSyncLite(filePath) {
   try {
     accessSync(filePath);
@@ -641,6 +1017,18 @@ function existsSyncLite(filePath) {
   } catch {
     return false;
   }
+}
+
+function unique(values) {
+  return [...new Set(values.filter(Boolean))];
+}
+
+function stableJson(value) {
+  if (Array.isArray(value)) return `[${value.map(stableJson).join(',')}]`;
+  if (value && typeof value === 'object') {
+    return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${stableJson(value[key])}`).join(',')}}`;
+  }
+  return JSON.stringify(value);
 }
 
 async function writeJson(filePath, value) {
@@ -711,7 +1099,19 @@ const FONT = {
   '/': ['00001', '00010', '00010', '00100', '01000', '01000', '10000']
 };
 
-main().catch((error) => {
-  console.error(error.stack || error.message);
-  process.exit(1);
-});
+export {
+  buildScenePlan,
+  fitNarrationToBudget,
+  generationHashFromPath,
+  loadStyleEntry,
+  renderDurationForScene,
+  resolveRoomAssets,
+  wordsForDuration
+};
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  main().catch((error) => {
+    console.error(error.stack || error.message);
+    process.exit(1);
+  });
+}

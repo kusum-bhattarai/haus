@@ -1,0 +1,2 @@
+{"event_id":"158fb6aa-c87d-4013-b746-0df70aa5cdee","at":"2026-05-10T11:49:34.251Z","room_id":null,"type":"job.created","state":"CREATED","message":"Job created."}
+{"event_id":"926f32d8-8978-434a-bd99-8cd2046b2970","at":"2026-05-10T11:49:34.255Z","room_id":null,"type":"layers.started","state":"LAYERS_1_3_RUNNING","message":"Running Layers 1-3."}

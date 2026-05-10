@@ -1,0 +1,122 @@
+{
+  "rooms": [
+    {
+      "room_id": "nest_living_room",
+      "name": "Nest",
+      "room_type": "living_room",
+      "area_estimate": "large",
+      "measured_dimensions": {
+        "width": 12.166666666666666,
+        "length": 14.666666666666666,
+        "area": 178.44444444444446
+      },
+      "measured_unit": "ft",
+      "windows": "exterior windows/bay at north wall and glazing toward right-side 'relax' area",
+      "natural_light": "high",
+      "adjoins": [
+        "taste_kitchen"
+      ],
+      "generation_priority": 1
+    },
+    {
+      "room_id": "dream_bottom_bedroom",
+      "name": "Dream (bottom)",
+      "room_type": "bedroom",
+      "area_estimate": "large",
+      "measured_dimensions": {
+        "width": 11.333333333333334,
+        "length": 13.75,
+        "area": 155.83333333333334
+      },
+      "measured_unit": "ft",
+      "windows": "exterior windows along bottom wall",
+      "natural_light": "medium",
+      "adjoins": [
+        "taste_kitchen",
+        "dream_right_bedroom",
+        "dream_upper_left_bedroom"
+      ],
+      "generation_priority": 2
+    },
+    {
+      "room_id": "taste_kitchen",
+      "name": "Taste (Kitchen)",
+      "room_type": "kitchen",
+      "area_estimate": "medium",
+      "measured_dimensions": {
+        "width": 9.5,
+        "length": 10.583333333333334,
+        "area": 100.54166666666667
+      },
+      "measured_unit": "ft",
+      "windows": "partial exterior glazing toward dining side; no large dedicated window shown",
+      "natural_light": "medium",
+      "adjoins": [
+        "nest_living_room",
+        "dine_dining_room",
+        "dream_right_bedroom",
+        "dream_bottom_bedroom"
+      ],
+      "generation_priority": 3
+    },
+    {
+      "room_id": "dine_dining_room",
+      "name": "Dining (Dine)",
+      "room_type": "dining_room",
+      "area_estimate": "medium",
+      "measured_dimensions": {
+        "width": 9.333333333333334,
+        "length": 12,
+        "area": 112
+      },
+      "measured_unit": "ft",
+      "windows": "bay/angled exterior windows on right-side elevation",
+      "natural_light": "high",
+      "adjoins": [
+        "taste_kitchen"
+      ],
+      "generation_priority": 4
+    },
+    {
+      "room_id": "dream_right_bedroom",
+      "name": "Dream (right)",
+      "room_type": "bedroom",
+      "area_estimate": "medium",
+      "measured_dimensions": {
+        "width": 11.25,
+        "length": 11.333333333333334,
+        "area": 127.5
+      },
+      "measured_unit": "ft",
+      "windows": "exterior window(s) on right elevation",
+      "natural_light": "medium",
+      "adjoins": [
+        "taste_kitchen",
+        "dream_bottom_bedroom"
+      ],
+      "generation_priority": 5
+    },
+    {
+      "room_id": "dream_upper_left_bedroom",
+      "name": "Dream (upper-left)",
+      "room_type": "bedroom",
+      "area_estimate": "medium",
+      "measured_dimensions": {
+        "width": 10,
+        "length": 10,
+        "area": 100
+      },
+      "measured_unit": "ft",
+      "windows": "exterior window on left elevation",
+      "natural_light": "medium",
+      "adjoins": [
+        "dream_bottom_bedroom"
+      ],
+      "generation_priority": 6
+    }
+  ],
+  "total_rooms": 6,
+  "layout_type": "traditional",
+  "confidence": 0.91,
+  "notes": "Rooms, windows, and adjacencies inferred from provided plan image and measurements. Adjacencies include direct connections and likely shared-wall/corridor relationships; excluded service/circulation spaces (bathrooms, hallways, closets, pantries, laundry, storage). Natural light levels are estimations based on exterior wall/window placements."
+}

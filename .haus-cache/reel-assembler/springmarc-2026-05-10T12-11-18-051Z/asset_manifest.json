@@ -1,0 +1,56 @@
+{
+  "job_id": "73930d42-ccec-48a1-b794-c887b851b8cb",
+  "generated_at": "2026-05-10T12:11:18.053Z",
+  "rooms": [
+    {
+      "room_id": "living_room_nest",
+      "room_name": "Living Room (Nest)",
+      "state": "VIDEO_GENERATING",
+      "source_type": "generation_result_by_request",
+      "source_url": "https://v3b.fal.media/files/b/0a99a4e6/zWGqbVJtlcV7yjCuvCpQZ_video.mp4",
+      "local_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-11-18-051Z/assets/remote/living_room_nest.mp4",
+      "duration": 4.916667,
+      "skipped_reason": null
+    },
+    {
+      "room_id": "kitchen_taste",
+      "room_name": "Kitchen (Taste)",
+      "state": "VIDEO_GENERATING",
+      "source_type": "generation_result_by_request",
+      "source_url": "https://v3b.fal.media/files/b/0a99a4e8/CJUCyEbLN_Sz9N76-rk64_video.mp4",
+      "local_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-11-18-051Z/assets/remote/kitchen_taste.mp4",
+      "duration": 4.916667,
+      "skipped_reason": null
+    },
+    {
+      "room_id": "bedroom_1",
+      "room_name": "Bedroom (Dream) - larger",
+      "state": "APPROVED",
+      "source_type": "approved_url",
+      "source_url": "https://v3b.fal.media/files/b/0a99a361/tBn0HY7XBwN4WQ6dBvAQm_video.mp4",
+      "local_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-11-18-051Z/assets/remote/bedroom_1.mp4",
+      "duration": 4.916667,
+      "skipped_reason": null
+    },
+    {
+      "room_id": "bedroom_2",
+      "room_name": "Bedroom (Dream) - smaller",
+      "state": "APPROVED",
+      "source_type": "approved_url",
+      "source_url": "https://v3b.fal.media/files/b/0a99a35c/mn6f-sGkOyRp24hJv-mev_video.mp4",
+      "local_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-11-18-051Z/assets/remote/bedroom_2.mp4",
+      "duration": 4.916667,
+      "skipped_reason": null
+    },
+    {
+      "room_id": "dining_room_dine",
+      "room_name": "Dining Room (Dine)",
+      "state": "VIDEO_GENERATING",
+      "source_type": "generation_result_by_request",
+      "source_url": "https://v3b.fal.media/files/b/0a99a4e6/sqGDPDtV41PEHsh77umm9_video.mp4",
+      "local_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-11-18-051Z/assets/remote/dining_room_dine.mp4",
+      "duration": 4.916667,
+      "skipped_reason": null
+    }
+  ]
+}

@@ -10,6 +10,7 @@
     "layer2:create-profile": "node scripts/layer2-create-profile.js",
     "layer3:create-handoff": "node scripts/layer3-create-handoff.js",
     "style-library": "node scripts/style-library.js",
+    "cache:dictionary": "node scripts/cache-dictionary.js",
     "video:edit": "node scripts/video-edit-flow.js",
     "video:cache-reel": "node scripts/cache-reel-assembler.js",
     "video:cache-reel:vertical": "node scripts/cache-reel-assembler.js --reels",

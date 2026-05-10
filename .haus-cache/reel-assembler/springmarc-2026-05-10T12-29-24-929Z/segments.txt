@@ -1,0 +1,8 @@
+file '/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/00-hook.mp4'
+file '/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/01-price_summary.mp4'
+file '/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/02-living_room_nest.mp4'
+file '/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/03-kitchen_taste.mp4'
+file '/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/04-bedroom_1.mp4'
+file '/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/05-bedroom_2.mp4'
+file '/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/06-dining_room_dine.mp4'
+file '/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/07-close.mp4'

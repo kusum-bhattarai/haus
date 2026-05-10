@@ -1,0 +1,26 @@
+Create a 9:16 vertical Springmarc reel price-summary card.
+
+Community: Springmarc
+Style: Earthy Mid-Century Botanical
+Plan 1: Unit A1 - 1 BED / 1 BATH - 689 SQ FT - STARTING AT $2,040
+Plan 2: Unit B2 - 2 BED / 2 BATH - 988 SQ FT - STARTING AT $2,620
+Plan 3: Unit C3 - 3 BED / 2 BATH - 1,250 SQ FT - STARTING AT $3,180
+
+Composition:
+- Aspect ratio: exact 9:16 vertical reel frame.
+- Premium real-estate pricing board for mobile.
+- Clean editorial layout with three stacked plan rows.
+- Each row must show the plan name, bed/bath layout, square footage, and starting price.
+- Use warm architectural styling that matches the selected Earthy Mid-Century Botanical interior direction.
+- Add subtle floor-plan linework or blueprint accents behind the pricing rows.
+- Keep all text large, crisp, and legible inside mobile safe margins.
+
+Story objective:
+Show that buyers can compare Springmarc floor plans, prices, and style previews quickly before choosing a unit.
+
+Constraints:
+- Do not add extra plans.
+- Do not change prices, square footage, or layouts.
+- Do not crop text.
+- Do not create a 3:4 image.
+- Avoid clutter; this card appears for only five seconds.

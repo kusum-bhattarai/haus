@@ -252,6 +252,8 @@ button img {
 .video-panel,
 .vibe-report,
 .reel-editor-panel,
+.cache-dashboard,
+.cache-reel-browser,
 .reference-gallery,
 .room-strip article,
 .chat-panel,
@@ -539,6 +541,32 @@ dd {
   font-size: 13px;
   font-weight: 600;
   line-height: 1.4;
+}
+
+.cache-summary-panel {
+  display: grid;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #f8faf8;
+}
+
+.cache-summary-panel:empty {
+  display: none;
+}
+
+.cache-summary-panel strong,
+.cache-summary-panel span,
+.cache-summary-panel small {
+  display: block;
+}
+
+.cache-summary-panel span,
+.cache-summary-panel small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
 }
 
 label,
@@ -847,6 +875,114 @@ legend {
   display: grid;
   gap: 14px;
   margin-top: 18px;
+}
+
+.cache-dashboard,
+.cache-reel-browser {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 18px;
+}
+
+.cache-dashboard:empty,
+.cache-reel-browser:empty {
+  display: none;
+}
+
+.cache-dashboard-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cache-dashboard-header h3 {
+  margin: 4px 0 0;
+  font-size: 20px;
+}
+
+.cache-dashboard-header span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.cache-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.cache-stat-grid div,
+.cache-board-list article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #f8faf8;
+}
+
+.cache-stat-grid strong {
+  display: block;
+  font-size: 22px;
+}
+
+.cache-stat-grid span,
+.cache-board-list span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cache-board-list,
+.cache-reel-list {
+  display: grid;
+  gap: 8px;
+}
+
+.style-pill-row,
+.floorplan-reel-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.style-pill,
+.reel-mini-button,
+.cache-reel-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  text-align: left;
+}
+
+.style-pill {
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.reel-mini-button,
+.cache-reel-card {
+  display: grid;
+  gap: 4px;
+  padding: 11px 12px;
+}
+
+.reel-mini-button span,
+.cache-reel-card span,
+.cache-reel-card small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.style-pill.is-selected,
+.reel-mini-button.is-selected,
+.cache-reel-card.is-selected {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(23, 107, 91, 0.16);
 }
 
 .runtime-room-card {

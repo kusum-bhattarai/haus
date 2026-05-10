@@ -1,0 +1,17 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99a337/oan5TQLGz4YIp2qhDOmhL_T9YOBF1d.png",
+    "prompt": "Extreme close-up detail shot with smooth tracking camera following harsh directional light as it grows and spreads across textured surface. Crisp shadow edges crawl and shift in real time. Camera moves with the light's path revealing texture in wood grain, fabric weave, architectural detail. Editorial film style. Neutral white balance, balanced exposure — deep dramatic shadows without underexposure. Shallow depth of field. Slow static zoom, camera holds then slowly pushes in toward the green tile backsplash and walnut grain, directional window light grazes tile surfaces producing crisp shadow edges, highlights roll off naturally, consistent exposure, cinematic, photorealistic Kitchen (Taste), Botanical spa warmth with mid‑century poise — tactile, curated, quietly vibrant. Maintain believable residential scale for Kitchen (Taste) at roughly medium. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55",
+  "request_id": "019e11b7-a8d8-7601-aa12-6d6938436224",
+  "status_url": "https://queue.fal.run/bytedance/seedance-2.0/requests/019e11b7-a8d8-7601-aa12-6d6938436224/status",
+  "response_url": "https://queue.fal.run/bytedance/seedance-2.0/requests/019e11b7-a8d8-7601-aa12-6d6938436224",
+  "room_id": "kitchen_taste"
+}

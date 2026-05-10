@@ -1,0 +1,250 @@
+{
+  "final_video_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/final_reel.mp4",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "card",
+      "title": "SPRINGMARC",
+      "lines": [
+        "PICK A FLOOR PLAN",
+        "SEE THE HOME FIRST"
+      ],
+      "narration": "Tour the floor plan, pick a style, and see the apartment before it exists.",
+      "fallback_narration": "Tour the floor plan, pick a style, and see the apartment before it exists.",
+      "subtitle": "SEE IT BEFORE IT IS BUILT.",
+      "budget_seconds": 5,
+      "max_words": 15,
+      "original_narration": "A warm, restrained Japandi approach that balances Scandinavian lightness with Japanese restraint to create a calm,. That is what Haus builds for Springmarc.",
+      "index": 0,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/voiceovers/00-hook.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/captions/00-hook.png",
+      "voiceover_provider": "elevenlabs",
+      "duration": 3.761633,
+      "card_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/cards/00-hook.png"
+    },
+    {
+      "id": "price_summary",
+      "type": "price_summary",
+      "title": "FLOOR PLANS",
+      "lines": [
+        "1B1 FROM $2,040",
+        "2B2 FROM $2,620",
+        "3B2 FROM $3,180"
+      ],
+      "plans": [
+        {
+          "id": "1b1",
+          "image": "frontend/floor_plans/1b1.png",
+          "name": "Unit A1",
+          "layout": "1 BED / 1 BATH",
+          "sqft": "689 SQ FT",
+          "price": "STARTING AT $2,040"
+        },
+        {
+          "id": "2b2",
+          "image": "frontend/floor_plans/2b2.png",
+          "name": "Unit B2",
+          "layout": "2 BED / 2 BATH",
+          "sqft": "988 SQ FT",
+          "price": "STARTING AT $2,620"
+        },
+        {
+          "id": "3b2",
+          "image": "frontend/floor_plans/3b2.png",
+          "name": "Unit C3",
+          "layout": "3 BED / 2 BATH",
+          "sqft": "1,250 SQ FT",
+          "price": "STARTING AT $3,180"
+        }
+      ],
+      "style_name": "Warm Japandi Family Calm",
+      "narration": "Compare one, two, and three bedroom plans with clear starting prices.",
+      "fallback_narration": "Compare one, two, and three bedroom plans with clear starting prices.",
+      "subtitle": "1B1, 2B2, AND 3B2 AVAILABLE",
+      "budget_seconds": 5,
+      "max_words": 15,
+      "original_narration": "Choose one, two, or three bedrooms, with pricing matched to each plan.",
+      "index": 1,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/voiceovers/01-price_summary.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/captions/01-price_summary.png",
+      "voiceover_provider": "elevenlabs",
+      "duration": 4.272472,
+      "voiceover_rewritten": true,
+      "price_prompt_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/price_prompts/01-price_summary.txt",
+      "card_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/thumbnails/01-price_summary.png",
+      "thumbnail_url": "https://v3b.fal.media/files/b/0a99a5d4/6sKIrXARylpAv-iI8e_Xj_7LGpprrQ.png",
+      "thumbnail_model": "fal-ai/gemini-3.1-flash-image-preview/edit"
+    },
+    {
+      "id": "living_room_nest",
+      "type": "clip",
+      "title": "LIVING",
+      "clip_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/assets/remote/living_room_nest.mp4",
+      "asset_duration": 4.916667,
+      "narration": "Living: light oak (tables, low sofa base, shelving).",
+      "fallback_narration": "Living: light oak (tables, low sofa base, shelving).",
+      "subtitle": "WARM JAPANDI FAMILY CALM",
+      "motion": "slow_dolly",
+      "must_include": [
+        "bay-window view on right wall",
+        "bookshelf (curated)",
+        "reclaimed walnut sofa and coffee table",
+        "large potted plant",
+        "brass floor lamp",
+        "reclaimed walnut sofa/coffee table",
+        "bookshelf (curated, non-cluttered)",
+        "large potted plant (e.g., fiddle leaf fig)",
+        "brass floor lamp or sconce for warm practical glow",
+        "bookshelf"
+      ],
+      "objects": [
+        {
+          "object_type": "bookshelf",
+          "room_id": "living_room_nest",
+          "label": "bookshelf"
+        }
+      ],
+      "budget_seconds": 3,
+      "max_words": 9,
+      "original_narration": "Living: light oak (tables, low sofa base, shelving).",
+      "index": 2,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/voiceovers/02-living_room_nest.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/captions/02-living_room_nest.png",
+      "voiceover_provider": "elevenlabs",
+      "duration": 2.879274
+    },
+    {
+      "id": "kitchen_taste",
+      "type": "clip",
+      "title": "KITCHEN",
+      "clip_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/assets/remote/kitchen_taste.mp4",
+      "asset_duration": 4.916667,
+      "narration": "Kitchen: light oak (tables, low sofa base, shelving).",
+      "fallback_narration": "Kitchen: light oak (tables, low sofa base, shelving).",
+      "subtitle": "WARM JAPANDI FAMILY CALM",
+      "motion": "static_zoom",
+      "must_include": [
+        "deep green vertical tile backsplash",
+        "walnut cabinetry and minimal brass hardware",
+        "marble/honed counter vignette (cutting board, small herb)",
+        "under-cabinet warm strip lighting",
+        "walnut cabinet faces with minimal brass hardware",
+        "marble or honed stone counter vignette (cutting board, ceramics)"
+      ],
+      "objects": [],
+      "budget_seconds": 3,
+      "max_words": 9,
+      "original_narration": "Kitchen: light oak (tables, low sofa base, shelving).",
+      "index": 3,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/voiceovers/03-kitchen_taste.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/captions/03-kitchen_taste.png",
+      "voiceover_provider": "elevenlabs",
+      "duration": 3.111474
+    },
+    {
+      "id": "bedroom_1",
+      "type": "clip",
+      "title": "BEDROOM",
+      "clip_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/assets/remote/bedroom_1.mp4",
+      "asset_duration": 4.916667,
+      "narration": "Bedroom: light oak (tables, low sofa base, shelving).",
+      "fallback_narration": "Bedroom: light oak (tables, low sofa base, shelving).",
+      "subtitle": "WARM JAPANDI FAMILY CALM",
+      "motion": "orbital_pan",
+      "must_include": [
+        "low walnut platform bed",
+        "gallery wall with warm ochre/orange art",
+        "kilim rug",
+        "brass bedside sconce",
+        "gallery wall with warm accent art (ochre/orange)",
+        "kilim or handwoven rug",
+        "brass sconce or bedside lamp"
+      ],
+      "objects": [],
+      "budget_seconds": 3,
+      "max_words": 9,
+      "original_narration": "Bedroom: light oak (tables, low sofa base, shelving).",
+      "index": 4,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/voiceovers/04-bedroom_1.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/captions/04-bedroom_1.png",
+      "voiceover_provider": "elevenlabs",
+      "duration": 3.622313
+    },
+    {
+      "id": "bedroom_2",
+      "type": "clip",
+      "title": "BEDROOM",
+      "clip_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/assets/remote/bedroom_2.mp4",
+      "asset_duration": 4.916667,
+      "narration": "Bedroom: light oak (tables, low sofa base, shelving).",
+      "fallback_narration": "Bedroom: light oak (tables, low sofa base, shelving).",
+      "subtitle": "WARM JAPANDI FAMILY CALM",
+      "motion": "slow_dolly",
+      "must_include": [
+        "low-profile bed or daybed",
+        "soft terracotta/beige bedding",
+        "small desk or reading chair",
+        "potted plant by window",
+        "potted plant near window"
+      ],
+      "objects": [],
+      "budget_seconds": 3,
+      "max_words": 9,
+      "original_narration": "Bedroom: light oak (tables, low sofa base, shelving).",
+      "index": 5,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/voiceovers/05-bedroom_2.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/captions/05-bedroom_2.png",
+      "voiceover_provider": "elevenlabs",
+      "duration": 3.111474
+    },
+    {
+      "id": "dining_room_dine",
+      "type": "clip",
+      "title": "DINING",
+      "clip_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/assets/remote/dining_room_dine.mp4",
+      "asset_duration": 4.916667,
+      "narration": "Dining: light oak (tables, low sofa base, shelving).",
+      "fallback_narration": "Dining: light oak (tables, low sofa base, shelving).",
+      "subtitle": "WARM JAPANDI FAMILY CALM",
+      "motion": "orbital_pan",
+      "must_include": [
+        "round/oval wood dining table",
+        "brass pendant centered in bay",
+        "bay-window view with plants",
+        "textured runner and ceramic vignette",
+        "brass pendant",
+        "textured runner and a small ceramic vignette"
+      ],
+      "objects": [],
+      "budget_seconds": 3,
+      "max_words": 9,
+      "original_narration": "Dining: light oak (tables, low sofa base, shelving).",
+      "index": 6,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/voiceovers/06-dining_room_dine.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/captions/06-dining_room_dine.png",
+      "voiceover_provider": "elevenlabs",
+      "duration": 2.925714
+    },
+    {
+      "id": "close",
+      "type": "card",
+      "title": "HAUS FOR SPRINGMARC",
+      "lines": [
+        "REAL ESTATE REELS",
+        "FROM A FLOOR PLAN"
+      ],
+      "narration": "From floor plan to finished reel, Haus turns the vision into a tour.",
+      "fallback_narration": "From floor plan to finished reel, Haus turns the vision into a tour.",
+      "subtitle": "FROM FLOOR PLAN TO BUYER REEL.",
+      "budget_seconds": 5,
+      "max_words": 15,
+      "original_narration": "From floor plan to Warm Japandi Family Calm — light oak (tables, low sofa base, shelving), every room, buyer ready.",
+      "index": 7,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/voiceovers/07-close.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/captions/07-close.png",
+      "voiceover_provider": "elevenlabs",
+      "duration": 3.854512,
+      "card_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T12-29-24-929Z/cards/07-close.png"
+    }
+  ]
+}

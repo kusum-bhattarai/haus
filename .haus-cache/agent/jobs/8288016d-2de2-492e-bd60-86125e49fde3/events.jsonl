@@ -1,0 +1,3 @@
+{"event_id":"0bc40891-a264-4319-afb2-90e122bc2859","at":"2026-05-10T11:56:55.457Z","room_id":null,"type":"job.created","state":"CREATED","message":"Job created."}
+{"event_id":"789a2d13-6011-429b-a341-a560d688541b","at":"2026-05-10T11:56:55.459Z","room_id":null,"type":"layers.started","state":"LAYERS_1_3_RUNNING","message":"Running Layers 1-3."}
+{"event_id":"920d0975-211a-494a-b8f9-5e23f48283e0","at":"2026-05-10T11:57:00.752Z","room_id":null,"type":"job.failed","state":"FAILED","message":"Pinterest scraper returned 0 pins for https://www.pinterest.com/someone/new-board-for-test/. Check the board URL is public and the actor is configured correctly."}

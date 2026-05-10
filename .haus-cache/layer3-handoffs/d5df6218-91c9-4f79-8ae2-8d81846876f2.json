@@ -1,0 +1,1047 @@
+{
+  "schema_version": "1.0",
+  "handoff_id": "e34663e3-376b-47d0-8d71-71ae8bd0663f",
+  "session_id": "d5df6218-91c9-4f79-8ae2-8d81846876f2",
+  "created_at": "2026-05-10T12:00:27.710Z",
+  "status": "ready_for_room_images",
+  "source_input": {
+    "floor_plan_url": "file:///Users/tarive/haus/haus/.haus-cache/floor-plans/20bc605e36e2cf1b5288627f1646051e548dd6b4e7c2ed59d932e731ac451cf4.png",
+    "floor_plan_metadata": {
+      "source": "local_upload",
+      "mime_type": "image/png",
+      "size_bytes": 63643,
+      "width_px": 448,
+      "height_px": 480,
+      "sha256": "20bc605e36e2cf1b5288627f1646051e548dd6b4e7c2ed59d932e731ac451cf4",
+      "cache_key": "20bc605e36e2cf1b5288627f1646051e548dd6b4e7c2ed59d932e731ac451cf4"
+    },
+    "floor_plan_measurements": {
+      "source": "ml_parser",
+      "unit": "ft",
+      "scale": null,
+      "rooms": [
+        {
+          "room_id": null,
+          "name": "Nest",
+          "dimensions": {
+            "width": 12.166666666666666,
+            "length": 14.666666666666666,
+            "area": 178.44444444444446
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Taste (Kitchen)",
+          "dimensions": {
+            "width": 9.5,
+            "length": 10.583333333333334,
+            "area": 100.54166666666667
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Dining (Dine)",
+          "dimensions": {
+            "width": 9.333333333333334,
+            "length": 12,
+            "area": 112
+          },
+          "unit": "ft",
+          "confidence": 0.8
+        },
+        {
+          "room_id": null,
+          "name": "Bedroom (Dream) - upper-left",
+          "dimensions": {
+            "width": 10,
+            "length": 10,
+            "area": 100
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Bedroom (Dream) - right",
+          "dimensions": {
+            "width": 11.25,
+            "length": 11.333333333333334,
+            "area": 127.5
+          },
+          "unit": "ft",
+          "confidence": 0.9
+        },
+        {
+          "room_id": null,
+          "name": "Bedroom (Dream) - bottom",
+          "dimensions": {
+            "width": 11.333333333333334,
+            "length": 13.75,
+            "area": 155.83333333333334
+          },
+          "unit": "ft",
+          "confidence": 0.9
+        }
+      ],
+      "notes": null
+    },
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/dark-interior/",
+    "brief": "dark, batman style",
+    "objects": [
+      {
+        "object_type": "bookshelf",
+        "room_id": "nest_living_room",
+        "label": "bookshelf"
+      }
+    ],
+    "platform": "all"
+  },
+  "pinterest_intelligence": {
+    "aesthetic_profile": {
+      "palette": "monochrome",
+      "lighting": "dramatic",
+      "density": "layered",
+      "style_era": "japandi",
+      "dominant_colors": [
+        "#0B0B0B",
+        "#2F2F2F",
+        "#6B3F2A",
+        "#C48A48",
+        "#E7E6E4"
+      ],
+      "mood_words": [
+        "moody",
+        "meditative",
+        "textural warmth",
+        "calm minimalism",
+        "refined luxury",
+        "zen"
+      ],
+      "pinterest_cluster_labels": [
+        "matte-black walls + vertical wood slats",
+        "low-profile platform bed with charcoal linens",
+        "amber cove/strip lighting for warm contrast",
+        "brass bedside accents & sculptural lamps",
+        "monolithic black stone coffee table + bonsai / shoji"
+      ],
+      "confidence": 0.92
+    },
+    "pins": [
+      {
+        "pin_id": "1012465559998726563",
+        "source_url": "https://www.pinterest.com/tarive22/dark-interior/",
+        "image_url": "https://i.pinimg.com/1200x/7f/df/9e/7fdf9ec235ea3ea3f988f2c8f333e939.jpg",
+        "title": "Dark Bedroom with Wooden Touches.",
+        "description": "Warm, moody tones meet natural wood for a cozy and elegant bedroom.  #DarkBedroom #WoodDetails #CozyHome",
+        "save_count": null,
+        "hashtags": [
+          "darkbedroom",
+          "wooddetails",
+          "cozyhome"
+        ],
+        "cluster_label": "Minimal platform bedroom with vertical wood slat accent",
+        "selected_for_mood_board": true
+      },
+      {
+        "pin_id": "1012465559998726531",
+        "source_url": "https://www.pinterest.com/tarive22/dark-interior/",
+        "image_url": "https://i.pinimg.com/1200x/fd/16/07/fd1607ee5737fd4e7e5442e29da17978.jpg",
+        "title": "Moody Black Luxe Bedroom — Dark, Cozy & Ultra-Chic 🖤🔥",
+        "description": "Bold black tones and gold accents elevate this modern moody bedroom into a luxury retreat. Save this dramatic and elegant look for your dream room inspiration! #moodybedroom #blackbedroomdecor #modernluxestyle",
+        "save_count": null,
+        "hashtags": [
+          "moodybedroom",
+          "blackbedroomdecor",
+          "modernluxestyle"
+        ],
+        "cluster_label": "Moody luxe bedroom with brass accents and recessed strip light",
+        "selected_for_mood_board": true
+      },
+      {
+        "pin_id": "1012465559998726506",
+        "source_url": "https://www.pinterest.com/tarive22/dark-interior/",
+        "image_url": "https://i.pinimg.com/1200x/66/44/0f/66440f59643908d20dedfae5765924a0.jpg",
+        "title": "Japandi Noir Living Room Ideas: Dark Minimal Decor with Black Tadelakt & Smoked Oak (2025 Trend)",
+        "description": "Discover Japandi Noir: a serene, moody living room with matte black tadelakt walls, smoked oak slats, a charcoal linen sectional, and a monolithic black stone coffee table. Warm gray microcement floors, frosted shoji screens, a single bonsai, and soft skylight glow deliver calm, textural minimalism. Save for dark interior design ideas, modern wabi-sabi styling, and Scandinavian–Japanese living room inspiration.",
+        "save_count": null,
+        "hashtags": [],
+        "cluster_label": "Japandi noir living room with shoji screens and monolithic black stone table",
+        "selected_for_mood_board": true
+      }
+    ],
+    "cluster_summary": [
+      {
+        "label": "Minimal platform bedroom with vertical wood slat accent",
+        "pin_ids": [
+          "1012465559998726563"
+        ],
+        "visual_notes": "Matte black walls and ceiling, vertical warm wood slat panel, low walnut platform bed, charcoal bedding and rug, amber cove light along ceiling edge — minimal furnishings, emphasis on horizontal planes and warm wood contrast.",
+        "weight": 0.34
+      },
+      {
+        "label": "Moody luxe bedroom with brass accents and recessed strip light",
+        "pin_ids": [
+          "1012465559998726531"
+        ],
+        "visual_notes": "Charcoal upholstered bed and fluted headboard panel, layered gray bedding, brass dome bedside lamps, recessed warm LED strip behind headboard, textured throws and rugs — layered textiles and metallic highlights for a luxe yet restrained look.",
+        "weight": 0.33
+      },
+      {
+        "label": "Japandi noir living room with shoji screens and monolithic black stone table",
+        "pin_ids": [
+          "1012465559998726506"
+        ],
+        "visual_notes": "Matte black tadelakt-like walls, smoked oak slatted wall, charcoal linen sectional, low black marble coffee table with white veining, frosted shoji screens and single bonsai — Japanese minimalism meets Scandinavian texture and warm wood tones.",
+        "weight": 0.33
+      }
+    ]
+  },
+  "floor_plan": {
+    "layout_type": "traditional",
+    "total_rooms": 6,
+    "rooms": [
+      {
+        "room_id": "nest_living_room",
+        "name": "Nest",
+        "room_type": "living_room",
+        "area_estimate": "large",
+        "measured_dimensions": {
+          "width": 12.166666666666666,
+          "length": 14.666666666666666,
+          "area": 178.44444444444446
+        },
+        "measured_unit": "ft",
+        "windows": "exterior windows/bay at north wall and glazing toward right-side 'relax' area",
+        "natural_light": "high",
+        "adjoins": [
+          "taste_kitchen"
+        ],
+        "generation_priority": 1
+      },
+      {
+        "room_id": "dream_bottom_bedroom",
+        "name": "Dream (bottom)",
+        "room_type": "bedroom",
+        "area_estimate": "large",
+        "measured_dimensions": {
+          "width": 11.333333333333334,
+          "length": 13.75,
+          "area": 155.83333333333334
+        },
+        "measured_unit": "ft",
+        "windows": "exterior windows along bottom wall",
+        "natural_light": "medium",
+        "adjoins": [
+          "taste_kitchen",
+          "dream_right_bedroom",
+          "dream_upper_left_bedroom"
+        ],
+        "generation_priority": 2
+      },
+      {
+        "room_id": "taste_kitchen",
+        "name": "Taste (Kitchen)",
+        "room_type": "kitchen",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 9.5,
+          "length": 10.583333333333334,
+          "area": 100.54166666666667
+        },
+        "measured_unit": "ft",
+        "windows": "partial exterior glazing toward dining side; no large dedicated window shown",
+        "natural_light": "medium",
+        "adjoins": [
+          "nest_living_room",
+          "dine_dining_room",
+          "dream_right_bedroom",
+          "dream_bottom_bedroom"
+        ],
+        "generation_priority": 3
+      },
+      {
+        "room_id": "dine_dining_room",
+        "name": "Dining (Dine)",
+        "room_type": "dining_room",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 9.333333333333334,
+          "length": 12,
+          "area": 112
+        },
+        "measured_unit": "ft",
+        "windows": "bay/angled exterior windows on right-side elevation",
+        "natural_light": "high",
+        "adjoins": [
+          "taste_kitchen"
+        ],
+        "generation_priority": 4
+      },
+      {
+        "room_id": "dream_right_bedroom",
+        "name": "Dream (right)",
+        "room_type": "bedroom",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 11.25,
+          "length": 11.333333333333334,
+          "area": 127.5
+        },
+        "measured_unit": "ft",
+        "windows": "exterior window(s) on right elevation",
+        "natural_light": "medium",
+        "adjoins": [
+          "taste_kitchen",
+          "dream_bottom_bedroom"
+        ],
+        "generation_priority": 5
+      },
+      {
+        "room_id": "dream_upper_left_bedroom",
+        "name": "Dream (upper-left)",
+        "room_type": "bedroom",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 10,
+          "length": 10,
+          "area": 100
+        },
+        "measured_unit": "ft",
+        "windows": "exterior window on left elevation",
+        "natural_light": "medium",
+        "adjoins": [
+          "dream_bottom_bedroom"
+        ],
+        "generation_priority": 6
+      }
+    ]
+  },
+  "vibe_report": {
+    "aesthetic_name": "Japandi Noir — Moody Minimalism",
+    "summary": "A refined, low-contrast monochrome palette layered with warm wood and brass accents. The overall direction is meditative and textural: matte black walls and smoked oak slatted panels anchor low-profile furniture, amber cove and recessed strip lights provide warm contrast to exterior daylight, and sparse sculptural objects (bonsai, ceramic vessels, a single bookshelf) give the scenes a calm, curated feel. Maintain architectural fidelity, keep verticals true, and derive all light from visible windows and practical fixtures.",
+    "palette_rationale": "A base of deep charcoals and near-black (anchors and negative space) balanced by mid-tone warm wood (smoked oak/walnut) and restrained brass highlights for small accents. A pale neutral linen/stone acts only as occasional contrast to prevent loss of detail in shadowed areas.",
+    "lighting_mood": "Dramatic, directional, editorial. Primary illumination comes from exterior windows (daylight) with controlled warm supplement from amber cove/strip LEDs and a few sculptural brass lamp practicals. Shadows should be crisp and sculptural; avoid flat or evenly lit interiors.",
+    "materials": [
+      "matte tadelakt-like plaster (charcoal)",
+      "smoked oak vertical slats / walnut",
+      "black stone / honed marble (low tables)",
+      "charcoal linen upholstery",
+      "warm brass fixtures and lamp bases",
+      "warm LED strip (amber) recessed coves"
+    ],
+    "textures": [
+      "microcement / matte stone floors",
+      "coarse linen throws & bedding",
+      "soft wool rugs in muted charcoal tones",
+      "fluted or hand-textured ceramics",
+      "satin brass (low sheen)"
+    ],
+    "furniture_language": [
+      "low-profile platform beds and sofas",
+      "solid slab coffee tables (monolithic black stone)",
+      "minimal open bookshelves with curated volumes",
+      "slab dining table with slender brass/wood pendant",
+      "integrated built-ins with vertical slat faces"
+    ],
+    "styling_rules": [
+      "Keep furnishings low and horizontal to emphasize calm planes.",
+      "Limit palette to five primary neutrals/accents; no saturated color pops beyond subtle brass or wood grain.",
+      "Curate accessories: one bonsai or sculptural object per vignette, a small stack of books, one ceramic vessel.",
+      "Use warm amber strip lighting behind slats or headboards — always visible as a practical source.",
+      "Preserve visible light-source logic: every warm accent must be explained by a visible fixture or recessed strip."
+    ],
+    "avoid": [
+      "high-gloss reflective finishes",
+      "bright saturated primary colors",
+      "over-styled cluttered shelves",
+      "added windows or light sources not on the floor plan",
+      "floating/warped furniture or bent verticals"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living_room",
+        "headline": "Japandi Noir Living — low, meditative, & sculptural",
+        "guidance": "Stage a low charcoal linen sectional centered on a large muted rug facing the bay/exterior glazing. Add a monolithic black stone coffee table with a single bonsai and one stack of books. Smoked oak vertical slat panel on the main wall with recessed amber cove behind the slats. Use frosted shoji panel as a soft partition (if plan allows) to frame light without adding new openings. Include a recessed floor lamp or brass table lamp as a visible warm practical.",
+        "must_include": [
+          "charcoal low sectional",
+          "monolithic black stone coffee table",
+          "smoked oak vertical slat wall with amber cove",
+          "bonsai (single)",
+          "bookshelf (sparse)"
+        ],
+        "must_avoid": [
+          "multiple small decorative plants",
+          "bright upholstery or patterned textiles"
+        ]
+      },
+      {
+        "room_id": "dream_bottom_bedroom",
+        "headline": "Primary Bedroom — platform calm with strip light drama",
+        "guidance": "Low walnut platform bed with charcoal linens and textured throws. Fluted headboard panel or vertical slats behind the bed with a recessed warm LED strip that reads as the practical light source. Brass dome bedside lamp on one side only for asymmetry. Keep bedside surfaces minimal: one ceramic tray and one book.",
+        "must_include": [
+          "low walnut platform bed",
+          "vertical slat/fluted headboard",
+          "amber recessed LED strip behind headboard",
+          "brass bedside lamp (single)",
+          "charcoal rug underfoot"
+        ],
+        "must_avoid": [
+          "oversized artwork with bright colors",
+          "excess bedside lamps or pendant clusters"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Minimal dark kitchen — tactile surfaces, warm accents",
+        "guidance": "Matte black cabinet faces with warm wood open shelving and a narrow, integrated bookshelf niche for cookbooks. Countertops in honed dark stone. Add a single pendant in satin brass above the sink or prep area and under-cabinet warm strip light to create practical amber fills. Keep styling minimal: one ceramic pitcher, a small stack of plates, and 3–4 curated books on the shelf.",
+        "must_include": [
+          "matte black cabinetry",
+          "open smoked-oak shelving",
+          "under-cabinet warm LED strip",
+          "bookshelf niche with curated volumes"
+        ],
+        "must_avoid": [
+          "stainless-steel glare",
+          "bright appliance finishes",
+          "cluttered counters"
+        ]
+      },
+      {
+        "room_id": "dine_dining_room",
+        "headline": "Bay dining vignette — intimate, warm, and sculptural",
+        "guidance": "A low-profile rectangular dining table in smoked oak with slender dark chairs. Pendant cluster: one low satin-brass pendant centered above the table (visible practical). Bay windows allow directional daylight; add amber strip recessed in the bay seat or ceiling reveal for evening mood. Keep tabletop minimal: a single fluted ceramic vessel or a small stack of books.",
+        "must_include": [
+          "smoked oak dining table",
+          "satin-brass pendant (single)",
+          "bay window seating or reveal with amber strip",
+          "minimal tabletop vessel"
+        ],
+        "must_avoid": [
+          "overly ornate light fixtures",
+          "heavy patterned table linens"
+        ]
+      },
+      {
+        "room_id": "dream_right_bedroom",
+        "headline": "Guest/secondary bedroom — refined restraint",
+        "guidance": "Smaller platform bed with charcoal linens, a narrow bookshelf against the wall (to meet 'bookshelf' requirement), and a single sculptural lamp. Vertical slat detail as a partial headboard is optional. Keep accessories sparse to preserve calm.",
+        "must_include": [
+          "charcoal platform bed",
+          "narrow bookshelf with curated volumes",
+          "one sculptural lamp",
+          "textured throw"
+        ],
+        "must_avoid": [
+          "two bedside lamps",
+          "bright patterned cushions"
+        ]
+      },
+      {
+        "room_id": "dream_upper_left_bedroom",
+        "headline": "Compact restful room — textured and minimal",
+        "guidance": "Simple low bed or daybed with charcoal linen, a single wall-mounted reading lamp (brass), and a small open shelf for books. Use a narrow smoked-oak slatted accent to tie back to main palette. Keep circulation clear — minimal furniture.",
+        "must_include": [
+          "low bed/daybed",
+          "brass wall-mounted reading lamp",
+          "small open bookshelf",
+          "smoked-oak slat accent"
+        ],
+        "must_avoid": [
+          "large bulky furniture",
+          "bright decorative accents"
+        ]
+      }
+    ],
+    "confidence": 0.88,
+    "warnings": [
+      "Natural light varies by room; do not introduce additional window openings in staging or video lighting.",
+      "Preserve exact room geometry and measured furniture footprints to avoid scale drift in video.",
+      "Avoid glossy reflective materials that will create specular hotspots against matte finishes."
+    ]
+  },
+  "creative_spec": {
+    "overall_mood": "Moody, calm, textural luxury — cinematic Japandi noir with warm amber accents",
+    "room_sequence": [
+      "nest_living_room",
+      "dream_bottom_bedroom",
+      "taste_kitchen",
+      "dine_dining_room",
+      "dream_right_bedroom",
+      "dream_upper_left_bedroom"
+    ],
+    "global_style_notes": [
+      "Preserve all architectural lines and measured room geometry; correct perspective but do not alter layout.",
+      "Image-pass recommended for all rooms to achieve editorial, directional light and maintain vertical integrity.",
+      "Derive all lighting behavior from visible windows and practicals (pendants, recessed strips, lamps).",
+      "Keep camera motion slow and deliberate to match the meditative vibe; prefer low-angle framing for horizontal emphasis."
+    ],
+    "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, added windows",
+    "export_formats": [
+      "16:9",
+      "9:16",
+      "1:1"
+    ]
+  },
+  "room_generation_jobs": [
+    {
+      "job_id": "f635c98f-9ee8-415e-b566-a27c2c5a9f89",
+      "room_id": "nest_living_room",
+      "room_name": "Nest",
+      "room_type": "living_room",
+      "sequence_index": 0,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 12.166666666666666 by 14.666666666666666 ft Nest, exterior windows/bay at north wall and glazing toward right-side 'relax' area windows, Run one editorial image-pass to introduce crisp directional shadows from bay glazing and to deepen matte black wall textures. Preserve the existing exterior bay window as the primary daylight source; supplement with visible amber cove behind the smoked-oak slat wall and one sculptural brass floor lamp as a practical. Keep exposure balanced so deep shadows retain texture (do not clip blacks)., japandi aesthetic, monochrome color palette, layered furnishing, A refined, low-contrast monochrome palette layered with warm wood and brass accents. The overall direction is meditative and textural: matte black walls and smoked oak slatted panels anchor low-profile furniture, amber cove and recessed strip lights provide warm contrast to exterior daylight, and sparse sculptural objects (bonsai, ceramic vessels, a single bookshelf) give the scenes a calm, curated feel. Maintain architectural fidelity, keep verticals true, and derive all light from visible windows and practical fixtures., Wide living room composition, camera placed at ~40\" (low eye level) to emphasize horizontal planes. Layout: low charcoal linen sectional centered facing exterior bay glazing (north), monolithic black stone coffee table with single bonsai and a slim stack of books, smoked-oak vertical slat feature wall with recessed amber cove behind slats on the main interior wall. Frosted shoji panel as a soft partition at one side (optional). Materials: matte charcoal plaster walls, microcement floor, smoked oak slats, honed black stone table, brass floor lamp with low-intensity warm filament visible. Visible light sources: bay exterior glazing (directional daylight), amber recessed strip behind slats (practical), floor lamp. Maintain true verticals and realistic furniture scale for a 12.17' x 14.67' room. Styling: sparse bookshelf against a side wall with curated volumes and one ceramic vessel. Camera should not introduce new architectural elements; do not add skylights or extra windows., must include bay exterior glazing with directional daylight, smoked-oak vertical slat wall with amber cove, charcoal low sectional, monolithic black stone coffee table, bookshelf (sparse), visible floor lamp, smoked oak vertical slat wall with amber cove, bonsai (single), bookshelf, must avoid high-gloss reflective finishes, bright saturated primary colors, over-styled cluttered shelves, added windows or light sources not on the floor plan, floating/warped furniture or bent verticals, added windows or light sources, high-gloss finishes, cluttered shelving, multiple small decorative plants, bright upholstery or patterned textiles, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Very slow dolly in, camera moves forward from the rear of the living area toward the bay glazing, directional daylight from bay windows shifts across matte walls while warm amber cove and a floor lamp provide steady warm fill, gradual shadow crawl across furniture, consistent exposure, stable motion, cinematic, photorealistic",
+        "camera_motion": "slow_dolly",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Run one editorial image-pass to introduce crisp directional shadows from bay glazing and to deepen matte black wall textures. Preserve the existing exterior bay window as the primary daylight source; supplement with visible amber cove behind the smoked-oak slat wall and one sculptural brass floor lamp as a practical. Keep exposure balanced so deep shadows retain texture (do not clip blacks).",
+        "objects_to_include": [
+          {
+            "object_type": "bookshelf",
+            "room_id": "nest_living_room",
+            "label": "bookshelf"
+          }
+        ],
+        "must_include": [
+          "bay exterior glazing with directional daylight",
+          "smoked-oak vertical slat wall with amber cove",
+          "charcoal low sectional",
+          "monolithic black stone coffee table",
+          "bookshelf (sparse)",
+          "visible floor lamp",
+          "smoked oak vertical slat wall with amber cove",
+          "bonsai (single)",
+          "bookshelf"
+        ],
+        "must_avoid": [
+          "high-gloss reflective finishes",
+          "bright saturated primary colors",
+          "over-styled cluttered shelves",
+          "added windows or light sources not on the floor plan",
+          "floating/warped furniture or bent verticals",
+          "added windows or light sources",
+          "high-gloss finishes",
+          "cluttered shelving",
+          "multiple small decorative plants",
+          "bright upholstery or patterned textiles",
+          "people",
+          "visible brand logos"
+        ],
+        "background_constraints": [
+          {
+            "adjacent_room": "Dining (Dine)",
+            "adjacent_room_type": "dining_room",
+            "direction": "through the open-plan dining area",
+            "visible_objects": [
+              "dining table",
+              "dining chairs",
+              "pendant light",
+              "bay exterior glazing",
+              "smoked-oak dining table",
+              "satin-brass pendant (visible)",
+              "amber strip in bay reveal",
+              "smoked oak dining table",
+              "satin-brass pendant (single)",
+              "bay window seating or reveal with amber strip",
+              "minimal tabletop vessel"
+            ]
+          },
+          {
+            "adjacent_room": "Taste (Kitchen)",
+            "adjacent_room_type": "kitchen",
+            "direction": "through the open kitchen beyond the dining area",
+            "visible_objects": [
+              "kitchen cabinets",
+              "kitchen counter",
+              "matte black cabinetry",
+              "smoked-oak open shelving with curated books",
+              "under-cabinet warm LED strip",
+              "satin-brass pendant (visible practical)",
+              "open smoked-oak shelving",
+              "bookshelf niche with curated volumes"
+            ]
+          }
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "2ec4892f-2f83-4a92-9c54-86d0cf4303f7",
+      "room_id": "dream_bottom_bedroom",
+      "room_name": "Dream (bottom)",
+      "room_type": "bedroom",
+      "sequence_index": 1,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 11.333333333333334 by 13.75 ft Dream (bottom), exterior windows along bottom wall windows, Perform a single editorial image-pass to refine headboard slat geometry, increase sculptural shadow definition from window light, and dial amber LED strip warmness so it reads as a visible practical. Keep overall exposure slightly lowered to preserve mood but lift midtones for texture legibility., japandi aesthetic, monochrome color palette, layered furnishing, A refined, low-contrast monochrome palette layered with warm wood and brass accents. The overall direction is meditative and textural: matte black walls and smoked oak slatted panels anchor low-profile furniture, amber cove and recessed strip lights provide warm contrast to exterior daylight, and sparse sculptural objects (bonsai, ceramic vessels, a single bookshelf) give the scenes a calm, curated feel. Maintain architectural fidelity, keep verticals true, and derive all light from visible windows and practical fixtures., Bedroom framed from a corner near the doorway at ~36\" height to show platform bed and headboard slat wall. Layout: low walnut platform bed (centered on longest wall) with charcoal linens and textured throw; vertical slatted headboard/fluted panel with a recessed amber LED strip behind it. One satin-brass dome bedside lamp on the left side (visible practical). Rug under bed sized proportionally for a 11.33' x 13.75' room. Materials: matte charcoal plaster, walnut bed frame, charcoal linen, warm LED strip. Visible light sources: exterior window (bottom wall) and headboard recessed strip and bedside lamp. Maintain measured scale; avoid adding multiple lamps or extra bright overheads., must include low walnut platform bed with charcoal linens, vertical slat/fluted headboard with amber recessed LED, single brass bedside lamp, visible exterior window light, low walnut platform bed, vertical slat/fluted headboard, amber recessed LED strip behind headboard, brass bedside lamp (single), charcoal rug underfoot, must avoid high-gloss reflective finishes, bright saturated primary colors, over-styled cluttered shelves, added windows or light sources not on the floor plan, floating/warped furniture or bent verticals, two bedside lamps, excessive bright décor, soft/fuzzy shadows that obscure texture, oversized artwork with bright colors, excess bedside lamps or pendant clusters, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Slow static zoom in on bed area with subtle parallax, camera eases closer to reveal headboard texture and amber strip light, daylight from window provides directional fill while recessed strip and bedside lamp give warm contrast, exposure stable, cinematic, photorealistic",
+        "camera_motion": "static_zoom",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Perform a single editorial image-pass to refine headboard slat geometry, increase sculptural shadow definition from window light, and dial amber LED strip warmness so it reads as a visible practical. Keep overall exposure slightly lowered to preserve mood but lift midtones for texture legibility.",
+        "objects_to_include": [],
+        "must_include": [
+          "low walnut platform bed with charcoal linens",
+          "vertical slat/fluted headboard with amber recessed LED",
+          "single brass bedside lamp",
+          "visible exterior window light",
+          "low walnut platform bed",
+          "vertical slat/fluted headboard",
+          "amber recessed LED strip behind headboard",
+          "brass bedside lamp (single)",
+          "charcoal rug underfoot"
+        ],
+        "must_avoid": [
+          "high-gloss reflective finishes",
+          "bright saturated primary colors",
+          "over-styled cluttered shelves",
+          "added windows or light sources not on the floor plan",
+          "floating/warped furniture or bent verticals",
+          "two bedside lamps",
+          "excessive bright décor",
+          "soft/fuzzy shadows that obscure texture",
+          "oversized artwork with bright colors",
+          "excess bedside lamps or pendant clusters",
+          "people",
+          "visible brand logos"
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "f807336e-15c9-4d8c-9907-c12b6d1cd022",
+      "room_id": "taste_kitchen",
+      "room_name": "Taste (Kitchen)",
+      "room_type": "kitchen",
+      "sequence_index": 2,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 9.5 by 10.583333333333334 ft Taste (Kitchen), partial exterior glazing toward dining side; no large dedicated window shown windows, Run an editorial image-pass focused on material separation: preserve matte black cabinetry and reveal wood grain on open shelving. Add under-cabinet warm strip lighting as the visible practical; avoid global brightening. Keep the countertop texture legible by balancing shadows from a single pendant practical., japandi aesthetic, monochrome color palette, layered furnishing, A refined, low-contrast monochrome palette layered with warm wood and brass accents. The overall direction is meditative and textural: matte black walls and smoked oak slatted panels anchor low-profile furniture, amber cove and recessed strip lights provide warm contrast to exterior daylight, and sparse sculptural objects (bonsai, ceramic vessels, a single bookshelf) give the scenes a calm, curated feel. Maintain architectural fidelity, keep verticals true, and derive all light from visible windows and practical fixtures., Kitchen mid-shot showing run of matte black cabinetry on one wall and open smoked-oak shelving with curated books and ceramics. Include a narrow integrated bookshelf niche for cookbooks. Countertop in honed dark stone, subtle under-cabinet warm LED strip visible. One satin-brass pendant over prep area/peninsula (if plan allows placement). Visible light sources: small window toward dining side (directional daylight), under-cabinet strips, pendant. Maintain realistic scale for a 9.5' x 10.58' kitchen; do not stage island larger than the room allows. Keep appliances minimal and matte-black to avoid specular highlights., must include matte black cabinetry, smoked-oak open shelving with curated books, under-cabinet warm LED strip, satin-brass pendant (visible practical), open smoked-oak shelving, bookshelf niche with curated volumes, must avoid high-gloss reflective finishes, bright saturated primary colors, over-styled cluttered shelves, added windows or light sources not on the floor plan, floating/warped furniture or bent verticals, stainless-steel glare, cluttered counters, added windows, bright appliance finishes, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Slow truck right, camera glides laterally along the kitchen run revealing smoked-oak shelving and under-cabinet warm strips, directional daylight from the dining side window shifts across textured surfaces, exposure steady, cinematic, photorealistic",
+        "camera_motion": "slow_dolly",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Run an editorial image-pass focused on material separation: preserve matte black cabinetry and reveal wood grain on open shelving. Add under-cabinet warm strip lighting as the visible practical; avoid global brightening. Keep the countertop texture legible by balancing shadows from a single pendant practical.",
+        "objects_to_include": [],
+        "must_include": [
+          "matte black cabinetry",
+          "smoked-oak open shelving with curated books",
+          "under-cabinet warm LED strip",
+          "satin-brass pendant (visible practical)",
+          "open smoked-oak shelving",
+          "bookshelf niche with curated volumes"
+        ],
+        "must_avoid": [
+          "high-gloss reflective finishes",
+          "bright saturated primary colors",
+          "over-styled cluttered shelves",
+          "added windows or light sources not on the floor plan",
+          "floating/warped furniture or bent verticals",
+          "stainless-steel glare",
+          "cluttered counters",
+          "added windows",
+          "bright appliance finishes",
+          "people",
+          "visible brand logos"
+        ],
+        "background_constraints": [
+          {
+            "adjacent_room": "Dining (Dine)",
+            "adjacent_room_type": "dining_room",
+            "direction": "through the open pass-through or doorway",
+            "visible_objects": [
+              "dining table",
+              "pendant light above the dining area",
+              "dining chairs",
+              "bay exterior glazing",
+              "smoked-oak dining table",
+              "satin-brass pendant (visible)",
+              "amber strip in bay reveal",
+              "smoked oak dining table",
+              "satin-brass pendant (single)",
+              "bay window seating or reveal with amber strip",
+              "minimal tabletop vessel"
+            ]
+          }
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "d58909ff-905a-43b2-ab1a-708af3cbd797",
+      "room_id": "dine_dining_room",
+      "room_name": "Dining (Dine)",
+      "room_type": "dining_room",
+      "sequence_index": 3,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 9.333333333333334 by 12 ft Dining (Dine), bay/angled exterior windows on right-side elevation windows, Apply one editorial image-pass to define bay-window geometry and to emphasize the pendant as the visible practical. Accent the bay seat or ceiling reveal with a subtle amber strip for evening mood. Keep exterior bay glazing as primary daylight; balance the pendant so it doesn't clip highlights., japandi aesthetic, monochrome color palette, layered furnishing, A refined, low-contrast monochrome palette layered with warm wood and brass accents. The overall direction is meditative and textural: matte black walls and smoked oak slatted panels anchor low-profile furniture, amber cove and recessed strip lights provide warm contrast to exterior daylight, and sparse sculptural objects (bonsai, ceramic vessels, a single bookshelf) give the scenes a calm, curated feel. Maintain architectural fidelity, keep verticals true, and derive all light from visible windows and practical fixtures., Dining scene oriented toward the bay window (right-side elevation) shot from a low three-quarter angle to capture table and bay. Layout: low-profile smoked-oak dining table sized for the 9.33' x 12' room, slender dark chairs, single satin-brass pendant centered. Bay window seating or reveal with recessed amber strip visible. Minimal tabletop styling: one fluted ceramic vessel. Materials: smoked oak, matte plaster, warm brass pendant. Visible light sources: bay glazing, brass pendant, amber strip in bay reveal. Preserve verticals and window geometry; do not add extra glazing., must include bay exterior glazing, smoked-oak dining table, satin-brass pendant (visible), amber strip in bay reveal, smoked oak dining table, satin-brass pendant (single), bay window seating or reveal with amber strip, minimal tabletop vessel, must avoid high-gloss reflective finishes, bright saturated primary colors, over-styled cluttered shelves, added windows or light sources not on the floor plan, floating/warped furniture or bent verticals, ornate chandeliers, heavy table linens, extra decorative clutter, overly ornate light fixtures, heavy patterned table linens, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Parallax orbit, super smooth camera travels in a gentle arc around the dining table while keeping the table centered, daylight pours in from the bay windows and amber pendant reads as a warm practical, shadows shift slowly, consistent exposure, cinematic, photorealistic",
+        "camera_motion": "orbital_pan",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Apply one editorial image-pass to define bay-window geometry and to emphasize the pendant as the visible practical. Accent the bay seat or ceiling reveal with a subtle amber strip for evening mood. Keep exterior bay glazing as primary daylight; balance the pendant so it doesn't clip highlights.",
+        "objects_to_include": [],
+        "must_include": [
+          "bay exterior glazing",
+          "smoked-oak dining table",
+          "satin-brass pendant (visible)",
+          "amber strip in bay reveal",
+          "smoked oak dining table",
+          "satin-brass pendant (single)",
+          "bay window seating or reveal with amber strip",
+          "minimal tabletop vessel"
+        ],
+        "must_avoid": [
+          "high-gloss reflective finishes",
+          "bright saturated primary colors",
+          "over-styled cluttered shelves",
+          "added windows or light sources not on the floor plan",
+          "floating/warped furniture or bent verticals",
+          "ornate chandeliers",
+          "heavy table linens",
+          "extra decorative clutter",
+          "overly ornate light fixtures",
+          "heavy patterned table linens",
+          "people",
+          "visible brand logos"
+        ],
+        "background_constraints": [
+          {
+            "adjacent_room": "Taste (Kitchen)",
+            "adjacent_room_type": "kitchen",
+            "direction": "through the open kitchen",
+            "visible_objects": [
+              "kitchen cabinets",
+              "range hood",
+              "kitchen island or counter",
+              "matte black cabinetry",
+              "smoked-oak open shelving with curated books",
+              "under-cabinet warm LED strip",
+              "satin-brass pendant (visible practical)",
+              "open smoked-oak shelving",
+              "bookshelf niche with curated volumes"
+            ]
+          },
+          {
+            "adjacent_room": "Nest",
+            "adjacent_room_type": "living_room",
+            "direction": "through the open-plan living area",
+            "visible_objects": [
+              "sofa",
+              "coffee table",
+              "area rug",
+              "bay exterior glazing with directional daylight",
+              "smoked-oak vertical slat wall with amber cove",
+              "charcoal low sectional",
+              "monolithic black stone coffee table",
+              "bookshelf (sparse)",
+              "visible floor lamp",
+              "smoked oak vertical slat wall with amber cove",
+              "bonsai (single)",
+              "bookshelf"
+            ]
+          }
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "b63b6c43-5ed0-4b99-9a17-1c695b7ba7a8",
+      "room_id": "dream_right_bedroom",
+      "room_name": "Dream (right)",
+      "room_type": "bedroom",
+      "sequence_index": 4,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 11.25 by 11.333333333333334 ft Dream (right), exterior window(s) on right elevation windows, Do an image-pass to tighten perspective and to boost headboard and bookshelf texture. Use a single wall-mounted or table sculptural lamp as the visible practical; ensure the bookshelf reads as genuine with real book spines and no overly colorful covers., japandi aesthetic, monochrome color palette, layered furnishing, A refined, low-contrast monochrome palette layered with warm wood and brass accents. The overall direction is meditative and textural: matte black walls and smoked oak slatted panels anchor low-profile furniture, amber cove and recessed strip lights provide warm contrast to exterior daylight, and sparse sculptural objects (bonsai, ceramic vessels, a single bookshelf) give the scenes a calm, curated feel. Maintain architectural fidelity, keep verticals true, and derive all light from visible windows and practical fixtures., Secondary bedroom with low platform bed (charcoal linens) shot from doorway level to show bed and narrow bookshelf on a side wall. Include a narrow open bookshelf with curated, muted-spine volumes to satisfy the objects list. One sculptural brass lamp (table or wall-mounted) provides warm fill; exterior window on right elevation provides directional daylight. Materials: matte plaster, walnut/ smoked oak accents, charcoal textiles. Maintain believable scale for an 11.25' x 11.33' room and keep verticals true., must include charcoal platform bed, narrow bookshelf with curated volumes, one sculptural brass lamp, visible side-window daylight, one sculptural lamp, textured throw, must avoid high-gloss reflective finishes, bright saturated primary colors, over-styled cluttered shelves, added windows or light sources not on the floor plan, floating/warped furniture or bent verticals, two bedside lamps, bright book covers, overstuffed shelving, bright patterned cushions, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Slow dolly in, camera moves toward the bed and bookshelf area, daylight from side window provides directional modeling while a sculptural brass lamp offers warm practical contrast, exposure steady, cinematic, photorealistic",
+        "camera_motion": "slow_dolly",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Do an image-pass to tighten perspective and to boost headboard and bookshelf texture. Use a single wall-mounted or table sculptural lamp as the visible practical; ensure the bookshelf reads as genuine with real book spines and no overly colorful covers.",
+        "objects_to_include": [],
+        "must_include": [
+          "charcoal platform bed",
+          "narrow bookshelf with curated volumes",
+          "one sculptural brass lamp",
+          "visible side-window daylight",
+          "one sculptural lamp",
+          "textured throw"
+        ],
+        "must_avoid": [
+          "high-gloss reflective finishes",
+          "bright saturated primary colors",
+          "over-styled cluttered shelves",
+          "added windows or light sources not on the floor plan",
+          "floating/warped furniture or bent verticals",
+          "two bedside lamps",
+          "bright book covers",
+          "overstuffed shelving",
+          "bright patterned cushions",
+          "people",
+          "visible brand logos"
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "83e20280-73f8-40c8-ba46-62656d17bd92",
+      "room_id": "dream_upper_left_bedroom",
+      "room_name": "Dream (upper-left)",
+      "room_type": "bedroom",
+      "sequence_index": 5,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 10 by 10 ft Dream (upper-left), exterior window on left elevation windows, Single image-pass to correct perspective and to increase textural separation. Use a brass wall-mounted reading lamp as the visible practical and a small slatted accent to connect to the main material language. Keep exposure slightly lower to retain mood., japandi aesthetic, monochrome color palette, layered furnishing, A refined, low-contrast monochrome palette layered with warm wood and brass accents. The overall direction is meditative and textural: matte black walls and smoked oak slatted panels anchor low-profile furniture, amber cove and recessed strip lights provide warm contrast to exterior daylight, and sparse sculptural objects (bonsai, ceramic vessels, a single bookshelf) give the scenes a calm, curated feel. Maintain architectural fidelity, keep verticals true, and derive all light from visible windows and practical fixtures., Compact bedroom/daybed vignette shot from a corner to show the bed/daybed and small open shelf for books. Low bed with charcoal linens, brass wall-mounted reading lamp visible next to bed, smoked-oak slat accent on the wall. Visible light sources: left-elevation window and wall-mounted lamp. Maintain realistic furniture scale for a 10' x 10' room, and ensure all vertical lines are true and orthogonal., must include low bed/daybed with charcoal linens, brass wall-mounted reading lamp, small open bookshelf, smoked-oak slat accent, low bed/daybed, must avoid high-gloss reflective finishes, bright saturated primary colors, over-styled cluttered shelves, added windows or light sources not on the floor plan, floating/warped furniture or bent verticals, large bulky furniture, bright colored accessories, added architectural elements, bright decorative accents, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Static slow zoom in on daybed area, camera eases closer to reveal texture of linens and slat detail while daylight from left window provides soft directional fill, warm lamp remains steady as a practical, exposure stable, cinematic, photorealistic",
+        "camera_motion": "static_zoom",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Single image-pass to correct perspective and to increase textural separation. Use a brass wall-mounted reading lamp as the visible practical and a small slatted accent to connect to the main material language. Keep exposure slightly lower to retain mood.",
+        "objects_to_include": [],
+        "must_include": [
+          "low bed/daybed with charcoal linens",
+          "brass wall-mounted reading lamp",
+          "small open bookshelf",
+          "smoked-oak slat accent",
+          "low bed/daybed"
+        ],
+        "must_avoid": [
+          "high-gloss reflective finishes",
+          "bright saturated primary colors",
+          "over-styled cluttered shelves",
+          "added windows or light sources not on the floor plan",
+          "floating/warped furniture or bent verticals",
+          "large bulky furniture",
+          "bright colored accessories",
+          "added architectural elements",
+          "bright decorative accents",
+          "people",
+          "visible brand logos"
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    }
+  ],
+  "delivery": {
+    "requested_platforms": [
+      "instagram",
+      "tiktok",
+      "listing",
+      "portfolio"
+    ],
+    "video_formats": [
+      "16:9",
+      "9:16",
+      "1:1"
+    ],
+    "caption_context": {
+      "property_brief": "dark, batman style",
+      "aesthetic_summary": "A refined, low-contrast monochrome palette layered with warm wood and brass accents. The overall direction is meditative and textural: matte black walls and smoked oak slatted panels anchor low-profile furniture, amber cove and recessed strip lights provide warm contrast to exterior daylight, and sparse sculptural objects (bonsai, ceramic vessels, a single bookshelf) give the scenes a calm, curated feel. Maintain architectural fidelity, keep verticals true, and derive all light from visible windows and practical fixtures.",
+      "featured_objects": [
+        "bookshelf"
+      ],
+      "tone": "luxury_listing"
+    },
+    "mood_board": {
+      "include_pin_ids": [
+        "1012465559998726563",
+        "1012465559998726531",
+        "1012465559998726506"
+      ],
+      "include_room_ids": [
+        "nest_living_room",
+        "dream_bottom_bedroom",
+        "taste_kitchen",
+        "dine_dining_room",
+        "dream_right_bedroom",
+        "dream_upper_left_bedroom"
+      ],
+      "annotations": [
+        {
+          "label": "Aesthetic",
+          "value": "Japandi Noir — Moody Minimalism"
+        },
+        {
+          "label": "Palette",
+          "value": "monochrome"
+        },
+        {
+          "label": "Lighting",
+          "value": "dramatic"
+        },
+        {
+          "label": "Mood",
+          "value": "Moody, calm, textural luxury — cinematic Japandi noir with warm amber accents"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "layer_1_payload_created_at": "2026-05-10T11:58:22.923Z",
+    "pinterest_scrape": {
+      "provider": "apify",
+      "item_count": 3,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    "models": {
+      "aesthetic_extraction": "gpt-5-mini",
+      "floor_plan_parsing": "gpt-5-mini",
+      "creative_spec": "gpt-5-mini"
+    }
+  },
+  "warnings": [
+    {
+      "code": "creative_plan_warning",
+      "message": "All rooms recommended for an editorial image-pass before video to ensure stable verticals, crisp directional light, and filmic contrast.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "creative_plan_warning",
+      "message": "Preserve exact architecture and measured furniture footprints—do not change window positions or room geometry in image or video passes.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "creative_plan_warning",
+      "message": "Suppress any generated effects that introduce impossible lighting (e.g., light coming from non-visible walls or floating sources).",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "vibe_report_warning",
+      "message": "Natural light varies by room; do not introduce additional window openings in staging or video lighting.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "vibe_report_warning",
+      "message": "Preserve exact room geometry and measured furniture footprints to avoid scale drift in video.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "vibe_report_warning",
+      "message": "Avoid glossy reflective materials that will create specular hotspots against matte finishes.",
+      "severity": "warning",
+      "affected_room_ids": []
+    }
+  ]
+}

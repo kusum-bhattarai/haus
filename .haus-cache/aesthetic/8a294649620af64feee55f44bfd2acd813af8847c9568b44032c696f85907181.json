@@ -1,0 +1,55 @@
+{
+  "palette": "monochrome",
+  "lighting": "dramatic",
+  "density": "layered",
+  "style_era": "japandi",
+  "dominant_colors": [
+    "#0B0B0B",
+    "#2F2F2F",
+    "#6B3F2A",
+    "#C48A48",
+    "#E7E6E4"
+  ],
+  "mood_words": [
+    "moody",
+    "meditative",
+    "textural warmth",
+    "calm minimalism",
+    "refined luxury",
+    "zen"
+  ],
+  "pinterest_cluster_labels": [
+    "matte-black walls + vertical wood slats",
+    "low-profile platform bed with charcoal linens",
+    "amber cove/strip lighting for warm contrast",
+    "brass bedside accents & sculptural lamps",
+    "monolithic black stone coffee table + bonsai / shoji"
+  ],
+  "cluster_summary": [
+    {
+      "label": "Minimal platform bedroom with vertical wood slat accent",
+      "pin_ids": [
+        "1012465559998726563"
+      ],
+      "visual_notes": "Matte black walls and ceiling, vertical warm wood slat panel, low walnut platform bed, charcoal bedding and rug, amber cove light along ceiling edge — minimal furnishings, emphasis on horizontal planes and warm wood contrast.",
+      "weight": 0.34
+    },
+    {
+      "label": "Moody luxe bedroom with brass accents and recessed strip light",
+      "pin_ids": [
+        "1012465559998726531"
+      ],
+      "visual_notes": "Charcoal upholstered bed and fluted headboard panel, layered gray bedding, brass dome bedside lamps, recessed warm LED strip behind headboard, textured throws and rugs — layered textiles and metallic highlights for a luxe yet restrained look.",
+      "weight": 0.33
+    },
+    {
+      "label": "Japandi noir living room with shoji screens and monolithic black stone table",
+      "pin_ids": [
+        "1012465559998726506"
+      ],
+      "visual_notes": "Matte black tadelakt-like walls, smoked oak slatted wall, charcoal linen sectional, low black marble coffee table with white veining, frosted shoji screens and single bonsai — Japanese minimalism meets Scandinavian texture and warm wood tones.",
+      "weight": 0.33
+    }
+  ],
+  "confidence": 0.92
+}
