@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999d24/_3MYE7Chdr0-sG7lbxUPh_aI8iS9XK.png",
+    "prompt": "Extreme close-up detail shot with smooth tracking camera following harsh directional light as it grows and spreads across textured surface. Crisp shadow edges crawl and shift in real time. Camera moves with the light's path revealing texture in wood grain, fabric weave, architectural detail. Editorial film style. Neutral white balance, balanced exposure — deep dramatic shadows without underexposure. Shallow depth of field. Static gentle zoom: subtle static zoom in on the vanity detail, practical mirror light stable, soft shadows reveal texture in stone and wood, consistent exposure, cinematic, photorealistic Revive (bathroom), Calm, warm, and restrained — meditative family home with functional pockets for work and quiet moments. Maintain believable residential scale for Revive (bathroom) at roughly small. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "a618c39eda0d323ff32da8cc2433fca553c7cda0b9f6a30754f0d2630a343a16"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

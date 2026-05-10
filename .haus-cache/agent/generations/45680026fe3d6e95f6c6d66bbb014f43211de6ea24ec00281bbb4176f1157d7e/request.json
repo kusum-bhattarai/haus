@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999494/CCUqJvObw1P81SeU-ksE8_QIr7j8sf.png",
+    "prompt": "Super smooth camera rises vertically upward, straight vertical path, cinematic Crane down / aerial drift, camera descends gently from above the patio doors into the tea-nook while daylight flows in and soft shadows set across cushions, consistent exposure, cinematic, photorealistic Relax (patio/sunroom), Soft organic warmth — calm, meditative, family-ready Japandi Maintain believable residential scale for Relax (patio/sunroom) at roughly medium. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "1010af79b0606e7095e645b87f29a8148289cbcde82da9e0ce9bad6d1e4f1a03"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

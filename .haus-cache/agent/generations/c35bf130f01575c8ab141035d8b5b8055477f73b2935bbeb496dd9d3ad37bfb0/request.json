@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99998c/_X9DOxLkQn8o4usGzIbYG_OWhaMIlB.png",
+    "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Very slow dolly in, camera moves smoothly forward from entry axis toward the sofa and standing desk, directional sunlight from front windows shifts gently across floor and textiles, shadows crawl slowly, consistent exposure, cinematic, photorealistic Nest (living area), Calm, textured minimalism — warm daylight, tactile materials, quiet family presence. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest (living area). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "d64668d14391a735cdc468504223a80d4709582b72c511c816e82e0b072ff4f0"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

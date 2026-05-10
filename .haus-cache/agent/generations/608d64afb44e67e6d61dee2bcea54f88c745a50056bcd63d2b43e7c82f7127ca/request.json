@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a9997f0/SMNT4IHDCOjdB7XSAs1Bm_x6R91d5K.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for Taste (kitchen) at roughly medium. Medium ambient light coming indirectly from the dining bay; task practicals under-cabinet or pendant over counter may be on but subtle. Maintain neutral, even exposure across counters to show material texture. A warm, calm Japandi interior that balances minimal, textured materials with family-friendly function. Warm neutral woods, soft linens, and sculpted low-profile furniture create a meditative, uncluttered atmosphere. Prioritize a compact work corner for a standing desk and a gentle crib placement in the bedroom; keep circulation clear and preserve open-plan sightlines between Nest (living), Dine (dining) and Taste (kitchen). Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only Previous failure modes to correct: style_mismatch.",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

@@ -176,10 +176,12 @@ export function buildLayer3Handoff(profile, creativePlan, options = {}) {
   return handoff;
 }
 
+const VIDEO_ROOM_TYPES = new Set(['living_room', 'bedroom', 'kitchen', 'dining_room', 'bathroom', 'office']);
+
 function createRoomSequence(rooms, roomPlans) {
   const plannedRoomIds = new Set(roomPlans.map((plan) => plan.room_id));
   return rooms
-    .filter((room) => plannedRoomIds.has(room.room_id))
+    .filter((room) => plannedRoomIds.has(room.room_id) && VIDEO_ROOM_TYPES.has(room.room_type))
     .sort((left, right) => left.generation_priority - right.generation_priority)
     .map((room) => room.room_id);
 }

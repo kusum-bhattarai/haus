@@ -84,7 +84,10 @@ export async function extractFloorPlanStructure({
       instructions: [
         'You are an architectural floor plan parser for an interior visualization pipeline.',
         'Use the provided structured measurements as context and do not contradict them.',
-        'Create stable snake_case room ids. Prefer rooms useful for video generation.',
+        'Create stable snake_case room ids.',
+        'IMPORTANT: Only return primary living spaces useful for video generation — living rooms, bedrooms, kitchens, dining rooms, bathrooms, offices.',
+        'Exclude all service and circulation spaces: hallways, foyers, entries, closets, pantries, laundry rooms, storage rooms, utility rooms, staircases.',
+        'Limit to a maximum of 6 rooms. Assign lower generation_priority numbers to more prominent, video-worthy rooms.',
         'Return only schema-compliant JSON.'
       ].join(' '),
       input: [

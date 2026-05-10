@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a9998ce/YwWvnm9XYT5jcj5_DvtCm_pmOu9LLT.png",
+    "prompt": "Wide interior shot with slow trucking movement side to side as harsh directional light moves and expands across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Camera tracks laterally through scene while light travels. Editorial film style. Neutral white balance, balanced exposure, smooth parallel motion. Atmospheric architectural cinematography. Parallax orbit, super smooth camera travels in a subtle arc to show the tea nook and glazed doors while daylight remains consistent from the exterior, gentle parallax between cushions, consistent exposure, cinematic, photorealistic Relax (patio/sunroom), Calm, grounded Japandi warmth — textured minimalism with soft natural light Maintain believable residential scale for Relax (patio/sunroom) at roughly medium. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "754b7304b092dab68e3ec8249dfe3952a5e60d14bdb531c4ca940a94c8df3ec2"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

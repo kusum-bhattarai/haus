@@ -1,0 +1,62 @@
+{
+  "floor_plan_url": "file:///Users/quamos/Repos/haus/.haus-cache/floor-plans/a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6.png",
+  "floor_plan_metadata": {
+    "source": "local_upload",
+    "mime_type": "image/png",
+    "size_bytes": 64138,
+    "width_px": 448,
+    "height_px": 480,
+    "sha256": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6",
+    "cache_key": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6"
+  },
+  "floor_plan_measurements": {
+    "source": "ml_parser",
+    "unit": "ft",
+    "scale": null,
+    "rooms": [
+      {
+        "room_id": null,
+        "name": "Dream (bedroom)",
+        "dimensions": {
+          "width": 12.5,
+          "length": 11.583333333333334,
+          "area": 144.79
+        },
+        "unit": "ft",
+        "confidence": 1
+      },
+      {
+        "room_id": null,
+        "name": "Nest (living area)",
+        "dimensions": {
+          "width": 11.916666666666666,
+          "length": 11.666666666666666,
+          "area": 139.03
+        },
+        "unit": "ft",
+        "confidence": 1
+      },
+      {
+        "room_id": null,
+        "name": "Dine (dining)",
+        "dimensions": {
+          "width": 7.833333333333333,
+          "length": 8,
+          "area": 62.67
+        },
+        "unit": "ft",
+        "confidence": 1
+      }
+    ],
+    "notes": null
+  },
+  "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+  "brief": "Warm, calm home for a young family that needs a cozy work corner.",
+  "objects": [
+    "standing_desk",
+    "bookshelf"
+  ],
+  "platform": "all",
+  "timestamp": "2026-05-10T05:49:28.698Z",
+  "session_id": "96c3bba9-3d18-415c-981d-fc63ef645869"
+}

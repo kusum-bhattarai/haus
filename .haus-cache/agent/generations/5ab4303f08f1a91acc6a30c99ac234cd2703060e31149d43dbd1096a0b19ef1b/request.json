@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a9996e0/7Kg_AjgllFu2NJJm6MehH_fFzCZobO.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest (living area). Use soft directional daylight from front windows and patio doors as primary light. Sculpt light subtly across sofa and floor; allow gentle shadow gradients. If interior fill is required, use a single visible floor lamp or woven pendant in frame. A warm, calming Japandi interior that balances Scandinavian lightness with Japanese restraint. Neutral warm-beige palette, low-profile furniture, natural materials (light oak, rattan, linen), and layered texture create a quiet, family-friendly home. Prioritize a compact work corner in the living area, a safe crib placement in the bedroom, and uncluttered circulation around bay windows and patio doors. Lighting should read as daylight from existing windows and supplemented by practical fixtures (woven pendant, floor lamp) only where visible in-frame. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only Previous failure modes to correct: visible_people, object_missing, lighting_drift.",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

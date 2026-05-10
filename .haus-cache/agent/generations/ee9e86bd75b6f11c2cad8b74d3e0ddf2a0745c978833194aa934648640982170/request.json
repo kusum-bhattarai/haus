@@ -1,0 +1,16 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a99998c/pklChm9J7ThEIZEa5WrUp_f8aoPBw1.png",
+      "https://v3b.fal.media/files/b/0a99998a/aPLGHTcj94bKCDc3CGIsI_aj7EKnuQ.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for a 12.5 by 11.583333333333334 ft Dream (bedroom). North-facing window as primary soft daylight source; keep light cool and even. Use a visible bedside practical lamp only if it appears in frame and its warm glow should be local and subtle. Maintain verticals and bed-centered composition. A warm, calm Japandi interior that balances minimal Scandinavian restraint with tactile Japanese materiality. Emphasize light woods, soft neutrals, and purposeful negative space. Scenes should feel lived-in yet curated for a young family: a cozy work corner, durable natural textiles, and pockets for quiet family rituals (tea nook, low seating). Maintain uncluttered composition, tactile depth, and visible, believable light sources. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The Revive (bathroom) visible through the ensuite doorway must show exactly the same vanity, mirror, bathroom tile, matte tile or plaster finish, wooden stool with folded towel, one small plant or ceramic tray, matte tile or plaster finishes, wooden stool with a folded towel as in the reference image — do not invent different furniture. Previous failure modes to correct: wrong_room_type, layout_drift, object_missing. The image predominantly features a bedroom aesthetic with neutral tones that align with the Japandi style. However, missing elements such as the specified compact standing desk and the layout is not ideal, which slightly hinders room correctness. The lighting is somewhat cool and even but does not completely fit the instructions for a soft north-facing light. Overall, although it has a strong visual appeal and stability, it requires adjustments for completeness and alignment with the specifications.",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

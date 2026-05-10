@@ -1,0 +1,259 @@
+{
+  "vibe_report": {
+    "aesthetic_name": "Warm Japandi Calm",
+    "summary": "A warm, restrained Japandi scheme that balances Scandinavian lightness with Japanese restraint: soft warm neutrals, light oak, sculpted simple forms, and layered natural textures. Prioritize low, grounded furniture, a focused family work corner, and meditative vignette corners for tea/reading. Maintain uncluttered composition and honest, visible light sources.",
+    "palette_rationale": "Warm neutrals with a soft golden undertone create a friendly family feeling while staying minimal: pale beiges and warm creams for walls and textiles, honeyed oak and muted taupe for furniture, and deep brown accents to anchor composition. Accent with off-white ceramics and muted green plants to keep the scheme calm and organic.",
+    "lighting_mood": "Soft ambient daytime with directional daylight from primary exterior windows (morning/late-afternoon flavor) plus a small number of warm practicals (woven pendant over dining, floor lamp near sofa, paper lantern in a tea nook). Shadows are gentle but shaped — not flat or over-HDR.",
+    "materials": [
+      "light oak (tables, shelving, low sofa base)",
+      "woven rattan / seagrass (pendant, baskets)",
+      "textured linen (upholstery, cushions)",
+      "ceramic and stoneware (tableware, vases)",
+      "matte plaster or warm eggshell paint (walls)"
+    ],
+    "textures": [
+      "tight-loop neutral rugs with low pile",
+      "soft linen upholstery",
+      "hand-turned ceramic matte finishes",
+      "subtle wood grain (clear oil finish)",
+      "woven natural-fiber screens (bamboo/shoji-inspired)"
+    ],
+    "furniture_language": [
+      "low-profile sofa with exposed wooden base",
+      "round/soft-edged oak dining table",
+      "sculptural, asymmetrical wooden coffee table",
+      "integrated, open shelving (vertical slat cues)",
+      "minimal standing desk with discrete cable management"
+    ],
+    "styling_rules": [
+      "keep vertical lines true and visible — thin wood slats or shelving to emphasize height",
+      "limit tabletop items to 1–2 curated ceramics or a single sculptural vase",
+      "group textiles in threes (rug + throw + cushion) and keep patterns subtle",
+      "place plants sparingly, prefer sculptural leaves (ficus, rubber plant, small bonsai)",
+      "expose natural wood edges; avoid painted blocky furniture silhouettes"
+    ],
+    "avoid": [
+      "high-gloss or overly reflective surfaces",
+      "strong saturated colors or busy patterns",
+      "large pendant lights that dominate the composition (keep scale modest)",
+      "visible modern tech clutter (large screens, chargers, cables)"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living_room",
+        "headline": "Grounded family living with a cozy work corner",
+        "guidance": "Create a low, calm living composition centered on a light linen low sofa and sculptural coffee table facing the primary window. Integrate a compact standing desk and slim bookshelf into a corner or near the window so the work area reads as intentional but unobtrusive. Use a single woven pendant or floor lamp for warm practical light; ensure desk has a discreet task lamp. Maintain clear walking paths into the Relax patio.",
+        "must_include": [
+          "low-profile linen sofa",
+          "sculptural wooden coffee table",
+          "standing_desk",
+          "bookshelf",
+          "potted plant near window"
+        ],
+        "must_avoid": [
+          "bulk tall bookcases that block sightlines",
+          "large TV as focal point",
+          "bright colored throws or cushions"
+        ]
+      },
+      {
+        "room_id": "dream_bedroom",
+        "headline": "Quiet restful bedroom with tactile layering",
+        "guidance": "Keep bed low with natural linen bedding and a simple wood headboard. Include a small built-in or floating bedside shelf and a single reading lamp. If space allows, a slim writing desk or small meditation bench near the north window can form a 'calm corner'. Use woven rug layering and a single piece of minimalist wall art or wood slat accent.",
+        "must_include": [
+          "low bed with wooden base",
+          "linen bedding in warm neutral",
+          "small bedside lamp",
+          "minimal wall art or wood slat detail"
+        ],
+        "must_avoid": [
+          "heavy drapery that blocks north light",
+          "excess decorative clutter"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Quiet, pared-back kitchen that opens to dining",
+        "guidance": "Keep counters clean and tactile: matte-stone countertops, simple cabinet hardware in warm metal or muted black. Use open shelving for a few ceramics and wooden cutting boards. Keep lighting practical: under-cabinet strip and a small pendant over any peninsula. Preserve sightlines into the dining bay.",
+        "must_include": [
+          "matte countertops",
+          "open shelving with curated ceramics",
+          "under-cabinet lighting"
+        ],
+        "must_avoid": [
+          "busy backsplashes or reflective chrome finishes",
+          "exposed appliance clutter"
+        ]
+      },
+      {
+        "room_id": "dine_dining_room",
+        "headline": "Intimate Japandi dining bay with sculptural pendant",
+        "guidance": "Center a round light-wood dining table under a woven rattan pendant. Use mid-height curved chairs in linen and a single ceramic vase as a simple centerpiece. Keep bay windows uncluttered — light sheer panels only. Ensure pendant is scaled to the table and does not block window views.",
+        "must_include": [
+          "round oak dining table",
+          "woven rattan pendant",
+          "3-panel bay windows unobstructed"
+        ],
+        "must_avoid": [
+          "oversized multi-bulb chandeliers",
+          "heavy curtains in front of bay windows"
+        ]
+      },
+      {
+        "room_id": "revive_bathroom",
+        "headline": "Calm, minimal bathroom with tactile finishes",
+        "guidance": "Use matte stone tiles, a simple wooden vanity, and minimal accessories. If a small exterior window exists, stage a folded towel and a small plant to feel inviting. Keep fixtures matte black or brushed brass and avoid glossy subway tile.",
+        "must_include": [
+          "matte vanity",
+          "neutral stone surfaces",
+          "simple hardware"
+        ],
+        "must_avoid": [
+          "bright clinical lighting",
+          "overly busy tile patterns"
+        ]
+      },
+      {
+        "room_id": "relax_patio",
+        "headline": "Bright sunroom with low seating and a tea nook",
+        "guidance": "Use floor cushions or a low bench, natural-fiber rugs and a small low tray table to form a tea nook. Allow the exterior glazing to be the focal point; use minimal planted pots and a paper lantern or warm wall sconce for evening mood.",
+        "must_include": [
+          "floor cushions or low bench",
+          "small low tray table",
+          "visible large glass doors/windows"
+        ],
+        "must_avoid": [
+          "too much high furniture that blocks the view",
+          "synthetic outdoor furniture textures"
+        ]
+      }
+    ],
+    "confidence": 0.86,
+    "warnings": [
+      "Some room dimensions and window positions are inferred from the plan — final staging must respect actual window placements.",
+      "Small service rooms (closets, pantry, laundry) are low priority for cinematic coverage; avoid dedicating camera time unless required.",
+      "Kitchen and bathroom light levels may need added practical fixtures for video if no strong directional daylight is present."
+    ]
+  },
+  "overall_mood": "Calm, warm, and restrained — meditative family home with functional pockets for work and quiet moments.",
+  "global_style_notes": [
+    "Preserve architecture and layout exactly; do not alter door/ window positions or wall geometry.",
+    "Always derive directional light only from visible windows/doors/practicals in the frame.",
+    "Keep verticals true and correct perspective during image-pass corrections.",
+    "Favor warm white balance (~2700–3200K for practicals, neutral daylight for windows) and controlled contrast (no over-HDR).",
+    "Limit motion per clip to one clear camera idea; start with 5s test clips."
+  ],
+  "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift",
+  "room_plans": [
+    {
+      "room_id": "nest_living_room",
+      "lighting_instruction": "Daylight-first: emphasize strong directional light from the front exterior windows and the large glass opening toward the Relax patio. Balance with a warm floor lamp near sofa (2700K) and a small desk task lamp for the standing desk. Keep interior midtones slightly lifted while preserving sculpted shadows from window light.",
+      "dalle_scene_details": "Wide interior composition shot from slightly above eye level (approx. 18–24mm equivalent on full-frame wide), camera placed mid-room looking toward the main window/patio. Maintain exact room geometry and verticals. Low linen sofa centered with sculptural oak coffee table; standing desk and slim bookshelf tucked into a side corner near the window (visible but not dominant). Woven pendant off-center over seating or a warm floor lamp to the side. Textures: light oak floors, neutral low-pile rug, linen textiles, ceramic vase on table. Limit props: one stack of children’s picture books on lower shelf, small potted plant on windowsill. Visible light sources only: daylight through windows, floor lamp, desk lamp. Avoid added lights from unseen sources, avoid high-gloss reflections, and avoid inserting large electronic displays. Keep scale believable: human-scale furniture, doorway clearances accurate.",
+      "video_prompt": "Wide interior shot with a slow and smooth dolly in. Camera moves forward through the living space, directional sunlight shifts across floor and textiles, small practical lamps remain consistent, shadows move gradually, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "standing_desk",
+        "bookshelf",
+        "low linen sofa",
+        "sculptural coffee table",
+        "visible window-to-patio sightline"
+      ],
+      "must_avoid": [
+        "large TV or media wall as focal point",
+        "warped or drifting verticals",
+        "introducing light from non-visible sources"
+      ]
+    },
+    {
+      "room_id": "dream_bedroom",
+      "lighting_instruction": "Soft north-window light (medium). Use gentle ambient fill and a warm bedside lamp (2700K) to create a calm evening feel or neutral daylight for daytime. Avoid heavy top-down lighting.",
+      "dalle_scene_details": "Framed as a three-quarter bedroom shot from doorway or just inside hallway (35–50mm equivalent). Keep bed low with wooden base centered on the main axis. Minimal bedside table with single warm lamp. Small writing desk or meditation bench near north window if space allows, staged with a folded throw and a single ceramic cup. Materials: linen bedding, light oak headboard, textured rug underfoot. Maintain strict verticals, accurate door and closet positions. Visible light sources only: the north window and bedside lamp. Keep styling minimal — one art piece above headboard, no bulky electronics.",
+      "video_prompt": "Parallax orbit: super smooth camera travels in a gentle arc around the bed, subject stays centered, soft directional light from the window shifts subtly across bedding, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "orbital_pan",
+      "duration_seconds": 5,
+      "must_include": [
+        "low bed with wooden base",
+        "linen bedding",
+        "single bedside lamp"
+      ],
+      "must_avoid": [
+        "heavy drapery blocking window",
+        "cluttered surfaces or multiple small lamps"
+      ]
+    },
+    {
+      "room_id": "taste_kitchen",
+      "lighting_instruction": "Medium ambient light from the adjacent dining bay. Supplement with warm under-cabinet strip lights and a small pendant over any peninsula. Keep countertop highlights controlled and natural.",
+      "dalle_scene_details": "Kitchen mid-shot from the circulation path between living and dining (28–35mm equiv). Show matte-stone counters, simple joinery, and a short run of open shelving with curated ceramics. Preserve cabinet geometry and any visible doorway into dining. Visible light sources only: light from the dining bay, under-cabinet practicals, small pendant if present. Keep the scene tidy: a wooden cutting board, one ceramic bowl, and two mugs as staging. Avoid reflective chrome appliances dominating composition.",
+      "video_prompt": "Super smooth camera glides horizontally from left to right, parallel path across the kitchen, balanced exposure with directional light flowing from the dining bay, stable motion, cinematic",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "matte countertops",
+        "open shelving with curated ceramics",
+        "under-cabinet lighting"
+      ],
+      "must_avoid": [
+        "reflective stainless clutter",
+        "inconsistent light direction or added unseen fill"
+      ]
+    },
+    {
+      "room_id": "dine_dining_room",
+      "lighting_instruction": "High daylight from three-panel bay windows. Use a single woven rattan pendant centered over the round table for evening mood; daylight take priority for daytime clips. Maintain natural exposure to preserve window view detail.",
+      "dalle_scene_details": "Centered composition on round oak dining table under woven rattan pendant (35–50mm equiv). Curved mid-height linen chairs around table, single ceramic vase centerpiece. Bay windows unobstructed with light sheers only. Preserve verticals of window mullions and bay geometry. Visible light sources only: daylight through bay, pendant above table. Avoid oversized decorative items on table or heavy curtains that block the windows.",
+      "video_prompt": "Wide interior shot with a slow and smooth dolly out, camera pulls back to reveal the dining bay and window views, directional sunlight gently moves across table surfaces, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "round oak dining table",
+        "woven rattan pendant",
+        "clear bay window view"
+      ],
+      "must_avoid": [
+        "large multi-bulb chandeliers",
+        "blocking curtains in front of windows"
+      ]
+    },
+    {
+      "room_id": "revive_bathroom",
+      "lighting_instruction": "Low ambient daylight if a small window exists; otherwise rely on soft warm practicals at mirror and a concealed stripe for balanced exposure. Avoid hard overhead spotlights.",
+      "dalle_scene_details": "Tight bathroom mid-shot (35–50mm equiv) focusing on the vanity and any tub area. Use matte-stone surfaces, wooden vanity, minimal accessories (folded towel, small plant). Keep mirror reflections clean and do not introduce additional light sources not visible in the frame. Preserve tile and grout scale for believable materiality.",
+      "video_prompt": "Static gentle zoom: subtle static zoom in on the vanity detail, practical mirror light stable, soft shadows reveal texture in stone and wood, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "matte vanity",
+        "neutral stone surfaces",
+        "simple hardware"
+      ],
+      "must_avoid": [
+        "clinical bright lighting",
+        "introducing extra unseen light sources"
+      ]
+    },
+    {
+      "room_id": "relax_patio",
+      "lighting_instruction": "High daylight through large glass doors/windows. For evening shots, add a single warm paper lantern or wall sconce. Keep interior-to-exterior exposure balanced to show depth outside.",
+      "dalle_scene_details": "Framing from inside the Nest looking through to the Relax patio (24–35mm equiv) to emphasize the glazed connection. Low seating (floor cushions or low bench) arranged near the glass, small low tray table staged with tea set. Use visible pots/plants and a subtle paper lantern for evening mood. Preserve glass reflections but avoid over-bright exterior clipping. Maintain true-scale furniture relative to doorway height.",
+      "video_prompt": "Super smooth camera travels in arc around the tea nook, subject stays centered, daylight and exterior depth remain stable, consistent exposure, cinematic",
+      "camera_motion": "orbital_pan",
+      "duration_seconds": 5,
+      "must_include": [
+        "floor cushions or low bench",
+        "small low tray table",
+        "visible large glass doors/windows"
+      ],
+      "must_avoid": [
+        "high outdoor furniture blocking view",
+        "synthetic outdoor textures"
+      ]
+    }
+  ],
+  "warnings": [
+    "Many small rooms (pantry, closets, laundry, hall) are low priority and should not be over-shot — avoid creating extra camera moves that risk layout drift.",
+    "Measurements for some rooms are inferred; confirm actual window locations and ceiling heights prior to final camera placement and image-pass corrections.",
+    "Plan for an image-pass (editorial interior correction) before video generation for primary rooms (Nest, Dream, Dine) to ensure verticals, perspective, and directional light are camera-ready."
+  ]
+}

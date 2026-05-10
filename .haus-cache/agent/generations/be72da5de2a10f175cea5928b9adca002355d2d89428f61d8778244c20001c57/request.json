@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99998c/5Ck5hkmL11sXxsXdpuOaP_w0EnoYCg.png",
+    "prompt": "Extreme close-up detail shot with smooth tracking camera following harsh directional light as it grows and spreads across textured surface. Crisp shadow edges crawl and shift in real time. Camera moves with the light's path revealing texture in wood grain, fabric weave, architectural detail. Editorial film style. Neutral white balance, balanced exposure — deep dramatic shadows without underexposure. Shallow depth of field. Static zoom in (gentle slow zoom), camera tightens on the prep surface and then reveals the sightline toward the dining bay, soft daylight from bay windows fills scene, exposure stable, cinematic, photorealistic Taste (kitchen), Calm, textured minimalism — warm daylight, tactile materials, quiet family presence. Maintain believable residential scale for Taste (kitchen) at roughly medium. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "ea994f41d16ba6588e540e7899ca084838aa1a74c75e89706e8b62e9ef913f9e"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

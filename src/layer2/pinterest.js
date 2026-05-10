@@ -6,6 +6,22 @@ import {
 
 const APIFY_BASE_URL = 'https://api.apify.com/v2';
 
+function toSearchUrl(url) {
+  try {
+    const parsed = new URL(url);
+    if (parsed.pathname.startsWith('/search/')) return url;
+    // Board URL: /username/board-name/ → use board name as search query
+    const parts = parsed.pathname.split('/').filter(Boolean);
+    if (parts.length >= 2) {
+      const query = parts[1].replaceAll('-', ' ').replaceAll('_', ' ');
+      return `https://www.pinterest.com/search/pins/?q=${encodeURIComponent(query)}`;
+    }
+  } catch {
+    // fall through to original URL
+  }
+  return url;
+}
+
 export async function scrapePinterestBoard({
   boardUrl,
   limit = DEFAULT_PIN_LIMIT,
@@ -14,6 +30,7 @@ export async function scrapePinterestBoard({
   token = process.env.APIFY_TOKEN,
   fetchImpl = globalThis.fetch
 }) {
+  boardUrl = toSearchUrl(boardUrl);
   if (!actorId) {
     throw new Error('APIFY_PINTEREST_ACTOR_ID is required for Pinterest scraping.');
   }
@@ -36,6 +53,7 @@ export async function scrapePinterestBoard({
   url.searchParams.set('maxItems', String(limit));
   url.searchParams.set('maxTotalChargeUsd', String(maxTotalChargeUsd));
 
+  const clientTimeoutMs = (DEFAULT_APIFY_TIMEOUT_SECONDS + 60) * 1000;
   const response = await fetchImpl(url, {
     method: 'POST',
     headers: {
@@ -47,7 +65,8 @@ export async function scrapePinterestBoard({
       maxItems: limit,
       maxPins: limit,
       proxyConfiguration: { useApifyProxy: true }
-    })
+    }),
+    signal: AbortSignal.timeout(clientTimeoutMs)
   });
 
   const body = await response.json().catch(() => null);
@@ -56,7 +75,11 @@ export async function scrapePinterestBoard({
     throw new Error(message);
   }
 
-  return normalizePinterestPins(body).slice(0, limit);
+  const pins = normalizePinterestPins(body).slice(0, limit);
+  if (pins.length === 0) {
+    throw new Error(`Pinterest scraper returned 0 pins for ${boardUrl}. Check the board URL is public and the actor is configured correctly.`);
+  }
+  return pins;
 }
 
 export function normalizePinterestPins(items) {
