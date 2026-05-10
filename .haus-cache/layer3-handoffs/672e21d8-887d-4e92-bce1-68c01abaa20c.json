@@ -1,0 +1,964 @@
+{
+  "schema_version": "1.0",
+  "handoff_id": "62f72186-ad90-4aa9-90a8-17f208f272c8",
+  "session_id": "672e21d8-887d-4e92-bce1-68c01abaa20c",
+  "created_at": "2026-05-10T10:37:49.396Z",
+  "status": "ready_for_room_images",
+  "source_input": {
+    "floor_plan_url": "file:///Users/quamos/Repos/haus/.haus-cache/floor-plans/1aa09dc40ee4146b959697cacea0fa6fc22fc075f909eafac42fa24027afad5f.png",
+    "floor_plan_metadata": {
+      "source": "local_upload",
+      "mime_type": "image/png",
+      "size_bytes": 71152,
+      "width_px": 448,
+      "height_px": 480,
+      "sha256": "1aa09dc40ee4146b959697cacea0fa6fc22fc075f909eafac42fa24027afad5f",
+      "cache_key": "1aa09dc40ee4146b959697cacea0fa6fc22fc075f909eafac42fa24027afad5f"
+    },
+    "floor_plan_measurements": {
+      "source": "ml_parser",
+      "unit": "ft",
+      "scale": null,
+      "rooms": [
+        {
+          "room_id": null,
+          "name": "Bedroom",
+          "dimensions": {
+            "width": 11.6666666667,
+            "length": 13.6666666667,
+            "area": 159.4444444444
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Bedroom",
+          "dimensions": {
+            "width": 11.6666666667,
+            "length": 12.3333333333,
+            "area": 143.8888888889
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Living Room",
+          "dimensions": {
+            "width": 12.5,
+            "length": 14.5833333333,
+            "area": 182.2916666663
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Dining Room",
+          "dimensions": {
+            "width": 7.6666666667,
+            "length": 9.6666666667,
+            "area": 74.1111111111
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        }
+      ],
+      "notes": null
+    },
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+    "brief": "vibrant, lively, calm, and artistic vibe",
+    "objects": [
+      {
+        "object_type": "bookshelf",
+        "room_id": "living_room_nest",
+        "label": "bookshelf"
+      }
+    ],
+    "platform": "all"
+  },
+  "pinterest_intelligence": {
+    "aesthetic_profile": {
+      "palette": "earthy",
+      "lighting": "soft_ambient",
+      "density": "layered",
+      "style_era": "mid_century",
+      "dominant_colors": [
+        "#144d35",
+        "#b88b4d",
+        "#6b4026",
+        "#d9c2a6",
+        "#c85a34"
+      ],
+      "mood_words": [
+        "botanical spa",
+        "brass hardware glow",
+        "handmade tile texture",
+        "reclaimed walnut warmth",
+        "textured woven accents",
+        "curated global art"
+      ],
+      "pinterest_cluster_labels": [
+        "emerald zellige bathroom with brass fixtures",
+        "compact green-tile shower + natural stone sink",
+        "dark-green tile kitchen with walnut cabinets",
+        "mid-century gallery bedroom with warm orange accents",
+        "earthy paint & palette direction"
+      ],
+      "confidence": 0.86
+    },
+    "pins": [
+      {
+        "pin_id": "1012465559998726657",
+        "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+        "image_url": "https://i.pinimg.com/1200x/83/7a/d9/837ad964651fcfdc18bd59bad0fdd658.jpg",
+        "title": "Color Harmony Palettes 🎨 | Curated Whole House Paint Palettes for Timeless & Trendy Homes | Perfect",
+        "description": "Earthy Paint Palette, Warm Neutrals, Terracotta Colors, Natural Interior Paint, Organic Home Design, Soft Beige, Clay Tones, 2025Paint Trends, Neutral Wall Colors, Eco-Friendly Paint, Serene Interior Colors, Modern Rustic Palette, Earth Inspired Paint, Natural Home Decor, Timeless Paint Shades, Relaxing Paint Combinations, Calm Neutrals, Organic Texture, Sustainable Home Ideas, Warm Tones, Cozy Color Scheme, Natural Living Space, Muted Paint Palette, Balanced Color Flow, Vibrant Paint Palette, Bold Interior Colors, Electric Blue, Warm Coral,Modern Color Pop, Trendy Paint Ideas, Bright Color Combinations, Energetic Living Room, 2025 Color Trends, Statement Wall Colors, Bold Home Design, CreativePaint Palette, Artistic Interior Style, Colorful Wall Art, Maximalist Color Scheme",
+        "save_count": null,
+        "hashtags": [],
+        "cluster_label": "earthy color & material palette",
+        "selected_for_mood_board": true
+      },
+      {
+        "pin_id": "1012465559998726645",
+        "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+        "image_url": "https://i.pinimg.com/1200x/ed/da/8e/edda8e6061d6f8a5c695857cd55ab79a.jpg",
+        "title": "Eclectic Emerald Bathroom with Brass Glow — Modern Boho Spa Vibes",
+        "description": "Transform your bathroom into a modern boho spa with emerald green zellige tiles, brass fixtures, and a natural stone sink. The mix of textures, wood, and warm light creates an artistic, cozy, and timeless look. Salle de bain émeraude éclectique avec robinetterie en laiton, vasque en pierre naturelle et carrelage zellige artisanal. Une ambiance spa chic, chaleureuse et créative inspirée des tendances design 2025.",
+        "save_count": null,
+        "hashtags": [],
+        "cluster_label": "emerald zellige bathroom + brass spa",
+        "selected_for_mood_board": true
+      },
+      {
+        "pin_id": "1012465559998726635",
+        "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+        "image_url": "https://i.pinimg.com/1200x/d6/06/ce/d606cef3389c2c67b1d21bec8031c221.jpg",
+        "title": null,
+        "description": null,
+        "save_count": null,
+        "hashtags": [],
+        "cluster_label": "emerald zellige bathroom + brass spa",
+        "selected_for_mood_board": true
+      },
+      {
+        "pin_id": "1012465559998726622",
+        "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+        "image_url": "https://i.pinimg.com/1200x/81/4d/75/814d75e16a21a6067a55eca913e3af39.jpg",
+        "title": "brazilian modernism",
+        "description": null,
+        "save_count": null,
+        "hashtags": [],
+        "cluster_label": "green tile + walnut kitchen",
+        "selected_for_mood_board": true
+      },
+      {
+        "pin_id": "1012465559998726571",
+        "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+        "image_url": "https://i.pinimg.com/1200x/be/7f/50/be7f50a043ef7bf6eda14abe2fad19fd.jpg",
+        "title": null,
+        "description": null,
+        "save_count": null,
+        "hashtags": [],
+        "cluster_label": "mid-century bedroom gallery",
+        "selected_for_mood_board": true
+      }
+    ],
+    "cluster_summary": [
+      {
+        "label": "emerald zellige bathroom + brass spa",
+        "pin_ids": [
+          "1012465559998726645",
+          "1012465559998726635"
+        ],
+        "visual_notes": "Glossy emerald green rectangular/ zellige tiles fully enveloping shower and vanity; warm brass fixtures (shower, sconces, mirror frames); stone basin and woven textiles to add organic contrast — stage with potted foliage and textured baskets.",
+        "weight": 0.3
+      },
+      {
+        "label": "green tile + walnut kitchen",
+        "pin_ids": [
+          "1012465559998726622"
+        ],
+        "visual_notes": "Deep green vertical tiles as backsplash against rich walnut cabinetry and light marble counters; minimal hardware, geometric floor for grounding — emphasize wood grain, brass/bronze accents, and warm under-cabinet light for depth.",
+        "weight": 0.25
+      },
+      {
+        "label": "mid-century bedroom gallery",
+        "pin_ids": [
+          "1012465559998726571"
+        ],
+        "visual_notes": "Low-profile walnut platform bed, dense gallery wall of framed art in warm ochres and orange, layered kilim/handwoven rugs — stage with leather/wood bedside pieces and terracotta textiles to reinforce vintage mid-century temperament.",
+        "weight": 0.25
+      },
+      {
+        "label": "earthy color & material palette",
+        "pin_ids": [
+          "1012465559998726657"
+        ],
+        "visual_notes": "Swatch and material guidance: emerald greens, warm brass/gold, walnut browns, terracotta accents and warm beiges; recommend matte paints for walls, glazed tiles for wet areas, tactile woven rugs and natural stone surfaces.",
+        "weight": 0.2
+      }
+    ]
+  },
+  "floor_plan": {
+    "layout_type": "open_plan",
+    "total_rooms": 5,
+    "rooms": [
+      {
+        "room_id": "living_room_nest",
+        "name": "Living Room (Nest)",
+        "room_type": "living_room",
+        "area_estimate": "large",
+        "measured_dimensions": {
+          "width": 12.5,
+          "length": 14.5833333333,
+          "area": 182.2916666663
+        },
+        "measured_unit": "ft",
+        "windows": "Large exterior glazing on right wall including a bay-window projection",
+        "natural_light": "high",
+        "adjoins": [
+          "kitchen_taste",
+          "dining_room_dine",
+          "bedroom_1",
+          "bedroom_2"
+        ],
+        "generation_priority": 1
+      },
+      {
+        "room_id": "kitchen_taste",
+        "name": "Kitchen (Taste)",
+        "room_type": "kitchen",
+        "area_estimate": "medium",
+        "measured_dimensions": null,
+        "measured_unit": "ft",
+        "windows": "Opens into living and dining; limited direct exterior glazing",
+        "natural_light": "medium",
+        "adjoins": [
+          "living_room_nest",
+          "dining_room_dine"
+        ],
+        "generation_priority": 2
+      },
+      {
+        "room_id": "bedroom_1",
+        "name": "Bedroom (Dream) - larger",
+        "room_type": "bedroom",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 11.6666666667,
+          "length": 13.6666666667,
+          "area": 159.4444444444
+        },
+        "measured_unit": "ft",
+        "windows": "Exterior-facing window on exterior wall (top side)",
+        "natural_light": "medium",
+        "adjoins": [
+          "living_room_nest"
+        ],
+        "generation_priority": 3
+      },
+      {
+        "room_id": "bedroom_2",
+        "name": "Bedroom (Dream) - smaller",
+        "room_type": "bedroom",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 11.6666666667,
+          "length": 12.3333333333,
+          "area": 143.8888888889
+        },
+        "measured_unit": "ft",
+        "windows": "Exterior-facing window(s) along bottom wall",
+        "natural_light": "medium",
+        "adjoins": [
+          "living_room_nest"
+        ],
+        "generation_priority": 4
+      },
+      {
+        "room_id": "dining_room_dine",
+        "name": "Dining Room (Dine)",
+        "room_type": "dining_room",
+        "area_estimate": "small",
+        "measured_dimensions": {
+          "width": 7.6666666667,
+          "length": 9.6666666667,
+          "area": 74.1111111111
+        },
+        "measured_unit": "ft",
+        "windows": "Bay-style exterior windows on right-side projection",
+        "natural_light": "high",
+        "adjoins": [
+          "living_room_nest",
+          "kitchen_taste"
+        ],
+        "generation_priority": 5
+      }
+    ]
+  },
+  "vibe_report": {
+    "aesthetic_name": "Earthy Mid‑Century Botanical",
+    "summary": "A warm, layered mid‑century inspired home with an earthy palette anchored in emerald greens, reclaimed walnut, brass accents and tactile woven surfaces. The overall direction is calm and artistic — think botanical spa meets curated gallery: lush plants, handcrafted textures, and intentional pops of warm terracotta and ochre. Light should feel soft and directional from existing windows, sculpting materials rather than flattening them.",
+    "palette_rationale": "Use the supplied dominant colors to create continuity across rooms: deep emerald (#144d35) as an anchoring accent (tiles, occasional upholstery, art), warm brass/gold tones (#b88b4d/#c85a34) for hardware and fixtures, rich walnut browns (#6b4026) for primary furniture, and warm beiges/terracotta (#d9c2a6) for textiles and wall accents. Matte wall paints keep walls calm while glazed tile and polished stone add contrast in wet/feature areas.",
+    "lighting_mood": "Soft ambient base with strong, believable directional pulls from bay and exterior windows. Interiors read moody but legible: highlight edges and textures with crisp shadowing rather than even fill. Practicals (pendants, sconces, floor lamps) add warm localized glow near brass accents.",
+    "materials": [
+      "reclaimed walnut (furniture, shelving)",
+      "glazed zellige/ceramic tile (wet areas, backsplash)",
+      "natural stone (vanity, counters)",
+      "textured woven textiles (rugs, throws, baskets)",
+      "brass/aged bronze hardware and fixtures",
+      "matte painted walls"
+    ],
+    "textures": [
+      "handmade tile glaze (slight sheen, irregular grout)",
+      "open weave linen and kilim rugs",
+      "worn leather (chairs, small accents)",
+      "raw stone with honed finish",
+      "brushed brass patina"
+    ],
+    "furniture_language": [
+      "low-profile mid-century walnut pieces",
+      "slim tapered legs and clean silhouettes",
+      "curated global art and frames in warm tones",
+      "textile layering with kilims and handwoven throws",
+      "integrated shelving/bookcase with curated objects"
+    ],
+    "styling_rules": [
+      "Derive all directional light from visible windows/practicals — do not invent interior light sources.",
+      "Keep vertical lines true and preserve original architecture and geometry.",
+      "Limit palette accents to 2 strong colors per room (emerald + terracotta/ochre or walnut + brass).",
+      "Use plants and woven baskets to soften corners and add botanical life.",
+      "Maintain breathable staging: curated—not cluttered—surfaces, a few stacked books, ceramics, and a single large plant per primary room."
+    ],
+    "avoid": [
+      "chrome or highly reflective modern steel finishes",
+      "bright white Scandinavian minimalism",
+      "over-saturated or neon color pops",
+      "introducing unseen windows or extraneous light directions",
+      "floating or warped furniture or architectural distortion"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "living_room_nest",
+        "headline": "Warm, layered living room with botanical focus and gallery energy",
+        "guidance": "Stage a low walnut sofa facing the bay-window projection to emphasize the large exterior glazing on the right wall. Place a tall bookshelf along the left wall (object requested) filled with curated books, woven baskets, and ceramic artifacts. Add a textured kilim rug, a brass floor lamp near the sofa, and a large potted plant near the window. Keep circulation clear toward the kitchen/dining openings.",
+        "must_include": [
+          "bay-window view on right wall",
+          "reclaimed walnut sofa/coffee table",
+          "bookshelf (curated, non-cluttered)",
+          "large potted plant (e.g., fiddle leaf fig)",
+          "brass floor lamp or sconce for warm practical glow"
+        ],
+        "must_avoid": [
+          "heavy glossy surfaces",
+          "adding extra windows or changing window size",
+          "cluttered shelving",
+          "chrome finishes"
+        ]
+      },
+      {
+        "room_id": "kitchen_taste",
+        "headline": "Green-tile & walnut kitchen detail: tactile, minimal, functional",
+        "guidance": "Highlight the green tile backsplash and walnut cabinetry as the visual hero. Stage minimal countertop objects (wood cutting board, stacked ceramics, small potted herb). Use warm under-cabinet strip lighting and 1–2 understated brass pendant(s) if the plan supports them. Keep counters tidy to show materials and grain.",
+        "must_include": [
+          "deep green vertical tile backsplash",
+          "walnut cabinet faces with minimal brass hardware",
+          "marble or honed stone counter vignette (cutting board, ceramics)",
+          "under-cabinet warm strip lighting"
+        ],
+        "must_avoid": [
+          "dense clutter on counters",
+          "introducing extraneous windows",
+          "chrome or reflective steel appliances as focal points"
+        ]
+      },
+      {
+        "room_id": "bedroom_1",
+        "headline": "Mid‑century gallery bedroom with warm ochre accents",
+        "guidance": "Anchor the space with a low walnut platform bed centered on the main wall and a dense gallery of framed art in warm ochres/oranges above. Layer a textured kilim rug underfoot and include leather or wood bedside furniture. Add a woven basket and a brass sconce for reading light.",
+        "must_include": [
+          "low walnut platform bed",
+          "gallery wall with warm accent art (ochre/orange)",
+          "kilim or handwoven rug",
+          "brass sconce or bedside lamp"
+        ],
+        "must_avoid": [
+          "tall modern beds with metal frames",
+          "overly bright neon art",
+          "introducing structural changes like built-ins"
+        ]
+      },
+      {
+        "room_id": "bedroom_2",
+        "headline": "Calm secondary bedroom / guest with soft botanical accents",
+        "guidance": "Keep this room more restrained: soft earth-toned bedding, a low-profile bed/daybed, a small reading chair or desk by the window, and a modest plant. Maintain daylight from the bottom-wall windows as the primary light source.",
+        "must_include": [
+          "low-profile bed or daybed",
+          "soft terracotta/beige bedding",
+          "small desk or reading chair",
+          "potted plant near window"
+        ],
+        "must_avoid": [
+          "dense gallery walls (keep art minimal)",
+          "heavy dark drapery that blocks natural light"
+        ]
+      },
+      {
+        "room_id": "dining_room_dine",
+        "headline": "Bright bay dining with tactile table styling",
+        "guidance": "Place a round or oval wood dining table beneath a single brass pendant centered in the bay projection. Use woven runner, stacked ceramic plates, and a small vase with foliage. Keep views to the exterior clear and use the bay windows as a major source of dramatic daylight.",
+        "must_include": [
+          "round/oval wood dining table",
+          "brass pendant",
+          "bay-window view with plants",
+          "textured runner and a small ceramic vignette"
+        ],
+        "must_avoid": [
+          "oversized chandeliers that block window sightlines",
+          "adding extra furniture that clutters the bay"
+        ]
+      }
+    ],
+    "confidence": 0.86,
+    "warnings": [
+      "Preserve the exact architecture, window placements and room geometry—do not add or move openings.",
+      "Derive all directional light from visible windows and practicable fixtures; avoid creating invisible light sources during stylization.",
+      "Kitchen dimensions were not provided — confirm circulation space before adding large islands or fixtures in staging."
+    ]
+  },
+  "creative_spec": {
+    "overall_mood": "Botanical spa warmth with mid‑century poise — tactile, curated, quietly vibrant.",
+    "room_sequence": [
+      "living_room_nest",
+      "kitchen_taste",
+      "bedroom_1",
+      "bedroom_2",
+      "dining_room_dine"
+    ],
+    "global_style_notes": [
+      "Preserve verticals and geometry; correct perspective but do not alter floor plan.",
+      "Neutral, filmic white balance slightly warm (around 3200–4200K) to accentuate brass and walnut tones.",
+      "Keep exposures balanced: allow controlled shadows with retained detail; avoid global HDR boosting.",
+      "Use large plants as punctuation points to tie emerald accents across rooms.",
+      "Use brass practicals to create small warm highlights against matte surfaces."
+    ],
+    "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift",
+    "export_formats": [
+      "16:9",
+      "9:16",
+      "1:1"
+    ]
+  },
+  "room_generation_jobs": [
+    {
+      "job_id": "15a2c0ab-cad1-4bdd-8fa2-6359729a3e18",
+      "room_id": "living_room_nest",
+      "room_name": "Living Room (Nest)",
+      "room_type": "living_room",
+      "sequence_index": 0,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 12.5 by 14.5833333333 ft Living Room (Nest), Large exterior glazing on right wall including a bay-window projection windows, Primary source: large bay-window glazing on right wall (high natural light). Time of day: late morning to early afternoon for warm, slanted sunlight that sculpts textures. Practical: low-wattage brass floor lamp beside sofa to add warm fill without competing with window. Shadows should be crisp but not clipped., mid_century aesthetic, earthy color palette, layered furnishing, A warm, layered mid‑century inspired home with an earthy palette anchored in emerald greens, reclaimed walnut, brass accents and tactile woven surfaces. The overall direction is calm and artistic — think botanical spa meets curated gallery: lush plants, handcrafted textures, and intentional pops of warm terracotta and ochre. Light should feel soft and directional from existing windows, sculpting materials rather than flattening them., Wide interior composition, 35–40mm equivalent, shot from entry angle looking toward bay-window projection on right. Preserve measured dimensions: ~12.5ft x 14.58ft. Maintain true verticals and floor-to-window proportions. Furnish with low walnut sofa facing right, reclaimed-walnut coffee table, textured kilim rug, tall bookshelf on left wall (curated books, woven baskets, ceramic objects), brass floor lamp near sofa, and a large potted plant by the window. Palette: emerald accents in a single armchair or cushion, warm terracotta throws, walnut and brass hardware. Window view should remain legible—no blown highlights; exterior sky/landscape should be natural. Do not invent additional windows or change the bay projection. Keep scale believable: sofa seat height ~17–18in, bookshelf scaled to ceiling height., must include bay-window view on right wall, bookshelf (curated), reclaimed walnut sofa and coffee table, large potted plant, brass floor lamp, reclaimed walnut sofa/coffee table, bookshelf (curated, non-cluttered), large potted plant (e.g., fiddle leaf fig), brass floor lamp or sconce for warm practical glow, bookshelf, must avoid chrome or highly reflective modern steel finishes, bright white Scandinavian minimalism, over-saturated or neon color pops, introducing unseen windows or extraneous light directions, floating or warped furniture or architectural distortion, adding or resizing windows, overexposed blown-out window highlights, warped or bent verticals, chrome or highly reflective metal finishes, heavy glossy surfaces, adding extra windows or changing window size, cluttered shelving, chrome finishes, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Very slow dolly in, camera moves forward from the entry toward the bay-window, directional sunlight shifts across sofa and floor, shadows move gradually across textured surfaces, consistent exposure, cinematic, photorealistic",
+        "camera_motion": "slow_dolly",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Primary source: large bay-window glazing on right wall (high natural light). Time of day: late morning to early afternoon for warm, slanted sunlight that sculpts textures. Practical: low-wattage brass floor lamp beside sofa to add warm fill without competing with window. Shadows should be crisp but not clipped.",
+        "objects_to_include": [
+          {
+            "object_type": "bookshelf",
+            "room_id": "living_room_nest",
+            "label": "bookshelf"
+          }
+        ],
+        "must_include": [
+          "bay-window view on right wall",
+          "bookshelf (curated)",
+          "reclaimed walnut sofa and coffee table",
+          "large potted plant",
+          "brass floor lamp",
+          "reclaimed walnut sofa/coffee table",
+          "bookshelf (curated, non-cluttered)",
+          "large potted plant (e.g., fiddle leaf fig)",
+          "brass floor lamp or sconce for warm practical glow",
+          "bookshelf"
+        ],
+        "must_avoid": [
+          "chrome or highly reflective modern steel finishes",
+          "bright white Scandinavian minimalism",
+          "over-saturated or neon color pops",
+          "introducing unseen windows or extraneous light directions",
+          "floating or warped furniture or architectural distortion",
+          "adding or resizing windows",
+          "overexposed blown-out window highlights",
+          "warped or bent verticals",
+          "chrome or highly reflective metal finishes",
+          "heavy glossy surfaces",
+          "adding extra windows or changing window size",
+          "cluttered shelving",
+          "chrome finishes",
+          "people",
+          "visible brand logos"
+        ],
+        "background_constraints": [
+          {
+            "adjacent_room": "Dining Room (Dine)",
+            "adjacent_room_type": "dining_room",
+            "direction": "through the open-plan dining area",
+            "visible_objects": [
+              "dining table",
+              "dining chairs",
+              "pendant light",
+              "round/oval wood dining table",
+              "brass pendant centered in bay",
+              "bay-window view with plants",
+              "textured runner and ceramic vignette",
+              "brass pendant",
+              "textured runner and a small ceramic vignette"
+            ]
+          },
+          {
+            "adjacent_room": "Kitchen (Taste)",
+            "adjacent_room_type": "kitchen",
+            "direction": "through the open kitchen beyond the dining area",
+            "visible_objects": [
+              "kitchen cabinets",
+              "kitchen counter",
+              "deep green vertical tile backsplash",
+              "walnut cabinetry and minimal brass hardware",
+              "marble/honed counter vignette (cutting board, small herb)",
+              "under-cabinet warm strip lighting",
+              "walnut cabinet faces with minimal brass hardware",
+              "marble or honed stone counter vignette (cutting board, ceramics)"
+            ]
+          }
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "0e0f6f05-6d29-407e-8a86-56c49c79f6c1",
+      "room_id": "kitchen_taste",
+      "room_name": "Kitchen (Taste)",
+      "room_type": "kitchen",
+      "sequence_index": 1,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a medium Kitchen (Taste), Opens into living and dining; limited direct exterior glazing windows, Medium natural light from adjacent living/dining openings; highlight materials using warm under-cabinet LED strip and small pendant(s) over prep area. Directional grazing light from living room openings should define tile texture; avoid introducing additional exterior light sources., mid_century aesthetic, earthy color palette, layered furnishing, A warm, layered mid‑century inspired home with an earthy palette anchored in emerald greens, reclaimed walnut, brass accents and tactile woven surfaces. The overall direction is calm and artistic — think botanical spa meets curated gallery: lush plants, handcrafted textures, and intentional pops of warm terracotta and ochre. Light should feel soft and directional from existing windows, sculpting materials rather than flattening them., Medium-kitchen frame, 50mm-ish focal feel for material authenticity. No explicit measured dimensions provided — stage as a medium-sized open kitchen that visually connects to living/dining. Preserve cabinet height/clearances consistent with standard kitchen scale (counter height ~36in). Emphasize deep green vertical tile backsplash behind the sink/prep area, walnut lower and upper cabinetry with minimal brass pulls, honed stone counter with a small herb pot and wooden cutting board. Include a single low-profile brass pendant if plan allows. Maintain believable reflections on glazed tile but avoid mirror-like specularity., must include deep green vertical tile backsplash, walnut cabinetry and minimal brass hardware, marble/honed counter vignette (cutting board, small herb), under-cabinet warm strip lighting, walnut cabinet faces with minimal brass hardware, marble or honed stone counter vignette (cutting board, ceramics), must avoid chrome or highly reflective modern steel finishes, bright white Scandinavian minimalism, over-saturated or neon color pops, introducing unseen windows or extraneous light directions, floating or warped furniture or architectural distortion, introducing extra windows, over-HDR reflections on tile, cluttered countertops, chrome-dominant appliances, dense clutter on counters, introducing extraneous windows, chrome or reflective steel appliances as focal points, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Slow static zoom, camera holds then slowly pushes in toward the green tile backsplash and walnut grain, directional window light grazes tile surfaces producing crisp shadow edges, highlights roll off naturally, consistent exposure, cinematic, photorealistic",
+        "camera_motion": "static_zoom",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Medium natural light from adjacent living/dining openings; highlight materials using warm under-cabinet LED strip and small pendant(s) over prep area. Directional grazing light from living room openings should define tile texture; avoid introducing additional exterior light sources.",
+        "objects_to_include": [],
+        "must_include": [
+          "deep green vertical tile backsplash",
+          "walnut cabinetry and minimal brass hardware",
+          "marble/honed counter vignette (cutting board, small herb)",
+          "under-cabinet warm strip lighting",
+          "walnut cabinet faces with minimal brass hardware",
+          "marble or honed stone counter vignette (cutting board, ceramics)"
+        ],
+        "must_avoid": [
+          "chrome or highly reflective modern steel finishes",
+          "bright white Scandinavian minimalism",
+          "over-saturated or neon color pops",
+          "introducing unseen windows or extraneous light directions",
+          "floating or warped furniture or architectural distortion",
+          "introducing extra windows",
+          "over-HDR reflections on tile",
+          "cluttered countertops",
+          "chrome-dominant appliances",
+          "dense clutter on counters",
+          "introducing extraneous windows",
+          "chrome or reflective steel appliances as focal points",
+          "people",
+          "visible brand logos"
+        ],
+        "background_constraints": [
+          {
+            "adjacent_room": "Dining Room (Dine)",
+            "adjacent_room_type": "dining_room",
+            "direction": "through the open pass-through or doorway",
+            "visible_objects": [
+              "dining table",
+              "pendant light above the dining area",
+              "dining chairs",
+              "round/oval wood dining table",
+              "brass pendant centered in bay",
+              "bay-window view with plants",
+              "textured runner and ceramic vignette",
+              "brass pendant",
+              "textured runner and a small ceramic vignette"
+            ]
+          }
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "348002d7-f15a-447c-ab2f-f489757c288d",
+      "room_id": "bedroom_1",
+      "room_name": "Bedroom (Dream) - larger",
+      "room_type": "bedroom",
+      "sequence_index": 2,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 11.6666666667 by 13.6666666667 ft Bedroom (Dream) - larger, Exterior-facing window on exterior wall (top side) windows, Exterior-facing window on top side is the main source—use morning or late-afternoon directional light to create warm slanting shadows across bedding and gallery wall. Supplement with a brass sconce for controlled fill by the bed., mid_century aesthetic, earthy color palette, layered furnishing, A warm, layered mid‑century inspired home with an earthy palette anchored in emerald greens, reclaimed walnut, brass accents and tactile woven surfaces. The overall direction is calm and artistic — think botanical spa meets curated gallery: lush plants, handcrafted textures, and intentional pops of warm terracotta and ochre. Light should feel soft and directional from existing windows, sculpting materials rather than flattening them., 3/4 doorway-to-bed composition, 35mm lens feel, preserve measured dimensions ~11.67ft x 13.67ft. Low walnut platform bed centered on primary wall with layered textiles (kilim rug, woven throws). Dense gallery wall above bed in warm ochre and orange tones; leather or walnut bedside table with brass sconce. Include a small woven basket and minimal plant. Maintain verticals and window sizing—no added openings. Keep bed heights and furniture scale realistic (mattress top ~22–24in from floor including platform)., must include low walnut platform bed, gallery wall with warm ochre/orange art, kilim rug, brass bedside sconce, gallery wall with warm accent art (ochre/orange), kilim or handwoven rug, brass sconce or bedside lamp, must avoid chrome or highly reflective modern steel finishes, bright white Scandinavian minimalism, over-saturated or neon color pops, introducing unseen windows or extraneous light directions, floating or warped furniture or architectural distortion, tall metal bedframes, over-saturated orange tones, adding built-ins or structural changes, tall modern beds with metal frames, overly bright neon art, introducing structural changes like built-ins, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Parallax orbit, super smooth camera travels in a gentle arc around the bed with the bed/gallery wall staying centered, directional light from the window shifts across textiles and art, shadows move gradually, consistent exposure, cinematic, photorealistic",
+        "camera_motion": "orbital_pan",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Exterior-facing window on top side is the main source—use morning or late-afternoon directional light to create warm slanting shadows across bedding and gallery wall. Supplement with a brass sconce for controlled fill by the bed.",
+        "objects_to_include": [],
+        "must_include": [
+          "low walnut platform bed",
+          "gallery wall with warm ochre/orange art",
+          "kilim rug",
+          "brass bedside sconce",
+          "gallery wall with warm accent art (ochre/orange)",
+          "kilim or handwoven rug",
+          "brass sconce or bedside lamp"
+        ],
+        "must_avoid": [
+          "chrome or highly reflective modern steel finishes",
+          "bright white Scandinavian minimalism",
+          "over-saturated or neon color pops",
+          "introducing unseen windows or extraneous light directions",
+          "floating or warped furniture or architectural distortion",
+          "tall metal bedframes",
+          "over-saturated orange tones",
+          "adding built-ins or structural changes",
+          "tall modern beds with metal frames",
+          "overly bright neon art",
+          "introducing structural changes like built-ins",
+          "people",
+          "visible brand logos"
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "72e0ba5b-600b-4161-9b78-97c24039e0d4",
+      "room_id": "bedroom_2",
+      "room_name": "Bedroom (Dream) - smaller",
+      "room_type": "bedroom",
+      "sequence_index": 3,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 11.6666666667 by 12.3333333333 ft Bedroom (Dream) - smaller, Exterior-facing window(s) along bottom wall windows, Window(s) along bottom wall provide moderate daylight—aim for soft, even ambient light with subtle directionality. A small table lamp or wall sconce can add warm reading light for evening stills., mid_century aesthetic, earthy color palette, layered furnishing, A warm, layered mid‑century inspired home with an earthy palette anchored in emerald greens, reclaimed walnut, brass accents and tactile woven surfaces. The overall direction is calm and artistic — think botanical spa meets curated gallery: lush plants, handcrafted textures, and intentional pops of warm terracotta and ochre. Light should feel soft and directional from existing windows, sculpting materials rather than flattening them., Straight-on or slight angled bedroom shot, 35–50mm equivalent. Preserve measured dimensions ~11.67ft x 12.33ft. Furnish with low-profile bed/daybed oriented to read the window, soft terracotta/beige bedding, modest desk or reading chair by the window, and a small potted plant. Keep styling minimal and calm to differentiate from the main gallery bedroom. Maintain architecture and window sizing; do not add extra doors., must include low-profile bed or daybed, soft terracotta/beige bedding, small desk or reading chair, potted plant by window, potted plant near window, must avoid chrome or highly reflective modern steel finishes, bright white Scandinavian minimalism, over-saturated or neon color pops, introducing unseen windows or extraneous light directions, floating or warped furniture or architectural distortion, heavy drapery blocking natural light, dense wall galleries, changing window positions, dense gallery walls (keep art minimal), heavy dark drapery that blocks natural light, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Very slow dolly out, camera gently pulls backward from a near-bed vantage to reveal the whole room and window, window light softly reveals textile textures and cast gentle shadows, consistent exposure, cinematic, photorealistic",
+        "camera_motion": "slow_dolly",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Window(s) along bottom wall provide moderate daylight—aim for soft, even ambient light with subtle directionality. A small table lamp or wall sconce can add warm reading light for evening stills.",
+        "objects_to_include": [],
+        "must_include": [
+          "low-profile bed or daybed",
+          "soft terracotta/beige bedding",
+          "small desk or reading chair",
+          "potted plant by window",
+          "potted plant near window"
+        ],
+        "must_avoid": [
+          "chrome or highly reflective modern steel finishes",
+          "bright white Scandinavian minimalism",
+          "over-saturated or neon color pops",
+          "introducing unseen windows or extraneous light directions",
+          "floating or warped furniture or architectural distortion",
+          "heavy drapery blocking natural light",
+          "dense wall galleries",
+          "changing window positions",
+          "dense gallery walls (keep art minimal)",
+          "heavy dark drapery that blocks natural light",
+          "people",
+          "visible brand logos"
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "a1999484-c0a6-4d1d-84d1-c0548d323877",
+      "room_id": "dining_room_dine",
+      "room_name": "Dining Room (Dine)",
+      "room_type": "dining_room",
+      "sequence_index": 4,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 7.6666666667 by 9.6666666667 ft Dining Room (Dine), Bay-style exterior windows on right-side projection windows, High natural light from bay-style exterior windows on the right-side projection. Use the bay as a primary light source; add a single centered brass pendant to create a warm focal glow over the table for evening cues., mid_century aesthetic, earthy color palette, layered furnishing, A warm, layered mid‑century inspired home with an earthy palette anchored in emerald greens, reclaimed walnut, brass accents and tactile woven surfaces. The overall direction is calm and artistic — think botanical spa meets curated gallery: lush plants, handcrafted textures, and intentional pops of warm terracotta and ochre. Light should feel soft and directional from existing windows, sculpting materials rather than flattening them., Wide dining composition that includes the bay projection on the right. Preserve measured dimensions ~7.67ft x 9.67ft. Stage a round or oval wooden dining table with textured runner, stacked ceramic plates, and a small vase with foliage. Brass pendant centered over table; 2–4 simple chairs with walnut tones. Keep bay windows legible with exterior view; avoid blown highlights. Maintain correct scale: table height ~29–30in, chair seat ~18in., must include round/oval wood dining table, brass pendant centered in bay, bay-window view with plants, textured runner and ceramic vignette, brass pendant, textured runner and a small ceramic vignette, must avoid chrome or highly reflective modern steel finishes, bright white Scandinavian minimalism, over-saturated or neon color pops, introducing unseen windows or extraneous light directions, floating or warped furniture or architectural distortion, oversized chandeliers, cluttering the bay with extra furniture, introducing unseen light sources, oversized chandeliers that block window sightlines, adding extra furniture that clutters the bay, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Parallax orbit, super smooth camera travels in a slight arc around the dining table keeping the bay-window view and table centered, daylight moves across tabletop and runner producing crisp shadow edges, consistent exposure, cinematic, photorealistic",
+        "camera_motion": "orbital_pan",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "High natural light from bay-style exterior windows on the right-side projection. Use the bay as a primary light source; add a single centered brass pendant to create a warm focal glow over the table for evening cues.",
+        "objects_to_include": [],
+        "must_include": [
+          "round/oval wood dining table",
+          "brass pendant centered in bay",
+          "bay-window view with plants",
+          "textured runner and ceramic vignette",
+          "brass pendant",
+          "textured runner and a small ceramic vignette"
+        ],
+        "must_avoid": [
+          "chrome or highly reflective modern steel finishes",
+          "bright white Scandinavian minimalism",
+          "over-saturated or neon color pops",
+          "introducing unseen windows or extraneous light directions",
+          "floating or warped furniture or architectural distortion",
+          "oversized chandeliers",
+          "cluttering the bay with extra furniture",
+          "introducing unseen light sources",
+          "oversized chandeliers that block window sightlines",
+          "adding extra furniture that clutters the bay",
+          "people",
+          "visible brand logos"
+        ],
+        "background_constraints": [
+          {
+            "adjacent_room": "Kitchen (Taste)",
+            "adjacent_room_type": "kitchen",
+            "direction": "through the open kitchen",
+            "visible_objects": [
+              "kitchen cabinets",
+              "range hood",
+              "kitchen island or counter",
+              "deep green vertical tile backsplash",
+              "walnut cabinetry and minimal brass hardware",
+              "marble/honed counter vignette (cutting board, small herb)",
+              "under-cabinet warm strip lighting",
+              "walnut cabinet faces with minimal brass hardware",
+              "marble or honed stone counter vignette (cutting board, ceramics)"
+            ]
+          },
+          {
+            "adjacent_room": "Living Room (Nest)",
+            "adjacent_room_type": "living_room",
+            "direction": "through the open-plan living area",
+            "visible_objects": [
+              "sofa",
+              "coffee table",
+              "area rug",
+              "bay-window view on right wall",
+              "bookshelf (curated)",
+              "reclaimed walnut sofa and coffee table",
+              "large potted plant",
+              "brass floor lamp",
+              "reclaimed walnut sofa/coffee table",
+              "bookshelf (curated, non-cluttered)",
+              "large potted plant (e.g., fiddle leaf fig)",
+              "brass floor lamp or sconce for warm practical glow",
+              "bookshelf"
+            ]
+          }
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    }
+  ],
+  "delivery": {
+    "requested_platforms": [
+      "instagram",
+      "tiktok",
+      "listing",
+      "portfolio"
+    ],
+    "video_formats": [
+      "16:9",
+      "9:16",
+      "1:1"
+    ],
+    "caption_context": {
+      "property_brief": "vibrant, lively, calm, and artistic vibe",
+      "aesthetic_summary": "A warm, layered mid‑century inspired home with an earthy palette anchored in emerald greens, reclaimed walnut, brass accents and tactile woven surfaces. The overall direction is calm and artistic — think botanical spa meets curated gallery: lush plants, handcrafted textures, and intentional pops of warm terracotta and ochre. Light should feel soft and directional from existing windows, sculpting materials rather than flattening them.",
+      "featured_objects": [
+        "bookshelf"
+      ],
+      "tone": "luxury_listing"
+    },
+    "mood_board": {
+      "include_pin_ids": [
+        "1012465559998726657",
+        "1012465559998726645",
+        "1012465559998726635",
+        "1012465559998726622",
+        "1012465559998726571"
+      ],
+      "include_room_ids": [
+        "living_room_nest",
+        "kitchen_taste",
+        "bedroom_1",
+        "bedroom_2",
+        "dining_room_dine"
+      ],
+      "annotations": [
+        {
+          "label": "Aesthetic",
+          "value": "Earthy Mid‑Century Botanical"
+        },
+        {
+          "label": "Palette",
+          "value": "earthy"
+        },
+        {
+          "label": "Lighting",
+          "value": "soft_ambient"
+        },
+        {
+          "label": "Mood",
+          "value": "Botanical spa warmth with mid‑century poise — tactile, curated, quietly vibrant."
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "layer_1_payload_created_at": "2026-05-10T10:36:03.731Z",
+    "pinterest_scrape": {
+      "provider": "apify",
+      "item_count": 5,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    "models": {
+      "aesthetic_extraction": "gpt-5-mini",
+      "floor_plan_parsing": "gpt-5-mini",
+      "creative_spec": "gpt-5-mini"
+    }
+  },
+  "warnings": [
+    {
+      "code": "creative_plan_warning",
+      "message": "Preserve architecture and measured room geometry; do not add or reposition windows, walls, or major fixtures.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "creative_plan_warning",
+      "message": "All directional light must be derived from the visible windows or practical fixtures specified in each scene; avoid inventing light sources.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "creative_plan_warning",
+      "message": "Kitchen layout lacks measured dimensions—verify clearance and island planning before committing to large pieces in staging.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "creative_plan_warning",
+      "message": "During video generation keep camera motion stable and short (5s first-pass) to avoid drift and layout deformation.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "vibe_report_warning",
+      "message": "Preserve the exact architecture, window placements and room geometry—do not add or move openings.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "vibe_report_warning",
+      "message": "Derive all directional light from visible windows and practicable fixtures; avoid creating invisible light sources during stylization.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "vibe_report_warning",
+      "message": "Kitchen dimensions were not provided — confirm circulation space before adding large islands or fixtures in staging.",
+      "severity": "warning",
+      "affected_room_ids": []
+    }
+  ]
+}

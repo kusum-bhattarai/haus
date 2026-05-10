@@ -6,7 +6,7 @@ let floorPlans = [
     displaySqft: '689 sq ft',
     price: 'Starting at $2,040',
     available: 'Available now',
-    imageUrl: 'floor_plans/1b1.png',
+    imageUrl: '/floor_plans/1b1.png',
     hotspots: [
       { key: 'dream-1', label: 'Dream', roomType: 'bedroom', occurrence: 0, points: '13,9 50,9 50,39 13,39' },
       { key: 'revive-1', label: 'Revive', roomType: 'bathroom', occurrence: 0, points: '72,9 96,9 96,31 72,31' },
@@ -24,7 +24,7 @@ let floorPlans = [
     displaySqft: '988 sq ft',
     price: 'Starting at $2,620',
     available: '2 homes left',
-    imageUrl: 'floor_plans/2b2.png',
+    imageUrl: '/floor_plans/2b2.png',
     hotspots: [
       { key: 'dream-1', label: 'Dream', roomType: 'bedroom', occurrence: 0, points: '18,10 66,10 66,35 18,35' },
       { key: 'relax-1', label: 'Relax', roomType: 'patio', occurrence: 0, points: '76,5 96,5 96,34 76,34' },
@@ -44,7 +44,7 @@ let floorPlans = [
     displaySqft: '1,250 sq ft',
     price: 'Starting at $3,180',
     available: 'Available June 7',
-    imageUrl: 'floor_plans/3b2.png',
+    imageUrl: '/floor_plans/3b2.png',
     hotspots: [
       { key: 'watch-1', label: 'Watch', roomType: 'other', occurrence: 0, points: '46,0 61,0 61,8 46,8' },
       { key: 'nest-1', label: 'Nest', roomType: 'living_room', occurrence: 0, points: '38,8 70,8 70,28 38,28' },

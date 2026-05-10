@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99a337/VxFS463paJxXy7kL5mon-_Z02iyxgT.png",
+    "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Very slow dolly in, camera moves forward from the entry toward the bay-window, directional sunlight shifts across sofa and floor, shadows move gradually across textured surfaces, consistent exposure, cinematic, photorealistic Living Room (Nest), Botanical spa warmth with mid‑century poise — tactile, curated, quietly vibrant. Maintain believable residential scale for a 12.5 by 14.5833333333 ft Living Room (Nest). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "b2833323f78495c8555aefc43947f4d4716dec6449e22a0e19b9b4324f6985fa"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

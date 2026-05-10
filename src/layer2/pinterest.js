@@ -6,22 +6,6 @@ import {
 
 const APIFY_BASE_URL = 'https://api.apify.com/v2';
 
-function toSearchUrl(url) {
-  try {
-    const parsed = new URL(url);
-    if (parsed.pathname.startsWith('/search/')) return url;
-    // Board URL: /username/board-name/ → use board name as search query
-    const parts = parsed.pathname.split('/').filter(Boolean);
-    if (parts.length >= 2) {
-      const query = parts[1].replaceAll('-', ' ').replaceAll('_', ' ');
-      return `https://www.pinterest.com/search/pins/?q=${encodeURIComponent(query)}`;
-    }
-  } catch {
-    // fall through to original URL
-  }
-  return url;
-}
-
 export async function scrapePinterestBoard({
   boardUrl,
   limit = DEFAULT_PIN_LIMIT,
@@ -30,7 +14,6 @@ export async function scrapePinterestBoard({
   token = process.env.APIFY_TOKEN,
   fetchImpl = globalThis.fetch
 }) {
-  boardUrl = toSearchUrl(boardUrl);
   if (!actorId) {
     throw new Error('APIFY_PINTEREST_ACTOR_ID is required for Pinterest scraping.');
   }

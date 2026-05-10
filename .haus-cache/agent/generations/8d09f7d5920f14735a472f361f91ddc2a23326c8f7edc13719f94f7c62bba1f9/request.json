@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99a33f/MXRG0FmymOM4_R4Mno76p_N89SHMSo.png",
+    "prompt": "Very slow truck right, time-lapse light progression, camera slides laterally while light shifts across the space, shadows gradually move and lengthen, parallax effect, consistent exposure, stable motion, cinematic, photorealistic Parallax orbit, super smooth camera travels in a slight arc around the dining table keeping the bay-window view and table centered, daylight moves across tabletop and runner producing crisp shadow edges, consistent exposure, cinematic, photorealistic Dining Room (Dine), Botanical spa warmth with mid‑century poise — tactile, curated, quietly vibrant. Maintain believable residential scale for a 7.6666666667 by 9.6666666667 ft Dining Room (Dine). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "989b10ea5e9177137d587aa2879af37f1213e2a85c2a0940e6b1622552dbd4ec"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

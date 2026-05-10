@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99a337/oioxAMLuX8ji-gQc5cMAf_FkwK3eR6.png",
+    "prompt": "Very slow truck right, time-lapse light progression, camera slides laterally while light shifts across the space, shadows gradually move and lengthen, parallax effect, consistent exposure, stable motion, cinematic, photorealistic Parallax orbit, super smooth camera travels in a gentle arc around the bed with the bed/gallery wall staying centered, directional light from the window shifts across textiles and art, shadows move gradually, consistent exposure, cinematic, photorealistic Bedroom (Dream) - larger, Botanical spa warmth with mid‑century poise — tactile, curated, quietly vibrant. Maintain believable residential scale for a 11.6666666667 by 13.6666666667 ft Bedroom (Dream) - larger. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "e749d44f1403bcb16ea52bcafb8cc3d98921dc7b9cca4abae5f855a83cbfc975"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

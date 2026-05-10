@@ -2,11 +2,18 @@
   "schema_version": "1.0",
   "styles": [
     {
+      "style_id": "earthy-mid-century-botanical-6f717066",
+      "aesthetic_name": "Earthy Mid‑Century Botanical",
+      "summary": "A warm, layered mid‑century inspired home with an earthy palette anchored in emerald greens, reclaimed walnut, brass accents and tactile woven surfaces. The overall direction is calm and artistic — think botanical spa meets curated gallery: lush plants, handcrafted textures, and intentional pops of warm terracotta and ochre. Light should feel soft and directional from existing windows, sculpting materials rather than flattening them.",
+      "pinterest_board_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+      "path": "/Users/quamos/Repos/haus/.haus-cache/style-library/earthy-mid-century-botanical-6f717066.json"
+    },
+    {
       "style_id": "warm-japandi-family-calm-8b43cf81",
       "aesthetic_name": "Warm Japandi Family Calm",
       "summary": "A warm, restrained Japandi approach that balances Scandinavian lightness with Japanese restraint to create a calm, family-friendly home. Soft, warm neutrals, layered natural textures, and simple, low-profile furniture compose spaces that feel meditative yet practical — with a compact, comfortable work corner and a safe, serene sleep area for a young child.",
       "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
-      "path": "/Users/tarive/haus/haus/.haus-cache/style-library/warm-japandi-family-calm-8b43cf81.json"
+      "path": "/Users/quamos/Repos/haus/.haus-cache/style-library/warm-japandi-family-calm-8b43cf81.json"
     }
   ]
 }

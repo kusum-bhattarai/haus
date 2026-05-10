@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "job_id": "dade9d89-bda1-47c0-970e-37af5dc9cb29",
+  "session_id": null,
+  "status": "failed",
+  "current_state": "FAILED",
+  "created_at": "2026-05-10T11:11:28.172Z",
+  "updated_at": "2026-05-10T11:11:33.625Z",
+  "input": {
+    "floor_plan_id": "1b1",
+    "pinterest_board_url": "https://www.pinterest.com/example/warm-japandi-home/",
+    "brief": "Warm, calm home for a young family that needs a cozy work corner.",
+    "objects": [
+      "crib",
+      "standing_desk"
+    ],
+    "platform": "all"
+  },
+  "floor_plan": {
+    "id": "1b1",
+    "name": "Unit A1",
+    "layout": "1 Bedroom / 1 Bath",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "sqft": 689,
+    "displaySqft": "689 sq ft",
+    "price": "Starting at $2,040",
+    "available": "Available now",
+    "imageUrl": "/floor_plans/1b1.png",
+    "hotspots": [
+      {
+        "key": "dream-1",
+        "label": "Dream",
+        "roomType": "bedroom",
+        "occurrence": 0,
+        "points": "13,9 50,9 50,39 13,39"
+      },
+      {
+        "key": "revive-1",
+        "label": "Revive",
+        "roomType": "bathroom",
+        "occurrence": 0,
+        "points": "72,9 96,9 96,31 72,31"
+      },
+      {
+        "key": "surf-1",
+        "label": "Surf",
+        "roomType": "foyer",
+        "occurrence": 0,
+        "points": "26,37 50,37 50,53 26,53"
+      },
+      {
+        "key": "taste-1",
+        "label": "Taste",
+        "roomType": "kitchen",
+        "occurrence": 0,
+        "points": "64,43 94,43 94,69 64,69"
+      },
+      {
+        "key": "nest-1",
+        "label": "Nest",
+        "roomType": "living_room",
+        "occurrence": 0,
+        "points": "17,53 63,53 63,86 17,86"
+      },
+      {
+        "key": "dine-1",
+        "label": "Dine",
+        "roomType": "dining",
+        "occurrence": 0,
+        "points": "62,55 93,55 93,78 62,78"
+      },
+      {
+        "key": "relax-1",
+        "label": "Relax",
+        "roomType": "patio",
+        "occurrence": 0,
+        "points": "32,74 60,74 60,92 32,92"
+      }
+    ]
+  },
+  "runtime": {
+    "fast_mode": true
+  },
+  "payload": null,
+  "profile": null,
+  "handoff": null,
+  "rooms": [],
+  "artifacts": {
+    "asset_bank": null,
+    "asset_bank_path": null,
+    "shot_manifest": null,
+    "shot_manifest_path": null,
+    "timeline": null,
+    "timeline_path": null,
+    "review_report": null,
+    "review_report_path": null,
+    "narration_script": null,
+    "voiceover_path": null,
+    "subtitles_path": null,
+    "music_bed_path": null,
+    "approved_room_clips": [],
+    "final_video_path": null,
+    "captions": null,
+    "outputs": []
+  },
+  "events": [
+    {
+      "event_id": "a23e4af4-8b48-4135-a256-88551c46cd6c",
+      "at": "2026-05-10T11:11:28.173Z",
+      "room_id": null,
+      "type": "job.created",
+      "state": "CREATED",
+      "message": "Job created."
+    },
+    {
+      "event_id": "1ec759eb-1873-4c38-88ee-5eb049e8e8fb",
+      "at": "2026-05-10T11:11:28.174Z",
+      "room_id": null,
+      "type": "layers.started",
+      "state": "LAYERS_1_3_RUNNING",
+      "message": "Running Layers 1-3."
+    },
+    {
+      "event_id": "8d868528-033a-452b-a89c-261c2eb0a958",
+      "at": "2026-05-10T11:11:33.625Z",
+      "room_id": null,
+      "type": "job.failed",
+      "state": "FAILED",
+      "message": "Pinterest scraper returned 0 pins for https://www.pinterest.com/example/warm-japandi-home/. Check the board URL is public and the actor is configured correctly."
+    }
+  ],
+  "warnings": [
+    {
+      "code": "agent_runtime_failed",
+      "message": "Pinterest scraper returned 0 pins for https://www.pinterest.com/example/warm-japandi-home/. Check the board URL is public and the actor is configured correctly.",
+      "severity": "error"
+    }
+  ]
+}

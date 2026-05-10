@@ -31,38 +31,16 @@ const FLOOR_PLANS = [
   { id: '3b2', image: 'frontend/floor_plans/3b2.png', name: 'Unit C3', layout: '3 BED / 2 BATH', sqft: '1,250 SQ FT', price: 'STARTING AT $3,180' }
 ];
 
-const ROOM_COPY = {
-  nest_living: {
-    title: 'NEST',
-    narration: 'Here is the Japandi board applied: low sofa, wood table, desk corner, and patio light.',
-    subtitle: 'YOUR PINTEREST STYLE, APPLIED.'
-  },
-  dream_bedroom: {
-    title: 'DREAM',
-    narration: 'The bedroom keeps the crib, platform bed, and soft textiles calm from day one.',
-    subtitle: 'BEDROOM PREVIEW BEFORE MOVE-IN.'
-  },
-  taste_kitchen: {
-    title: 'TASTE',
-    narration: 'Kitchen detail: ceramics, cutting board, matte hardware, and a clean counter line.',
-    subtitle: 'STYLE-MATCHED KITCHEN DETAIL.'
-  },
-  dine_dining: {
-    title: 'DINE',
-    narration: 'Dining shows the round oak table, rattan pendant, and the window light buyers remember.',
-    subtitle: 'OAK, RATTAN, WINDOW LIGHT.'
-  },
-  relax_patio: {
-    title: 'RELAX',
-    narration: 'The patio completes the story with low seating, lantern glow, and indoor outdoor calm.',
-    subtitle: 'THE INDOOR OUTDOOR MOMENT.'
-  },
-  revive_bathroom: {
-    title: 'REVIVE',
-    narration: 'Even the bathroom gets the same direction: matte vanity, folded towels, spa texture.',
-    subtitle: 'EVERY ROOM GETS THE STYLE.'
-  }
-};
+function buildVibeCopy(job) {
+  const vibe = job.handoff?.vibe_report ?? {};
+  const guidanceMap = new Map((vibe.room_guidance ?? []).map((g) => [g.room_id, g]));
+  return {
+    guidanceMap,
+    aestheticName: vibe.aesthetic_name ?? 'Your Style',
+    summary: vibe.summary ?? null,
+    topMaterial: (vibe.materials ?? [])[0] ?? null
+  };
+}
 
 async function main() {
   loadDotEnv();
@@ -100,22 +78,28 @@ function buildScenePlan(job) {
   const clips = new Map((job.artifacts?.approved_room_clips ?? []).map((clip) => [clip.room_id, clip.path]));
   const order = job.handoff?.creative_spec?.room_sequence ?? [];
   const roomJobs = new Map((job.handoff?.room_generation_jobs ?? []).map((room) => [room.room_id, room]));
+  const { guidanceMap, aestheticName, summary, topMaterial } = buildVibeCopy(job);
+
+  const hookNarration = summary
+    ? `${summary.slice(0, 130).replace(/\s\S+$/, '')}. That is what Haus builds for Springmarc.`
+    : 'At Springmarc, your future home starts as a floor plan you can actually see.';
+
   const scenes = [
     {
       id: 'hook',
       type: 'card',
       title: 'SPRINGMARC',
       lines: ['PICK A FLOOR PLAN', 'SEE THE HOME FIRST'],
-      narration: 'At Springmarc, your future home starts as a floor plan you can actually see.',
+      narration: hookNarration,
       subtitle: 'SEE IT BEFORE IT IS BUILT.'
     },
     {
       id: 'style_feature',
       type: 'card',
       title: 'CHOOSE ANY STYLE',
-      lines: ['PASTE A PINTEREST BOARD', 'HAUS DESIGNS THE UNIT'],
-      narration: 'Choose any Pinterest style, and Haus turns the plan into a real design preview.',
-      subtitle: 'ANY STYLE. SAME FLOOR PLAN.'
+      lines: ['PASTE A PINTEREST BOARD', 'HAUS APPLIES THE STYLE'],
+      narration: `Paste a Pinterest board. Haus reads the aesthetic — ${aestheticName} — and stages every room to match.`,
+      subtitle: `${aestheticName.toUpperCase()}. APPLIED.`
     },
     ...FLOOR_PLANS.map((plan) => ({
       id: plan.id,
@@ -129,29 +113,38 @@ function buildScenePlan(job) {
   ];
 
   for (const roomId of order) {
-    const copy = ROOM_COPY[roomId];
     const clipPath = clips.get(roomId);
-    if (!copy || !clipPath) continue;
+    if (!clipPath) continue;
     const room = roomJobs.get(roomId);
+    const guidance = guidanceMap.get(roomId);
+    const titleWord = roomId.split('_')[0].toUpperCase();
+    const narration = guidance?.headline
+      ?? (topMaterial ? `${titleWord.slice(0, 1) + titleWord.slice(1).toLowerCase()} styled with ${topMaterial}.` : `${titleWord.slice(0, 1) + titleWord.slice(1).toLowerCase()} — ${aestheticName}.`);
+    const subtitleSource = guidance?.must_include?.[0] ?? aestheticName;
+    const subtitle = subtitleSource.toUpperCase().replace(/[^A-Z0-9 '$.,:;!?-]/g, '').slice(0, 40);
     scenes.push({
       id: roomId,
       type: 'clip',
-      title: copy.title,
+      title: titleWord,
       clip_path: clipPath,
-      narration: copy.narration,
-      subtitle: copy.subtitle,
+      narration,
+      subtitle,
       motion: room?.video_generation?.camera_motion ?? null,
       must_include: room?.staging?.must_include ?? [],
       objects: room?.staging?.objects_to_include ?? []
     });
   }
 
+  const closeNarration = topMaterial
+    ? `From floor plan to ${aestheticName} — ${topMaterial}, every room, buyer ready.`
+    : 'That is the offer: from floor plan, to style matched clips, to a buyer ready reel.';
+
   scenes.push({
     id: 'close',
     type: 'card',
     title: 'HAUS FOR SPRINGMARC',
     lines: ['REAL ESTATE REELS', 'FROM A FLOOR PLAN'],
-    narration: 'That is the offer: from floor plan, to style matched clips, to a buyer ready reel.',
+    narration: closeNarration,
     subtitle: 'FROM FLOOR PLAN TO BUYER REEL.'
   });
   return scenes.map((scene, index) => ({ ...scene, index }));

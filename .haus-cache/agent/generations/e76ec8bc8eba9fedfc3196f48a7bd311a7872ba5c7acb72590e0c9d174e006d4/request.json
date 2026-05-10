@@ -1,0 +1,12 @@
+{
+  "endpoint_id": "fal-ai/nano-banana-2",
+  "params": {
+    "prompt": "Photorealistic editorial interior reference photograph of a Living Room (Nest). Focus tightly on: sofa, coffee table, area rug, bay-window view on right wall, bookshelf (curated), reclaimed walnut sofa and coffee table, large potted plant, brass floor lamp, reclaimed walnut sofa/coffee table, bookshelf (curated, non-cluttered), large potted plant (e.g., fiddle leaf fig), brass floor lamp or sconce for warm practical glow, bookshelf. Styled in mid_century aesthetic, earthy palette, soft_ambient lighting. A warm, layered mid‑century inspired home with an earthy palette anchored in emerald greens, reclaimed walnut, brass accents and tactile woven surfaces. The overall direction is calm and artistic — think botanical spa meets curated gallery: lush plants, handcrafted textures, and intentional pops of warm terracotta and ochre. Light should feel soft and directional from existing windows, sculpting materials rather than flattening them. This image is a visual consistency reference — every detail of the featured furniture and fixtures must be clearly visible and precisely rendered. No people. No visible brand logos. Sharp architectural photography. Luxury real estate staging.",
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

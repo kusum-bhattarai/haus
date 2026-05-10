@@ -1,0 +1,99 @@
+{
+  "rooms": [
+    {
+      "room_id": "living_room_nest",
+      "name": "Living Room (Nest)",
+      "room_type": "living_room",
+      "area_estimate": "large",
+      "measured_dimensions": {
+        "width": 12.5,
+        "length": 14.5833333333,
+        "area": 182.2916666663
+      },
+      "measured_unit": "ft",
+      "windows": "Large exterior glazing on right wall including a bay-window projection",
+      "natural_light": "high",
+      "adjoins": [
+        "kitchen_taste",
+        "dining_room_dine",
+        "bedroom_1",
+        "bedroom_2"
+      ],
+      "generation_priority": 1
+    },
+    {
+      "room_id": "kitchen_taste",
+      "name": "Kitchen (Taste)",
+      "room_type": "kitchen",
+      "area_estimate": "medium",
+      "measured_dimensions": null,
+      "measured_unit": "ft",
+      "windows": "Opens into living and dining; limited direct exterior glazing",
+      "natural_light": "medium",
+      "adjoins": [
+        "living_room_nest",
+        "dining_room_dine"
+      ],
+      "generation_priority": 2
+    },
+    {
+      "room_id": "bedroom_1",
+      "name": "Bedroom (Dream) - larger",
+      "room_type": "bedroom",
+      "area_estimate": "medium",
+      "measured_dimensions": {
+        "width": 11.6666666667,
+        "length": 13.6666666667,
+        "area": 159.4444444444
+      },
+      "measured_unit": "ft",
+      "windows": "Exterior-facing window on exterior wall (top side)",
+      "natural_light": "medium",
+      "adjoins": [
+        "living_room_nest"
+      ],
+      "generation_priority": 3
+    },
+    {
+      "room_id": "bedroom_2",
+      "name": "Bedroom (Dream) - smaller",
+      "room_type": "bedroom",
+      "area_estimate": "medium",
+      "measured_dimensions": {
+        "width": 11.6666666667,
+        "length": 12.3333333333,
+        "area": 143.8888888889
+      },
+      "measured_unit": "ft",
+      "windows": "Exterior-facing window(s) along bottom wall",
+      "natural_light": "medium",
+      "adjoins": [
+        "living_room_nest"
+      ],
+      "generation_priority": 4
+    },
+    {
+      "room_id": "dining_room_dine",
+      "name": "Dining Room (Dine)",
+      "room_type": "dining_room",
+      "area_estimate": "small",
+      "measured_dimensions": {
+        "width": 7.6666666667,
+        "length": 9.6666666667,
+        "area": 74.1111111111
+      },
+      "measured_unit": "ft",
+      "windows": "Bay-style exterior windows on right-side projection",
+      "natural_light": "high",
+      "adjoins": [
+        "living_room_nest",
+        "kitchen_taste"
+      ],
+      "generation_priority": 5
+    }
+  ],
+  "total_rooms": 5,
+  "layout_type": "open_plan",
+  "confidence": 0.9,
+  "notes": "Labels on plan: 'Nest' = living room, 'Taste' = kitchen, 'Dream' = bedrooms, 'Dine' = dining. Service spaces (bathrooms, closets, laundry, storage, entry) were excluded per instructions. Measured dimensions taken from provided ML parser; kitchen dimensions not provided."
+}

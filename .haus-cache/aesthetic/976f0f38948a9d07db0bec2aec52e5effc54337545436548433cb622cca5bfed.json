@@ -1,0 +1,64 @@
+{
+  "palette": "earthy",
+  "lighting": "soft_ambient",
+  "density": "layered",
+  "style_era": "mid_century",
+  "dominant_colors": [
+    "#144d35",
+    "#b88b4d",
+    "#6b4026",
+    "#d9c2a6",
+    "#c85a34"
+  ],
+  "mood_words": [
+    "botanical spa",
+    "brass hardware glow",
+    "handmade tile texture",
+    "reclaimed walnut warmth",
+    "textured woven accents",
+    "curated global art"
+  ],
+  "pinterest_cluster_labels": [
+    "emerald zellige bathroom with brass fixtures",
+    "compact green-tile shower + natural stone sink",
+    "dark-green tile kitchen with walnut cabinets",
+    "mid-century gallery bedroom with warm orange accents",
+    "earthy paint & palette direction"
+  ],
+  "cluster_summary": [
+    {
+      "label": "emerald zellige bathroom + brass spa",
+      "pin_ids": [
+        "1012465559998726645",
+        "1012465559998726635"
+      ],
+      "visual_notes": "Glossy emerald green rectangular/ zellige tiles fully enveloping shower and vanity; warm brass fixtures (shower, sconces, mirror frames); stone basin and woven textiles to add organic contrast — stage with potted foliage and textured baskets.",
+      "weight": 0.3
+    },
+    {
+      "label": "green tile + walnut kitchen",
+      "pin_ids": [
+        "1012465559998726622"
+      ],
+      "visual_notes": "Deep green vertical tiles as backsplash against rich walnut cabinetry and light marble counters; minimal hardware, geometric floor for grounding — emphasize wood grain, brass/bronze accents, and warm under-cabinet light for depth.",
+      "weight": 0.25
+    },
+    {
+      "label": "mid-century bedroom gallery",
+      "pin_ids": [
+        "1012465559998726571"
+      ],
+      "visual_notes": "Low-profile walnut platform bed, dense gallery wall of framed art in warm ochres and orange, layered kilim/handwoven rugs — stage with leather/wood bedside pieces and terracotta textiles to reinforce vintage mid-century temperament.",
+      "weight": 0.25
+    },
+    {
+      "label": "earthy color & material palette",
+      "pin_ids": [
+        "1012465559998726657"
+      ],
+      "visual_notes": "Swatch and material guidance: emerald greens, warm brass/gold, walnut browns, terracotta accents and warm beiges; recommend matte paints for walls, glazed tiles for wet areas, tactile woven rugs and natural stone surfaces.",
+      "weight": 0.2
+    }
+  ],
+  "confidence": 0.86
+}

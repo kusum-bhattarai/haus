@@ -1,0 +1,3 @@
+{"event_id":"7fe51c72-3fda-4e37-a8b1-a6b2d0679d0f","at":"2026-05-10T10:26:54.714Z","room_id":null,"type":"job.created","state":"CREATED","message":"Job created."}
+{"event_id":"8b5495fb-f9ab-4a32-9c61-d2e9df6a0a9b","at":"2026-05-10T10:26:54.717Z","room_id":null,"type":"layers.started","state":"LAYERS_1_3_RUNNING","message":"Running Layers 1-3."}
+{"event_id":"910984af-fb42-4cab-80f3-8cdee197ea44","at":"2026-05-10T10:28:55.611Z","room_id":null,"type":"job.failed","state":"FAILED","message":"Actor run did not succeed (run ID: Ys60PFIephtBhJOgR, status: TIMED-OUT)."}
