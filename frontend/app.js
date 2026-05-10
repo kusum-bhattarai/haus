@@ -6,7 +6,16 @@ let floorPlans = [
     displaySqft: '689 sq ft',
     price: 'Starting at $2,040',
     available: 'Available now',
-    imageUrl: '/floor_plans/1b1.png'
+    imageUrl: '/floor_plans/1b1.svg',
+    hotspots: [
+      { key: 'dream-1', label: 'Dream', roomType: 'bedroom', occurrence: 0, points: '13,9 50,9 50,39 13,39' },
+      { key: 'revive-1', label: 'Revive', roomType: 'bathroom', occurrence: 0, points: '72,9 96,9 96,31 72,31' },
+      { key: 'surf-1', label: 'Surf', roomType: 'foyer', occurrence: 0, points: '26,37 50,37 50,53 26,53' },
+      { key: 'taste-1', label: 'Taste', roomType: 'kitchen', occurrence: 0, points: '64,43 94,43 94,69 64,69' },
+      { key: 'nest-1', label: 'Nest', roomType: 'living_room', occurrence: 0, points: '17,53 63,53 63,86 17,86' },
+      { key: 'dine-1', label: 'Dine', roomType: 'dining', occurrence: 0, points: '62,55 93,55 93,78 62,78' },
+      { key: 'relax-1', label: 'Relax', roomType: 'patio', occurrence: 0, points: '32,74 60,74 60,92 32,92' }
+    ]
   },
   {
     id: '2b2',
@@ -15,7 +24,18 @@ let floorPlans = [
     displaySqft: '988 sq ft',
     price: 'Starting at $2,620',
     available: '2 homes left',
-    imageUrl: '/floor_plans/2b2.png'
+    imageUrl: '/floor_plans/2b2.svg',
+    hotspots: [
+      { key: 'dream-1', label: 'Dream', roomType: 'bedroom', occurrence: 0, points: '18,10 66,10 66,35 18,35' },
+      { key: 'relax-1', label: 'Relax', roomType: 'patio', occurrence: 0, points: '76,5 96,5 96,34 76,34' },
+      { key: 'revive-1', label: 'Revive', roomType: 'bathroom', occurrence: 0, points: '3,19 21,19 21,42 3,42' },
+      { key: 'revive-2', label: 'Revive', roomType: 'bathroom', occurrence: 1, points: '3,43 21,43 21,61 3,61' },
+      { key: 'taste-1', label: 'Taste', roomType: 'kitchen', occurrence: 0, points: '43,34 79,34 79,58 43,58' },
+      { key: 'dine-1', label: 'Dine', roomType: 'dining', occurrence: 0, points: '80,34 98,34 98,61 80,61' },
+      { key: 'dream-2', label: 'Dream', roomType: 'bedroom', occurrence: 1, points: '13,56 44,56 44,92 13,92' },
+      { key: 'nest-1', label: 'Nest', roomType: 'living_room', occurrence: 0, points: '48,54 92,54 92,88 48,88' },
+      { key: 'surf-1', label: 'Surf', roomType: 'foyer', occurrence: 0, points: '47,62 60,62 60,83 47,83' }
+    ]
   },
   {
     id: '3b2',
@@ -24,7 +44,19 @@ let floorPlans = [
     displaySqft: '1,250 sq ft',
     price: 'Starting at $3,180',
     available: 'Available June 7',
-    imageUrl: '/floor_plans/3b2.png'
+    imageUrl: '/floor_plans/3b2.svg',
+    hotspots: [
+      { key: 'watch-1', label: 'Watch', roomType: 'other', occurrence: 0, points: '46,0 61,0 61,8 46,8' },
+      { key: 'nest-1', label: 'Nest', roomType: 'living_room', occurrence: 0, points: '38,8 70,8 70,28 38,28' },
+      { key: 'relax-1', label: 'Relax', roomType: 'patio', occurrence: 0, points: '70,9 94,9 94,31 70,31' },
+      { key: 'dream-1', label: 'Dream', roomType: 'bedroom', occurrence: 0, points: '4,33 26,33 26,57 4,57' },
+      { key: 'taste-1', label: 'Taste', roomType: 'kitchen', occurrence: 0, points: '53,31 81,31 81,52 53,52' },
+      { key: 'dine-1', label: 'Dine', roomType: 'dining', occurrence: 0, points: '81,31 98,31 98,56 81,56' },
+      { key: 'revive-1', label: 'Revive', roomType: 'bathroom', occurrence: 0, points: '3,57 23,57 23,77 3,77' },
+      { key: 'surf-1', label: 'Surf', roomType: 'foyer', occurrence: 0, points: '45,53 57,53 57,70 45,70' },
+      { key: 'dream-2', label: 'Dream', roomType: 'bedroom', occurrence: 1, points: '54,55 84,55 84,78 54,78' },
+      { key: 'dream-3', label: 'Dream', roomType: 'bedroom', occurrence: 2, points: '22,70 56,70 56,98 22,98' }
+    ]
   }
 ];
 
@@ -45,6 +77,8 @@ let currentPipelineResult = null;
 let currentJob = null;
 let currentJobId = null;
 let jobEvents = null;
+const activePlanHotspots = new Map();
+const svgMarkupCache = new Map();
 
 const views = {
   portal: document.querySelector('#portal-view'),
@@ -76,6 +110,7 @@ const generatedStillsGallery = document.querySelector('#generated-stills-gallery
 const mediaModal = document.querySelector('#media-modal');
 const mediaModalImage = document.querySelector('#media-modal-image');
 const mediaModalTitle = document.querySelector('#media-modal-title');
+const roomFocusPanel = document.querySelector('#room-focus-panel');
 
 loadFloorPlans();
 renderProgressSteps();
@@ -239,17 +274,36 @@ function renderFloorPlans() {
 function renderSelectedPlan() {
   selectedPlanTitle.textContent = `${selectedPlan.name} · ${selectedPlan.layout}`;
   generationPlanChip.textContent = selectedPlan.name;
-  selectedPlanPreview.innerHTML = renderFloorPlanMedia(selectedPlan, `${selectedPlan.name} selected floor plan`);
-  resultsPlanPreview.innerHTML = renderFloorPlanMedia(selectedPlan, `${selectedPlan.name} selected floor plan`);
+  selectedPlanPreview.innerHTML = renderFloorPlanMedia(selectedPlan, `${selectedPlan.name} selected floor plan`, {
+    interactive: true,
+    selectedKey: activePlanHotspots.get(selectedPlan.id),
+    job: jobForPlan(selectedPlan)
+  });
+  resultsPlanPreview.innerHTML = renderFloorPlanMedia(selectedPlan, `${selectedPlan.name} selected floor plan`, {
+    interactive: true,
+    selectedKey: activePlanHotspots.get(selectedPlan.id),
+    job: jobForPlan(selectedPlan)
+  });
+  hydrateFloorPlanMedia(selectedPlanPreview, selectedPlan, jobForPlan(selectedPlan));
+  hydrateFloorPlanMedia(resultsPlanPreview, selectedPlan, jobForPlan(selectedPlan));
   selectedPlanMeta.innerHTML = `
     <span>${selectedPlan.displaySqft}</span>
     <span>${selectedPlan.price}</span>
     <span>${selectedPlan.available}</span>
   `;
+  renderRoomFocus(jobForPlan(selectedPlan));
 }
 
-function renderFloorPlanMedia(plan, altText) {
-  return `<img class="floor-plan-image" src="${plan.imageUrl}" alt="${altText}">`;
+function renderFloorPlanMedia(plan, altText, options = {}) {
+  if (!options.interactive) {
+    return `<img class="floor-plan-image" src="${plan.imageUrl}" alt="${altText}">`;
+  }
+
+  return `
+    <div class="floor-plan-shell is-interactive" data-floorplan-shell data-plan-id="${escapeHtml(plan.id)}" aria-label="${escapeHtml(altText)} interactive room map">
+      <div class="runtime-placeholder">Loading floor plan…</div>
+    </div>
+  `;
 }
 
 function renderProgressSteps(activeIndex = -1, complete = false) {
@@ -354,10 +408,12 @@ async function refreshJob(jobId) {
 
   currentJob = job;
   currentPipelineResult = job;
+  syncSelectedPlanFromJob(job);
   renderPipelineResult(job);
   renderPinterestReferences(job);
   renderGeneratedStills(job);
   renderRuntimeRooms(job);
+  renderSelectedPlan();
 
   if (job.status === 'completed') {
     renderProgressSteps(progressSteps.length, true);
@@ -532,6 +588,100 @@ function renderRuntimeRooms(job) {
   }
 }
 
+function renderRoomFocus(job) {
+  if (!roomFocusPanel) return;
+  const plan = selectedPlan;
+  const hotspots = resolvePlanHotspots(plan, job);
+
+  if (hotspots.length === 0) {
+    roomFocusPanel.innerHTML = '';
+    return;
+  }
+
+  const activeKey = ensureActivePlanHotspot(plan, hotspots, activePlanHotspots.get(plan.id));
+  const hotspot = hotspots.find((candidate) => candidate.key === activeKey) ?? hotspots[0];
+  const room = hotspot?.runtimeRoom ?? null;
+  const title = room?.room_name ?? hotspot?.label ?? 'Room';
+  const status = room ? room.state.replaceAll('_', ' ').toLowerCase() : 'not generated yet';
+
+  roomFocusPanel.innerHTML = `
+    <div class="room-focus-copy">
+      <div class="eyebrow">Selected room</div>
+      <h3>${escapeHtml(title)}</h3>
+      <p>${escapeHtml(room?.video_generation?.camera_motion ?? room?.current_motion_mode ?? hotspot?.roomType ?? 'room highlight')}</p>
+      <div class="room-focus-meta">
+        <span>${escapeHtml(status)}</span>
+        <span>${room?.scores?.overall == null ? 'waiting for score' : `${Number(room.scores.overall).toFixed(1)} / 10`}</span>
+      </div>
+    </div>
+    <div class="room-focus-media">
+      ${room?.artifacts?.video_url
+        ? `<video src="${escapeHtml(room.artifacts.video_url)}" controls autoplay muted loop playsinline></video>`
+        : room?.artifacts?.styled_image_url
+          ? `<img src="${escapeHtml(room.artifacts.styled_image_url)}" alt="${escapeHtml(title)} still">`
+          : `<div class="runtime-placeholder">Click a room to inspect it. Media will appear here as soon as that room is generated.</div>`}
+    </div>
+  `;
+}
+
+async function hydrateFloorPlanMedia(container, plan, job) {
+  const shell = container?.querySelector('[data-floorplan-shell]');
+  if (!shell) return;
+
+  const token = `${plan.id}:${Date.now()}:${Math.random()}`;
+  shell.dataset.renderToken = token;
+
+  try {
+    const markup = await loadSvgMarkup(plan.imageUrl);
+    if (shell.dataset.renderToken !== token) return;
+
+    const svg = new DOMParser().parseFromString(markup, 'image/svg+xml').documentElement;
+    if (!svg || svg.nodeName.toLowerCase() !== 'svg') return;
+
+    const [minX, minY, width, height] = parseViewBox(svg);
+    svg.removeAttribute('width');
+    svg.removeAttribute('height');
+    svg.classList.add('floor-plan-svg');
+
+    const hotspots = resolvePlanHotspots(plan, job);
+    const activeKey = ensureActivePlanHotspot(plan, hotspots, activePlanHotspots.get(plan.id));
+    const overlay = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    overlay.setAttribute('class', 'haus-room-layer');
+
+    hotspots.forEach((hotspot) => {
+      const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+      polygon.setAttribute('points', toSvgPoints(hotspot.points, minX, minY, width, height));
+      polygon.setAttribute('class', [
+        'haus-room-hit',
+        hotspot.key === activeKey ? 'is-active' : '',
+        hotspot.runtimeRoom?.artifacts?.video_url ? 'has-video' : hotspot.runtimeRoom?.artifacts?.styled_image_url ? 'has-still' : ''
+      ].filter(Boolean).join(' '));
+      polygon.dataset.floorplanRoomKey = hotspot.key;
+      polygon.addEventListener('click', () => setActivePlanHotspot(plan.id, hotspot.key));
+
+      const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+      title.textContent = hotspot.runtimeRoom?.room_name ?? hotspot.label;
+      polygon.appendChild(title);
+      overlay.appendChild(polygon);
+
+      const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      const { x, y } = polygonCenter(hotspot.points, minX, minY, width, height);
+      label.setAttribute('x', String(x));
+      label.setAttribute('y', String(y));
+      label.setAttribute('text-anchor', 'middle');
+      label.setAttribute('dominant-baseline', 'middle');
+      label.setAttribute('class', 'haus-room-label');
+      label.textContent = hotspot.runtimeRoom?.room_name ?? hotspot.label;
+      overlay.appendChild(label);
+    });
+
+    svg.appendChild(overlay);
+    shell.replaceChildren(svg);
+  } catch {
+    shell.innerHTML = `<img class="floor-plan-image" src="${plan.imageUrl}" alt="${escapeHtml(plan.name)} floor plan">`;
+  }
+}
+
 function renderPinterestPin(pin) {
   return `
     <article class="reference-card">
@@ -558,6 +708,84 @@ function closeMediaModal() {
   mediaModal.classList.add('is-hidden');
   mediaModal.setAttribute('aria-hidden', 'true');
   mediaModalImage.removeAttribute('src');
+}
+
+function resolvePlanHotspots(plan, job) {
+  const rooms = job?.rooms ?? [];
+  return (plan.hotspots ?? []).map((hotspot) => ({
+    ...hotspot,
+    runtimeRoom: matchRuntimeRoom(hotspot, rooms)
+  }));
+}
+
+async function loadSvgMarkup(url) {
+  if (svgMarkupCache.has(url)) return svgMarkupCache.get(url);
+  const response = await fetch(url);
+  const markup = await response.text();
+  svgMarkupCache.set(url, markup);
+  return markup;
+}
+
+function parseViewBox(svg) {
+  const viewBox = svg.getAttribute('viewBox')?.split(/\s+/).map(Number);
+  if (viewBox?.length === 4 && viewBox.every((value) => Number.isFinite(value))) return viewBox;
+  return [0, 0, 100, 100];
+}
+
+function toSvgPoints(points, minX, minY, width, height) {
+  return points.split(/\s+/).map((pair) => {
+    const [x, y] = pair.split(',').map(Number);
+    return `${minX + ((x / 100) * width)} ${minY + ((y / 100) * height)}`;
+  }).join(' ');
+}
+
+function polygonCenter(points, minX, minY, width, height) {
+  const coordinates = points.split(/\s+/).map((pair) => pair.split(',').map(Number));
+  const xs = coordinates.map(([x]) => minX + ((x / 100) * width));
+  const ys = coordinates.map(([, y]) => minY + ((y / 100) * height));
+  return {
+    x: xs.reduce((sum, value) => sum + value, 0) / xs.length,
+    y: ys.reduce((sum, value) => sum + value, 0) / ys.length
+  };
+}
+
+function matchRuntimeRoom(hotspot, rooms) {
+  const labelMatches = rooms.filter((room) => normalizeToken(room.room_name) === normalizeToken(hotspot.label));
+  const typeMatches = rooms.filter((room) => normalizeToken(room.room_type) === normalizeToken(hotspot.roomType));
+  return labelMatches[hotspot.occurrence] ?? typeMatches[hotspot.occurrence] ?? labelMatches[0] ?? typeMatches[0] ?? null;
+}
+
+function normalizeToken(value) {
+  return String(value ?? '').trim().toLowerCase().replace(/[^a-z0-9]+/g, '_');
+}
+
+function ensureActivePlanHotspot(plan, hotspots, selectedKey) {
+  const validSelected = hotspots.find((hotspot) => hotspot.key === selectedKey);
+  if (validSelected) return validSelected.key;
+
+  const fallback = hotspots.find((hotspot) => hotspot.runtimeRoom?.artifacts?.video_url)
+    ?? hotspots.find((hotspot) => hotspot.runtimeRoom?.artifacts?.styled_image_url)
+    ?? hotspots[0]
+    ?? null;
+  if (!fallback) return null;
+  activePlanHotspots.set(plan.id, fallback.key);
+  return fallback.key;
+}
+
+function setActivePlanHotspot(planId, hotspotKey) {
+  activePlanHotspots.set(planId, hotspotKey);
+  renderSelectedPlan();
+}
+
+function syncSelectedPlanFromJob(job) {
+  const floorPlanId = job?.payload?.floor_plan_id;
+  const matchingPlan = floorPlans.find((plan) => plan.id === floorPlanId);
+  if (!matchingPlan) return;
+  selectedPlan = matchingPlan;
+}
+
+function jobForPlan(plan) {
+  return currentJob?.payload?.floor_plan_id === plan.id ? currentJob : null;
 }
 
 function setView(viewName) {

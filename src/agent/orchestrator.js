@@ -83,6 +83,7 @@ export async function createAgentRuntime(options = {}) {
       job.current_state = JOB_STATES.ROOM_QUEUE_RUNNING;
       job.runtime.still_review_announced = false;
       job.runtime.video_phase_started = false;
+      job.runtime.video_review_announced = false;
     });
 
     const job = await jobManager.getJob(jobId);
@@ -94,14 +95,20 @@ export async function createAgentRuntime(options = {}) {
     );
   }
 
-  async function processNextVideoRoom(jobId) {
-    const job = await jobManager.getJob(jobId);
-    const room = job.rooms
-      .filter((candidate) => candidate.review.still_approved && !candidate.review.video_approved && candidate.state !== ROOM_STATES.FAILED)
-      .sort((left, right) => left.sequence_index - right.sequence_index)[0];
+  async function startVideoPhase(jobId) {
+    await jobManager.updateJob(jobId, async (job) => {
+      job.status = 'running';
+      job.current_state = JOB_STATES.ROOM_QUEUE_RUNNING;
+      job.runtime.video_review_announced = false;
+    });
 
-    if (!room) return completeJob(jobId);
-    await runVideoForRoom(jobId, room.room_id);
+    const job = await jobManager.getJob(jobId);
+    await Promise.allSettled(
+      job.rooms
+        .filter((room) => room.review.still_approved && !room.review.video_approved && room.state !== ROOM_STATES.FAILED)
+        .sort((left, right) => left.sequence_index - right.sequence_index)
+        .map((room) => runVideoForRoom(jobId, room.room_id))
+    );
   }
 
   async function runStillForRoom(jobId, roomId, failureContext = null) {
@@ -239,6 +246,7 @@ export async function createAgentRuntime(options = {}) {
     await jobManager.updateJob(jobId, async (currentJob) => {
       currentJob.status = 'running';
       currentJob.current_state = JOB_STATES.ROOM_QUEUE_RUNNING;
+      currentJob.runtime.video_review_announced = false;
     });
     await jobManager.updateRoom(jobId, roomId, async (currentRoom) => {
       currentRoom.state = failureContext ? ROOM_STATES.VIDEO_RETRYING : ROOM_STATES.VIDEO_PLANNING;
@@ -291,7 +299,7 @@ export async function createAgentRuntime(options = {}) {
 
     if (decision === 'pass') {
       await approveRoom(jobId, roomId);
-      return processNextVideoRoom(jobId);
+      return syncVideoPhase(jobId);
     }
 
     const latest = await jobManager.getJob(jobId);
@@ -393,13 +401,14 @@ export async function createAgentRuntime(options = {}) {
         currentJob.status = 'running';
         currentJob.current_state = JOB_STATES.ROOM_QUEUE_RUNNING;
         currentJob.runtime.video_phase_started = true;
+        currentJob.runtime.video_review_announced = false;
       });
       await jobManager.emitEvent(jobId, {
         type: 'job.stills.approved',
         state: JOB_STATES.ROOM_QUEUE_RUNNING,
         message: 'All room stills approved. Starting videos.'
       });
-      return processNextVideoRoom(jobId);
+      return startVideoPhase(jobId);
     }
 
     if (!job.runtime.still_review_announced) {
@@ -412,6 +421,38 @@ export async function createAgentRuntime(options = {}) {
         type: 'job.stills.review_ready',
         state: JOB_STATES.WAITING_FOR_HUMAN_REVIEW,
         message: 'All room stills are ready for review.'
+      });
+    }
+  }
+
+  async function syncVideoPhase(jobId) {
+    const job = await jobManager.getJob(jobId);
+    const rooms = job.rooms ?? [];
+    const videosInFlight = rooms.some((room) => [
+      ROOM_STATES.VIDEO_PLANNING,
+      ROOM_STATES.VIDEO_GENERATING,
+      ROOM_STATES.VIDEO_VALIDATING,
+      ROOM_STATES.VIDEO_RETRYING
+    ].includes(room.state));
+
+    if (videosInFlight) return;
+
+    const allVideosApproved = rooms.every((room) => room.review.video_approved || room.state === ROOM_STATES.FAILED);
+    if (allVideosApproved) {
+      return completeJob(jobId);
+    }
+
+    const needsVideoReview = rooms.some((room) => room.state === ROOM_STATES.VIDEO_REVIEW_READY);
+    if (needsVideoReview && !job.runtime.video_review_announced) {
+      await jobManager.updateJob(jobId, async (currentJob) => {
+        currentJob.status = 'waiting';
+        currentJob.current_state = JOB_STATES.WAITING_FOR_HUMAN_REVIEW;
+        currentJob.runtime.video_review_announced = true;
+      });
+      await jobManager.emitEvent(jobId, {
+        type: 'job.videos.review_ready',
+        state: JOB_STATES.WAITING_FOR_HUMAN_REVIEW,
+        message: 'One or more room videos need review.'
       });
     }
   }
@@ -465,8 +506,8 @@ export async function createAgentRuntime(options = {}) {
     approveStill,
     retryRoom,
     runJob,
-    processNextVideoRoom,
     startStillPhase,
+    startVideoPhase,
     delay
   };
 }

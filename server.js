@@ -200,6 +200,7 @@ function contentType(filePath) {
   if (extension === '.css') return 'text/css; charset=utf-8';
   if (extension === '.js') return 'text/javascript; charset=utf-8';
   if (extension === '.png') return 'image/png';
+  if (extension === '.svg') return 'image/svg+xml; charset=utf-8';
   if (extension === '.jpg' || extension === '.jpeg') return 'image/jpeg';
   return 'application/octet-stream';
 }
