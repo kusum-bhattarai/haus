@@ -4,7 +4,11 @@ export function extractAnchorSpecs(handoff) {
   const roomJobs = handoff.room_generation_jobs ?? [];
   const vibe = handoff.vibe_report ?? {};
   const profile = handoff.pinterest_intelligence?.aesthetic_profile ?? {};
-  const roomsByType = new Map(roomJobs.map((r) => [r.room_type, r]));
+  // Map room_type → first room of that type (lower sequence_index wins)
+  const roomsByType = new Map();
+  for (const r of [...roomJobs].sort((a, b) => (a.sequence_index ?? 0) - (b.sequence_index ?? 0))) {
+    if (!roomsByType.has(r.room_type)) roomsByType.set(r.room_type, r);
+  }
 
   // One anchor per room type that appears in at least one sightline's "to" side
   // and whose room type is actually present in this floor plan.
