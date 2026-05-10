@@ -1221,3 +1221,48 @@ legend {
     font-size: 38px;
   }
 }
+
+/* Layer 5 — Captions */
+.captions-section {
+  margin-top: 40px;
+}
+
+.captions-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted, #888);
+  margin-bottom: 16px;
+}
+
+.caption-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.caption-card {
+  background: var(--surface, #fafafa);
+  border: 1px solid var(--border, #e5e5e5);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.caption-platform {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted, #888);
+}
+
+.caption-text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}

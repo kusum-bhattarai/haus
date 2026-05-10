@@ -157,7 +157,7 @@ test('creative agent builds still and video plans from Layer 3 plus AutoHDR rule
   const stillPlan = agent.buildStillPlan({ handoff, roomJob });
   assert.equal(stillPlan.model, 'fal-ai/nano-banana-2');
   assert.match(stillPlan.prompt, /12 by 16 ft living room/);
-  assert.match(stillPlan.prompt, /visible-light-source logic/);
+  assert.match(stillPlan.prompt, /visible sources only/);
   assert.match(stillPlan.negative_prompt, /warped architecture/);
 
   const videoPlan = agent.buildVideoPlan({ handoff, roomJob, sourceStillUrl: 'https://cdn.example.com/still.png' });
@@ -196,12 +196,9 @@ test('genmedia adapter cache hit skips command runner', async () => {
   let calls = 0;
   const adapter = createGenmediaAdapter({
     cacheDir,
-    commandRunner: async (args) => {
+    falRunner: async (endpointId, params) => {
       calls += 1;
-      const downloadArg = args.find((arg) => arg.startsWith('--download='));
-      const template = downloadArg.slice('--download='.length);
-      await writeFile(template.replace('{index}', '0').replace('{ext}', 'png'), 'image');
-      return { stdout: JSON.stringify({ images: [{ url: 'https://cdn.example.com/still.png' }] }), stderr: '' };
+      return { images: [{ url: 'https://cdn.example.com/still.png' }] };
     }
   });
 
@@ -223,15 +220,9 @@ test('genmedia adapter reuses cached result json even without downloaded artifac
   let calls = 0;
   const adapter = createGenmediaAdapter({
     cacheDir,
-    commandRunner: async () => {
+    falRunner: async () => {
       calls += 1;
-      return {
-        stdout: JSON.stringify({
-          status: 'completed',
-          result: { images: [{ url: 'https://cdn.example.com/still.png' }] }
-        }),
-        stderr: ''
-      };
+      return { status: 'completed', result: { images: [{ url: 'https://cdn.example.com/still.png' }] } };
     }
   });
 

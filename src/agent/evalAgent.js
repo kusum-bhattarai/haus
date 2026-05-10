@@ -115,7 +115,7 @@ function buildEval({ decision, overall, failure_classes, message }) {
 
 async function evaluateStillWithOpenAI({ artifact, roomJob, options }) {
   const apiKey = options.openAiApiKey ?? process.env.OPENAI_API_KEY;
-  const model = options.openAiEvalModel ?? process.env.OPENAI_EVAL_MODEL ?? 'gpt-5-mini';
+  const model = options.openAiEvalModel ?? process.env.OPENAI_EVAL_MODEL ?? 'gpt-4o-mini';
   const fetchImpl = options.fetchImpl ?? globalThis.fetch;
 
   if (options.evalMode === 'mock' || process.env.HAUS_EVAL_MODE === 'mock') return null;
@@ -132,6 +132,7 @@ async function evaluateStillWithOpenAI({ artifact, roomJob, options }) {
       instructions: [
         'You are a strict real-estate media quality evaluator.',
         'Score the still image against the room spec.',
+        'All scores must be integers from 0 to 10 where 10 is perfect and 0 is completely unusable.',
         'Architecture, room identity, realistic scale, and marketable listing quality matter most.',
         'Return only schema-compliant JSON.'
       ].join(' '),

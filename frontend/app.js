@@ -79,6 +79,7 @@ let currentJobId = null;
 let jobEvents = null;
 const activePlanHotspots = new Map();
 const svgMarkupCache = new Map();
+let selectedAgentRoomId = null;
 
 const views = {
   portal: document.querySelector('#portal-view'),
@@ -111,6 +112,8 @@ const mediaModal = document.querySelector('#media-modal');
 const mediaModalImage = document.querySelector('#media-modal-image');
 const mediaModalTitle = document.querySelector('#media-modal-title');
 const roomFocusPanel = document.querySelector('#room-focus-panel');
+const agentRoomSelect = document.querySelector('#agent-room-select');
+const agentCanvasImage = document.querySelector('#agent-canvas-image');
 
 loadFloorPlans();
 renderProgressSteps();
@@ -120,6 +123,15 @@ addChatMessage('agent', 'After you watch the video, ask for a specific change. I
 document.querySelector('#back-to-plans').addEventListener('click', () => setView('portal'));
 document.querySelector('#open-agent').addEventListener('click', () => setView('agent'));
 document.querySelector('#back-to-results').addEventListener('click', () => setView('results'));
+
+agentRoomSelect.addEventListener('change', () => {
+  selectedAgentRoomId = agentRoomSelect.value;
+  const room = (currentJob?.rooms ?? []).find((r) => r.room_id === selectedAgentRoomId);
+  if (room) updateAgentCanvas(room);
+  requestedEdit = null;
+  placementInstruction.textContent = 'Send an edit request to begin.';
+  regenerateButton.disabled = true;
+});
 document.querySelector('#close-media-modal').addEventListener('click', closeMediaModal);
 document.querySelectorAll('[data-close-media-modal]').forEach((element) => {
   element.addEventListener('click', closeMediaModal);
@@ -140,11 +152,18 @@ document.querySelector('#chat-form').addEventListener('submit', (event) => {
   requestedEdit = message;
   placement = null;
   placementMarker.classList.add('is-hidden');
-  regenerateButton.disabled = true;
-  placementInstruction.textContent = 'Click where the object should be placed.';
+  regenerateButton.disabled = false;
+  placementInstruction.textContent = 'Optionally click the image to mark placement, then click Regenerate.';
 
   addChatMessage('user', message);
-  addChatMessage('agent', 'I found the living room section. Click the image where you want the tall whiteboard, then I will regenerate only that room segment.');
+  input.value = '';
+
+  if (!currentJobId) {
+    addChatMessage('agent', 'No active job found. Run a full generation first, then come back to edit.');
+    regenerateButton.disabled = true;
+    return;
+  }
+  addChatMessage('agent', 'Got it. Optionally mark a placement on the image, then click Regenerate — or Regenerate now to let the AI decide.');
 });
 
 placementCanvas.addEventListener('click', (event) => {
@@ -162,18 +181,38 @@ placementCanvas.addEventListener('click', (event) => {
   placementInstruction.textContent = 'Placement selected. Regenerate this room section when ready.';
 });
 
-regenerateButton.addEventListener('click', () => {
-  if (!placement) return;
+regenerateButton.addEventListener('click', async () => {
+  if (!requestedEdit || !currentJobId) return;
+
+  const message = placement
+    ? `${requestedEdit} — at approximately ${Math.round(placement.x)}% across and ${Math.round(placement.y)}% down`
+    : requestedEdit;
 
   regenerateButton.disabled = true;
-  cacheNote.textContent = 'Regenerating living room still and fal video segment. Bedroom and kitchen clips remain cached.';
-  addChatMessage('agent', `Got it. I will place the whiteboard around ${Math.round(placement.x)}% across and ${Math.round(placement.y)}% down in the living room frame.`);
+  cacheNote.textContent = 'Analyzing edit request and targeting affected rooms...';
+  addChatMessage('agent', placement
+    ? `Got it. Placing at ${Math.round(placement.x)}% across, ${Math.round(placement.y)}% down. Sending to pipeline.`
+    : 'Sending your edit to the pipeline. The AI will find the right room(s).');
 
-  window.setTimeout(() => {
-    cacheNote.textContent = 'Living room segment regenerated. Final video reassembled from 1 new segment and cached unchanged segments.';
-    addChatMessage('agent', 'Updated preview is ready. I reused the cached unchanged room segments and replaced only the living room section.');
+  try {
+    const response = await fetch(`/api/jobs/${currentJobId}/edit`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, room_id: selectedAgentRoomId ?? undefined })
+    });
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error ?? 'Edit request failed.');
+
+    requestedEdit = null;
+    placement = null;
+    placementMarker.classList.add('is-hidden');
+    placementInstruction.textContent = '';
+    cacheNote.textContent = 'Edit queued. Only affected rooms regenerate — unchanged rooms stay cached.';
+    addChatMessage('agent', 'Edit is running. Watch the room cards for progress. Unchanged rooms remain cached.');
+  } catch (error) {
+    addChatMessage('agent', `Something went wrong: ${error.message}`);
     regenerateButton.disabled = false;
-  }, 1300);
+  }
 });
 
 runtimeRoomList.addEventListener('click', async (event) => {
@@ -384,6 +423,23 @@ async function runPipeline(body) {
   return result;
 }
 
+const EVENT_STEP_MAP = {
+  'layers.started': 2,
+  'layer3.ready': 4,
+  'job.anchors.generating': 5,
+  'job.anchors.ready': 5,
+  'room.still.planning': 5,
+  'room.still.started': 5,
+  'room.still.queued': 5,
+  'room.still.review_ready': 6,
+  'job.stills.review_ready': 6,
+  'job.stills.approved': 6,
+  'room.video.started': 6,
+  'room.video.queued': 6,
+  'room.video.progress': 6,
+  'job.packaging': 6
+};
+
 function subscribeToJob(jobId) {
   if (jobEvents) jobEvents.close();
 
@@ -391,6 +447,8 @@ function subscribeToJob(jobId) {
   jobEvents.onmessage = async (message) => {
     const event = JSON.parse(message.data);
     progressCaption.textContent = event.message;
+    const stepIndex = EVENT_STEP_MAP[event.type];
+    if (stepIndex != null) renderProgressSteps(stepIndex);
     await refreshJob(jobId);
   };
   jobEvents.onerror = () => {
@@ -458,13 +516,84 @@ function renderPipelineResult(result) {
     document.querySelector('#vibe-name').textContent = vibeReport.aesthetic_name;
     document.querySelector('#vibe-summary').textContent = vibeReport.summary;
     document.querySelector('#vibe-lighting').textContent = vibeReport.lighting_mood;
-    document.querySelector('#vibe-materials').textContent = vibeReport.materials.slice(0, 3).join(', ');
-    document.querySelector('#vibe-avoid').textContent = vibeReport.avoid.slice(0, 3).join(', ');
+    document.querySelector('#vibe-materials').textContent = (vibeReport.materials ?? []).slice(0, 3).join(', ');
+    document.querySelector('#vibe-avoid').textContent = (vibeReport.avoid ?? []).slice(0, 3).join(', ');
   }
 
   if (profile?.aesthetic_profile) {
     document.querySelector('#vibe-density').textContent = profile.aesthetic_profile.density;
   }
+
+  renderResultsVideo(result);
+  renderCaptions(result);
+}
+
+function renderResultsVideo(job) {
+  const videoFrame = document.querySelector('.video-frame');
+  if (!videoFrame) return;
+
+  const finalPath = job.artifacts?.final_video_path;
+  const jobId = job.job_id;
+  const firstClip = (job.artifacts?.approved_room_clips ?? [])[0];
+  const clipUrl = firstClip?.url;
+
+  const relPath = finalPath && jobId ? finalPath.split(`/${jobId}/`)[1] : null;
+  const localVideoUrl = relPath ? `/api/jobs/${jobId}/assets/${relPath}` : null;
+  const videoUrl = localVideoUrl ?? clipUrl ?? null;
+
+  const duration = (job.artifacts?.approved_room_clips ?? []).reduce((sum, c) => {
+    const roomJob = job.handoff?.room_generation_jobs?.find((r) => r.room_id === c.room_id);
+    return sum + (roomJob?.video_generation?.duration_seconds ?? 5);
+  }, 0);
+
+  const statusText = finalPath
+    ? `Final video assembled · 16:9 · ${duration} seconds`
+    : clipUrl
+      ? `Room preview · 16:9 · ${duration} seconds`
+      : null;
+
+  if (videoUrl) {
+    videoFrame.innerHTML = `
+      <video src="${escapeHtml(videoUrl)}" controls playsinline style="width:100%;border-radius:inherit;display:block;"></video>
+      ${statusText ? `<div class="video-status">${escapeHtml(statusText)}</div>` : ''}
+    `;
+  }
+}
+
+function renderCaptions(job) {
+  const captions = job.artifacts?.captions;
+  if (!captions) return;
+
+  let section = document.querySelector('#results-captions');
+  if (!section) {
+    section = document.createElement('section');
+    section.id = 'results-captions';
+    section.className = 'captions-section';
+    const roomStrip = document.querySelector('#room-strip');
+    if (roomStrip) roomStrip.after(section);
+  }
+
+  section.innerHTML = `
+    <h3>Generated captions</h3>
+    <div class="caption-cards">
+      ${captions.instagram ? captionCard('Instagram', captions.instagram) : ''}
+      ${captions.tiktok ? captionCard('TikTok', captions.tiktok) : ''}
+      ${captions.listing ? captionCard('Listing', captions.listing) : ''}
+    </div>
+  `;
+}
+
+function captionCard(platform, text) {
+  const safePlatform = escapeHtml(platform);
+  const safeText = escapeHtml(text);
+  const jsonText = JSON.stringify(text);
+  return `
+    <div class="caption-card">
+      <div class="caption-platform">${safePlatform}</div>
+      <p class="caption-text">${safeText}</p>
+      <button class="ghost-button" onclick="navigator.clipboard.writeText(${escapeHtml(jsonText)})">Copy</button>
+    </div>
+  `;
 }
 
 function renderPinterestReferences(job) {
@@ -797,7 +926,30 @@ function setView(viewName) {
     button.classList.toggle('is-active', button.dataset.viewJump === viewName);
   });
 
+  if (viewName === 'agent') populateAgentView();
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function populateAgentView() {
+  const rooms = (currentJob?.rooms ?? []).filter((room) => room.artifacts?.styled_image_url);
+  if (!rooms.length) return;
+
+  agentRoomSelect.innerHTML = rooms.map((room) =>
+    `<option value="${escapeHtml(room.room_id)}">${escapeHtml(room.room_name)}</option>`
+  ).join('');
+
+  const currentSelection = rooms.find((r) => r.room_id === selectedAgentRoomId) ?? rooms[0];
+  selectedAgentRoomId = currentSelection.room_id;
+  agentRoomSelect.value = selectedAgentRoomId;
+  updateAgentCanvas(currentSelection);
+}
+
+function updateAgentCanvas(room) {
+  if (!room?.artifacts?.styled_image_url) return;
+  agentCanvasImage.src = room.artifacts.styled_image_url;
+  agentCanvasImage.alt = `${room.room_name} generated still`;
+  placement = null;
+  placementMarker.classList.add('is-hidden');
 }
 
 function addChatMessage(sender, text) {

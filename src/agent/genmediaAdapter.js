@@ -1,37 +1,40 @@
 import { createHash } from 'node:crypto';
-import { execFile } from 'node:child_process';
+import { createWriteStream, mkdirSync } from 'node:fs';
 import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { promisify } from 'node:util';
+import { pipeline } from 'node:stream/promises';
+
+import { fal } from '@fal-ai/client';
 
 import { DEFAULT_CACHE_DIR } from '../layer1/constants.js';
 import { hashJson } from './cacheKeys.js';
 
-const execFileAsync = promisify(execFile);
+function configureFal(options = {}) {
+  const key = options.falKey ?? process.env.FAL_KEY;
+  if (!key) throw new Error('FAL_KEY is required. Add it to your .env file.');
+  fal.config({ credentials: key });
+}
 
 export function createGenmediaAdapter(options = {}) {
+  let configured = false;
+  function ensureConfigured() {
+    if (!configured) {
+      configureFal(options);
+      configured = true;
+    }
+  }
+
   const rootDir = path.resolve(options.cacheDir ?? DEFAULT_CACHE_DIR, 'agent');
   const generationsDir = path.join(rootDir, 'generations');
   const uploadsDir = path.join(rootDir, 'uploads');
-  const schemasDir = path.join(rootDir, 'schemas');
-  const runner = options.commandRunner ?? runGenmedia;
 
   return {
     async schema(endpointId) {
-      const key = hashJson({ endpointId });
-      const cachePath = path.join(schemasDir, `${key}.json`);
-      const cached = await readJson(cachePath);
-      if (cached) return cached;
-
-      const result = await runner(['schema', endpointId]);
-      const parsed = parseOutput(result.stdout);
-      await writeJson(cachePath, parsed);
-      return parsed;
+      return {};
     },
 
     async pricing(endpointId) {
-      const result = await runner(['pricing', endpointId]);
-      return parseOutput(result.stdout);
+      return {};
     },
 
     async upload(target) {
@@ -40,38 +43,55 @@ export function createGenmediaAdapter(options = {}) {
       const cached = await readJson(cachePath);
       if (cached?.url) return { ...cached, cache_hit: true };
 
-      const result = await runner(['upload', target]);
-      const parsed = parseOutput(result.stdout);
-      const url = parsed.url ?? parsed.file?.url ?? firstUrl(result.stdout);
-      const payload = { url, raw: parsed, target };
+      ensureConfigured();
+      const fileBuffer = await readFile(target);
+      const filename = path.basename(target);
+      const blob = new Blob([fileBuffer], { type: mimeFromPath(target) });
+
+      const uploadedUrl = await fal.storage.upload(blob, { filename });
+      const url = typeof uploadedUrl === 'string' ? uploadedUrl : uploadedUrl?.url ?? String(uploadedUrl);
+
+      const payload = { url, target };
       await writeJson(cachePath, payload);
       return { ...payload, cache_hit: false };
     },
 
-    async run(endpointId, params, options = {}) {
-      const args = ['run'];
-      if (options.async) args.push('--async');
-      if (options.download) args.push(`--download=${options.download}`);
-      args.push(endpointId, ...paramsToArgs(params));
-      const result = await runner(args, { timeout: options.timeout });
-      return parseOutput(result.stdout);
+    async run(endpointId, params, { onProgress, timeoutMs = 8 * 60 * 1000 } = {}) {
+      if (options.falRunner) {
+        return options.falRunner(endpointId, params);
+      }
+      ensureConfigured();
+
+      let timeoutId;
+      const timeoutPromise = new Promise((_, reject) => {
+        timeoutId = setTimeout(
+          () => reject(new Error(`fal generation timed out after ${Math.round(timeoutMs / 1000)}s on ${endpointId}`)),
+          timeoutMs
+        );
+      });
+
+      try {
+        const result = await Promise.race([
+          fal.subscribe(endpointId, {
+            input: params,
+            logs: false,
+            onQueueUpdate: onProgress ?? null
+          }),
+          timeoutPromise
+        ]);
+        return result?.data ?? result;
+      } finally {
+        clearTimeout(timeoutId);
+      }
     },
 
-    async status(endpointId, requestId, options = {}) {
-      const args = ['status'];
-      if (options.result) args.push('--result');
-      if (options.download) args.push(`--download=${options.download}`);
-      args.push(endpointId, requestId);
-      const result = await runner(args, { timeout: options.timeout });
-      return parseOutput(result.stdout);
-    },
-
-    async executeCached({ endpointId, params, sourcePaths = [], skillVersion = null, artifactName = 'artifact' }) {
+    async executeCached({ endpointId, params, sourcePaths = [], skillVersion = null, artifactName = 'artifact', onProgress, timeoutMs }) {
       const sourceHashes = await Promise.all(sourcePaths.filter(Boolean).map(fileHash));
       const cacheKey = hashJson({ endpointId, params, sourceHashes, skillVersion });
       const generationDir = path.join(generationsDir, cacheKey);
       const requestPath = path.join(generationDir, 'request.json');
       const resultPath = path.join(generationDir, 'result.json');
+
       const cached = await readJson(resultPath);
       const cachedArtifact = cached ? await findArtifact(generationDir) : null;
       const cachedUrl = cached ? extractFirstMediaUrl(cached) : null;
@@ -89,49 +109,32 @@ export function createGenmediaAdapter(options = {}) {
 
       await mkdir(generationDir, { recursive: true });
       await writeJson(requestPath, { endpoint_id: endpointId, params, source_hashes: sourceHashes, skill_version: skillVersion });
-      const downloadTemplate = path.join(generationDir, `${artifactName}-{index}.{ext}`);
-      const result = await this.run(endpointId, params, { download: downloadTemplate });
+
+      const result = await this.run(endpointId, params, { onProgress, timeoutMs });
       await writeJson(resultPath, result);
+
+      const url = extractFirstMediaUrl(result);
+      let localPath = null;
+      if (url) {
+        const ext = extFromUrl(url);
+        localPath = path.join(generationDir, `${artifactName}-0.${ext}`);
+        const dl = options.downloadFn ?? downloadUrl;
+        await dl(url, localPath).catch((err) => {
+          console.warn(`[genmedia] download failed (url cached): ${err.message}`);
+          localPath = null;
+        });
+      }
 
       return {
         cache_hit: false,
         cache_key: cacheKey,
         endpoint_id: endpointId,
         result,
-        path: await findArtifact(generationDir),
-        url: extractFirstMediaUrl(result)
+        path: localPath,
+        url
       };
     }
   };
-}
-
-async function runGenmedia(args, options = {}) {
-  const { stdout, stderr } = await execFileAsync('genmedia', args, {
-    timeout: options.timeout ?? 20 * 60 * 1000,
-    maxBuffer: 20 * 1024 * 1024
-  });
-  return { stdout, stderr };
-}
-
-function paramsToArgs(params) {
-  return Object.entries(params ?? {}).flatMap(([key, value]) => {
-    if (value === undefined || value === null) return [];
-    return [`--${key}`, typeof value === 'object' ? JSON.stringify(value) : String(value)];
-  });
-}
-
-function parseOutput(stdout) {
-  const text = stdout.trim();
-  if (!text) return {};
-  try {
-    return JSON.parse(text);
-  } catch {
-    return { raw: text, url: firstUrl(text) };
-  }
-}
-
-function firstUrl(text) {
-  return text.match(/https?:\/\/\S+/)?.[0] ?? null;
 }
 
 export function extractFirstMediaUrl(value) {
@@ -143,10 +146,37 @@ export function extractFirstMediaUrl(value) {
   if (typeof value.file?.url === 'string') return value.file.url;
 
   for (const nested of Object.values(value)) {
-    const found = extractFirstMediaUrl(nested);
-    if (found) return found;
+    if (nested && typeof nested === 'object') {
+      const found = extractFirstMediaUrl(nested);
+      if (found) return found;
+    }
   }
   return null;
+}
+
+async function downloadUrl(url, destPath) {
+  await mkdir(path.dirname(destPath), { recursive: true });
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`Failed to download ${url}: ${response.status}`);
+  const writer = createWriteStream(destPath);
+  await pipeline(response.body, writer);
+}
+
+function extFromUrl(url) {
+  const pathname = new URL(url).pathname;
+  const ext = path.extname(pathname).slice(1);
+  if (ext && /^[a-z0-9]+$/i.test(ext)) return ext;
+  if (url.includes('video') || url.includes('.mp4')) return 'mp4';
+  return 'png';
+}
+
+function mimeFromPath(filePath) {
+  const ext = path.extname(filePath).toLowerCase();
+  if (ext === '.png') return 'image/png';
+  if (ext === '.jpg' || ext === '.jpeg') return 'image/jpeg';
+  if (ext === '.mp4') return 'video/mp4';
+  if (ext === '.webp') return 'image/webp';
+  return 'application/octet-stream';
 }
 
 async function readJson(filePath) {
@@ -167,7 +197,7 @@ async function uploadKey(target) {
     const fileStat = await stat(target);
     if (fileStat.isFile()) return fileHash(target);
   } catch {
-    // Remote URLs are keyed by their value.
+    // Remote URLs keyed by value.
   }
   return createHash('sha256').update(target).digest('hex');
 }

@@ -6,6 +6,7 @@ import {
   LUXURY_CAMERA_MOTION_BY_ROOM_TYPE,
   OBJECT_LABELS,
   OBJECT_ROOM_PREFERENCES,
+  ROOM_SIGHTLINES,
   DEFAULT_FAL_VIDEO_MODEL
 } from './constants.js';
 
@@ -79,6 +80,8 @@ export function buildLayer3Handoff(profile, creativePlan, options = {}) {
       }
     };
   });
+
+  addBackgroundConstraints(roomGenerationJobs);
 
   const handoff = {
     schema_version: '1.0',
@@ -269,4 +272,32 @@ function exportFormatsForPlatform(platform) {
 
 function uniqueStrings(values) {
   return [...new Set(values.filter((value) => typeof value === 'string' && value.trim() !== '').map((value) => value.trim()))];
+}
+
+function addBackgroundConstraints(roomJobs) {
+  const byType = new Map(roomJobs.map((job) => [job.room_type, job]));
+
+  for (const job of roomJobs) {
+    const constraints = ROOM_SIGHTLINES
+      .filter((sightline) => sightline.from === job.room_type)
+      .map((sightline) => {
+        const adjacentJob = byType.get(sightline.to);
+        if (!adjacentJob) return null;
+        const visibleObjects = uniqueStrings([
+          ...sightline.shared_objects,
+          ...adjacentJob.staging.must_include
+        ]);
+        return {
+          adjacent_room: adjacentJob.room_name,
+          adjacent_room_type: sightline.to,
+          direction: sightline.direction,
+          visible_objects: visibleObjects
+        };
+      })
+      .filter(Boolean);
+
+    if (constraints.length) {
+      job.staging.background_constraints = constraints;
+    }
+  }
 }

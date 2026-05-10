@@ -42,6 +42,47 @@ export const OBJECT_LABELS = {
   home_gym: 'home gym equipment'
 };
 
+// Pairs of room types that share a sightline (partial view into adjacent room).
+// Order matters: `from` is the room being rendered, `to` is what's visible in the background.
+export const ROOM_SIGHTLINES = [
+  {
+    from: 'kitchen',
+    to: 'dining_room',
+    direction: 'through the open pass-through or doorway',
+    shared_objects: ['dining table', 'pendant light above the dining area', 'dining chairs']
+  },
+  {
+    from: 'dining_room',
+    to: 'kitchen',
+    direction: 'through the open kitchen',
+    shared_objects: ['kitchen cabinets', 'range hood', 'kitchen island or counter']
+  },
+  {
+    from: 'dining_room',
+    to: 'living_room',
+    direction: 'through the open-plan living area',
+    shared_objects: ['sofa', 'coffee table', 'area rug']
+  },
+  {
+    from: 'living_room',
+    to: 'dining_room',
+    direction: 'through the open-plan dining area',
+    shared_objects: ['dining table', 'dining chairs', 'pendant light']
+  },
+  {
+    from: 'living_room',
+    to: 'kitchen',
+    direction: 'through the open kitchen beyond the dining area',
+    shared_objects: ['kitchen cabinets', 'kitchen counter']
+  },
+  {
+    from: 'bedroom',
+    to: 'bathroom',
+    direction: 'through the ensuite doorway',
+    shared_objects: ['vanity', 'mirror', 'bathroom tile']
+  }
+];
+
 export const OBJECT_ROOM_PREFERENCES = {
   standing_desk: ['office', 'bedroom', 'living_room'],
   crib: ['bedroom'],

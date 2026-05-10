@@ -61,6 +61,16 @@ export function createHausServer(options = {}) {
         return await handleRetryRoom(req, res, agentRuntime, retryMatch[1], retryMatch[2]);
       }
 
+      const editMatch = url.pathname.match(/^\/api\/jobs\/([^/]+)\/edit$/);
+      if (req.method === 'POST' && editMatch) {
+        return await handleEditRoom(req, res, agentRuntime, editMatch[1]);
+      }
+
+      const assetMatch = url.pathname.match(/^\/api\/jobs\/([^/]+)\/assets\/(.+)$/);
+      if (req.method === 'GET' && assetMatch) {
+        return serveJobAsset(res, agentRuntime, assetMatch[1], assetMatch[2]);
+      }
+
       if (req.method === 'GET') {
         return serveStatic(url.pathname, res);
       }
@@ -169,8 +179,38 @@ async function handleRetryRoom(req, res, agentRuntime, jobId, roomId) {
   return sendJson(res, { ok: true, job_id: jobId, room_id: roomId }, 202);
 }
 
+async function handleEditRoom(req, res, agentRuntime, jobId) {
+  const body = await readJsonBody(req);
+  const message = (body.message ?? '').trim();
+  if (!message) return sendJson(res, { error: 'message is required' }, 400);
+  const roomId = typeof body.room_id === 'string' ? body.room_id : null;
+  setImmediate(() => {
+    agentRuntime.editRoom(jobId, message, { roomId }).catch((error) => console.error('[edit]', error));
+  });
+  return sendJson(res, { ok: true, job_id: jobId }, 202);
+}
+
 function floorPlanForClient({ imagePath, ...plan }) {
   return plan;
+}
+
+async function serveJobAsset(res, agentRuntime, jobId, filename) {
+  const job = await agentRuntime.getJob(jobId).catch(() => null);
+  if (!job) return sendJson(res, { error: 'Job not found' }, 404);
+
+  const jobsDir = agentRuntime.jobManager.jobsDir;
+  const assetPath = path.normalize(path.join(jobsDir, jobId, filename));
+  if (!assetPath.startsWith(jobsDir)) return sendJson(res, { error: 'Invalid path' }, 400);
+
+  try {
+    const fileStat = await stat(assetPath);
+    if (!fileStat.isFile()) return sendJson(res, { error: 'Not found' }, 404);
+  } catch {
+    return sendJson(res, { error: 'Not found' }, 404);
+  }
+
+  res.writeHead(200, { 'Content-Type': contentType(assetPath) });
+  createReadStream(assetPath).pipe(res);
 }
 
 async function serveStatic(requestPath, res) {

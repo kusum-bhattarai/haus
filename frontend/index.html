@@ -211,17 +211,20 @@
           <article class="placement-panel">
             <div class="placement-toolbar">
               <div>
-                <strong>Living room image</strong>
+                <select id="agent-room-select" class="ghost-button">
+                  <option>No rooms generated yet</option>
+                </select>
                 <span id="placement-instruction">Send an edit request to begin.</span>
               </div>
-              <button class="primary-button" id="regenerate-section" type="button" disabled>Regenerate living room section</button>
+              <button class="primary-button" id="regenerate-section" type="button" disabled>Regenerate room</button>
             </div>
-            <div class="placement-canvas" id="placement-canvas" aria-label="Click desired placement in living room image">
+            <div class="placement-canvas" id="placement-canvas" aria-label="Click to mark placement in room image">
               <img
+                id="agent-canvas-image"
                 src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1400&q=85"
-                alt="Living room placement canvas"
+                alt="Generated room still"
               >
-              <div class="placement-marker is-hidden" id="placement-marker">Whiteboard</div>
+              <div class="placement-marker is-hidden" id="placement-marker">+</div>
             </div>
             <div class="cache-note" id="cache-note">
               Previous final video is cached. Only the living room image and video segment will be regenerated, then the final video is reassembled.

@@ -92,6 +92,7 @@ export const CREATIVE_PLAN_SCHEMA = {
 
 export async function createCreativePlan({
   profile,
+  skill = null,
   model = process.env.OPENAI_CREATIVE_MODEL ?? DEFAULT_CREATIVE_MODEL,
   apiKey = process.env.OPENAI_API_KEY,
   fetchImpl = globalThis.fetch
@@ -104,6 +105,34 @@ export async function createCreativePlan({
     throw new Error('A fetch implementation is required for Layer 3 creative planning.');
   }
 
+  const skillInstructions = skill
+    ? [
+        'You have been given a generation skill document that defines the exact workflow, prompt shapes, motion vocabulary, required invariants, and evaluation criteria for this system.',
+        'Read and apply it strictly. Use the motion prompt bank when writing video_prompt fields.',
+        'Use the image-pass guidelines when writing dalle_scene_details.',
+        'Honour all required invariants (architecture stability, vertical lines, believable scale, visible-light-source logic).',
+        '',
+        '=== GENERATION SKILL DOCUMENT ===',
+        skill.skillText,
+        '',
+        '=== PROMPT REFERENCE ===',
+        skill.promptsText,
+        '=== END OF SKILL DOCUMENT ==='
+      ].join('\n')
+    : null;
+
+  const baseInstructions = [
+    'You are a creative director for a luxury property visualization studio.',
+    'Turn Pinterest aesthetic intelligence and floor plan structure into a structured vibe report plus room-level generation direction.',
+    'Do not generate final DALL-E prompts; provide scene details that code can wrap in a consistent production template.',
+    'Respect measured dimensions and room types. Avoid impossible staging.',
+    'Return only schema-compliant JSON.'
+  ].join(' ');
+
+  const instructions = skillInstructions
+    ? `${baseInstructions}\n\n${skillInstructions}`
+    : baseInstructions;
+
   const response = await fetchImpl(OPENAI_RESPONSES_URL, {
     method: 'POST',
     headers: {
@@ -112,13 +141,7 @@ export async function createCreativePlan({
     },
     body: JSON.stringify({
       model,
-      instructions: [
-        'You are a creative director for a luxury property visualization studio.',
-        'Turn Pinterest aesthetic intelligence and floor plan structure into a structured vibe report plus room-level generation direction.',
-        'Do not generate final DALL-E prompts; provide scene details that code can wrap in a consistent production template.',
-        'Respect measured dimensions and room types. Avoid impossible staging.',
-        'Return only schema-compliant JSON.'
-      ].join(' '),
+      instructions,
       input: [
         {
           role: 'user',

@@ -50,27 +50,31 @@ The AutoHDR brief implies this workflow:
 
 ## Kling-tuned examples
 
-### Slider prompt
+### Wide dolly in
 
-`Very slow truck right, time-lapse light progression, camera slides laterally while light shifts across the space, shadows gradually move and lengthen, parallax effect, consistent exposure, stable motion, cinematic, photorealistic`
+`Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography.`
 
 ### Wide slide
 
 `Wide interior shot with slow trucking movement side to side as harsh directional light moves and expands across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Camera tracks laterally through scene while light travels. Editorial film style. Neutral white balance, balanced exposure, smooth parallel motion. Atmospheric architectural cinematography.`
 
-### Wide dolly in
+### Crane up
 
-`Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography.`
+`Very slow crane up, time-lapse light progression, camera rises vertically while directional light shifts down through the space, shadows gradually move and lengthen across floors and surfaces, parallax effect, consistent exposure, stable vertical motion, cinematic, photorealistic`
+
+### Slider
+
+`Very slow truck right, time-lapse light progression, camera slides laterally while light shifts across the space, shadows gradually move and lengthen, parallax effect, consistent exposure, stable motion, cinematic, photorealistic`
 
 ### Tight truck
 
-`Tight interior shot with slow trucking movement side to side as harsh directional light moves and expands across textured interior surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion.`
+`Extreme close-up detail shot with smooth tracking camera following harsh directional light as it grows and spreads across textured surface. Crisp shadow edges crawl and shift in real time. Camera moves with the light's path revealing texture in wood grain, fabric weave, architectural detail. Editorial film style. Neutral white balance, balanced exposure — deep dramatic shadows without underexposure. Shallow depth of field.`
 
 ## Image pass prompts
 
 ### Editorial interior correction
 
-`Transform this photo into a cinematic editorial image with harsh, directional shadows and crisp light shaping. Correct perspective distortion so verticals are vertical and horizontals are level. Maintain the exact scene composition after correction and preserve the original white balance. Raise interior midtones subtly while preserving deep sculpted shadows and strong contrast. Keep highlights controlled and natural. Preserve all architectural and interior details. Derive lighting strictly from visible sources such as windows, doors, and practical fixtures. Do not introduce light from impossible directions.`
+`Transform this photo into a cinematic editorial image with harsh, directional shadows and crisp light shaping. Correct perspective distortion — ensure vertical lines are truly vertical and horizontal lines are level. Maintain the exact scene composition after correction and preserve the original white balance. Balance overall exposure with intention: raise interior midtones subtly for improved readability and presence, while preserving deep, sculpted shadow structure and strong contrast. The interior should feel brighter and more intentional, not flat or evenly lit — shadows must remain graphic, directional, and editorial. Highlights should stay controlled and natural. Apply intentional, filmic window pulls that reveal deep, rich exterior views — preserve sky density, environmental color, and contrast beyond the glass. Exterior scenes should feel dimensional and weighty, never washed out or pastel. Window highlights must roll off smoothly with realistic falloff; avoid haloing, edge glow, or global tonal compression. Do not flatten contrast or lift blacks globally. Window recovery should feel localized, natural, and optically believable — similar to a well-exposed negative rather than HDR processing. Preserve all architectural and interior details. The scene should feel well-lit yet moody, polished and cinematic. Derive all lighting direction strictly from visible sources in the frame — windows, doors, architectural openings, and practical fixtures (lamps, sconces, pendants). Do not introduce light from walls or areas without logical entry points. Maintain strong tonal separation between interior shadows and exterior highlights; window views should read clear, saturated, and contrast-rich, while the interior retains depth, drama, and editorial punch.`
 
 ### Brighter airy variant
 

@@ -1,8 +1,9 @@
 import { createHash } from 'node:crypto';
 
-export function layer3CreativePlanCacheKey(profile, model) {
+export function layer3CreativePlanCacheKey(profile, model, skillVersion = null) {
   return createHash('sha256').update(JSON.stringify({
     model,
+    skill_version: skillVersion,
     profile_id: profile.profile_id,
     source_payload: profile.source_payload,
     aesthetic_profile: profile.aesthetic_profile,

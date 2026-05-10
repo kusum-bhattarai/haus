@@ -1,9 +1,13 @@
+import path from 'node:path';
 import { setTimeout as delay } from 'node:timers/promises';
 
+import { parseEditIntent } from './editParser.js';
+import { extractAnchorSpecs, generateAnchors } from './anchorGenerator.js';
 import { findFloorPlan } from '../floorPlans.js';
 import { createLayer1Payload } from '../layer1/index.js';
 import { createLayer2Profile } from '../layer2/index.js';
 import { createLayer3Handoff } from '../layer3/index.js';
+import { runLayer5 } from '../layer5/index.js';
 import { createCreativeAgent } from './creativeAgent.js';
 import { createEvalAgent, routeEvalDecision } from './evalAgent.js';
 import { createGenmediaAdapter } from './genmediaAdapter.js';
@@ -57,7 +61,7 @@ export async function createAgentRuntime(options = {}) {
       platform: job.input.platform ?? 'all'
     });
     const profile = await (options.createLayer2Profile ?? createLayer2Profile)(payload);
-    const handoff = await (options.createLayer3Handoff ?? createLayer3Handoff)(profile);
+    const handoff = await (options.createLayer3Handoff ?? createLayer3Handoff)(profile, { skill: creativeAgent.skill });
     const rooms = handoff.room_generation_jobs.map(createRoomRuntime);
 
     await jobManager.updateJob(jobId, async (current) => {
@@ -74,7 +78,35 @@ export async function createAgentRuntime(options = {}) {
       message: 'Layer 3 handoff is ready.'
     });
 
+    await runAnchorPhase(jobId, handoff);
     await startStillPhase(jobId);
+  }
+
+  async function runAnchorPhase(jobId, handoff) {
+    const anchorSpecs = extractAnchorSpecs(handoff);
+    if (!anchorSpecs.length) return;
+
+    await jobManager.emitEvent(jobId, {
+      type: 'job.anchors.generating',
+      state: JOB_STATES.LAYER3_READY,
+      message: `Generating ${anchorSpecs.length} consistency anchor image${anchorSpecs.length !== 1 ? 's' : ''} for shared objects.`
+    });
+
+    const anchors = await generateAnchors(anchorSpecs, {
+      genmedia,
+      skillVersion: creativeAgent.skill.version
+    });
+
+    await jobManager.updateJob(jobId, async (job) => {
+      job.artifacts.anchors = anchors;
+    });
+
+    const cacheHits = anchors.filter((a) => a.cache_hit).length;
+    await jobManager.emitEvent(jobId, {
+      type: 'job.anchors.ready',
+      state: JOB_STATES.LAYER3_READY,
+      message: `${anchors.length} anchor image${anchors.length !== 1 ? 's' : ''} ready (${cacheHits} cached). Starting room stills.`
+    });
   }
 
   async function startStillPhase(jobId) {
@@ -128,7 +160,8 @@ export async function createAgentRuntime(options = {}) {
     });
 
     const { job, roomJob, room } = await roomContext(jobId, roomId);
-    const stillPlan = creativeAgent.buildStillPlan({ handoff: job.handoff, roomJob, roomRuntime: room, failureContext });
+    const anchors = job.artifacts?.anchors ?? [];
+    const stillPlan = creativeAgent.buildStillPlan({ handoff: job.handoff, roomJob, roomRuntime: room, failureContext, anchors });
     await jobManager.updateRoom(jobId, roomId, async (currentRoom) => {
       currentRoom.plans.still_plan = stillPlan;
       currentRoom.state = ROOM_STATES.STILL_GENERATING;
@@ -148,7 +181,19 @@ export async function createAgentRuntime(options = {}) {
       endpointId: stillPlan.model,
       params: stillPlan.params,
       skillVersion: stillPlan.skill_version,
-      artifactName: 'still'
+      artifactName: 'still',
+      timeoutMs: 3 * 60 * 1000,
+      onProgress: (update) => {
+        const pos = update?.position != null ? ` — position ${update.position + 1} in queue` : '';
+        if (update?.status === 'IN_QUEUE') {
+          jobManager.emitEvent(jobId, {
+            type: 'room.still.queued',
+            room_id: roomId,
+            state: JOB_STATES.ROOM_QUEUE_RUNNING,
+            message: `${room.room_name} still in queue${pos}.`
+          }).catch(() => {});
+        }
+      }
     });
     if (artifact.cache_hit) {
       await jobManager.emitEvent(jobId, {
@@ -273,7 +318,20 @@ export async function createAgentRuntime(options = {}) {
       params: videoPlan.params,
       sourcePaths: [room.artifacts.styled_image_path],
       skillVersion: videoPlan.skill_version,
-      artifactName: 'video'
+      artifactName: 'video',
+      timeoutMs: 10 * 60 * 1000,
+      onProgress: (update) => {
+        const pos = update?.position != null ? ` — position ${update.position + 1} in queue` : '';
+        const isQueued = update?.status === 'IN_QUEUE';
+        jobManager.emitEvent(jobId, {
+          type: isQueued ? 'room.video.queued' : 'room.video.progress',
+          room_id: roomId,
+          state: JOB_STATES.ROOM_QUEUE_RUNNING,
+          message: isQueued
+            ? `${room.room_name} video in queue${pos}.`
+            : `${room.room_name} video is rendering...`
+        }).catch(() => {});
+      }
     });
     if (artifact.cache_hit) {
       await jobManager.emitEvent(jobId, {
@@ -358,6 +416,52 @@ export async function createAgentRuntime(options = {}) {
     return runVideoForRoom(jobId, roomId, { failure_classes: ['motion_unstable'], message: note });
   }
 
+  async function editRoom(jobId, message, { roomId = null } = {}) {
+    const job = await jobManager.getJob(jobId);
+    if (!job.handoff?.room_generation_jobs?.length) {
+      throw new Error('Job handoff not ready — cannot edit rooms yet.');
+    }
+
+    // If the user explicitly selected a room in the UI, skip the LLM parse.
+    const validRoomIds = new Set(job.handoff.room_generation_jobs.map((r) => r.room_id));
+    const parsed = (roomId && validRoomIds.has(roomId))
+      ? { rooms: [roomId], directive: message }
+      : await parseEditIntent(message, job.handoff.room_generation_jobs);
+
+    await jobManager.updateJob(jobId, async (currentJob) => {
+      currentJob.status = 'running';
+      currentJob.current_state = JOB_STATES.ROOM_QUEUE_RUNNING;
+      currentJob.runtime.video_phase_started = false;
+      currentJob.runtime.still_review_announced = false;
+      currentJob.artifacts.approved_room_clips = (currentJob.artifacts.approved_room_clips ?? []).filter(
+        (clip) => !parsed.rooms.includes(clip.room_id)
+      );
+    });
+
+    await Promise.all(parsed.rooms.map((roomId) =>
+      jobManager.updateRoom(jobId, roomId, async (room) => {
+        room.review.still_approved = false;
+        room.review.video_approved = false;
+        room.state = ROOM_STATES.STILL_RETRYING;
+      })
+    ));
+
+    await jobManager.emitEvent(jobId, {
+      type: 'job.edit.started',
+      state: JOB_STATES.ROOM_QUEUE_RUNNING,
+      message: `Regenerating ${parsed.rooms.length} room${parsed.rooms.length !== 1 ? 's' : ''}: ${parsed.directive}`
+    });
+
+    await Promise.allSettled(
+      parsed.rooms.map((roomId) =>
+        runStillForRoom(jobId, roomId, {
+          failure_classes: ['user_edit_request'],
+          message: parsed.directive
+        })
+      )
+    );
+  }
+
   async function approveRoom(jobId, roomId) {
     await jobManager.updateRoom(jobId, roomId, async (room) => {
       room.state = ROOM_STATES.APPROVED;
@@ -366,6 +470,10 @@ export async function createAgentRuntime(options = {}) {
     await jobManager.updateJob(jobId, async (job) => {
       const room = job.rooms.find((candidate) => candidate.room_id === roomId);
       if (room?.artifacts?.video_clip_path) {
+        // Replace any existing clip for this room so edits don't create duplicates.
+        job.artifacts.approved_room_clips = job.artifacts.approved_room_clips.filter(
+          (clip) => clip.room_id !== roomId
+        );
         job.artifacts.approved_room_clips.push({
           room_id: room.room_id,
           path: room.artifacts.video_clip_path,
@@ -459,14 +567,38 @@ export async function createAgentRuntime(options = {}) {
 
   async function completeJob(jobId) {
     await jobManager.updateJob(jobId, async (job) => {
-      job.status = 'completed';
-      job.current_state = JOB_STATES.COMPLETED;
-      job.artifacts.outputs = job.artifacts.approved_room_clips;
+      job.status = 'running';
+      job.current_state = JOB_STATES.PACKAGING_OUTPUTS;
+    });
+    await jobManager.emitEvent(jobId, {
+      type: 'job.packaging',
+      state: JOB_STATES.PACKAGING_OUTPUTS,
+      message: 'Assembling final video and generating captions.'
+    });
+
+    const job = await jobManager.getJob(jobId);
+    const jobDir = path.join(jobManager.jobsDir, jobId);
+    const roomOrder = new Map(job.rooms.map((r) => [r.room_id, r.sequence_index ?? 0]));
+    const sortedClips = [...(job.artifacts.approved_room_clips ?? [])].sort(
+      (a, b) => (roomOrder.get(a.room_id) ?? 0) - (roomOrder.get(b.room_id) ?? 0)
+    );
+    const jobForLayer5 = { ...job, artifacts: { ...job.artifacts, approved_room_clips: sortedClips } };
+    const layer5 = await (options.runLayer5 ?? runLayer5)({ ...jobForLayer5, _job_dir: jobDir }).catch((err) => {
+      console.error('[orchestrator] Layer 5 failed:', err.message);
+      return { final_video_path: null, captions: null };
+    });
+
+    await jobManager.updateJob(jobId, async (current) => {
+      current.status = 'completed';
+      current.current_state = JOB_STATES.COMPLETED;
+      current.artifacts.outputs = current.artifacts.approved_room_clips;
+      current.artifacts.final_video_path = layer5.final_video_path;
+      current.artifacts.captions = layer5.captions;
     });
     await jobManager.emitEvent(jobId, {
       type: 'job.completed',
       state: JOB_STATES.COMPLETED,
-      message: 'All approved room clips are ready.'
+      message: 'Your space is ready.'
     });
   }
 
@@ -505,6 +637,7 @@ export async function createAgentRuntime(options = {}) {
     subscribe: (jobId, listener) => jobManager.subscribe(jobId, listener),
     approveStill,
     retryRoom,
+    editRoom,
     runJob,
     startStillPhase,
     startVideoPhase,

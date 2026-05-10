@@ -9,13 +9,15 @@ export async function createLayer3Handoff(profile, options = {}) {
   const storage = createLayer3Storage(options);
   const creativeModel = options.openAiCreativeModel ?? process.env.OPENAI_CREATIVE_MODEL ?? DEFAULT_CREATIVE_MODEL;
   const falVideoModel = options.falVideoModel ?? process.env.FAL_VIDEO_MODEL ?? DEFAULT_FAL_VIDEO_MODEL;
-  const cacheKey = layer3CreativePlanCacheKey(profile, creativeModel);
+  const skill = options.skill ?? null;
+  const cacheKey = layer3CreativePlanCacheKey(profile, creativeModel, skill?.version ?? null);
 
   let creativePlan = await storage.readCreativePlan(cacheKey);
   if (!creativePlan) {
     const planner = options.creativePlanner ?? createCreativePlan;
     creativePlan = await planner({
       profile,
+      skill,
       model: creativeModel,
       apiKey: options.openAiApiKey,
       fetchImpl: options.fetchImpl
