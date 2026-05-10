@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "request_id": "019e0f8f-8485-73f1-a2bb-41b9bf227b76",
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0a9996b8/LCqKBi-ZWsG34bPkWzO-5_iNxBaxa6.png",
+        "content_type": "image/png",
+        "file_name": "LCqKBi-ZWsG34bPkWzO-5_iNxBaxa6.png",
+        "file_size": null,
+        "width": null,
+        "height": null
+      }
+    ],
+    "description": ""
+  }
+}

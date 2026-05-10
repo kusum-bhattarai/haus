@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999b71/6BQKeb4ytCzymfs8TCQby_7wmeBVCm.png",
+    "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Very slow truck right, camera glides laterally across the dining nook revealing pendant, table, and window view; daylight gently shifts across surfaces, consistent exposure, cinematic, photorealistic Dine, Calm, meditative warmth — family-ready Japandi with breathable layouts and tactile materials. Maintain believable residential scale for a 7.833333333333333 by 8 ft Dine. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "8233f5cb2cad0047e8168de4ed0795a830424d2b3434d345daf3b6ee1c49ce3b"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

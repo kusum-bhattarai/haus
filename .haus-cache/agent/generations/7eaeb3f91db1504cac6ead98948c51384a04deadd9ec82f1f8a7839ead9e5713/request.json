@@ -1,0 +1,12 @@
+{
+  "endpoint_id": "fal-ai/nano-banana-2",
+  "params": {
+    "prompt": "Photorealistic editorial interior reference photograph of a Dine. Focus tightly on: dining table, pendant light above the dining area, dining chairs, round oak table sized for 7.8ft bay, rattan pendant centered, stoneware centerpiece, visible multi-panel windows, round oak dining table (fits within 7.8ft x 8ft bay), neutral chairs (linen or light wood), single stoneware centerpiece. Styled in japandi aesthetic, warm_neutral palette, soft_ambient lighting. A calm, warm Japandi-driven aesthetic balancing Scandinavian simplicity and Japanese restraint. The palette is warm neutrals with layered natural materials (oak, rattan, linen, stone) and soft, directional sunlight. Spaces are decluttered, low-profile, and arranged to support a young family: a modest crib in the bedroom and a compact standing desk integrated into the living corner for flexible work-from-home needs. Textures and lighting create a meditative, lived-in atmosphere rather than a staged showhome. This image is a visual consistency reference — every detail of the featured furniture and fixtures must be clearly visible and precisely rendered. No people. No visible brand logos. Sharp architectural photography. Luxury real estate staging.",
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

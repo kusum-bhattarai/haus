@@ -251,6 +251,7 @@ button img {
 .truth-note,
 .video-panel,
 .vibe-report,
+.reel-editor-panel,
 .reference-gallery,
 .room-strip article,
 .chat-panel,
@@ -287,68 +288,12 @@ button img {
   display: block;
 }
 
-.floor-plan-shell {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-}
-
-.floor-plan-shell.is-interactive {
-  display: grid;
-  place-items: center;
-  cursor: crosshair;
-}
-
 .plan-diagram .floor-plan-image {
   aspect-ratio: 1 / 1.08;
 }
 
 .floorplan-preview .floor-plan-image {
   max-height: 560px;
-}
-
-.floor-plan-svg {
-  width: 100%;
-  height: 100%;
-  max-height: 560px;
-  display: block;
-}
-
-.haus-room-hit {
-  fill: rgba(196, 160, 90, 0.08);
-  stroke: rgba(196, 160, 90, 0.24);
-  stroke-width: 10;
-  vector-effect: non-scaling-stroke;
-  transition: fill 160ms ease, stroke 160ms ease;
-}
-
-.haus-room-hit:hover {
-  fill: rgba(196, 160, 90, 0.15);
-  stroke: rgba(196, 160, 90, 0.46);
-}
-
-.haus-room-hit.has-still {
-  fill: rgba(23, 107, 91, 0.08);
-  stroke: rgba(23, 107, 91, 0.26);
-}
-
-.haus-room-hit.has-video {
-  fill: rgba(23, 107, 91, 0.14);
-  stroke: rgba(23, 107, 91, 0.56);
-}
-
-.haus-room-hit.is-active {
-  fill: rgba(23, 107, 91, 0.22);
-  stroke: rgba(23, 107, 91, 0.9);
-}
-
-.haus-room-label {
-  fill: #214841;
-  font-size: 70px;
-  font-weight: 800;
-  letter-spacing: 0;
-  pointer-events: none;
-  user-select: none;
 }
 
 .diagram-grid {
@@ -1265,4 +1210,71 @@ legend {
   line-height: 1.5;
   margin: 0;
   flex: 1;
+}
+
+.reel-editor-panel {
+  margin-top: 28px;
+  padding: 18px;
+  background: #fff;
+  border-radius: var(--radius);
+}
+
+.editor-controls {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.editor-controls label,
+.scene-edit-card label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.editor-controls input,
+.scene-edit-card input,
+.scene-edit-card textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.scene-editor-list {
+  display: grid;
+  gap: 10px;
+}
+
+.scene-edit-card {
+  display: grid;
+  grid-template-columns: 160px 1fr 92px;
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8faf9;
+}
+
+.scene-edit-card strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.scene-edit-meta {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 960px) {
+  .editor-controls,
+  .scene-edit-card {
+    grid-template-columns: 1fr;
+  }
 }

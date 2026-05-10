@@ -1,0 +1,3 @@
+{"event_id":"8c595878-f49b-413e-9b30-e43859fd99aa","at":"2026-05-09T19:33:08.674Z","room_id":null,"type":"job.created","state":"CREATED","message":"Job created."}
+{"event_id":"31301718-00a9-4023-85e4-b136e33e5ddb","at":"2026-05-09T19:33:08.678Z","room_id":null,"type":"layers.started","state":"LAYERS_1_3_RUNNING","message":"Running Layers 1-3."}
+{"event_id":"b2aa5d34-ecc9-4ed4-9c43-031ec572fa8f","at":"2026-05-09T19:33:22.367Z","room_id":null,"type":"job.failed","state":"FAILED","message":"APIFY_PINTEREST_ACTOR_ID is required for Pinterest scraping."}

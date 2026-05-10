@@ -1,0 +1,13 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999114/ueabDBfiKRXWBqZ8dH8b3_tSz2aHwx.png",
+    "prompt": "Super smooth camera travels in a slow arc around the main room feature, subject stays centered, parallax remains natural, consistent exposure, stable motion, cinematic, photorealistic. Begin near the entry, slowly reveal the seating area, glide toward the standing desk, and finish on the patio view; emphasize material close-ups (wood grain, linen, ceramics). Nest, calm minimalism with earthy warmth and tactile layers — serene, functional, family-ready Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "12",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

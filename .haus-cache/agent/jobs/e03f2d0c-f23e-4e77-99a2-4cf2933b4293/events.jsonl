@@ -1,0 +1,44 @@
+{"event_id":"08d98ed5-8ee5-402d-b57c-10b1d87111c8","at":"2026-05-09T21:59:40.072Z","room_id":null,"type":"job.created","state":"CREATED","message":"Job created."}
+{"event_id":"c0cc1c27-b99d-4bea-9c6b-51a08094483d","at":"2026-05-09T21:59:40.075Z","room_id":null,"type":"layers.started","state":"LAYERS_1_3_RUNNING","message":"Running Layers 1-3."}
+{"event_id":"e3d29300-ef12-47fe-b224-f1984fee908e","at":"2026-05-09T22:02:38.721Z","room_id":null,"type":"layer3.ready","state":"LAYER3_READY","message":"Layer 3 handoff is ready."}
+{"event_id":"d01c4b84-a80e-4c43-a880-bab6e90e56a8","at":"2026-05-09T22:02:38.738Z","room_id":"nest_living","type":"room.still.planning","state":"ROOM_QUEUE_RUNNING","message":"Planning room still."}
+{"event_id":"6029ac54-6ad6-4667-b82f-a1d2bc3ea7fb","at":"2026-05-09T22:02:38.739Z","room_id":"dine_dining","type":"room.still.planning","state":"ROOM_QUEUE_RUNNING","message":"Planning room still."}
+{"event_id":"919df183-d33e-4f1b-a9ff-fdd60e914fa3","at":"2026-05-09T22:02:38.739Z","room_id":"taste_kitchen","type":"room.still.planning","state":"ROOM_QUEUE_RUNNING","message":"Planning room still."}
+{"event_id":"ce188a24-7c76-4b42-8f9f-d38a6acf0ed5","at":"2026-05-09T22:02:38.739Z","room_id":"dream_bedroom","type":"room.still.planning","state":"ROOM_QUEUE_RUNNING","message":"Planning room still."}
+{"event_id":"3973e313-a2be-40e5-8823-6c35ab103e38","at":"2026-05-09T22:02:38.739Z","room_id":"relax_patio","type":"room.still.planning","state":"ROOM_QUEUE_RUNNING","message":"Planning room still."}
+{"event_id":"97dea98c-14ff-4199-9457-7f04843fbba4","at":"2026-05-09T22:02:38.739Z","room_id":"revive_bathroom","type":"room.still.planning","state":"ROOM_QUEUE_RUNNING","message":"Planning room still."}
+{"event_id":"eb024de4-9560-427d-a195-8640ffb1e0f5","at":"2026-05-09T22:02:38.739Z","room_id":"hall_central","type":"room.still.planning","state":"ROOM_QUEUE_RUNNING","message":"Planning room still."}
+{"event_id":"70fc6803-b23c-4ce6-aff6-079365443c3d","at":"2026-05-09T22:02:38.752Z","room_id":"surf_foyer","type":"room.still.planning","state":"ROOM_QUEUE_RUNNING","message":"Planning room still."}
+{"event_id":"e013b7dc-e579-4489-9e4e-df06c1532add","at":"2026-05-09T22:02:38.780Z","room_id":"taste_kitchen","type":"room.still.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room still."}
+{"event_id":"f4c9e409-2206-4b39-89b6-05b8390153de","at":"2026-05-09T22:02:38.780Z","room_id":"dine_dining","type":"room.still.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room still."}
+{"event_id":"fecbb12b-88f9-405b-aec9-63324d5c07c6","at":"2026-05-09T22:02:38.780Z","room_id":"dream_bedroom","type":"room.still.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room still."}
+{"event_id":"6aa594fb-ebc0-4436-8214-d9eaf2620697","at":"2026-05-09T22:02:38.780Z","room_id":"nest_living","type":"room.still.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room still."}
+{"event_id":"2d8de995-b70c-4965-b8be-78c2ede97107","at":"2026-05-09T22:02:38.804Z","room_id":"relax_patio","type":"room.still.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room still."}
+{"event_id":"898db7b1-a21d-4137-a7fc-649ecfa22d2e","at":"2026-05-09T22:02:38.828Z","room_id":"revive_bathroom","type":"room.still.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room still."}
+{"event_id":"eaff641b-6c33-42ef-96ee-8d5ceb17b1c8","at":"2026-05-09T22:02:38.831Z","room_id":"hall_central","type":"room.still.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room still."}
+{"event_id":"28d33e3c-9492-4691-80b4-c5f9b56448ea","at":"2026-05-09T22:02:38.829Z","room_id":"surf_foyer","type":"room.still.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room still."}
+{"event_id":"ce2a601f-7948-4a53-9deb-ca0904aa668b","at":"2026-05-09T22:03:19.790Z","room_id":"relax_patio","type":"room.still.review_ready","state":"WAITING_FOR_HUMAN_REVIEW","message":"Still ready for human review."}
+{"event_id":"7a7c2503-9453-405a-a7c4-d66862147787","at":"2026-05-09T22:03:20.266Z","room_id":"revive_bathroom","type":"room.still.review_ready","state":"WAITING_FOR_HUMAN_REVIEW","message":"Still ready for human review."}
+{"event_id":"4a5b8566-3838-4797-b874-71c45055d623","at":"2026-05-09T22:03:21.217Z","room_id":"surf_foyer","type":"room.still.review_ready","state":"WAITING_FOR_HUMAN_REVIEW","message":"Still ready for human review."}
+{"event_id":"c9c4c9dd-ab8a-4067-aa4b-9aa7ecf59671","at":"2026-05-09T22:03:21.658Z","room_id":"dine_dining","type":"room.still.review_ready","state":"WAITING_FOR_HUMAN_REVIEW","message":"Still ready for human review."}
+{"event_id":"384ae47c-b4d5-40ad-98dd-760fbac66b38","at":"2026-05-09T22:03:24.925Z","room_id":"hall_central","type":"room.still.review_ready","state":"WAITING_FOR_HUMAN_REVIEW","message":"Still ready for human review."}
+{"event_id":"08fe21ee-b3bf-4f36-b8a7-e60466e43390","at":"2026-05-09T22:03:28.064Z","room_id":"dream_bedroom","type":"room.still.review_ready","state":"WAITING_FOR_HUMAN_REVIEW","message":"Still ready for human review."}
+{"event_id":"c976aaee-37b8-4f87-96d9-80792949d385","at":"2026-05-09T22:03:28.099Z","room_id":"taste_kitchen","type":"room.still.review_ready","state":"WAITING_FOR_HUMAN_REVIEW","message":"Still ready for human review."}
+{"event_id":"7c2407cf-bfca-4913-9eda-411e6d0ab04b","at":"2026-05-09T22:03:37.719Z","room_id":"nest_living","type":"room.still.review_ready","state":"WAITING_FOR_HUMAN_REVIEW","message":"Still ready for human review."}
+{"event_id":"5e46fed4-0873-47b1-851e-ee71da2d7714","at":"2026-05-09T22:03:37.735Z","room_id":null,"type":"job.stills.review_ready","state":"WAITING_FOR_HUMAN_REVIEW","message":"All room stills are ready for review."}
+{"event_id":"c7820303-beb1-48a1-8cda-164b04a114b7","at":"2026-05-09T22:04:37.514Z","room_id":"nest_living","type":"room.still.approved","state":"ROOM_QUEUE_RUNNING","message":"Still approved."}
+{"event_id":"5fc1ede2-0432-4509-8819-9985521504a5","at":"2026-05-09T22:04:42.276Z","room_id":"dream_bedroom","type":"room.still.approved","state":"ROOM_QUEUE_RUNNING","message":"Still approved."}
+{"event_id":"22573543-a0bb-40dc-bf75-d4dca89b7cbd","at":"2026-05-09T22:04:44.786Z","room_id":"dine_dining","type":"room.still.approved","state":"ROOM_QUEUE_RUNNING","message":"Still approved."}
+{"event_id":"85b468e1-4c6a-4c23-bb5e-f8d6ff40758e","at":"2026-05-09T22:04:48.784Z","room_id":"revive_bathroom","type":"room.still.approved","state":"ROOM_QUEUE_RUNNING","message":"Still approved."}
+{"event_id":"22a07f62-e7f8-462a-839b-18d132803b7c","at":"2026-05-09T22:04:50.641Z","room_id":"surf_foyer","type":"room.still.approved","state":"ROOM_QUEUE_RUNNING","message":"Still approved."}
+{"event_id":"36fd5d95-a7d0-4661-b04b-878d5f3a7031","at":"2026-05-09T22:04:52.290Z","room_id":"hall_central","type":"room.still.approved","state":"ROOM_QUEUE_RUNNING","message":"Still approved."}
+{"event_id":"bebe8f85-bf5f-47d5-b365-4b78467c9fef","at":"2026-05-09T22:04:53.815Z","room_id":"relax_patio","type":"room.still.approved","state":"ROOM_QUEUE_RUNNING","message":"Still approved."}
+{"event_id":"39a6480b-96ec-4a87-82f5-6e7794aaa648","at":"2026-05-09T22:04:55.456Z","room_id":"taste_kitchen","type":"room.still.approved","state":"ROOM_QUEUE_RUNNING","message":"Still approved."}
+{"event_id":"c14e165e-1b69-4d99-882b-9e515fff0002","at":"2026-05-09T22:04:55.464Z","room_id":null,"type":"job.stills.approved","state":"ROOM_QUEUE_RUNNING","message":"All room stills approved. Starting videos."}
+{"event_id":"ba210995-114f-47df-816d-fa11ea2dd65f","at":"2026-05-09T22:04:55.488Z","room_id":"nest_living","type":"room.video.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room video."}
+{"event_id":"4c484b5e-7736-46ce-aa40-8782772837c9","at":"2026-05-09T22:07:06.978Z","room_id":"nest_living","type":"room.approved","state":"ROOM_QUEUE_RUNNING","message":"Room clip approved."}
+{"event_id":"64cd41fb-81cf-4f93-bb44-9d4708fa5a56","at":"2026-05-09T22:07:06.986Z","room_id":"dream_bedroom","type":"room.video.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room video."}
+{"event_id":"f0525419-44e6-41a3-90c8-46454f6feb23","at":"2026-05-09T22:10:06.179Z","room_id":"dream_bedroom","type":"room.approved","state":"ROOM_QUEUE_RUNNING","message":"Room clip approved."}
+{"event_id":"a8e59145-ac6b-4133-b5d7-9411f403985f","at":"2026-05-09T22:10:06.189Z","room_id":"taste_kitchen","type":"room.video.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room video."}
+{"event_id":"a4c20764-cfd1-489c-8302-bd309977b1d3","at":"2026-05-09T22:12:10.369Z","room_id":"taste_kitchen","type":"room.approved","state":"ROOM_QUEUE_RUNNING","message":"Room clip approved."}
+{"event_id":"53bac968-98c0-452e-938f-efcf61c319c5","at":"2026-05-09T22:12:10.380Z","room_id":"dine_dining","type":"room.video.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room video."}

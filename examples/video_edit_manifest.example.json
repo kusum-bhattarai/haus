@@ -1,0 +1,79 @@
+{
+  "job_id": "atlantic-palazzo-edit",
+  "floor_plan_id": "3b2",
+  "property_brief": "Luxury short cut from cached room clips and inserts.",
+  "aesthetic_name": "Luxury waterfront lifestyle",
+  "aesthetic_summary": "Crisp architectural room coverage with premium exterior and amenity beats.",
+  "video_script": {
+    "title": "Luxury waterfront lifestyle property short",
+    "style": "luxury_real_estate",
+    "duration_seconds": 25,
+    "target_platform": "reels",
+    "hook_text": "Live inside the plan",
+    "segments": [
+      {
+        "type": "hook",
+        "narration": "Step inside a waterfront home designed around calm, light, and daily ease.",
+        "subtitle_text": "Designed around calm."
+      },
+      {
+        "type": "arrival",
+        "narration": "The living room opens the story with warm materials and a clear sense of flow.",
+        "subtitle_text": "Warm, open flow."
+      },
+      {
+        "type": "flow",
+        "narration": "Private rooms stay tucked away while the social spaces stay connected.",
+        "subtitle_text": "Private where it matters."
+      },
+      {
+        "type": "detail",
+        "narration": "Every shot holds on the details that make the apartment feel finished.",
+        "subtitle_text": "Details that feel finished."
+      },
+      {
+        "type": "cta",
+        "narration": "Book the tour and walk the vision in person.",
+        "subtitle_text": "Book the tour."
+      }
+    ],
+    "caption": "A polished waterfront apartment preview.",
+    "hashtags": ["#realestate", "#architecture", "#apartmenttour"]
+  },
+  "base_dir": ".",
+  "music_bed": "assets/music/bed.mp3",
+  "rooms": [
+    {
+      "room_id": "living_room_1",
+      "room_name": "living room",
+      "still_path": "assets/stills/living_room.png",
+      "clip_path": "assets/clips/living_room.mp4",
+      "duration_seconds": 5,
+      "motion_preset": "slow_dolly"
+    },
+    {
+      "room_id": "bedroom_1",
+      "room_name": "bedroom",
+      "still_path": "assets/stills/bedroom.png",
+      "clip_path": "assets/clips/bedroom.mp4",
+      "duration_seconds": 5,
+      "motion_preset": "static_zoom"
+    }
+  ],
+  "assets": [
+    {
+      "id": "drone-open",
+      "type": "drone",
+      "label": "Arrival reveal",
+      "path": "assets/drone/arrival.mp4",
+      "duration_seconds": 4
+    },
+    {
+      "id": "pool-broll",
+      "type": "broll",
+      "label": "Pool detail",
+      "path": "assets/broll/pool.png",
+      "duration_seconds": 3
+    }
+  ]
+}

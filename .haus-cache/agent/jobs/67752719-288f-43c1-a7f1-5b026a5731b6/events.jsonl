@@ -1,0 +1,3 @@
+{"event_id":"ba907ee4-98bf-41a2-826c-f93fedd09c1e","at":"2026-05-10T05:53:35.213Z","room_id":null,"type":"job.created","state":"CREATED","message":"Job created."}
+{"event_id":"2f1acae4-9092-41a8-ae4f-3d60a4a912c5","at":"2026-05-10T05:53:35.214Z","room_id":null,"type":"layers.started","state":"LAYERS_1_3_RUNNING","message":"Running Layers 1-3."}
+{"event_id":"cbe1551b-223e-49bb-ac06-7dc0cebf46fc","at":"2026-05-10T05:53:45.760Z","room_id":null,"type":"job.failed","state":"FAILED","message":"fetch failed"}

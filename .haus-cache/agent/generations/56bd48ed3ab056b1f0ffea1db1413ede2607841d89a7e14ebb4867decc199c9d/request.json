@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a998f4f/ToE2pdGB9p4F8p2oEE6nK_rlDS77Qo.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest. Diffused daytime from large glass door; soft warm ambient fill (2700–3000K). Add one floor lamp near seating and a warm task lamp at the standing desk. Keep contrast low to preserve texture. A warm, restrained Japandi interior that balances Japanese minimalism with Scandinavian warmth — natural materials, low profiles, and layered soft neutrals. Rooms should feel airy and meditative but family-friendly: tactile rugs, rounded wooden forms, and purposeful storage. Introduce a compact work corner and a safe crib placement in the bedroom while preserving open sightlines to the patio and natural light. Use styling cues from these selected Pinterest references: Japandi Dining Room with Neutral Decor | A Japandi dining room with neutral décor blends Japanese simplicity and Scandinavian warmth. Soft beige, warm wood, and gentle earth tones create a calm, inviting space. Clean lines, natural materials, and minimal furnishings keep the room feeling open and uncluttered, while subtle textures like linen, ceramic, and light wood add quiet elegance and comfort. | Japandi dining with rattan pendant. Correct perspective distortion so verticals are vertical and horizontals are level. Derive lighting strictly from visible windows, doors, and practical fixtures. Keep highlights controlled, shadows sculpted, exposure balanced, and detail sharp. Previous failure modes to correct: style_mismatch.",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

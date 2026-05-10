@@ -1,0 +1,13 @@
+{
+  "endpoint_id": "fal-ai/kling-video/v3/pro/image-to-video",
+  "params": {
+    "start_image_url": "https://v3b.fal.media/files/b/0a998e52/MjAF7eSwzL7Yp-Jpp4fVY_N6v8hOr7.png",
+    "prompt": "Nearly locked-off architectural shot with a subtle slow push, stable vertical lines, natural daylight drift, consistent exposure, cinematic, photorealistic. Start with a static zoom from room doorway into the crib area, hold to show bedding texture and bedside lantern, then a subtle pan to the low dresser and wall art to convey restful layering. Keep motion minimal to preserve serenity. Dream, Calm, warm, airy Japandi — family-forward, minimal, and texturally layered. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "negative_prompt": "No saturated or neon colors, no heavy ornamentation, no busy patterns, avoid glossy reflective plastics or chrome, no visible text/logos, avoid unrealistic lighting (hard mixed color temps), no unsafe crib staging (no cords, no hanging items)., blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift",
+    "duration": "8",
+    "generate_audio": false,
+    "cfg_scale": 0.5
+  },
+  "source_hashes": [],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

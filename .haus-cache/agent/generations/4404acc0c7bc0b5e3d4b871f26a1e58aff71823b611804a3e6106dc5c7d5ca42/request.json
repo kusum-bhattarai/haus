@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a9996b2/WeDkGt2sQrHYAC2E3R6V0_6eY9dhgR.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for a 12.5 by 11.583333333333334 ft Dream. Soft, even ambient light from window; warm bedside lamps (~2700K) for layered pools. No dramatic spotlights. Keep shadows gentle to preserve restful mood. A calm, warm Japandi palette that balances Japanese minimalism and Scandinavian comfort. Use low-profile furniture, warm woods, woven textures and soft ambient light. Prioritize open sightlines, decluttered surfaces and a small dedicated work corner. Keep scale human and kid-safe: rounded edges, low heights, and natural materials. Correct perspective distortion so verticals are vertical and horizontals are level. Derive lighting strictly from visible windows, doors, and practical fixtures. Keep highlights controlled, shadows sculpted, exposure balanced, and detail sharp. Previous failure modes to correct: object_missing, layout_drift.",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

@@ -1,0 +1,17 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a999a7d/3taDpJFoydob_K9t11ya1_8uxR6DHU.png",
+      "https://v3b.fal.media/files/b/0a999a7b/3ry09kruIw8jUtgwIBgWR_GrjsSXBk.png",
+      "https://v3b.fal.media/files/b/0a999a7b/RzP0pI-ZsBtesnvRNDM3P_SEV11O6H.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for Taste at roughly small. Indirect light from dining bay; use warm under-cabinet practicals near counters and a small pendant over any prep nook. Keep exposure steady and avoid bright specular highlights on cabinetry. A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The Dine visible through the open pass-through or doorway must show exactly the same dining table, pendant light above the dining area, dining chairs, round oak dining table, rattan pendant, linen-upholstered chairs as in the reference image — do not invent different furniture. The kitchen cabinets, range hood, kitchen island or counter, matte ceramic accessories, warm under-cabinet light in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. Previous failure modes to correct: wrong_room_type, object_missing, lighting_unrealistic. The image partially matches the specified kitchen style and layout, but there are issues with missing required objects such as matte ceramic accessories and warm under-cabinet lighting. The lighting also appears too bright overall, which detracts from realism.",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

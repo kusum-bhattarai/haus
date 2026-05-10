@@ -1,0 +1,411 @@
+{
+  "vibe_report": {
+    "aesthetic_name": "Warm Japandi Family",
+    "summary": "A calm, warm Japandi scheme tuned for a young family: pared-back Scandinavian lines meet Japanese restraint. Emphasize low-profile furniture, natural woods, woven textures and layered neutrals. Keep negative space and simple focal points (rattan pendant over dining, a low coffee table in the living bay) while integrating a compact work corner and a safe, minimal crib in the bedroom.",
+    "palette_rationale": "Warm neutrals (#EDE7DF, #CBB698, #A88461) form the base to create a soothing backdrop; mid tones (#6D6A5F) for furniture and anchoring elements; deep accent (#2B2724) used sparingly for metal details and contrast. This palette supports soft natural light and layered textures without feeling monochrome.",
+    "lighting_mood": "Soft ambient daylight with warm, dimmable accents in the evening. Prioritize layered lighting: diffuse ceiling/pendant for general mood, warm directional task light at the desk and bedside, and low-level floor/lantern lighting for the tea-nook/relax areas.",
+    "materials": [
+      "light oak (tables, low benches, shelving)",
+      "woven rattan and seagrass (pendant, baskets)",
+      "linen and washed cotton upholstery",
+      "muted ceramics and stoneware",
+      "matte black hardware (minimal)",
+      "wool and natural-fiber rugs",
+      "tatami-edge or woven floor mats"
+    ],
+    "textures": [
+      "soft slub linen",
+      "open-weave rattan",
+      "brushed wood grain",
+      "hand-thrown ceramic matte surfaces",
+      "low-pile layered rugs",
+      "raw plaster or clay-toned paint"
+    ],
+    "furniture_language": [
+      "low-profile seating on wooden plinths",
+      "clean rectangular and round silhouettes",
+      "multipurpose, compact storage solutions",
+      "visual horizontality (long bench, low coffee table)",
+      "subtle rounded edges for family-friendly safety"
+    ],
+    "styling_rules": [
+      "Keep surfaces mostly clear — one sculptural object or a single ceramic vase per major surface.",
+      "Layer 2 rugs in living/tea-nook zones (natural-fiber base + soft wool top).",
+      "Use plants sparingly to add life and scale: single taller plant + 1–2 small pots.",
+      "Balance open negative space with a single warm focal pendant in the dining bay.",
+      "Integrate the work corner visually by using matching wood tones and a linen pinboard."
+    ],
+    "avoid": [
+      "high-gloss, chrome-heavy fixtures",
+      "bright saturated colors or bold patterns",
+      "overly ornate/traditional furniture",
+      "excessive visual clutter or too many small decorative items",
+      "large, high-back sectionals that block sightlines"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "dream_bedroom",
+        "headline": "Calm family bedroom with safe minimal crib and soft textures",
+        "guidance": "Place a simple birch-slat crib along the exterior wall under the window (leave 18–24 in clearance). Main bed should be low-profile on a wooden base oriented to preserve the window sightline. Include a compact wardrobe/dresser and a small, soft-glow bedside lamp. Introduce a washable low-pile rug to create a cozy play/diaper area. Keep furniture edges rounded for child safety.",
+        "must_include": [
+          "crib (birch or light oak slats, minimal)",
+          "low bed on wooden base",
+          "soft linen bedding (neutral)",
+          "low-pile washable rug",
+          "warm bedside lamp with dimmer"
+        ],
+        "must_avoid": [
+          "tall freestanding shelving above crib",
+          "brightly patterned textiles",
+          "heavy dark furniture that dominates the room"
+        ]
+      },
+      {
+        "room_id": "nest_living_room",
+        "headline": "Low, layered Japandi living with integrated standing desk work corner",
+        "guidance": "Orient low sofa toward the glass door to Relax; place a low wooden coffee table and one floor cushion/tea-nook element near the dining bay to carry the theme across. Tuck a compact standing desk (light oak, narrow) along an interior wall or near the dining threshold to create a cozy work corner — use a linen pinboard and a warm task lamp. Add one taller plant near the sliding door and a tactile wool rug to ground the seating.",
+        "must_include": [
+          "low sofa on wooden base",
+          "low coffee table (round or rectangular, oak)",
+          "compact standing desk (narrow, light oak) with task lamp",
+          "wool or wool+tattami layered rug",
+          "one potted plant near sliding door"
+        ],
+        "must_avoid": [
+          "large sectional sofas",
+          "bulky entertainment units that block light paths",
+          "bright screens staged prominently"
+        ]
+      },
+      {
+        "room_id": "dine_dining_room",
+        "headline": "Intimate Japandi dining bay with rattan pendant focal point",
+        "guidance": "Use a round oak dining table sized for 4 and light linen-upholstered chairs. Hang a woven rattan pendant centered above the table at comfortable height (approx 30 in from table). Keep table setting minimal: one stoneware vase or bowl, neutral placemats. Leverage bay windows as a daylight focal, keep window treatments light (sheer linen).",
+        "must_include": [
+          "round oak dining table for 4",
+          "rattan woven pendant centered",
+          "linen-upholstered chairs (neutral)",
+          "single ceramic/stoneware centerpiece"
+        ],
+        "must_avoid": [
+          "large buffet or tall cabinets blocking bay light",
+          "metallic or glass industrial pendants",
+          "overly busy table settings"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Minimal, functional kitchen that reads warm and uncluttered",
+        "guidance": "Keep cabinetry in warm neutral tones, hide appliances where possible. Open shelving for a few ceramics and wooden cutting boards preserves the aesthetic. If counter space is limited, stage a single wooden chopping board and a small potted herb. Ensure visual connection to dining bay for light flow.",
+        "must_include": [
+          "warm neutral cabinetry (matte finish)",
+          "open shelf with curated ceramics",
+          "wooden chopping board and 1–2 ceramic pieces"
+        ],
+        "must_avoid": [
+          "busy tile backsplashes",
+          "visible large appliances across counters"
+        ]
+      },
+      {
+        "room_id": "revive_bathroom",
+        "headline": "Spa-like small bathroom: warm surfaces and simple fittings",
+        "guidance": "Use clay-toned tiles or plaster walls, a slim wooden vanity and a round mirror. Keep toiletries minimal and stage a wooden bath tray and a folded linen towel. If tub exists, add a small ceramic soap dish and a narrow high window should remain unobstructed.",
+        "must_include": [
+          "wooden vanity (slim)",
+          "round matte mirror",
+          "muted ceramic accessories",
+          "folded linen towels neatly stacked"
+        ],
+        "must_avoid": [
+          "brightly colored towels or bath mats",
+          "excessive countertop clutter"
+        ]
+      },
+      {
+        "room_id": "wash_laundry",
+        "headline": "Compact laundry with tidy, utility-first styling",
+        "guidance": "Staged with stacked washer/dryer (if possible) or compact units, a slim folding counter and woven laundry basket. Keep door closed in shots showing low light to avoid cluttered interiors.",
+        "must_include": [
+          "stacked washer/dryer or compact units",
+          "woven laundry basket",
+          "small folding surface"
+        ],
+        "must_avoid": [
+          "open piles of laundry",
+          "random detergents or bottles on counters"
+        ]
+      },
+      {
+        "room_id": "relax_patio",
+        "headline": "Small outdoor patio for quiet mornings — weatherproof natural materials",
+        "guidance": "Use a low wooden bench or rattan seating with a weatherproof cushion, a small side table and potted bamboo or grasses. Stage sliding door slightly open to blur indoor-outdoor boundary. Keep decor minimal and breathable for family use.",
+        "must_include": [
+          "low bench or rattan seating",
+          "one medium potted plant (bamboo/grasses)",
+          "sliding door staged open"
+        ],
+        "must_avoid": [
+          "overfilled furniture sets",
+          "bright outdoor textiles"
+        ]
+      },
+      {
+        "room_id": "surf_hall",
+        "headline": "Decluttered circulation with subtle storage cues",
+        "guidance": "Show narrow console or shelf with single tray for keys and a woven shoe basket. Keep walls sparse with one small round mirror or wood peg rail.",
+        "must_include": [
+          "slim console or peg rail",
+          "woven shoe basket"
+        ],
+        "must_avoid": [
+          "shoe piles or bulky stands"
+        ]
+      },
+      {
+        "room_id": "dress_closet",
+        "headline": "Organized, minimal closet staging",
+        "guidance": "Use neutral hanging textiles, folded linen on shelves and a small storage box. Keep door slightly ajar for depth but avoid overfilling.",
+        "must_include": [
+          "neutral clothing hangers",
+          "folded linens on shelves",
+          "one small storage box"
+        ],
+        "must_avoid": [
+          "overpacked shelves or visible clutter"
+        ]
+      },
+      {
+        "room_id": "store_entry",
+        "headline": "Entry storage — simple and functional",
+        "guidance": "A small bench with shoe storage below and a basket for bags. Keep styling minimal for quick access staging.",
+        "must_include": [
+          "bench with storage",
+          "entry basket"
+        ],
+        "must_avoid": [
+          "crowded wall hooks"
+        ]
+      },
+      {
+        "room_id": "store_relax",
+        "headline": "Outdoor storage — tidy and weatherproof",
+        "guidance": "Store outdoor cushions and small garden tools in a woven trunk or lidded box. Keep objects tidy, not staged as piled.",
+        "must_include": [
+          "lidded storage trunk",
+          "stacked cushions (neatly)"
+        ],
+        "must_avoid": [
+          "scattered garden tools"
+        ]
+      }
+    ],
+    "confidence": 0.85,
+    "warnings": [
+      "Only measured dimensions supplied for Dream, Nest and Dine. Confirm precise furniture clearances if exact staging is required.",
+      "Crib placement must follow local safety codes — leave appropriate clearance from windows and blinds."
+    ]
+  },
+  "overall_mood": "Warm, calm Japandi — breathable, low, and family-friendly",
+  "global_style_notes": [
+    "Prioritize horizontal lines and low furniture to reinforce Japandi calm.",
+    "Use a restrained decorative palette and one strong natural-material focal (rattan pendant or wooden bench).",
+    "Integrate the standing desk visually — matching wood tone and minimal accessories to prevent it feeling like an afterthought."
+  ],
+  "negative_prompt": "no bright saturated colors, no heavy ornate/traditional furniture, no industrial chrome fixtures, no cluttered surfaces, no large high-back sectionals, avoid visible laundry piles and toys scattered across main sightlines",
+  "room_plans": [
+    {
+      "room_id": "dream_bedroom",
+      "lighting_instruction": "Natural mid-day daylight from the exterior window + warm bedside lamps (2700K) dimmed to ~60% for evening shots. Soft fill to reduce harsh shadows.",
+      "dalle_scene_details": "Medium-sized family bedroom with a low-profile wooden bed and a birch-slat crib positioned under the exterior window. Linen bedding in warm almond tones, a low washable rug beside the bed, slim wooden dresser, and a warm-glow bedside lamp. Soft wall color in warm neutral with minimal wall art. Ensure safe clearances and rounded furniture edges.",
+      "video_prompt": "Slow reveal from hallway into room: pan from door to crib and then to the bed, pause on textile details (linen, rug) and bedside lamp.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 10,
+      "must_include": [
+        "crib (birch/light oak slats)",
+        "low bed on wooden base",
+        "linen bedding",
+        "low-pile washable rug",
+        "warm bedside lamp"
+      ],
+      "must_avoid": [
+        "tall furniture above crib",
+        "bright patterned textiles"
+      ]
+    },
+    {
+      "room_id": "nest_living_room",
+      "lighting_instruction": "High natural daylight from large glass door and dining bay. Use soft ambient fill to retain shadow depth. Add a warm desk lamp on the standing desk and a low floor lantern near the tea-nook for layered warmth.",
+      "dalle_scene_details": "Open living bay with low sofa on a wooden plinth facing the sliding glass door to the Relax patio. Low oak coffee table, layered wool + natural-fiber rugs, one floor cushion near the dining threshold. Compact standing desk (narrow light oak) staged against an interior wall with a linen pinboard and warm task lamp. One tall potted plant near sliding door. Keep surfaces minimal and pathways clear.",
+      "video_prompt": "Orbital pan starting near the sofa, circle slowly to show coffee table and desk corner, pause at standing desk to show task lamp and pinboard, then continue orbit toward sliding door to reveal outdoor connection.",
+      "camera_motion": "orbital_pan",
+      "duration_seconds": 12,
+      "must_include": [
+        "low sofa",
+        "low oak coffee table",
+        "compact standing desk with task lamp",
+        "layered rugs",
+        "potted plant near sliding door"
+      ],
+      "must_avoid": [
+        "large sectional",
+        "visible TV as focal"
+      ]
+    },
+    {
+      "room_id": "dine_dining_room",
+      "lighting_instruction": "Bay windows provide strong daylight; use soft overhead fill to balance. Pendant should be warm-toned (2700–3000K) and slightly dimmed to create an intimate feel.",
+      "dalle_scene_details": "Small dining bay with a round oak table for four, linen-upholstered chairs and a woven rattan pendant centered above. Minimal table setting: one stoneware vase and simple neutral placemats. Sheer linen window treatments to soften incoming daylight.",
+      "video_prompt": "Static close-in zoom on the dining table: start wide to show bay window, slowly zoom to the ceramic centerpiece and rattan pendant, hold on woven texture.",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 8,
+      "must_include": [
+        "round oak table (4 seats)",
+        "rattan pendant centered",
+        "linen-upholstered chairs",
+        "single ceramic centerpiece"
+      ],
+      "must_avoid": [
+        "busy tableware",
+        "industrial metal pendant"
+      ]
+    },
+    {
+      "room_id": "taste_kitchen",
+      "lighting_instruction": "Balanced ambient light with soft under-cabinet task light. Rely on daylight from dining bay; avoid harsh top-down glare.",
+      "dalle_scene_details": "Compact kitchen with warm neutral matte cabinets, minimal visible appliances, a wooden chopping board with one potted herb, and a single open shelf with curated ceramics. Countertops are clear except for one decorative item.",
+      "video_prompt": "Slow lateral slide from the dining threshold across the counter to the open shelf, pausing on ceramic pieces and wooden board.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 8,
+      "must_include": [
+        "warm neutral cabinetry",
+        "open shelf with curated ceramics",
+        "wooden chopping board and potted herb"
+      ],
+      "must_avoid": [
+        "visible countertop appliance clutter",
+        "bright backsplash patterns"
+      ]
+    },
+    {
+      "room_id": "revive_bathroom",
+      "lighting_instruction": "Soft, even ambient light with a warmer vanity lamp. Keep shower/tub area lit from the small high window where possible.",
+      "dalle_scene_details": "Small spa-like bathroom with clay-toned tiles or plaster walls, a slim wooden vanity, round matte mirror and folded linen towels. Minimal bathroom accessories in muted ceramic tones. Small high window above tub left unobstructed.",
+      "video_prompt": "Gentle push-in from door to vanity, slow pan to mirror and folded towels, finish with a detail on ceramic accessory.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 7,
+      "must_include": [
+        "slim wooden vanity",
+        "round matte mirror",
+        "folded linen towels",
+        "muted ceramic accessories"
+      ],
+      "must_avoid": [
+        "excess toiletries on counters",
+        "bright colored towels"
+      ]
+    },
+    {
+      "room_id": "wash_laundry",
+      "lighting_instruction": "Neutral cool ambient light to read as utilitarian; keep door partially closed in wider shots to minimize clutter visibility.",
+      "dalle_scene_details": "Compact laundry with stacked washer/dryer or compact units, a narrow folding shelf, and a woven laundry basket. Everything tidy and intentionally tucked away.",
+      "video_prompt": "Short static shot focusing on stacked units and folding shelf; include a quick cut showing basket neatly stored.",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 6,
+      "must_include": [
+        "stacked washer/dryer or compact units",
+        "woven laundry basket",
+        "narrow folding shelf"
+      ],
+      "must_avoid": [
+        "open piles of laundry",
+        "detergent bottles scattered"
+      ]
+    },
+    {
+      "room_id": "relax_patio",
+      "lighting_instruction": "Use strong daylight; stage sliding door open to create indoor-outdoor continuity. Warm late-afternoon color temperature is preferred for cozy shots.",
+      "dalle_scene_details": "Small patio with low wooden bench or rattan seating, weatherproof cushions, small side table and a medium potted bamboo. Sliding door partially open to show connection to Nest.",
+      "video_prompt": "Aerial drift or slow push from outside toward the sliding door, showing seating and plant, then drift inward to reveal living bay connection.",
+      "camera_motion": "aerial_drift",
+      "duration_seconds": 9,
+      "must_include": [
+        "low bench or rattan seating",
+        "potted bamboo/grasses",
+        "sliding door staged open"
+      ],
+      "must_avoid": [
+        "overstuffed outdoor sets",
+        "bright outdoor patterns"
+      ]
+    },
+    {
+      "room_id": "surf_hall",
+      "lighting_instruction": "Low, even ambient light. Accent with small wall sconce if needed for depth.",
+      "dalle_scene_details": "Narrow interior hall with a slim console or peg rail, a single woven shoe basket and minimal decorative items. Maintain clear circulation.",
+      "video_prompt": "Quick dolly along the hall showing console, peg rail and transition into adjacent rooms.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 6,
+      "must_include": [
+        "slim console or peg rail",
+        "woven shoe basket"
+      ],
+      "must_avoid": [
+        "shoe piles",
+        "excessive hanging items"
+      ]
+    },
+    {
+      "room_id": "dress_closet",
+      "lighting_instruction": "Soft focused task light inside closet; keep ambient spill low to emphasize organization.",
+      "dalle_scene_details": "Small closet staged with neutral hangers, folded linens and one storage box. Door left ajar slightly to show depth.",
+      "video_prompt": "Short static detail on neatly folded linens and neutral hangers; hold for texture.",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "neutral hangers",
+        "folded linens",
+        "one storage box"
+      ],
+      "must_avoid": [
+        "overpacked shelving",
+        "messy piles"
+      ]
+    },
+    {
+      "room_id": "store_entry",
+      "lighting_instruction": "Low warm accent near entry basket; neutral ambient to read materials.",
+      "dalle_scene_details": "Small entry storage with a bench with shoe storage beneath and an entry basket on or under the bench. Keep area tidy and practical.",
+      "video_prompt": "Static wide shot of the entry bench and basket, slight zoom to basket detail.",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "bench with storage",
+        "entry basket"
+      ],
+      "must_avoid": [
+        "crowded hooks or piled items"
+      ]
+    },
+    {
+      "room_id": "store_relax",
+      "lighting_instruction": "Natural daylight if connected; otherwise neutral ambient. Keep accessories tidy.",
+      "dalle_scene_details": "Small outdoor storage trunk with neatly stacked cushions and a lidded woven trunk. Items are orderly and weatherproof.",
+      "video_prompt": "Short static detail on lidded trunk and stacked cushions, emphasizing textures.",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "lidded storage trunk",
+        "stacked cushions (neatly)"
+      ],
+      "must_avoid": [
+        "scattered garden tools"
+      ]
+    }
+  ],
+  "warnings": [
+    "Precise measurements only provided for Dream, Nest and Dine — verify other room dimensions for exact furniture fit.",
+    "Crib placement must follow safety requirements (clearance from windows, no dangling blind cords).",
+    "Some small rooms (Wash, Dress, Store) are tight; avoid staging large objects that block circulation."
+  ]
+}

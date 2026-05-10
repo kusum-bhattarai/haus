@@ -1,0 +1,6 @@
+{"event_id":"fb9c49df-f8e5-4647-80ba-f01140defd65","at":"2026-05-09T19:36:29.780Z","room_id":null,"type":"job.created","state":"CREATED","message":"Job created."}
+{"event_id":"7b6abcd2-28e3-4678-a512-bcf4b20174a2","at":"2026-05-09T19:36:29.784Z","room_id":null,"type":"layers.started","state":"LAYERS_1_3_RUNNING","message":"Running Layers 1-3."}
+{"event_id":"2203ad43-e5e3-4074-aee3-298b79f5fc00","at":"2026-05-09T19:38:23.129Z","room_id":null,"type":"layer3.ready","state":"LAYER3_READY","message":"Layer 3 handoff is ready."}
+{"event_id":"50d01f2d-0330-4544-9250-129ad571f1a3","at":"2026-05-09T19:38:23.137Z","room_id":"dream_bedroom","type":"room.still.planning","state":"ROOM_QUEUE_RUNNING","message":"Planning room still."}
+{"event_id":"8ed4f233-5086-4660-b357-80f34158aa52","at":"2026-05-09T19:38:23.140Z","room_id":"dream_bedroom","type":"room.still.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room still."}
+{"event_id":"614f4488-b02a-49af-bbb4-f31035b77069","at":"2026-05-09T19:40:55.947Z","room_id":"dream_bedroom","type":"room.still.review_ready","state":"WAITING_FOR_HUMAN_REVIEW","message":"Still ready for human review."}

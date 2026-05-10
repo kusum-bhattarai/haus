@@ -1,0 +1,12 @@
+{
+  "endpoint_id": "fal-ai/nano-banana-2",
+  "params": {
+    "prompt": "Photorealistic editorial interior reference photograph of a Nest. Focus tightly on: sofa, coffee table, area rug, visible patio glass door, standing desk near window, low sofa and coffee table, potted plant framing the doorway, realistic window-derived sunlight, low-profile sofa (light neutral), low wooden coffee table, standing_desk (compact, natural wood or white), potted plant near glass door, woven storage basket. Styled in japandi aesthetic, warm_neutral palette, soft_ambient lighting. A calm, family-friendly Japandi scheme that balances minimal Japanese restraint with Scandinavian warmth. Neutral, warm-beige tones and layered natural materials create a meditative, lived-in look. Prioritize breathable negative space, low furniture silhouettes, and tactile accents while adding two family-specific elements: a compact crib in the bedroom and a compact standing desk integrated into the living corner. This image is a visual consistency reference — every detail of the featured furniture and fixtures must be clearly visible and precisely rendered. No people. No visible brand logos. Sharp architectural photography. Luxury real estate staging.",
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

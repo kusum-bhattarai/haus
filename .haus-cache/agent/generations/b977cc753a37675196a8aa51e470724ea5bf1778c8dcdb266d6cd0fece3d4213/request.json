@@ -1,0 +1,13 @@
+{
+  "endpoint_id": "fal-ai/kling-video/v3/pro/image-to-video",
+  "params": {
+    "start_image_url": "https://v3b.fal.media/files/b/0a998e82/E7JcvCgLn58Eq6k4Y3tF3_NitSYyct.png",
+    "prompt": "Super smooth camera rises gently through the space in a straight vertical path, revealing the room layout, consistent exposure, stable motion, cinematic, photorealistic. Begin with an aerial drift above the dining table to reveal the rattan pendant and centered vase, slowly descend to table level to show place setting texture, then orbit slightly to capture window light and seating. Emphasize tabletop materials and warm glow from the pendant. Dine, Calm, warm, airy Japandi — family-forward, minimal, and texturally layered. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "negative_prompt": "No saturated or neon colors, no heavy ornamentation, no busy patterns, avoid glossy reflective plastics or chrome, no visible text/logos, avoid unrealistic lighting (hard mixed color temps), no unsafe crib staging (no cords, no hanging items)., blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift",
+    "duration": "7",
+    "generate_audio": false,
+    "cfg_scale": 0.5
+  },
+  "source_hashes": [],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

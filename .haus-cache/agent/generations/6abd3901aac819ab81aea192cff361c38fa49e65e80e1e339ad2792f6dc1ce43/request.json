@@ -1,0 +1,13 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99917f/evVqXI-_aKedTc2atjzjc_7Dpg8aPh.png",
+    "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Begin with a slow dolly in from the patio door into the living area, pause to show sofa and coffee table composition, drift right to reveal the discreet standing desk corner, linger on task lamp and desk objects, then pull back to show the connection to the dining bay and patio. Nest, Warm calm minimalism — daylight, texture and quiet functional moments. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "9",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

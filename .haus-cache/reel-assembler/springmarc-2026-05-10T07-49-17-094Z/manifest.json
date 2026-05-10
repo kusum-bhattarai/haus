@@ -1,0 +1,270 @@
+{
+  "final_video_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/final_reel.mp4",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "card",
+      "title": "SPRINGMARC",
+      "lines": [
+        "PICK A FLOOR PLAN",
+        "SEE THE HOME FIRST"
+      ],
+      "narration": "At Springmarc, your future home starts as a floor plan you can actually see.",
+      "subtitle": "SEE IT BEFORE IT IS BUILT.",
+      "index": 0,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/voiceovers/00-hook.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/captions/00-hook.png",
+      "duration": 2.640499,
+      "card_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/cards/00-hook.png"
+    },
+    {
+      "id": "style_feature",
+      "type": "card",
+      "title": "CHOOSE ANY STYLE",
+      "lines": [
+        "PASTE A PINTEREST BOARD",
+        "HAUS DESIGNS THE UNIT"
+      ],
+      "narration": "Choose any Pinterest style, and Haus turns the plan into a real design preview.",
+      "subtitle": "ANY STYLE. SAME FLOOR PLAN.",
+      "index": 1,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/voiceovers/01-style_feature.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/captions/01-style_feature.png",
+      "duration": 2.609478,
+      "card_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/cards/01-style_feature.png"
+    },
+    {
+      "id": "1b1",
+      "type": "price_card",
+      "title": "Unit A1",
+      "lines": [
+        "1 BED / 1 BATH",
+        "689 SQ FT",
+        "STARTING AT $2,040"
+      ],
+      "plan": {
+        "id": "1b1",
+        "image": "frontend/floor_plans/1b1.png",
+        "name": "Unit A1",
+        "layout": "1 BED / 1 BATH",
+        "sqft": "689 SQ FT",
+        "price": "STARTING AT $2,040"
+      },
+      "narration": "Unit A1: 1 bed / 1 bath, 689 sq ft, starting at $2,040.",
+      "subtitle": "Unit A1: STARTING AT $2,040",
+      "index": 2,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/voiceovers/02-1b1.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/captions/02-1b1.png",
+      "duration": 3.983265,
+      "price_prompt_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/price_prompts/02-1b1.txt",
+      "card_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/cards/02-1b1.png"
+    },
+    {
+      "id": "2b2",
+      "type": "price_card",
+      "title": "Unit B2",
+      "lines": [
+        "2 BED / 2 BATH",
+        "988 SQ FT",
+        "STARTING AT $2,620"
+      ],
+      "plan": {
+        "id": "2b2",
+        "image": "frontend/floor_plans/2b2.png",
+        "name": "Unit B2",
+        "layout": "2 BED / 2 BATH",
+        "sqft": "988 SQ FT",
+        "price": "STARTING AT $2,620"
+      },
+      "narration": "Unit B2: 2 bed / 2 bath, 988 sq ft, starting at $2,620.",
+      "subtitle": "Unit B2: STARTING AT $2,620",
+      "index": 3,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/voiceovers/03-2b2.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/captions/03-2b2.png",
+      "duration": 4.006485,
+      "price_prompt_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/price_prompts/03-2b2.txt",
+      "card_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/cards/03-2b2.png"
+    },
+    {
+      "id": "3b2",
+      "type": "price_card",
+      "title": "Unit C3",
+      "lines": [
+        "3 BED / 2 BATH",
+        "1,250 SQ FT",
+        "STARTING AT $3,180"
+      ],
+      "plan": {
+        "id": "3b2",
+        "image": "frontend/floor_plans/3b2.png",
+        "name": "Unit C3",
+        "layout": "3 BED / 2 BATH",
+        "sqft": "1,250 SQ FT",
+        "price": "STARTING AT $3,180"
+      },
+      "narration": "Unit C3: 3 bed / 2 bath, 1,250 sq ft, starting at $3,180.",
+      "subtitle": "Unit C3: STARTING AT $3,180",
+      "index": 4,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/voiceovers/04-3b2.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/captions/04-3b2.png",
+      "duration": 4.563764,
+      "price_prompt_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/price_prompts/04-3b2.txt",
+      "card_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/cards/04-3b2.png"
+    },
+    {
+      "id": "nest_living",
+      "type": "clip",
+      "title": "NEST",
+      "clip_path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/4adcfbb3bdd59f1782dbdcea320d5e59317a3aca9530489704f13edcf482c4ce/video-0.mp4",
+      "narration": "Here is the Japandi board applied: low sofa, wood table, desk corner, and patio light.",
+      "subtitle": "YOUR PINTEREST STYLE, APPLIED.",
+      "motion": "slow_dolly",
+      "must_include": [
+        "standing_desk in corner",
+        "crib not present in this room (crib only in bedroom)",
+        "visible patio through glass door",
+        "rattan pendant or warm floor lamp",
+        "low sofa on wooden base",
+        "low wooden coffee table",
+        "compact standing_desk in corner",
+        "one large potted plant"
+      ],
+      "objects": [],
+      "index": 5,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/voiceovers/05-nest_living.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/captions/05-nest_living.png",
+      "duration": 3.338186
+    },
+    {
+      "id": "dream_bedroom",
+      "type": "clip",
+      "title": "DREAM",
+      "clip_path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/c2d4e897a391f6ebccea9ed83cf02b4960a8fdfeb8541f31c911abc31d723916/video-0.mp4",
+      "narration": "The bedroom keeps the crib, platform bed, and soft textiles calm from day one.",
+      "subtitle": "BEDROOM PREVIEW BEFORE MOVE-IN.",
+      "motion": "static_zoom",
+      "must_include": [
+        "crib positioned near window",
+        "low platform bed",
+        "soft layered bedding and rug",
+        "crib positioned with clear access",
+        "soft layered bedding and rugs",
+        "warm bedside pendant or sconce",
+        "crib",
+        "standing desk"
+      ],
+      "objects": [
+        {
+          "object_type": "crib",
+          "room_id": "dream_bedroom",
+          "label": "crib"
+        },
+        {
+          "object_type": "standing_desk",
+          "room_id": "dream_bedroom",
+          "label": "standing desk"
+        }
+      ],
+      "index": 6,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/voiceovers/06-dream_bedroom.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/captions/06-dream_bedroom.png",
+      "duration": 2.895011
+    },
+    {
+      "id": "taste_kitchen",
+      "type": "clip",
+      "title": "TASTE",
+      "clip_path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/e835a38b46acb99fd263ae7901591a9730a4f2a559fe005f51a6f355aade2e28/video-0.mp4",
+      "narration": "Kitchen detail: ceramics, cutting board, matte hardware, and a clean counter line.",
+      "subtitle": "STYLE-MATCHED KITCHEN DETAIL.",
+      "motion": "slow_dolly",
+      "must_include": [
+        "clear counters with 1–2 ceramic accessories",
+        "visible connection to dining windows",
+        "matte hardware accents",
+        "soft natural task light from dining area"
+      ],
+      "objects": [],
+      "index": 7,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/voiceovers/07-taste_kitchen.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/captions/07-taste_kitchen.png",
+      "duration": 3.237007
+    },
+    {
+      "id": "dine_dining",
+      "type": "clip",
+      "title": "DINE",
+      "clip_path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/c3054c1aa5d01bf8e6bb8699a0feb185faf09903bb713e7ed24ce9dde326c32f/video-0.mp4",
+      "narration": "Dining shows the round oak table, rattan pendant, and the window light buyers remember.",
+      "subtitle": "OAK, RATTAN, WINDOW LIGHT.",
+      "motion": "slow_dolly",
+      "must_include": [
+        "rattan pendant centered over table",
+        "stoneware vase centerpiece",
+        "bay/window panels visible",
+        "round oak dining table",
+        "rattan pendant centered above table",
+        "linen-upholstered chairs"
+      ],
+      "objects": [],
+      "index": 8,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/voiceovers/08-dine_dining.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/captions/08-dine_dining.png",
+      "duration": 2.845624
+    },
+    {
+      "id": "relax_patio",
+      "type": "clip",
+      "title": "RELAX",
+      "clip_path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/9b1f44ce4035bafec22ac4912c918567b09e42f375f04b10fb117a59993845fa/video-0.mp4",
+      "narration": "The patio completes the story with low seating, lantern glow, and indoor outdoor calm.",
+      "subtitle": "THE INDOOR OUTDOOR MOMENT.",
+      "motion": "orbital_pan",
+      "must_include": [
+        "low seating or floor cushions",
+        "woven lanterns or warm practicals",
+        "visible connection to interior",
+        "small side table"
+      ],
+      "objects": [],
+      "index": 9,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/voiceovers/09-relax_patio.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/captions/09-relax_patio.png",
+      "duration": 3.022721
+    },
+    {
+      "id": "revive_bathroom",
+      "type": "clip",
+      "title": "REVIVE",
+      "clip_path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/1fbb8bdda230e176e5222e1aca53a3f2524a15e6040b8f0f3217f82ae4d99bfe/video-0.mp4",
+      "narration": "Even the bathroom gets the same direction: matte vanity, folded towels, spa texture.",
+      "subtitle": "EVERY ROOM GETS THE STYLE.",
+      "motion": "static_zoom",
+      "must_include": [
+        "matte finishes and minimal ceramic accessories",
+        "soft folded towels"
+      ],
+      "objects": [],
+      "index": 10,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/voiceovers/10-revive_bathroom.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/captions/10-revive_bathroom.png",
+      "duration": 3.207347
+    },
+    {
+      "id": "close",
+      "type": "card",
+      "title": "HAUS FOR SPRINGMARC",
+      "lines": [
+        "REAL ESTATE REELS",
+        "FROM A FLOOR PLAN"
+      ],
+      "narration": "That is the offer: from floor plan, to style matched clips, to a buyer ready reel.",
+      "subtitle": "FROM FLOOR PLAN TO BUYER REEL.",
+      "index": 11,
+      "voiceover_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/voiceovers/11-close.mp3",
+      "caption_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/captions/11-close.png",
+      "duration": 3.006213,
+      "card_path": "/Users/tarive/haus/haus/.haus-cache/reel-assembler/springmarc-2026-05-10T07-49-17-094Z/cards/11-close.png"
+    }
+  ]
+}

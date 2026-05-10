@@ -1,0 +1,248 @@
+{
+  "vibe_report": {
+    "aesthetic_name": "Warm Japandi Family Home",
+    "summary": "A calm, warm Japandi interior tuned for a young family: quiet minimalism balanced with earthy textures, natural wood tones, and selective layering. Prioritize horizontal lines, low-profile furniture, tactile materials (linen, wool, rattan), and visible daylight from large openings. Add a compact standing-desk work corner in the living area and a small crib in the bedroom without disrupting the serene composition.",
+    "palette_rationale": "Warm neutrals anchored by light creamy off-white (#EDE7DF) and sand/latte midtones (#CBB698, #A88461), deep anchoring neutrals in matte charcoal/burnt umber (#6D6A5F, #2B2724). Use the lighter tones for major surfaces (walls, large textiles) and midtones for wood furniture; reserve the darkest tones for metal accents and planters to maintain readable contrast without high saturation.",
+    "lighting_mood": "Soft ambient daylight with directional pulls from the living/dining glazing and bay windows. Maintain visible light-source logic: window and patio openings as primary sources, supplemented by dimmable rattan pendants and low-level lanterns for evening shots. Shadows should remain graphic but gentle — sculpted, not flat.",
+    "materials": [
+      "light oak (matt finish)",
+      "woven rattan and cane",
+      "natural linen upholstery",
+      "wool and natural fibre rugs (tatami edge details)",
+      "unglazed ceramics and stoneware",
+      "matte black metal (fixtures/legs)",
+      "paper/shoji screens or bamboo blinds"
+    ],
+    "textures": [
+      "soft slubby linen",
+      "subtle wood grain",
+      "tight-woven rattan",
+      "low-pile wool rug with visible weave",
+      "raw clay matte ceramics",
+      "slightly textured plaster walls"
+    ],
+    "furniture_language": [
+      "low-profile seating and tables (horizontal emphasis)",
+      "simple, tapered legs on wooden furniture",
+      "rounded table edges for dining nook",
+      "clean open shelving with curated objects",
+      "compact standing desk with cable-minimal setup"
+    ],
+    "styling_rules": [
+      "Keep surfaces decluttered; one sculptural object or ceramic vase per visible table.",
+      "Layer one textured rug under seating or dining area; avoid multiple competing patterns.",
+      "Use plants sparingly for organic color (one medium floor plant + one small tabletop).",
+      "Place the standing desk against a well-lit wall or beside the living glazing so it reads as a deliberate corner.",
+      "Crib must be simple, low profile, and aligned with room horizontals; dress with neutral linen and one soft throw."
+    ],
+    "avoid": [
+      "high-gloss finishes or highly saturated colors",
+      "over-styling with many small decorative objects",
+      "floating furniture that breaks sightlines to windows/patio",
+      "introducing light sources that are not visible in the frame",
+      "lens distortions or bent verticals"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living",
+        "headline": "Calm family living with a cozy work corner and patio connection",
+        "guidance": "Frame the living area to emphasize the sliding-glass connection to the patio and the low seating plane. Stage a compact standing desk as a dedicated work corner along a side wall (near natural light) so it reads functional yet unobtrusive. Use a single woven pendant over the coffee area, a low wooden coffee table, and a soft rug that visually links to the dining tatami/texture.",
+        "must_include": [
+          "sliding glass door to patio visible",
+          "low-profile sofa (neutral linen)",
+          "low wooden coffee table",
+          "standing_desk (compact, near light source)",
+          "one medium floor plant",
+          "rattan pendant or low pendant fixture"
+        ],
+        "must_avoid": [
+          "tall high-back sofas",
+          "busy patterned textiles",
+          "desk clutter visible in wide frame"
+        ]
+      },
+      {
+        "room_id": "dream_bedroom",
+        "headline": "Serene bedroom with family-safe crib and soft textiles",
+        "guidance": "Keep the bed low and minimal; place the crib on the quieter side of the room with soft linens. Use layered textiles (wool rug, linen bedding) and one piece of calming wall art or wooden shelf. Maintain a clear circulation path to the closet and hall.",
+        "must_include": [
+          "crib (low-profile, natural wood finish)",
+          "low bed or platform bed",
+          "soft layered rug",
+          "dimmerable bedside lamp",
+          "neutral bedding and one textured throw"
+        ],
+        "must_avoid": [
+          "overhead bright fixtures without dimming",
+          "deep saturated colors",
+          "large, heavy furniture blocking window"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Compact kitchen that reads warm and functional",
+        "guidance": "Use warm oak cabinets or open shelving, matte black hardware, and tidy countertops with one ceramic bowl or wooden cutting board. Keep sightline open to the dining nook; recover indirect daylight from dining bay to brighten the space. Avoid adding large island clutter.",
+        "must_include": [
+          "warm wood cabinetry or wood-grain veneer",
+          "matte black hardware",
+          "clean counters with one curated object",
+          "visible sightline to dining area"
+        ],
+        "must_avoid": [
+          "reflective chrome finishes",
+          "cluttered counters",
+          "introducing new artificial light sources not visible in frame"
+        ]
+      },
+      {
+        "room_id": "dine_dining",
+        "headline": "Intimate Japandi dining nook with rattan pendant",
+        "guidance": "Center a round oak dining table under a woven rattan pendant. Use simple neutral chairs and a single stoneware vase as a centerpiece. Keep place settings minimal and highlight the bay-window light coming through the panels.",
+        "must_include": [
+          "round oak dining table (scale to 7.8 x 8 ft bay)",
+          "rattan pendant over table",
+          "simple neutral chairs (2-4 visible)",
+          "stoneware vase centerpiece",
+          "visible multi-panel window/bay"
+        ],
+        "must_avoid": [
+          "oversized chandeliers",
+          "busy table settings",
+          "dark heavy curtains"
+        ]
+      },
+      {
+        "room_id": "relax_patio",
+        "headline": "Outdoor covered patio as an extension of living",
+        "guidance": "Stage as an outdoor living spot with a low bench, cushions, and a small side table. Allow visual continuity with the interior by matching wood tones and a single outdoor rug. Capture natural daylight and avoid staging that obscures the openings between patio and living/dining.",
+        "must_include": [
+          "low wooden bench or small lounge seating",
+          "outdoor rug (natural fibre)",
+          "planting or potted greenery",
+          "clear view into living/dining"
+        ],
+        "must_avoid": [
+          "dense outdoor furniture sets that block openings",
+          "bright colored cushions",
+          "excessive outdoor accessories"
+        ]
+      }
+    ],
+    "confidence": 0.88,
+    "warnings": [
+      "Dining nook is compact (7.83 x 8 ft). Use a small round table (max ~36-42\" diameter) to avoid cramped framing.",
+      "Crib in the bedroom must not block egress path to hall or closet; place against side wall.",
+      "Standing desk in living should be compact and staged tidy to avoid reading as a home office; prefer wireless peripherals.",
+      "Run at least one edited image-pass for each main living shot to correct perspective and emphasize directional window pulls before video generation."
+    ]
+  },
+  "overall_mood": "Calm, earthy, editorial Japandi — quiet horizons and tactile warmth",
+  "global_style_notes": [
+    "AutoHDR workflow: run 1 image-pass (editorial interior correction) on each source photo; run a second pass only if more mood push is required.",
+    "Preserve architecture, sightlines, and measured furniture scale. Correct perspective but keep verticals true.",
+    "Derive all light from visible sources (windows/patio openings, pendants, bedside lamps). Do not invent hidden lights.",
+    "Keep motion stable and slow for first-pass tests (5s clips, 16:9, no audio)."
+  ],
+  "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift",
+  "room_plans": [
+    {
+      "room_id": "nest_living",
+      "lighting_instruction": "Day: soft directional daylight from sliding glass door to patio (primary). Supplement with warm rattan pendant over seating and soft fill from recessed lighting off-camera. Evening: dimmable pendant + low floor lamp for layered pools of warm light. Ensure shadows follow the door's direction and do not appear to come from ceiling fixtures that aren't visible.",
+      "dalle_scene_details": "Wide 24mm interior frame of the living area with sliding glass door to patio on one side. Low-profile linen sofa facing left, low oak coffee table centered on a low-texture wool rug, compact standing desk tucked to the right against side wall near window. Rattan pendant above coffee table. Materials: light oak, linen, woven rattan, neutral plaster walls. Color palette warm neutrals (#EDE7DF, #CBB698, #A88461). Keep verticals true, accurate human-scale proportions, and visible daylight coming through the glass door — no invented light. Lens: 24-28mm, eye-level camera ~3.5–5 ft, soft depth of field, sharp detail in foreground and midground.",
+      "video_prompt": "Super smooth slow dolly in, camera moves forward from the living entry toward the sliding-glass patio while keeping the low seating plane in frame; directional sunlight from the patio shifts across the sofa and coffee table, shadows move gently, consistent exposure, stable motion, cinematic, photorealistic.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "sliding glass door visible",
+        "standing_desk (compact, tidy)",
+        "rattan pendant",
+        "low sofa and coffee table"
+      ],
+      "must_avoid": [
+        "visible desk cables or clutter",
+        "overhead light sources not present in frame",
+        "furniture that blocks the patio opening"
+      ]
+    },
+    {
+      "room_id": "dream_bedroom",
+      "lighting_instruction": "Primary window provides medium directional daylight from the upper wall. Use bedside lamp as practical visible source for evening scenes. Keep bedroom exposures slightly warmer than living to convey intimacy; ensure crib shadowing is soft and consistent with window direction.",
+      "dalle_scene_details": "Bedroom interior with low platform bed centered along long wall, single exterior window on upper wall visible. Low-profile natural-wood crib placed on the quieter side of the room, neutral linen bedding, soft wool rug underfoot. Accessories: one bedside table with a dimmable lamp, small wall shelf with minimal objects. Materials: light oak, linen, plaster wall texture, unglazed ceramics. Maintain believable scale; do not place crib close to window or block access to closet. Lens: 35mm to 50mm for tighter, intimate framing; camera height ~3–4 ft.",
+      "video_prompt": "Static gentle zoom in, camera holds and slowly tightens on the crib corner and bedside while ambient daylight from the window sculpts soft shadows; exposure stable, realistic lamp practicals remain constant, cinematic, photorealistic.",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "crib (low-profile, natural wood)",
+        "platform bed or low bed",
+        "dimmed bedside lamp"
+      ],
+      "must_avoid": [
+        "placing crib against the window",
+        "introducing new light sources without visible fixtures",
+        "overhead harsh lighting"
+      ]
+    },
+    {
+      "room_id": "taste_kitchen",
+      "lighting_instruction": "Indirect daylight from the dining bay should provide soft fill. Use under-cabinet or pendant practicals only if visible in frame. Keep counters tidy; highlight warm wood tones and matte black hardware.",
+      "dalle_scene_details": "Compact kitchen view showing wood cabinetry, matte black hardware, clean counters with one wooden cutting board and ceramic bowl. Sightline opens to small dining bay on the right. Materials: warm oak veneer, matte black metal, neutral stone countertop. Keep architecture accurate and verticals straight. Lens: 28-35mm, mid-height camera ~4.5–5 ft to show counter plane and sightline into dining.",
+      "video_prompt": "Super smooth truck right to left, camera slides laterally to reveal the kitchen on the left and the dining nook beyond; indirect daylight from the dining bay softens across wood cabinetry, exposure held steady, stable motion, cinematic, photorealistic.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "warm wood cabinetry",
+        "matte black hardware",
+        "clear sightline to dining nook",
+        "tidy counter with one curated object"
+      ],
+      "must_avoid": [
+        "reflective chrome surfaces",
+        "busy countertop clutter",
+        "adding imagined overhead lights"
+      ]
+    },
+    {
+      "room_id": "dine_dining",
+      "lighting_instruction": "High natural light from the bay/window panels is primary. Rattan pendant should be a visible practical in frame (dimmable). Shadows should be soft but directional, moving consistently with the sun path in the video.",
+      "dalle_scene_details": "Small bay dining nook with round oak table (approx 36-42\" diameter) centered under a woven rattan pendant. Two to four simple neutral chairs, single stoneware vase centerpiece. Bay/window with multiple vertical panels visible, letting in generous daylight. Materials: oak, rattan, linen. Keep scale true to 7.83 x 8 ft measured bay; avoid oversized furniture. Lens: 24-35mm, camera ~4 ft high to emphasize table plane and window geometry.",
+      "video_prompt": "Wide interior shot with a slow and smooth dolly in toward the round dining table; daylight from the bay windows grows slightly warmer as camera approaches, shadows crawl gently across the table, consistent exposure, stable motion, cinematic, photorealistic.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "round oak dining table (36-42\" recommended)",
+        "rattan pendant",
+        "multi-panel bay window visible",
+        "stoneware vase centerpiece"
+      ],
+      "must_avoid": [
+        "oversized lighting",
+        "busy place settings",
+        "furniture too large for bay"
+      ]
+    },
+    {
+      "room_id": "relax_patio",
+      "lighting_instruction": "High natural daylight; treat patio as an outdoor room with visible sky and natural plant light. Avoid adding interior-style artificial lighting unless practical lanterns are present and visible.",
+      "dalle_scene_details": "Covered patio with wide opening to the living/dining. Low wooden bench or small lounge chairs with neutral cushions, natural fibre outdoor rug, potted greenery. Materials: treated wood, woven textiles, terracotta or stone pots. Keep visual continuity with interior wood tones. Lens: 24mm for environmental coverage; camera positioned slightly outside opening to capture connection to interior.",
+      "video_prompt": "Very slow aerial drift upward and slightly inward, camera rises and drifts to reveal patio seating and the opening into the living area; natural daylight remains primary, exposure stable, shadows move subtly, cinematic, photorealistic.",
+      "camera_motion": "aerial_drift",
+      "duration_seconds": 5,
+      "must_include": [
+        "low wooden bench or lounge seating",
+        "outdoor rug",
+        "potted plant",
+        "clear visual link to living/dining"
+      ],
+      "must_avoid": [
+        "crowded patio furniture sets",
+        "bright synthetic colors",
+        "blocking the opening with staged objects"
+      ]
+    }
+  ],
+  "warnings": [
+    "Follow AutoHDR flow: run an editorial image-pass (perspective correction and window pulls) for each main room image before video generation to avoid flat lighting and to keep verticals correct.",
+    "Respect measured room scale when staging (dining bay is small; choose table diameter <= 42\"), and place crib so it does not obstruct egress or closet access.",
+    "Suppress any scene edits that introduce light sources not visible in the frame. Reject video outputs with bent walls, drifting furniture, or inconsistent shadow direction."
+  ]
+}

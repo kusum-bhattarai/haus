@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "request_id": "019e0eb5-87e9-7032-a91b-7f8a307f2137",
+  "result": {
+    "video": {
+      "url": "https://v3b.fal.media/files/b/0a999133/I82c1_AUHOFMZYjMNt8qb_video.mp4",
+      "content_type": "video/mp4",
+      "file_name": "video.mp4",
+      "file_size": 7664842
+    },
+    "seed": 1089930638
+  }
+}

@@ -1,0 +1,4 @@
+{"event_id":"83b1530d-692c-4514-b498-8110d6fff63c","at":"2026-05-10T05:03:07.898Z","room_id":null,"type":"job.created","state":"CREATED","message":"Job created."}
+{"event_id":"41e5bd20-867a-4872-ac98-c4d57d51b7b8","at":"2026-05-10T05:03:07.901Z","room_id":null,"type":"layers.started","state":"LAYERS_1_3_RUNNING","message":"Running Layers 1-3."}
+{"event_id":"ec78ff32-4180-4593-a028-e305159d7213","at":"2026-05-10T05:03:45.587Z","room_id":null,"type":"layer3.ready","state":"LAYER3_READY","message":"Layer 3 handoff is ready."}
+{"event_id":"1d78d602-6841-4748-95da-cae56149a4c8","at":"2026-05-10T05:03:45.589Z","room_id":null,"type":"job.anchors.generating","state":"LAYER3_READY","message":"Generating 3 consistency anchor images for shared objects."}

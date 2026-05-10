@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "endpoint_id": "openai/gpt-image-2",
+  "request_id": "019e0e3f-c10a-7da0-a31d-3cca45b7ae56",
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0a998e20/KkbrwtiyuJISK5ruNYsGR_clhNAqaH.png",
+        "content_type": "image/png",
+        "file_name": "KkbrwtiyuJISK5ruNYsGR_clhNAqaH.png",
+        "file_size": null,
+        "width": null,
+        "height": null
+      }
+    ]
+  }
+}

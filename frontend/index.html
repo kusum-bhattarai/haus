@@ -18,6 +18,7 @@
       <nav class="topnav" aria-label="Demo sections">
         <button class="nav-button is-active" data-view-jump="portal">Floor plans</button>
         <button class="nav-button" data-view-jump="results">Preview</button>
+        <button class="nav-button" data-view-jump="video">Video</button>
         <button class="nav-button" data-view-jump="agent">AI edit agent</button>
       </nav>
     </header>
@@ -187,6 +188,53 @@
             <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=900&q=85" alt="Generated kitchen still">
             <div><strong>Kitchen</strong><span>Aerial drift · 5 sec</span></div>
           </article>
+        </section>
+      </section>
+
+      <section class="workspace is-hidden" id="video-view">
+        <div class="workspace-header">
+          <div>
+            <div class="eyebrow">Video</div>
+            <h2>Style reels for the same floor plan</h2>
+          </div>
+          <button class="ghost-button" id="back-video-to-results" type="button">Back to preview</button>
+        </div>
+
+        <section class="reel-consumption-panel" id="reel-editor-panel">
+          <div class="reel-hero">
+            <div>
+              <div class="eyebrow">Fast design feed</div>
+              <h3>Pick a layout, swipe styles, see the home change.</h3>
+              <p id="video-feed-promise">Same apartment footprint. Different Pinterest-led styles. Built for fast visual consumption.</p>
+            </div>
+            <button class="ghost-button" id="copy-reel-edit-json" type="button">Copy reel recipe</button>
+          </div>
+
+          <div class="video-reel-grid">
+            <article class="video-phone-shell">
+              <video id="video-feed-player" controls playsinline muted loop></video>
+              <div class="video-feed-status" id="video-feed-status">Load a reel variant</div>
+            </article>
+
+            <aside class="video-style-console">
+              <div class="editor-controls">
+                <label>
+                  Dopamine cut length
+                  <input id="editor-max-clip-seconds" type="range" min="1.4" max="4.5" step="0.1" value="2.8">
+                  <span id="editor-max-clip-label">2.8s</span>
+                </label>
+                <label>
+                  Buyer desire hook
+                  <input id="editor-story-hook" type="text" value="Pick a floor plan. Paste a Pinterest style. See the home before it is built.">
+                </label>
+              </div>
+
+              <div class="style-pill-row" id="video-style-pills"></div>
+              <div class="floorplan-reel-row" id="floorplan-reel-row"></div>
+            </aside>
+          </div>
+
+          <div class="scene-editor-list" id="scene-editor-list"></div>
         </section>
       </section>
 

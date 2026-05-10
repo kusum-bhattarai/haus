@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999ca1/XJvvNbZPf-b-8u-HvwJyV_cedM2o2V.png",
+    "prompt": "Very slow truck right, time-lapse light progression, camera slides laterally while light shifts across the space, shadows gradually move and lengthen, parallax effect, consistent exposure, stable motion, cinematic, photorealistic Parallax orbit, camera gently arcs to show indoor-outdoor connection while the sky and daylight change subtly, consistent exposure, cinematographic, photorealistic Relax, Quiet, warm, and intentional — intimate Japandi minimalism tuned for family living and subtle work-from-home use. Maintain believable residential scale for Relax at roughly medium. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "f71fc2b84cc6deea01cf94d17d3fb9b9cb509e58c1e343b096c36c8682f0b988"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

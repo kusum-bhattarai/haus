@@ -3,6 +3,9 @@
 .haus-cache/**/*.jpg
 .haus-cache/**/*.jpeg
 .haus-cache/**/*.mp4
+.haus-cache/**/*.mp3
+.haus-cache/**/*.aiff
+.haus-cache/**/*.wav
 .haus-cache/**/*.webp
 .env
 .env.local

@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999b71/Hkbujezxx2o6WeE63X9Wk_OQxuy9c5.png",
+    "prompt": "Extreme close-up detail shot with smooth tracking camera following harsh directional light as it grows and spreads across textured surface. Crisp shadow edges crawl and shift in real time. Camera moves with the light's path revealing texture in wood grain, fabric weave, architectural detail. Editorial film style. Neutral white balance, balanced exposure — deep dramatic shadows without underexposure. Shallow depth of field. Static slow zoom on vanity and folded textiles, camera holds while soft daylight from window sculpts surfaces, consistent exposure, cinematic, photorealistic Revive, Calm, meditative warmth — family-ready Japandi with breathable layouts and tactile materials. Maintain believable residential scale for Revive at roughly small. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "5c8c1dfde6c7f4fe489a7023c87adb06d12adc95980e04311790c7cdfa4aa7bb"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

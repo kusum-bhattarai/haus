@@ -1,0 +1,13 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99917f/qizujtgDmIL1RW5BMgFP2_UlA6EkTr.png",
+    "prompt": "Nearly locked-off architectural shot with a subtle slow push, stable vertical lines, natural daylight drift, consistent exposure, cinematic, photorealistic. Static slow zoom across the bed from foot to headboard, pause on texture details in bedding and a bedside lamp, then a soft pan to window showing outside light. Dream, Warm calm minimalism — daylight, texture and quiet functional moments. Maintain believable residential scale for a 12.5 by 11.583333333333334 ft Dream. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "7",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

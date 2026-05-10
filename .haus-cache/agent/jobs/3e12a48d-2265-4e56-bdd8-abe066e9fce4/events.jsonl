@@ -1,0 +1,9 @@
+{"event_id":"90a4e45a-374c-4084-a3e9-5187a4fead0f","at":"2026-05-09T20:28:42.885Z","room_id":null,"type":"job.created","state":"CREATED","message":"Job created."}
+{"event_id":"e077fbf9-ec5a-4a36-976d-203e215ccae9","at":"2026-05-09T20:28:42.889Z","room_id":null,"type":"layers.started","state":"LAYERS_1_3_RUNNING","message":"Running Layers 1-3."}
+{"event_id":"76de604b-da08-4744-8c8f-1bdf7766b933","at":"2026-05-09T20:29:15.867Z","room_id":null,"type":"layer3.ready","state":"LAYER3_READY","message":"Layer 3 handoff is ready."}
+{"event_id":"564e638a-2797-44f6-b460-6aa8d68416c4","at":"2026-05-09T20:29:15.871Z","room_id":"nest_living","type":"room.still.planning","state":"ROOM_QUEUE_RUNNING","message":"Planning room still."}
+{"event_id":"c1c29715-23bf-47fa-b1b6-6ba0d8ee8378","at":"2026-05-09T20:29:15.875Z","room_id":"nest_living","type":"room.still.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room still."}
+{"event_id":"d3c818e7-5c28-491f-90c0-80a74a036af2","at":"2026-05-09T20:29:54.397Z","room_id":"nest_living","type":"room.still.review_ready","state":"WAITING_FOR_HUMAN_REVIEW","message":"Still ready for human review."}
+{"event_id":"839ad2d6-3205-4ce6-a4b6-85da69537f5b","at":"2026-05-09T20:31:43.578Z","room_id":"nest_living","type":"room.still.manual_retry","state":"ROOM_QUEUE_RUNNING","message":"Manual still retry requested."}
+{"event_id":"0e012418-c171-43e4-87a1-781cc49bc925","at":"2026-05-09T20:31:43.587Z","room_id":"nest_living","type":"room.still.planning","state":"ROOM_QUEUE_RUNNING","message":"Planning room still."}
+{"event_id":"20c03a70-fce8-4d4e-ab32-592e65f1c7ee","at":"2026-05-09T20:31:43.590Z","room_id":"nest_living","type":"room.still.started","state":"ROOM_QUEUE_RUNNING","message":"Generating room still."}

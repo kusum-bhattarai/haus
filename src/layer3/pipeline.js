@@ -3,6 +3,7 @@ import { createCreativePlan } from './creativePlanner.js';
 import { layer3CreativePlanCacheKey } from './cacheKeys.js';
 import { buildLayer3Handoff } from './handoffBuilder.js';
 import { createLayer3Storage } from './storage.js';
+import { writeStyleLibraryEntry } from './styleLibrary.js';
 import { validateCreativePlan, validateLayer3Handoff } from './validation.js';
 
 export async function createLayer3Handoff(profile, options = {}) {
@@ -39,6 +40,7 @@ export async function createLayer3Handoff(profile, options = {}) {
 
   if (options.persist !== false) {
     await storage.writeHandoff(profile.session_id, handoff);
+    await writeStyleLibraryEntry(handoff, options);
   }
 
   return handoff;

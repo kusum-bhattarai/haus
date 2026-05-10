@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999ca1/qZEYtMYCq3wF80UklbmBv_83fFVIKR.png",
+    "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Super smooth camera glides laterally across the compact kitchen to show clean counters and sightline to the dining nook, soft indirect daylight from the bay window maintains consistent exposure, stable motion, cinematic, photorealistic Taste, Quiet, warm, and intentional — intimate Japandi minimalism tuned for family living and subtle work-from-home use. Maintain believable residential scale for Taste at roughly small. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "89c950bc3ecb3658361ad99ca658684f8f0190ba2b2899eeff20090e74d8fc8a"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

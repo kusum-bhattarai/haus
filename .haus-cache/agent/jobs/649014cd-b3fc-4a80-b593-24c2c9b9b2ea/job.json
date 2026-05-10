@@ -1,0 +1,2268 @@
+{
+  "schema_version": "1.0",
+  "job_id": "649014cd-b3fc-4a80-b593-24c2c9b9b2ea",
+  "session_id": "8ef285d5-fa4b-4070-ae55-352dc8df1a73",
+  "status": "waiting",
+  "current_state": "WAITING_FOR_HUMAN_REVIEW",
+  "created_at": "2026-05-10T04:25:24.050Z",
+  "updated_at": "2026-05-10T04:28:23.677Z",
+  "input": {
+    "floor_plan_id": "1b1",
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+    "brief": "Warm, calm home for a young family that needs a cozy work corner.",
+    "objects": [
+      "crib",
+      "standing_desk",
+      "bookshelf"
+    ],
+    "platform": "all"
+  },
+  "floor_plan": {
+    "id": "1b1",
+    "name": "Unit A1",
+    "layout": "1 Bedroom / 1 Bath",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "sqft": 689,
+    "displaySqft": "689 sq ft",
+    "price": "Starting at $2,040",
+    "available": "Available now",
+    "imageUrl": "/floor_plans/1b1.png",
+    "hotspots": [
+      {
+        "key": "dream-1",
+        "label": "Dream",
+        "roomType": "bedroom",
+        "occurrence": 0,
+        "points": "18,11 58,11 58,36 53,36 53,43 18,43"
+      },
+      {
+        "key": "revive-1",
+        "label": "Revive",
+        "roomType": "bathroom",
+        "occurrence": 0,
+        "points": "72,11 95,11 95,43 82,43 82,35 72,35"
+      },
+      {
+        "key": "surf-1",
+        "label": "Surf",
+        "roomType": "foyer",
+        "occurrence": 0,
+        "points": "29,42 58,42 58,52 29,52"
+      },
+      {
+        "key": "taste-1",
+        "label": "Taste",
+        "roomType": "kitchen",
+        "occurrence": 0,
+        "points": "66,47 93,47 93,70 83,70 83,59 66,59"
+      },
+      {
+        "key": "nest-1",
+        "label": "Nest",
+        "roomType": "living_room",
+        "occurrence": 0,
+        "points": "21,58 68,58 68,84 60,84 60,89 21,89"
+      },
+      {
+        "key": "dine-1",
+        "label": "Dine",
+        "roomType": "dining",
+        "occurrence": 0,
+        "points": "69,58 92,58 92,84 84,84 80,90 73,90 69,86"
+      },
+      {
+        "key": "relax-1",
+        "label": "Relax",
+        "roomType": "patio",
+        "occurrence": 0,
+        "points": "27,81 59,81 59,95 27,95"
+      }
+    ]
+  },
+  "runtime": {
+    "fast_mode": true,
+    "still_review_announced": true,
+    "video_phase_started": false,
+    "video_review_announced": false
+  },
+  "payload": {
+    "floor_plan_url": "file:///Users/tarive/haus/haus/.haus-cache/floor-plans/a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6.png",
+    "floor_plan_metadata": {
+      "source": "local_upload",
+      "mime_type": "image/png",
+      "size_bytes": 64138,
+      "width_px": 448,
+      "height_px": 480,
+      "sha256": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6",
+      "cache_key": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6"
+    },
+    "floor_plan_measurements": {
+      "source": "ml_parser",
+      "unit": "ft",
+      "scale": null,
+      "rooms": [
+        {
+          "room_id": null,
+          "name": "Dream",
+          "dimensions": {
+            "width": 12.5,
+            "length": 11.583333333333334,
+            "area": 144.79
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Nest",
+          "dimensions": {
+            "width": 11.916666666666666,
+            "length": 11.666666666666666,
+            "area": 139.24
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Dine",
+          "dimensions": {
+            "width": 7.833333333333333,
+            "length": 8,
+            "area": 62.67
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        }
+      ],
+      "notes": null
+    },
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+    "brief": "Warm, calm home for a young family that needs a cozy work corner.",
+    "objects": [
+      "crib",
+      "standing_desk",
+      "bookshelf"
+    ],
+    "platform": "all",
+    "timestamp": "2026-05-10T04:25:24.065Z",
+    "session_id": "8ef285d5-fa4b-4070-ae55-352dc8df1a73"
+  },
+  "profile": {
+    "schema_version": "1.0",
+    "profile_id": "7dd1fb2f-4f02-4a78-baf4-da8a27befbf9",
+    "session_id": "8ef285d5-fa4b-4070-ae55-352dc8df1a73",
+    "created_at": "2026-05-10T04:25:24.069Z",
+    "source_payload": {
+      "floor_plan_url": "file:///Users/tarive/haus/haus/.haus-cache/floor-plans/a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6.png",
+      "floor_plan_metadata": {
+        "source": "local_upload",
+        "mime_type": "image/png",
+        "size_bytes": 64138,
+        "width_px": 448,
+        "height_px": 480,
+        "sha256": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6",
+        "cache_key": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6"
+      },
+      "floor_plan_measurements": {
+        "source": "ml_parser",
+        "unit": "ft",
+        "scale": null,
+        "rooms": [
+          {
+            "room_id": null,
+            "name": "Dream",
+            "dimensions": {
+              "width": 12.5,
+              "length": 11.583333333333334,
+              "area": 144.79
+            },
+            "unit": "ft",
+            "confidence": 0.95
+          },
+          {
+            "room_id": null,
+            "name": "Nest",
+            "dimensions": {
+              "width": 11.916666666666666,
+              "length": 11.666666666666666,
+              "area": 139.24
+            },
+            "unit": "ft",
+            "confidence": 0.95
+          },
+          {
+            "room_id": null,
+            "name": "Dine",
+            "dimensions": {
+              "width": 7.833333333333333,
+              "length": 8,
+              "area": 62.67
+            },
+            "unit": "ft",
+            "confidence": 0.95
+          }
+        ],
+        "notes": null
+      },
+      "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "brief": "Warm, calm home for a young family that needs a cozy work corner.",
+      "objects": [
+        "crib",
+        "standing_desk",
+        "bookshelf"
+      ],
+      "platform": "all",
+      "timestamp": "2026-05-10T04:25:24.065Z",
+      "session_id": "8ef285d5-fa4b-4070-ae55-352dc8df1a73"
+    },
+    "aesthetic_profile": {
+      "palette": "warm_neutral",
+      "lighting": "soft_ambient",
+      "density": "balanced",
+      "style_era": "japandi",
+      "dominant_colors": [
+        "#EDE7DF",
+        "#CBB698",
+        "#A88461",
+        "#6D6A5F",
+        "#2B2724"
+      ],
+      "mood_words": [
+        "calm minimalism",
+        "earthy warmth",
+        "layered textures",
+        "soft sunlight",
+        "meditative serenity"
+      ],
+      "pinterest_cluster_labels": [
+        "Japandi dining with rattan pendant",
+        "Low-seating Japanese tea nook",
+        "Neutral Japandi living with low coffee table"
+      ],
+      "confidence": 0.88
+    },
+    "pins": [
+      {
+        "pin_id": "1012465559998684270",
+        "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+        "image_url": "https://i.pinimg.com/1200x/87/c2/ff/87c2ffd657991b8cba7e91b508c13848.jpg",
+        "title": "Japandi Dining Room with Neutral Decor",
+        "description": "A Japandi dining room with neutral décor blends Japanese simplicity and Scandinavian warmth. Soft beige, warm wood, and gentle earth tones create a calm, inviting space. Clean lines, natural materials, and minimal furnishings keep the room feeling open and uncluttered, while subtle textures like linen, ceramic, and light wood add quiet elegance and comfort.",
+        "save_count": null,
+        "hashtags": [],
+        "cluster_label": "Japandi dining with rattan pendant",
+        "selected_for_mood_board": true
+      },
+      {
+        "pin_id": "1012465559998684267",
+        "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+        "image_url": "https://i.pinimg.com/1200x/7e/9f/71/7e9f71efa20a307977036346b7de8cd9.jpg",
+        "title": "Japandi nook area",
+        "description": "Home aesthetics",
+        "save_count": null,
+        "hashtags": [],
+        "cluster_label": "Low-seating Japanese tea nook",
+        "selected_for_mood_board": true
+      },
+      {
+        "pin_id": "1012465559998684162",
+        "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+        "image_url": "https://i.pinimg.com/1200x/10/a5/ce/10a5cea5365b36e587c39a3144cbc8a2.jpg",
+        "title": "Japandi Living Room: Calm Minimal Decor, Natural Wood & Indoor Plants",
+        "description": "Calm Japandi living room inspiration with a light neutral sofa, low wooden coffee table, soft textured rug, and plenty of indoor plants for a serene, balanced space. Minimal wall art, natural materials, and clean lines create an airy, soothing aesthetic—perfect for Japanese style interiors, minimalist living room ideas, and warm neutral home decor. Save for Japandi decor and plant-filled living room styling.",
+        "save_count": null,
+        "hashtags": [],
+        "cluster_label": "Neutral Japandi living with low coffee table",
+        "selected_for_mood_board": true
+      }
+    ],
+    "cluster_summary": [
+      {
+        "label": "Japandi dining with rattan pendant",
+        "pin_ids": [
+          "1012465559998684270"
+        ],
+        "visual_notes": "Round oak dining table, woven rattan pendant, light linen-upholstered chairs, ceramic tableware. Stage with a single textured centerpiece (stoneware vase), neutral place settings, and warm-toned pendant to create an intimate focal point. Keep surfaces decluttered and emphasize wood grain and woven textures.",
+        "weight": 0.33
+      },
+      {
+        "label": "Low-seating Japanese tea nook",
+        "pin_ids": [
+          "1012465559998684267"
+        ],
+        "visual_notes": "Floor-level cushions and low table on layered natural-fibre rug, bamboo/blind screens and soft lantern lighting. Arrange poufs and floor cushions for casual seating, add braided straw floor pads and low ambient lamps to enhance cozy, contemplative mood. Use warm, dimmable light and sparse greenery for balance.",
+        "weight": 0.33
+      },
+      {
+        "label": "Neutral Japandi living with low coffee table",
+        "pin_ids": [
+          "1012465559998684162"
+        ],
+        "visual_notes": "Light neutral sofa on low wooden base, oversized low-profile coffee table, potted plants and minimal wall art. Stage with textured rugs (wool + tatami edge), mixed neutral cushions, sculptural ceramics and small bonsai or leafy plants to introduce organic color and scale. Emphasize horizontal lines and negative space.",
+        "weight": 0.34
+      }
+    ],
+    "floor_plan": {
+      "rooms": [
+        {
+          "room_id": "nest_living",
+          "name": "Nest",
+          "room_type": "living_room",
+          "area_estimate": "medium",
+          "measured_dimensions": {
+            "width": 11.916666666666666,
+            "length": 11.666666666666666,
+            "area": 139.24
+          },
+          "measured_unit": "ft",
+          "windows": "opens to Relax via large glass door; additional exterior windows along living area",
+          "natural_light": "high",
+          "adjoins": [
+            "surf_foyer",
+            "hall_central",
+            "dine_dining",
+            "relax_patio",
+            "store_relax"
+          ],
+          "generation_priority": 1
+        },
+        {
+          "room_id": "dream_bedroom",
+          "name": "Dream",
+          "room_type": "bedroom",
+          "area_estimate": "medium",
+          "measured_dimensions": {
+            "width": 12.5,
+            "length": 11.583333333333334,
+            "area": 144.79
+          },
+          "measured_unit": "ft",
+          "windows": "single exterior window on upper wall",
+          "natural_light": "medium",
+          "adjoins": [
+            "hall_central",
+            "dress_closet"
+          ],
+          "generation_priority": 2
+        },
+        {
+          "room_id": "dine_dining",
+          "name": "Dine",
+          "room_type": "dining_room",
+          "area_estimate": "small",
+          "measured_dimensions": {
+            "width": 7.833333333333333,
+            "length": 8,
+            "area": 62.67
+          },
+          "measured_unit": "ft",
+          "windows": "bay/windowed dining nook with multiple panels on exterior wall",
+          "natural_light": "high",
+          "adjoins": [
+            "taste_kitchen",
+            "nest_living",
+            "relax_patio"
+          ],
+          "generation_priority": 4
+        },
+        {
+          "room_id": "taste_kitchen",
+          "name": "Taste",
+          "room_type": "kitchen",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "no prominent exterior window shown; indirect light from adjacent dining",
+          "natural_light": "medium",
+          "adjoins": [
+            "hall_central",
+            "dine_dining",
+            "wash_laundry"
+          ],
+          "generation_priority": 3
+        },
+        {
+          "room_id": "revive_bathroom",
+          "name": "Revive",
+          "room_type": "bathroom",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "small window near tub (if present) otherwise none",
+          "natural_light": "low",
+          "adjoins": [
+            "hall_central",
+            "dress_closet"
+          ],
+          "generation_priority": 6
+        },
+        {
+          "room_id": "wash_laundry",
+          "name": "Wash",
+          "room_type": "other",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "none shown",
+          "natural_light": "low",
+          "adjoins": [
+            "hall_central",
+            "taste_kitchen"
+          ],
+          "generation_priority": 7
+        },
+        {
+          "room_id": "dress_closet",
+          "name": "Dress",
+          "room_type": "other",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "none",
+          "natural_light": "low",
+          "adjoins": [
+            "dream_bedroom",
+            "revive_bathroom"
+          ],
+          "generation_priority": 8
+        },
+        {
+          "room_id": "surf_foyer",
+          "name": "Surf",
+          "room_type": "other",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "none shown; small entry vestibule",
+          "natural_light": "low",
+          "adjoins": [
+            "entry_foyer",
+            "nest_living",
+            "hall_central",
+            "store_entry"
+          ],
+          "generation_priority": 10
+        },
+        {
+          "room_id": "relax_patio",
+          "name": "Relax",
+          "room_type": "other",
+          "area_estimate": "medium",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "outdoor/covered patio area with wide openings to living/dining",
+          "natural_light": "high",
+          "adjoins": [
+            "nest_living",
+            "dine_dining",
+            "store_relax"
+          ],
+          "generation_priority": 5
+        },
+        {
+          "room_id": "store_entry",
+          "name": "Store (entry)",
+          "room_type": "other",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "none",
+          "natural_light": "low",
+          "adjoins": [
+            "surf_foyer"
+          ],
+          "generation_priority": 11
+        },
+        {
+          "room_id": "store_relax",
+          "name": "Store (relax)",
+          "room_type": "other",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "none",
+          "natural_light": "low",
+          "adjoins": [
+            "nest_living",
+            "relax_patio"
+          ],
+          "generation_priority": 12
+        },
+        {
+          "room_id": "hall_central",
+          "name": "Central Hall",
+          "room_type": "other",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "none",
+          "natural_light": "low",
+          "adjoins": [
+            "surf_foyer",
+            "dream_bedroom",
+            "revive_bathroom",
+            "wash_laundry",
+            "taste_kitchen",
+            "nest_living"
+          ],
+          "generation_priority": 9
+        }
+      ],
+      "total_rooms": 12,
+      "layout_type": "open_plan",
+      "confidence": 0.9,
+      "notes": "Room measurements provided by ml_parser for Dream, Nest, and Dine (units in ft). Other spaces inferred from floor plan graphic. Generation priorities favor main living, bedroom, then kitchen/dining."
+    },
+    "provenance": {
+      "pinterest": {
+        "provider": "apify",
+        "requested_limit": 20,
+        "returned_count": 3,
+        "actor_id": "fatihtahta~pinterest-scraper-search"
+      },
+      "models": {
+        "aesthetic_extraction": "gpt-5-mini",
+        "floor_plan_parsing": "gpt-5-mini"
+      }
+    },
+    "warnings": []
+  },
+  "handoff": {
+    "schema_version": "1.0",
+    "handoff_id": "017f3131-aa0b-46bb-a22f-71569b52392b",
+    "session_id": "8ef285d5-fa4b-4070-ae55-352dc8df1a73",
+    "created_at": "2026-05-10T04:25:52.784Z",
+    "status": "ready_for_room_images",
+    "source_input": {
+      "floor_plan_url": "file:///Users/tarive/haus/haus/.haus-cache/floor-plans/a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6.png",
+      "floor_plan_metadata": {
+        "source": "local_upload",
+        "mime_type": "image/png",
+        "size_bytes": 64138,
+        "width_px": 448,
+        "height_px": 480,
+        "sha256": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6",
+        "cache_key": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6"
+      },
+      "floor_plan_measurements": {
+        "source": "ml_parser",
+        "unit": "ft",
+        "scale": null,
+        "rooms": [
+          {
+            "room_id": null,
+            "name": "Dream",
+            "dimensions": {
+              "width": 12.5,
+              "length": 11.583333333333334,
+              "area": 144.79
+            },
+            "unit": "ft",
+            "confidence": 0.95
+          },
+          {
+            "room_id": null,
+            "name": "Nest",
+            "dimensions": {
+              "width": 11.916666666666666,
+              "length": 11.666666666666666,
+              "area": 139.24
+            },
+            "unit": "ft",
+            "confidence": 0.95
+          },
+          {
+            "room_id": null,
+            "name": "Dine",
+            "dimensions": {
+              "width": 7.833333333333333,
+              "length": 8,
+              "area": 62.67
+            },
+            "unit": "ft",
+            "confidence": 0.95
+          }
+        ],
+        "notes": null
+      },
+      "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "brief": "Warm, calm home for a young family that needs a cozy work corner.",
+      "objects": [
+        {
+          "object_type": "crib",
+          "room_id": "dream_bedroom",
+          "label": "crib"
+        },
+        {
+          "object_type": "standing_desk",
+          "room_id": "dream_bedroom",
+          "label": "standing desk"
+        },
+        {
+          "object_type": "bookshelf",
+          "room_id": "nest_living",
+          "label": "bookshelf"
+        }
+      ],
+      "platform": "all"
+    },
+    "pinterest_intelligence": {
+      "aesthetic_profile": {
+        "palette": "warm_neutral",
+        "lighting": "soft_ambient",
+        "density": "balanced",
+        "style_era": "japandi",
+        "dominant_colors": [
+          "#EDE7DF",
+          "#CBB698",
+          "#A88461",
+          "#6D6A5F",
+          "#2B2724"
+        ],
+        "mood_words": [
+          "calm minimalism",
+          "earthy warmth",
+          "layered textures",
+          "soft sunlight",
+          "meditative serenity"
+        ],
+        "pinterest_cluster_labels": [
+          "Japandi dining with rattan pendant",
+          "Low-seating Japanese tea nook",
+          "Neutral Japandi living with low coffee table"
+        ],
+        "confidence": 0.88
+      },
+      "pins": [
+        {
+          "pin_id": "1012465559998684270",
+          "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+          "image_url": "https://i.pinimg.com/1200x/87/c2/ff/87c2ffd657991b8cba7e91b508c13848.jpg",
+          "title": "Japandi Dining Room with Neutral Decor",
+          "description": "A Japandi dining room with neutral décor blends Japanese simplicity and Scandinavian warmth. Soft beige, warm wood, and gentle earth tones create a calm, inviting space. Clean lines, natural materials, and minimal furnishings keep the room feeling open and uncluttered, while subtle textures like linen, ceramic, and light wood add quiet elegance and comfort.",
+          "save_count": null,
+          "hashtags": [],
+          "cluster_label": "Japandi dining with rattan pendant",
+          "selected_for_mood_board": true
+        },
+        {
+          "pin_id": "1012465559998684267",
+          "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+          "image_url": "https://i.pinimg.com/1200x/7e/9f/71/7e9f71efa20a307977036346b7de8cd9.jpg",
+          "title": "Japandi nook area",
+          "description": "Home aesthetics",
+          "save_count": null,
+          "hashtags": [],
+          "cluster_label": "Low-seating Japanese tea nook",
+          "selected_for_mood_board": true
+        },
+        {
+          "pin_id": "1012465559998684162",
+          "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+          "image_url": "https://i.pinimg.com/1200x/10/a5/ce/10a5cea5365b36e587c39a3144cbc8a2.jpg",
+          "title": "Japandi Living Room: Calm Minimal Decor, Natural Wood & Indoor Plants",
+          "description": "Calm Japandi living room inspiration with a light neutral sofa, low wooden coffee table, soft textured rug, and plenty of indoor plants for a serene, balanced space. Minimal wall art, natural materials, and clean lines create an airy, soothing aesthetic—perfect for Japanese style interiors, minimalist living room ideas, and warm neutral home decor. Save for Japandi decor and plant-filled living room styling.",
+          "save_count": null,
+          "hashtags": [],
+          "cluster_label": "Neutral Japandi living with low coffee table",
+          "selected_for_mood_board": true
+        }
+      ],
+      "cluster_summary": [
+        {
+          "label": "Japandi dining with rattan pendant",
+          "pin_ids": [
+            "1012465559998684270"
+          ],
+          "visual_notes": "Round oak dining table, woven rattan pendant, light linen-upholstered chairs, ceramic tableware. Stage with a single textured centerpiece (stoneware vase), neutral place settings, and warm-toned pendant to create an intimate focal point. Keep surfaces decluttered and emphasize wood grain and woven textures.",
+          "weight": 0.33
+        },
+        {
+          "label": "Low-seating Japanese tea nook",
+          "pin_ids": [
+            "1012465559998684267"
+          ],
+          "visual_notes": "Floor-level cushions and low table on layered natural-fibre rug, bamboo/blind screens and soft lantern lighting. Arrange poufs and floor cushions for casual seating, add braided straw floor pads and low ambient lamps to enhance cozy, contemplative mood. Use warm, dimmable light and sparse greenery for balance.",
+          "weight": 0.33
+        },
+        {
+          "label": "Neutral Japandi living with low coffee table",
+          "pin_ids": [
+            "1012465559998684162"
+          ],
+          "visual_notes": "Light neutral sofa on low wooden base, oversized low-profile coffee table, potted plants and minimal wall art. Stage with textured rugs (wool + tatami edge), mixed neutral cushions, sculptural ceramics and small bonsai or leafy plants to introduce organic color and scale. Emphasize horizontal lines and negative space.",
+          "weight": 0.34
+        }
+      ]
+    },
+    "floor_plan": {
+      "layout_type": "open_plan",
+      "total_rooms": 12,
+      "rooms": [
+        {
+          "room_id": "nest_living",
+          "name": "Nest",
+          "room_type": "living_room",
+          "area_estimate": "medium",
+          "measured_dimensions": {
+            "width": 11.916666666666666,
+            "length": 11.666666666666666,
+            "area": 139.24
+          },
+          "measured_unit": "ft",
+          "windows": "opens to Relax via large glass door; additional exterior windows along living area",
+          "natural_light": "high",
+          "adjoins": [
+            "surf_foyer",
+            "hall_central",
+            "dine_dining",
+            "relax_patio",
+            "store_relax"
+          ],
+          "generation_priority": 1
+        },
+        {
+          "room_id": "dream_bedroom",
+          "name": "Dream",
+          "room_type": "bedroom",
+          "area_estimate": "medium",
+          "measured_dimensions": {
+            "width": 12.5,
+            "length": 11.583333333333334,
+            "area": 144.79
+          },
+          "measured_unit": "ft",
+          "windows": "single exterior window on upper wall",
+          "natural_light": "medium",
+          "adjoins": [
+            "hall_central",
+            "dress_closet"
+          ],
+          "generation_priority": 2
+        },
+        {
+          "room_id": "dine_dining",
+          "name": "Dine",
+          "room_type": "dining_room",
+          "area_estimate": "small",
+          "measured_dimensions": {
+            "width": 7.833333333333333,
+            "length": 8,
+            "area": 62.67
+          },
+          "measured_unit": "ft",
+          "windows": "bay/windowed dining nook with multiple panels on exterior wall",
+          "natural_light": "high",
+          "adjoins": [
+            "taste_kitchen",
+            "nest_living",
+            "relax_patio"
+          ],
+          "generation_priority": 4
+        },
+        {
+          "room_id": "taste_kitchen",
+          "name": "Taste",
+          "room_type": "kitchen",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "no prominent exterior window shown; indirect light from adjacent dining",
+          "natural_light": "medium",
+          "adjoins": [
+            "hall_central",
+            "dine_dining",
+            "wash_laundry"
+          ],
+          "generation_priority": 3
+        },
+        {
+          "room_id": "revive_bathroom",
+          "name": "Revive",
+          "room_type": "bathroom",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "small window near tub (if present) otherwise none",
+          "natural_light": "low",
+          "adjoins": [
+            "hall_central",
+            "dress_closet"
+          ],
+          "generation_priority": 6
+        },
+        {
+          "room_id": "wash_laundry",
+          "name": "Wash",
+          "room_type": "other",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "none shown",
+          "natural_light": "low",
+          "adjoins": [
+            "hall_central",
+            "taste_kitchen"
+          ],
+          "generation_priority": 7
+        },
+        {
+          "room_id": "dress_closet",
+          "name": "Dress",
+          "room_type": "other",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "none",
+          "natural_light": "low",
+          "adjoins": [
+            "dream_bedroom",
+            "revive_bathroom"
+          ],
+          "generation_priority": 8
+        },
+        {
+          "room_id": "surf_foyer",
+          "name": "Surf",
+          "room_type": "other",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "none shown; small entry vestibule",
+          "natural_light": "low",
+          "adjoins": [
+            "entry_foyer",
+            "nest_living",
+            "hall_central",
+            "store_entry"
+          ],
+          "generation_priority": 10
+        },
+        {
+          "room_id": "relax_patio",
+          "name": "Relax",
+          "room_type": "other",
+          "area_estimate": "medium",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "outdoor/covered patio area with wide openings to living/dining",
+          "natural_light": "high",
+          "adjoins": [
+            "nest_living",
+            "dine_dining",
+            "store_relax"
+          ],
+          "generation_priority": 5
+        },
+        {
+          "room_id": "store_entry",
+          "name": "Store (entry)",
+          "room_type": "other",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "none",
+          "natural_light": "low",
+          "adjoins": [
+            "surf_foyer"
+          ],
+          "generation_priority": 11
+        },
+        {
+          "room_id": "store_relax",
+          "name": "Store (relax)",
+          "room_type": "other",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "none",
+          "natural_light": "low",
+          "adjoins": [
+            "nest_living",
+            "relax_patio"
+          ],
+          "generation_priority": 12
+        },
+        {
+          "room_id": "hall_central",
+          "name": "Central Hall",
+          "room_type": "other",
+          "area_estimate": "small",
+          "measured_dimensions": null,
+          "measured_unit": null,
+          "windows": "none",
+          "natural_light": "low",
+          "adjoins": [
+            "surf_foyer",
+            "dream_bedroom",
+            "revive_bathroom",
+            "wash_laundry",
+            "taste_kitchen",
+            "nest_living"
+          ],
+          "generation_priority": 9
+        }
+      ]
+    },
+    "vibe_report": {
+      "aesthetic_name": "Warm Japandi Family",
+      "summary": "A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal.",
+      "palette_rationale": "Warm neutrals (#EDE7DF, #CBB698, #A88461) provide a soft background; mid-tone woods and muted greys (#6D6A5F, #2B2724) anchor furniture and details. Use one slightly richer accent (deep ochre or terracotta in ceramics/textiles) sparingly for focal points.",
+      "lighting_mood": "Soft ambient daylight through large glazing in living/dining; warmer practical lamps and dimmable pendants for evening scenes. Maintain believable directional light from visible openings (patio doors, dining bay) and soft fill from practical lamps.",
+      "materials": [
+        "Light oak (tables, shelving, low sofa base)",
+        "Natural linen/washed cotton upholstery",
+        "Woven rattan (pendant, small baskets)",
+        "Ceramic/stoneware accessories",
+        "Wool + tatami-edge rugs",
+        "Matte black metal accents (lamp stems, small hardware)"
+      ],
+      "textures": [
+        "Open-weave linen cushions",
+        "Fine-loop wool rugs with low pile",
+        "Smooth oiled wood grain",
+        "Handmade ceramic matte finishes",
+        "Woven rattan and straw"
+      ],
+      "furniture_language": [
+        "Low-profile seating and tables (horizontal emphasis)",
+        "Slim-profile shelving units for vertical storage",
+        "Simple, unadorned cabinetry faces with recessed pulls",
+        "Scandinavian ladder-back or simple upholstered dining chairs",
+        "Multi-use pieces (bench that doubles as storage)"
+      ],
+      "styling_rules": [
+        "One tactile centerpiece per surface (stoneware vase, wooden bowl) — avoid multiple competing objects",
+        "Keep negative space; avoid full-coverage decoration on walls",
+        "Vertical plants only as punctuation — keep foliage modest and sculptural",
+        "Layer rugs where floor-level seating appears (tatami edge under wool textures)",
+        "Use dimmable warm practicals near reading/work corners"
+      ],
+      "avoid": [
+        "High-gloss finishes, bright saturated colors, and heavy patterning",
+        "Overstuffed furniture or high-back sofas that break the low-line language",
+        "Artificial-looking greenery and oversized plants that scale incorrectly",
+        "Visible modern tech clutter (do not stage visible charging cables, multiple monitors)"
+      ],
+      "room_guidance": [
+        {
+          "room_id": "nest_living",
+          "headline": "Living / family hub with integrated work corner",
+          "guidance": "Prioritize the patio door as primary light source; stage a low sofa facing the opening and a compact standing desk tucked into a corner near the entry to the dining area. Keep toys and family items curated in a single woven basket. Use a low coffee table and a textured rug with a tatami edge to ground seating. Add a slim bookshelf near the standing desk for books and a few child items.",
+          "must_include": [
+            "standing_desk",
+            "bookshelf",
+            "low sofa",
+            "rug with tatami edge",
+            "woven basket"
+          ],
+          "must_avoid": [
+            "high-backed sofas",
+            "overhead fluorescent fixtures",
+            "multiple competing pendant lights"
+          ]
+        },
+        {
+          "room_id": "dream_bedroom",
+          "headline": "Serene bedroom with a crib and soft work/reading nook",
+          "guidance": "Place the crib on the wall opposite the window to keep the sleeping area sheltered from direct midday sun. Keep bed and crib low-profile with natural linens. Add a small reading corner with a slim armchair and a wall sconce; if a work corner is required, prefer a small floating shelf desk rather than a full standing desk. Keep textiles muted and layered.",
+          "must_include": [
+            "crib",
+            "low-profile bed",
+            "soft reading lamp"
+          ],
+          "must_avoid": [
+            "bright nursery prints",
+            "bulky dressers near the crib"
+          ]
+        },
+        {
+          "room_id": "dine_dining",
+          "headline": "Intimate Japandi dining nook",
+          "guidance": "Center a round light-oak table under a woven rattan pendant. Keep seating simple — 3–4 neutral upholstered chairs. Stage with a single stoneware vase and a linen runner. Ensure bay/window light remains the brightest source in daytime shots.",
+          "must_include": [
+            "round oak dining table",
+            "rattan pendant",
+            "linen-upholstered chairs"
+          ],
+          "must_avoid": [
+            "heavy table centerpieces",
+            "too many place settings"
+          ]
+        },
+        {
+          "room_id": "taste_kitchen",
+          "headline": "Small, functional kitchen — calm and uncluttered",
+          "guidance": "Keep counters mostly clear, display one or two ceramic pieces near the sink, and show indirect light from the dining bay. Use warm under-cabinet practicals and a single pendant or wall sconce above a small breakfast nook if present.",
+          "must_include": [
+            "matte ceramic accessories",
+            "warm under-cabinet light"
+          ],
+          "must_avoid": [
+            "excessive countertop appliances",
+            "bright commercial-style hardware"
+          ]
+        }
+      ],
+      "confidence": 0.88,
+      "warnings": [
+        "Preserve architecture, verticals, and measured scale — no furniture should appear oversized in relation to room dimensions.",
+        "Visible light sources only: do not add directional light from non-existent openings.",
+        "Avoid staging that blocks primary circulation paths between living, dining, and patio."
+      ]
+    },
+    "creative_spec": {
+      "overall_mood": "Calm, measured, homey Japandi — quiet luxury without excess",
+      "room_sequence": [
+        "nest_living",
+        "dream_bedroom",
+        "taste_kitchen",
+        "dine_dining",
+        "relax_patio"
+      ],
+      "global_style_notes": [
+        "Maintain low visual density; each vignette should have a single focal object",
+        "Favor morning/late-afternoon warm daylight for cinematography to enhance texture",
+        "Use practical lamps and dimmable pendants for evening continuity across scenes",
+        "Keep color grading neutral-warm, avoid teal/orange extremes"
+      ],
+      "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, oversaturated colors, floating objects",
+      "export_formats": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ]
+    },
+    "room_generation_jobs": [
+      {
+        "job_id": "631f130c-c3cf-4200-a581-d53562061f79",
+        "room_id": "nest_living",
+        "room_name": "Nest",
+        "room_type": "living_room",
+        "sequence_index": 0,
+        "dalle": {
+          "prompt": "Photorealistic interior photograph of a 11.916666666666666 by 11.666666666666666 ft Nest, opens to Relax via large glass door; additional exterior windows along living area windows, Primary daylight from wide patio doors on exterior wall; supplement with a floor lamp near the work corner and a warm pendant above the seating area for evening continuity. Expose for midtones and preserve crisp shadows from door light., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal., Wide living shot preserving existing open-plan geometry and patio door position. Low oak sofa oriented toward patio opening, low coffee table, tatami-edged rug layered under seating. Compact standing desk tucked against side wall next to a slim bookshelf; keep desk minimal: wood top, small lamp. Visible practical floor lamp by reading zone. Materials: light oak, linen upholstery, woven rattan pendant hung off-center toward dining. Camera framing: 24–28mm equivalent for wide view, eye-level ~48–52 inches. Maintain believable scale: sofa seat height low (~14–16 inches), standing desk height (~40 inches). Light must come from patio glazing and practicals only; preserve hard shadow direction from the door., must include standing_desk, bookshelf, low sofa, woven basket, rug with tatami edge, must avoid High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), floating or oversized plants, introduced windows or extra light sources, furniture blocking patio access, high-backed sofas, overhead fluorescent fixtures, multiple competing pendant lights, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+          "size": "1792x1024",
+          "quality": "hd",
+          "style": "natural",
+          "expected_aspect_ratio": "16:9"
+        },
+        "video_generation": {
+          "provider": "fal",
+          "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+          "prompt": "Very slow dolly in, camera moves forward from entry through the living area toward the patio doors, directional sunlight shifts across the rug and sofa as the camera advances, shadows move gradually, consistent exposure, cinematic, photorealistic — preserve architecture and layout.",
+          "camera_motion": "slow_dolly",
+          "duration_seconds": 5,
+          "aspect_ratio": "16:9"
+        },
+        "staging": {
+          "lighting_instruction": "Primary daylight from wide patio doors on exterior wall; supplement with a floor lamp near the work corner and a warm pendant above the seating area for evening continuity. Expose for midtones and preserve crisp shadows from door light.",
+          "objects_to_include": [
+            {
+              "object_type": "bookshelf",
+              "room_id": "nest_living",
+              "label": "bookshelf"
+            }
+          ],
+          "must_include": [
+            "standing_desk",
+            "bookshelf",
+            "low sofa",
+            "woven basket",
+            "rug with tatami edge"
+          ],
+          "must_avoid": [
+            "High-gloss finishes, bright saturated colors, and heavy patterning",
+            "Overstuffed furniture or high-back sofas that break the low-line language",
+            "Artificial-looking greenery and oversized plants that scale incorrectly",
+            "Visible modern tech clutter (do not stage visible charging cables, multiple monitors)",
+            "floating or oversized plants",
+            "introduced windows or extra light sources",
+            "furniture blocking patio access",
+            "high-backed sofas",
+            "overhead fluorescent fixtures",
+            "multiple competing pendant lights",
+            "people",
+            "visible brand logos"
+          ],
+          "background_constraints": [
+            {
+              "adjacent_room": "Dine",
+              "adjacent_room_type": "dining_room",
+              "direction": "through the open-plan dining area",
+              "visible_objects": [
+                "dining table",
+                "dining chairs",
+                "pendant light",
+                "round oak dining table",
+                "rattan pendant",
+                "linen-upholstered chairs"
+              ]
+            },
+            {
+              "adjacent_room": "Taste",
+              "adjacent_room_type": "kitchen",
+              "direction": "through the open kitchen beyond the dining area",
+              "visible_objects": [
+                "kitchen cabinets",
+                "kitchen counter",
+                "matte ceramic accessories",
+                "warm under-cabinet light"
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "min_eval_score": 7,
+          "max_video_attempts": 3,
+          "regenerate_image_if": [
+            "visible_people",
+            "wrong_room_type",
+            "major_style_mismatch",
+            "object_missing"
+          ]
+        }
+      },
+      {
+        "job_id": "03285620-9e25-4a67-b8a4-a1e545c0233c",
+        "room_id": "dream_bedroom",
+        "room_name": "Dream",
+        "room_type": "bedroom",
+        "sequence_index": 1,
+        "dalle": {
+          "prompt": "Photorealistic interior photograph of a 12.5 by 11.583333333333334 ft Dream, single exterior window on upper wall windows, Window on upper wall provides soft morning light; use a warm wall sconce near reading corner for fill. Expose to protect highlights from the window while keeping interior shadows sculpted., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal., Low-profile bed and a single crib placed on the wall opposite the window. Soft neutral linens and a small textured rug near crib edge. Slim armchair or small floating shelf desk in a corner with a warm wall sconce above. Materials: muted linen, oak bedside bench, matte ceramic lamp. Camera framing: 35–50mm for a cozy bedroom feel, slightly elevated eye-line ~42–48 inches to show crib and bed relation. Preserve room width (12.5' x 11.58') — ensure circulation path between door and closet remains visible., must include crib, low-profile bed, soft reading lamp, standing desk, must avoid High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), bright nursery colors, large overhead fixtures, bright nursery prints, bulky dressers near the crib, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+          "size": "1792x1024",
+          "quality": "hd",
+          "style": "natural",
+          "expected_aspect_ratio": "16:9"
+        },
+        "video_generation": {
+          "provider": "fal",
+          "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+          "prompt": "Static close-in slow zoom, small camera push toward crib and adjacent reading nook while warm window light remains steady, soft shadows deepen gently, consistent exposure, cinematic, photorealistic — keep architecture and furniture positions stable.",
+          "camera_motion": "static_zoom",
+          "duration_seconds": 5,
+          "aspect_ratio": "16:9"
+        },
+        "staging": {
+          "lighting_instruction": "Window on upper wall provides soft morning light; use a warm wall sconce near reading corner for fill. Expose to protect highlights from the window while keeping interior shadows sculpted.",
+          "objects_to_include": [
+            {
+              "object_type": "crib",
+              "room_id": "dream_bedroom",
+              "label": "crib"
+            },
+            {
+              "object_type": "standing_desk",
+              "room_id": "dream_bedroom",
+              "label": "standing desk"
+            }
+          ],
+          "must_include": [
+            "crib",
+            "low-profile bed",
+            "soft reading lamp",
+            "standing desk"
+          ],
+          "must_avoid": [
+            "High-gloss finishes, bright saturated colors, and heavy patterning",
+            "Overstuffed furniture or high-back sofas that break the low-line language",
+            "Artificial-looking greenery and oversized plants that scale incorrectly",
+            "Visible modern tech clutter (do not stage visible charging cables, multiple monitors)",
+            "bright nursery colors",
+            "large overhead fixtures",
+            "bright nursery prints",
+            "bulky dressers near the crib",
+            "people",
+            "visible brand logos"
+          ]
+        },
+        "quality_gate": {
+          "min_eval_score": 7,
+          "max_video_attempts": 3,
+          "regenerate_image_if": [
+            "visible_people",
+            "wrong_room_type",
+            "major_style_mismatch",
+            "object_missing"
+          ]
+        }
+      },
+      {
+        "job_id": "597fb86f-37b7-4444-8545-70d43865494a",
+        "room_id": "taste_kitchen",
+        "room_name": "Taste",
+        "room_type": "kitchen",
+        "sequence_index": 2,
+        "dalle": {
+          "prompt": "Photorealistic interior photograph of a small Taste, no prominent exterior window shown; indirect light from adjacent dining windows, Indirect light from dining bay; use warm under-cabinet practicals near counters and a small pendant over any prep nook. Keep exposure steady and avoid bright specular highlights on cabinetry., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal., Small, calm kitchen composition showing countertop with one or two matte ceramic objects near sink and a warm under-cabinet strip. Simple wood or matte-front cabinets, minimal hardware. Camera framing: 35–50mm for natural perspective; include portion of dining opening to show light source relationship. Preserve cabinet heights and counter depth to believable scale., must include matte ceramic accessories, warm under-cabinet light, must avoid High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), cluttered countertops, adding windows or extra external light sources, excessive countertop appliances, bright commercial-style hardware, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+          "size": "1792x1024",
+          "quality": "hd",
+          "style": "natural",
+          "expected_aspect_ratio": "16:9"
+        },
+        "video_generation": {
+          "provider": "fal",
+          "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+          "prompt": "Very slow truck right, camera glides horizontally along the kitchen counter toward the dining opening while warm practicals illuminate foreground, subtle daylight from the dining bay brightens background, consistent exposure, cinematic, photorealistic — preserve cabinet geometry and layout.",
+          "camera_motion": "slow_dolly",
+          "duration_seconds": 5,
+          "aspect_ratio": "16:9"
+        },
+        "staging": {
+          "lighting_instruction": "Indirect light from dining bay; use warm under-cabinet practicals near counters and a small pendant over any prep nook. Keep exposure steady and avoid bright specular highlights on cabinetry.",
+          "objects_to_include": [],
+          "must_include": [
+            "matte ceramic accessories",
+            "warm under-cabinet light"
+          ],
+          "must_avoid": [
+            "High-gloss finishes, bright saturated colors, and heavy patterning",
+            "Overstuffed furniture or high-back sofas that break the low-line language",
+            "Artificial-looking greenery and oversized plants that scale incorrectly",
+            "Visible modern tech clutter (do not stage visible charging cables, multiple monitors)",
+            "cluttered countertops",
+            "adding windows or extra external light sources",
+            "excessive countertop appliances",
+            "bright commercial-style hardware",
+            "people",
+            "visible brand logos"
+          ],
+          "background_constraints": [
+            {
+              "adjacent_room": "Dine",
+              "adjacent_room_type": "dining_room",
+              "direction": "through the open pass-through or doorway",
+              "visible_objects": [
+                "dining table",
+                "pendant light above the dining area",
+                "dining chairs",
+                "round oak dining table",
+                "rattan pendant",
+                "linen-upholstered chairs"
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "min_eval_score": 7,
+          "max_video_attempts": 3,
+          "regenerate_image_if": [
+            "visible_people",
+            "wrong_room_type",
+            "major_style_mismatch",
+            "object_missing"
+          ]
+        }
+      },
+      {
+        "job_id": "722e8259-07e3-43c3-b4f5-5b09e7a63eef",
+        "room_id": "dine_dining",
+        "room_name": "Dine",
+        "room_type": "dining_room",
+        "sequence_index": 3,
+        "dalle": {
+          "prompt": "Photorealistic interior photograph of a 7.833333333333333 by 8 ft Dine, bay/windowed dining nook with multiple panels on exterior wall windows, Bay/windowed dining nook is brightest source — position rattan pendant as a practical but avoid overpowering daylight; balance exposure so exterior view remains legible. Use warm pendant color temp for evening continuity., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal., Round oak dining table centered in the bay window area with 3–4 neutral linen-upholstered chairs. Single woven rattan pendant suspended 26–30 inches above table center. Minimal table styling: stoneware vase with a single branch or dried stem, linen runner. Camera framing: 28–35mm wide, low camera height (~36–40 inches) to emphasize low furniture and horizon lines. Preserve bay configuration and window pane divisions; keep reflections minimal and realistic., must include round oak dining table, rattan pendant, linen-upholstered chairs, must avoid High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), multiple table centerpieces, introduced direct light sources not visible in scene, heavy table centerpieces, too many place settings, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+          "size": "1792x1024",
+          "quality": "hd",
+          "style": "natural",
+          "expected_aspect_ratio": "16:9"
+        },
+        "video_generation": {
+          "provider": "fal",
+          "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+          "prompt": "Smooth orbital pan around the table, camera arcs slowly to reveal the rattan pendant and bay window while daylight pours in and soft shadows crawl across the tabletop, consistent exposure, cinematic, photorealistic — preserve geometry and window reflections.",
+          "camera_motion": "orbital_pan",
+          "duration_seconds": 5,
+          "aspect_ratio": "16:9"
+        },
+        "staging": {
+          "lighting_instruction": "Bay/windowed dining nook is brightest source — position rattan pendant as a practical but avoid overpowering daylight; balance exposure so exterior view remains legible. Use warm pendant color temp for evening continuity.",
+          "objects_to_include": [],
+          "must_include": [
+            "round oak dining table",
+            "rattan pendant",
+            "linen-upholstered chairs"
+          ],
+          "must_avoid": [
+            "High-gloss finishes, bright saturated colors, and heavy patterning",
+            "Overstuffed furniture or high-back sofas that break the low-line language",
+            "Artificial-looking greenery and oversized plants that scale incorrectly",
+            "Visible modern tech clutter (do not stage visible charging cables, multiple monitors)",
+            "multiple table centerpieces",
+            "introduced direct light sources not visible in scene",
+            "heavy table centerpieces",
+            "too many place settings",
+            "people",
+            "visible brand logos"
+          ],
+          "background_constraints": [
+            {
+              "adjacent_room": "Taste",
+              "adjacent_room_type": "kitchen",
+              "direction": "through the open kitchen",
+              "visible_objects": [
+                "kitchen cabinets",
+                "range hood",
+                "kitchen island or counter",
+                "matte ceramic accessories",
+                "warm under-cabinet light"
+              ]
+            },
+            {
+              "adjacent_room": "Nest",
+              "adjacent_room_type": "living_room",
+              "direction": "through the open-plan living area",
+              "visible_objects": [
+                "sofa",
+                "coffee table",
+                "area rug",
+                "standing_desk",
+                "bookshelf",
+                "low sofa",
+                "woven basket",
+                "rug with tatami edge"
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "min_eval_score": 7,
+          "max_video_attempts": 3,
+          "regenerate_image_if": [
+            "visible_people",
+            "wrong_room_type",
+            "major_style_mismatch",
+            "object_missing"
+          ]
+        }
+      },
+      {
+        "job_id": "d342cd93-7984-4ea3-9484-195295d1da67",
+        "room_id": "relax_patio",
+        "room_name": "Relax",
+        "room_type": "other",
+        "sequence_index": 4,
+        "dalle": {
+          "prompt": "Photorealistic interior photograph of a medium Relax, outdoor/covered patio area with wide openings to living/dining windows, Patio is outdoor/covered — use natural daylight as primary light; avoid adding interior-style lamps outdoors. Show soft directional daylight coming through patio openings into living/dining when applicable., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal., Covered patio with simple seating: low wooden bench, floor-level cushions or small tea table, a couple of potted sculptural plants. Maintain continuity with interior materials (same oak tone). Camera framing: slightly wider 24–35mm to capture opening relationship to living/dining. Ensure outdoor scale reads correctly and that patio floor and ceiling lines are parallel to frame., must include floor-level cushions, low wooden bench, must avoid High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), introducing interior lamps outdoors, oversized tropical plants, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+          "size": "1792x1024",
+          "quality": "hd",
+          "style": "natural",
+          "expected_aspect_ratio": "16:9"
+        },
+        "video_generation": {
+          "provider": "fal",
+          "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+          "prompt": "Slow aerial drift slightly inward from exterior toward patio opening, camera gently moves while daylight remains dominant and shadows from overhang shift subtly, consistent exposure, cinematic, photorealistic — preserve architecture and opening proportions.",
+          "camera_motion": "aerial_drift",
+          "duration_seconds": 5,
+          "aspect_ratio": "16:9"
+        },
+        "staging": {
+          "lighting_instruction": "Patio is outdoor/covered — use natural daylight as primary light; avoid adding interior-style lamps outdoors. Show soft directional daylight coming through patio openings into living/dining when applicable.",
+          "objects_to_include": [],
+          "must_include": [
+            "floor-level cushions",
+            "low wooden bench"
+          ],
+          "must_avoid": [
+            "High-gloss finishes, bright saturated colors, and heavy patterning",
+            "Overstuffed furniture or high-back sofas that break the low-line language",
+            "Artificial-looking greenery and oversized plants that scale incorrectly",
+            "Visible modern tech clutter (do not stage visible charging cables, multiple monitors)",
+            "introducing interior lamps outdoors",
+            "oversized tropical plants",
+            "people",
+            "visible brand logos"
+          ]
+        },
+        "quality_gate": {
+          "min_eval_score": 7,
+          "max_video_attempts": 3,
+          "regenerate_image_if": [
+            "visible_people",
+            "wrong_room_type",
+            "major_style_mismatch",
+            "object_missing"
+          ]
+        }
+      }
+    ],
+    "delivery": {
+      "requested_platforms": [
+        "instagram",
+        "tiktok",
+        "listing",
+        "portfolio"
+      ],
+      "video_formats": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "caption_context": {
+        "property_brief": "Warm, calm home for a young family that needs a cozy work corner.",
+        "aesthetic_summary": "A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal.",
+        "featured_objects": [
+          "crib",
+          "standing desk",
+          "bookshelf"
+        ],
+        "tone": "luxury_listing"
+      },
+      "mood_board": {
+        "include_pin_ids": [
+          "1012465559998684270",
+          "1012465559998684267",
+          "1012465559998684162"
+        ],
+        "include_room_ids": [
+          "nest_living",
+          "dream_bedroom",
+          "taste_kitchen",
+          "dine_dining",
+          "relax_patio"
+        ],
+        "annotations": [
+          {
+            "label": "Aesthetic",
+            "value": "Warm Japandi Family"
+          },
+          {
+            "label": "Palette",
+            "value": "warm_neutral"
+          },
+          {
+            "label": "Lighting",
+            "value": "soft_ambient"
+          },
+          {
+            "label": "Mood",
+            "value": "Calm, measured, homey Japandi — quiet luxury without excess"
+          }
+        ]
+      }
+    },
+    "provenance": {
+      "layer_1_payload_created_at": "2026-05-10T04:25:24.065Z",
+      "pinterest_scrape": {
+        "provider": "apify",
+        "item_count": 3,
+        "fallback_used": false,
+        "fallback_reason": null
+      },
+      "models": {
+        "aesthetic_extraction": "gpt-5-mini",
+        "floor_plan_parsing": "gpt-5-mini",
+        "creative_spec": "gpt-5-mini"
+      }
+    },
+    "warnings": [
+      {
+        "code": "creative_plan_warning",
+        "message": "All camera motion prompts assume an existing edited photo as a starting frame; run an image-pass if the source photo lacks directional light or has weak composition.",
+        "severity": "warning",
+        "affected_room_ids": []
+      },
+      {
+        "code": "creative_plan_warning",
+        "message": "Do not change measured room dimensions or move windows/doors in any render/video pass.",
+        "severity": "warning",
+        "affected_room_ids": []
+      },
+      {
+        "code": "creative_plan_warning",
+        "message": "Negative prompt must be applied to suppress warped architecture, flicker, and layout drift during video generation.",
+        "severity": "warning",
+        "affected_room_ids": []
+      },
+      {
+        "code": "vibe_report_warning",
+        "message": "Preserve architecture, verticals, and measured scale — no furniture should appear oversized in relation to room dimensions.",
+        "severity": "warning",
+        "affected_room_ids": []
+      },
+      {
+        "code": "vibe_report_warning",
+        "message": "Visible light sources only: do not add directional light from non-existent openings.",
+        "severity": "warning",
+        "affected_room_ids": []
+      },
+      {
+        "code": "vibe_report_warning",
+        "message": "Avoid staging that blocks primary circulation paths between living, dining, and patio.",
+        "severity": "warning",
+        "affected_room_ids": []
+      }
+    ]
+  },
+  "rooms": [
+    {
+      "room_id": "nest_living",
+      "room_name": "Nest",
+      "room_type": "living_room",
+      "sequence_index": 0,
+      "state": "STILL_REVIEW_READY",
+      "still_attempt_count": 1,
+      "video_attempt_count": 0,
+      "max_still_attempts": 2,
+      "max_video_attempts": 3,
+      "current_motion_mode": "slow_dolly",
+      "scores": {
+        "style_match": 10,
+        "room_correctness": 10,
+        "architecture_stability": 9,
+        "lighting_realism": 10,
+        "object_completeness": 9,
+        "motion_quality": 10,
+        "overall": 9
+      },
+      "artifacts": {
+        "source_image_path": null,
+        "styled_image_path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/76035d9b50c38f4de4e8820be84f6443aeb98cca0f1b8175a8693544663eb86c/still-0.png",
+        "styled_image_url": "https://v3b.fal.media/files/b/0a999a7d/UyTCPbRUILvGKCeMu4du3_NsfItjkY.png",
+        "video_clip_path": null,
+        "video_url": null
+      },
+      "plans": {
+        "still_plan": {
+          "kind": "still_plan",
+          "strategy": "anchor_referenced_still",
+          "provider": "fal",
+          "model": "fal-ai/gemini-3.1-flash-image-preview/edit",
+          "prompt": "Photorealistic interior photograph of a 11.916666666666666 by 11.666666666666666 ft Nest, opens to Relax via large glass door; additional exterior windows along living area windows, Primary daylight from wide patio doors on exterior wall; supplement with a floor lamp near the work corner and a warm pendant above the seating area for evening continuity. Expose for midtones and preserve crisp shadows from door light., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal., Wide living shot preserving existing open-plan geometry and patio door position. Low oak sofa oriented toward patio opening, low coffee table, tatami-edged rug layered under seating. Compact standing desk tucked against side wall next to a slim bookshelf; keep desk minimal: wood top, small lamp. Visible practical floor lamp by reading zone. Materials: light oak, linen upholstery, woven rattan pendant hung off-center toward dining. Camera framing: 24–28mm equivalent for wide view, eye-level ~48–52 inches. Maintain believable scale: sofa seat height low (~14–16 inches), standing desk height (~40 inches). Light must come from patio glazing and practicals only; preserve hard shadow direction from the door., must include standing_desk, bookshelf, low sofa, woven basket, rug with tatami edge, must avoid High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), floating or oversized plants, introduced windows or extra light sources, furniture blocking patio access, high-backed sofas, overhead fluorescent fixtures, multiple competing pendant lights, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing Create one photorealistic staged Nest still for a premium real-estate listing. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest. Use japandi styling, warm_neutral palette, soft_ambient lighting, and balanced furnishing density. A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal. Primary daylight from wide patio doors on exterior wall; supplement with a floor lamp near the work corner and a warm pendant above the seating area for evening continuity. Expose for midtones and preserve crisp shadows from door light. Must include: standing_desk, bookshelf, low sofa, woven basket, rug with tatami edge. Must avoid: High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), floating or oversized plants, introduced windows or extra light sources, furniture blocking patio access, high-backed sofas, overhead fluorescent fixtures, multiple competing pendant lights, people, visible brand logos. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only through the open-plan dining area, the Dine is partially visible — it must show exactly: dining table, dining chairs, pendant light, round oak dining table, rattan pendant, linen-upholstered chairs. These must match the adjacent room clip precisely for cross-room consistency. through the open kitchen beyond the dining area, the Taste is partially visible — it must show exactly: kitchen cabinets, kitchen counter, matte ceramic accessories, warm under-cabinet light. These must match the adjacent room clip precisely for cross-room consistency. VISUAL CONSISTENCY REQUIREMENT (reference image provided): The Dine visible through the open-plan dining area must show exactly the same dining table, pendant light above the dining area, dining chairs, round oak dining table, rattan pendant, linen-upholstered chairs as in the reference image — do not invent different furniture. The Taste visible through the open kitchen beyond the dining area must show exactly the same kitchen cabinets, range hood, kitchen island or counter, matte ceramic accessories, warm under-cabinet light as in the reference image — do not invent different furniture. The sofa, coffee table, area rug, standing_desk, bookshelf, low sofa, woven basket, rug with tatami edge in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces.",
+          "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, oversaturated colors, floating objects",
+          "preserve_layout": true,
+          "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55",
+          "fast_mode": true,
+          "params": {
+            "image_urls": [
+              "https://v3b.fal.media/files/b/0a999a7b/3ry09kruIw8jUtgwIBgWR_GrjsSXBk.png",
+              "https://v3b.fal.media/files/b/0a999a7b/RzP0pI-ZsBtesnvRNDM3P_SEV11O6H.png",
+              "https://v3b.fal.media/files/b/0a999a7b/xpLpEVbA8mOryiTI2pSBu_VskrOBk5.png"
+            ],
+            "prompt": "Photorealistic interior photograph of a 11.916666666666666 by 11.666666666666666 ft Nest, opens to Relax via large glass door; additional exterior windows along living area windows, Primary daylight from wide patio doors on exterior wall; supplement with a floor lamp near the work corner and a warm pendant above the seating area for evening continuity. Expose for midtones and preserve crisp shadows from door light., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal., Wide living shot preserving existing open-plan geometry and patio door position. Low oak sofa oriented toward patio opening, low coffee table, tatami-edged rug layered under seating. Compact standing desk tucked against side wall next to a slim bookshelf; keep desk minimal: wood top, small lamp. Visible practical floor lamp by reading zone. Materials: light oak, linen upholstery, woven rattan pendant hung off-center toward dining. Camera framing: 24–28mm equivalent for wide view, eye-level ~48–52 inches. Maintain believable scale: sofa seat height low (~14–16 inches), standing desk height (~40 inches). Light must come from patio glazing and practicals only; preserve hard shadow direction from the door., must include standing_desk, bookshelf, low sofa, woven basket, rug with tatami edge, must avoid High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), floating or oversized plants, introduced windows or extra light sources, furniture blocking patio access, high-backed sofas, overhead fluorescent fixtures, multiple competing pendant lights, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing Create one photorealistic staged Nest still for a premium real-estate listing. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest. Use japandi styling, warm_neutral palette, soft_ambient lighting, and balanced furnishing density. A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal. Primary daylight from wide patio doors on exterior wall; supplement with a floor lamp near the work corner and a warm pendant above the seating area for evening continuity. Expose for midtones and preserve crisp shadows from door light. Must include: standing_desk, bookshelf, low sofa, woven basket, rug with tatami edge. Must avoid: High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), floating or oversized plants, introduced windows or extra light sources, furniture blocking patio access, high-backed sofas, overhead fluorescent fixtures, multiple competing pendant lights, people, visible brand logos. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only through the open-plan dining area, the Dine is partially visible — it must show exactly: dining table, dining chairs, pendant light, round oak dining table, rattan pendant, linen-upholstered chairs. These must match the adjacent room clip precisely for cross-room consistency. through the open kitchen beyond the dining area, the Taste is partially visible — it must show exactly: kitchen cabinets, kitchen counter, matte ceramic accessories, warm under-cabinet light. These must match the adjacent room clip precisely for cross-room consistency. VISUAL CONSISTENCY REQUIREMENT (reference image provided): The Dine visible through the open-plan dining area must show exactly the same dining table, pendant light above the dining area, dining chairs, round oak dining table, rattan pendant, linen-upholstered chairs as in the reference image — do not invent different furniture. The Taste visible through the open kitchen beyond the dining area must show exactly the same kitchen cabinets, range hood, kitchen island or counter, matte ceramic accessories, warm under-cabinet light as in the reference image — do not invent different furniture. The sofa, coffee table, area rug, standing_desk, bookshelf, low sofa, woven basket, rug with tatami edge in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces.",
+            "resolution": "2K",
+            "aspect_ratio": "16:9",
+            "output_format": "png",
+            "num_images": 1
+          }
+        },
+        "image_edit_plan": null,
+        "video_plan": null
+      },
+      "evals": [
+        {
+          "kind": "still",
+          "decision": "pass",
+          "scores": {
+            "style_match": 10,
+            "room_correctness": 10,
+            "architecture_stability": 9,
+            "lighting_realism": 10,
+            "object_completeness": 9,
+            "motion_quality": 10,
+            "overall": 9
+          },
+          "overall": 9,
+          "failure_classes": [],
+          "message": "The generated image captures the required elements and aesthetic effectively, maintaining the Japandi style while adhering to the staging guidelines. Minor adjustments could enhance the visual stability."
+        }
+      ],
+      "review": {
+        "still_approved": false,
+        "still_note": null,
+        "reference_pin_ids": [],
+        "video_approved": false,
+        "video_note": null
+      }
+    },
+    {
+      "room_id": "dream_bedroom",
+      "room_name": "Dream",
+      "room_type": "bedroom",
+      "sequence_index": 1,
+      "state": "STILL_REVIEW_READY",
+      "still_attempt_count": 1,
+      "video_attempt_count": 0,
+      "max_still_attempts": 2,
+      "max_video_attempts": 3,
+      "current_motion_mode": "static_zoom",
+      "scores": {
+        "style_match": 9,
+        "room_correctness": 10,
+        "architecture_stability": 9,
+        "lighting_realism": 8,
+        "object_completeness": 10,
+        "motion_quality": 10,
+        "overall": 9
+      },
+      "artifacts": {
+        "source_image_path": null,
+        "styled_image_path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/0fc6b7c57bda20eea98204249e324e40edf48fff5a99c752292c6c5f225de011/still-0.png",
+        "styled_image_url": "https://v3b.fal.media/files/b/0a999a7d/vg8yeNOoMTD7PBqIX26-6_JnqTwKbG.png",
+        "video_clip_path": null,
+        "video_url": null
+      },
+      "plans": {
+        "still_plan": {
+          "kind": "still_plan",
+          "strategy": "generate_staged_still",
+          "provider": "fal",
+          "model": "fal-ai/nano-banana-2",
+          "prompt": "Photorealistic interior photograph of a 12.5 by 11.583333333333334 ft Dream, single exterior window on upper wall windows, Window on upper wall provides soft morning light; use a warm wall sconce near reading corner for fill. Expose to protect highlights from the window while keeping interior shadows sculpted., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal., Low-profile bed and a single crib placed on the wall opposite the window. Soft neutral linens and a small textured rug near crib edge. Slim armchair or small floating shelf desk in a corner with a warm wall sconce above. Materials: muted linen, oak bedside bench, matte ceramic lamp. Camera framing: 35–50mm for a cozy bedroom feel, slightly elevated eye-line ~42–48 inches to show crib and bed relation. Preserve room width (12.5' x 11.58') — ensure circulation path between door and closet remains visible., must include crib, low-profile bed, soft reading lamp, standing desk, must avoid High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), bright nursery colors, large overhead fixtures, bright nursery prints, bulky dressers near the crib, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing Create one photorealistic staged Dream still for a premium real-estate listing. Maintain believable residential scale for a 12.5 by 11.583333333333334 ft Dream. Use japandi styling, warm_neutral palette, soft_ambient lighting, and balanced furnishing density. A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal. Window on upper wall provides soft morning light; use a warm wall sconce near reading corner for fill. Expose to protect highlights from the window while keeping interior shadows sculpted. Must include: crib, low-profile bed, soft reading lamp, standing desk. Must avoid: High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), bright nursery colors, large overhead fixtures, bright nursery prints, bulky dressers near the crib, people, visible brand logos. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only",
+          "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, oversaturated colors, floating objects",
+          "preserve_layout": true,
+          "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55",
+          "fast_mode": true,
+          "params": {
+            "prompt": "Photorealistic interior photograph of a 12.5 by 11.583333333333334 ft Dream, single exterior window on upper wall windows, Window on upper wall provides soft morning light; use a warm wall sconce near reading corner for fill. Expose to protect highlights from the window while keeping interior shadows sculpted., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal., Low-profile bed and a single crib placed on the wall opposite the window. Soft neutral linens and a small textured rug near crib edge. Slim armchair or small floating shelf desk in a corner with a warm wall sconce above. Materials: muted linen, oak bedside bench, matte ceramic lamp. Camera framing: 35–50mm for a cozy bedroom feel, slightly elevated eye-line ~42–48 inches to show crib and bed relation. Preserve room width (12.5' x 11.58') — ensure circulation path between door and closet remains visible., must include crib, low-profile bed, soft reading lamp, standing desk, must avoid High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), bright nursery colors, large overhead fixtures, bright nursery prints, bulky dressers near the crib, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing Create one photorealistic staged Dream still for a premium real-estate listing. Maintain believable residential scale for a 12.5 by 11.583333333333334 ft Dream. Use japandi styling, warm_neutral palette, soft_ambient lighting, and balanced furnishing density. A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal. Window on upper wall provides soft morning light; use a warm wall sconce near reading corner for fill. Expose to protect highlights from the window while keeping interior shadows sculpted. Must include: crib, low-profile bed, soft reading lamp, standing desk. Must avoid: High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), bright nursery colors, large overhead fixtures, bright nursery prints, bulky dressers near the crib, people, visible brand logos. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only",
+            "aspect_ratio": "16:9",
+            "resolution": "2K",
+            "num_images": 1,
+            "output_format": "png"
+          }
+        },
+        "image_edit_plan": null,
+        "video_plan": null
+      },
+      "evals": [
+        {
+          "kind": "still",
+          "decision": "pass",
+          "scores": {
+            "style_match": 9,
+            "room_correctness": 10,
+            "architecture_stability": 9,
+            "lighting_realism": 8,
+            "object_completeness": 10,
+            "motion_quality": 10,
+            "overall": 9
+          },
+          "overall": 9,
+          "failure_classes": [],
+          "message": "The still image successfully meets the criteria for the Dream bedroom prompt. The design aesthetics, object inclusion, and overall composition align with the requirements laid out in the staging guideline."
+        }
+      ],
+      "review": {
+        "still_approved": true,
+        "still_note": null,
+        "reference_pin_ids": [],
+        "video_approved": false,
+        "video_note": null
+      }
+    },
+    {
+      "room_id": "taste_kitchen",
+      "room_name": "Taste",
+      "room_type": "kitchen",
+      "sequence_index": 2,
+      "state": "STILL_REVIEW_READY",
+      "still_attempt_count": 2,
+      "video_attempt_count": 0,
+      "max_still_attempts": 2,
+      "max_video_attempts": 3,
+      "current_motion_mode": "slow_dolly",
+      "scores": {
+        "style_match": 9,
+        "room_correctness": 10,
+        "architecture_stability": 9,
+        "lighting_realism": 8,
+        "object_completeness": 7,
+        "motion_quality": 10,
+        "overall": 9
+      },
+      "artifacts": {
+        "source_image_path": null,
+        "styled_image_path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/5e4d581cf3e8293e6cd4cccbe50451a974763cb796a410cff684a43176f893ee/still-0.png",
+        "styled_image_url": "https://v3b.fal.media/files/b/0a999a85/8nADPu5K0mekBidiELmrN_OVregUXm.png",
+        "video_clip_path": null,
+        "video_url": null
+      },
+      "plans": {
+        "still_plan": {
+          "kind": "still_plan",
+          "strategy": "refine_existing_still",
+          "provider": "fal",
+          "model": "fal-ai/gemini-3.1-flash-image-preview/edit",
+          "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for Taste at roughly small. Indirect light from dining bay; use warm under-cabinet practicals near counters and a small pendant over any prep nook. Keep exposure steady and avoid bright specular highlights on cabinetry. A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The Dine visible through the open pass-through or doorway must show exactly the same dining table, pendant light above the dining area, dining chairs, round oak dining table, rattan pendant, linen-upholstered chairs as in the reference image — do not invent different furniture. The kitchen cabinets, range hood, kitchen island or counter, matte ceramic accessories, warm under-cabinet light in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. Previous failure modes to correct: wrong_room_type, object_missing, lighting_unrealistic. The image partially matches the specified kitchen style and layout, but there are issues with missing required objects such as matte ceramic accessories and warm under-cabinet lighting. The lighting also appears too bright overall, which detracts from realism.",
+          "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, oversaturated colors, floating objects",
+          "preserve_layout": true,
+          "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55",
+          "fast_mode": true,
+          "params": {
+            "image_urls": [
+              "https://v3b.fal.media/files/b/0a999a7d/3taDpJFoydob_K9t11ya1_8uxR6DHU.png",
+              "https://v3b.fal.media/files/b/0a999a7b/3ry09kruIw8jUtgwIBgWR_GrjsSXBk.png",
+              "https://v3b.fal.media/files/b/0a999a7b/RzP0pI-ZsBtesnvRNDM3P_SEV11O6H.png"
+            ],
+            "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for Taste at roughly small. Indirect light from dining bay; use warm under-cabinet practicals near counters and a small pendant over any prep nook. Keep exposure steady and avoid bright specular highlights on cabinetry. A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The Dine visible through the open pass-through or doorway must show exactly the same dining table, pendant light above the dining area, dining chairs, round oak dining table, rattan pendant, linen-upholstered chairs as in the reference image — do not invent different furniture. The kitchen cabinets, range hood, kitchen island or counter, matte ceramic accessories, warm under-cabinet light in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. Previous failure modes to correct: wrong_room_type, object_missing, lighting_unrealistic. The image partially matches the specified kitchen style and layout, but there are issues with missing required objects such as matte ceramic accessories and warm under-cabinet lighting. The lighting also appears too bright overall, which detracts from realism.",
+            "resolution": "2K",
+            "aspect_ratio": "16:9",
+            "output_format": "png",
+            "num_images": 1
+          }
+        },
+        "image_edit_plan": null,
+        "video_plan": null
+      },
+      "evals": [
+        {
+          "kind": "still",
+          "decision": "retry_still",
+          "scores": {
+            "style_match": 7,
+            "room_correctness": 6,
+            "architecture_stability": 8,
+            "lighting_realism": 7,
+            "object_completeness": 5,
+            "motion_quality": 10,
+            "overall": 6
+          },
+          "overall": 6,
+          "failure_classes": [
+            "wrong_room_type",
+            "object_missing",
+            "lighting_unrealistic"
+          ],
+          "message": "The image partially matches the specified kitchen style and layout, but there are issues with missing required objects such as matte ceramic accessories and warm under-cabinet lighting. The lighting also appears too bright overall, which detracts from realism."
+        },
+        {
+          "kind": "still",
+          "decision": "pass",
+          "scores": {
+            "style_match": 9,
+            "room_correctness": 10,
+            "architecture_stability": 9,
+            "lighting_realism": 8,
+            "object_completeness": 7,
+            "motion_quality": 10,
+            "overall": 9
+          },
+          "overall": 9,
+          "failure_classes": [],
+          "message": "The still image aligns well with the room specifications for a kitchen in a 'Taste' style. It features appropriate materials, a warm color palette, and the required lighting arrangements. Minor adjustments may enhance object completeness."
+        }
+      ],
+      "review": {
+        "still_approved": false,
+        "still_note": null,
+        "reference_pin_ids": [],
+        "video_approved": false,
+        "video_note": null
+      }
+    },
+    {
+      "room_id": "dine_dining",
+      "room_name": "Dine",
+      "room_type": "dining_room",
+      "sequence_index": 3,
+      "state": "STILL_REVIEW_READY",
+      "still_attempt_count": 1,
+      "video_attempt_count": 0,
+      "max_still_attempts": 2,
+      "max_video_attempts": 3,
+      "current_motion_mode": "orbital_pan",
+      "scores": {
+        "style_match": 9,
+        "room_correctness": 10,
+        "architecture_stability": 10,
+        "lighting_realism": 8,
+        "object_completeness": 9,
+        "motion_quality": 10,
+        "overall": 9
+      },
+      "artifacts": {
+        "source_image_path": null,
+        "styled_image_path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/a82a6c5d4de316b4d212fb36ec13d91638e0947bc2d1ea497138de4b2edafcf8/still-0.png",
+        "styled_image_url": "https://v3b.fal.media/files/b/0a999a7d/phoIvfSOK5m3RoBdSuI4V_8z8cHFqy.png",
+        "video_clip_path": null,
+        "video_url": null
+      },
+      "plans": {
+        "still_plan": {
+          "kind": "still_plan",
+          "strategy": "anchor_referenced_still",
+          "provider": "fal",
+          "model": "fal-ai/gemini-3.1-flash-image-preview/edit",
+          "prompt": "Photorealistic interior photograph of a 7.833333333333333 by 8 ft Dine, bay/windowed dining nook with multiple panels on exterior wall windows, Bay/windowed dining nook is brightest source — position rattan pendant as a practical but avoid overpowering daylight; balance exposure so exterior view remains legible. Use warm pendant color temp for evening continuity., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal., Round oak dining table centered in the bay window area with 3–4 neutral linen-upholstered chairs. Single woven rattan pendant suspended 26–30 inches above table center. Minimal table styling: stoneware vase with a single branch or dried stem, linen runner. Camera framing: 28–35mm wide, low camera height (~36–40 inches) to emphasize low furniture and horizon lines. Preserve bay configuration and window pane divisions; keep reflections minimal and realistic., must include round oak dining table, rattan pendant, linen-upholstered chairs, must avoid High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), multiple table centerpieces, introduced direct light sources not visible in scene, heavy table centerpieces, too many place settings, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing Create one photorealistic staged Dine still for a premium real-estate listing. Maintain believable residential scale for a 7.833333333333333 by 8 ft Dine. Use japandi styling, warm_neutral palette, soft_ambient lighting, and balanced furnishing density. A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal. Bay/windowed dining nook is brightest source — position rattan pendant as a practical but avoid overpowering daylight; balance exposure so exterior view remains legible. Use warm pendant color temp for evening continuity. Must include: round oak dining table, rattan pendant, linen-upholstered chairs. Must avoid: High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), multiple table centerpieces, introduced direct light sources not visible in scene, heavy table centerpieces, too many place settings, people, visible brand logos. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only through the open kitchen, the Taste is partially visible — it must show exactly: kitchen cabinets, range hood, kitchen island or counter, matte ceramic accessories, warm under-cabinet light. These must match the adjacent room clip precisely for cross-room consistency. through the open-plan living area, the Nest is partially visible — it must show exactly: sofa, coffee table, area rug, standing_desk, bookshelf, low sofa, woven basket, rug with tatami edge. These must match the adjacent room clip precisely for cross-room consistency. VISUAL CONSISTENCY REQUIREMENT (reference image provided): The dining table, pendant light above the dining area, dining chairs, round oak dining table, rattan pendant, linen-upholstered chairs in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. The Taste visible through the open kitchen must show exactly the same kitchen cabinets, range hood, kitchen island or counter, matte ceramic accessories, warm under-cabinet light as in the reference image — do not invent different furniture. The Nest visible through the open-plan living area must show exactly the same sofa, coffee table, area rug, standing_desk, bookshelf, low sofa, woven basket, rug with tatami edge as in the reference image — do not invent different furniture.",
+          "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, oversaturated colors, floating objects",
+          "preserve_layout": true,
+          "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55",
+          "fast_mode": true,
+          "params": {
+            "image_urls": [
+              "https://v3b.fal.media/files/b/0a999a7b/3ry09kruIw8jUtgwIBgWR_GrjsSXBk.png",
+              "https://v3b.fal.media/files/b/0a999a7b/RzP0pI-ZsBtesnvRNDM3P_SEV11O6H.png",
+              "https://v3b.fal.media/files/b/0a999a7b/xpLpEVbA8mOryiTI2pSBu_VskrOBk5.png"
+            ],
+            "prompt": "Photorealistic interior photograph of a 7.833333333333333 by 8 ft Dine, bay/windowed dining nook with multiple panels on exterior wall windows, Bay/windowed dining nook is brightest source — position rattan pendant as a practical but avoid overpowering daylight; balance exposure so exterior view remains legible. Use warm pendant color temp for evening continuity., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal., Round oak dining table centered in the bay window area with 3–4 neutral linen-upholstered chairs. Single woven rattan pendant suspended 26–30 inches above table center. Minimal table styling: stoneware vase with a single branch or dried stem, linen runner. Camera framing: 28–35mm wide, low camera height (~36–40 inches) to emphasize low furniture and horizon lines. Preserve bay configuration and window pane divisions; keep reflections minimal and realistic., must include round oak dining table, rattan pendant, linen-upholstered chairs, must avoid High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), multiple table centerpieces, introduced direct light sources not visible in scene, heavy table centerpieces, too many place settings, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing Create one photorealistic staged Dine still for a premium real-estate listing. Maintain believable residential scale for a 7.833333333333333 by 8 ft Dine. Use japandi styling, warm_neutral palette, soft_ambient lighting, and balanced furnishing density. A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal. Bay/windowed dining nook is brightest source — position rattan pendant as a practical but avoid overpowering daylight; balance exposure so exterior view remains legible. Use warm pendant color temp for evening continuity. Must include: round oak dining table, rattan pendant, linen-upholstered chairs. Must avoid: High-gloss finishes, bright saturated colors, and heavy patterning, Overstuffed furniture or high-back sofas that break the low-line language, Artificial-looking greenery and oversized plants that scale incorrectly, Visible modern tech clutter (do not stage visible charging cables, multiple monitors), multiple table centerpieces, introduced direct light sources not visible in scene, heavy table centerpieces, too many place settings, people, visible brand logos. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only through the open kitchen, the Taste is partially visible — it must show exactly: kitchen cabinets, range hood, kitchen island or counter, matte ceramic accessories, warm under-cabinet light. These must match the adjacent room clip precisely for cross-room consistency. through the open-plan living area, the Nest is partially visible — it must show exactly: sofa, coffee table, area rug, standing_desk, bookshelf, low sofa, woven basket, rug with tatami edge. These must match the adjacent room clip precisely for cross-room consistency. VISUAL CONSISTENCY REQUIREMENT (reference image provided): The dining table, pendant light above the dining area, dining chairs, round oak dining table, rattan pendant, linen-upholstered chairs in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. The Taste visible through the open kitchen must show exactly the same kitchen cabinets, range hood, kitchen island or counter, matte ceramic accessories, warm under-cabinet light as in the reference image — do not invent different furniture. The Nest visible through the open-plan living area must show exactly the same sofa, coffee table, area rug, standing_desk, bookshelf, low sofa, woven basket, rug with tatami edge as in the reference image — do not invent different furniture.",
+            "resolution": "2K",
+            "aspect_ratio": "16:9",
+            "output_format": "png",
+            "num_images": 1
+          }
+        },
+        "image_edit_plan": null,
+        "video_plan": null
+      },
+      "evals": [
+        {
+          "kind": "still",
+          "decision": "pass",
+          "scores": {
+            "style_match": 9,
+            "room_correctness": 10,
+            "architecture_stability": 10,
+            "lighting_realism": 8,
+            "object_completeness": 9,
+            "motion_quality": 10,
+            "overall": 9
+          },
+          "overall": 9,
+          "failure_classes": [],
+          "message": "The image aligns well with the specified room type and style, maintaining the Japandi aesthetic with a warm, neutral color palette. The lighting is realistic and appropriate for the dining space, with the rattan pendant positioned correctly. All required elements are present, and there are no visible errors or distractions."
+        }
+      ],
+      "review": {
+        "still_approved": false,
+        "still_note": null,
+        "reference_pin_ids": [],
+        "video_approved": false,
+        "video_note": null
+      }
+    },
+    {
+      "room_id": "relax_patio",
+      "room_name": "Relax",
+      "room_type": "other",
+      "sequence_index": 4,
+      "state": "STILL_REVIEW_READY",
+      "still_attempt_count": 2,
+      "video_attempt_count": 0,
+      "max_still_attempts": 2,
+      "max_video_attempts": 3,
+      "current_motion_mode": "aerial_drift",
+      "scores": {
+        "style_match": 6,
+        "room_correctness": 5,
+        "architecture_stability": 7,
+        "lighting_realism": 8,
+        "object_completeness": 5,
+        "motion_quality": 0,
+        "overall": 6
+      },
+      "artifacts": {
+        "source_image_path": null,
+        "styled_image_path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/8eb00afd2771a9aedc754d9ddba697acd981e523cd352bfa1a7379d5152a9773/still-0.png",
+        "styled_image_url": "https://v3b.fal.media/files/b/0a999a81/Wz9YiKgJeZjsRKbBL7BhC_Du2Rp9yo.png",
+        "video_clip_path": null,
+        "video_url": null
+      },
+      "plans": {
+        "still_plan": {
+          "kind": "still_plan",
+          "strategy": "refine_existing_still",
+          "provider": "fal",
+          "model": "fal-ai/gemini-3.1-flash-image-preview/edit",
+          "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for Relax at roughly medium. Patio is outdoor/covered — use natural daylight as primary light; avoid adding interior-style lamps outdoors. Show soft directional daylight coming through patio openings into living/dining when applicable. A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only Previous failure modes to correct: object_missing, geometry_warp. The image has a strong aesthetic and lighting is generally good. However, it lacks critical objects like floor-level cushions and a low wooden bench, which are essential for this patio space. Additionally, the patio area needs better delineation to communicate its outdoor nature more effectively.",
+          "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, oversaturated colors, floating objects",
+          "preserve_layout": true,
+          "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55",
+          "fast_mode": true,
+          "params": {
+            "image_urls": [
+              "https://v3b.fal.media/files/b/0a999a7d/jmGTx4uSAxyoZBzmjtF5u_suGCM1zF.png"
+            ],
+            "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for Relax at roughly medium. Patio is outdoor/covered — use natural daylight as primary light; avoid adding interior-style lamps outdoors. Show soft directional daylight coming through patio openings into living/dining when applicable. A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only Previous failure modes to correct: object_missing, geometry_warp. The image has a strong aesthetic and lighting is generally good. However, it lacks critical objects like floor-level cushions and a low wooden bench, which are essential for this patio space. Additionally, the patio area needs better delineation to communicate its outdoor nature more effectively.",
+            "resolution": "2K",
+            "aspect_ratio": "16:9",
+            "output_format": "png",
+            "num_images": 1
+          }
+        },
+        "image_edit_plan": null,
+        "video_plan": null
+      },
+      "evals": [
+        {
+          "kind": "still",
+          "decision": "retry_still",
+          "scores": {
+            "style_match": 8,
+            "room_correctness": 7,
+            "architecture_stability": 9,
+            "lighting_realism": 8,
+            "object_completeness": 6,
+            "motion_quality": 10,
+            "overall": 7
+          },
+          "overall": 7,
+          "failure_classes": [
+            "object_missing",
+            "geometry_warp"
+          ],
+          "message": "The image has a strong aesthetic and lighting is generally good. However, it lacks critical objects like floor-level cushions and a low wooden bench, which are essential for this patio space. Additionally, the patio area needs better delineation to communicate its outdoor nature more effectively."
+        },
+        {
+          "kind": "still",
+          "decision": "retry_still",
+          "scores": {
+            "style_match": 6,
+            "room_correctness": 5,
+            "architecture_stability": 7,
+            "lighting_realism": 8,
+            "object_completeness": 5,
+            "motion_quality": 0,
+            "overall": 6
+          },
+          "overall": 6,
+          "failure_classes": [
+            "wrong_room_type",
+            "object_missing",
+            "major_style_mismatch"
+          ],
+          "message": "The image does not fully capture the specified room type and some required objects are missing. While the lighting is realistic and the architectural stability is acceptable, there are issues with style alignment and necessary elements."
+        }
+      ],
+      "review": {
+        "still_approved": false,
+        "still_note": null,
+        "reference_pin_ids": [],
+        "video_approved": false,
+        "video_note": null
+      }
+    }
+  ],
+  "artifacts": {
+    "approved_room_clips": [],
+    "final_video_path": null,
+    "outputs": [],
+    "anchors": [
+      {
+        "anchor_id": "anchor_dining_room",
+        "room_type": "dining_room",
+        "room_name": "Dine",
+        "visible_objects": [
+          "dining table",
+          "pendant light above the dining area",
+          "dining chairs",
+          "round oak dining table",
+          "rattan pendant",
+          "linen-upholstered chairs"
+        ],
+        "path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/56c75883967cf2cd95bf730a0c1a715f5eefbcfdd9204f9cdd823edf9f31342f/anchor_dining_room-0.png",
+        "url": "https://v3b.fal.media/files/b/0a999a7b/3ry09kruIw8jUtgwIBgWR_GrjsSXBk.png",
+        "cache_hit": false,
+        "appears_in": [
+          "nest_living",
+          "taste_kitchen",
+          "dine_dining"
+        ]
+      },
+      {
+        "anchor_id": "anchor_kitchen",
+        "room_type": "kitchen",
+        "room_name": "Taste",
+        "visible_objects": [
+          "kitchen cabinets",
+          "range hood",
+          "kitchen island or counter",
+          "matte ceramic accessories",
+          "warm under-cabinet light"
+        ],
+        "path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/fb205bf8a8fd0c1d0f43bd99211643f8d24255cddfdc89d72fa4c375c5c5ebe8/anchor_kitchen-0.png",
+        "url": "https://v3b.fal.media/files/b/0a999a7b/RzP0pI-ZsBtesnvRNDM3P_SEV11O6H.png",
+        "cache_hit": false,
+        "appears_in": [
+          "nest_living",
+          "taste_kitchen",
+          "dine_dining"
+        ]
+      },
+      {
+        "anchor_id": "anchor_living_room",
+        "room_type": "living_room",
+        "room_name": "Nest",
+        "visible_objects": [
+          "sofa",
+          "coffee table",
+          "area rug",
+          "standing_desk",
+          "bookshelf",
+          "low sofa",
+          "woven basket",
+          "rug with tatami edge"
+        ],
+        "path": "/Users/tarive/haus/haus/.haus-cache/agent/generations/e4ec7dd1beb6135fa6f9b2338c0a3b7f6d1fd6f0df6dee7f8f18985877eed0a0/anchor_living_room-0.png",
+        "url": "https://v3b.fal.media/files/b/0a999a7b/xpLpEVbA8mOryiTI2pSBu_VskrOBk5.png",
+        "cache_hit": false,
+        "appears_in": [
+          "nest_living",
+          "dine_dining"
+        ]
+      }
+    ]
+  },
+  "events": [
+    {
+      "event_id": "b905877b-39f4-4549-a963-d977850841ac",
+      "at": "2026-05-10T04:25:24.052Z",
+      "room_id": null,
+      "type": "job.created",
+      "state": "CREATED",
+      "message": "Job created."
+    },
+    {
+      "event_id": "a31f8296-8361-4577-a2b4-66f658f0c04d",
+      "at": "2026-05-10T04:25:24.054Z",
+      "room_id": null,
+      "type": "layers.started",
+      "state": "LAYERS_1_3_RUNNING",
+      "message": "Running Layers 1-3."
+    },
+    {
+      "event_id": "7fea1828-6cf3-474c-a26a-e594dd9720a7",
+      "at": "2026-05-10T04:25:52.786Z",
+      "room_id": null,
+      "type": "layer3.ready",
+      "state": "LAYER3_READY",
+      "message": "Layer 3 handoff is ready."
+    },
+    {
+      "event_id": "ce8b5ac5-0f16-4144-8243-5887e7addd13",
+      "at": "2026-05-10T04:25:52.788Z",
+      "room_id": null,
+      "type": "job.anchors.generating",
+      "state": "LAYER3_READY",
+      "message": "Generating 3 consistency anchor images for shared objects."
+    },
+    {
+      "event_id": "2671370f-2116-425d-b3ea-72e12fc65e9c",
+      "at": "2026-05-10T04:26:11.419Z",
+      "room_id": null,
+      "type": "job.anchors.ready",
+      "state": "LAYER3_READY",
+      "message": "3 anchor images ready (0 cached). Starting room stills."
+    },
+    {
+      "event_id": "59f480a1-1dac-4496-939d-64ee3d29895e",
+      "at": "2026-05-10T04:26:11.435Z",
+      "room_id": "nest_living",
+      "type": "room.still.planning",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Planning room still."
+    },
+    {
+      "event_id": "4971843a-eef2-47de-b8e4-d2306ef6f1be",
+      "at": "2026-05-10T04:26:11.435Z",
+      "room_id": "dream_bedroom",
+      "type": "room.still.planning",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Planning room still."
+    },
+    {
+      "event_id": "b79e598d-886f-4eac-8249-09deee4f4ca9",
+      "at": "2026-05-10T04:26:11.435Z",
+      "room_id": "relax_patio",
+      "type": "room.still.planning",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Planning room still."
+    },
+    {
+      "event_id": "f8454cd3-ef11-4295-a9db-ba20d4556572",
+      "at": "2026-05-10T04:26:11.435Z",
+      "room_id": "taste_kitchen",
+      "type": "room.still.planning",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Planning room still."
+    },
+    {
+      "event_id": "15c0648a-e788-4112-a7fb-60603d393eb6",
+      "at": "2026-05-10T04:26:11.438Z",
+      "room_id": "dine_dining",
+      "type": "room.still.planning",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Planning room still."
+    },
+    {
+      "event_id": "d53dda1a-4ea0-4287-9c2e-bdf64dd0df54",
+      "at": "2026-05-10T04:26:11.446Z",
+      "room_id": "nest_living",
+      "type": "room.still.started",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Generating room still."
+    },
+    {
+      "event_id": "7a2aed76-8f68-44bb-a9a1-2b5df4c72492",
+      "at": "2026-05-10T04:26:11.447Z",
+      "room_id": "dream_bedroom",
+      "type": "room.still.started",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Generating room still."
+    },
+    {
+      "event_id": "3241f112-9657-4d4c-9d0e-f0157dd34042",
+      "at": "2026-05-10T04:26:11.447Z",
+      "room_id": "relax_patio",
+      "type": "room.still.started",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Generating room still."
+    },
+    {
+      "event_id": "e79e5d32-4845-4228-924e-637cd2be0f88",
+      "at": "2026-05-10T04:26:11.451Z",
+      "room_id": "taste_kitchen",
+      "type": "room.still.started",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Generating room still."
+    },
+    {
+      "event_id": "5a31ff90-282b-4f96-adae-e17283ec10ed",
+      "at": "2026-05-10T04:26:11.457Z",
+      "room_id": "dine_dining",
+      "type": "room.still.started",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Generating room still."
+    },
+    {
+      "event_id": "27defe35-36d0-4523-9464-23de39fef7a0",
+      "at": "2026-05-10T04:26:11.853Z",
+      "room_id": "relax_patio",
+      "type": "room.still.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Relax still in queue."
+    },
+    {
+      "event_id": "e0e42fd5-b4bb-4e38-98a0-fd5fe7a4028c",
+      "at": "2026-05-10T04:26:11.861Z",
+      "room_id": "dine_dining",
+      "type": "room.still.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Dine still in queue."
+    },
+    {
+      "event_id": "a798588a-21cf-448d-889d-11ceed7662cf",
+      "at": "2026-05-10T04:26:11.863Z",
+      "room_id": "nest_living",
+      "type": "room.still.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Nest still in queue."
+    },
+    {
+      "event_id": "713b73c1-d311-4234-beb6-0c0a25880cb0",
+      "at": "2026-05-10T04:26:57.382Z",
+      "room_id": "relax_patio",
+      "type": "room.still.retrying",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "The image has a strong aesthetic and lighting is generally good. However, it lacks critical objects like floor-level cushions and a low wooden bench, which are essential for this patio space. Additionally, the patio area needs better delineation to communicate its outdoor nature more effectively."
+    },
+    {
+      "event_id": "e37e5811-a6f2-4441-8e62-a2a399eb590f",
+      "at": "2026-05-10T04:26:57.397Z",
+      "room_id": "relax_patio",
+      "type": "room.still.planning",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Planning room still."
+    },
+    {
+      "event_id": "90be48c8-da3a-4b3a-8fa8-ecd7a9beb9aa",
+      "at": "2026-05-10T04:26:57.400Z",
+      "room_id": "relax_patio",
+      "type": "room.still.started",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Generating room still."
+    },
+    {
+      "event_id": "41f737eb-311a-4d05-843e-4eef24d7650d",
+      "at": "2026-05-10T04:27:16.798Z",
+      "room_id": "dream_bedroom",
+      "type": "room.still.review_ready",
+      "state": "WAITING_FOR_HUMAN_REVIEW",
+      "message": "Still ready for human review."
+    },
+    {
+      "event_id": "e3a06d5f-31a2-4f5a-aaaa-17018f028205",
+      "at": "2026-05-10T04:27:23.077Z",
+      "room_id": "dream_bedroom",
+      "type": "room.still.approved",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Still approved."
+    },
+    {
+      "event_id": "902342eb-d260-4300-94f4-9698df9a65fa",
+      "at": "2026-05-10T04:27:33.514Z",
+      "room_id": "taste_kitchen",
+      "type": "room.still.retrying",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "The image partially matches the specified kitchen style and layout, but there are issues with missing required objects such as matte ceramic accessories and warm under-cabinet lighting. The lighting also appears too bright overall, which detracts from realism."
+    },
+    {
+      "event_id": "a1ed6be6-1630-4053-9d24-d21b9a9896ca",
+      "at": "2026-05-10T04:27:33.526Z",
+      "room_id": "taste_kitchen",
+      "type": "room.still.planning",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Planning room still."
+    },
+    {
+      "event_id": "0ccd172c-8bd5-48d8-8b7d-56ba98a5249b",
+      "at": "2026-05-10T04:27:33.531Z",
+      "room_id": "taste_kitchen",
+      "type": "room.still.started",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Generating room still."
+    },
+    {
+      "event_id": "15ed34e0-8826-4fe3-8448-6b6a4b00d2d3",
+      "at": "2026-05-10T04:27:33.693Z",
+      "room_id": "taste_kitchen",
+      "type": "room.still.queued",
+      "state": "ROOM_QUEUE_RUNNING",
+      "message": "Taste still in queue."
+    },
+    {
+      "event_id": "9d3f3264-36a0-40df-8d42-602c91653025",
+      "at": "2026-05-10T04:27:37.746Z",
+      "room_id": "dine_dining",
+      "type": "room.still.review_ready",
+      "state": "WAITING_FOR_HUMAN_REVIEW",
+      "message": "Still ready for human review."
+    },
+    {
+      "event_id": "0bf63e11-0a0d-4995-95b1-9d637ff0a2c3",
+      "at": "2026-05-10T04:27:42.965Z",
+      "room_id": "nest_living",
+      "type": "room.still.review_ready",
+      "state": "WAITING_FOR_HUMAN_REVIEW",
+      "message": "Still ready for human review."
+    },
+    {
+      "event_id": "77857db7-ab09-41a1-997b-c3082beb559e",
+      "at": "2026-05-10T04:28:03.490Z",
+      "room_id": "relax_patio",
+      "type": "room.still.review_ready",
+      "state": "WAITING_FOR_HUMAN_REVIEW",
+      "message": "Still ready for human review."
+    },
+    {
+      "event_id": "305f7bea-ae36-4145-a635-043e804d7e31",
+      "at": "2026-05-10T04:28:23.670Z",
+      "room_id": "taste_kitchen",
+      "type": "room.still.review_ready",
+      "state": "WAITING_FOR_HUMAN_REVIEW",
+      "message": "Still ready for human review."
+    },
+    {
+      "event_id": "aecffc55-49f9-4b3e-a9e0-764ed465398d",
+      "at": "2026-05-10T04:28:23.677Z",
+      "room_id": null,
+      "type": "job.stills.review_ready",
+      "state": "WAITING_FOR_HUMAN_REVIEW",
+      "message": "All room stills are ready for review."
+    }
+  ],
+  "warnings": []
+}

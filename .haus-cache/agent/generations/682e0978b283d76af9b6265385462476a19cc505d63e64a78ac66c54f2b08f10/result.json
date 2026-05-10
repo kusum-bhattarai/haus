@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "endpoint_id": "fal-ai/nano-banana-2",
+  "request_id": "019e0f8e-ac88-7b01-8cdb-921ed534122d",
+  "result": {
+    "images": [
+      {
+        "url": "https://v3b.fal.media/files/b/0a9996b2/WeDkGt2sQrHYAC2E3R6V0_6eY9dhgR.png",
+        "content_type": "image/png",
+        "file_name": "WeDkGt2sQrHYAC2E3R6V0_6eY9dhgR.png",
+        "file_size": null,
+        "width": null,
+        "height": null
+      }
+    ],
+    "description": ""
+  }
+}

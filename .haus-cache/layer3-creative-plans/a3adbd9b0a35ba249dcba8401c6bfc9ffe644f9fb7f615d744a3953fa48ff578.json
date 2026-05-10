@@ -1,0 +1,238 @@
+{
+  "vibe_report": {
+    "aesthetic_name": "Warm Japandi Family Calm",
+    "summary": "A warm, restrained Japandi interior that balances Japanese minimalism with Scandinavian warmth — natural materials, low profiles, and layered soft neutrals. Rooms should feel airy and meditative but family-friendly: tactile rugs, rounded wooden forms, and purposeful storage. Introduce a compact work corner and a safe crib placement in the bedroom while preserving open sightlines to the patio and natural light.",
+    "palette_rationale": "Warm neutrals anchored by pale off-white and sandy beiges, layered with honey oak and muted mid-browns for wood grain emphasis. Deep charcoal used sparingly for contrast (legs, small fixtures). Greens from plants are accents only. This keeps scenes calm on camera while revealing texture and grain.",
+    "lighting_mood": "Soft, warm ambient light with diffused daylight from large living/dining openings. Accent with warm (2700–3000K) local fixtures: woven rattan pendant over the dining table, low floor/side lamps near seating and tea nook, and a dimmable desk lamp in the work corner. Avoid harsh overhead fluorescents; prefer directional warm spots for focal points.",
+    "materials": [
+      "warm oak (tables, low sofa bases, shelving)",
+      "woven rattan (pendant, baskets)",
+      "linen and light-wool textiles (cushions, curtains)",
+      "natural-fibre rugs (wool, jute, tatami edge)",
+      "matte ceramic (tableware, vases)",
+      "brushed brass/bronze in small accents (sconces, pulls)",
+      "stone concrete (small countertops/planters)"
+    ],
+    "textures": [
+      "tight oak grain",
+      "soft looped wool rug pile",
+      "raw linen weave",
+      "woven rattan/bamboo",
+      "matte unglazed ceramics",
+      "lightly brushed plaster walls"
+    ],
+    "furniture_language": [
+      "low-profile seating with exposed wooden bases",
+      "round dining table to soften corners",
+      "clean, minimal shelving with closed storage for toys",
+      "small, slim-profile standing desk — vertical grain wood or white matte top",
+      "compact crib with simple slatted form and rounded edges"
+    ],
+    "styling_rules": [
+      "Keep horizontal sightlines and negative space; avoid tall, visual cluttering pieces near main openings.",
+      "Use one focal texture per scene (e.g., rattan pendant in dining, tatami-edge rug in living).",
+      "Limit prints and art to 1–2 small, framed natural studies per room; prefer sculptural ceramics and plants as decor.",
+      "Scale furniture to measured room sizes — choose two-seat sofas/compact sectional for Nest (≈11.9' × 11.7').",
+      "Design a dedicated work corner under soft daylight with an unobtrusive standing desk and a task lamp; avoid isolating from family sightlines."
+    ],
+    "avoid": [
+      "bright saturated colors (reds, bright blues)",
+      "high-gloss metallic surfaces and chrome",
+      "overstuffed high-back furniture that blocks sightlines",
+      "excessive small decorative objects or busy patterns",
+      "open shelving overflowing with items — keep storage closed or minimal"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living",
+        "headline": "Low-profile family living with a compact work corner",
+        "guidance": "Place a low two-seater sofa (wood base) oriented toward the patio glazing to emphasize indoor-outdoor flow. Anchor with a low wooden coffee table and layered natural-fibre rug with subtle tatami edge detail. Locate a slim standing desk in the brighter corner by the patio/large glass door so the occupant faces the room. Include closed storage benches for toys along an adjacent wall.",
+        "must_include": [
+          "low two-seat sofa on wooden base (scale for 11.9' × 11.7')",
+          "low coffee table",
+          "layered neutral rug with tatami edge",
+          "slim standing_desk near patio glazing",
+          "one medium potted plant (e.g., ficus or large philodendron)"
+        ],
+        "must_avoid": [
+          "oversized sectional sofa",
+          "bright upholstery colors",
+          "open shelving cluttered with toys"
+        ]
+      },
+      {
+        "room_id": "dream_bedroom",
+        "headline": "Calm bedroom with safe crib and cozy adult zone",
+        "guidance": "Place a low-profile bed on the longest wall; keep headboard minimal and tactile. Position the crib (compact, slatted) on a short wall near the bedroom window but away from direct drafts and radiators; ensure flow to the closet. Add a small reading nook with a soft lounge chair or floor cushion and a slim bedside table. Use layered textiles and a small rug to ground the crib area.",
+        "must_include": [
+          "compact crib (slatted, rounded corners)",
+          "low bed with wooden base",
+          "small textured area rug by bed",
+          "soft wall-mounted reading lamp"
+        ],
+        "must_avoid": [
+          "crib directly under window or blocking closet door",
+          "tall bulky wardrobes that dominate the room"
+        ]
+      },
+      {
+        "room_id": "dine_dining",
+        "headline": "Intimate Japandi dining nook with rattan pendant",
+        "guidance": "Use a round oak table sized for the small bay (≈3.5'–4' diameter) with 3–4 light linen-upholstered chairs. Suspend a woven rattan pendant centered over the table at a warm glow. Keep table styling minimal: one textured stoneware vase and two neutral place settings. Maintain clear circulation to kitchen and patio.",
+        "must_include": [
+          "round oak dining table (fits 7.8' × 8')",
+          "woven rattan pendant",
+          "3–4 linen-upholstered chairs",
+          "stoneware vase centerpiece"
+        ],
+        "must_avoid": [
+          "long rectangular table",
+          "overly bright pendant or multiple competing fixtures"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Compact, muted kitchen — functional and minimal",
+        "guidance": "Keep cabinetry flat-fronted in a warm neutral with matte finish; use open counter space for a single ceramic bowl and a small potted herb. If visible, stage a single barstool at a peninsula. Lighting should be soft undercabinet and warm overhead; avoid heavy commercial appliances on surfaces.",
+        "must_include": [
+          "matte neutral cabinetry",
+          "one potted herb on counter",
+          "minimal appliances (hidden where possible)"
+        ],
+        "must_avoid": [
+          "busy countertop clutter",
+          "stainless-steel shine as dominant material"
+        ]
+      },
+      {
+        "room_id": "relax_patio",
+        "headline": "Covered outdoor extension for slow mornings",
+        "guidance": "Stage with low seating (bench or floor cushions), a small teak/wood side table, and a woven lantern. Keep planting simple (two large planters) and allow daylight to be prominent in the frame. Use the patio as a framed extension of the living/dining interiors.",
+        "must_include": [
+          "low bench or floor cushions",
+          "small wooden side table",
+          "two large planters"
+        ],
+        "must_avoid": [
+          "full outdoor dining set",
+          "bright plastic furniture"
+        ]
+      }
+    ],
+    "confidence": 0.87,
+    "warnings": [
+      "Many secondary rooms lack measured dimensions — verify furniture scale before final staging.",
+      "Crib placement must respect local safety codes and away from windows; this plan assumes safe clearance.",
+      "Standing desk shown near glazing assumes access to electrical outlet; confirm during set staging."
+    ]
+  },
+  "overall_mood": "Calm, warm minimalism — quietly textured and family-friendly.",
+  "global_style_notes": [
+    "Favor horizontal lines and low profiles to emphasize Japanese influence.",
+    "Layer three neutral textures per scene (wood + textile + ceramic) for camera depth.",
+    "Keep an uncluttered foreground; store family items in closed benches or low cabinets.",
+    "Use plants selectively as living accents — one medium plant per main space."
+  ],
+  "negative_prompt": "No bright saturated colors, no glossy chrome/reflective metallics, no heavy Victorian or ornate detailing, no cluttered open shelving, no high-back bulky seating, no childrens' bright toys left in frame.",
+  "room_plans": [
+    {
+      "room_id": "nest_living",
+      "lighting_instruction": "Diffused daytime from large glass door; soft warm ambient fill (2700–3000K). Add one floor lamp near seating and a warm task lamp at the standing desk. Keep contrast low to preserve texture.",
+      "dalle_scene_details": "11.9' × 11.7' living room oriented to a wide glass patio door. Low two-seat sofa with wooden base faces patio; low oak coffee table centered on a layered neutral rug with a subtle tatami edge. Slim standing_desk in the corner by the patio glazing (standing height, slim profile, wood grain top) with a small task lamp. Closed storage bench along one short wall for toys, one medium potted plant near the glass. Wall finishes: warm off-white plaster. Soft cushions in linen tones, a single sculptural ceramic on the coffee table.",
+      "video_prompt": "Begin with a slow orbital pan from patio door sweeping across sofa toward desk corner, pause on desk and tea-styled coffee table detail.",
+      "camera_motion": "orbital_pan",
+      "duration_seconds": 10,
+      "must_include": [
+        "low two-seat sofa",
+        "low coffee table",
+        "layered neutral rug",
+        "standing_desk",
+        "one medium potted plant",
+        "closed storage bench"
+      ],
+      "must_avoid": [
+        "oversized sectional",
+        "bright textiles",
+        "cluttered open shelves"
+      ]
+    },
+    {
+      "room_id": "dream_bedroom",
+      "lighting_instruction": "Medium natural light from single exterior window; bedside and reading lamp warm fill. Night-mode dimmable ambiance for cozy feel.",
+      "dalle_scene_details": "12.5' × 11.58' bedroom with low-profile bed on the long wall, minimal wooden headboard. Compact crib placed on a short wall adjacent to the window but not directly under it, oriented for easy visibility from bed. Small textured area rug by bed and under crib area. Slim dresser or inset closet left unobtrusive. Soft linen bedding, muted cushion colors, small bonsai or ceramic on bedside table.",
+      "video_prompt": "Slow dolly-in from doorway to bed, then pan to crib and reading nook; capture tactile textile details close-up.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 9,
+      "must_include": [
+        "compact crib",
+        "low bed with wooden base",
+        "textured area rug",
+        "soft wall-mounted reading lamp"
+      ],
+      "must_avoid": [
+        "crib under window",
+        "tall bulky furniture blocking circulation",
+        "bright child-themed graphics"
+      ]
+    },
+    {
+      "room_id": "taste_kitchen",
+      "lighting_instruction": "Even, warm undercabinet illumination and soft overhead ambient. Rely on indirect daylight from dining bay; keep reflections minimal.",
+      "dalle_scene_details": "Compact kitchen adjacent to dining. Flat-front matte neutral cabinetry, minimal visible appliances, clean counter with single ceramic bowl and small potted herb. If a peninsula exists, stage one slim barstool. Textures: stone countertop, warm oak shelving closed where possible.",
+      "video_prompt": "Static frame with a brief push to the counter vignette (herb and ceramic bowl), then a slow reveal toward the dining connection.",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 6,
+      "must_include": [
+        "matte neutral cabinetry",
+        "one potted herb",
+        "minimal countertop styling"
+      ],
+      "must_avoid": [
+        "busy counters",
+        "large metallic appliances on display"
+      ]
+    },
+    {
+      "room_id": "dine_dining",
+      "lighting_instruction": "Bright natural light in bay; warm rattan pendant directly above table dimmed to 2700K for intimate mood. Soft fill from adjacent living if needed.",
+      "dalle_scene_details": "Small bay dining nook (≈7.8' × 8') with a round oak table (3.5'–4' diameter) centered under a woven rattan pendant. Three to four light linen-upholstered chairs. Table staged minimally with a single stoneware vase and two neutral place settings. Floor: light timber; wall: warm off-white. Clear circulation to patio and kitchen.",
+      "video_prompt": "Slow overhead tilt from pendant down to table, then a lateral glide to show dining connection to patio.",
+      "camera_motion": "aerial_drift",
+      "duration_seconds": 7,
+      "must_include": [
+        "round oak dining table",
+        "woven rattan pendant",
+        "linen-upholstered chairs",
+        "stoneware vase centerpiece"
+      ],
+      "must_avoid": [
+        "rectangular table",
+        "multiple competing overhead fixtures",
+        "excessive table clutter"
+      ]
+    },
+    {
+      "room_id": "relax_patio",
+      "lighting_instruction": "Strong daylight with soft warm accent lanterns for evening shots; no harsh spotlights. Keep exposure balanced against interior.",
+      "dalle_scene_details": "Covered patio opening off living/dining with low wooden bench or floor cushions, small teak side table, two large planters framing the opening. Woven lantern and soft textiles (neutral cushions). Visual continuity with interior through similar wood tones and rugs.",
+      "video_prompt": "Begin with an exterior approach showing patio as an extension of living space, then slow drift inward to bench and planters.",
+      "camera_motion": "aerial_drift",
+      "duration_seconds": 6,
+      "must_include": [
+        "low bench or floor cushions",
+        "small wooden side table",
+        "two large planters",
+        "woven lantern"
+      ],
+      "must_avoid": [
+        "full outdoor dining set",
+        "bright plastic furniture"
+      ]
+    }
+  ],
+  "warnings": [
+    "Only three rooms have measured dimensions — verify scale for all furniture in unmeasured rooms before final staging.",
+    "Confirm electrical outlet locations for standing desk and lamps; staging assumes nearby power.",
+    "Crib safety: maintain required clearances from windows, cords, and heaters; this plan assumes compliant placement."
+  ]
+}

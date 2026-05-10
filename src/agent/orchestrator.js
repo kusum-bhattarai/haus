@@ -594,6 +594,17 @@ export async function createAgentRuntime(options = {}) {
       current.artifacts.outputs = current.artifacts.approved_room_clips;
       current.artifacts.final_video_path = layer5.final_video_path;
       current.artifacts.captions = layer5.captions;
+      current.artifacts.asset_bank = layer5.asset_bank ?? null;
+      current.artifacts.asset_bank_path = layer5.asset_bank_path ?? null;
+      current.artifacts.shot_manifest = layer5.shot_manifest ?? null;
+      current.artifacts.shot_manifest_path = layer5.shot_manifest_path ?? null;
+      current.artifacts.timeline = layer5.timeline ?? null;
+      current.artifacts.timeline_path = layer5.timeline_path ?? null;
+      current.artifacts.review_report = layer5.review_report ?? null;
+      current.artifacts.review_report_path = layer5.review_report_path ?? null;
+      current.artifacts.narration_script = layer5.narration_script ?? null;
+      current.artifacts.voiceover_path = layer5.voiceover_path ?? null;
+      current.artifacts.subtitles_path = layer5.subtitles_path ?? null;
     });
     await jobManager.emitEvent(jobId, {
       type: 'job.completed',

@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999b71/3vWe2Sa7gc8KtLcPvqEKR_5XQgJDiP.png",
+    "prompt": "Very slow truck right, time-lapse light progression, camera slides laterally while light shifts across the space, shadows gradually move and lengthen, parallax effect, consistent exposure, stable motion, cinematic, photorealistic Parallax orbit (gentle arc) around the low seating grouping, camera moves in a subtle arc to reveal interior connection and lanterns while daylight or warm lantern light shifts naturally, consistent exposure, cinematic, photorealistic Relax, Calm, meditative warmth — family-ready Japandi with breathable layouts and tactile materials. Maintain believable residential scale for Relax at roughly medium. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "710d4a085d1c78f431ad1c64a2ef3eafcd38225879faa40a5eda19c742a7b384"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

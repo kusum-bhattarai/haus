@@ -1,0 +1,18 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a999b7a/BAcsHzYSj3vPZ5dVeOWOI_pg2Cd3a8.png",
+      "https://v3b.fal.media/files/b/0a999b6f/TWkcR4ws_dvE1kJ0YFLEO_7C9FAP8H.png",
+      "https://v3b.fal.media/files/b/0a999b6f/s6eU4wMyaRaR06hGV2SYt_YXMO9oI5.png",
+      "https://v3b.fal.media/files/b/0a999b6f/fS1b4AU7YToWYpDWjFPPX_W9pwwUQt.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest. Use daylight pull from the large glass door opening to the patio as the primary directional source. Add a warm rattan pendant or floor lamp as a practical for fill and evening continuity. Keep midtones slightly raised to retain texture in wood and textiles while preserving sculpted shadows. A calm, warm Japandi palette that blends Japanese minimalism with Scandinavian warmth. Prioritize natural materials, low-profile furniture, layered textiles, and restrained accessories. Create a cozy family-friendly environment by integrating a crib in the bedroom and a compact standing desk in a quiet living corner. Keep compositions breathable with negative space and a limited, warm-neutral palette. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The Dine visible through the open-plan dining area must show exactly the same dining table, pendant light above the dining area, dining chairs, rattan pendant centered over table, stoneware vase centerpiece, bay/window panels visible, round oak dining table, rattan pendant centered above table, linen-upholstered chairs as in the reference image — do not invent different furniture. The Taste visible through the open kitchen beyond the dining area must show exactly the same kitchen cabinets, range hood, kitchen island or counter, clear counters with 1–2 ceramic accessories, visible connection to dining windows, matte hardware accents, soft natural task light from dining area as in the reference image — do not invent different furniture. The sofa, coffee table, area rug, standing_desk in corner, crib not present in this room (crib only in bedroom), visible patio through glass door, rattan pendant or warm floor lamp, low sofa on wooden base, low wooden coffee table, compact standing_desk in corner, one large potted plant in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. Add a tall whiteboard in the living room — at approximately 69% across and 67% down",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

@@ -1,0 +1,12 @@
+{
+  "endpoint_id": "fal-ai/nano-banana-2",
+  "params": {
+    "prompt": "Photorealistic editorial interior reference photograph of a Dine. Focus tightly on: dining table, pendant light above the dining area, dining chairs, round oak dining table (36-42\" recommended), rattan pendant, multi-panel bay window visible, stoneware vase centerpiece, round oak dining table (scale to 7.8 x 8 ft bay), rattan pendant over table, simple neutral chairs (2-4 visible), visible multi-panel window/bay. Styled in japandi aesthetic, warm_neutral palette, soft_ambient lighting. A calm, warm Japandi interior tuned for a young family: quiet minimalism balanced with earthy textures, natural wood tones, and selective layering. Prioritize horizontal lines, low-profile furniture, tactile materials (linen, wool, rattan), and visible daylight from large openings. Add a compact standing-desk work corner in the living area and a small crib in the bedroom without disrupting the serene composition. This image is a visual consistency reference — every detail of the featured furniture and fixtures must be clearly visible and precisely rendered. No people. No visible brand logos. Sharp architectural photography. Luxury real estate staging.",
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

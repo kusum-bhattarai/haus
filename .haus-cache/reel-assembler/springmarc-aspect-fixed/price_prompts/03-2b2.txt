@@ -1,0 +1,29 @@
+Create a 3:4 vertical Springmarc architectural price card using the uploaded floor plan image as the required base image.
+
+Community: Springmarc
+Plan: Unit B2
+Layout: 2 BED / 2 BATH
+Size: 988 SQ FT
+Price: STARTING AT $2,620
+Style: Japandi
+Uploaded base image: /Users/tarive/haus/haus/frontend/floor_plans/2b2.png
+
+Composition:
+- Exact 50/50 horizontal split.
+- Top half: convert the uploaded floor plan into a dark luxury blueprint on deep navy charcoal, thin glowing beige-gold technical lines, legible room labels, clean wall outlines, doors, windows, cabinetry, plumbing, and balcony/terrace markers.
+- Bottom half: create a photorealistic modern apartment preview in the selected Japandi style, open-roof/elevated view, matching the exact same footprint and room logic from the uploaded base floor plan.
+- Add a premium price badge that reads "STARTING AT $2,620" and a compact label "Unit B2 - 2 BED / 2 BATH - 988 SQ FT".
+
+Story objective:
+Show that a buyer can choose a Springmarc floor plan, paste any Pinterest style, and Haus will preview the future home before construction finishes.
+
+Visual mood:
+Premium real-estate launch creative, Japandi calm, warm wood, soft daylight, matte finishes, clean architectural visualization, editorial and expensive.
+
+Constraints:
+- Use the uploaded floor plan as image_0 and preserve its layout as the source of truth.
+- Keep the plan and rendered home aligned one-to-one.
+- Do not invent extra floors.
+- Do not change the room functions.
+- Text must be legible.
+- The bottom render should feel like a finished design preview, not a generic apartment render.

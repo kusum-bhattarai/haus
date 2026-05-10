@@ -8,7 +8,13 @@
     "test": "node --test",
     "layer1:create-payload": "node scripts/layer1-create-payload.js",
     "layer2:create-profile": "node scripts/layer2-create-profile.js",
-    "layer3:create-handoff": "node scripts/layer3-create-handoff.js"
+    "layer3:create-handoff": "node scripts/layer3-create-handoff.js",
+    "style-library": "node scripts/style-library.js",
+    "video:edit": "node scripts/video-edit-flow.js",
+    "video:cache-reel": "node scripts/cache-reel-assembler.js",
+    "video:cache-reel:vertical": "node scripts/cache-reel-assembler.js --reels",
+    "video:cache-reel:elevenlabs": "node scripts/cache-reel-assembler.js --require-elevenlabs",
+    "video:elevenlabs:check": "node scripts/cache-reel-assembler.js --check-elevenlabs"
   },
   "engines": {
     "node": ">=20"

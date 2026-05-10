@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a998e43/0O56HxKD28DU1ruDOAi49_DBVZMPse.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Soft, mixed daylight from the room's window balanced with bedside lanterns (warm 2700K). Scene should feel calm; avoid strong backlight through curtains. Use light diffusion through sheer curtains if window is strong. A warm, calm Japandi home tuned for a young family: pared-back Scandinavian lines meet Japanese restraint. Soft warm neutrals, layered natural textures (oak, linen, rattan, stone), and low-profile furniture create breathable rooms. Daylight is emphasized where available; artificial light is warm and dimmable to keep scenes cozy. Styling prioritizes safe, family-friendly staging — a small crib in the bedroom and a compact standing desk/work corner in the living area — while keeping surfaces decluttered and serene. Correct perspective distortion so verticals are vertical and horizontals are level. Derive lighting strictly from visible windows, doors, and practical fixtures. Keep highlights controlled, shadows sculpted, exposure balanced, and detail sharp. Previous failure modes to correct: layout_drift.",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

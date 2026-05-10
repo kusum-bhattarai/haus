@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a999a7d/jmGTx4uSAxyoZBzmjtF5u_suGCM1zF.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for Relax at roughly medium. Patio is outdoor/covered — use natural daylight as primary light; avoid adding interior-style lamps outdoors. Show soft directional daylight coming through patio openings into living/dining when applicable. A calm Japandi interior that balances Scandinavian minimalism and Japanese restraint with warm, earthy materials. Emphasis on low, horizontal furniture lines, layered natural textures (wood, linen, woven rattan), and a restrained palette of warm neutrals to create a cozy, meditative home for a young family. Integrate a small work corner in the living area and a crib in the bedroom while keeping clutter minimal. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only Previous failure modes to correct: object_missing, geometry_warp. The image has a strong aesthetic and lighting is generally good. However, it lacks critical objects like floor-level cushions and a low wooden bench, which are essential for this patio space. Additionally, the patio area needs better delineation to communicate its outdoor nature more effectively.",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

@@ -1,0 +1,13 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a998f66/OOYacbVOHCE8XY2_LTGag_bxVw54U8.png",
+    "prompt": "Super smooth camera travels in a slow arc around the main room feature, subject stays centered, parallax remains natural, consistent exposure, stable motion, cinematic, photorealistic. Slow orbital pan that opens on the patio doors, moves across the low sofa and coffee table, pauses on the standing-desk corner, then settles on a sculptural vase. Emphasize material textures and warm light. Nest, Calm, warm Japandi minimalism tailored for a young family — tactile, low, and uncluttered. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "12",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

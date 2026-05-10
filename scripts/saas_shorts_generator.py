@@ -20,7 +20,6 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Callable, Dict, List, Optional
 from urllib.parse import urljoin
-
 import httpx
 from openai import OpenAI
 
