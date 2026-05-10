@@ -10,6 +10,7 @@ import { deflateSync } from 'node:zlib';
 import { fal } from '@fal-ai/client';
 
 import { extractFirstMediaUrl } from '../src/agent/genmediaAdapter.js';
+import { buildCacheDictionary } from './cache-dictionary.js';
 
 const execFileAsync = promisify(execFile);
 const ROOT = process.cwd();
@@ -57,6 +58,7 @@ async function main() {
   }
   const job = await loadJob(args.jobId ?? DEFAULT_JOB_ID);
   const style = await loadStyleEntry(args);
+  await assertJobStyleMatchesCache(job, style);
   const edit = args.editJson ? JSON.parse(await readFile(path.resolve(args.editJson), 'utf8')) : null;
   const outputDir = path.resolve(args.outputDir ?? `.haus-cache/reel-assembler/springmarc-${timestamp()}`);
   await mkdir(outputDir, { recursive: true });
@@ -210,6 +212,74 @@ async function loadStyleEntry(args, options = {}) {
   if (staleBasenamePath && existsSyncLite(staleBasenamePath)) return JSON.parse(await readFile(staleBasenamePath, 'utf8'));
   if (match.path && existsSyncLite(match.path)) return JSON.parse(await readFile(match.path, 'utf8'));
   throw new Error(`Style index entry is stale and local file is missing: ${args.styleId}`);
+}
+
+async function assertJobStyleMatchesCache(job, style, options = {}) {
+  if (!style) return;
+  const rootDir = options.rootDir ?? ROOT;
+  const dictionary = options.dictionary ?? await buildCacheDictionary({ cacheRoot: path.join(rootDir, '.haus-cache') });
+  const identity = styleIdentity(style);
+  const hashes = generationHashesFromJob(job);
+  const owners = hashes.map((hash) => ({ hash, owner: dictionary.generation_to_style?.[hash] })).filter((item) => item.owner);
+  if (!owners.length) return assertJobMetadataMatchesStyle(job, identity);
+
+  const mismatches = owners.filter(({ owner }) => !ownerMatchesStyle(owner, identity));
+  if (!mismatches.length) return;
+
+  const owner = mismatches[0].owner;
+  const sample = mismatches.slice(0, 5).map(({ hash }) => hash.slice(0, 10)).join(', ');
+  throw new Error([
+    `Style/job mismatch for job ${job.job_id}.`,
+    `Cache hashes belong to "${owner.style_name ?? 'unknown style'}"` +
+      `${owner.pinterest_board_url ? ` (${owner.pinterest_board_url})` : ''}.`,
+    `Requested style is "${identity.name ?? identity.id ?? 'unknown style'}"` +
+      `${identity.boardUrl ? ` (${identity.boardUrl})` : ''}.`,
+    `Matching cache hashes are required; sample hashes: ${sample}.`
+  ].join(' '));
+}
+
+function assertJobMetadataMatchesStyle(job, identity) {
+  const jobName = job.handoff?.vibe_report?.aesthetic_name ?? null;
+  const jobBoard = job.input?.pinterest_board_url ?? job.payload?.pinterest_board_url ?? job.handoff?.source_input?.pinterest_board_url ?? null;
+  const nameMismatch = jobName && identity.name && normalizeIdentity(jobName) !== normalizeIdentity(identity.name);
+  const boardMismatch = jobBoard && identity.boardUrl && jobBoard !== identity.boardUrl;
+  if (!nameMismatch && !boardMismatch) return;
+  throw new Error(
+    `Style/job mismatch for job ${job.job_id}. Job metadata is "${jobName ?? 'unknown style'}"` +
+    `${jobBoard ? ` (${jobBoard})` : ''}, but requested style is "${identity.name ?? identity.id ?? 'unknown style'}"` +
+    `${identity.boardUrl ? ` (${identity.boardUrl})` : ''}.`
+  );
+}
+
+function generationHashesFromJob(job) {
+  const paths = [
+    ...(job.artifacts?.approved_room_clips ?? []).map((clip) => clip.path),
+    ...(job.rooms ?? []).flatMap((room) => Object.values(room.artifacts ?? {}))
+  ];
+  return unique(paths.map(generationHashFromPath).filter(Boolean));
+}
+
+function styleIdentity(style) {
+  return {
+    id: style.style_id ?? null,
+    name: style.vibe_report?.aesthetic_name ?? style.aesthetic_profile?.style_name ?? null,
+    boardUrl: style.source?.pinterest_board_url ?? style.source_input?.pinterest_board_url ?? null
+  };
+}
+
+function ownerMatchesStyle(owner, identity) {
+  if (owner.pinterest_board_url && identity.boardUrl && owner.pinterest_board_url === identity.boardUrl) return true;
+  if (owner.style_name && identity.name && normalizeIdentity(owner.style_name) === normalizeIdentity(identity.name)) return true;
+  return false;
+}
+
+function normalizeIdentity(value) {
+  return String(value ?? '')
+    .normalize('NFKD')
+    .toLowerCase()
+    .replace(/[\u2010-\u2015]/g, '-')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 async function resolveRoomAssets(job, outputDir, options = {}) {
@@ -1100,6 +1170,7 @@ const FONT = {
 };
 
 export {
+  assertJobStyleMatchesCache,
   buildScenePlan,
   fitNarrationToBudget,
   generationHashFromPath,

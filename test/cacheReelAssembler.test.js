@@ -5,6 +5,7 @@ import path from 'node:path';
 import test from 'node:test';
 
 import {
+  assertJobStyleMatchesCache,
   buildScenePlan,
   fitNarrationToBudget,
   generationHashFromPath,
@@ -65,6 +66,66 @@ test('loads style id from local file before stale index path', async () => {
 
   const style = await loadStyleEntry({ styleId: 'style-a' }, { rootDir });
   assert.equal(style.vibe_report.aesthetic_name, 'Local Style');
+});
+
+test('rejects style id when cache hashes belong to another style', async () => {
+  const job = jobWithRooms(['bedroom_1'], {
+    approved_room_clips: [{ room_id: 'bedroom_1', path: '/old/.haus-cache/agent/generations/hash-earth/video-0.mp4' }]
+  });
+  const style = styleEntry('Warm Japandi Family Calm', 'https://example.com/japandi');
+  const dictionary = {
+    generation_to_style: {
+      'hash-earth': {
+        style_name: 'Earthy Mid-Century Botanical',
+        pinterest_board_url: 'https://example.com/earthy',
+        job_id: 'job-1'
+      }
+    }
+  };
+
+  await assert.rejects(
+    () => assertJobStyleMatchesCache(job, style, { dictionary }),
+    /Style\/job mismatch/
+  );
+});
+
+test('accepts style id when cache hash owner matches board URL', async () => {
+  const job = jobWithRooms(['bedroom_1'], {
+    approved_room_clips: [{ room_id: 'bedroom_1', path: '/old/.haus-cache/agent/generations/hash-earth/video-0.mp4' }]
+  });
+  const style = styleEntry('Renamed Style', 'https://example.com/earthy');
+  const dictionary = {
+    generation_to_style: {
+      'hash-earth': {
+        style_name: 'Earthy Mid-Century Botanical',
+        pinterest_board_url: 'https://example.com/earthy',
+        job_id: 'job-1'
+      }
+    }
+  };
+
+  await assert.doesNotReject(() => assertJobStyleMatchesCache(job, style, { dictionary }));
+});
+
+test('rejects mixed cache hashes even when one hash matches style', async () => {
+  const job = jobWithRooms(['bedroom_1'], {
+    approved_room_clips: [
+      { room_id: 'bedroom_1', path: '/old/.haus-cache/agent/generations/hash-earth/video-0.mp4' },
+      { room_id: 'living_room_nest', path: '/old/.haus-cache/agent/generations/hash-japandi/video-0.mp4' }
+    ]
+  });
+  const style = styleEntry('Warm Japandi Family Calm', 'https://example.com/japandi');
+  const dictionary = {
+    generation_to_style: {
+      'hash-earth': { style_name: 'Earthy Mid-Century Botanical', pinterest_board_url: 'https://example.com/earthy' },
+      'hash-japandi': { style_name: 'Warm Japandi Family Calm', pinterest_board_url: 'https://example.com/japandi' }
+    }
+  };
+
+  await assert.rejects(
+    () => assertJobStyleMatchesCache(job, style, { dictionary }),
+    /hash-earth/
+  );
 });
 
 test('partial job scene plan uses only available videos', () => {
@@ -155,6 +216,14 @@ function jobWithRooms(roomIds, artifacts = {}) {
       artifacts: { video_clip_path: null, video_url: null },
       plans: { video_plan: null }
     }))
+  };
+}
+
+function styleEntry(name, boardUrl) {
+  return {
+    style_id: name.toLowerCase().replace(/\s+/g, '-'),
+    source: { pinterest_board_url: boardUrl },
+    vibe_report: { aesthetic_name: name }
   };
 }
 
