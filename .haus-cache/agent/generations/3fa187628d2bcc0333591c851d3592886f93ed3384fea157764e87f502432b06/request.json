@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999d24/9AJjUWIR2dbNGCZ1gdN-x_F5b4nmAt.png",
+    "prompt": "Very slow truck right, time-lapse light progression, camera slides laterally while light shifts across the space, shadows gradually move and lengthen, parallax effect, consistent exposure, stable motion, cinematic, photorealistic Parallax orbit: super smooth camera travels in a gentle arc around the bed, subject stays centered, soft directional light from the window shifts subtly across bedding, consistent exposure, cinematic, photorealistic Dream (bedroom), Calm, warm, and restrained — meditative family home with functional pockets for work and quiet moments. Maintain believable residential scale for a 12.5 by 11.583333333333334 ft Dream (bedroom). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "baf3b17cb20e7fbe2719f95726ce5f3933fe2eebb8db34b4504151cadda47dfb"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

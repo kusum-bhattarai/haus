@@ -1,0 +1,226 @@
+{
+  "rooms": [
+    {
+      "room_id": "nest_living_room",
+      "name": "Nest (living area)",
+      "room_type": "living_room",
+      "area_estimate": "large",
+      "measured_dimensions": {
+        "width": 11.916666666666666,
+        "length": 11.666666666666666,
+        "area": 139.03
+      },
+      "measured_unit": "ft",
+      "windows": "front exterior windows and large glass opening/door toward Relax area",
+      "natural_light": "high",
+      "adjoins": [
+        "surf_hall",
+        "relax_patio",
+        "taste_kitchen",
+        "dine_dining_room",
+        "store_relax_closet"
+      ],
+      "generation_priority": 1
+    },
+    {
+      "room_id": "dream_bedroom",
+      "name": "Dream (bedroom)",
+      "room_type": "bedroom",
+      "area_estimate": "large",
+      "measured_dimensions": {
+        "width": 12.5,
+        "length": 11.583333333333334,
+        "area": 144.79
+      },
+      "measured_unit": "ft",
+      "windows": "exterior window on top (north) wall",
+      "natural_light": "medium",
+      "adjoins": [
+        "dress_closet",
+        "surf_hall"
+      ],
+      "generation_priority": 2
+    },
+    {
+      "room_id": "taste_kitchen",
+      "name": "Taste (kitchen)",
+      "room_type": "kitchen",
+      "area_estimate": "medium",
+      "measured_dimensions": null,
+      "measured_unit": "ft",
+      "windows": "no direct exterior window (opens toward dining bay area)",
+      "natural_light": "medium",
+      "adjoins": [
+        "dine_dining_room",
+        "nest_living_room",
+        "wash_laundry",
+        "pantry"
+      ],
+      "generation_priority": 3
+    },
+    {
+      "room_id": "dine_dining_room",
+      "name": "Dine (dining)",
+      "room_type": "dining_room",
+      "area_estimate": "medium",
+      "measured_dimensions": {
+        "width": 7.833333333333333,
+        "length": 8,
+        "area": 62.67
+      },
+      "measured_unit": "ft",
+      "windows": "three-panel bay windows on front exterior",
+      "natural_light": "high",
+      "adjoins": [
+        "nest_living_room",
+        "taste_kitchen"
+      ],
+      "generation_priority": 4
+    },
+    {
+      "room_id": "revive_bathroom",
+      "name": "Revive (bathroom)",
+      "room_type": "bathroom",
+      "area_estimate": "small",
+      "measured_dimensions": null,
+      "measured_unit": "ft",
+      "windows": "possible small exterior window near tub (inferred)",
+      "natural_light": "low",
+      "adjoins": [
+        "dress_closet",
+        "wash_laundry",
+        "surf_hall"
+      ],
+      "generation_priority": 5
+    },
+    {
+      "room_id": "relax_patio",
+      "name": "Relax (patio/sunroom)",
+      "room_type": "other",
+      "area_estimate": "medium",
+      "measured_dimensions": null,
+      "measured_unit": "ft",
+      "windows": "large glass doors/windows facing exterior (accessible from Nest)",
+      "natural_light": "high",
+      "adjoins": [
+        "nest_living_room",
+        "store_relax_closet"
+      ],
+      "generation_priority": 6
+    },
+    {
+      "room_id": "wash_laundry",
+      "name": "Wash (laundry)",
+      "room_type": "other",
+      "area_estimate": "small",
+      "measured_dimensions": null,
+      "measured_unit": "ft",
+      "windows": "no window",
+      "natural_light": "low",
+      "adjoins": [
+        "taste_kitchen",
+        "revive_bathroom",
+        "surf_hall"
+      ],
+      "generation_priority": 7
+    },
+    {
+      "room_id": "dress_closet",
+      "name": "Dress (closet)",
+      "room_type": "other",
+      "area_estimate": "small",
+      "measured_dimensions": null,
+      "measured_unit": "ft",
+      "windows": "no window",
+      "natural_light": "low",
+      "adjoins": [
+        "dream_bedroom",
+        "revive_bathroom",
+        "surf_hall"
+      ],
+      "generation_priority": 8
+    },
+    {
+      "room_id": "pantry",
+      "name": "Pan (pantry)",
+      "room_type": "other",
+      "area_estimate": "small",
+      "measured_dimensions": null,
+      "measured_unit": "ft",
+      "windows": "no window",
+      "natural_light": "low",
+      "adjoins": [
+        "taste_kitchen"
+      ],
+      "generation_priority": 9
+    },
+    {
+      "room_id": "surf_hall",
+      "name": "Surf (hall/connector)",
+      "room_type": "other",
+      "area_estimate": "small",
+      "measured_dimensions": null,
+      "measured_unit": "ft",
+      "windows": "no direct window (internal corridor)",
+      "natural_light": "low",
+      "adjoins": [
+        "entry_foyer",
+        "dream_bedroom",
+        "revive_bathroom",
+        "wash_laundry",
+        "nest_living_room",
+        "store_entry_closet"
+      ],
+      "generation_priority": 10
+    },
+    {
+      "room_id": "entry_foyer",
+      "name": "Entry (foyer)",
+      "room_type": "other",
+      "area_estimate": "small",
+      "measured_dimensions": null,
+      "measured_unit": "ft",
+      "windows": "no window (entry vestibule)",
+      "natural_light": "low",
+      "adjoins": [
+        "surf_hall",
+        "store_entry_closet"
+      ],
+      "generation_priority": 11
+    },
+    {
+      "room_id": "store_relax_closet",
+      "name": "Store (closet near Relax)",
+      "room_type": "other",
+      "area_estimate": "small",
+      "measured_dimensions": null,
+      "measured_unit": "ft",
+      "windows": "no window",
+      "natural_light": "low",
+      "adjoins": [
+        "relax_patio",
+        "nest_living_room"
+      ],
+      "generation_priority": 12
+    },
+    {
+      "room_id": "store_entry_closet",
+      "name": "Store (entry closet)",
+      "room_type": "other",
+      "area_estimate": "small",
+      "measured_dimensions": null,
+      "measured_unit": "ft",
+      "windows": "no window",
+      "natural_light": "low",
+      "adjoins": [
+        "entry_foyer",
+        "surf_hall"
+      ],
+      "generation_priority": 13
+    }
+  ],
+  "total_rooms": 13,
+  "layout_type": "open_plan",
+  "confidence": 0.85,
+  "notes": "Primary room measurements provided by ml_parser (Dream, Nest, Dine). Other room sizes and some window placements/adjacencies inferred from floor plan graphic; small service closets, pantry and hall labeled as 'other'. Window positions along exterior walls inferred where bay/glass elements are drawn (Dine, Relax, Nest front)."
+}

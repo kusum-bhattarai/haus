@@ -1,3 +1,9 @@
-.haus-cache/
+# Cache: track JSON metadata (pipeline cache hits) but not generated media
+.haus-cache/**/*.png
+.haus-cache/**/*.jpg
+.haus-cache/**/*.jpeg
+.haus-cache/**/*.mp4
+.haus-cache/**/*.webp
 .env
 .env.local
+node_modules/

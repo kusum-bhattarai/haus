@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999494/BAdidWFa-LjRlj05tvTuC_s8VpfISn.png",
+    "prompt": "Wide interior shot with slow trucking movement side to side as harsh directional light moves and expands across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Camera tracks laterally through scene while light travels. Editorial film style. Neutral white balance, balanced exposure, smooth parallel motion. Atmospheric architectural cinematography. Parallax orbit, super smooth camera travels in a short arc around the dining table while bay-window light shifts across the tabletop, shadows lengthen gradually, consistent exposure, cinematic, photorealistic Dine (dining), Soft organic warmth — calm, meditative, family-ready Japandi Maintain believable residential scale for a 7.833333333333333 by 8 ft Dine (dining). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "a889ea1a6fb7c85ae878b12b0ddac3e847b917da37915bbfaa7d6525406ed48b"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

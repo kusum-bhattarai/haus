@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a9996e0/0mxtlF6QKpBZMx3PO-XzM_UeYMvujx.png",
+    "prompt": "Tight interior shot with slow trucking movement side to side as harsh directional light moves and expands across textured interior surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Static, slow detail zoom, camera pulls in slightly to highlight material junctions and finishes while daylight from the dining bay softly illuminates surfaces, consistent exposure, photorealistic Taste (kitchen), Quiet, meditative warmth — airy daylight with tactile materiality and restrained, family-friendly staging. Maintain believable residential scale for Taste (kitchen) at roughly medium. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "17ff2eea80b027a76a5e549fdaa1f03a64b7a819a51568ac235685a9d29cd152"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

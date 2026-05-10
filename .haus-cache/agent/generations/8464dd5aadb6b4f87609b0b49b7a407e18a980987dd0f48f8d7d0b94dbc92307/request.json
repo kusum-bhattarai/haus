@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999494/7xSWARbpbleOGfOfFf2FK_MOc8ouU2.png",
+    "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Super smooth dolly in, camera moves slowly down the hall toward the living area while light from adjacent rooms provides soft fill, consistent exposure, cinematic, photorealistic Surf (hall/connector), Soft organic warmth — calm, meditative, family-ready Japandi Maintain believable residential scale for Surf (hall/connector) at roughly small. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "b7a41dcd20a2542ae0facd68a344306c8384c0cd3603b05a85bd6595606bc79b"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999862/3mPGggY75Ef-gMYy0Yu_S_Vfd5kfkv.png",
+    "prompt": "Wide interior shot with slow trucking movement side to side as harsh directional light moves and expands across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Camera tracks laterally through scene while light travels. Editorial film style. Neutral white balance, balanced exposure, smooth parallel motion. Atmospheric architectural cinematography. Very slow truck right, camera glides laterally to reveal kitchen-to-dining connection, directional bay light moves gently across counters and open shelving, consistent exposure, cinematic, photorealistic Taste (kitchen), Quiet, warm, textured Japandi — calm family-ready with a considered work corner Maintain believable residential scale for Taste (kitchen) at roughly medium. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "9bce6451a41d0fe505a2b7ffb8442851e502a0d53f726d8415b8671a20efe49d"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a9998ce/WHb8Ty3_4ZsZH4tppdjhY_yNDDdL9X.png",
+    "prompt": "Tight interior shot with slow trucking movement side to side as harsh directional light moves and expands across textured interior surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Tight truck, slow and stable lateral reveal across the bed and bedside, soft daylight from the side window shifts across linens, exposure stable with gentle shadow falloff, cinematic, photorealistic Dream (bedroom), Calm, grounded Japandi warmth — textured minimalism with soft natural light Maintain believable residential scale for a 12.5 by 11.583333333333334 ft Dream (bedroom). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "b7c34d0994cd9022230629158f1f9cd74f9c917282f05c31b57ceb853477c588"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

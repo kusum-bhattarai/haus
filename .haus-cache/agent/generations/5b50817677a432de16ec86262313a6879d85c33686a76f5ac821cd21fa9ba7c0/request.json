@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99985f/wMNvj8-gCZQwwPHVatUdq_YbU6nNj8.png",
+    "prompt": "Tight interior shot with slow trucking movement side to side as harsh directional light moves and expands across textured interior surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Tight static dolly—very slow inward push, camera approaches the bed from the doorway, soft window light sculpts bedding texture, exposure held steady, cinematic, photorealistic Dream (bedroom), Quiet, warm, textured Japandi — calm family-ready with a considered work corner Maintain believable residential scale for a 12.5 by 11.583333333333334 ft Dream (bedroom). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "474633c9f4af3fd04da9ec2f3c8ad9ea2ad01dce64e2d5d64020b262c706e900"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

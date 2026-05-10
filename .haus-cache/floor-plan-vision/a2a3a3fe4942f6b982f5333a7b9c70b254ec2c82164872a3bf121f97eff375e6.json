@@ -1,0 +1,41 @@
+{
+  "source": "ml_parser",
+  "unit": "ft",
+  "scale": null,
+  "rooms": [
+    {
+      "room_id": null,
+      "name": "Dream (bedroom)",
+      "dimensions": {
+        "width": 12.5,
+        "length": 11.583333333333334,
+        "area": 144.79
+      },
+      "unit": "ft",
+      "confidence": 1
+    },
+    {
+      "room_id": null,
+      "name": "Nest (living area)",
+      "dimensions": {
+        "width": 11.916666666666666,
+        "length": 11.666666666666666,
+        "area": 139.03
+      },
+      "unit": "ft",
+      "confidence": 1
+    },
+    {
+      "room_id": null,
+      "name": "Dine (dining)",
+      "dimensions": {
+        "width": 7.833333333333333,
+        "length": 8,
+        "area": 62.67
+      },
+      "unit": "ft",
+      "confidence": 1
+    }
+  ],
+  "notes": null
+}

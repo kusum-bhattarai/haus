@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999494/ZifxedMtHQIJyE2lV0MQi_wSBOk0mM.png",
+    "prompt": "Tight interior shot with slow trucking movement side to side as harsh directional light moves and expands across textured interior surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Very slow static zoom, camera holds and gently tightens on the bed-to-crib axis while soft daylight from the window brightens the crib area, exposure stable, cinematic, photorealistic Dream (bedroom), Soft organic warmth — calm, meditative, family-ready Japandi Maintain believable residential scale for a 12.5 by 11.583333333333334 ft Dream (bedroom). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "61261b7e2e160f97ceb721e1b37190bd414a8b82f0c646246d793b4a43ec834e"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

@@ -1,0 +1,12 @@
+{
+  "endpoint_id": "fal-ai/nano-banana-2",
+  "params": {
+    "prompt": "Photorealistic editorial interior reference photograph of a Dine (dining). Focus tightly on: dining table, pendant light above the dining area, dining chairs, round oak dining table, woven rattan pendant visible, bay windows unobstructed, simple ceramic tableware and sculptural vase, woven rattan pendant, linen-upholstered chairs, simple ceramic tableware set, clear bay window sightlines. Styled in japandi aesthetic, warm_neutral palette, soft_ambient lighting. A calm, family-friendly Japandi interior that pairs Scandinavian lightness with Japanese restraint. Warm neutrals, light oak, and textured linens create an uncluttered, tactile environment while low-profile furniture and measured negative space keep rooms feeling breathable. Design supports daily family life with a deliberate cozy work corner and resilient, easy-to-maintain materials. This image is a visual consistency reference — every detail of the featured furniture and fixtures must be clearly visible and precisely rendered. No people. No visible brand logos. Sharp architectural photography. Luxury real estate staging.",
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "source_hashes": [],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

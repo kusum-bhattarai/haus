@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a9996e0/_koNvydDNvXlYyq2oHUbg_eqIk4BRS.png",
+    "prompt": "Super smooth camera rises vertically upward, straight vertical path, cinematic Super smooth parallax orbit, camera travels in a gentle arc around the low seating while strong daylight through patio glass shifts across surfaces, shadows remain crisp but natural, consistent exposure, cinematic, photorealistic Relax (patio/sunroom), Quiet, meditative warmth — airy daylight with tactile materiality and restrained, family-friendly staging. Maintain believable residential scale for Relax (patio/sunroom) at roughly medium. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "548cf877e1e4e3d99383ddd34b49ef69978274eb7405ce874a061cd9abc5566e"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

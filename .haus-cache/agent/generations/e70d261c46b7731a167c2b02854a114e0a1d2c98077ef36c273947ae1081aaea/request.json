@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999c77/5nE52_6FpgMJOGaF7T9fE_pcCXwPH0.png",
+    "prompt": "Very slow crane up, time-lapse light progression, camera rises vertically while directional light shifts down through the space, shadows gradually move and lengthen across floors and surfaces, parallax effect, consistent exposure, stable vertical motion, cinematic, photorealistic Aerial drift: Super smooth slow lateral drift over the floor-level tea nook, natural light pools and shifts across cushions and rugs, consistent exposure, cinematic, photorealistic Relax (patio/sunroom), Calm meditative Japandi — warm, textured minimalism with purposeful, family-friendly touches Maintain believable residential scale for Relax (patio/sunroom) at roughly medium. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "9bd282ebbf0447ea5a9b16cebba658dc04b83377b137958e863d2d8980b5371f"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

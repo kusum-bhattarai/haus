@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99985f/y5Wl9yXEhQsS3-Ow05TTM_DqMnzjRW.png",
+    "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Wide interior shot with slow dolly in, camera approaches the round dining table beneath a woven pendant, bay light shifts across the tabletop and chairs, shadows lengthen subtly, consistent exposure, cinematic, photorealistic Dine (dining), Quiet, warm, textured Japandi — calm family-ready with a considered work corner Maintain believable residential scale for a 7.833333333333333 by 8 ft Dine (dining). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "175d67bfb8696c6b530855b7e9fe327bdfc1536377ee00d084f1b53fc308ab15"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

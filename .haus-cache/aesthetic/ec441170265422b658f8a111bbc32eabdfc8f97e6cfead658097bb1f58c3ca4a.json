@@ -1,0 +1,53 @@
+{
+  "palette": "warm_neutral",
+  "lighting": "soft_ambient",
+  "density": "balanced",
+  "style_era": "japandi",
+  "dominant_colors": [
+    "#D8B886",
+    "#EDE6DB",
+    "#CBB79D",
+    "#A8A39A",
+    "#3B2F2B"
+  ],
+  "mood_words": [
+    "calm meditative",
+    "soft organic warmth",
+    "textured minimalism",
+    "grounded natural materials",
+    "quiet hygge comfort",
+    "uncluttered balance"
+  ],
+  "pinterest_cluster_labels": [
+    "light-wood Japandi dining — round table + woven pendant",
+    "floor-level tea nook — floor cushions + bamboo screens",
+    "neutral Japandi living — low sofa, sculptural wooden coffee table"
+  ],
+  "cluster_summary": [
+    {
+      "label": "light-wood Japandi dining — round table + woven pendant",
+      "pin_ids": [
+        "1012465559998684270"
+      ],
+      "visual_notes": "Round oak dining table, curved mid-height upholstered chairs in linen textures, woven rattan pendant for warm upward glow; staging uses ceramic tableware, single sculptural vase and subtle wall wood slatting to elongate vertical lines.",
+      "weight": 0.35
+    },
+    {
+      "label": "floor-level tea nook — floor cushions + bamboo screens",
+      "pin_ids": [
+        "1012465559998684267"
+      ],
+      "visual_notes": "Intimate floor seating with oversized cushioned loungers, layered natural fiber rugs and bamboo/shoji screening; low wooden tray table, ambient paper lanterns and small green plantings to create a cozy, meditative corner.",
+      "weight": 0.3
+    },
+    {
+      "label": "neutral Japandi living — low sofa, sculptural wooden coffee table",
+      "pin_ids": [
+        "1012465559998684162"
+      ],
+      "visual_notes": "Light neutral linen sofa on low wooden base, asymmetrical sculpted oak coffee table, textured area rug and potted greenery; pared-back art and vertical wood slat accents emphasize calm proportion and organic materiality.",
+      "weight": 0.35
+    }
+  ],
+  "confidence": 0.88
+}

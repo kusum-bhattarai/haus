@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a9996e2/OMxoQBgoencqSLcP9OSki_EFaICguo.png",
+    "prompt": "Wide interior shot with slow trucking movement side to side as harsh directional light moves and expands across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Camera tracks laterally through scene while light travels. Editorial film style. Neutral white balance, balanced exposure, smooth parallel motion. Atmospheric architectural cinematography. Very slow truck right, camera slides laterally across the living area while directional daylight from front windows shifts gradually across surfaces, shadows lengthen subtly, consistent exposure, cinematic, photorealistic Nest (living area), Quiet, meditative warmth — airy daylight with tactile materiality and restrained, family-friendly staging. Maintain believable residential scale for a 11.916666666666666 by 11.666666666666666 ft Nest (living area). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "013eff3eeb9a72228bb840734a5f4325ab34676a993ba182e1b47bf94b945f78"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

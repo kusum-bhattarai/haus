@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99985f/iVcf489P-r1Fffkigr5t5_I1Ojot2M.png",
+    "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Wide interior shot with slow dolly out, camera pulls back from patio into the living space showing indoor-outdoor flow, sunlight moves across cushions and floor, consistent exposure, cinematic, photorealistic Relax (patio/sunroom), Quiet, warm, textured Japandi — calm family-ready with a considered work corner Maintain believable residential scale for Relax (patio/sunroom) at roughly medium. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "3d1b51df520f6c29ddf084d538d4d51871e18fbb00b6eca71c04544122a03f0f"
+  ],
+  "skill_version": "f15a45006c87e1de9b2e4da6818ff9af005e050ce2ccaaeb67c1d9c5c29be98f"
+}

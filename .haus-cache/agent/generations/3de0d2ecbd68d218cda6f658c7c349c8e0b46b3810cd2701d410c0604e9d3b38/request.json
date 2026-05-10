@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a999c77/3_QalrSRVyw2TBWSfVL7H_g9krDLEs.png",
+    "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Truck right to left: Super smooth lateral glide along the kitchen run revealing tidy counters and wood accents, natural light from the dining bay shifts gently across surfaces, consistent exposure, cinematic, photorealistic Taste (kitchen), Calm meditative Japandi — warm, textured minimalism with purposeful, family-friendly touches Maintain believable residential scale for Taste (kitchen) at roughly medium. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "73eea74ee540ea8cab19727bd417aab62b0afcde8c1069a336c0078b045bfcbe"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99998c/PDsV_JSOYNacDyWyjTgss_97RAKgQr.png",
+    "prompt": "Very slow truck right, time-lapse light progression, camera slides laterally while light shifts across the space, shadows gradually move and lengthen, parallax effect, consistent exposure, stable motion, cinematic, photorealistic Parallax orbit, super smooth camera travels in a shallow arc around the dining table with subject centered, daylight from bay windows shifts subtly across table surfaces, consistent exposure, cinematic, photorealistic Dine (dining), Calm, textured minimalism — warm daylight, tactile materials, quiet family presence. Maintain believable residential scale for a 7.833333333333333 by 8 ft Dine (dining). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "0573d45278c838c68a093ae88e4eb31da3745aaab879c8ddba6f5309adb175ce"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

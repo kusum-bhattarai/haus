@@ -1,0 +1,395 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "d6512a02-e630-4cce-a61d-6424e9468ae2",
+  "session_id": "bd513371-47ba-42ec-9fb8-de7cddb99ab2",
+  "created_at": "2026-05-10T06:18:23.053Z",
+  "source_payload": {
+    "floor_plan_url": "file:///Users/quamos/Repos/haus/.haus-cache/floor-plans/a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6.png",
+    "floor_plan_metadata": {
+      "source": "local_upload",
+      "mime_type": "image/png",
+      "size_bytes": 64138,
+      "width_px": 448,
+      "height_px": 480,
+      "sha256": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6",
+      "cache_key": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6"
+    },
+    "floor_plan_measurements": {
+      "source": "ml_parser",
+      "unit": "ft",
+      "scale": null,
+      "rooms": [
+        {
+          "room_id": null,
+          "name": "Dream (bedroom)",
+          "dimensions": {
+            "width": 12.5,
+            "length": 11.583333333333334,
+            "area": 144.79
+          },
+          "unit": "ft",
+          "confidence": 1
+        },
+        {
+          "room_id": null,
+          "name": "Nest (living area)",
+          "dimensions": {
+            "width": 11.916666666666666,
+            "length": 11.666666666666666,
+            "area": 139.03
+          },
+          "unit": "ft",
+          "confidence": 1
+        },
+        {
+          "room_id": null,
+          "name": "Dine (dining)",
+          "dimensions": {
+            "width": 7.833333333333333,
+            "length": 8,
+            "area": 62.67
+          },
+          "unit": "ft",
+          "confidence": 1
+        }
+      ],
+      "notes": null
+    },
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+    "brief": "Warm, calm home for a young family that needs a cozy work corner.",
+    "objects": [
+      "standing_desk",
+      "bookshelf"
+    ],
+    "platform": "all",
+    "timestamp": "2026-05-10T06:18:23.045Z",
+    "session_id": "bd513371-47ba-42ec-9fb8-de7cddb99ab2"
+  },
+  "aesthetic_profile": {
+    "palette": "warm_neutral",
+    "lighting": "soft_ambient",
+    "density": "balanced",
+    "style_era": "japandi",
+    "dominant_colors": [
+      "#D8B886",
+      "#EDE6DB",
+      "#CBB79D",
+      "#A8A39A",
+      "#3B2F2B"
+    ],
+    "mood_words": [
+      "calm meditative",
+      "soft organic warmth",
+      "textured minimalism",
+      "grounded natural materials",
+      "quiet hygge comfort",
+      "uncluttered balance"
+    ],
+    "pinterest_cluster_labels": [
+      "light-wood Japandi dining — round table + woven pendant",
+      "floor-level tea nook — floor cushions + bamboo screens",
+      "neutral Japandi living — low sofa, sculptural wooden coffee table"
+    ],
+    "confidence": 0.88
+  },
+  "pins": [
+    {
+      "pin_id": "1012465559998684270",
+      "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "image_url": "https://i.pinimg.com/1200x/87/c2/ff/87c2ffd657991b8cba7e91b508c13848.jpg",
+      "title": "Japandi Dining Room with Neutral Decor",
+      "description": "A Japandi dining room with neutral décor blends Japanese simplicity and Scandinavian warmth. Soft beige, warm wood, and gentle earth tones create a calm, inviting space. Clean lines, natural materials, and minimal furnishings keep the room feeling open and uncluttered, while subtle textures like linen, ceramic, and light wood add quiet elegance and comfort.",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "light-wood Japandi dining — round table + woven pendant",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998684267",
+      "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "image_url": "https://i.pinimg.com/1200x/7e/9f/71/7e9f71efa20a307977036346b7de8cd9.jpg",
+      "title": "Japandi nook area",
+      "description": "Home aesthetics",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "floor-level tea nook — floor cushions + bamboo screens",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998684162",
+      "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "image_url": "https://i.pinimg.com/1200x/10/a5/ce/10a5cea5365b36e587c39a3144cbc8a2.jpg",
+      "title": "Japandi Living Room: Calm Minimal Decor, Natural Wood & Indoor Plants",
+      "description": "Calm Japandi living room inspiration with a light neutral sofa, low wooden coffee table, soft textured rug, and plenty of indoor plants for a serene, balanced space. Minimal wall art, natural materials, and clean lines create an airy, soothing aesthetic—perfect for Japanese style interiors, minimalist living room ideas, and warm neutral home decor. Save for Japandi decor and plant-filled living room styling.",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "neutral Japandi living — low sofa, sculptural wooden coffee table",
+      "selected_for_mood_board": true
+    }
+  ],
+  "cluster_summary": [
+    {
+      "label": "light-wood Japandi dining — round table + woven pendant",
+      "pin_ids": [
+        "1012465559998684270"
+      ],
+      "visual_notes": "Round oak dining table, curved mid-height upholstered chairs in linen textures, woven rattan pendant for warm upward glow; staging uses ceramic tableware, single sculptural vase and subtle wall wood slatting to elongate vertical lines.",
+      "weight": 0.35
+    },
+    {
+      "label": "floor-level tea nook — floor cushions + bamboo screens",
+      "pin_ids": [
+        "1012465559998684267"
+      ],
+      "visual_notes": "Intimate floor seating with oversized cushioned loungers, layered natural fiber rugs and bamboo/shoji screening; low wooden tray table, ambient paper lanterns and small green plantings to create a cozy, meditative corner.",
+      "weight": 0.3
+    },
+    {
+      "label": "neutral Japandi living — low sofa, sculptural wooden coffee table",
+      "pin_ids": [
+        "1012465559998684162"
+      ],
+      "visual_notes": "Light neutral linen sofa on low wooden base, asymmetrical sculpted oak coffee table, textured area rug and potted greenery; pared-back art and vertical wood slat accents emphasize calm proportion and organic materiality.",
+      "weight": 0.35
+    }
+  ],
+  "floor_plan": {
+    "rooms": [
+      {
+        "room_id": "nest_living_room",
+        "name": "Nest (living area)",
+        "room_type": "living_room",
+        "area_estimate": "large",
+        "measured_dimensions": {
+          "width": 11.916666666666666,
+          "length": 11.666666666666666,
+          "area": 139.03
+        },
+        "measured_unit": "ft",
+        "windows": "front exterior windows and large glass opening/door toward Relax area",
+        "natural_light": "high",
+        "adjoins": [
+          "surf_hall",
+          "relax_patio",
+          "taste_kitchen",
+          "dine_dining_room",
+          "store_relax_closet"
+        ],
+        "generation_priority": 1
+      },
+      {
+        "room_id": "dream_bedroom",
+        "name": "Dream (bedroom)",
+        "room_type": "bedroom",
+        "area_estimate": "large",
+        "measured_dimensions": {
+          "width": 12.5,
+          "length": 11.583333333333334,
+          "area": 144.79
+        },
+        "measured_unit": "ft",
+        "windows": "exterior window on top (north) wall",
+        "natural_light": "medium",
+        "adjoins": [
+          "dress_closet",
+          "surf_hall"
+        ],
+        "generation_priority": 2
+      },
+      {
+        "room_id": "taste_kitchen",
+        "name": "Taste (kitchen)",
+        "room_type": "kitchen",
+        "area_estimate": "medium",
+        "measured_dimensions": null,
+        "measured_unit": "ft",
+        "windows": "no direct exterior window (opens toward dining bay area)",
+        "natural_light": "medium",
+        "adjoins": [
+          "dine_dining_room",
+          "nest_living_room",
+          "wash_laundry",
+          "pantry"
+        ],
+        "generation_priority": 3
+      },
+      {
+        "room_id": "dine_dining_room",
+        "name": "Dine (dining)",
+        "room_type": "dining_room",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 7.833333333333333,
+          "length": 8,
+          "area": 62.67
+        },
+        "measured_unit": "ft",
+        "windows": "three-panel bay windows on front exterior",
+        "natural_light": "high",
+        "adjoins": [
+          "nest_living_room",
+          "taste_kitchen"
+        ],
+        "generation_priority": 4
+      },
+      {
+        "room_id": "revive_bathroom",
+        "name": "Revive (bathroom)",
+        "room_type": "bathroom",
+        "area_estimate": "small",
+        "measured_dimensions": null,
+        "measured_unit": "ft",
+        "windows": "possible small exterior window near tub (inferred)",
+        "natural_light": "low",
+        "adjoins": [
+          "dress_closet",
+          "wash_laundry",
+          "surf_hall"
+        ],
+        "generation_priority": 5
+      },
+      {
+        "room_id": "relax_patio",
+        "name": "Relax (patio/sunroom)",
+        "room_type": "other",
+        "area_estimate": "medium",
+        "measured_dimensions": null,
+        "measured_unit": "ft",
+        "windows": "large glass doors/windows facing exterior (accessible from Nest)",
+        "natural_light": "high",
+        "adjoins": [
+          "nest_living_room",
+          "store_relax_closet"
+        ],
+        "generation_priority": 6
+      },
+      {
+        "room_id": "wash_laundry",
+        "name": "Wash (laundry)",
+        "room_type": "other",
+        "area_estimate": "small",
+        "measured_dimensions": null,
+        "measured_unit": "ft",
+        "windows": "no window",
+        "natural_light": "low",
+        "adjoins": [
+          "taste_kitchen",
+          "revive_bathroom",
+          "surf_hall"
+        ],
+        "generation_priority": 7
+      },
+      {
+        "room_id": "dress_closet",
+        "name": "Dress (closet)",
+        "room_type": "other",
+        "area_estimate": "small",
+        "measured_dimensions": null,
+        "measured_unit": "ft",
+        "windows": "no window",
+        "natural_light": "low",
+        "adjoins": [
+          "dream_bedroom",
+          "revive_bathroom",
+          "surf_hall"
+        ],
+        "generation_priority": 8
+      },
+      {
+        "room_id": "pantry",
+        "name": "Pan (pantry)",
+        "room_type": "other",
+        "area_estimate": "small",
+        "measured_dimensions": null,
+        "measured_unit": "ft",
+        "windows": "no window",
+        "natural_light": "low",
+        "adjoins": [
+          "taste_kitchen"
+        ],
+        "generation_priority": 9
+      },
+      {
+        "room_id": "surf_hall",
+        "name": "Surf (hall/connector)",
+        "room_type": "other",
+        "area_estimate": "small",
+        "measured_dimensions": null,
+        "measured_unit": "ft",
+        "windows": "no direct window (internal corridor)",
+        "natural_light": "low",
+        "adjoins": [
+          "entry_foyer",
+          "dream_bedroom",
+          "revive_bathroom",
+          "wash_laundry",
+          "nest_living_room",
+          "store_entry_closet"
+        ],
+        "generation_priority": 10
+      },
+      {
+        "room_id": "entry_foyer",
+        "name": "Entry (foyer)",
+        "room_type": "other",
+        "area_estimate": "small",
+        "measured_dimensions": null,
+        "measured_unit": "ft",
+        "windows": "no window (entry vestibule)",
+        "natural_light": "low",
+        "adjoins": [
+          "surf_hall",
+          "store_entry_closet"
+        ],
+        "generation_priority": 11
+      },
+      {
+        "room_id": "store_relax_closet",
+        "name": "Store (closet near Relax)",
+        "room_type": "other",
+        "area_estimate": "small",
+        "measured_dimensions": null,
+        "measured_unit": "ft",
+        "windows": "no window",
+        "natural_light": "low",
+        "adjoins": [
+          "relax_patio",
+          "nest_living_room"
+        ],
+        "generation_priority": 12
+      },
+      {
+        "room_id": "store_entry_closet",
+        "name": "Store (entry closet)",
+        "room_type": "other",
+        "area_estimate": "small",
+        "measured_dimensions": null,
+        "measured_unit": "ft",
+        "windows": "no window",
+        "natural_light": "low",
+        "adjoins": [
+          "entry_foyer",
+          "surf_hall"
+        ],
+        "generation_priority": 13
+      }
+    ],
+    "total_rooms": 13,
+    "layout_type": "open_plan",
+    "confidence": 0.85,
+    "notes": "Primary room measurements provided by ml_parser (Dream, Nest, Dine). Other room sizes and some window placements/adjacencies inferred from floor plan graphic; small service closets, pantry and hall labeled as 'other'. Window positions along exterior walls inferred where bay/glass elements are drawn (Dine, Relax, Nest front)."
+  },
+  "provenance": {
+    "pinterest": {
+      "provider": "apify",
+      "requested_limit": 20,
+      "returned_count": 3,
+      "actor_id": "fatihtahta~pinterest-scraper-search"
+    },
+    "models": {
+      "aesthetic_extraction": "gpt-5-mini",
+      "floor_plan_parsing": "gpt-5-mini"
+    }
+  },
+  "warnings": []
+}
