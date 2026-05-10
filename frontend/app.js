@@ -127,9 +127,14 @@ document.querySelector('#back-to-results').addEventListener('click', () => setVi
 agentRoomSelect.addEventListener('change', () => {
   selectedAgentRoomId = agentRoomSelect.value;
   const room = (currentJob?.rooms ?? []).find((r) => r.room_id === selectedAgentRoomId);
-  if (room) updateAgentCanvas(room);
+  if (room) {
+    updateAgentCanvas(room);
+    const stateLabel = AGENT_STATE_LABELS[room.state];
+    placementInstruction.textContent = stateLabel ?? 'Send an edit request to begin.';
+  } else {
+    placementInstruction.textContent = 'Send an edit request to begin.';
+  }
   requestedEdit = null;
-  placementInstruction.textContent = 'Send an edit request to begin.';
   regenerateButton.disabled = true;
 });
 document.querySelector('#close-media-modal').addEventListener('click', closeMediaModal);
@@ -472,6 +477,7 @@ async function refreshJob(jobId) {
   renderGeneratedStills(job);
   renderRuntimeRooms(job);
   renderSelectedPlan();
+  syncAgentView(job);
 
   if (job.status === 'completed') {
     renderProgressSteps(progressSteps.length, true);
@@ -931,17 +937,7 @@ function setView(viewName) {
 }
 
 function populateAgentView() {
-  const rooms = (currentJob?.rooms ?? []).filter((room) => room.artifacts?.styled_image_url);
-  if (!rooms.length) return;
-
-  agentRoomSelect.innerHTML = rooms.map((room) =>
-    `<option value="${escapeHtml(room.room_id)}">${escapeHtml(room.room_name)}</option>`
-  ).join('');
-
-  const currentSelection = rooms.find((r) => r.room_id === selectedAgentRoomId) ?? rooms[0];
-  selectedAgentRoomId = currentSelection.room_id;
-  agentRoomSelect.value = selectedAgentRoomId;
-  updateAgentCanvas(currentSelection);
+  if (currentJob) syncAgentView(currentJob);
 }
 
 function updateAgentCanvas(room) {
@@ -951,6 +947,81 @@ function updateAgentCanvas(room) {
   placement = null;
   placementMarker.classList.add('is-hidden');
 }
+
+const AGENT_STATE_LABELS = {
+  PENDING: 'Waiting to start...',
+  STILL_PLANNING: 'Planning still...',
+  STILL_GENERATING: 'Generating new still...',
+  STILL_RETRYING: 'Retrying still generation...',
+  STILL_VALIDATING: 'Evaluating result...',
+  STILL_REVIEW_READY: 'New still ready — approve to start video.',
+  VIDEO_PLANNING: 'Planning video...',
+  VIDEO_GENERATING: 'Generating video clip...',
+  VIDEO_RETRYING: 'Retrying video...',
+  VIDEO_VALIDATING: 'Evaluating video...',
+  VIDEO_REVIEW_READY: 'Video needs review.',
+  APPROVED: 'Room complete. Assembling final video...',
+  FAILED: 'Generation failed.'
+};
+
+function syncAgentView(job) {
+  if (!agentCanvasImage || !agentRoomSelect) return;
+
+  const rooms = (job.rooms ?? []).filter((r) => r.artifacts?.styled_image_url);
+  if (!rooms.length) return;
+
+  const currentVal = selectedAgentRoomId ?? agentRoomSelect.value;
+  agentRoomSelect.innerHTML = rooms.map((r) =>
+    `<option value="${escapeHtml(r.room_id)}"${r.room_id === currentVal ? ' selected' : ''}>${escapeHtml(r.room_name)}</option>`
+  ).join('');
+
+  const selected = rooms.find((r) => r.room_id === currentVal) ?? rooms[0];
+  selectedAgentRoomId = selected.room_id;
+
+  // Full room record has in-progress state even before still is ready
+  const fullRoom = (job.rooms ?? []).find((r) => r.room_id === selected.room_id) ?? selected;
+
+  if (fullRoom.artifacts?.styled_image_url) {
+    agentCanvasImage.src = fullRoom.artifacts.styled_image_url;
+    agentCanvasImage.alt = `${fullRoom.room_name} generated still`;
+  }
+
+  const stateLabel = AGENT_STATE_LABELS[fullRoom.state];
+  if (stateLabel) placementInstruction.textContent = stateLabel;
+
+  const cacheNoteEl = document.querySelector('#cache-note');
+  if (!cacheNoteEl) return;
+
+  if (fullRoom.state === 'STILL_REVIEW_READY') {
+    cacheNoteEl.innerHTML = `
+      New still ready to review.
+      <span style="display:flex;gap:8px;margin-top:8px">
+        <button class="primary-button" data-agent-action="approve-still" data-room-id="${escapeHtml(fullRoom.room_id)}">Approve still</button>
+        <button class="ghost-button" data-agent-action="reject-still" data-room-id="${escapeHtml(fullRoom.room_id)}">Reject &amp; retry</button>
+      </span>
+    `;
+  } else if (fullRoom.state === 'APPROVED') {
+    cacheNoteEl.textContent = 'Room clip approved. Assembling final video...';
+  } else if (fullRoom.state?.startsWith('VIDEO_')) {
+    cacheNoteEl.textContent = 'Video generating — takes 1–3 min. Results will appear automatically.';
+  } else if (fullRoom.state?.startsWith('STILL_')) {
+    cacheNoteEl.textContent = 'Only this room is being regenerated. All other clips stay cached.';
+  }
+}
+
+document.querySelector('#cache-note').addEventListener('click', async (e) => {
+  const btn = e.target.closest('[data-agent-action]');
+  if (!btn || !currentJobId) return;
+  const roomId = btn.dataset.roomId;
+  btn.disabled = true;
+  try {
+    await approveStill(roomId, btn.dataset.agentAction === 'approve-still');
+    await refreshJob(currentJobId);
+  } catch (err) {
+    placementInstruction.textContent = err.message;
+    btn.disabled = false;
+  }
+});
 
 function addChatMessage(sender, text) {
   const bubble = document.createElement('div');
