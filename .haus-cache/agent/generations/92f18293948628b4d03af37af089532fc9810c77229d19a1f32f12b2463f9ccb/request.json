@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99ac5f/Xvjfi4neR-BnjXpFSgoBy_3XhAf5tW.png",
+    "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Tight truck right to left (very slow) revealing the standing desk at the window, daylight shifts across the walnut desk surface, desk lamp practical remains constant, consistent exposure, cinematic, photorealistic. Dream (smaller), Botanical‑spa warmth with artful, collected mid‑century character Maintain believable residential scale for a 11.6667 by 12.3333 ft Dream (smaller). Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "3e76915d4f648df070f6a892896ee560b5165247a398a293b6e8531e17efc723"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

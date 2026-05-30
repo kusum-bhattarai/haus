@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "d970e58e-358a-48ca-abd6-384fe8cb0dc9",
+  "session_id": "4318ddae-c025-4886-81f3-13801fc9d8d1",
+  "created_at": "2026-05-10T17:06:57.749Z",
+  "source_payload": {
+    "floor_plan_url": "file:///Users/quamos/Repos/haus/.haus-cache/floor-plans/1aa09dc40ee4146b959697cacea0fa6fc22fc075f909eafac42fa24027afad5f.png",
+    "floor_plan_metadata": {
+      "source": "local_upload",
+      "mime_type": "image/png",
+      "size_bytes": 71152,
+      "width_px": 448,
+      "height_px": 480,
+      "sha256": "1aa09dc40ee4146b959697cacea0fa6fc22fc075f909eafac42fa24027afad5f",
+      "cache_key": "1aa09dc40ee4146b959697cacea0fa6fc22fc075f909eafac42fa24027afad5f"
+    },
+    "floor_plan_measurements": {
+      "source": "ml_parser",
+      "unit": "ft",
+      "scale": null,
+      "rooms": [
+        {
+          "room_id": null,
+          "name": "Bedroom",
+          "dimensions": {
+            "width": 11.6667,
+            "length": 13.6667,
+            "area": 159.44
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Bedroom",
+          "dimensions": {
+            "width": 11.6667,
+            "length": 12.3333,
+            "area": 143.89
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Dining Room",
+          "dimensions": {
+            "width": 7.6667,
+            "length": 9.6667,
+            "area": 74.11
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Living Room",
+          "dimensions": {
+            "width": 12.5,
+            "length": 14.5833,
+            "area": 182.29
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        }
+      ],
+      "notes": null
+    },
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+    "brief": "Creative, expressive living space with eclectic artistic flair.",
+    "objects": [
+      "standing_desk",
+      "bookshelf"
+    ],
+    "platform": "all",
+    "timestamp": "2026-05-10T17:05:43.406Z",
+    "session_id": "4318ddae-c025-4886-81f3-13801fc9d8d1"
+  },
+  "aesthetic_profile": {
+    "palette": "earthy",
+    "lighting": "soft_ambient",
+    "density": "layered",
+    "style_era": "mid_century",
+    "dominant_colors": [
+      "#1E4B3A",
+      "#B78A40",
+      "#6B4328",
+      "#C45A2C",
+      "#E6D7C6"
+    ],
+    "mood_words": [
+      "botanical spa",
+      "aged-brass warmth",
+      "handmade zellige texture",
+      "earthy walnut warmth",
+      "collected vintage-art"
+    ],
+    "pinterest_cluster_labels": [
+      "Emerald zellige bathroom with brass fixtures",
+      "Compact green-tile bathroom with raw wood vanity",
+      "Walnut kitchen with deep green vertical tile backsplash",
+      "Art-forward warm bedroom / living — terracotta & collected pieces"
+    ],
+    "confidence": 0.89
+  },
+  "pins": [
+    {
+      "pin_id": "1012465559998726657",
+      "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+      "image_url": "https://i.pinimg.com/1200x/83/7a/d9/837ad964651fcfdc18bd59bad0fdd658.jpg",
+      "title": "Color Harmony Palettes 🎨 | Curated Whole House Paint Palettes for Timeless & Trendy Homes | Perfect",
+      "description": "Earthy Paint Palette, Warm Neutrals, Terracotta Colors, Natural Interior Paint, Organic Home Design, Soft Beige, Clay Tones, 2025Paint Trends, Neutral Wall Colors, Eco-Friendly Paint, Serene Interior Colors, Modern Rustic Palette, Earth Inspired Paint, Natural Home Decor, Timeless Paint Shades, Relaxing Paint Combinations, Calm Neutrals, Organic Texture, Sustainable Home Ideas, Warm Tones, Cozy Color Scheme, Natural Living Space, Muted Paint Palette, Balanced Color Flow, Vibrant Paint Palette, Bold Interior Colors, Electric Blue, Warm Coral,Modern Color Pop, Trendy Paint Ideas, Bright Color Combinations, Energetic Living Room, 2025 Color Trends, Statement Wall Colors, Bold Home Design, CreativePaint Palette, Artistic Interior Style, Colorful Wall Art, Maximalist Color Scheme",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Art-forward warm bedroom / living — terracotta & collected pieces",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726645",
+      "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+      "image_url": "https://i.pinimg.com/1200x/ed/da/8e/edda8e6061d6f8a5c695857cd55ab79a.jpg",
+      "title": "Eclectic Emerald Bathroom with Brass Glow — Modern Boho Spa Vibes",
+      "description": "Transform your bathroom into a modern boho spa with emerald green zellige tiles, brass fixtures, and a natural stone sink. The mix of textures, wood, and warm light creates an artistic, cozy, and timeless look. Salle de bain émeraude éclectique avec robinetterie en laiton, vasque en pierre naturelle et carrelage zellige artisanal. Une ambiance spa chic, chaleureuse et créative inspirée des tendances design 2025.",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Emerald zellige bathroom with brass fixtures",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726635",
+      "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+      "image_url": "https://i.pinimg.com/1200x/d6/06/ce/d606cef3389c2c67b1d21bec8031c221.jpg",
+      "title": null,
+      "description": null,
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Walnut kitchen with deep green vertical tile backsplash",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726622",
+      "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+      "image_url": "https://i.pinimg.com/1200x/81/4d/75/814d75e16a21a6067a55eca913e3af39.jpg",
+      "title": "brazilian modernism",
+      "description": null,
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Art-forward warm bedroom / living — terracotta & collected pieces",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726571",
+      "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+      "image_url": "https://i.pinimg.com/1200x/be/7f/50/be7f50a043ef7bf6eda14abe2fad19fd.jpg",
+      "title": null,
+      "description": null,
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Compact green-tile bathroom with raw wood vanity",
+      "selected_for_mood_board": true
+    }
+  ],
+  "cluster_summary": [
+    {
+      "label": "Emerald zellige bathroom with brass fixtures",
+      "pin_ids": [
+        "1012465559998726645",
+        "1012465559998726635"
+      ],
+      "visual_notes": "Deep glossy emerald zellige tiles laid in stacked/brick patterns, warm brushed brass fittings (shower, sconces, mirrors), layered natural stone or terrazzo shower floors, live botanicals and woven basket textures. Stage with matte-black or dark planter, brass hardware, stone vessel sink, soft warm LED sconces to emphasize glaze depth.",
+      "weight": 0.35
+    },
+    {
+      "label": "Compact green-tile bathroom with raw wood vanity",
+      "pin_ids": [
+        "1012465559998726571"
+      ],
+      "visual_notes": "Narrow vertical/stacked green tiles with high gloss finish paired with a floating reclaimed-wood vanity and rounded brass mirror. Add warm filament bulbs, small hanging plant, and textured woven rug to soften tile reflectivity and create a cozy, spa-like micro-bath.",
+      "weight": 0.25
+    },
+    {
+      "label": "Walnut kitchen with deep green vertical tile backsplash",
+      "pin_ids": [
+        "1012465559998726635"
+      ],
+      "visual_notes": "Warm walnut cabinetry and marble counters combined with deep green, slightly textured vertical subway tiles. Use minimal brass accents (pendant hardware or pulls), pale marble countertops and geometric floor patterning. Stage with wooden cutting boards, matte ceramic canisters and muted greenery.",
+      "weight": 0.2
+    },
+    {
+      "label": "Art-forward warm bedroom / living — terracotta & collected pieces",
+      "pin_ids": [
+        "1012465559998726622",
+        "1012465559998726657"
+      ],
+      "visual_notes": "Mid-century low-profile furniture and gallery-style wall composition with bold terracotta/orange artworks and mixed vintage frames. Layer rugs with tribal motifs, velvet or wool upholstery in rust/brown tones, and sculptural lighting. Stage with curated objects, books, and a few large plants to keep the composition grounded and warm.",
+      "weight": 0.2
+    }
+  ],
+  "floor_plan": {
+    "rooms": [
+      {
+        "room_id": "living_room_nest",
+        "name": "Nest",
+        "room_type": "living_room",
+        "area_estimate": "large",
+        "measured_dimensions": {
+          "width": 12.5,
+          "length": 14.5833,
+          "area": 182.29
+        },
+        "measured_unit": "ft",
+        "windows": "Multiple large exterior windows / bay window along exterior wall",
+        "natural_light": "high",
+        "adjoins": [
+          "dining_room_dine"
+        ],
+        "generation_priority": 1
+      },
+      {
+        "room_id": "dining_room_dine",
+        "name": "Dine",
+        "room_type": "dining_room",
+        "area_estimate": "small",
+        "measured_dimensions": {
+          "width": 7.6667,
+          "length": 9.6667,
+          "area": 74.11
+        },
+        "measured_unit": "ft",
+        "windows": "Bay/exterior windows",
+        "natural_light": "medium",
+        "adjoins": [
+          "living_room_nest"
+        ],
+        "generation_priority": 2
+      },
+      {
+        "room_id": "bedroom_dream_1",
+        "name": "Dream (larger)",
+        "room_type": "bedroom",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 11.6667,
+          "length": 13.6667,
+          "area": 159.44
+        },
+        "measured_unit": "ft",
+        "windows": "Single exterior window(s)",
+        "natural_light": "medium",
+        "adjoins": [],
+        "generation_priority": 3
+      },
+      {
+        "room_id": "bedroom_dream_2",
+        "name": "Dream (smaller)",
+        "room_type": "bedroom",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 11.6667,
+          "length": 12.3333,
+          "area": 143.89
+        },
+        "measured_unit": "ft",
+        "windows": "Exterior window(s) along outer wall",
+        "natural_light": "medium",
+        "adjoins": [],
+        "generation_priority": 4
+      }
+    ],
+    "total_rooms": 4,
+    "layout_type": "open_plan",
+    "confidence": 0.85,
+    "notes": null
+  },
+  "provenance": {
+    "pinterest": {
+      "provider": "apify",
+      "requested_limit": 10,
+      "returned_count": 5,
+      "actor_id": "fatihtahta~pinterest-scraper-search"
+    },
+    "models": {
+      "aesthetic_extraction": "gpt-5-mini",
+      "floor_plan_parsing": "gpt-5-mini"
+    }
+  },
+  "warnings": []
+}

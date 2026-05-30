@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0",
+  "style_id": "warm-japandi-family-nest-8b43cf81",
+  "created_at": "2026-05-10T20:38:07.689Z",
+  "source": {
+    "session_id": "c669b26e-653b-444f-b299-38f1ce568bc7",
+    "handoff_id": "b1349901-9019-4a9f-9eb6-7e52660b72cf",
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+    "floor_plan_url": "file:///Users/quamos/Repos/haus/.haus-cache/floor-plans/a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6.png"
+  },
+  "aesthetic_profile": {
+    "palette": "warm_neutral",
+    "lighting": "soft_ambient",
+    "density": "balanced",
+    "style_era": "japandi",
+    "dominant_colors": [
+      "#EDE6DE",
+      "#D2BFA3",
+      "#B58E61",
+      "#8A6E52",
+      "#6A736A",
+      "#2F3230"
+    ],
+    "mood_words": [
+      "calm minimal warmth",
+      "organic/textural layering",
+      "low-profile seating",
+      "soft ambient glow",
+      "biophilic serenity",
+      "ceramic & woven accents"
+    ],
+    "pinterest_cluster_labels": [
+      "Japandi neutral dining set with woven pendant",
+      "Low-floor Japanese reading/tea nook",
+      "Minimal plant-forward living room with low wood table"
+    ],
+    "confidence": 0.89
+  },
+  "vibe_report": {
+    "aesthetic_name": "Warm Japandi Family Nest",
+    "summary": "Calm, minimal Japandi interiors tuned for a young family: warm neutrals, low-profile furniture, natural materials, and a compact cozy work corner. Prioritize layered textures (linen, jute, hand-thrown ceramics), sculptural plant groupings, and a single woven pendant as a dining focal point. Keep decor minimal and purposeful so sightlines between living, dining and kitchen feel cohesive and uncluttered.",
+    "palette_rationale": "A warm-neutral palette built from Pale Oat (#EDE6DE) and Warm Sand (#D2BFA3) with Muted Clay (#B58E61) and Aged Oak (#8A6E52) accents. Use Moss Gray (#6A736A) and Charcoal (#2F3230) for grounding details. These tones keep the rooms feeling soft and warm while preserving material clarity in video passes.",
+    "lighting_mood": "Soft ambient daylight from bay/exterior windows, supplemented by warm practicals: an oversized woven pendant over dining and warm paper/lantern task light in the reading nook. Derive all directional light from visible openings — windows and the pendant/lamp sources only. Shadows remain graphic but gentle for a cozy editorial look.",
+    "materials": [
+      "light quarter-sawn oak (furniture & simple slatted accents)",
+      "pale linen upholstery",
+      "flatwoven jute and low-pile natural wool rugs",
+      "hand-thrown ceramic vessels (matte finish)",
+      "rattan/woven pendants and poufs",
+      "matte black metal hardware (subtle accents)"
+    ],
+    "textures": [
+      "soft slubby linen",
+      "tight weave jute",
+      "hand-thrown matte ceramics",
+      "warm sawn-wood grain",
+      "woven rattan surface"
+    ],
+    "furniture_language": [
+      "low-profile seating with recessed bases",
+      "simple tapered legs on tables and chairs",
+      "rounded table edges and organic coffee-table forms",
+      "open shelving with vertical spacing for objects",
+      "single sculptural plant groupings rather than many small pots"
+    ],
+    "styling_rules": [
+      "limit tabletop objects to 2–3 sculptural ceramics; avoid busy accessorizing",
+      "use one oversized woven pendant as the dining focal point; no competing ceiling fixtures in the same sightline",
+      "keep textiles tonal; introduce contrast with one Muted Clay accent per room (cushion or vessel)",
+      "place standing desk in living bay but keep it visually minimal — one slim task lamp and 2 curated objects",
+      "maintain vertical wood slat or framed art rhythm — max one small gallery per wall"
+    ],
+    "avoid": [
+      "heavy, dark upholstery that breaks the warm palette",
+      "high-backed, tall furniture that disrupts Japandi low silhouette",
+      "glossy ceramics or metallics that read as flashy",
+      "excessive clutter on shelves or tabletops"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living_room",
+        "headline": "Low-profile family living with a compact work corner",
+        "guidance": "Place the living area around a low wooden coffee table and pale oat linen sofa facing the bay window; integrate a slim standing desk in the bay as the family's cozy work corner. Keep a single large potted plant near the bay to add vertical green without cluttering circulation between living, dining and kitchen.",
+        "must_include": [
+          "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), dark walnut solid-wood recessed base, low back, single long seat cushion, approx 78in width",
+          "organic low coffee table — sculpted oval top in Muted Clay matte ceramic (#B58E61) with short Aged Oak legs (shared object)",
+          "standing desk — slim standing desk, Warm Sand laminate top (#D2BFA3) with matte black metal legs, minimal cable management (shared object)"
+        ],
+        "must_avoid": [
+          "tall armchairs or bulky high-back seating",
+          "bright colored textiles"
+        ]
+      },
+      {
+        "room_id": "dream_bedroom",
+        "headline": "Serene, minimal bedroom with soft daylight",
+        "guidance": "Use low bed platform in Aged Oak, pale linen bedding and two small hand-thrown ceramic bedside vases. Keep a single bookshelf for family storage and a small reading lamp. Maintain calm sightline into adjacent bathroom; avoid tall furniture near the doorway.",
+        "must_include": [
+          "low platform bed in Aged Oak (#8A6E52) with pale oat linen bedding (#EDE6DE)",
+          "bookshelf — medium-height open bookshelf in Aged Oak, 4 shelves, slim vertical profile (user-provided planned object)"
+        ],
+        "must_avoid": [
+          "full-height wardrobes in the sightline to the bathroom",
+          "bright pattern bedding"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Compact, airy kitchen with warm wood touches",
+        "guidance": "Keep counters minimal; use warm oak lower cabinets and matte black hardware. Small window above counter provides directional daylight. Use ceramic bowl or single vase on counter as staging. Avoid large island — circulation to dining must remain clear.",
+        "must_include": [
+          "simple ceramic bowl or hand-thrown vase in Muted Clay on counter",
+          "visible window light as primary directional source"
+        ],
+        "must_avoid": [
+          "large kitchen island or oversized stools that obstruct flow to dining",
+          "bright stainless steel surfaces dominant in frame"
+        ]
+      },
+      {
+        "room_id": "dine_dining_room",
+        "headline": "Intimate Japandi dining — round table and woven pendant",
+        "guidance": "Center a round light-oak dining table with slim tapered legs beneath an oversized woven rattan pendant. Use 4 slim chairs in Warm Sand upholstery and a single sculptural vase on the table. Keep lamp/glow warm to differentiate from daylight while staying cohesive with living area tones.",
+        "must_include": [
+          "round light-oak dining table — 42in diameter, light oak finish, slim tapered legs (shared object)",
+          "oversized woven pendant — rattan woven shade, warm amber inner diffuser, suspended low over table (shared object)",
+          "dining chairs — 4 slim dining chairs, Warm Sand upholstery (#D2BFA3), light oak tapered legs"
+        ],
+        "must_avoid": [
+          "large chandeliers or multiple competing ceiling fixtures",
+          "too-large table ( >48in) that crowds the 7.8ft x 8ft room"
+        ]
+      },
+      {
+        "room_id": "revive_bathroom",
+        "headline": "Small, calm bathroom with frosted window light",
+        "guidance": "Use a simple floating vanity in Aged Oak with matte black hardware, a single round mirror, and a small ceramic soap dispenser. Diffuse light from the frosted window and a warm sconce if needed. Keep visual connection to bedroom tidy—no laundry piles in frame.",
+        "must_include": [
+          "floating vanity in Aged Oak with matte black hardware",
+          "small hand-thrown ceramic soap dispenser in Muted Clay"
+        ],
+        "must_avoid": [
+          "bright clinical whites or high-gloss chrome fixtures",
+          "cluttered counters"
+        ]
+      }
+    ],
+    "confidence": 0.88,
+    "warnings": [
+      "Kitchen and bathroom dimensions were not provided by ML; verify clearances before final staging and camera moves.",
+      "Standing desk in living bay must not block circulation between nest and dine—keep to slim profile and place flush to window."
+    ]
+  },
+  "creative_spec": {
+    "overall_mood": "calm minimal warmth with organic, textural layering",
+    "room_sequence": [
+      "nest_living_room",
+      "dream_bedroom",
+      "taste_kitchen",
+      "dine_dining_room",
+      "revive_bathroom"
+    ],
+    "global_style_notes": [
+      "Preserve architecture and exact layout; verticals must remain true in all image passes and video.",
+      "Derive all directional lighting from visible windows and practical fixtures only—no introduced fill lights from non-visible sources.",
+      "Maintain consistent color temperature across all rooms (warm daylight, ~3200–4000K practicals).",
+      "Use low cinematic contrast with preserved midtone detail for family-friendly readability."
+    ],
+    "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, no color inconsistency between rooms, no mismatched furniture across sightlines",
+    "export_formats": [
+      "16:9",
+      "9:16",
+      "1:1"
+    ]
+  },
+  "pins": [
+    {
+      "pin_id": "1012465559998684270",
+      "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "image_url": "https://i.pinimg.com/1200x/87/c2/ff/87c2ffd657991b8cba7e91b508c13848.jpg",
+      "title": "Japandi Dining Room with Neutral Decor",
+      "description": "A Japandi dining room with neutral décor blends Japanese simplicity and Scandinavian warmth. Soft beige, warm wood, and gentle earth tones create a calm, inviting space. Clean lines, natural materials, and minimal furnishings keep the room feeling open and uncluttered, while subtle textures like linen, ceramic, and light wood add quiet elegance and comfort.",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Japandi neutral dining set with woven pendant",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998684267",
+      "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "image_url": "https://i.pinimg.com/1200x/7e/9f/71/7e9f71efa20a307977036346b7de8cd9.jpg",
+      "title": "Japandi nook area",
+      "description": "Home aesthetics",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Low-floor Japanese reading/tea nook",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998684162",
+      "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "image_url": "https://i.pinimg.com/1200x/10/a5/ce/10a5cea5365b36e587c39a3144cbc8a2.jpg",
+      "title": "Japandi Living Room: Calm Minimal Decor, Natural Wood & Indoor Plants",
+      "description": "Calm Japandi living room inspiration with a light neutral sofa, low wooden coffee table, soft textured rug, and plenty of indoor plants for a serene, balanced space. Minimal wall art, natural materials, and clean lines create an airy, soothing aesthetic—perfect for Japanese style interiors, minimalist living room ideas, and warm neutral home decor. Save for Japandi decor and plant-filled living room styling.",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Minimal plant-forward living room with low wood table",
+      "selected_for_mood_board": true
+    }
+  ],
+  "cluster_summary": [
+    {
+      "label": "Japandi neutral dining set with woven pendant",
+      "pin_ids": [
+        "1012465559998684270"
+      ],
+      "visual_notes": "Round light-oak dining table, slim tapered legs, textured neutral upholstery, oversized woven pendant as focal point, ceramic tableware and hand-thrown vases. Flooring and paneling in pale oak unify the composition—stage with a single sculptural vase, linen place settings, and warm-toned tabletop ceramics.",
+      "weight": 0.4
+    },
+    {
+      "label": "Low-floor Japanese reading/tea nook",
+      "pin_ids": [
+        "1012465559998684267"
+      ],
+      "visual_notes": "Intimate corner with floor cushions and low coffee tray, bamboo/shōji screening, layered natural-fiber rugs and woven poufs. Warm paper/lantern lighting creates deep amber glow—use soft cushions, round woven floor mats, low tray table and minimal potted greenery to recreate cozy scale.",
+      "weight": 0.3
+    },
+    {
+      "label": "Minimal plant-forward living room with low wood table",
+      "pin_ids": [
+        "1012465559998684162"
+      ],
+      "visual_notes": "Low, neutral sofa on wooden base, organic-shaped low coffee table, vertical wood slat accent and sparse framed art. Emphasize neutral textiles, textured rug, and multiple medium potted plants for vertical green accents—keep decor minimal: 2–3 dark ceramic vessels and one sculptural plant grouping.",
+      "weight": 0.3
+    }
+  ],
+  "room_guidance": [
+    {
+      "room_id": "nest_living_room",
+      "headline": "Low-profile family living with a compact work corner",
+      "guidance": "Place the living area around a low wooden coffee table and pale oat linen sofa facing the bay window; integrate a slim standing desk in the bay as the family's cozy work corner. Keep a single large potted plant near the bay to add vertical green without cluttering circulation between living, dining and kitchen.",
+      "must_include": [
+        "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), dark walnut solid-wood recessed base, low back, single long seat cushion, approx 78in width",
+        "organic low coffee table — sculpted oval top in Muted Clay matte ceramic (#B58E61) with short Aged Oak legs (shared object)",
+        "standing desk — slim standing desk, Warm Sand laminate top (#D2BFA3) with matte black metal legs, minimal cable management (shared object)"
+      ],
+      "must_avoid": [
+        "tall armchairs or bulky high-back seating",
+        "bright colored textiles"
+      ]
+    },
+    {
+      "room_id": "dream_bedroom",
+      "headline": "Serene, minimal bedroom with soft daylight",
+      "guidance": "Use low bed platform in Aged Oak, pale linen bedding and two small hand-thrown ceramic bedside vases. Keep a single bookshelf for family storage and a small reading lamp. Maintain calm sightline into adjacent bathroom; avoid tall furniture near the doorway.",
+      "must_include": [
+        "low platform bed in Aged Oak (#8A6E52) with pale oat linen bedding (#EDE6DE)",
+        "bookshelf — medium-height open bookshelf in Aged Oak, 4 shelves, slim vertical profile (user-provided planned object)"
+      ],
+      "must_avoid": [
+        "full-height wardrobes in the sightline to the bathroom",
+        "bright pattern bedding"
+      ]
+    },
+    {
+      "room_id": "taste_kitchen",
+      "headline": "Compact, airy kitchen with warm wood touches",
+      "guidance": "Keep counters minimal; use warm oak lower cabinets and matte black hardware. Small window above counter provides directional daylight. Use ceramic bowl or single vase on counter as staging. Avoid large island — circulation to dining must remain clear.",
+      "must_include": [
+        "simple ceramic bowl or hand-thrown vase in Muted Clay on counter",
+        "visible window light as primary directional source"
+      ],
+      "must_avoid": [
+        "large kitchen island or oversized stools that obstruct flow to dining",
+        "bright stainless steel surfaces dominant in frame"
+      ]
+    },
+    {
+      "room_id": "dine_dining_room",
+      "headline": "Intimate Japandi dining — round table and woven pendant",
+      "guidance": "Center a round light-oak dining table with slim tapered legs beneath an oversized woven rattan pendant. Use 4 slim chairs in Warm Sand upholstery and a single sculptural vase on the table. Keep lamp/glow warm to differentiate from daylight while staying cohesive with living area tones.",
+      "must_include": [
+        "round light-oak dining table — 42in diameter, light oak finish, slim tapered legs (shared object)",
+        "oversized woven pendant — rattan woven shade, warm amber inner diffuser, suspended low over table (shared object)",
+        "dining chairs — 4 slim dining chairs, Warm Sand upholstery (#D2BFA3), light oak tapered legs"
+      ],
+      "must_avoid": [
+        "large chandeliers or multiple competing ceiling fixtures",
+        "too-large table ( >48in) that crowds the 7.8ft x 8ft room"
+      ]
+    },
+    {
+      "room_id": "revive_bathroom",
+      "headline": "Small, calm bathroom with frosted window light",
+      "guidance": "Use a simple floating vanity in Aged Oak with matte black hardware, a single round mirror, and a small ceramic soap dispenser. Diffuse light from the frosted window and a warm sconce if needed. Keep visual connection to bedroom tidy—no laundry piles in frame.",
+      "must_include": [
+        "floating vanity in Aged Oak with matte black hardware",
+        "small hand-thrown ceramic soap dispenser in Muted Clay"
+      ],
+      "must_avoid": [
+        "bright clinical whites or high-gloss chrome fixtures",
+        "cluttered counters"
+      ]
+    }
+  ]
+}

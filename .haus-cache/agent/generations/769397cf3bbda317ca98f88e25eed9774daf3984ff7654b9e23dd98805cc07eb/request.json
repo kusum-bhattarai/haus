@@ -1,0 +1,12 @@
+{
+  "endpoint_id": "fal-ai/nano-banana-2",
+  "params": {
+    "prompt": "Photorealistic editorial interior reference photograph of a Nest. Focus tightly on: sofa, coffee table, area rug, low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), solid oak base stained dark walnut, 18in seat height, recessed tapered legs, low back, no visible feet from side angle, hand-knotted neutral wool rug — 8x10, warm beige tonal weave (#EDE6DE/#D2BFA3), low pile, subtle linear pattern, tall fiddle-leaf fig — approx 6ft Ficus lyrata in matte terracotta pot (muted rust #B58E61), low organic-shaped walnut coffee table — oval 42x22in, matte walnut veneer (#8A6E52), soft rounded edges, 12in height, bookshelf. Styled in japandi aesthetic, warm_neutral palette, soft_ambient lighting. A calm, minimal Japandi palette tuned for a young family — warm neutrals, low-profile furniture, and a few sculptural, tactile accents. Prioritize organic textures, soft ambient light from practical fixtures and windows, and a compact, child-friendly layout with a discreet standing-desk work corner in the bedroom. This image is a visual consistency reference — every detail of the featured furniture and fixtures must be clearly visible and precisely rendered. No people. No visible brand logos. Sharp architectural photography. Luxury real estate staging.",
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

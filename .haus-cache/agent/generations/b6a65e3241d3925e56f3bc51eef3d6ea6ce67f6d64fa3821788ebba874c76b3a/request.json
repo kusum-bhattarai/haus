@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a99ac5b/5AsLsRxri5DgP7wh6eanH_CDTfBOpw.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for a 11.6667 by 12.3333 ft Dream (smaller). Daylight from exterior window for desk area; use desk lamp practical when showing work detail. Keep contrasts moderate to allow texture on wood desk and plant leaves to read. A warm, collected interior blending mid‑century forms with artisanal textures and an earthy palette. Deep emerald accents and terracotta art punctuate warm walnut wood, aged‑brass fixtures, and layered natural textiles to create a botanical‑spa, gallery‑like living environment. Prioritize honest daylight from bay/exterior windows and warm practicals to sculpt texture and glaze. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only Previous failure modes to correct: object_missing, major_style_mismatch. The image generally conveys a cozy and inviting atmosphere suitable for a bedroom; however, key objects such as muted artwork in terracotta or deep green are missing. The standing desk, while present, doesn't appear to fully match the earthy color palette as required, leading to a major style mismatch. The lighting is functional but lacks the desired daylight effect and contrasts. Overall, it would benefit from a revision to meet the specified room characteristics and style more closely.",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

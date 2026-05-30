@@ -190,6 +190,7 @@ function buildStillPrompt({ handoff, roomJob, failureContext, invariants = null 
     : 'Preserve real architectural scale, straight vertical lines, believable furniture proportions, and visible-light-source logic. No people, no pets, no visible brand logos, no impossible window or wall geometry.';
 
   const backgroundConstraintText = backgroundConstraints(staging);
+  const sharedObjectText = sharedObjectConstraints(handoff, roomJob);
 
   return [
     roomJob.dalle?.prompt,
@@ -202,6 +203,7 @@ function buildStillPrompt({ handoff, roomJob, failureContext, invariants = null 
     staging.must_avoid?.length ? `Must avoid: ${staging.must_avoid.join(', ')}.` : null,
     references,
     architecturalConstraints,
+    sharedObjectText,
     backgroundConstraintText,
     retry
   ].filter(Boolean).join(' ');
@@ -215,6 +217,21 @@ function backgroundConstraints(staging) {
   ).join(' ');
 }
 
+function sharedObjectConstraints(handoff, roomJob) {
+  const sharedObjects = handoff.creative_spec?.shared_objects ?? [];
+  if (!sharedObjects.length) return null;
+
+  const relevant = sharedObjects.filter((obj) =>
+    obj.room_ids?.includes(roomJob.room_id) || obj.room_ids?.includes(roomJob.room_type)
+  );
+  if (!relevant.length) return null;
+
+  const lines = relevant.map((obj) =>
+    `${obj.object_name}: ${obj.appearance_spec}`
+  );
+  return `SHARED OBJECT SPECS — render these exactly as specified across all rooms, no variation: ${lines.join('; ')}.`;
+}
+
 function buildAnchoredStillPrompt({ handoff, roomJob, invariants, anchors }) {
   const basePrompt = buildStillPrompt({ handoff, roomJob, failureContext: null, invariants });
   const anchorText = buildAnchorConstraintText(roomJob, anchors);
@@ -223,6 +240,7 @@ function buildAnchoredStillPrompt({ handoff, roomJob, invariants, anchors }) {
 
 function buildEditPrompt({ handoff, roomJob, failureContext, invariants = null, anchorText = null }) {
   const roomScale = dimensionInstruction(handoff, roomJob);
+  const sharedObjectText = sharedObjectConstraints(handoff, roomJob);
 
   const architecturalConstraints = invariants?.length
     ? invariants.join(' ')
@@ -236,6 +254,7 @@ function buildEditPrompt({ handoff, roomJob, failureContext, invariants = null, 
     handoff.vibe_report?.summary,
     selectedReferenceText(handoff, failureContext),
     architecturalConstraints,
+    sharedObjectText,
     anchorText,
     retryText(failureContext)
   ].filter(Boolean).join(' ');
@@ -244,12 +263,14 @@ function buildEditPrompt({ handoff, roomJob, failureContext, invariants = null, 
 function buildVideoPrompt({ handoff, roomJob, motion, failureContext, motionPrompts = null }) {
   const prompts = motionPrompts ?? FALLBACK_MOTION_PROMPTS;
   const roomScale = dimensionInstruction(handoff, roomJob);
+  const sharedObjectText = sharedObjectConstraints(handoff, roomJob);
 
   return [
     prompts[motion] ?? prompts.slow_dolly,
     roomJob.video_generation?.prompt,
     `${roomJob.room_name}, ${handoff.creative_spec?.overall_mood}`,
     roomScale,
+    sharedObjectText,
     'Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.',
     retryText(failureContext)
   ].filter(Boolean).join(' ');

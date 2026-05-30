@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0",
+  "style_id": "japandi-noir-warm-japandi-noir-55b68745",
+  "created_at": "2026-05-10T21:05:18.891Z",
+  "source": {
+    "session_id": "2970fb90-d64f-4315-8450-7d5c38786471",
+    "handoff_id": "65c03a12-1cf4-4be1-a630-bbaa16f37075",
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/dark-interior/",
+    "floor_plan_url": "file:///Users/quamos/Repos/haus/.haus-cache/floor-plans/a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6.png"
+  },
+  "aesthetic_profile": {
+    "palette": "warm_neutral",
+    "lighting": "soft_ambient",
+    "density": "layered",
+    "style_era": "japandi",
+    "dominant_colors": [
+      "#0B0B0B",
+      "#2F2F2F",
+      "#73503A",
+      "#D99A48",
+      "#8F8F8F"
+    ],
+    "mood_words": [
+      "low-key luxury",
+      "calm wabi-sabi",
+      "textural warmth",
+      "intimate ambient glow",
+      "measured minimalism"
+    ],
+    "pinterest_cluster_labels": [
+      "dark minimalist bedroom — black walls + vertical wood slats",
+      "moody luxe bedside styling — brass lamps & layered bedding",
+      "Japandi noir living room — smoked oak slats, shoji screens & bonsai"
+    ],
+    "confidence": 0.91
+  },
+  "vibe_report": {
+    "aesthetic_name": "Japandi Noir — Warm Japandi Noir",
+    "summary": "A measured, low-key luxury Japandi interior: deep matte walls and smoked oak joinery warmed by brass accents, natural textiles and a restrained plant presence. Spaces feel intimate and textural with layered ambient light; styling is sparse, family-ready and includes a compact standing work corner. Prioritize calm sightlines between living, dining and kitchen; keep material and color consistency across shared objects.",
+    "palette_rationale": "A warm-neutral palette anchored in charcoal and smoked oak (#0B0B0B / #2F2F2F / Smoked Oak #73503A) provides the dark, graphic base from the Pinterest cluster. Accents in warm brass (#D99A48) and mid-gray upholstery (#8F8F8F) introduce glow and tactile contrast without brightening the scheme. Use one soft warm-neutral rug tone to ground the floor planes.",
+    "lighting_mood": "Soft ambient with directional window pulls. Primary illumination comes from exterior daylight through bay glazing and a single bedroom window; supplement with warm practicals (aged-brass pendant, brass wall sconces, low-wattage floor lamp) and concealed warm LED cove or ribbed-panel backlight to create an intimate glow. Avoid overhead high-CRI cool white fixtures that break the warm tone.",
+    "materials": [
+      "matte painted walls (deep charcoal/near-black)",
+      "smoked oak joinery and slatted panels (matte finish)",
+      "honed black marble (coffee table)",
+      "low-pile wool-blend rug (warm oat tone)",
+      "charcoal linen upholstery",
+      "aged warm brass metalwork",
+      "matte black steel for task furniture"
+    ],
+    "textures": [
+      "vertical wood slats (smoked oak)",
+      "soft linen and layered bedding",
+      "honed stone surfaces",
+      "subtle woven rug",
+      "unglazed ceramics for plant pots"
+    ],
+    "furniture_language": [
+      "low-profile, rectilinear seating",
+      "slim-profile tables with minimal aprons",
+      "vertical slat backs and open shelving",
+      "compact utilitarian standing desk with concealed cable runs",
+      "curated single-object displays rather than clusters"
+    ],
+    "styling_rules": [
+      "one sculptural metallic accent (aged brass) per vignette",
+      "layer bedding and cushions in 2–3 tonal steps (light gray -> charcoal -> black)",
+      "leave negative space on shelving; use books and 1–2 ceramics per shelf",
+      "place a single bonsai or sculptural plant as organic counterpoint in living/dining sightlines",
+      "keep visible tech minimal and integrated (monitor arm, cable channel)"
+    ],
+    "avoid": [
+      "bright primary colors",
+      "high-gloss finishes that reflect too strongly",
+      "overcrowded shelves or heavy decorative sets",
+      "mismatched furniture visible across open sightlines"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living_room",
+        "headline": "Japandi Noir living hub — low sectional, sculptural coffee, work corner by the bay",
+        "guidance": "Frame the bay window as the primary light source. Anchor the seating on the neutral woven area rug with the low-profile 3-seater sofa and the black marble coffee table centered. Locate the adjustable standing desk + bookshelf at the bay return to form a calm work corner: keep desk facing the window, bookshelf perpendicular to sightline. Add one floor lamp or recessed slat backlight for evening warmth.",
+        "must_include": [
+          "low-profile 3-seater sofa — charcoal slate linen upholstery (Charcoal Slate #2F2F2F), smoked oak tapered legs, low bench form",
+          "black marble coffee table — round monolithic black marble, honed finish (Jet Black #0B0B0B)",
+          "neutral woven area rug — low-pile wool blend in warm oat",
+          "standing desk — compact adjustable-height standing desk, dark-stained oak top, matte black steel T-leg base",
+          "open bookshelf — freestanding smoked oak 5-shelf unit, matte finish",
+          "bonsai plant — small rounded ficus bonsai in unglazed ceramic pot"
+        ],
+        "must_avoid": [
+          "bright table lamps or cool white overheads",
+          "large ottomans that block the bay window sightline",
+          "cluttered desk with exposed cables"
+        ]
+      },
+      {
+        "room_id": "dream_bedroom",
+        "headline": "Moody, calm bedroom — black tactile backdrop, warm brass bedside accents",
+        "guidance": "Use matte charcoal walls with a smoked oak vertical-slatted headboard wall. Keep the bed low and centrally composed under the window. Add layered bedding textures and one brass bedside lamp per side with sculptural ceramics on a single floating shelf. Keep styling minimal: one plant and one framed print max.",
+        "must_include": [
+          "vertical smoked oak slat accent (use same Smoked Oak finish as living joinery)",
+          "layered bedding in light gray and charcoal",
+          "sculptural brass dome bedside lamp (aged warm brass accent)",
+          "neutral woven textiles and one small plant"
+        ],
+        "must_avoid": [
+          "bright patterned rugs",
+          "large metallic photo frames that reflect light",
+          "overhead cool white fixtures"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Compact warm kitchen — smoked oak accents, matte surfaces, visible prep zone",
+        "guidance": "Keep cabinetry matte and low-contrast; use smoked oak open shelves and a short run of countertop under the small window. Visible cooking surfaces should be matte black or dark stone; position small practical pendants only over the prep/island if present. Keep dishware simple and neutral, with one small plant or ceramic as the organic touch.",
+        "must_include": [
+          "smoked oak open shelving (matching Smoked Oak finish)",
+          "muted dark stone or matte black counter for visible prep",
+          "aged warm brass small task sconce or pendant (if pendant over island, match dining pendant finish)"
+        ],
+        "must_avoid": [
+          "bright stainless appliances in high-gloss",
+          "exposed fluorescent strips",
+          "contrasting bright backsplashes"
+        ]
+      },
+      {
+        "room_id": "dine_dining_room",
+        "headline": "Intimate corner dining — compact smoked oak table, single aged-brass pendant, bonsai vignette",
+        "guidance": "Place the rectangular smoked oak dining table close to the bay corner window so daylight sculpts the table surface. Hang the aged warm brass dome pendant centered 60cm above table. Keep seating minimal — 4 slim chairs — and use the same neutral woven rug if the sightline benefits from continuity with the living area.",
+        "must_include": [
+          "rectangular smoked oak dining table — matte smoked oak finish (Smoked Oak #73503A)",
+          "aged warm brass dome pendant — centered over table",
+          "bonsai plant (shared) if visible from living sightline"
+        ],
+        "must_avoid": [
+          "oversized chandeliers",
+          "mismatched dining chairs visible from living room"
+        ]
+      },
+      {
+        "room_id": "revive_bathroom",
+        "headline": "Quiet micro-bath — soft materials, frosted window, minimal monochrome fixtures",
+        "guidance": "Keep finishes matte and restrained. Use warm LED mirror strip or brass sconce for task light, derive ambient light only from the frosted window and practical fixtures. Keep towels and accessories in warm neutral tones.",
+        "must_include": [
+          "matte black or dark stone vanity top",
+          "warm LED mirror or brass sconce (aged warm brass accent)",
+          "neutral towels and single small plant or ceramic"
+        ],
+        "must_avoid": [
+          "bright white tile expanses",
+          "reflective polished chrome fixtures"
+        ]
+      }
+    ],
+    "confidence": 0.86,
+    "warnings": [
+      "Dining footprint is small (7.8 x 8 ft): select a compact table (approx 150 cm length) and slim chairs to prevent blocking the living sightline.",
+      "Kitchen measured dimensions were not provided — avoid oversized islands or appliances that would violate the open-plan sightline scale."
+    ]
+  },
+  "creative_spec": {
+    "overall_mood": "low-key intimate Japandi with warm brass accents and smoked oak discipline",
+    "room_sequence": [
+      "nest_living_room",
+      "dream_bedroom",
+      "taste_kitchen",
+      "dine_dining_room",
+      "revive_bathroom"
+    ],
+    "global_style_notes": [
+      "Preserve exact joinery and layout from the floor plan; do not change window locations or major openings.",
+      "Derive all light direction from visible windows and placed practical fixtures only.",
+      "Maintain identical finish names across rooms: 'Smoked Oak' for wood joinery, 'Charcoal Slate' for main upholstery, 'Jet Black' for honed stone, 'Warm Brass' for metal accents.",
+      "Keep scale believable: low seating heights, compact desk, and human-scale pendant drops."
+    ],
+    "negative_prompt": "no color inconsistency between rooms, no mismatched furniture across sightlines, blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift",
+    "export_formats": [
+      "16:9",
+      "9:16",
+      "1:1"
+    ]
+  },
+  "pins": [
+    {
+      "pin_id": "1012465559998726563",
+      "source_url": "https://www.pinterest.com/tarive22/dark-interior/",
+      "image_url": "https://i.pinimg.com/1200x/7f/df/9e/7fdf9ec235ea3ea3f988f2c8f333e939.jpg",
+      "title": "Dark Bedroom with Wooden Touches.",
+      "description": "Warm, moody tones meet natural wood for a cozy and elegant bedroom.  #DarkBedroom #WoodDetails #CozyHome",
+      "save_count": null,
+      "hashtags": [
+        "darkbedroom",
+        "wooddetails",
+        "cozyhome"
+      ],
+      "cluster_label": "dark minimalist bedroom — black walls + vertical wood slats",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726531",
+      "source_url": "https://www.pinterest.com/tarive22/dark-interior/",
+      "image_url": "https://i.pinimg.com/1200x/fd/16/07/fd1607ee5737fd4e7e5442e29da17978.jpg",
+      "title": "Moody Black Luxe Bedroom — Dark, Cozy & Ultra-Chic 🖤🔥",
+      "description": "Bold black tones and gold accents elevate this modern moody bedroom into a luxury retreat. Save this dramatic and elegant look for your dream room inspiration! #moodybedroom #blackbedroomdecor #modernluxestyle",
+      "save_count": null,
+      "hashtags": [
+        "moodybedroom",
+        "blackbedroomdecor",
+        "modernluxestyle"
+      ],
+      "cluster_label": "moody luxe bedside styling — brass lamps & layered bedding",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726506",
+      "source_url": "https://www.pinterest.com/tarive22/dark-interior/",
+      "image_url": "https://i.pinimg.com/1200x/66/44/0f/66440f59643908d20dedfae5765924a0.jpg",
+      "title": "Japandi Noir Living Room Ideas: Dark Minimal Decor with Black Tadelakt & Smoked Oak (2025 Trend)",
+      "description": "Discover Japandi Noir: a serene, moody living room with matte black tadelakt walls, smoked oak slats, a charcoal linen sectional, and a monolithic black stone coffee table. Warm gray microcement floors, frosted shoji screens, a single bonsai, and soft skylight glow deliver calm, textural minimalism. Save for dark interior design ideas, modern wabi-sabi styling, and Scandinavian–Japanese living room inspiration.",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Japandi noir living room — smoked oak slats, shoji screens & bonsai",
+      "selected_for_mood_board": true
+    }
+  ],
+  "cluster_summary": [
+    {
+      "label": "dark minimalist bedroom — black walls + vertical wood slats",
+      "pin_ids": [
+        "1012465559998726563"
+      ],
+      "visual_notes": "Matte black walls and ceiling, vertical walnut/smoked oak slat accent, low wood platform bed and matching nightstands, charcoal linens, thin pendant lights and warm cove LED. Stage with a single small plant, minimal bedside objects, and expansive glazing to balance heaviness.",
+      "weight": 0.34
+    },
+    {
+      "label": "moody luxe bedside styling — brass lamps & layered bedding",
+      "pin_ids": [
+        "1012465559998726531"
+      ],
+      "visual_notes": "Upholstered dark headboard, layered neutrals (light gray sheets + charcoal duvet), sculptural brass dome bedside lamps, floating shelves with curated ceramics/art, recessed LED strip behind ribbed panel. Stage with textured throws and 1–2 sculptural metallic accents for warmth.",
+      "weight": 0.33
+    },
+    {
+      "label": "Japandi noir living room — smoked oak slats, shoji screens & bonsai",
+      "pin_ids": [
+        "1012465559998726506"
+      ],
+      "visual_notes": "Matte black tadelakt or painted walls, smoked oak vertical slats, low charcoal linen sectional, monolithic black marble coffee table, frosted shoji screens and a single bonsai for organic focus. Stage with a neutral woven rug, low clutter, and tactile cushions to emphasize calm minimalism.",
+      "weight": 0.33
+    }
+  ],
+  "room_guidance": [
+    {
+      "room_id": "nest_living_room",
+      "headline": "Japandi Noir living hub — low sectional, sculptural coffee, work corner by the bay",
+      "guidance": "Frame the bay window as the primary light source. Anchor the seating on the neutral woven area rug with the low-profile 3-seater sofa and the black marble coffee table centered. Locate the adjustable standing desk + bookshelf at the bay return to form a calm work corner: keep desk facing the window, bookshelf perpendicular to sightline. Add one floor lamp or recessed slat backlight for evening warmth.",
+      "must_include": [
+        "low-profile 3-seater sofa — charcoal slate linen upholstery (Charcoal Slate #2F2F2F), smoked oak tapered legs, low bench form",
+        "black marble coffee table — round monolithic black marble, honed finish (Jet Black #0B0B0B)",
+        "neutral woven area rug — low-pile wool blend in warm oat",
+        "standing desk — compact adjustable-height standing desk, dark-stained oak top, matte black steel T-leg base",
+        "open bookshelf — freestanding smoked oak 5-shelf unit, matte finish",
+        "bonsai plant — small rounded ficus bonsai in unglazed ceramic pot"
+      ],
+      "must_avoid": [
+        "bright table lamps or cool white overheads",
+        "large ottomans that block the bay window sightline",
+        "cluttered desk with exposed cables"
+      ]
+    },
+    {
+      "room_id": "dream_bedroom",
+      "headline": "Moody, calm bedroom — black tactile backdrop, warm brass bedside accents",
+      "guidance": "Use matte charcoal walls with a smoked oak vertical-slatted headboard wall. Keep the bed low and centrally composed under the window. Add layered bedding textures and one brass bedside lamp per side with sculptural ceramics on a single floating shelf. Keep styling minimal: one plant and one framed print max.",
+      "must_include": [
+        "vertical smoked oak slat accent (use same Smoked Oak finish as living joinery)",
+        "layered bedding in light gray and charcoal",
+        "sculptural brass dome bedside lamp (aged warm brass accent)",
+        "neutral woven textiles and one small plant"
+      ],
+      "must_avoid": [
+        "bright patterned rugs",
+        "large metallic photo frames that reflect light",
+        "overhead cool white fixtures"
+      ]
+    },
+    {
+      "room_id": "taste_kitchen",
+      "headline": "Compact warm kitchen — smoked oak accents, matte surfaces, visible prep zone",
+      "guidance": "Keep cabinetry matte and low-contrast; use smoked oak open shelves and a short run of countertop under the small window. Visible cooking surfaces should be matte black or dark stone; position small practical pendants only over the prep/island if present. Keep dishware simple and neutral, with one small plant or ceramic as the organic touch.",
+      "must_include": [
+        "smoked oak open shelving (matching Smoked Oak finish)",
+        "muted dark stone or matte black counter for visible prep",
+        "aged warm brass small task sconce or pendant (if pendant over island, match dining pendant finish)"
+      ],
+      "must_avoid": [
+        "bright stainless appliances in high-gloss",
+        "exposed fluorescent strips",
+        "contrasting bright backsplashes"
+      ]
+    },
+    {
+      "room_id": "dine_dining_room",
+      "headline": "Intimate corner dining — compact smoked oak table, single aged-brass pendant, bonsai vignette",
+      "guidance": "Place the rectangular smoked oak dining table close to the bay corner window so daylight sculpts the table surface. Hang the aged warm brass dome pendant centered 60cm above table. Keep seating minimal — 4 slim chairs — and use the same neutral woven rug if the sightline benefits from continuity with the living area.",
+      "must_include": [
+        "rectangular smoked oak dining table — matte smoked oak finish (Smoked Oak #73503A)",
+        "aged warm brass dome pendant — centered over table",
+        "bonsai plant (shared) if visible from living sightline"
+      ],
+      "must_avoid": [
+        "oversized chandeliers",
+        "mismatched dining chairs visible from living room"
+      ]
+    },
+    {
+      "room_id": "revive_bathroom",
+      "headline": "Quiet micro-bath — soft materials, frosted window, minimal monochrome fixtures",
+      "guidance": "Keep finishes matte and restrained. Use warm LED mirror strip or brass sconce for task light, derive ambient light only from the frosted window and practical fixtures. Keep towels and accessories in warm neutral tones.",
+      "must_include": [
+        "matte black or dark stone vanity top",
+        "warm LED mirror or brass sconce (aged warm brass accent)",
+        "neutral towels and single small plant or ceramic"
+      ],
+      "must_avoid": [
+        "bright white tile expanses",
+        "reflective polished chrome fixtures"
+      ]
+    }
+  ]
+}

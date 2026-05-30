@@ -1,0 +1,268 @@
+{
+  "vibe_report": {
+    "aesthetic_name": "Warm Japandi Family Nest",
+    "summary": "Calm, minimal Japandi interiors tuned for a young family: warm neutrals, low-profile furniture, natural materials, and a compact cozy work corner. Prioritize layered textures (linen, jute, hand-thrown ceramics), sculptural plant groupings, and a single woven pendant as a dining focal point. Keep decor minimal and purposeful so sightlines between living, dining and kitchen feel cohesive and uncluttered.",
+    "palette_rationale": "A warm-neutral palette built from Pale Oat (#EDE6DE) and Warm Sand (#D2BFA3) with Muted Clay (#B58E61) and Aged Oak (#8A6E52) accents. Use Moss Gray (#6A736A) and Charcoal (#2F3230) for grounding details. These tones keep the rooms feeling soft and warm while preserving material clarity in video passes.",
+    "lighting_mood": "Soft ambient daylight from bay/exterior windows, supplemented by warm practicals: an oversized woven pendant over dining and warm paper/lantern task light in the reading nook. Derive all directional light from visible openings — windows and the pendant/lamp sources only. Shadows remain graphic but gentle for a cozy editorial look.",
+    "materials": [
+      "light quarter-sawn oak (furniture & simple slatted accents)",
+      "pale linen upholstery",
+      "flatwoven jute and low-pile natural wool rugs",
+      "hand-thrown ceramic vessels (matte finish)",
+      "rattan/woven pendants and poufs",
+      "matte black metal hardware (subtle accents)"
+    ],
+    "textures": [
+      "soft slubby linen",
+      "tight weave jute",
+      "hand-thrown matte ceramics",
+      "warm sawn-wood grain",
+      "woven rattan surface"
+    ],
+    "furniture_language": [
+      "low-profile seating with recessed bases",
+      "simple tapered legs on tables and chairs",
+      "rounded table edges and organic coffee-table forms",
+      "open shelving with vertical spacing for objects",
+      "single sculptural plant groupings rather than many small pots"
+    ],
+    "styling_rules": [
+      "limit tabletop objects to 2–3 sculptural ceramics; avoid busy accessorizing",
+      "use one oversized woven pendant as the dining focal point; no competing ceiling fixtures in the same sightline",
+      "keep textiles tonal; introduce contrast with one Muted Clay accent per room (cushion or vessel)",
+      "place standing desk in living bay but keep it visually minimal — one slim task lamp and 2 curated objects",
+      "maintain vertical wood slat or framed art rhythm — max one small gallery per wall"
+    ],
+    "avoid": [
+      "heavy, dark upholstery that breaks the warm palette",
+      "high-backed, tall furniture that disrupts Japandi low silhouette",
+      "glossy ceramics or metallics that read as flashy",
+      "excessive clutter on shelves or tabletops"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living_room",
+        "headline": "Low-profile family living with a compact work corner",
+        "guidance": "Place the living area around a low wooden coffee table and pale oat linen sofa facing the bay window; integrate a slim standing desk in the bay as the family's cozy work corner. Keep a single large potted plant near the bay to add vertical green without cluttering circulation between living, dining and kitchen.",
+        "must_include": [
+          "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), dark walnut solid-wood recessed base, low back, single long seat cushion, approx 78in width",
+          "organic low coffee table — sculpted oval top in Muted Clay matte ceramic (#B58E61) with short Aged Oak legs (shared object)",
+          "standing desk — slim standing desk, Warm Sand laminate top (#D2BFA3) with matte black metal legs, minimal cable management (shared object)"
+        ],
+        "must_avoid": [
+          "tall armchairs or bulky high-back seating",
+          "bright colored textiles"
+        ]
+      },
+      {
+        "room_id": "dream_bedroom",
+        "headline": "Serene, minimal bedroom with soft daylight",
+        "guidance": "Use low bed platform in Aged Oak, pale linen bedding and two small hand-thrown ceramic bedside vases. Keep a single bookshelf for family storage and a small reading lamp. Maintain calm sightline into adjacent bathroom; avoid tall furniture near the doorway.",
+        "must_include": [
+          "low platform bed in Aged Oak (#8A6E52) with pale oat linen bedding (#EDE6DE)",
+          "bookshelf — medium-height open bookshelf in Aged Oak, 4 shelves, slim vertical profile (user-provided planned object)"
+        ],
+        "must_avoid": [
+          "full-height wardrobes in the sightline to the bathroom",
+          "bright pattern bedding"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Compact, airy kitchen with warm wood touches",
+        "guidance": "Keep counters minimal; use warm oak lower cabinets and matte black hardware. Small window above counter provides directional daylight. Use ceramic bowl or single vase on counter as staging. Avoid large island — circulation to dining must remain clear.",
+        "must_include": [
+          "simple ceramic bowl or hand-thrown vase in Muted Clay on counter",
+          "visible window light as primary directional source"
+        ],
+        "must_avoid": [
+          "large kitchen island or oversized stools that obstruct flow to dining",
+          "bright stainless steel surfaces dominant in frame"
+        ]
+      },
+      {
+        "room_id": "dine_dining_room",
+        "headline": "Intimate Japandi dining — round table and woven pendant",
+        "guidance": "Center a round light-oak dining table with slim tapered legs beneath an oversized woven rattan pendant. Use 4 slim chairs in Warm Sand upholstery and a single sculptural vase on the table. Keep lamp/glow warm to differentiate from daylight while staying cohesive with living area tones.",
+        "must_include": [
+          "round light-oak dining table — 42in diameter, light oak finish, slim tapered legs (shared object)",
+          "oversized woven pendant — rattan woven shade, warm amber inner diffuser, suspended low over table (shared object)",
+          "dining chairs — 4 slim dining chairs, Warm Sand upholstery (#D2BFA3), light oak tapered legs"
+        ],
+        "must_avoid": [
+          "large chandeliers or multiple competing ceiling fixtures",
+          "too-large table ( >48in) that crowds the 7.8ft x 8ft room"
+        ]
+      },
+      {
+        "room_id": "revive_bathroom",
+        "headline": "Small, calm bathroom with frosted window light",
+        "guidance": "Use a simple floating vanity in Aged Oak with matte black hardware, a single round mirror, and a small ceramic soap dispenser. Diffuse light from the frosted window and a warm sconce if needed. Keep visual connection to bedroom tidy—no laundry piles in frame.",
+        "must_include": [
+          "floating vanity in Aged Oak with matte black hardware",
+          "small hand-thrown ceramic soap dispenser in Muted Clay"
+        ],
+        "must_avoid": [
+          "bright clinical whites or high-gloss chrome fixtures",
+          "cluttered counters"
+        ]
+      }
+    ],
+    "confidence": 0.88,
+    "warnings": [
+      "Kitchen and bathroom dimensions were not provided by ML; verify clearances before final staging and camera moves.",
+      "Standing desk in living bay must not block circulation between nest and dine—keep to slim profile and place flush to window."
+    ]
+  },
+  "overall_mood": "calm minimal warmth with organic, textural layering",
+  "global_style_notes": [
+    "Preserve architecture and exact layout; verticals must remain true in all image passes and video.",
+    "Derive all directional lighting from visible windows and practical fixtures only—no introduced fill lights from non-visible sources.",
+    "Maintain consistent color temperature across all rooms (warm daylight, ~3200–4000K practicals).",
+    "Use low cinematic contrast with preserved midtone detail for family-friendly readability."
+  ],
+  "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, no color inconsistency between rooms, no mismatched furniture across sightlines",
+  "room_plans": [
+    {
+      "room_id": "nest_living_room",
+      "lighting_instruction": "Primary daylight from bay window on exterior wall; supplement with a warm paper lantern floor lamp near the reading/work corner. Directional light should create soft, graphic shadows across the sofa and rug. No added top-down studio lights. Maintain neutral white balance with slight warm cast.",
+      "dalle_scene_details": "Wide-angle interior view of a medium living room with bay window providing bright soft daylight. Place the low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), dark walnut solid-wood recessed base, low back, single long seat cushion, approx 78in width — oriented toward the bay. Include the organic low coffee table — sculpted oval top in Muted Clay matte ceramic (#B58E61) with short Aged Oak legs (shared object) centered on an 8x10 flatwoven jute rug in Warm Sand. Add the standing desk — slim standing desk, Warm Sand laminate top (#D2BFA3) with matte black metal legs, minimal cable management (shared object) — flush in the bay window corner as a compact work corner with a slim task lamp. Include one large potted Ficus in Moss Gray ceramic planter near the bay. Keep walls pale (Pale Oat #EDE6DE) with one vertical wood-slat accent in Aged Oak on the left wall. Styling: two hand-thrown ceramic vessels in Muted Clay on the coffee table, one folded linen throw in Warm Sand on sofa. Ensure scale: sofa centered in room, 3ft circulation to dining opening.",
+      "video_prompt": "Wide interior shot with a slow and smooth dolly in. Directional daylight from bay window shifts gently across sofa and rug, soft shadows move across textured surfaces, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), dark walnut solid-wood recessed base, low back, single long seat cushion, approx 78in width",
+        "organic low coffee table — sculpted oval top in Muted Clay matte ceramic (#B58E61) with short Aged Oak legs (shared object)",
+        "standing desk — slim standing desk, Warm Sand laminate top (#D2BFA3) with matte black metal legs, minimal cable management (shared object)",
+        "8x10 flatwoven jute rug — Warm Sand (#D2BFA3)",
+        "large potted Ficus in Moss Gray ceramic planter (#6A736A)"
+      ],
+      "must_avoid": [
+        "tall or bulky desks that block the bay",
+        "bright accent colors that break palette"
+      ]
+    },
+    {
+      "room_id": "dine_dining_room",
+      "lighting_instruction": "High daylight from bay-style multi-pane window on exterior corner is the primary source. The oversized woven pendant (practical fixture) provides warm ambient glow for evening frames—pendant light should read warmer and slightly dimmer than daylight, producing soft, localized shadow under the table.",
+      "dalle_scene_details": "Tight-to-wide shot of a small dining room anchored by the round light-oak dining table — 42in diameter, light oak finish, slim tapered legs (shared object). Four slim dining chairs in Warm Sand upholstery (#D2BFA3) with light oak tapered legs surround the table. A single oversized woven pendant — rattan woven shade, warm amber inner diffuser, suspended low over table (shared object) — is centered above. One sculptural hand-thrown ceramic vase in Muted Clay sits on the table. Floor is pale oak; wall behind the table keeps minimal art (one small framed neutral print). Sightline to living room should reveal the edge of the organic low coffee table (shared object) and the pale oat sofa back in the background to ensure cross-room continuity.",
+      "video_prompt": "Very slow truck right, camera slides laterally to reveal the round dining table and woven pendant, daylight from bay window moves across table surface, pendant emits warm glow, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "orbital_pan",
+      "duration_seconds": 5,
+      "must_include": [
+        "round light-oak dining table — 42in diameter, light oak finish, slim tapered legs (shared object)",
+        "oversized woven pendant — rattan woven shade, warm amber inner diffuser, suspended low over table (shared object)",
+        "dining chairs — 4 slim dining chairs, Warm Sand upholstery (#D2BFA3), light oak tapered legs",
+        "visibility of organic low coffee table — sculpted oval top in Muted Clay matte ceramic (#B58E61) with short Aged Oak legs (shared object) in background sightline"
+      ],
+      "must_avoid": [
+        "table larger than 42–48in that crowds room",
+        "additional ceiling fixtures in same sightline"
+      ]
+    },
+    {
+      "room_id": "taste_kitchen",
+      "lighting_instruction": "Natural light through small counter window is the directional source; supplemental under-cabinet task lighting is practical and should be cool-to-neutral. No overhead studio lights. Maintain warm oak cabinetry with matte black hardware absorbing some shadow; keep counters minimally staged.",
+      "dalle_scene_details": "Compact kitchen view with warm oak lower cabinets and matte black hardware. Small frosted/clear window above counter provides directional daylight. Place a single hand-thrown ceramic bowl in Muted Clay on the counter near the sink. Keep surfaces clear; visible sightline toward dining shows the edge of the round light-oak dining table (shared object) and the woven pendant above it. Ensure believable clearance between counter and dining path; do not stage an island.",
+      "video_prompt": "Super smooth camera glides horizontally from right to left, parallel path revealing kitchen counter and then dining reveal, daylight from small window shifts across surfaces, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "hand-thrown ceramic bowl in Muted Clay on counter",
+        "visible sightline to round light-oak dining table — 42in diameter (shared object) and woven pendant (shared object)"
+      ],
+      "must_avoid": [
+        "introducing an island or large stools",
+        "bright stainless reflections dominating frame"
+      ]
+    },
+    {
+      "room_id": "dream_bedroom",
+      "lighting_instruction": "Medium daylight from a single exterior window on the top wall is primary. Use a small warm reading lamp at bedside for mood frames. Keep shadows soft; avoid introducing extra directional lights not motivated by practicals.",
+      "dalle_scene_details": "Bedroom frame with low platform bed in Aged Oak (#8A6E52) dressed in pale oat linen bedding (#EDE6DE). Place a medium-height open bookshelf — medium-height open bookshelf in Aged Oak, 4 shelves, slim vertical profile — against the wall near the doorway. Include two small hand-thrown ceramic vases in Muted Clay on the bedside. Maintain tidy sightline to Revive bathroom door; avoid tall items near that opening. Flooring remains pale oak; small woven pouf in Warm Sand sits at foot of bed for texture.",
+      "video_prompt": "Super smooth camera glides slowly from bed toward doorway (truck left to right), daylight through bedroom window shifts gently across bedding, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "orbital_pan",
+      "duration_seconds": 5,
+      "must_include": [
+        "low platform bed in Aged Oak (#8A6E52) with pale oat linen bedding (#EDE6DE)",
+        "bookshelf — medium-height open bookshelf in Aged Oak, 4 shelves, slim vertical profile",
+        "two small hand-thrown ceramic vases in Muted Clay on bedside table"
+      ],
+      "must_avoid": [
+        "placing tall storage units near bathroom doorway",
+        "bright patterned textiles"
+      ]
+    },
+    {
+      "room_id": "revive_bathroom",
+      "lighting_instruction": "Primary soft diffuse light via the small frosted window near tub; add a warm sconce next to the mirror if needed for evening frames. Avoid directional light from non-visible sources. Keep reflections muted with matte finishes.",
+      "dalle_scene_details": "Small calm bathroom with floating vanity in Aged Oak and matte black hardware. Round mirror above vanity; small hand-thrown ceramic soap dispenser in Muted Clay on the vanity. Frosted window near tub provides diffuse soft light. Keep towels folded and minimal; maintain tidy doorway sightline to bedroom.",
+      "video_prompt": "Super smooth camera moves forward in straight line through space (dolly in), soft diffused light from frosted window shifts across vanity, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "floating vanity in Aged Oak with matte black hardware",
+        "hand-thrown ceramic soap dispenser in Muted Clay"
+      ],
+      "must_avoid": [
+        "bright clinical fixtures or high-gloss chrome",
+        "cluttered counters or towels on floor"
+      ]
+    }
+  ],
+  "shared_objects": [
+    {
+      "object_name": "low-profile 3-seater sofa",
+      "appearance_spec": "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), dark walnut solid-wood recessed base, low back, single long seat cushion, approx 78in width, no visible feet from side angle",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    },
+    {
+      "object_name": "organic low coffee table",
+      "appearance_spec": "organic low coffee table — sculpted oval top in Muted Clay matte ceramic (#B58E61) with short Aged Oak legs (Aged Oak #8A6E52), approx 44in long, low profile",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    },
+    {
+      "object_name": "round light-oak dining table",
+      "appearance_spec": "round light-oak dining table — 42in diameter, light oak finish (Aged Oak family, lighter tone), slim tapered legs, simple apron-less profile",
+      "room_ids": [
+        "dine_dining_room",
+        "taste_kitchen",
+        "nest_living_room"
+      ]
+    },
+    {
+      "object_name": "oversized woven pendant",
+      "appearance_spec": "oversized woven pendant — natural rattan woven shade, warm amber inner diffuser, suspended low (~28–32in above table), warm color temperature relative to daylight, matte natural finish",
+      "room_ids": [
+        "dine_dining_room",
+        "nest_living_room"
+      ]
+    },
+    {
+      "object_name": "standing desk",
+      "appearance_spec": "standing desk — slim standing desk, Warm Sand laminate top (#D2BFA3), matte black metal legs, narrow 42in width, minimal cable management, flush-fit to window bay",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    },
+    {
+      "object_name": "8x10 flatwoven jute rug",
+      "appearance_spec": "flatwoven jute rug — 8ft x 10ft, Warm Sand (#D2BFA3), tight weave, low pile, natural fiber edges",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    }
+  ],
+  "warnings": [
+    "Kitchen and bathroom measured dimensions are estimated—verify clearances and camera lens choices to avoid composition or occlusion issues.",
+    "Because living/dining/kitchen share sightlines, ensure the shared object specs are used verbatim in all staging assets and renders to avoid visible mismatches across shots."
+  ]
+}

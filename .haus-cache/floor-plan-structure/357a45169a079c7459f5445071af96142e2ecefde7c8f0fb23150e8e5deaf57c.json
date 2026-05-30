@@ -1,0 +1,76 @@
+{
+  "rooms": [
+    {
+      "room_id": "living_room_nest",
+      "name": "Nest",
+      "room_type": "living_room",
+      "area_estimate": "large",
+      "measured_dimensions": {
+        "width": 12.5,
+        "length": 14.5833,
+        "area": 182.29
+      },
+      "measured_unit": "ft",
+      "windows": "Multiple large exterior windows / bay window along exterior wall",
+      "natural_light": "high",
+      "adjoins": [
+        "dining_room_dine"
+      ],
+      "generation_priority": 1
+    },
+    {
+      "room_id": "dining_room_dine",
+      "name": "Dine",
+      "room_type": "dining_room",
+      "area_estimate": "small",
+      "measured_dimensions": {
+        "width": 7.6667,
+        "length": 9.6667,
+        "area": 74.11
+      },
+      "measured_unit": "ft",
+      "windows": "Bay/exterior windows",
+      "natural_light": "medium",
+      "adjoins": [
+        "living_room_nest"
+      ],
+      "generation_priority": 2
+    },
+    {
+      "room_id": "bedroom_dream_1",
+      "name": "Dream (larger)",
+      "room_type": "bedroom",
+      "area_estimate": "medium",
+      "measured_dimensions": {
+        "width": 11.6667,
+        "length": 13.6667,
+        "area": 159.44
+      },
+      "measured_unit": "ft",
+      "windows": "Single exterior window(s)",
+      "natural_light": "medium",
+      "adjoins": [],
+      "generation_priority": 3
+    },
+    {
+      "room_id": "bedroom_dream_2",
+      "name": "Dream (smaller)",
+      "room_type": "bedroom",
+      "area_estimate": "medium",
+      "measured_dimensions": {
+        "width": 11.6667,
+        "length": 12.3333,
+        "area": 143.89
+      },
+      "measured_unit": "ft",
+      "windows": "Exterior window(s) along outer wall",
+      "natural_light": "medium",
+      "adjoins": [],
+      "generation_priority": 4
+    }
+  ],
+  "total_rooms": 4,
+  "layout_type": "open_plan",
+  "confidence": 0.85,
+  "notes": null
+}

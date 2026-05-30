@@ -86,9 +86,28 @@ export const CREATIVE_PLAN_SCHEMA = {
         }
       }
     },
+    shared_objects: {
+      type: 'array',
+      items: {
+        type: 'object',
+        additionalProperties: false,
+        required: ['object_name', 'appearance_spec', 'room_ids'],
+        properties: {
+          object_name: { type: 'string' },
+          appearance_spec: { type: 'string' },
+          room_ids: { type: 'array', items: { type: 'string' } }
+        }
+      }
+    },
     warnings: { type: 'array', items: { type: 'string' } }
   }
 };
+
+// Required top-level fields must include shared_objects
+CREATIVE_PLAN_SCHEMA.required = [
+  'vibe_report', 'overall_mood', 'global_style_notes', 'negative_prompt',
+  'room_plans', 'shared_objects', 'warnings'
+];
 
 export async function createCreativePlan({
   profile,
@@ -126,8 +145,16 @@ export async function createCreativePlan({
     'Turn Pinterest aesthetic intelligence and floor plan structure into a structured vibe report plus room-level generation direction.',
     'Do not generate final DALL-E prompts; provide scene details that code can wrap in a consistent production template.',
     'Respect measured dimensions and room types. Avoid impossible staging.',
+    '',
+    'CROSS-ROOM OBJECT CONSISTENCY — CRITICAL:',
+    'Open-plan apartments share sightlines between rooms: living room ↔ dining, dining ↔ kitchen, bedroom ↔ bathroom.',
+    'Any object visible from more than one room (sofa, dining table, pendant light, kitchen island, plant, vase, rug, coffee table) must be described ONCE with a precise appearance spec and listed in shared_objects.',
+    'The appearance_spec must pin: exact color name, material/finish, form factor. Example: "low-profile 3-seater sofa — pale oat linen upholstery, dark walnut tapered legs, no visible feet from side angle".',
+    'Every room\'s dalle_scene_details must then reference shared objects by their exact spec — never re-describe the same object differently.',
+    'The negative_prompt must include: "no color inconsistency between rooms, no mismatched furniture across sightlines".',
+    '',
     'Return only schema-compliant JSON.'
-  ].join(' ');
+  ].join('\n');
 
   const instructions = skillInstructions
     ? `${baseInstructions}\n\n${skillInstructions}`

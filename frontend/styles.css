@@ -377,11 +377,15 @@ dl {
 .plan-card-body dl,
 .vibe-details {
   display: grid;
-  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
-.plan-card-body dl div,
-.vibe-details div {
+.plan-card-body dl div {
   display: flex;
   justify-content: space-between;
   gap: 12px;
@@ -389,15 +393,28 @@ dl {
   padding-top: 8px;
 }
 
+.vibe-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px;
+  background: var(--surface);
+}
+
 dt {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 dd {
   margin: 0;
-  text-align: right;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--charcoal);
+  line-height: 1.3;
 }
 
 .workspace-header {
@@ -416,7 +433,6 @@ dd {
 
 .two-column,
 .before-after-grid,
-.results-grid,
 .agent-layout,
 .progress-layout {
   display: grid;
@@ -426,6 +442,7 @@ dd {
 
 .reference-gallery {
   padding: 18px;
+  margin-top: 18px;
 }
 
 .reference-gallery-header {
@@ -533,8 +550,18 @@ dd {
 .personalization-panel h3,
 .vibe-report h3 {
   margin: 0;
-  font-size: 22px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
 }
+
+.vibe-report > h3       { grid-area: eyebrow; }
+.vibe-report .vibe-name { grid-area: name; margin: 10px 0 6px; }
+.vibe-report > p        { grid-area: summary; margin: 0; }
+.vibe-report .palette-row { grid-area: palette; margin: 16px 0 0; }
+.vibe-report .vibe-details { grid-area: details; align-self: center; }
 
 .field-help {
   color: var(--muted);
@@ -830,11 +857,21 @@ legend {
 }
 
 .vibe-report {
-  padding: 22px;
+  padding: 28px 32px;
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-areas:
+    "eyebrow  eyebrow"
+    "name     details"
+    "summary  details"
+    "palette  details";
+  column-gap: 48px;
+  align-items: start;
 }
 
 .vibe-name {
-  margin: 14px 0 8px;
+  margin: 10px 0 6px;
   color: var(--accent-dark);
   font-size: 24px;
   font-weight: 900;
@@ -849,7 +886,7 @@ legend {
 .palette-row {
   display: flex;
   gap: 8px;
-  margin: 18px 0;
+  margin: 16px 0 0;
 }
 
 .palette-row span {
@@ -1253,11 +1290,19 @@ legend {
   .section-grid,
   .two-column,
   .before-after-grid,
-  .results-grid,
-  .room-focus-panel,
   .agent-layout,
   .progress-layout {
     grid-template-columns: 1fr;
+  }
+
+  .vibe-report {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "eyebrow"
+      "name"
+      "summary"
+      "palette"
+      "details";
   }
 
   .floorplan-grid,
@@ -1418,5 +1463,303 @@ legend {
   .editor-controls,
   .scene-edit-card {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Landing section ──────────────────────────────────────────────────────── */
+
+.landing-shell {
+  width: 100%;
+  background: #0b1512;
+  color: #fff;
+}
+
+/* Hero */
+.landing-hero {
+  position: relative;
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 96px 0 72px;
+}
+
+.landing-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 32px;
+}
+
+.landing-headline {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+  margin: 0 0 32px;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+
+.lh-primary {
+  display: block;
+  font-size: clamp(54px, 8vw, 112px);
+  color: #fff;
+}
+
+.lh-secondary {
+  display: block;
+  font-size: clamp(54px, 8vw, 112px);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.landing-subtext {
+  max-width: 560px;
+  margin: 0 0 44px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.landing-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 28px;
+  height: 52px;
+  border: none;
+  border-radius: 0;
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.landing-cta:hover {
+  background: var(--accent-dark);
+}
+
+.landing-hero-rule {
+  margin-top: 72px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold) 0%, rgba(183, 139, 75, 0.18) 60%, transparent 100%);
+}
+
+/* Aesthetics section */
+.landing-aesthetics-section {
+  width: min(1180px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 72px 0 96px;
+}
+
+.landing-section-header {
+  margin-bottom: 48px;
+}
+
+.landing-section-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.landing-section-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(26px, 3.5vw, 42px);
+  line-height: 1.1;
+  margin: 0 0 16px;
+  max-width: 740px;
+  color: #fff;
+}
+
+.landing-section-desc {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Demo grid */
+.aesthetic-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.aesthetic-demo-loading {
+  grid-column: 1 / -1;
+  padding: 48px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Individual card */
+.aesthetic-demo-card {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  cursor: default;
+  background: #1a2420;
+}
+
+.aesthetic-demo-card:hover .aesthetic-demo-media {
+  transform: scale(1.03);
+}
+
+.aesthetic-demo-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.aesthetic-demo-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.45) 38%,
+    rgba(0, 0, 0, 0.08) 70%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.aesthetic-demo-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 22px 18px;
+}
+
+.aesthetic-demo-name {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+.aesthetic-demo-summary {
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.62);
+  margin: 0 0 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.aesthetic-demo-room-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+/* Room cycling dots */
+.aesthetic-demo-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.aesthetic-dot {
+  height: 2px;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.25);
+  transition: background 0.2s;
+  max-width: 32px;
+}
+
+.aesthetic-dot.is-active {
+  background: var(--gold);
+}
+
+/* No-video still card */
+.aesthetic-demo-card.is-stills .aesthetic-demo-media {
+  animation: kenburns 8s ease-in-out infinite alternate;
+}
+
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.07) translate(-1%, -1%); }
+}
+
+.aesthetic-demo-card.is-stills:hover .aesthetic-demo-media {
+  animation-play-state: paused;
+}
+
+/* Placeholder for not-yet-generated aesthetics */
+.aesthetic-demo-card.is-placeholder {
+  display: flex;
+  align-items: flex-end;
+  padding: 24px 22px;
+  background: #111b17;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.aesthetic-demo-placeholder-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 5px 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 960px) {
+  .landing-hero {
+    width: min(100% - 40px, 1180px);
+    padding: 64px 0 56px;
+  }
+
+  .landing-aesthetics-section {
+    width: min(100% - 40px, 1180px);
+    padding: 48px 0 72px;
+  }
+
+  .aesthetic-demo-grid {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .aesthetic-demo-card {
+    height: 340px;
+  }
+}
+
+@media (max-width: 560px) {
+  .landing-hero {
+    width: min(100% - 24px, 1180px);
+    padding: 48px 0 44px;
+  }
+
+  .landing-aesthetics-section {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .lh-primary,
+  .lh-secondary {
+    font-size: 44px;
   }
 }

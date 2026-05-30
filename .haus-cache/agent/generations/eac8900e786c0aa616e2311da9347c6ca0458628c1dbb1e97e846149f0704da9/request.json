@@ -1,0 +1,12 @@
+{
+  "endpoint_id": "fal-ai/nano-banana-2",
+  "params": {
+    "prompt": "Photorealistic editorial interior reference photograph of a Dine. Focus tightly on: dining table, pendant light above the dining area, dining chairs, round light-oak dining table — 42in diameter, light oak finish, slim tapered legs (shared object), oversized woven pendant — rattan woven shade, warm amber inner diffuser, suspended low over table (shared object), dining chairs — 4 slim dining chairs, Warm Sand upholstery (#D2BFA3), light oak tapered legs, visibility of organic low coffee table — sculpted oval top in Muted Clay matte ceramic (#B58E61) with short Aged Oak legs (shared object) in background sightline. Styled in japandi aesthetic, warm_neutral palette, soft_ambient lighting. Calm, minimal Japandi interiors tuned for a young family: warm neutrals, low-profile furniture, natural materials, and a compact cozy work corner. Prioritize layered textures (linen, jute, hand-thrown ceramics), sculptural plant groupings, and a single woven pendant as a dining focal point. Keep decor minimal and purposeful so sightlines between living, dining and kitchen feel cohesive and uncluttered. This image is a visual consistency reference — every detail of the featured furniture and fixtures must be clearly visible and precisely rendered. No people. No visible brand logos. Sharp architectural photography. Luxury real estate staging.",
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

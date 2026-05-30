@@ -63,11 +63,13 @@ let floorPlans = [
 const progressSteps = [
   'Validating selected floor plan',
   'Extracting room dimensions',
-  'Reading Pinterest board',
+  'Reading Pinterest board — scraping aesthetic pins',
   'Building structured vibe report',
-  'Preparing Layer 3 handoff',
-  'Ready for staged images and fal video',
-  'Showing personalized preview shell'
+  'Planning room-by-room generation (Layer 3)',
+  'Generating styled stills with fal.ai',
+  'Rendering room videos (Seedance/Kling)',
+  'Assembling final 16×9 reel with music',
+  'Preview ready'
 ];
 
 let selectedPlan = floorPlans[0];
@@ -77,13 +79,11 @@ let currentPipelineResult = null;
 let currentJob = null;
 let currentJobId = null;
 let jobEvents = null;
-let demoCache = null;
-let selectedReelId = null;
-let selectedBundleId = null;
 const activePlanHotspots = new Map();
 let selectedAgentRoomId = null;
 
 const views = {
+  landing: document.querySelector('#landing-view'),
   portal: document.querySelector('#portal-view'),
   personalize: document.querySelector('#personalize-view'),
   generation: document.querySelector('#generation-view'),
@@ -116,15 +116,8 @@ const editorMaxClipSeconds = document.querySelector('#editor-max-clip-seconds');
 const editorMaxClipLabel = document.querySelector('#editor-max-clip-label');
 const editorStoryHook = document.querySelector('#editor-story-hook');
 const copyReelEditJson = document.querySelector('#copy-reel-edit-json');
-const pinterestUrlInput = document.querySelector('#pinterest-url');
-const cachedPinterestBoards = document.querySelector('#cached-pinterest-boards');
-const pinterestCacheSummary = document.querySelector('#pinterest-cache-summary');
-const generationCacheDashboard = document.querySelector('#generation-cache-dashboard');
-const cacheReelBrowser = document.querySelector('#cache-reel-browser');
 const videoFeedPlayer = document.querySelector('#video-feed-player');
 const videoFeedStatus = document.querySelector('#video-feed-status');
-const videoStylePills = document.querySelector('#video-style-pills');
-const floorplanReelRow = document.querySelector('#floorplan-reel-row');
 const mediaModal = document.querySelector('#media-modal');
 const mediaModalImage = document.querySelector('#media-modal-image');
 const mediaModalTitle = document.querySelector('#media-modal-title');
@@ -132,13 +125,17 @@ const roomFocusPanel = document.querySelector('#room-focus-panel');
 const agentRoomSelect = document.querySelector('#agent-room-select');
 const agentCanvasImage = document.querySelector('#agent-canvas-image');
 
-loadFloorPlans();
-loadDemoCache();
+loadFloorPlans().then(restoreSession);
+loadDemoAesthetics();
 renderProgressSteps();
-setView('portal');
-addChatMessage('agent', 'After you watch the video, ask for a specific change. I can isolate the affected room and keep the rest of the preview intact.');
+setView('landing');
+addChatMessage('agent', 'After you watch the video, ask for a specific change. I can isolate the affected room and keep the rest of the cached video intact.');
 
-document.querySelector('#back-to-plans').addEventListener('click', () => setView('portal'));
+document.querySelector('#landing-cta').addEventListener('click', () => setView('portal'));
+document.querySelector('#back-to-plans').addEventListener('click', () => {
+  localStorage.removeItem('haus_session');
+  setView('portal');
+});
 document.querySelector('#open-agent').addEventListener('click', () => setView('agent'));
 document.querySelector('#back-to-results').addEventListener('click', () => setView('results'));
 document.querySelector('#back-video-to-results').addEventListener('click', () => setView('results'));
@@ -163,7 +160,6 @@ document.querySelectorAll('[data-close-media-modal]').forEach((element) => {
 
 document.querySelector('#personalization-form').addEventListener('submit', (event) => {
   event.preventDefault();
-  setView('generation');
   runGenerationSequence(new FormData(event.currentTarget));
 });
 
@@ -278,22 +274,6 @@ generatedStillsGallery?.addEventListener('click', (event) => {
   openMediaModal(preview.dataset.previewImageUrl, preview.dataset.previewTitle ?? 'Generated still');
 });
 
-cacheReelBrowser?.addEventListener('click', (event) => {
-  const button = event.target.closest('[data-reel-id]');
-  if (!button || !demoCache) return;
-  playCachedReel(button.dataset.reelId);
-});
-
-videoStylePills?.addEventListener('click', (event) => {
-  const button = event.target.closest('[data-style-cache-id]');
-  if (!button || !demoCache) return;
-  selectedBundleId = button.dataset.bundleId ?? selectedBundleId;
-  const bundle = selectedCacheBundle();
-  selectedReelId = bundle?.reels?.[0]?.id ?? null;
-  renderCachedGenerationState(button.dataset.styleCacheId);
-  renderCachedReels();
-});
-
 editorMaxClipSeconds?.addEventListener('input', () => {
   editorMaxClipLabel.textContent = `${Number(editorMaxClipSeconds.value).toFixed(1)}s`;
   renderReelEditor(currentJob);
@@ -309,6 +289,9 @@ copyReelEditJson?.addEventListener('click', async () => {
 document.querySelectorAll('[data-view-jump]').forEach((button) => {
   button.addEventListener('click', () => {
     const target = button.dataset.viewJump;
+    if (target === 'landing') {
+      localStorage.removeItem('haus_session');
+    }
     if ((target === 'results' || target === 'video') && views.results.classList.contains('is-hidden')) {
       setView('personalize');
       return;
@@ -333,37 +316,155 @@ async function loadFloorPlans() {
   renderSelectedPlan();
 }
 
-async function loadDemoCache() {
+function saveSession() {
   try {
-    const response = await fetch('/api/demo-cache');
+    localStorage.setItem('haus_session', JSON.stringify({
+      jobId: currentJobId,
+      planId: selectedPlan?.id ?? null,
+    }));
+  } catch { /* storage unavailable */ }
+}
+
+async function restoreSession() {
+  try {
+    const raw = localStorage.getItem('haus_session');
+    if (!raw) return;
+    const { jobId, planId } = JSON.parse(raw);
+    if (!jobId) return;
+
+    const res = await fetch(`/api/jobs/${jobId}`);
+    if (!res.ok) return;
+    const job = await res.json();
+    if (job.status !== 'completed') return;
+
+    // Restore plan selection
+    const plan = floorPlans.find((p) => p.id === planId) ?? floorPlans[0];
+    selectedPlan = plan;
+    renderFloorPlans();
+    renderSelectedPlan();
+
+    // Restore job state
+    currentJobId = jobId;
+    currentJob = job;
+    currentPipelineResult = job;
+    syncSelectedPlanFromJob(job);
+    renderPipelineResult(job);
+    renderPinterestReferences(job);
+    renderGeneratedStills(job);
+    renderRuntimeRooms(job);
+    renderReelEditor(job);
+    syncAgentView(job);
+
+    setView('results');
+  } catch { /* silently skip restore on any error */ }
+}
+
+async function loadDemoAesthetics() {
+  const grid = document.querySelector('#aesthetic-demo-grid');
+  if (!grid) return;
+  try {
+    const response = await fetch('/api/demo-aesthetics');
     if (!response.ok) return;
-    demoCache = await response.json();
-    const bundle = defaultCacheBundle();
-    selectedBundleId = bundle?.id ?? null;
-    selectedReelId = bundle?.reels?.[0]?.id ?? demoCache.reels?.[0]?.id ?? null;
-    renderCacheSummary();
-    renderCachedReels();
+    const aesthetics = await response.json();
+    renderLandingAesthetics(aesthetics, grid);
   } catch {
-    // Cache panels stay hidden when the demo is opened as plain static files.
+    grid.innerHTML = '';
   }
 }
 
-function renderCacheSummary() {
-  if (!demoCache) return;
-  const boards = (demoCache.bundles ?? []).map((bundle) => bundle.board).filter(Boolean);
-  if (cachedPinterestBoards) {
-    cachedPinterestBoards.innerHTML = boards.map((board) => `<option value="${escapeHtml(board.source_url)}"></option>`).join('');
-  }
-  if (pinterestUrlInput && boards[0]?.source_url) {
-    pinterestUrlInput.value = boards[0].source_url;
-  }
-  if (pinterestCacheSummary) {
-    pinterestCacheSummary.innerHTML = `
-      <strong>Saved Pinterest ready</strong>
-      <span>${boards.length} boards · ${demoCache.summary?.pinterest_pins ?? 0} pins · ${demoCache.summary?.layer3_styles ?? 0} style plans</span>
-      <small>${boards.slice(0, 2).map((board) => escapeHtml(board.board_id)).join(' · ')}</small>
+function renderLandingAesthetics(aesthetics, grid) {
+  if (!aesthetics?.length) { grid.innerHTML = ''; return; }
+
+  grid.innerHTML = aesthetics.map((a, cardIndex) => {
+    const videoRooms = a.rooms.filter((r) => r.video_url);
+    const stillRooms = a.rooms.filter((r) => r.still_url);
+    const hasVideo = videoRooms.length > 0;
+    const hasMedia = hasVideo || stillRooms.length > 0;
+
+    if (!hasMedia) {
+      return `
+        <div class="aesthetic-demo-card is-placeholder" data-card-index="${cardIndex}">
+          <div class="aesthetic-demo-info">
+            <div class="aesthetic-demo-placeholder-badge">Generation pending</div>
+            <div class="aesthetic-demo-name">${escapeHtml(a.aesthetic_name)}</div>
+            <p class="aesthetic-demo-summary">${escapeHtml(a.summary)}</p>
+          </div>
+        </div>
+      `;
+    }
+
+    const rooms = hasVideo ? videoRooms : stillRooms;
+    const first = rooms[0];
+    const mediaTag = hasVideo
+      ? `<video class="aesthetic-demo-media" src="${escapeHtml(first.video_url)}" autoplay muted loop playsinline></video>`
+      : `<img class="aesthetic-demo-media" src="${escapeHtml(first.still_url)}" alt="${escapeHtml(first.room_name)}">`;
+    const dots = rooms.map((_, i) => `<span class="aesthetic-dot${i === 0 ? ' is-active' : ''}" data-dot="${i}"></span>`).join('');
+
+    return `
+      <div class="aesthetic-demo-card${hasVideo ? '' : ' is-stills'}" data-card-index="${cardIndex}">
+        ${mediaTag}
+        <div class="aesthetic-demo-scrim"></div>
+        <div class="aesthetic-demo-info">
+          <div class="aesthetic-demo-room-label">${escapeHtml(first.room_name)}</div>
+          <div class="aesthetic-demo-name">${escapeHtml(a.aesthetic_name)}</div>
+          <p class="aesthetic-demo-summary">${escapeHtml(a.summary)}</p>
+          ${rooms.length > 1 ? `<div class="aesthetic-demo-dots">${dots}</div>` : ''}
+        </div>
+      </div>
     `;
+  }).join('');
+
+  aesthetics.forEach((a, cardIndex) => {
+    const card = grid.querySelector(`[data-card-index="${cardIndex}"]`);
+    if (!card || card.classList.contains('is-placeholder')) return;
+    const videoRooms = a.rooms.filter((r) => r.video_url);
+    const stillRooms = a.rooms.filter((r) => r.still_url);
+    const hasVideo = videoRooms.length > 0;
+    const rooms = hasVideo ? videoRooms : stillRooms;
+    if (rooms.length <= 1) return;
+    startRoomCycle(card, rooms, hasVideo);
+  });
+}
+
+function startRoomCycle(card, rooms, hasVideo) {
+  let current = 0;
+  let errorCount = 0;
+  const media = card.querySelector('.aesthetic-demo-media');
+  const roomLabel = card.querySelector('.aesthetic-demo-room-label');
+  const dots = card.querySelectorAll('.aesthetic-dot');
+
+  if (hasVideo) {
+    media.addEventListener('error', () => {
+      errorCount += 1;
+      if (errorCount >= rooms.length) {
+        const still = rooms[current]?.still_url;
+        if (still) {
+          const img = document.createElement('img');
+          img.className = 'aesthetic-demo-media';
+          img.src = still;
+          img.alt = rooms[current]?.room_name ?? '';
+          media.replaceWith(img);
+        }
+      }
+    }, { passive: true });
   }
+
+  function advance() {
+    current = (current + 1) % rooms.length;
+    const room = rooms[current];
+    if (hasVideo) {
+      media.src = room.video_url;
+      media.load();
+      media.play().catch(() => {});
+    } else {
+      media.src = room.still_url;
+      media.alt = room.room_name;
+    }
+    if (roomLabel) roomLabel.textContent = room.room_name;
+    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === current));
+  }
+
+  window.setInterval(advance, 4500);
 }
 
 function renderFloorPlans() {
@@ -388,6 +489,7 @@ function renderFloorPlans() {
   floorplanGrid.querySelectorAll('[data-plan-id]').forEach((button) => {
     button.addEventListener('click', () => {
       selectedPlan = floorPlans.find((plan) => plan.id === button.dataset.planId);
+      saveSession();
       renderFloorPlans();
       renderSelectedPlan();
       setView('personalize');
@@ -405,7 +507,6 @@ function renderSelectedPlan() {
     <span>${selectedPlan.price}</span>
     <span>${selectedPlan.available}</span>
   `;
-  renderRoomFocus(jobForPlan(selectedPlan));
 }
 
 function renderFloorPlanMedia(plan, altText) {
@@ -428,17 +529,11 @@ function renderProgressSteps(activeIndex = -1, complete = false) {
 }
 
 async function runGenerationSequence(formData) {
-  const savedBundle = findCachedBundle(formData.get('pinterestUrl'));
-  if (savedBundle?.style) {
-    runCachedGenerationSequence(formData, savedBundle);
-    return;
-  }
-
-  if (generationCacheDashboard) generationCacheDashboard.innerHTML = '';
   if (generationPinterestGallery) generationPinterestGallery.innerHTML = '';
   if (resultsPinterestGallery) resultsPinterestGallery.innerHTML = '';
   if (generatedStillsGallery) generatedStillsGallery.innerHTML = '';
 
+  setView('generation');
   let index = 0;
   renderProgressSteps(index);
   progressCaption.textContent = 'Creating a backend job and starting the room pipeline.';
@@ -459,8 +554,38 @@ async function runGenerationSequence(formData) {
   try {
     const job = await jobPromise;
     window.clearInterval(interval);
-    renderProgressSteps(1);
     currentJobId = job.job_id;
+    saveSession();
+
+    if (job.status === 'completed') {
+      // Load job data into state without triggering the auto-jump in refreshJob
+      const fullJobRes = await fetch(`/api/jobs/${currentJobId}`);
+      const fullJob = await fullJobRes.json();
+      currentJob = fullJob;
+      currentPipelineResult = fullJob;
+      syncSelectedPlanFromJob(fullJob);
+      renderPipelineResult(fullJob);
+      renderPinterestReferences(fullJob);
+      renderGeneratedStills(fullJob);
+      renderRuntimeRooms(fullJob);
+      renderReelEditor(fullJob);
+      renderSelectedPlan();
+      syncAgentView(fullJob);
+
+      // Walk through steps theatrically so the audience can follow the pipeline story
+      for (let i = 0; i < progressSteps.length; i++) {
+        renderProgressSteps(i);
+        progressCaption.textContent = progressSteps[i];
+        await new Promise((r) => window.setTimeout(r, 750));
+      }
+      renderProgressSteps(progressSteps.length, true);
+      progressCaption.textContent = 'All room clips assembled. Loading your preview…';
+      await new Promise((r) => window.setTimeout(r, 600));
+      setView('results');
+      return;
+    }
+
+    renderProgressSteps(1);
     subscribeToJob(currentJobId);
     await refreshJob(currentJobId);
     progressCaption.textContent = 'Backend job created. Waiting for room events.';
@@ -469,128 +594,6 @@ async function runGenerationSequence(formData) {
     renderProgressSteps(index);
     progressCaption.textContent = error.message;
   }
-}
-
-function runCachedGenerationSequence(formData, bundle = null) {
-  const selectedBundle = bundle ?? findCachedBundle(formData.get('pinterestUrl')) ?? defaultCacheBundle();
-  selectedBundleId = selectedBundle?.id ?? null;
-  selectedReelId = selectedBundle?.reels?.find((reel) => reel.id === selectedReelId)?.id ?? selectedBundle?.reels?.[0]?.id ?? null;
-  currentJobId = null;
-  currentJob = buildCachedJob(formData, selectedBundle);
-  currentPipelineResult = currentJob;
-  renderProgressSteps(progressSteps.length, true);
-  renderPipelineResult(currentJob);
-  renderPinterestReferences(currentJob);
-  renderGeneratedStills(currentJob);
-  renderRuntimeRooms(currentJob);
-  setView('results');
-  views.generation.classList.add('is-hidden');
-  views.results.classList.remove('is-hidden');
-  renderReelEditor(currentJob);
-  renderSelectedPlan();
-  renderCachedGenerationState(currentJob.handoff?.cache_id);
-  progressCaption.textContent = 'Loaded saved preview: Pinterest pins, Layer 3 creative plan, visual assets, and final reels.';
-  renderCachedReels();
-}
-
-function buildCachedJob(formData, bundle = null) {
-  return buildCachedJobForBundle(formData, bundle ?? findCachedBundle(formData.get('pinterestUrl')) ?? defaultCacheBundle());
-}
-
-function buildCachedJobForBundle(formData, bundle) {
-  const style = bundle?.style ?? {};
-  const board = bundle?.board ?? {};
-  const reels = bundle?.reels ?? [];
-  const reel = reels.find((item) => item.id === selectedReelId) ?? reels[0] ?? {};
-  const assets = bundle?.assets ?? [];
-  const roomVideos = bundle?.room_videos ?? [];
-  const rooms = (style.room_plans ?? []).map((room, index) => ({
-    room_id: room.room_id ?? `cached_room_${index}`,
-    room_name: titleFromId(room.room_id ?? `Room ${index + 1}`),
-    room_type: room.room_id,
-    state: 'APPROVED',
-    still_attempt_count: 0,
-    video_attempt_count: 0,
-    current_motion_mode: room.camera_motion ?? 'saved visual asset',
-    scores: { overall: 9.1 },
-    artifacts: {
-      styled_image_url: assetForRoom(assets, room.room_id, index)?.url ?? null,
-      video_url: videoForRoom(roomVideos, room.room_id, index)?.url ?? null
-    },
-    video_generation: {
-      camera_motion: room.camera_motion ?? 'saved visual asset',
-      duration_seconds: room.duration_seconds ?? 3
-    },
-    staging: {
-      objects_to_include: (room.must_include ?? []).map((item) => ({ label: item })),
-      must_include: room.must_include ?? []
-    }
-  }));
-
-  return {
-    job_id: 'demo-preview',
-    status: 'completed',
-    payload: {
-      floor_plan_id: selectedPlan.id,
-      pinterest_board_url: board.source_url ?? formData.get('pinterestUrl'),
-      brief: formData.get('brief'),
-      objects: formData.getAll('objects')
-    },
-    profile: { aesthetic_profile: { density: 'Saved demo plan' } },
-    handoff: {
-      cache_id: style.cache_id,
-      vibe_report: {
-        aesthetic_name: style.aesthetic_name,
-        summary: style.summary,
-        lighting_mood: style.lighting_mood,
-        materials: style.materials,
-        avoid: style.avoid
-      },
-      pinterest_intelligence: { pins: board.pins ?? [] },
-      room_generation_jobs: rooms
-    },
-    rooms,
-    artifacts: {
-      final_reel_url: reel.final_video_url,
-      final_video_path: reel.cache_relative_path,
-      timeline: { total_duration: reel.duration_seconds, segments: reel.scenes ?? [] },
-      approved_room_clips: rooms.filter((room) => room.artifacts.video_url).map((room) => ({ room_id: room.room_id, url: room.artifacts.video_url }))
-    }
-  };
-}
-
-function assetForRoom(assets, roomId, index) {
-  const roomToken = normalizeToken(roomId);
-  const matched = assets.find((asset) => roomToken.includes(normalizeToken(asset.room_hint)) || normalizeToken(asset.id).includes(roomToken));
-  return matched ?? assets[index % Math.max(assets.length, 1)] ?? null;
-}
-
-function videoForRoom(videos, roomId, index) {
-  const roomToken = normalizeToken(roomId);
-  const matched = videos.find((video) => roomToken.includes(normalizeToken(video.room_hint)) || normalizeToken(video.id).includes(roomToken));
-  return matched ?? videos[index % Math.max(videos.length, 1)] ?? null;
-}
-
-function findCachedBoard(url) {
-  return findCachedBundle(url)?.board;
-}
-
-function findCachedBundle(url) {
-  return (demoCache?.bundles ?? []).find((bundle) => bundle.board?.source_url === url || bundle.pinterest_board_url === url)
-    ?? (demoCache?.bundles ?? []).find((bundle) => url?.includes(bundle.board?.board_id));
-}
-
-function defaultCacheBundle() {
-  return (demoCache?.bundles ?? []).find((bundle) => bundle.assets?.length && bundle.room_videos?.length)
-    ?? (demoCache?.bundles ?? []).find((bundle) => bundle.assets?.length)
-    ?? (demoCache?.bundles ?? []).find((bundle) => bundle.reels?.length)
-    ?? (demoCache?.bundles ?? [])[0]
-    ?? null;
-}
-
-function selectedCacheBundle() {
-  return (demoCache?.bundles ?? []).find((bundle) => bundle.id === selectedBundleId)
-    ?? defaultCacheBundle();
 }
 
 async function createJob(body) {
@@ -741,7 +744,7 @@ function renderResultsVideo(job) {
   const clipUrl = firstClip?.url;
 
   const relPath = finalPath && jobId ? finalPath.split(`/${jobId}/`)[1] : null;
-  const localVideoUrl = relPath ? `/api/jobs/${jobId}/assets/${relPath}` : null;
+  const localVideoUrl = relPath ? `/api/jobs/${jobId}/assets/${relPath}?t=${job.updated_at ?? Date.now()}` : null;
   const videoUrl = cachedFinalUrl ?? localVideoUrl ?? clipUrl ?? null;
 
   const duration = job.artifacts?.timeline?.total_duration ?? (job.artifacts?.approved_room_clips ?? []).reduce((sum, c) => {
@@ -1011,105 +1014,12 @@ function renderRoomFocus(job) {
   `;
 }
 
-function renderCachedGenerationState(styleCacheId = null) {
-  if (!demoCache) return;
-  const bundles = demoCache.bundles ?? [];
-  const bundle = bundles.find((item) => item.style?.cache_id === styleCacheId)
-    ?? selectedCacheBundle();
-  if (bundle) selectedBundleId = bundle.id;
-  const style = bundle?.style;
-  const boards = bundle?.board ? [bundle.board] : [];
-  const reels = bundle?.reels ?? [];
-
-  if (generationCacheDashboard && style) {
-    generationCacheDashboard.innerHTML = `
-      <div class="cache-dashboard-header">
-        <div>
-          <div class="eyebrow">Saved preview state</div>
-          <h3>${escapeHtml(style.aesthetic_name)}</h3>
-        </div>
-        <span>ID ${escapeHtml(style.cache_id.slice(0, 10))}</span>
-      </div>
-      <div class="cache-stat-grid">
-        <div><strong>${demoCache.summary?.pinterest_boards ?? 0}</strong><span>boards</span></div>
-        <div><strong>${bundle?.board?.pin_count ?? 0}</strong><span>pins</span></div>
-        <div><strong>${style.room_count ?? 0}</strong><span>rooms planned</span></div>
-        <div><strong>${bundle?.assets?.length ?? 0}</strong><span>visual assets</span></div>
-      </div>
-      <div class="cache-board-list">
-        ${boards.slice(0, 4).map((board) => `
-          <article>
-            <strong>${escapeHtml(board.board_id)}</strong>
-            <span>${board.pin_count} pins · ID ${escapeHtml(board.cache_ids?.[0]?.slice(0, 8) ?? 'saved')}</span>
-          </article>
-        `).join('')}
-      </div>
-    `;
-  }
-
-  if (videoStylePills) {
-    videoStylePills.innerHTML = bundles.slice(0, 8).map((item) => `
-      <button class="style-pill ${item.id === bundle?.id ? 'is-selected' : ''}" data-bundle-id="${escapeHtml(item.id)}" data-style-cache-id="${escapeHtml(item.style?.cache_id ?? '')}" type="button">
-        ${escapeHtml(item.style?.aesthetic_name ?? item.board?.board_id ?? 'Style')}
-      </button>
-    `).join('');
-  }
-
-  if (floorplanReelRow) {
-    floorplanReelRow.innerHTML = reels.slice(0, 4).map((reel) => `
-      <button class="reel-mini-button ${reel.id === selectedReelId ? 'is-selected' : ''}" data-reel-id="${escapeHtml(reel.id)}" type="button">
-        <strong>${escapeHtml(reel.style_hint)}</strong>
-        <span>${reel.scene_count} scenes · ${formatSeconds(reel.duration_seconds)}</span>
-      </button>
-    `).join('') || '<div class="runtime-placeholder">No final reel for this style yet.</div>';
-  }
-}
-
-function renderCachedReels() {
-  if (!demoCache || !cacheReelBrowser) return;
-  const bundle = selectedCacheBundle();
-  const reels = bundle?.reels ?? [];
-  cacheReelBrowser.innerHTML = `
-    <div class="cache-dashboard-header">
-      <div>
-        <div class="eyebrow">Final reels</div>
-        <h3>Ready-to-play reel outputs</h3>
-      </div>
-      <span>${reels.length} files</span>
-    </div>
-    <div class="cache-reel-list">
-      ${reels.length ? reels.map((reel) => `
-        <button class="cache-reel-card ${reel.id === selectedReelId ? 'is-selected' : ''}" data-reel-id="${escapeHtml(reel.id)}" type="button">
-          <strong>${escapeHtml(reel.folder)}</strong>
-          <span>${escapeHtml(reel.final_file)} · ${formatBytes(reel.size_bytes)} · ${formatSeconds(reel.duration_seconds)}</span>
-          <small>${reel.scene_count} scenes · ${reel.clip_count} clips · ${reel.card_count} cards${reel.voiceover_provider ? ` · ${escapeHtml(reel.voiceover_provider)}` : ''}</small>
-        </button>
-      `).join('') : '<div class="runtime-placeholder">No final reel for this selected style.</div>'}
-    </div>
-  `;
-  if (selectedReelId) playCachedReel(selectedReelId, { silent: true });
-}
-
-function playCachedReel(reelId, options = {}) {
-  const reel = selectedCacheBundle()?.reels?.find((item) => item.id === reelId);
-  if (!reel) return;
-  selectedReelId = reel.id;
-  if (videoFeedPlayer) {
-    videoFeedPlayer.src = reel.final_video_url;
-    videoFeedPlayer.load();
-    if (!options.silent) videoFeedPlayer.play().catch(() => {});
-  }
-  if (videoFeedStatus) {
-    videoFeedStatus.textContent = `${reel.final_file} · ${formatBytes(reel.size_bytes)} · ${formatSeconds(reel.duration_seconds)} · ${reel.scene_count} scenes`;
-  }
-  renderCachedGenerationState();
-  cacheReelBrowser?.querySelectorAll('[data-reel-id]').forEach((button) => {
-    button.classList.toggle('is-selected', button.dataset.reelId === reel.id);
-  });
-}
-
 function titleFromId(value) {
   return String(value ?? 'Room').replace(/[_-]+/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+function roomLabel(room, roomId) {
+  return room?.room_name ?? titleFromId(roomId);
 }
 
 function formatBytes(bytes) {

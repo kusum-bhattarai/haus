@@ -16,29 +16,18 @@
     },
     {
       "room_id": null,
-      "name": "Taste (Kitchen)",
+      "name": "Taste",
       "dimensions": {
-        "width": 9.5,
+        "width": 8.5,
         "length": 10.583333333333334,
-        "area": 100.54166666666667
+        "area": 89.95833333333334
       },
       "unit": "ft",
       "confidence": 0.95
     },
     {
       "room_id": null,
-      "name": "Dining (Dine)",
-      "dimensions": {
-        "width": 9.333333333333334,
-        "length": 12,
-        "area": 112
-      },
-      "unit": "ft",
-      "confidence": 0.8
-    },
-    {
-      "room_id": null,
-      "name": "Bedroom (Dream) - upper-left",
+      "name": "Dream",
       "dimensions": {
         "width": 10,
         "length": 10,
@@ -49,18 +38,18 @@
     },
     {
       "room_id": null,
-      "name": "Bedroom (Dream) - right",
+      "name": "Dream",
       "dimensions": {
         "width": 11.25,
         "length": 11.333333333333334,
         "area": 127.5
       },
       "unit": "ft",
-      "confidence": 0.9
+      "confidence": 0.85
     },
     {
       "room_id": null,
-      "name": "Bedroom (Dream) - bottom",
+      "name": "Dream",
       "dimensions": {
         "width": 11.333333333333334,
         "length": 13.75,

@@ -1,0 +1,16 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a99b146/PiWcnToSdLB7_5Y9gyjWE_AK1oE6mO.png",
+      "https://v3b.fal.media/files/b/0a99b144/Na2WHOaVUWueF-YJ0-d9b_0pdtDaDa.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for Revive at roughly small. Primary soft diffuse light via the small frosted window near tub; add a warm sconce next to the mirror if needed for evening frames. Avoid directional light from non-visible sources. Keep reflections muted with matte finishes. Calm, minimal Japandi interiors tuned for a young family: warm neutrals, low-profile furniture, natural materials, and a compact cozy work corner. Prioritize layered textures (linen, jute, hand-thrown ceramics), sculptural plant groupings, and a single woven pendant as a dining focal point. Keep decor minimal and purposeful so sightlines between living, dining and kitchen feel cohesive and uncluttered. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The vanity, mirror, bathroom tile, floating vanity in Aged Oak with matte black hardware, hand-thrown ceramic soap dispenser in Muted Clay, small hand-thrown ceramic soap dispenser in Muted Clay in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. Previous failure modes to correct: object_missing, lighting_drift. The image generally aligns with the prompt's aesthetic and layout, but it is missing some required objects like the specific hand-thrown ceramic soap dispensers in Muted Clay. Additionally, while the overall lighting is good, it lacks the warm sconce as suggested for evening frames, which affects the realism of the lighting.",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

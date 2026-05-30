@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0",
+  "style_id": "earthy-mid-century-artistic-6f717066",
+  "created_at": "2026-05-10T17:08:16.722Z",
+  "source": {
+    "session_id": "4318ddae-c025-4886-81f3-13801fc9d8d1",
+    "handoff_id": "4b4eafd0-3165-40a4-9375-3400a31650b4",
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+    "floor_plan_url": "file:///Users/quamos/Repos/haus/.haus-cache/floor-plans/1aa09dc40ee4146b959697cacea0fa6fc22fc075f909eafac42fa24027afad5f.png"
+  },
+  "aesthetic_profile": {
+    "palette": "earthy",
+    "lighting": "soft_ambient",
+    "density": "layered",
+    "style_era": "mid_century",
+    "dominant_colors": [
+      "#1E4B3A",
+      "#B78A40",
+      "#6B4328",
+      "#C45A2C",
+      "#E6D7C6"
+    ],
+    "mood_words": [
+      "botanical spa",
+      "aged-brass warmth",
+      "handmade zellige texture",
+      "earthy walnut warmth",
+      "collected vintage-art"
+    ],
+    "pinterest_cluster_labels": [
+      "Emerald zellige bathroom with brass fixtures",
+      "Compact green-tile bathroom with raw wood vanity",
+      "Walnut kitchen with deep green vertical tile backsplash",
+      "Art-forward warm bedroom / living — terracotta & collected pieces"
+    ],
+    "confidence": 0.89
+  },
+  "vibe_report": {
+    "aesthetic_name": "Earthy Mid‑Century Artistic",
+    "summary": "A warm, collected interior blending mid‑century forms with artisanal textures and an earthy palette. Deep emerald accents and terracotta art punctuate warm walnut wood, aged‑brass fixtures, and layered natural textiles to create a botanical‑spa, gallery‑like living environment. Prioritize honest daylight from bay/exterior windows and warm practicals to sculpt texture and glaze.",
+    "palette_rationale": "Base neutrals (pale oat, warm walnut) keep surfaces calm while accent colors (emerald green, terracotta, rust) provide artistic focal points that read well on camera. Brushed/aged brass adds a warm specular highlight that complements the green tiles and walnut tones.",
+    "lighting_mood": "Soft ambient overall with directional daylight from the bay/exterior windows. Window pulls create crisp, editorial shadows on textured surfaces; warm practicals (aged brass floor/pendant/sconce) provide localized warm highlights in evening scenes. All lighting must be derived from visible windows or practical fixtures.",
+    "materials": [
+      "warm walnut veneer (cabinets, table tops, shelving)",
+      "handwoven wool and jute textiles (rugs, throws)",
+      "gloss emerald zellige or textured green ceramic tile (accent walls/backsplash)",
+      "aged/brushed brass hardware and pendant fixtures",
+      "matte ceramic planters and stone or terrazzo accent surfaces"
+    ],
+    "textures": [
+      "glossy zellige tile glaze",
+      "low‑pile handwoven wool with tribal motif",
+      "natural jute flatweave",
+      "brushed metal patina",
+      "reclaimed/raw wood grain"
+    ],
+    "furniture_language": [
+      "low‑profile mid‑century silhouettes",
+      "tapered/dark walnut legs",
+      "rounded edges and organic forms",
+      "sculptural lighting as focal elements",
+      "layered textiles to soften hard surfaces"
+    ],
+    "styling_rules": [
+      "Keep color and finish consistent across sightlines — shared objects must match exactly.",
+      "Compose with one dominant accent (emerald or terracotta) and secondary warm metallic highlights.",
+      "Anchor seating groups with a single large layered rug (natural + patterned) sized to room dimensions.",
+      "Use plants at scale to animate vertical space — avoid over‑saturating small corners.",
+      "Limit visible art to curated gallery groupings — bold terracotta/orange pieces for focal walls."
+    ],
+    "avoid": [
+      "high‑gloss white modern minimalism (conflicts with earthy warmth)",
+      "bright saturated primary colors that compete with emerald/terracotta accents",
+      "introducing light sources that are not visible in the scene (no floating light)",
+      "mismatched furniture finishes across open sightlines"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "living_room_nest",
+        "headline": "Warm, art-forward living nest with botanical layers",
+        "guidance": "Stage a low mid‑century sofa facing the bay windows, anchored by the layered rug and a walnut coffee table. Place bookshelf and curated gallery wall to the side; use a tall plant near the window to connect indoor/ outdoor light. Emphasize warm brass floor lamp as a practical. Preserve bay window as primary light source and arrange seating to show depth toward exterior view.",
+        "must_include": [
+          "low-profile 3-seater sofa — pale oat linen upholstery, dark walnut tapered legs, no visible feet from side angle",
+          "large layered rug set — base jute flatweave natural oat, top handwoven low-pile wool rug in terracotta & emerald geometric motif, overall 9x12 ft",
+          "tall fiddle leaf fig plant — matte black ceramic planter, ~6ft height"
+        ],
+        "must_avoid": [
+          "oversized sectional that blocks bay window",
+          "bright white upholstery",
+          "extra small rugs that float under coffee table"
+        ]
+      },
+      {
+        "room_id": "dining_room_dine",
+        "headline": "Intimate walnut dining with sculptural brass pendant",
+        "guidance": "Center a round walnut dining table under a single sculptural aged‑brass pendant. Keep seating to 4 to preserve circulation. Use a small vintage sideboard or stacked wooden cutting boards as styling props; keep tabletop minimal with a low ceramic bowl and muted greenery. Allow pendant to read from the living sightline — its finish must match brass practicals in living area.",
+        "must_include": [
+          "round 5ft walnut dining table — warm walnut veneer top, matte black cylindrical pedestal base, seating for 4",
+          "sculptural pendant light — aged brass single-disc shade, 24\" diameter, smooth matte finish, suspended on dark braided cloth cord"
+        ],
+        "must_avoid": [
+          "bright pendant finishes (polished chrome)",
+          "overcrowded tabletop styling",
+          "mismatched chair finishes"
+        ]
+      },
+      {
+        "room_id": "bedroom_dream_1",
+        "headline": "Art-forward master with terracotta accents",
+        "guidance": "Low mid‑century bed frame in warm walnut, layered textiles (wool blanket in rust/terracotta), and a curated gallery wall above the headboard. Use a woven bedside lamp with warm filament bulbs for cozy highlights. Keep circulation clear to window; a single large plant or sculptural floor lamp can anchor a corner.",
+        "must_include": [
+          "warm walnut bed frame (low profile) — walnut veneer headboard with rounded corners",
+          "textile layering — wool throw in rust/terracotta, neutral linen sheets"
+        ],
+        "must_avoid": [
+          "tall heavy drapery that blocks window light",
+          "bright patterned bedding that competes with artwork"
+        ]
+      },
+      {
+        "room_id": "bedroom_dream_2",
+        "headline": "Quiet guest / study room with flexible standing desk",
+        "guidance": "Configure as flexible space: compact low bed or daybed plus a standing desk near the window to capture daylight. Keep finishes consistent (walnut desk surface, matte ceramic planters). A single sculptural wall piece in emerald or terracotta ties back to the main palette.",
+        "must_include": [
+          "standing_desk (user asset) — walnut top, black metal legs, height-adjustable",
+          "muted artwork in terracotta or deep green"
+        ],
+        "must_avoid": [
+          "office clutter visible from camera",
+          "clashing bright textiles"
+        ]
+      }
+    ],
+    "confidence": 0.89,
+    "warnings": [
+      "Open plan living/dining sightlines require strict cross-room object consistency (shared finishes and colors).",
+      "All lighting must be derived from visible windows or practical fixtures; avoid introducing unseen directional lights."
+    ]
+  },
+  "creative_spec": {
+    "overall_mood": "Botanical‑spa warmth with artful, collected mid‑century character",
+    "room_sequence": [
+      "living_room_nest",
+      "dining_room_dine",
+      "bedroom_dream_1",
+      "bedroom_dream_2"
+    ],
+    "global_style_notes": [
+      "Keep all wood finishes in warm walnut family — no cool oak or bleached ash.",
+      "Brass finishes should be aged/brushed rather than polished; color consistent across pendant, floor lamp, and small hardware.",
+      "Accent tiles or splashbacks should read deep emerald glaze with visible texture and natural specular highlights.",
+      "Scale plants to the room — at least one tall plant in the living area to frame bay windows."
+    ],
+    "negative_prompt": "no color inconsistency between rooms, no mismatched furniture across sightlines, blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift",
+    "export_formats": [
+      "16:9",
+      "9:16",
+      "1:1"
+    ]
+  },
+  "pins": [
+    {
+      "pin_id": "1012465559998726657",
+      "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+      "image_url": "https://i.pinimg.com/1200x/83/7a/d9/837ad964651fcfdc18bd59bad0fdd658.jpg",
+      "title": "Color Harmony Palettes 🎨 | Curated Whole House Paint Palettes for Timeless & Trendy Homes | Perfect",
+      "description": "Earthy Paint Palette, Warm Neutrals, Terracotta Colors, Natural Interior Paint, Organic Home Design, Soft Beige, Clay Tones, 2025Paint Trends, Neutral Wall Colors, Eco-Friendly Paint, Serene Interior Colors, Modern Rustic Palette, Earth Inspired Paint, Natural Home Decor, Timeless Paint Shades, Relaxing Paint Combinations, Calm Neutrals, Organic Texture, Sustainable Home Ideas, Warm Tones, Cozy Color Scheme, Natural Living Space, Muted Paint Palette, Balanced Color Flow, Vibrant Paint Palette, Bold Interior Colors, Electric Blue, Warm Coral,Modern Color Pop, Trendy Paint Ideas, Bright Color Combinations, Energetic Living Room, 2025 Color Trends, Statement Wall Colors, Bold Home Design, CreativePaint Palette, Artistic Interior Style, Colorful Wall Art, Maximalist Color Scheme",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Art-forward warm bedroom / living — terracotta & collected pieces",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726645",
+      "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+      "image_url": "https://i.pinimg.com/1200x/ed/da/8e/edda8e6061d6f8a5c695857cd55ab79a.jpg",
+      "title": "Eclectic Emerald Bathroom with Brass Glow — Modern Boho Spa Vibes",
+      "description": "Transform your bathroom into a modern boho spa with emerald green zellige tiles, brass fixtures, and a natural stone sink. The mix of textures, wood, and warm light creates an artistic, cozy, and timeless look. Salle de bain émeraude éclectique avec robinetterie en laiton, vasque en pierre naturelle et carrelage zellige artisanal. Une ambiance spa chic, chaleureuse et créative inspirée des tendances design 2025.",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Emerald zellige bathroom with brass fixtures",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726635",
+      "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+      "image_url": "https://i.pinimg.com/1200x/d6/06/ce/d606cef3389c2c67b1d21bec8031c221.jpg",
+      "title": null,
+      "description": null,
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Walnut kitchen with deep green vertical tile backsplash",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726622",
+      "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+      "image_url": "https://i.pinimg.com/1200x/81/4d/75/814d75e16a21a6067a55eca913e3af39.jpg",
+      "title": "brazilian modernism",
+      "description": null,
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Art-forward warm bedroom / living — terracotta & collected pieces",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998726571",
+      "source_url": "https://www.pinterest.com/tarive22/artistic-interior/",
+      "image_url": "https://i.pinimg.com/1200x/be/7f/50/be7f50a043ef7bf6eda14abe2fad19fd.jpg",
+      "title": null,
+      "description": null,
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Compact green-tile bathroom with raw wood vanity",
+      "selected_for_mood_board": true
+    }
+  ],
+  "cluster_summary": [
+    {
+      "label": "Emerald zellige bathroom with brass fixtures",
+      "pin_ids": [
+        "1012465559998726645",
+        "1012465559998726635"
+      ],
+      "visual_notes": "Deep glossy emerald zellige tiles laid in stacked/brick patterns, warm brushed brass fittings (shower, sconces, mirrors), layered natural stone or terrazzo shower floors, live botanicals and woven basket textures. Stage with matte-black or dark planter, brass hardware, stone vessel sink, soft warm LED sconces to emphasize glaze depth.",
+      "weight": 0.35
+    },
+    {
+      "label": "Compact green-tile bathroom with raw wood vanity",
+      "pin_ids": [
+        "1012465559998726571"
+      ],
+      "visual_notes": "Narrow vertical/stacked green tiles with high gloss finish paired with a floating reclaimed-wood vanity and rounded brass mirror. Add warm filament bulbs, small hanging plant, and textured woven rug to soften tile reflectivity and create a cozy, spa-like micro-bath.",
+      "weight": 0.25
+    },
+    {
+      "label": "Walnut kitchen with deep green vertical tile backsplash",
+      "pin_ids": [
+        "1012465559998726635"
+      ],
+      "visual_notes": "Warm walnut cabinetry and marble counters combined with deep green, slightly textured vertical subway tiles. Use minimal brass accents (pendant hardware or pulls), pale marble countertops and geometric floor patterning. Stage with wooden cutting boards, matte ceramic canisters and muted greenery.",
+      "weight": 0.2
+    },
+    {
+      "label": "Art-forward warm bedroom / living — terracotta & collected pieces",
+      "pin_ids": [
+        "1012465559998726622",
+        "1012465559998726657"
+      ],
+      "visual_notes": "Mid-century low-profile furniture and gallery-style wall composition with bold terracotta/orange artworks and mixed vintage frames. Layer rugs with tribal motifs, velvet or wool upholstery in rust/brown tones, and sculptural lighting. Stage with curated objects, books, and a few large plants to keep the composition grounded and warm.",
+      "weight": 0.2
+    }
+  ],
+  "room_guidance": [
+    {
+      "room_id": "living_room_nest",
+      "headline": "Warm, art-forward living nest with botanical layers",
+      "guidance": "Stage a low mid‑century sofa facing the bay windows, anchored by the layered rug and a walnut coffee table. Place bookshelf and curated gallery wall to the side; use a tall plant near the window to connect indoor/ outdoor light. Emphasize warm brass floor lamp as a practical. Preserve bay window as primary light source and arrange seating to show depth toward exterior view.",
+      "must_include": [
+        "low-profile 3-seater sofa — pale oat linen upholstery, dark walnut tapered legs, no visible feet from side angle",
+        "large layered rug set — base jute flatweave natural oat, top handwoven low-pile wool rug in terracotta & emerald geometric motif, overall 9x12 ft",
+        "tall fiddle leaf fig plant — matte black ceramic planter, ~6ft height"
+      ],
+      "must_avoid": [
+        "oversized sectional that blocks bay window",
+        "bright white upholstery",
+        "extra small rugs that float under coffee table"
+      ]
+    },
+    {
+      "room_id": "dining_room_dine",
+      "headline": "Intimate walnut dining with sculptural brass pendant",
+      "guidance": "Center a round walnut dining table under a single sculptural aged‑brass pendant. Keep seating to 4 to preserve circulation. Use a small vintage sideboard or stacked wooden cutting boards as styling props; keep tabletop minimal with a low ceramic bowl and muted greenery. Allow pendant to read from the living sightline — its finish must match brass practicals in living area.",
+      "must_include": [
+        "round 5ft walnut dining table — warm walnut veneer top, matte black cylindrical pedestal base, seating for 4",
+        "sculptural pendant light — aged brass single-disc shade, 24\" diameter, smooth matte finish, suspended on dark braided cloth cord"
+      ],
+      "must_avoid": [
+        "bright pendant finishes (polished chrome)",
+        "overcrowded tabletop styling",
+        "mismatched chair finishes"
+      ]
+    },
+    {
+      "room_id": "bedroom_dream_1",
+      "headline": "Art-forward master with terracotta accents",
+      "guidance": "Low mid‑century bed frame in warm walnut, layered textiles (wool blanket in rust/terracotta), and a curated gallery wall above the headboard. Use a woven bedside lamp with warm filament bulbs for cozy highlights. Keep circulation clear to window; a single large plant or sculptural floor lamp can anchor a corner.",
+      "must_include": [
+        "warm walnut bed frame (low profile) — walnut veneer headboard with rounded corners",
+        "textile layering — wool throw in rust/terracotta, neutral linen sheets"
+      ],
+      "must_avoid": [
+        "tall heavy drapery that blocks window light",
+        "bright patterned bedding that competes with artwork"
+      ]
+    },
+    {
+      "room_id": "bedroom_dream_2",
+      "headline": "Quiet guest / study room with flexible standing desk",
+      "guidance": "Configure as flexible space: compact low bed or daybed plus a standing desk near the window to capture daylight. Keep finishes consistent (walnut desk surface, matte ceramic planters). A single sculptural wall piece in emerald or terracotta ties back to the main palette.",
+      "must_include": [
+        "standing_desk (user asset) — walnut top, black metal legs, height-adjustable",
+        "muted artwork in terracotta or deep green"
+      ],
+      "must_avoid": [
+        "office clutter visible from camera",
+        "clashing bright textiles"
+      ]
+    }
+  ]
+}

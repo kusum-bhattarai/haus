@@ -1,0 +1,228 @@
+{
+  "vibe_report": {
+    "aesthetic_name": "Earthy Mid‑Century Artistic",
+    "summary": "A warm, collected interior blending mid‑century forms with artisanal textures and an earthy palette. Deep emerald accents and terracotta art punctuate warm walnut wood, aged‑brass fixtures, and layered natural textiles to create a botanical‑spa, gallery‑like living environment. Prioritize honest daylight from bay/exterior windows and warm practicals to sculpt texture and glaze.",
+    "palette_rationale": "Base neutrals (pale oat, warm walnut) keep surfaces calm while accent colors (emerald green, terracotta, rust) provide artistic focal points that read well on camera. Brushed/aged brass adds a warm specular highlight that complements the green tiles and walnut tones.",
+    "lighting_mood": "Soft ambient overall with directional daylight from the bay/exterior windows. Window pulls create crisp, editorial shadows on textured surfaces; warm practicals (aged brass floor/pendant/sconce) provide localized warm highlights in evening scenes. All lighting must be derived from visible windows or practical fixtures.",
+    "materials": [
+      "warm walnut veneer (cabinets, table tops, shelving)",
+      "handwoven wool and jute textiles (rugs, throws)",
+      "gloss emerald zellige or textured green ceramic tile (accent walls/backsplash)",
+      "aged/brushed brass hardware and pendant fixtures",
+      "matte ceramic planters and stone or terrazzo accent surfaces"
+    ],
+    "textures": [
+      "glossy zellige tile glaze",
+      "low‑pile handwoven wool with tribal motif",
+      "natural jute flatweave",
+      "brushed metal patina",
+      "reclaimed/raw wood grain"
+    ],
+    "furniture_language": [
+      "low‑profile mid‑century silhouettes",
+      "tapered/dark walnut legs",
+      "rounded edges and organic forms",
+      "sculptural lighting as focal elements",
+      "layered textiles to soften hard surfaces"
+    ],
+    "styling_rules": [
+      "Keep color and finish consistent across sightlines — shared objects must match exactly.",
+      "Compose with one dominant accent (emerald or terracotta) and secondary warm metallic highlights.",
+      "Anchor seating groups with a single large layered rug (natural + patterned) sized to room dimensions.",
+      "Use plants at scale to animate vertical space — avoid over‑saturating small corners.",
+      "Limit visible art to curated gallery groupings — bold terracotta/orange pieces for focal walls."
+    ],
+    "avoid": [
+      "high‑gloss white modern minimalism (conflicts with earthy warmth)",
+      "bright saturated primary colors that compete with emerald/terracotta accents",
+      "introducing light sources that are not visible in the scene (no floating light)",
+      "mismatched furniture finishes across open sightlines"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "living_room_nest",
+        "headline": "Warm, art-forward living nest with botanical layers",
+        "guidance": "Stage a low mid‑century sofa facing the bay windows, anchored by the layered rug and a walnut coffee table. Place bookshelf and curated gallery wall to the side; use a tall plant near the window to connect indoor/ outdoor light. Emphasize warm brass floor lamp as a practical. Preserve bay window as primary light source and arrange seating to show depth toward exterior view.",
+        "must_include": [
+          "low-profile 3-seater sofa — pale oat linen upholstery, dark walnut tapered legs, no visible feet from side angle",
+          "large layered rug set — base jute flatweave natural oat, top handwoven low-pile wool rug in terracotta & emerald geometric motif, overall 9x12 ft",
+          "tall fiddle leaf fig plant — matte black ceramic planter, ~6ft height"
+        ],
+        "must_avoid": [
+          "oversized sectional that blocks bay window",
+          "bright white upholstery",
+          "extra small rugs that float under coffee table"
+        ]
+      },
+      {
+        "room_id": "dining_room_dine",
+        "headline": "Intimate walnut dining with sculptural brass pendant",
+        "guidance": "Center a round walnut dining table under a single sculptural aged‑brass pendant. Keep seating to 4 to preserve circulation. Use a small vintage sideboard or stacked wooden cutting boards as styling props; keep tabletop minimal with a low ceramic bowl and muted greenery. Allow pendant to read from the living sightline — its finish must match brass practicals in living area.",
+        "must_include": [
+          "round 5ft walnut dining table — warm walnut veneer top, matte black cylindrical pedestal base, seating for 4",
+          "sculptural pendant light — aged brass single-disc shade, 24\" diameter, smooth matte finish, suspended on dark braided cloth cord"
+        ],
+        "must_avoid": [
+          "bright pendant finishes (polished chrome)",
+          "overcrowded tabletop styling",
+          "mismatched chair finishes"
+        ]
+      },
+      {
+        "room_id": "bedroom_dream_1",
+        "headline": "Art-forward master with terracotta accents",
+        "guidance": "Low mid‑century bed frame in warm walnut, layered textiles (wool blanket in rust/terracotta), and a curated gallery wall above the headboard. Use a woven bedside lamp with warm filament bulbs for cozy highlights. Keep circulation clear to window; a single large plant or sculptural floor lamp can anchor a corner.",
+        "must_include": [
+          "warm walnut bed frame (low profile) — walnut veneer headboard with rounded corners",
+          "textile layering — wool throw in rust/terracotta, neutral linen sheets"
+        ],
+        "must_avoid": [
+          "tall heavy drapery that blocks window light",
+          "bright patterned bedding that competes with artwork"
+        ]
+      },
+      {
+        "room_id": "bedroom_dream_2",
+        "headline": "Quiet guest / study room with flexible standing desk",
+        "guidance": "Configure as flexible space: compact low bed or daybed plus a standing desk near the window to capture daylight. Keep finishes consistent (walnut desk surface, matte ceramic planters). A single sculptural wall piece in emerald or terracotta ties back to the main palette.",
+        "must_include": [
+          "standing_desk (user asset) — walnut top, black metal legs, height-adjustable",
+          "muted artwork in terracotta or deep green"
+        ],
+        "must_avoid": [
+          "office clutter visible from camera",
+          "clashing bright textiles"
+        ]
+      }
+    ],
+    "confidence": 0.89,
+    "warnings": [
+      "Open plan living/dining sightlines require strict cross-room object consistency (shared finishes and colors).",
+      "All lighting must be derived from visible windows or practical fixtures; avoid introducing unseen directional lights."
+    ]
+  },
+  "overall_mood": "Botanical‑spa warmth with artful, collected mid‑century character",
+  "global_style_notes": [
+    "Keep all wood finishes in warm walnut family — no cool oak or bleached ash.",
+    "Brass finishes should be aged/brushed rather than polished; color consistent across pendant, floor lamp, and small hardware.",
+    "Accent tiles or splashbacks should read deep emerald glaze with visible texture and natural specular highlights.",
+    "Scale plants to the room — at least one tall plant in the living area to frame bay windows."
+  ],
+  "negative_prompt": "no color inconsistency between rooms, no mismatched furniture across sightlines, blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift",
+  "room_plans": [
+    {
+      "room_id": "living_room_nest",
+      "lighting_instruction": "Primary light: directional daylight from bay/exterior windows (soft morning or late‑afternoon angle to create long, crisp window pulls). Supplement with a single aged‑brass floor lamp near the sofa and low ambient ceiling/soffit lighting set warmer than window daylight. Keep exposure balanced so exterior view remains readable but interior retains sculpted shadows.",
+      "dalle_scene_details": "Wide editorial interior of living area with bay/exterior windows to the exterior. Include: low-profile 3-seater sofa — pale oat linen upholstery, dark walnut tapered legs, no visible feet from side angle; large layered rug set — base jute flatweave natural oat, top handwoven low-pile wool rug in terracotta & emerald geometric motif, overall 9x12 ft; tall fiddle leaf fig plant — matte black ceramic planter, ~6ft height. Walnut bookshelf (open shelving, warm walnut veneer) against secondary wall with curated objects and books. Gallery wall with 3–5 mixed terracotta/earth‑toned framed artworks above sideboard. Material finishes: warm walnut wood, terracotta textile accents, aged brass floor lamp next to sofa. Composition notes: maintain true verticals, believable scale (sofa ~7ft long), camera framing that shows depth toward windows, avoid introducing light sources not visible in frame.",
+      "video_prompt": "Wide interior shot with a slow and smooth dolly in. Camera moves forward toward the bay window, directional sunlight shifts across upholstery and rug, shadows crawl slowly across floor and wall, consistent exposure, cinematic, photorealistic. Preserve architecture and composition; no layout drift.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "low-profile 3-seater sofa — pale oat linen upholstery, dark walnut tapered legs, no visible feet from side angle",
+        "large layered rug set — base jute flatweave natural oat, top handwoven low-pile wool rug in terracotta & emerald geometric motif, overall 9x12 ft",
+        "tall fiddle leaf fig plant — matte black ceramic planter, ~6ft height",
+        "walnut bookshelf (open shelving, warm walnut veneer)"
+      ],
+      "must_avoid": [
+        "floating/unreal light from non-visible sources",
+        "warped furniture or bent verticals",
+        "color inconsistency with shared objects"
+      ]
+    },
+    {
+      "room_id": "dining_room_dine",
+      "lighting_instruction": "Daylight from adjacent bay/exterior windows provides side/backlighting for the table. Pendant is the primary practical — aged brass single-disc pendant should be clearly visible and cast warm downlight on table. Maintain soft ambient fill from living area but keep pendant shadow crisp.",
+      "dalle_scene_details": "Intimate dining nook with bay/exterior windows and visible sightline into living area. Include shared objects: round 5ft walnut dining table — warm walnut veneer top, matte black cylindrical pedestal base, seating for 4; sculptural pendant light — aged brass single-disc shade, 24\" diameter, smooth matte finish, suspended on dark braided cloth cord. Chairs: mid‑century walnut frames with muted olive or terracotta upholstery (consistent finish). Styling: low ceramic centerpiece bowl, small folded linen napkins, muted greenery in a matte ceramic vase. Maintain true verticals and consistent brass finish that matches living area practicals. Composition should allow pendant to read clearly from living sightline.",
+      "video_prompt": "Very slow truck right, camera slides laterally to reveal dining nook and pendant, directional light from windows shifts across table surface, shadow edges remain crisp, consistent exposure, cinematic, photorealistic. Preserve architecture and sightlines.",
+      "camera_motion": "orbital_pan",
+      "duration_seconds": 5,
+      "must_include": [
+        "round 5ft walnut dining table — warm walnut veneer top, matte black cylindrical pedestal base, seating for 4",
+        "sculptural pendant light — aged brass single-disc shade, 24\" diameter, smooth matte finish, suspended on dark braided cloth cord"
+      ],
+      "must_avoid": [
+        "mismatched pendant finish",
+        "overly ornate table styling",
+        "chairs with bright or cool metal finishes"
+      ]
+    },
+    {
+      "room_id": "bedroom_dream_1",
+      "lighting_instruction": "Soft ambient daylight from single exterior window; bedside practicals (woven lamp or brass sconce) provide warm accent. Keep scene cozy and slightly contrasty — lift midtones slightly for camera readability while preserving depth in shadows.",
+      "dalle_scene_details": "Master bedroom with low warm walnut bed frame (walnut veneer headboard with rounded corners). Bedding layered with neutral linen sheets and a rust/terracotta wool throw. Curated gallery wall above headboard featuring terracotta and earth‑toned works. Nightstand with woven lamp (warm filament bulb) and small planter. Use warm walnut bedside furniture and a small textured wool rug at foot of bed. Maintain believable scale: bed width ~5ft (queen) or 6ft (if king) consistent with room dimensions. Preserve verticals and window light direction; do not add extra windows or non-visible lights.",
+      "video_prompt": "Static close-in slow zoom with consistent exposure. Camera holds on bed and slowly tightens to show textile texture and gallery wall, warm bedside practicals glow while daylight remains visible at the window, cinematic, photorealistic.",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "warm walnut bed frame (low profile) — walnut veneer headboard with rounded corners",
+        "textile layering — wool throw in rust/terracotta, neutral linen sheets"
+      ],
+      "must_avoid": [
+        "heavy drapery that blocks daylight",
+        "bedding patterns that conflict with gallery wall"
+      ]
+    },
+    {
+      "room_id": "bedroom_dream_2",
+      "lighting_instruction": "Daylight from exterior window for desk area; use desk lamp practical when showing work detail. Keep contrasts moderate to allow texture on wood desk and plant leaves to read.",
+      "dalle_scene_details": "Flexible guest/study room with a compact standing desk placed near the exterior window: standing_desk (user asset) — walnut top, black metal legs, height-adjustable. Include a small daybed or low single with neutral linen and one terracotta cushion. Muted artwork in deep green or terracotta ties to the main palette. Styling: matte ceramic planter on desk with small succulent, minimal desk accessories in warm brass/black finishes. Maintain scale and true verticals; no extraneous office clutter.",
+      "video_prompt": "Tight truck right to left (very slow) revealing the standing desk at the window, daylight shifts across the walnut desk surface, desk lamp practical remains constant, consistent exposure, cinematic, photorealistic.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "standing_desk (user asset) — walnut top, black metal legs, height-adjustable",
+        "muted artwork in terracotta or deep green"
+      ],
+      "must_avoid": [
+        "visible office clutter",
+        "mixed modern finishes that clash with warm walnut"
+      ]
+    }
+  ],
+  "shared_objects": [
+    {
+      "object_name": "low-profile 3-seater sofa",
+      "appearance_spec": "low-profile 3-seater sofa — pale oat linen upholstery, dark walnut tapered legs, no visible feet from side angle",
+      "room_ids": [
+        "living_room_nest",
+        "dining_room_dine"
+      ]
+    },
+    {
+      "object_name": "round 5ft walnut dining table",
+      "appearance_spec": "round 5ft walnut dining table — warm walnut veneer top, matte black cylindrical pedestal base, seating for 4",
+      "room_ids": [
+        "dining_room_dine",
+        "living_room_nest"
+      ]
+    },
+    {
+      "object_name": "sculptural pendant light",
+      "appearance_spec": "sculptural pendant light — aged brass single-disc shade, 24\" diameter, smooth matte finish, suspended on dark braided cloth cord",
+      "room_ids": [
+        "dining_room_dine",
+        "living_room_nest"
+      ]
+    },
+    {
+      "object_name": "large layered rug set",
+      "appearance_spec": "large layered rug set — base jute flatweave natural oat, top handwoven low-pile wool rug in terracotta & emerald geometric motif, overall 9x12 ft",
+      "room_ids": [
+        "living_room_nest",
+        "dining_room_dine"
+      ]
+    },
+    {
+      "object_name": "tall fiddle leaf fig plant",
+      "appearance_spec": "tall fiddle leaf fig plant — matte black ceramic planter, ~6ft height",
+      "room_ids": [
+        "living_room_nest",
+        "dining_room_dine"
+      ]
+    }
+  ],
+  "warnings": [
+    "Open plan sightlines: ensure exact appearance_spec strings above are referenced verbatim in any renderer or prompt to prevent color/finish mismatches.",
+    "Follow AutoHDR constraints: preserve architecture, true verticals, and derive all light from visible windows/practicals. Run an editorial image pass if source photos lack directional light or have flat exposure."
+  ]
+}

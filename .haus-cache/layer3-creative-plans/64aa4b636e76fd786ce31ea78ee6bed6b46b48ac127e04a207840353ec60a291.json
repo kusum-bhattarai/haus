@@ -1,0 +1,277 @@
+{
+  "vibe_report": {
+    "aesthetic_name": "Japandi Noir — Low‑Key Luxury",
+    "summary": "A restrained, textural Japandi‑inspired interior that balances deep, matte dark surfaces with warm natural wood and minimal, sculptural accents. The mood is calm and intimate: low ambient illumination, focused warm accent lights, and deliberately curated negative space. Materials read tactile and honest — smoked oak, matte black stone, warm brass — with a limited warm‑neutral palette to keep visual cohesion across connected spaces.",
+    "palette_rationale": "Use an anchored dark base (#0B0B0B matte black and #2F2F2F charcoal) with smoked oak warmth (#73503A) and restrained warm accents (gold/amber accent ~#D99A48) plus mid‑neutral grays (#8F8F8F). This keeps contrast dramatic but avoids cold, saturated hues; warm tones prevent the scheme from feeling austere.",
+    "lighting_mood": "Predominantly soft ambient with strong directional window pulls where available. Layered practicals (warm 2200–2700K LED strips, brass task lamps, low‑glow pendants) provide intimate pools of light. Shadows should be crisp and sculptural but never starkly underexposed — preserve readable midtones.",
+    "materials": [
+      "matte painted plaster (deep black) for primary walls",
+      "smoked oak veneer (vertical slat panels)",
+      "honed black marble / matte black stone for coffee and kitchen surfaces",
+      "warm wool and natural fiber rugs",
+      "matte brass hardware and lamps",
+      "charcoal linen upholstery"
+    ],
+    "textures": [
+      "tactile linen upholstery",
+      "vertical wood slats — linear rhythm",
+      "soft looped/woven wool rug",
+      "honed stone with subtle veining",
+      "soft matte plaster wall finish",
+      "ceramic and rough‑cast pottery accents"
+    ],
+    "furniture_language": [
+      "low, grounded silhouettes (platform beds, low sofas)",
+      "clean horizontal planes, minimal visible legs",
+      "monolithic small tables (cylindrical/rounded)",
+      "sleek, thin metal accents in warm brass",
+      "open shelving with negative space"
+    ],
+    "styling_rules": [
+      "limit palette to 3 dominant neutrals + 1 warm accent; repeat materials across visible rooms",
+      "curate 3–5 surface objects per view maximum (sculptural/ceramic/plant)",
+      "use single living focal plant (bonsai) rather than multiple houseplants",
+      "keep textiles monochrome or subtly varied neutrals — no patterns",
+      "expose vertical slats on at least one primary sightline to create depth and shadow"
+    ],
+    "avoid": [
+      "bright saturated colors",
+      "patterned textiles or busy prints",
+      "high‑gloss reflective metals in large areas",
+      "excess clutter (paper stacks, many small chargers, toys)"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living",
+        "headline": "Japandi Noir Living — Calm, Sculptural Centerpiece",
+        "guidance": "Center the composition on the low charcoal sofa facing the large north window. Anchor with a large neutral woven rug and the monolithic black marble coffee table. Show the smoked oak vertical slat feature on the adjacent wall with a warm recessed strip behind it. Add a single sculptural bonsai as the organic counterpoint. Lighting: rely on natural bay/window light for soft directional pull; supplement with a warm brass floor lamp and recessed cove at the slat wall for depth.",
+        "must_include": [
+          "low-profile 3-seater sofa — charcoal slate linen upholstery (#2F2F2F), low recessed plinth base in smoked walnut finish, single continuous back cushion, no visible legs from side angle",
+          "large neutral woven rug — warm pebble wool, rectangular to fit sofa and coffee table",
+          "round low coffee table — honed black marble (Jet Black #0B0B0B) with beveled edge, solid cylindrical base",
+          "smoked oak vertical slat divider — floor-to-ceiling smoked oak veneer, vertical 2-inch slats, matte finish",
+          "single medium bonsai in shallow matte black ceramic pot"
+        ],
+        "must_avoid": [
+          "visible patterned cushions or colorful throws",
+          "multiple competing plants",
+          "bright surface clutter on coffee table"
+        ]
+      },
+      {
+        "room_id": "kitchen_taste",
+        "headline": "Compact Japandi Kitchen — Minimal, Textured, Functional",
+        "guidance": "Keep cabinetry simple, matte charcoal or warm stone, with a narrow matte black stone counter and subtle brass pulls. Use the small east window to create a soft directional highlight over the sink. Because the kitchen opens to the living area, allow sightlines to include the sofa, rug and coffee table; proportions must keep the island/counter small to avoid visual crowding. Lighting: a slim linear brass pendant over the island/small peninsula (warm 2200K) and undercabinet warm task lighting.",
+        "must_include": [
+          "linear brass pendant — matte brass finish, slim rectangular profile, warm 2200K light, suspended 30 inches above island",
+          "matte black stone kitchen counter — honed black finish (consistent with coffee table material)",
+          "sightline-visible living objects: low-profile 3-seater sofa — charcoal slate linen upholstery (#2F2F2F), large neutral woven rug — warm pebble wool, round low coffee table — honed black marble (Jet Black #0B0B0B) with beveled edge, solid cylindrical base"
+        ],
+        "must_avoid": [
+          "oversized island that blocks view to living",
+          "bright stainless steel reflections",
+          "open shelving cluttered with mismatched dishware"
+        ]
+      },
+      {
+        "room_id": "bedroom_dream_3",
+        "headline": "Primary Bedroom — Dark Luxe, Textural Bed Foil",
+        "guidance": "Create a low wood platform bed with layered charcoal and warm gray linens. Use a smoked oak or ribbed wood headboard against a matte black accent wall and a pair of small sculptural brass sconces or pendant lamps. Keep bedside surfaces minimal — one ceramic object and a folded neutral throw. Lighting: west/south window provides soft late‑day light; ambient recessed cove behind headboard for warm halo.",
+        "must_include": [
+          "low wood platform bed in smoked oak with charcoal linen headboard",
+          "layered bedding: light gray sheets, charcoal duvet, warm gray textured throw",
+          "pair of small brass bedside sconces (warm 2700K)"
+        ],
+        "must_avoid": [
+          "high beds or bulky tall furniture that contradicts low-profile language",
+          "bright bedside lamps or cold white lighting"
+        ]
+      },
+      {
+        "room_id": "bedroom_dream_2",
+        "headline": "Secondary Bedroom / Work Nook — Calm and Functional",
+        "guidance": "This room functions as a medium bedroom with a modest standing desk placed at a window side to benefit from daylight. Keep palette consistent: matte black accent wall with smoked oak shelving and a small upholstered bed or daybed. Styling with a single narrow bookshelf for curated objects.",
+        "must_include": [
+          "compact standing desk — dark smoked oak top, matte black steel legs (placed near window)",
+          "narrow open bookshelf — smoked oak shelves, minimal vertical metal frame",
+          "low-profile bed/daybed in charcoal linen"
+        ],
+        "must_avoid": [
+          "cluttered desk surface",
+          "large office chairs that dominate the room"
+        ]
+      },
+      {
+        "room_id": "bedroom_dream_1",
+        "headline": "Guest / Small Bedroom — Minimal and Quiet",
+        "guidance": "Small footprint — emphasize breathing room. Use a low bed, minimal bedside shelf, and one small sculptural lamp. Keep visual weight low near the doorway to preserve circulation.",
+        "must_include": [
+          "low bed platform with charcoal linens",
+          "single sculptural bedside lamp in matte brass"
+        ],
+        "must_avoid": [
+          "oversized wardrobes that reduce perceived space",
+          "high-contrast decorative elements"
+        ]
+      }
+    ],
+    "confidence": 0.88,
+    "warnings": [
+      "Kitchen is compact — avoid suggesting a full-size island or large dining table in camera compositions.",
+      "Open sightlines mean shared materials/furniture must remain visually consistent between kitchen and living; ensure color/finish specs are reused exactly."
+    ]
+  },
+  "overall_mood": "intimate, cinematic, quietly luxurious — dark tonal anchors warmed by smoked oak and brass accents",
+  "global_style_notes": [
+    "Preserve architecture and sightlines exactly; use furniture to reinforce horizontal planes.",
+    "Use directional window light as primary driver for editorial shadows; practicals should supplement rather than compete.",
+    "Keep props to a minimum — one ceramic, one book, one small plant per vignette."
+  ],
+  "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, no color inconsistency between rooms, no mismatched furniture across sightlines",
+  "room_plans": [
+    {
+      "room_id": "nest_living",
+      "lighting_instruction": "Use the large north-facing window as the primary soft directional source. Add warm practicals: recessed cove behind smoked oak slats (warm 2500–2700K), a single brass floor lamp near the sofa (warm 2700K). Keep overall exposure balanced so deep blacks retain texture and midtones remain readable — do not clip highlights from the window.",
+      "dalle_scene_details": "Wide living composition: matte black plaster walls, floor-to-ceiling smoked oak vertical slat divider (see appearance_spec: \"smoked oak vertical slat divider — floor-to-ceiling smoked oak veneer, vertical 2-inch slats, matte finish\"), low-profile 3-seater sofa — charcoal slate linen upholstery (#2F2F2F), low recessed plinth base in smoked walnut finish, single continuous back cushion, no visible legs from side angle; place sofa centered facing the large north window with a large neutral woven rug — warm pebble wool, rectangular under the seating area; round low coffee table — honed black marble (Jet Black #0B0B0B) with beveled edge, solid cylindrical base centered on rug; single medium bonsai in shallow matte black ceramic pot placed on a low side plinth to left of sofa; minimal accessories: one matte ceramic bowl and one closed art book on the coffee table. Maintain believable scale: sofa 84",
+      "video_prompt": "Wide dolly in: Super smooth camera moves forward in straight line through the living space, slow and cinematic; directional window sunlight shifts across the sofa and slat wall during the shot, shadows crawl and sharpen; consistent exposure, preserve verticals and architecture, photorealistic editorial tone.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "smoked oak vertical slat divider — floor-to-ceiling smoked oak veneer, vertical 2-inch slats, matte finish",
+        "low-profile 3-seater sofa — charcoal slate linen upholstery (#2F2F2F), low recessed plinth base in smoked walnut finish, single continuous back cushion, no visible legs from side angle",
+        "round low coffee table — honed black marble (Jet Black #0B0B0B) with beveled edge, solid cylindrical base",
+        "large neutral woven rug — warm pebble wool, rectangular to fit sofa and coffee table",
+        "single medium bonsai in shallow matte black ceramic pot"
+      ],
+      "must_avoid": [
+        "bright colored pillows or throws",
+        "overcrowded coffee table or multiple small plants",
+        "visible mismatched furniture from other rooms"
+      ]
+    },
+    {
+      "room_id": "kitchen_taste",
+      "lighting_instruction": "East-facing sink window supplies morning directional light; use that for natural highlights. Supplement with a slim linear brass pendant (warm 2200K) over the peninsula and undercabinet warm task LEDs. Keep reflective surfaces low-gloss to avoid glare into adjacent living area.",
+      "dalle_scene_details": "Compact kitchen composition: matte charcoal cabinetry with matte black stone kitchen counter (honed black finish consistent with coffee table: \"round low coffee table — honed black marble (Jet Black #0B0B0B) with beveled edge, solid cylindrical base\" material reference), small peninsula sized to the room (no oversized island), linear brass pendant — matte brass finish, slim rectangular profile, warm 2200K light, suspended 30 inches above island; open sightline to living showing low-profile 3-seater sofa — charcoal slate linen upholstery (#2F2F2F) and large neutral woven rug — warm pebble wool and round low coffee table — honed black marble (Jet Black #0B0B0B) with beveled edge, solid cylindrical base across the opening; place simple ceramic vase near sink and minimal dishware on open shelf. Maintain believable scale so peninsula depth does not exceed 36\" and sightline spacing preserves circulation.",
+      "video_prompt": "Wide slide (truck right to left): Super smooth camera glides horizontally from right to left across the kitchen plane, time-lapse light progression from the east window creates a subtle shift in shadow on counters, consistent exposure, stable motion, cinematic, photorealistic.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "linear brass pendant — matte brass finish, slim rectangular profile, warm 2200K light, suspended 30 inches above island",
+        "matte black stone kitchen counter — honed black finish (consistent with coffee table material)",
+        "sightline-visible living objects: low-profile 3-seater sofa — charcoal slate linen upholstery (#2F2F2F), large neutral woven rug — warm pebble wool, round low coffee table — honed black marble (Jet Black #0B0B0B) with beveled edge, solid cylindrical base"
+      ],
+      "must_avoid": [
+        "oversized island or dining furniture that blocks sightline to living",
+        "bright reflective stainless surfaces",
+        "excessive countertop clutter"
+      ]
+    },
+    {
+      "room_id": "bedroom_dream_3",
+      "lighting_instruction": "South window as primary; aim for late‑day warm light to emphasize textures. Use recessed halo behind headboard (warm 2500–2700K) and low-intensity bedside sconces (warm 2700K) for evening moods. Keep overall exposure slightly darker than living to maintain intimacy but preserve texture in linens.",
+      "dalle_scene_details": "Primary bedroom framed as low, calm composition: matte black accent wall behind a smoked oak low platform bed (headboard integrated with smoked oak rib or panel); bed dressed in layered bedding (light gray sheets, charcoal duvet, warm gray throw); pair of small brass bedside sconces (warm 2700K) flank bed; minimal floor clearance under bed to emphasize grounded silhouette; include one narrow smoked oak bench at foot of bed. Keep scale appropriate for room dimensions (approx. 11.33' x 13.75'). No living-area objects referenced in main camera angle.",
+      "video_prompt": "Slow dolly in: Very slow camera move forward toward the bed, directional light shifts subtly across textiles and headboard, shadows remain crisp and architectural, consistent exposure, cinematic editorial style.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "low wood platform bed in smoked oak with charcoal linen headboard",
+        "layered bedding: light gray sheets, charcoal duvet, warm gray textured throw",
+        "pair of small brass bedside sconces (warm 2700K)"
+      ],
+      "must_avoid": [
+        "large wardrobes that break the low-profile composition",
+        "bright decorative elements"
+      ]
+    },
+    {
+      "room_id": "bedroom_dream_2",
+      "lighting_instruction": "Use the south/east window for balanced daylight on the desk area. Add a small recessed reading light for the bed area (warm 2700K). Keep lighting soft to support working shots without harsh glare on screens.",
+      "dalle_scene_details": "Secondary bedroom/work nook: compact standing desk placed at window (compact standing desk — dark smoked oak top, matte black steel legs), narrow open bookshelf on adjacent wall (narrow open bookshelf — smoked oak shelves, minimal vertical metal frame), low-profile daybed in charcoal linen along opposite wall. Keep styling minimal: single ceramic planter and one framed monochrome print. No living room objects occupy main frame, but when framing toward doorway ensure material continuity with smoked oak finishes.",
+      "video_prompt": "Static detail (static zoom): Slow static zoom in to a composed desk vignette at the window, warm window light fills the desk surface, slight depth-of-field to emphasize texture, consistent exposure, photorealistic.",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "compact standing desk — dark smoked oak top, matte black steel legs (placed near window)",
+        "narrow open bookshelf — smoked oak shelves, minimal vertical metal frame",
+        "low-profile bed/daybed in charcoal linen"
+      ],
+      "must_avoid": [
+        "cluttered desk surface",
+        "oversized office furniture"
+      ]
+    },
+    {
+      "room_id": "bedroom_dream_1",
+      "lighting_instruction": "West window provides evening light; keep exposure balanced to preserve shadow detail. Use one sculptural bedside lamp for warmth.",
+      "dalle_scene_details": "Small guest bedroom: low bed platform with charcoal linens, single sculptural bedside lamp in matte brass, minimal styling (one folded throw, one small ceramic object). Keep negative space near doorway for perceived circulation.",
+      "video_prompt": "Static zoom: gentle static zoom into the bedside composition, soft window light and lamp creating layered shadows, consistent exposure, photorealistic.",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "low bed platform with charcoal linens",
+        "single sculptural bedside lamp in matte brass"
+      ],
+      "must_avoid": [
+        "overstuffed furniture that blocks circulation",
+        "bright patterned textiles"
+      ]
+    }
+  ],
+  "shared_objects": [
+    {
+      "object_name": "low-profile 3-seater sofa",
+      "appearance_spec": "low-profile 3-seater sofa — charcoal slate linen upholstery (#2F2F2F), low recessed plinth base in smoked walnut finish, single continuous back cushion, no visible legs from side angle",
+      "room_ids": [
+        "nest_living",
+        "kitchen_taste"
+      ]
+    },
+    {
+      "object_name": "round low coffee table",
+      "appearance_spec": "round low coffee table — honed black marble (Jet Black #0B0B0B) with beveled edge, solid cylindrical base",
+      "room_ids": [
+        "nest_living",
+        "kitchen_taste"
+      ]
+    },
+    {
+      "object_name": "large neutral woven rug",
+      "appearance_spec": "large neutral woven rug — warm pebble wool, rectangular to fit sofa and coffee table, low pile, color: warm stone (soft neutral)",
+      "room_ids": [
+        "nest_living",
+        "kitchen_taste"
+      ]
+    },
+    {
+      "object_name": "smoked oak vertical slat divider",
+      "appearance_spec": "smoked oak vertical slat divider — floor-to-ceiling smoked oak veneer, vertical 2-inch slats, matte finish",
+      "room_ids": [
+        "nest_living",
+        "kitchen_taste"
+      ]
+    },
+    {
+      "object_name": "linear brass pendant",
+      "appearance_spec": "linear brass pendant — matte brass finish, slim rectangular profile, warm 2200K light, suspended 30 inches above island",
+      "room_ids": [
+        "kitchen_taste",
+        "nest_living"
+      ]
+    },
+    {
+      "object_name": "single medium bonsai",
+      "appearance_spec": "single medium bonsai in shallow matte black ceramic pot — approx. 12–18\" high, sculptural branch silhouette",
+      "room_ids": [
+        "nest_living",
+        "kitchen_taste"
+      ]
+    }
+  ],
+  "warnings": [
+    "Maintain strict color/finish reuse for shared_objects across sightlines to avoid visible mismatches.",
+    "Kitchen footprint is small — any proposed island or furniture must be dimensionally modest (peninsula depth <= 36\") to preserve circulation and sightlines.",
+    "For video generation follow AutoHDR flow: perform 1 image refinement pass for rooms with flat lighting (kitchen and bedrooms) before video; living room may be direct-to-video if a strong edited photo exists.",
+    "Negative prompt enforcement required: no color inconsistency between rooms, no mismatched furniture across sightlines; also block warped architecture and unstable camera motion."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a99ac5e/D49MQhOgkNyTNA8S6-fZx_RMJg9eZB.png",
+      "https://v3b.fal.media/files/b/0a99ac5d/UycGCRamTWKzfLUGtWAHX_tcnQuPU4.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for a 12.166666666666666 by 14.666666666666666 ft Nest. Use the large north-facing window as the primary soft directional source. Add warm practicals: recessed cove behind smoked oak slats (warm 2500–2700K), a single brass floor lamp near the sofa (warm 2700K). Keep overall exposure balanced so deep blacks retain texture and midtones remain readable — do not clip highlights from the window. A restrained, textural Japandi‑inspired interior that balances deep, matte dark surfaces with warm natural wood and minimal, sculptural accents. The mood is calm and intimate: low ambient illumination, focused warm accent lights, and deliberately curated negative space. Materials read tactile and honest — smoked oak, matte black stone, warm brass — with a limited warm‑neutral palette to keep visual cohesion across connected spaces. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The Taste visible through the open kitchen beyond the dining area must show exactly the same kitchen cabinets, range hood, kitchen island or counter, linear brass pendant — matte brass finish, slim rectangular profile, warm 2200K light, suspended 30 inches above island, matte black stone kitchen counter — honed black finish (consistent with coffee table material), sightline-visible living objects: low-profile 3-seater sofa — charcoal slate linen upholstery (#2F2F2F), large neutral woven rug — warm pebble wool, round low coffee table — honed black marble (Jet Black #0B0B0B) with beveled edge, solid cylindrical base as in the reference image — do not invent different furniture. Add a tall whiteboard in the living room — at approximately 12% across and 87% down",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

@@ -1,0 +1,12 @@
+{
+  "endpoint_id": "fal-ai/nano-banana-2",
+  "params": {
+    "prompt": "Photorealistic editorial interior reference photograph of a Dine. Focus tightly on: dining table, pendant light above the dining area, dining chairs, round 5ft walnut dining table — warm walnut veneer top, matte black cylindrical pedestal base, seating for 4, sculptural pendant light — aged brass single-disc shade, 24\" diameter, smooth matte finish, suspended on dark braided cloth cord. Styled in mid_century aesthetic, earthy palette, soft_ambient lighting. A warm, collected interior blending mid‑century forms with artisanal textures and an earthy palette. Deep emerald accents and terracotta art punctuate warm walnut wood, aged‑brass fixtures, and layered natural textiles to create a botanical‑spa, gallery‑like living environment. Prioritize honest daylight from bay/exterior windows and warm practicals to sculpt texture and glaze. This image is a visual consistency reference — every detail of the featured furniture and fixtures must be clearly visible and precisely rendered. No people. No visible brand logos. Sharp architectural photography. Luxury real estate staging.",
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

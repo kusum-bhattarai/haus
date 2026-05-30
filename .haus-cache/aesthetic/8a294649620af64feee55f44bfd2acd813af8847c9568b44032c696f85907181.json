@@ -1,55 +1,52 @@
 {
-  "palette": "monochrome",
-  "lighting": "dramatic",
+  "palette": "warm_neutral",
+  "lighting": "soft_ambient",
   "density": "layered",
   "style_era": "japandi",
   "dominant_colors": [
     "#0B0B0B",
     "#2F2F2F",
-    "#6B3F2A",
-    "#C48A48",
-    "#E7E6E4"
+    "#73503A",
+    "#D99A48",
+    "#8F8F8F"
   ],
   "mood_words": [
-    "moody",
-    "meditative",
+    "low-key luxury",
+    "calm wabi-sabi",
     "textural warmth",
-    "calm minimalism",
-    "refined luxury",
-    "zen"
+    "intimate ambient glow",
+    "measured minimalism"
   ],
   "pinterest_cluster_labels": [
-    "matte-black walls + vertical wood slats",
-    "low-profile platform bed with charcoal linens",
-    "amber cove/strip lighting for warm contrast",
-    "brass bedside accents & sculptural lamps",
-    "monolithic black stone coffee table + bonsai / shoji"
+    "dark minimalist bedroom — black walls + vertical wood slats",
+    "moody luxe bedside styling — brass lamps & layered bedding",
+    "Japandi noir living room — smoked oak slats, shoji screens & bonsai"
   ],
   "cluster_summary": [
     {
-      "label": "Minimal platform bedroom with vertical wood slat accent",
+      "label": "dark minimalist bedroom — black walls + vertical wood slats",
       "pin_ids": [
         "1012465559998726563"
       ],
-      "visual_notes": "Matte black walls and ceiling, vertical warm wood slat panel, low walnut platform bed, charcoal bedding and rug, amber cove light along ceiling edge — minimal furnishings, emphasis on horizontal planes and warm wood contrast.",
+      "visual_notes": "Matte black walls and ceiling, vertical walnut/smoked oak slat accent, low wood platform bed and matching nightstands, charcoal linens, thin pendant lights and warm cove LED. Stage with a single small plant, minimal bedside objects, and expansive glazing to balance heaviness.",
       "weight": 0.34
     },
     {
-      "label": "Moody luxe bedroom with brass accents and recessed strip light",
+      "label": "moody luxe bedside styling — brass lamps & layered bedding",
       "pin_ids": [
         "1012465559998726531"
       ],
-      "visual_notes": "Charcoal upholstered bed and fluted headboard panel, layered gray bedding, brass dome bedside lamps, recessed warm LED strip behind headboard, textured throws and rugs — layered textiles and metallic highlights for a luxe yet restrained look.",
+      "visual_notes": "Upholstered dark headboard, layered neutrals (light gray sheets + charcoal duvet), sculptural brass dome bedside lamps, floating shelves with curated ceramics/art, recessed LED strip behind ribbed panel. Stage with textured throws and 1–2 sculptural metallic accents for warmth.",
       "weight": 0.33
     },
     {
-      "label": "Japandi noir living room with shoji screens and monolithic black stone table",
+      "label": "Japandi noir living room — smoked oak slats, shoji screens & bonsai",
       "pin_ids": [
         "1012465559998726506"
       ],
-      "visual_notes": "Matte black tadelakt-like walls, smoked oak slatted wall, charcoal linen sectional, low black marble coffee table with white veining, frosted shoji screens and single bonsai — Japanese minimalism meets Scandinavian texture and warm wood tones.",
+      "visual_notes": "Matte black tadelakt or painted walls, smoked oak vertical slats, low charcoal linen sectional, monolithic black marble coffee table, frosted shoji screens and a single bonsai for organic focus. Stage with a neutral woven rug, low clutter, and tactile cushions to emphasize calm minimalism.",
       "weight": 0.33
     }
   ],
-  "confidence": 0.92
+  "confidence": 0.91
 }

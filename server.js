@@ -12,6 +12,8 @@ import { createLayer1Payload, Layer1ValidationError } from './src/layer1/index.j
 import { createLayer2Profile, Layer2ValidationError } from './src/layer2/index.js';
 import { createLayer3Handoff, Layer3ValidationError, listStyleLibrary } from './src/layer3/index.js';
 import { buildCacheDictionary } from './scripts/cache-dictionary.js';
+import { buildDemoAesthetics } from './src/demoAesthetics.js';
+import { runLayer5 } from './src/layer5/index.js';
 
 loadEnvFile();
 
@@ -45,6 +47,10 @@ export function createHausServer(options = {}) {
 
       if (req.method === 'GET' && url.pathname === '/api/demo-cache') {
         return await handleDemoCache(res);
+      }
+
+      if (req.method === 'GET' && url.pathname === '/api/demo-aesthetics') {
+        return sendJson(res, await buildDemoAesthetics({ cacheDir }));
       }
 
       if (req.method === 'GET' && url.pathname === '/api/style-library') {
@@ -93,6 +99,11 @@ export function createHausServer(options = {}) {
       const editMatch = url.pathname.match(/^\/api\/jobs\/([^/]+)\/edit$/);
       if (req.method === 'POST' && editMatch) {
         return await handleEditRoom(req, res, agentRuntime, editMatch[1]);
+      }
+
+      const assembleMatch = url.pathname.match(/^\/api\/jobs\/([^/]+)\/assemble$/);
+      if (req.method === 'POST' && assembleMatch) {
+        return await handleAssembleJob(req, res, agentRuntime, assembleMatch[1]);
       }
 
       const assetMatch = url.pathname.match(/^\/api\/jobs\/([^/]+)\/assets\/(.+)$/);
@@ -157,6 +168,15 @@ async function handlePipeline(req, res) {
 
 async function handleCreateJob(req, res, agentRuntime) {
   const body = await readJsonBody(req);
+
+  const presetJobId = await findDemoPreset(body);
+  if (presetJobId) {
+    const preset = await agentRuntime.getJob(presetJobId).catch(() => null);
+    if (preset?.status === 'completed') {
+      return sendJson(res, { job_id: preset.job_id, status: preset.status, current_state: preset.current_state });
+    }
+  }
+
   const job = await agentRuntime.createJob({
     floor_plan_id: body.floor_plan_id,
     pinterest_board_url: body.pinterest_board_url,
@@ -170,6 +190,14 @@ async function handleCreateJob(req, res, agentRuntime) {
     status: job.status,
     current_state: job.current_state
   }, 202);
+}
+
+async function findDemoPreset(body) {
+  const presetsPath = path.join(cacheDir, 'demo_presets.json');
+  const presets = await readJsonFile(presetsPath).catch(() => ({}));
+  const objects = Array.isArray(body.objects) ? body.objects : [];
+  const key = `${body.floor_plan_id}|${body.pinterest_board_url}|${[...objects].sort().join(',')}`;
+  return presets[key] ?? null;
 }
 
 async function handleGetJob(res, agentRuntime, jobId) {
@@ -698,6 +726,34 @@ async function handleRetryRoom(req, res, agentRuntime, jobId, roomId) {
     }).catch((error) => console.error(error));
   });
   return sendJson(res, { ok: true, job_id: jobId, room_id: roomId }, 202);
+}
+
+async function handleAssembleJob(req, res, agentRuntime, jobId) {
+  const job = await agentRuntime.getJob(jobId).catch(() => null);
+  if (!job) return sendJson(res, { error: 'Job not found' }, 404);
+  const clips = job.artifacts?.approved_room_clips ?? [];
+  if (!clips.length) return sendJson(res, { error: 'No approved clips to assemble' }, 400);
+
+  sendJson(res, { ok: true, job_id: jobId, message: 'Assembly started' }, 202);
+
+  const jobDir = path.join(agentRuntime.jobManager.jobsDir, jobId);
+  const roomOrder = new Map((job.rooms ?? []).map((r) => [r.room_id, r.sequence_index ?? 0]));
+  const sortedClips = [...clips].sort((a, b) => (roomOrder.get(a.room_id) ?? 0) - (roomOrder.get(b.room_id) ?? 0));
+  const jobForLayer5 = { ...job, artifacts: { ...job.artifacts, approved_room_clips: sortedClips } };
+
+  runLayer5({ ...jobForLayer5, _job_dir: jobDir }).then(async (layer5) => {
+    await agentRuntime.jobManager.updateJob(jobId, async (current) => {
+      current.status = 'completed';
+      current.current_state = 'COMPLETED';
+      current.artifacts.final_video_path = layer5.final_video_path;
+      current.artifacts.final_video_url = layer5.final_video_path
+        ? `/api/jobs/${jobId}/assets/layer5/final_16x9.mp4`
+        : null;
+    });
+    console.log(`[assemble] ${jobId} done → ${layer5.final_video_path}`);
+  }).catch((err) => {
+    console.error(`[assemble] ${jobId} failed:`, err.message);
+  });
 }
 
 async function handleEditRoom(req, res, agentRuntime, jobId) {

@@ -1,0 +1,17 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a99ac5b/0Ko1WJwFyAomsUM0zHWtp_wCfwhTM8.png",
+      "https://v3b.fal.media/files/b/0a99ac59/3mHsiuqAIsfLyU9ZrbIrx_mSIlssig.png",
+      "https://v3b.fal.media/files/b/0a99ac59/ImXSayNAf0lq4Ke1LPbkS_6UuELLle.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for a 7.6667 by 9.6667 ft Dine. Daylight from adjacent bay/exterior windows provides side/backlighting for the table. Pendant is the primary practical — aged brass single-disc pendant should be clearly visible and cast warm downlight on table. Maintain soft ambient fill from living area but keep pendant shadow crisp. A warm, collected interior blending mid‑century forms with artisanal textures and an earthy palette. Deep emerald accents and terracotta art punctuate warm walnut wood, aged‑brass fixtures, and layered natural textiles to create a botanical‑spa, gallery‑like living environment. Prioritize honest daylight from bay/exterior windows and warm practicals to sculpt texture and glaze. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The dining table, pendant light above the dining area, dining chairs, round 5ft walnut dining table — warm walnut veneer top, matte black cylindrical pedestal base, seating for 4, sculptural pendant light — aged brass single-disc shade, 24\" diameter, smooth matte finish, suspended on dark braided cloth cord in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. The Nest visible through the open-plan living area must show exactly the same sofa, coffee table, area rug, low-profile 3-seater sofa — pale oat linen upholstery, dark walnut tapered legs, no visible feet from side angle, large layered rug set — base jute flatweave natural oat, top handwoven low-pile wool rug in terracotta & emerald geometric motif, overall 9x12 ft, tall fiddle leaf fig plant — matte black ceramic planter, ~6ft height, walnut bookshelf (open shelving, warm walnut veneer), bookshelf as in the reference image — do not invent different furniture. Previous failure modes to correct: motion_unstable, object_missing. The image has a good overall composition and captures the intended ambiance of a dining room with natural light. However, it lacks some key specified objects, such as the walnut dining table and aged brass pendant light, which are critical for compliance with the staging requirements. The styling also seems a bit overcrowded, detracting from the intended aesthetic.",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

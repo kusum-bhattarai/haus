@@ -1,0 +1,859 @@
+{
+  "schema_version": "1.0",
+  "handoff_id": "baa6750b-2d31-4dc3-94a7-44264fdb0aae",
+  "session_id": "88eca162-3046-4330-ad0a-fc0b74658db3",
+  "created_at": "2026-05-10T17:08:49.194Z",
+  "status": "ready_for_room_images",
+  "source_input": {
+    "floor_plan_url": "file:///Users/quamos/Repos/haus/.haus-cache/floor-plans/a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6.png",
+    "floor_plan_metadata": {
+      "source": "local_upload",
+      "mime_type": "image/png",
+      "size_bytes": 64138,
+      "width_px": 448,
+      "height_px": 480,
+      "sha256": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6",
+      "cache_key": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6"
+    },
+    "floor_plan_measurements": {
+      "source": "ml_parser",
+      "unit": "ft",
+      "scale": null,
+      "rooms": [
+        {
+          "room_id": null,
+          "name": "Dream",
+          "dimensions": {
+            "width": 12.5,
+            "length": 11.583,
+            "area": 144.792
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Nest",
+          "dimensions": {
+            "width": 11.917,
+            "length": 11.667,
+            "area": 139.028
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Dine",
+          "dimensions": {
+            "width": 7.833,
+            "length": 8,
+            "area": 62.667
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        }
+      ],
+      "notes": null
+    },
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+    "brief": "Warm, calm home for a young family that needs a cozy work corner.",
+    "objects": [
+      {
+        "object_type": "standing_desk",
+        "room_id": "dream_bedroom",
+        "label": "standing desk"
+      },
+      {
+        "object_type": "bookshelf",
+        "room_id": "nest_living_room",
+        "label": "bookshelf"
+      }
+    ],
+    "platform": "all"
+  },
+  "pinterest_intelligence": {
+    "aesthetic_profile": {
+      "palette": "warm_neutral",
+      "lighting": "soft_ambient",
+      "density": "balanced",
+      "style_era": "japandi",
+      "dominant_colors": [
+        "#EDE6DE",
+        "#D2BFA3",
+        "#B58E61",
+        "#8A6E52",
+        "#6A736A",
+        "#2F3230"
+      ],
+      "mood_words": [
+        "calm minimal warmth",
+        "organic/textural layering",
+        "low-profile seating",
+        "soft ambient glow",
+        "biophilic serenity",
+        "ceramic & woven accents"
+      ],
+      "pinterest_cluster_labels": [
+        "Japandi neutral dining set with woven pendant",
+        "Low-floor Japanese reading/tea nook",
+        "Minimal plant-forward living room with low wood table"
+      ],
+      "confidence": 0.89
+    },
+    "pins": [
+      {
+        "pin_id": "1012465559998684270",
+        "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+        "image_url": "https://i.pinimg.com/1200x/87/c2/ff/87c2ffd657991b8cba7e91b508c13848.jpg",
+        "title": "Japandi Dining Room with Neutral Decor",
+        "description": "A Japandi dining room with neutral décor blends Japanese simplicity and Scandinavian warmth. Soft beige, warm wood, and gentle earth tones create a calm, inviting space. Clean lines, natural materials, and minimal furnishings keep the room feeling open and uncluttered, while subtle textures like linen, ceramic, and light wood add quiet elegance and comfort.",
+        "save_count": null,
+        "hashtags": [],
+        "cluster_label": "Japandi neutral dining set with woven pendant",
+        "selected_for_mood_board": true
+      },
+      {
+        "pin_id": "1012465559998684267",
+        "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+        "image_url": "https://i.pinimg.com/1200x/7e/9f/71/7e9f71efa20a307977036346b7de8cd9.jpg",
+        "title": "Japandi nook area",
+        "description": "Home aesthetics",
+        "save_count": null,
+        "hashtags": [],
+        "cluster_label": "Low-floor Japanese reading/tea nook",
+        "selected_for_mood_board": true
+      },
+      {
+        "pin_id": "1012465559998684162",
+        "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+        "image_url": "https://i.pinimg.com/1200x/10/a5/ce/10a5cea5365b36e587c39a3144cbc8a2.jpg",
+        "title": "Japandi Living Room: Calm Minimal Decor, Natural Wood & Indoor Plants",
+        "description": "Calm Japandi living room inspiration with a light neutral sofa, low wooden coffee table, soft textured rug, and plenty of indoor plants for a serene, balanced space. Minimal wall art, natural materials, and clean lines create an airy, soothing aesthetic—perfect for Japanese style interiors, minimalist living room ideas, and warm neutral home decor. Save for Japandi decor and plant-filled living room styling.",
+        "save_count": null,
+        "hashtags": [],
+        "cluster_label": "Minimal plant-forward living room with low wood table",
+        "selected_for_mood_board": true
+      }
+    ],
+    "cluster_summary": [
+      {
+        "label": "Japandi neutral dining set with woven pendant",
+        "pin_ids": [
+          "1012465559998684270"
+        ],
+        "visual_notes": "Round light-oak dining table, slim tapered legs, textured neutral upholstery, oversized woven pendant as focal point, ceramic tableware and hand-thrown vases. Flooring and paneling in pale oak unify the composition—stage with a single sculptural vase, linen place settings, and warm-toned tabletop ceramics.",
+        "weight": 0.4
+      },
+      {
+        "label": "Low-floor Japanese reading/tea nook",
+        "pin_ids": [
+          "1012465559998684267"
+        ],
+        "visual_notes": "Intimate corner with floor cushions and low coffee tray, bamboo/shōji screening, layered natural-fiber rugs and woven poufs. Warm paper/lantern lighting creates deep amber glow—use soft cushions, round woven floor mats, low tray table and minimal potted greenery to recreate cozy scale.",
+        "weight": 0.3
+      },
+      {
+        "label": "Minimal plant-forward living room with low wood table",
+        "pin_ids": [
+          "1012465559998684162"
+        ],
+        "visual_notes": "Low, neutral sofa on wooden base, organic-shaped low coffee table, vertical wood slat accent and sparse framed art. Emphasize neutral textiles, textured rug, and multiple medium potted plants for vertical green accents—keep decor minimal: 2–3 dark ceramic vessels and one sculptural plant grouping.",
+        "weight": 0.3
+      }
+    ]
+  },
+  "floor_plan": {
+    "layout_type": "open_plan",
+    "total_rooms": 5,
+    "rooms": [
+      {
+        "room_id": "nest_living_room",
+        "name": "Nest",
+        "room_type": "living_room",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 11.917,
+          "length": 11.667,
+          "area": 139.028
+        },
+        "measured_unit": "ft",
+        "windows": "bay window / large glazed opening toward relax area",
+        "natural_light": "high",
+        "adjoins": [
+          "dine_dining_room",
+          "taste_kitchen",
+          "dream_bedroom"
+        ],
+        "generation_priority": 1
+      },
+      {
+        "room_id": "dream_bedroom",
+        "name": "Dream",
+        "room_type": "bedroom",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 12.5,
+          "length": 11.583,
+          "area": 144.792
+        },
+        "measured_unit": "ft",
+        "windows": "single exterior window on top wall",
+        "natural_light": "medium",
+        "adjoins": [
+          "revive_bathroom",
+          "nest_living_room"
+        ],
+        "generation_priority": 2
+      },
+      {
+        "room_id": "taste_kitchen",
+        "name": "Taste",
+        "room_type": "kitchen",
+        "area_estimate": "small",
+        "measured_dimensions": null,
+        "measured_unit": null,
+        "windows": "small window/vent above counter (adjacent exterior wall)",
+        "natural_light": "medium",
+        "adjoins": [
+          "nest_living_room",
+          "dine_dining_room",
+          "revive_bathroom"
+        ],
+        "generation_priority": 3
+      },
+      {
+        "room_id": "dine_dining_room",
+        "name": "Dine",
+        "room_type": "dining_room",
+        "area_estimate": "small",
+        "measured_dimensions": {
+          "width": 7.833,
+          "length": 8,
+          "area": 62.667
+        },
+        "measured_unit": "ft",
+        "windows": "bay-style multi-pane window on exterior corner",
+        "natural_light": "high",
+        "adjoins": [
+          "nest_living_room",
+          "taste_kitchen"
+        ],
+        "generation_priority": 4
+      },
+      {
+        "room_id": "revive_bathroom",
+        "name": "Revive",
+        "room_type": "bathroom",
+        "area_estimate": "small",
+        "measured_dimensions": null,
+        "measured_unit": null,
+        "windows": "small frosted window near tub",
+        "natural_light": "low",
+        "adjoins": [
+          "dream_bedroom",
+          "taste_kitchen"
+        ],
+        "generation_priority": 5
+      }
+    ]
+  },
+  "vibe_report": {
+    "aesthetic_name": "Warm Japandi Family Home",
+    "summary": "A calm, minimal Japandi palette tuned for a young family — warm neutrals, low-profile furniture, and a few sculptural, tactile accents. Prioritize organic textures, soft ambient light from practical fixtures and windows, and a compact, child-friendly layout with a discreet standing-desk work corner in the bedroom.",
+    "palette_rationale": "Use warm neutrals anchored by pale oat and warm sand tones (#EDE6DE, #D2BFA3) with mid-tone walnut/terracotta anchors (#8A6E52, #B58E61). Accents in muted slate/olive (#6A736A, #6A736A) for depth. This keeps rooms visually cohesive across open sightlines while retaining the lighter, airy Japandi feel.",
+    "lighting_mood": "Soft ambient daylight from bay and exterior windows combined with warm practical fixtures (woven pendant, bedside pendant, floor lamp). Directional daylight shapes texture and creates gentle contrast; interior lamps add warm pool lighting for evening shots.",
+    "materials": [
+      "light oak (matt oiled finish)",
+      "solid walnut veneer (matte lacquer)",
+      "pale oat linen upholstery",
+      "hon ed quartz countertop (light grey)",
+      "matte terracotta ceramics",
+      "natural seagrass (woven pendant)",
+      "wool area rugs"
+    ],
+    "textures": [
+      "low-pile hand-knotted wool",
+      "linen upholstery",
+      "matte oiled wood grain",
+      "subtle honed stone",
+      "woven natural fibers"
+    ],
+    "furniture_language": [
+      "low-profile seating with wooden base",
+      "slim tapered legs on tables and chairs",
+      "rounded organic tabletop forms",
+      "minimal open shelving, sparse ceramics",
+      "integrated utility pieces (compact island, hidden storage)"
+    ],
+    "styling_rules": [
+      "Limit decorative objects to 2–3 per vignette: one sculptural ceramic, one hand-thrown vase, one small stack of books.",
+      "Keep color accents within the palette hexes — no bright primaries.",
+      "Maintain low visual clutter on horizontal surfaces; leave negative space around key objects.",
+      "Use plants in odd-numbered groupings and vary heights for vertical interest.",
+      "Work corner must feel compact and calm: slim standing desk, single task lamp, minimal shelving."
+    ],
+    "avoid": [
+      "bright or saturated color pops",
+      "high-shine reflective finishes",
+      "overstuffed upholstered furniture",
+      "excessive ornamentation or heavy framed art"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living_room",
+        "headline": "Low, plant-forward living area — make the bay window the hero",
+        "guidance": "Stage a low-profile seating cluster oriented to the bay window. Keep furniture scale low and horizontal; place a single tall plant near the bay and a low walnut coffee table on a neutral wool rug. Use a warm floor lamp as a practical in-frame light source for evening continuity. Keep surfaces minimally styled with one ceramic vessel and a small stack of books.",
+        "must_include": [
+          "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), solid oak base stained dark walnut, 18in seat height, recessed tapered legs, low back, no visible feet from side angle",
+          "low organic-shaped walnut coffee table — oval 42x22in, matte walnut veneer (#8A6E52), soft rounded edges, 12in height",
+          "hand-knotted neutral wool rug — 8x10, warm beige tonal weave (#EDE6DE/#D2BFA3), low pile, subtle linear pattern",
+          "tall fiddle-leaf fig — approx 6ft Ficus lyrata in matte terracotta pot (muted rust #B58E61)"
+        ],
+        "must_avoid": [
+          "high-backed sofas",
+          "large TV screens visible in primary shot",
+          "bright patterned textiles"
+        ]
+      },
+      {
+        "room_id": "dream_bedroom",
+        "headline": "Calm bedroom with a cozy standing-desk corner",
+        "guidance": "Keep the bed low and simple with light linens. Place a compact standing desk in one corner with a slim task lamp and minimal shelving for the bookshelf object requested. Use a bedside pendant or small wall sconce for warm evening glow. Maintain a single plant or small vase to tie into the living room palette.",
+        "must_include": [
+          "compact standing desk — pale oak top (#D2BFA3), slim black metal legs, minimal cable management (local object, not shared across rooms)",
+          "slim bedside pendant — warm amber diffuser, brass mount (local practical fixture)"
+        ],
+        "must_avoid": [
+          "bulky office furniture",
+          "strong, directional studio lighting (keep practical and plausible)"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Compact, efficient kitchen with visible island and warm materials",
+        "guidance": "Keep counters clear and show the small window/vent as the primary daylight source. Use under-cabinet strip lighting as a practical fill. The compact island should read as a pale-oak anchor in the sightline toward the dining area; stage two low stools tucked in and a single ceramic bowl.",
+        "must_include": [
+          "compact kitchen island — 48in x 24in, pale oak base 'Warm Sand' (#D2BFA3) with honed light-grey quartz countertop (#6A736A), integrated 12in overhang"
+        ],
+        "must_avoid": [
+          "cluttering counters with small appliances",
+          "introducing additional island colors outside the palette"
+        ]
+      },
+      {
+        "room_id": "dine_dining_room",
+        "headline": "Small dining nook with woven pendant as focal point",
+        "guidance": "Center the round light-oak dining table under the oversized woven pendant. Use two to four slim, textured upholstered chairs. Keep table styling minimal: single sculptural vase or ceramic bowl with linen napkin. Bay-style window should provide soft daylight; pendant is the practical evening light.",
+        "must_include": [
+          "round light-oak dining table — 48in diameter, light oak veneer 'Warm Sand' (#D2BFA3), slim tapered legs, matte oiled finish",
+          "oversized woven pendant — natural seagrass dome 24in diameter, warm amber inner diffuser, thin black braided cord, matte finish"
+        ],
+        "must_avoid": [
+          "large linear chandeliers",
+          "mismatched dining chairs"
+        ]
+      },
+      {
+        "room_id": "revive_bathroom",
+        "headline": "Small calm bathroom — keep finishes soft and tiled neutrals",
+        "guidance": "Use the frosted window as the primary daylight source and a warm wall sconce or mirror light as the interior practical. Use small ceramic accessories and woven hand towel. Keep the palette restrained and avoid heavy patterns.",
+        "must_include": [
+          "frosted window soft daylight",
+          "warm wall sconce near mirror (practical fixture)"
+        ],
+        "must_avoid": [
+          "bright white clinical lighting",
+          "large sculptural objects that crowd the small footprint"
+        ]
+      }
+    ],
+    "confidence": 0.89,
+    "warnings": [
+      "Open-plan sightlines require strict color and material consistency for all visible surfaces.",
+      "Avoid adding objects that would block circulation between living/dining/kitchen in this compact plan."
+    ]
+  },
+  "creative_spec": {
+    "overall_mood": "Calm minimal warmth — tactile Japandi with family-friendly scale",
+    "room_sequence": [
+      "nest_living_room",
+      "dream_bedroom",
+      "taste_kitchen",
+      "dine_dining_room",
+      "revive_bathroom"
+    ],
+    "global_style_notes": [
+      "Maintain exact wood tones across sightlines (use same 'Warm Sand' light-oak finish).",
+      "Prioritize low furniture profiles to preserve sightlines and visual flow.",
+      "All artificial light should read as practical fixtures visible in the frame (no unseen light sources).",
+      "Keep decorative accents sparse and within the palette hex codes provided."
+    ],
+    "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, no color inconsistency between rooms, no mismatched furniture across sightlines",
+    "export_formats": [
+      "16:9",
+      "9:16",
+      "1:1"
+    ]
+  },
+  "room_generation_jobs": [
+    {
+      "job_id": "bb0be5b6-9860-454f-bdcb-6aae74ebb990",
+      "room_id": "nest_living_room",
+      "room_name": "Nest",
+      "room_type": "living_room",
+      "sequence_index": 0,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 11.917 by 11.667 ft Nest, bay window / large glazed opening toward relax area windows, Primary: strong directional daylight from the bay window (soft morning light). Secondary: warm floor lamp near sofa for evening continuity. Maintain plausible shadow direction from window only., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm, minimal Japandi palette tuned for a young family — warm neutrals, low-profile furniture, and a few sculptural, tactile accents. Prioritize organic textures, soft ambient light from practical fixtures and windows, and a compact, child-friendly layout with a discreet standing-desk work corner in the bedroom., Wide interior composition at eye height (~48in/1.2m). Place the following shared objects as anchors: low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), solid oak base stained dark walnut, 18in seat height, recessed tapered legs, low back, no visible feet from side angle; low organic-shaped walnut coffee table — oval 42x22in, matte walnut veneer (#8A6E52), soft rounded edges, 12in height; hand-knotted neutral wool rug — 8x10, warm beige tonal weave (#EDE6DE/#D2BFA3), low pile, subtle linear pattern; tall fiddle-leaf fig — approx 6ft Ficus lyrata in matte terracotta pot (muted rust #B58E61). Add one slim floor lamp with warm filament (practical fixture) to the right of the sofa; sparse styling on coffee table: one dark ceramic vessel and a single book stack. Keep verticals true and visible window view slightly out of focus but naturally lit. Preserve measured sofa scale to room dimensions (approx 3-seat across 11.9ft width)., must include low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), solid oak base stained dark walnut, 18in seat height, recessed tapered legs, low back, no visible feet from side angle, hand-knotted neutral wool rug — 8x10, warm beige tonal weave (#EDE6DE/#D2BFA3), low pile, subtle linear pattern, tall fiddle-leaf fig — approx 6ft Ficus lyrata in matte terracotta pot (muted rust #B58E61), low organic-shaped walnut coffee table — oval 42x22in, matte walnut veneer (#8A6E52), soft rounded edges, 12in height, bookshelf, must avoid bright or saturated color pops, high-shine reflective finishes, overstuffed upholstered furniture, excessive ornamentation or heavy framed art, television screens in main composition, introducing furniture finishes outside the shared appearance specs, visible clutter on surfaces, high-backed sofas, large TV screens visible in primary shot, bright patterned textiles, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Wide interior shot with a slow and smooth dolly in. Super smooth camera moves forward slightly toward the bay window and sofa, directional sunlight shifts gently across the rug and oak surfaces, consistent exposure, stable motion, cinematic, photorealistic.",
+        "camera_motion": "slow_dolly",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Primary: strong directional daylight from the bay window (soft morning light). Secondary: warm floor lamp near sofa for evening continuity. Maintain plausible shadow direction from window only.",
+        "objects_to_include": [
+          {
+            "object_type": "bookshelf",
+            "room_id": "nest_living_room",
+            "label": "bookshelf"
+          }
+        ],
+        "must_include": [
+          "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), solid oak base stained dark walnut, 18in seat height, recessed tapered legs, low back, no visible feet from side angle",
+          "hand-knotted neutral wool rug — 8x10, warm beige tonal weave (#EDE6DE/#D2BFA3), low pile, subtle linear pattern",
+          "tall fiddle-leaf fig — approx 6ft Ficus lyrata in matte terracotta pot (muted rust #B58E61)",
+          "low organic-shaped walnut coffee table — oval 42x22in, matte walnut veneer (#8A6E52), soft rounded edges, 12in height",
+          "bookshelf"
+        ],
+        "must_avoid": [
+          "bright or saturated color pops",
+          "high-shine reflective finishes",
+          "overstuffed upholstered furniture",
+          "excessive ornamentation or heavy framed art",
+          "television screens in main composition",
+          "introducing furniture finishes outside the shared appearance specs",
+          "visible clutter on surfaces",
+          "high-backed sofas",
+          "large TV screens visible in primary shot",
+          "bright patterned textiles",
+          "people",
+          "visible brand logos"
+        ],
+        "background_constraints": [
+          {
+            "adjacent_room": "Dine",
+            "adjacent_room_type": "dining_room",
+            "direction": "through the open-plan dining area",
+            "visible_objects": [
+              "dining table",
+              "dining chairs",
+              "pendant light",
+              "round light-oak dining table — 48in diameter, light oak veneer 'Warm Sand' (#D2BFA3), slim tapered legs, matte oiled finish",
+              "oversized woven pendant — natural seagrass dome 24in diameter, warm amber inner diffuser, thin black braided cord, matte finish"
+            ]
+          },
+          {
+            "adjacent_room": "Taste",
+            "adjacent_room_type": "kitchen",
+            "direction": "through the open kitchen beyond the dining area",
+            "visible_objects": [
+              "kitchen cabinets",
+              "kitchen counter",
+              "compact kitchen island — 48in x 24in, pale oak base 'Warm Sand' (#D2BFA3) with honed light-grey quartz countertop (#6A736A), integrated 12in overhang"
+            ]
+          }
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "f4a447e8-4f7e-412f-9bf2-16d555e93e61",
+      "room_id": "dream_bedroom",
+      "room_name": "Dream",
+      "room_type": "bedroom",
+      "sequence_index": 1,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 12.5 by 11.583 ft Dream, single exterior window on top wall windows, Medium daylight from a single exterior window; bedside pendant and a small desk task lamp are the practical interior sources. Keep window-derived shadows soft and consistent with window placement., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm, minimal Japandi palette tuned for a young family — warm neutrals, low-profile furniture, and a few sculptural, tactile accents. Prioritize organic textures, soft ambient light from practical fixtures and windows, and a compact, child-friendly layout with a discreet standing-desk work corner in the bedroom., Intimate bedroom frame at ~42in camera height. Low platform bed with light linens in palette, simple headboard in pale oak. Compact standing desk placed in a corner as a calm work nook with a slim task lamp and minimal shelving for books. Include a single ceramic vase and a small plant on the desk. Use bedside pendant (warm amber) as a visible practical fixture for evening composition. Maintain believable scale relative to measured room dimensions (12.5ft x 11.58ft). Do not repeat shared objects descriptions here (no redefinition) — room may show sightline into living room doorway but shared objects are described in the shared_objects list., must include compact standing desk — pale oak top (#D2BFA3), slim black metal legs, minimal cable management (local object), compact standing desk — pale oak top (#D2BFA3), slim black metal legs, minimal cable management (local object, not shared across rooms), slim bedside pendant — warm amber diffuser, brass mount (local practical fixture), standing desk, must avoid bright or saturated color pops, high-shine reflective finishes, overstuffed upholstered furniture, excessive ornamentation or heavy framed art, large office monitors or bulky office chairs, bright task lighting that contradicts bedside pendant, bulky office furniture, strong, directional studio lighting (keep practical and plausible), people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Very slow static-to-zoom detail shot. Camera holds and slowly tightens on the standing-desk corner, warm bedside pendant glows, natural daylight from window remains primary, consistent exposure, cinematic, photorealistic.",
+        "camera_motion": "static_zoom",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Medium daylight from a single exterior window; bedside pendant and a small desk task lamp are the practical interior sources. Keep window-derived shadows soft and consistent with window placement.",
+        "objects_to_include": [
+          {
+            "object_type": "standing_desk",
+            "room_id": "dream_bedroom",
+            "label": "standing desk"
+          }
+        ],
+        "must_include": [
+          "compact standing desk — pale oak top (#D2BFA3), slim black metal legs, minimal cable management (local object)",
+          "compact standing desk — pale oak top (#D2BFA3), slim black metal legs, minimal cable management (local object, not shared across rooms)",
+          "slim bedside pendant — warm amber diffuser, brass mount (local practical fixture)",
+          "standing desk"
+        ],
+        "must_avoid": [
+          "bright or saturated color pops",
+          "high-shine reflective finishes",
+          "overstuffed upholstered furniture",
+          "excessive ornamentation or heavy framed art",
+          "large office monitors or bulky office chairs",
+          "bright task lighting that contradicts bedside pendant",
+          "bulky office furniture",
+          "strong, directional studio lighting (keep practical and plausible)",
+          "people",
+          "visible brand logos"
+        ],
+        "background_constraints": [
+          {
+            "adjacent_room": "Revive",
+            "adjacent_room_type": "bathroom",
+            "direction": "through the ensuite doorway",
+            "visible_objects": [
+              "vanity",
+              "mirror",
+              "bathroom tile",
+              "frosted window soft daylight",
+              "warm wall sconce near mirror (practical fixture)"
+            ]
+          }
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "e16e4831-8b6c-4811-956a-b2ed9fd7a2ad",
+      "room_id": "taste_kitchen",
+      "room_name": "Taste",
+      "room_type": "kitchen",
+      "sequence_index": 2,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a small Taste, small window/vent above counter (adjacent exterior wall) windows, Medium daylight from the small window above the counter (primary). Under-cabinet strips and pendant over the island are visible practical light sources for evening. All interior highlights must derive from these fixtures/windows only., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm, minimal Japandi palette tuned for a young family — warm neutrals, low-profile furniture, and a few sculptural, tactile accents. Prioritize organic textures, soft ambient light from practical fixtures and windows, and a compact, child-friendly layout with a discreet standing-desk work corner in the bedroom., Kitchen-wide composition at ~54in camera height capturing the compact island and flow to the dining area. Include the shared compact kitchen island — 48in x 24in, pale oak base 'Warm Sand' (#D2BFA3) with honed light-grey quartz countertop (#6A736A), integrated 12in overhang. Keep counters tidy with a single ceramic bowl. If the dining table is visible in the sightline, reference the shared appearance spec rather than redefining it. Ensure cabinet faces read matte and window vent is visible to justify daylight direction., must include compact kitchen island — 48in x 24in, pale oak base 'Warm Sand' (#D2BFA3) with honed light-grey quartz countertop (#6A736A), integrated 12in overhang, must avoid bright or saturated color pops, high-shine reflective finishes, overstuffed upholstered furniture, excessive ornamentation or heavy framed art, stacked dishes or small appliances scattered on counters, introducing kitchen finishes outside the palette, cluttering counters with small appliances, introducing additional island colors outside the palette, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Super smooth truck right, camera glides laterally across the compact kitchen toward the island and opens slightly to reveal the dining area, directional window light shifts slowly across quartz countertop, consistent exposure, cinematic, photorealistic.",
+        "camera_motion": "slow_dolly",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Medium daylight from the small window above the counter (primary). Under-cabinet strips and pendant over the island are visible practical light sources for evening. All interior highlights must derive from these fixtures/windows only.",
+        "objects_to_include": [],
+        "must_include": [
+          "compact kitchen island — 48in x 24in, pale oak base 'Warm Sand' (#D2BFA3) with honed light-grey quartz countertop (#6A736A), integrated 12in overhang"
+        ],
+        "must_avoid": [
+          "bright or saturated color pops",
+          "high-shine reflective finishes",
+          "overstuffed upholstered furniture",
+          "excessive ornamentation or heavy framed art",
+          "stacked dishes or small appliances scattered on counters",
+          "introducing kitchen finishes outside the palette",
+          "cluttering counters with small appliances",
+          "introducing additional island colors outside the palette",
+          "people",
+          "visible brand logos"
+        ],
+        "background_constraints": [
+          {
+            "adjacent_room": "Dine",
+            "adjacent_room_type": "dining_room",
+            "direction": "through the open pass-through or doorway",
+            "visible_objects": [
+              "dining table",
+              "pendant light above the dining area",
+              "dining chairs",
+              "round light-oak dining table — 48in diameter, light oak veneer 'Warm Sand' (#D2BFA3), slim tapered legs, matte oiled finish",
+              "oversized woven pendant — natural seagrass dome 24in diameter, warm amber inner diffuser, thin black braided cord, matte finish"
+            ]
+          }
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "bb30600a-f98d-4c9e-ab9a-b9fd38594948",
+      "room_id": "dine_dining_room",
+      "room_name": "Dine",
+      "room_type": "dining_room",
+      "sequence_index": 3,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a 7.833 by 8 ft Dine, bay-style multi-pane window on exterior corner windows, High natural light from the bay-style multi-pane window. Oversized woven pendant is the primary practical fixture for evening shots; daylight should shape the table and slow-moving shadows across the floor., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm, minimal Japandi palette tuned for a young family — warm neutrals, low-profile furniture, and a few sculptural, tactile accents. Prioritize organic textures, soft ambient light from practical fixtures and windows, and a compact, child-friendly layout with a discreet standing-desk work corner in the bedroom., Centered composition on the round table at ~46in camera height. Use the shared round light-oak dining table — 48in diameter, light oak veneer 'Warm Sand' (#D2BFA3), slim tapered legs, matte oiled finish and the shared oversized woven pendant — natural seagrass dome 24in diameter, warm amber inner diffuser, thin black braided cord, matte finish. Seat two to four slim upholstered chairs in a textured neutral fabric. Minimal table setting: one sculptural ceramic vase, linen napkin. If the living area is visible in the frame, reference shared objects via the shared_objects specs rather than redefining them., must include round light-oak dining table — 48in diameter, light oak veneer 'Warm Sand' (#D2BFA3), slim tapered legs, matte oiled finish, oversized woven pendant — natural seagrass dome 24in diameter, warm amber inner diffuser, thin black braided cord, matte finish, must avoid bright or saturated color pops, high-shine reflective finishes, overstuffed upholstered furniture, excessive ornamentation or heavy framed art, mismatched chairs, bright colored linens or tableware, large linear chandeliers, mismatched dining chairs, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Super smooth camera travels in a gentle arc around the dining table (parallax orbit), pendant remains centered, daylight rolls slowly across oak surfaces, consistent exposure, cinematic, photorealistic.",
+        "camera_motion": "orbital_pan",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "High natural light from the bay-style multi-pane window. Oversized woven pendant is the primary practical fixture for evening shots; daylight should shape the table and slow-moving shadows across the floor.",
+        "objects_to_include": [],
+        "must_include": [
+          "round light-oak dining table — 48in diameter, light oak veneer 'Warm Sand' (#D2BFA3), slim tapered legs, matte oiled finish",
+          "oversized woven pendant — natural seagrass dome 24in diameter, warm amber inner diffuser, thin black braided cord, matte finish"
+        ],
+        "must_avoid": [
+          "bright or saturated color pops",
+          "high-shine reflective finishes",
+          "overstuffed upholstered furniture",
+          "excessive ornamentation or heavy framed art",
+          "mismatched chairs",
+          "bright colored linens or tableware",
+          "large linear chandeliers",
+          "mismatched dining chairs",
+          "people",
+          "visible brand logos"
+        ],
+        "background_constraints": [
+          {
+            "adjacent_room": "Taste",
+            "adjacent_room_type": "kitchen",
+            "direction": "through the open kitchen",
+            "visible_objects": [
+              "kitchen cabinets",
+              "range hood",
+              "kitchen island or counter",
+              "compact kitchen island — 48in x 24in, pale oak base 'Warm Sand' (#D2BFA3) with honed light-grey quartz countertop (#6A736A), integrated 12in overhang"
+            ]
+          },
+          {
+            "adjacent_room": "Nest",
+            "adjacent_room_type": "living_room",
+            "direction": "through the open-plan living area",
+            "visible_objects": [
+              "sofa",
+              "coffee table",
+              "area rug",
+              "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), solid oak base stained dark walnut, 18in seat height, recessed tapered legs, low back, no visible feet from side angle",
+              "hand-knotted neutral wool rug — 8x10, warm beige tonal weave (#EDE6DE/#D2BFA3), low pile, subtle linear pattern",
+              "tall fiddle-leaf fig — approx 6ft Ficus lyrata in matte terracotta pot (muted rust #B58E61)",
+              "low organic-shaped walnut coffee table — oval 42x22in, matte walnut veneer (#8A6E52), soft rounded edges, 12in height",
+              "bookshelf"
+            ]
+          }
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    },
+    {
+      "job_id": "8283394c-87b0-48cb-b905-bc4c7d738ce2",
+      "room_id": "revive_bathroom",
+      "room_name": "Revive",
+      "room_type": "bathroom",
+      "sequence_index": 4,
+      "dalle": {
+        "prompt": "Photorealistic interior photograph of a small Revive, small frosted window near tub windows, Low natural light from frosted window (primary). Mirror light or small wall sconce is the visible practical interior light for evening shots. All light must be physically motivated by fixtures in frame., japandi aesthetic, warm_neutral color palette, balanced furnishing, A calm, minimal Japandi palette tuned for a young family — warm neutrals, low-profile furniture, and a few sculptural, tactile accents. Prioritize organic textures, soft ambient light from practical fixtures and windows, and a compact, child-friendly layout with a discreet standing-desk work corner in the bedroom., Tight bathroom composition at ~50in camera height, focusing on vanity and tub area. Keep tiles and finishes in soft neutral tones; show frosted window as diffuse daylight source. Stylistically include one folded linen towel, a small ceramic soap dish and a single small plant or sprig. Preserve modest scale; do not introduce large furniture., must include frosted window soft daylight, warm wall sconce near mirror (practical fixture), must avoid bright or saturated color pops, high-shine reflective finishes, overstuffed upholstered furniture, excessive ornamentation or heavy framed art, clinical/blue-tinted lighting, large decorative objects that overcrowd the small space, bright white clinical lighting, large sculptural objects that crowd the small footprint, people, visible brand logos, architectural photography style, Canon 5D, 35mm lens, professional staging, high resolution, sharp focus, photo taken for a luxury property listing",
+        "size": "1792x1024",
+        "quality": "hd",
+        "style": "natural",
+        "expected_aspect_ratio": "16:9"
+      },
+      "video_generation": {
+        "provider": "fal",
+        "model": "fal-ai/kling-video/v1.6/pro/image-to-video",
+        "prompt": "Very slow static zoom-in detail. Camera holds and slowly tightens on vanity and frosted window area, soft natural daylight diffuses through glass, consistent exposure, cinematic, photorealistic.",
+        "camera_motion": "static_zoom",
+        "duration_seconds": 5,
+        "aspect_ratio": "16:9"
+      },
+      "staging": {
+        "lighting_instruction": "Low natural light from frosted window (primary). Mirror light or small wall sconce is the visible practical interior light for evening shots. All light must be physically motivated by fixtures in frame.",
+        "objects_to_include": [],
+        "must_include": [
+          "frosted window soft daylight",
+          "warm wall sconce near mirror (practical fixture)"
+        ],
+        "must_avoid": [
+          "bright or saturated color pops",
+          "high-shine reflective finishes",
+          "overstuffed upholstered furniture",
+          "excessive ornamentation or heavy framed art",
+          "clinical/blue-tinted lighting",
+          "large decorative objects that overcrowd the small space",
+          "bright white clinical lighting",
+          "large sculptural objects that crowd the small footprint",
+          "people",
+          "visible brand logos"
+        ]
+      },
+      "quality_gate": {
+        "min_eval_score": 7,
+        "max_video_attempts": 3,
+        "regenerate_image_if": [
+          "visible_people",
+          "wrong_room_type",
+          "major_style_mismatch",
+          "object_missing"
+        ]
+      }
+    }
+  ],
+  "delivery": {
+    "requested_platforms": [
+      "instagram",
+      "tiktok",
+      "listing",
+      "portfolio"
+    ],
+    "video_formats": [
+      "16:9",
+      "9:16",
+      "1:1"
+    ],
+    "caption_context": {
+      "property_brief": "Warm, calm home for a young family that needs a cozy work corner.",
+      "aesthetic_summary": "A calm, minimal Japandi palette tuned for a young family — warm neutrals, low-profile furniture, and a few sculptural, tactile accents. Prioritize organic textures, soft ambient light from practical fixtures and windows, and a compact, child-friendly layout with a discreet standing-desk work corner in the bedroom.",
+      "featured_objects": [
+        "standing desk",
+        "bookshelf"
+      ],
+      "tone": "luxury_listing"
+    },
+    "mood_board": {
+      "include_pin_ids": [
+        "1012465559998684270",
+        "1012465559998684267",
+        "1012465559998684162"
+      ],
+      "include_room_ids": [
+        "nest_living_room",
+        "dream_bedroom",
+        "taste_kitchen",
+        "dine_dining_room",
+        "revive_bathroom"
+      ],
+      "annotations": [
+        {
+          "label": "Aesthetic",
+          "value": "Warm Japandi Family Home"
+        },
+        {
+          "label": "Palette",
+          "value": "warm_neutral"
+        },
+        {
+          "label": "Lighting",
+          "value": "soft_ambient"
+        },
+        {
+          "label": "Mood",
+          "value": "Calm minimal warmth — tactile Japandi with family-friendly scale"
+        }
+      ]
+    }
+  },
+  "provenance": {
+    "layer_1_payload_created_at": "2026-05-10T17:05:49.242Z",
+    "pinterest_scrape": {
+      "provider": "apify",
+      "item_count": 3,
+      "fallback_used": false,
+      "fallback_reason": null
+    },
+    "models": {
+      "aesthetic_extraction": "gpt-5-mini",
+      "floor_plan_parsing": "gpt-5-mini",
+      "creative_spec": "gpt-5-mini"
+    }
+  },
+  "warnings": [
+    {
+      "code": "creative_plan_warning",
+      "message": "Preserve architecture and sightlines exactly — do not reposition walls or windows.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "creative_plan_warning",
+      "message": "Ensure all shared object color/finish specs are applied identically in every room render to prevent visible mismatches.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "creative_plan_warning",
+      "message": "When generating motion clips, run an image-pass editorial correction if source photos lack directional light or vertical stability.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "vibe_report_warning",
+      "message": "Open-plan sightlines require strict color and material consistency for all visible surfaces.",
+      "severity": "warning",
+      "affected_room_ids": []
+    },
+    {
+      "code": "vibe_report_warning",
+      "message": "Avoid adding objects that would block circulation between living/dining/kitchen in this compact plan.",
+      "severity": "warning",
+      "affected_room_ids": []
+    }
+  ]
+}

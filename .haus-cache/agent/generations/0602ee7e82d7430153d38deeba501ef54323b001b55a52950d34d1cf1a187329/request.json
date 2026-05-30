@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99aca5/4wWqq1609XL1dZe46dvH9_WAS1CmqJ.png",
+    "prompt": "Very slow truck right, time-lapse light progression, camera slides laterally while light shifts across the space, shadows gradually move and lengthen, parallax effect, consistent exposure, stable motion, cinematic, photorealistic Super smooth camera travels in a short arc around the bedroom work corner, gentle orbital pan keeping the desk and bookshelf centered, warm lamp illumination engages as daylight softens, consistent exposure, cinematic, photorealistic Dream, Warm minimal Japandi — calm, textural, family-friendly Maintain believable residential scale for a 12.5 by 11.583 ft Dream. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "d2cf1fdf3631c87895a4e34e033e64986332ab08f0a1c5b79821c34994770975"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

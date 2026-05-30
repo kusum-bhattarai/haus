@@ -1,10 +1,35 @@
 import { execFile } from 'node:child_process';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { access, mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { deflateSync } from 'node:zlib';
 
 import { buildAssetBank, buildDirectedTimeline, classifyShots, reviewTimeline } from '../shotPipeline/index.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const FRONTEND_MUSIC_DIR = path.resolve(__dirname, '../../frontend/assets/music');
+
+const MUSIC_TRACKS = new Map([
+  ['artistic-interior', path.join(FRONTEND_MUSIC_DIR, 'earthy-mid-century.mp3')],
+  ['dark-interior', path.join(FRONTEND_MUSIC_DIR, 'japandi-noir.mp3')],
+  ['japandi-interior-design', path.join(FRONTEND_MUSIC_DIR, 'warm-japandi.mp3')],
+]);
+
+async function getMusicBedPath(job) {
+  const boardUrl = job.input?.pinterest_board_url ?? '';
+  for (const [keyword, filePath] of MUSIC_TRACKS) {
+    if (boardUrl.includes(keyword)) {
+      try {
+        await access(filePath);
+        return filePath;
+      } catch {
+        return null;
+      }
+    }
+  }
+  return null;
+}
 
 const execFileAsync = promisify(execFile);
 
@@ -15,85 +40,36 @@ const NARRATION_MODEL = process.env.OPENAI_SCRIPT_MODEL ?? CAPTION_MODEL;
 const TTS_MODEL = process.env.OPENAI_TTS_MODEL ?? 'gpt-4o-mini-tts';
 const TTS_VOICE = process.env.OPENAI_TTS_VOICE ?? 'alloy';
 const FPS = 24;
-const OUTPUT_W = 1920;
-const OUTPUT_H = 1080;
+const OUTPUT_W = 1280;
+const OUTPUT_H = 720;
 
 export async function runLayer5(job, options = {}) {
   const outputDir = options.outputDir ?? path.join(job._job_dir, 'layer5');
   await mkdir(outputDir, { recursive: true });
 
-  const assetBank = await buildAssetBank(job, options).catch((err) => ({
-    floor_plan_id: job.input?.floor_plan_id ?? 'unknown',
-    manifest_path: null,
-    avatar_base_image_path: null,
-    music_bed_path: null,
-    assets: [],
-    warnings: [`Asset bank failed: ${err.message}`]
-  }));
-  const shotManifest = classifyShots(assetBank);
-  let timeline = buildDirectedTimeline(job, shotManifest);
-  let review = reviewTimeline(job, assetBank, timeline);
-
-  if (!review.pass && timeline.segments.length > 0) {
-    timeline = reviseTimeline(timeline);
-    review = reviewTimeline(job, assetBank, timeline);
-  }
-
-  const narration = await buildNarrationPlan(job, assetBank, timeline, options).catch((err) => {
-    console.error('[layer5] narration planning failed:', err.message);
-    return buildFallbackNarrationPlan(job, timeline);
-  });
-  const [voiceoverPath, subtitlesPath, captions] = await Promise.all([
-    generateVoiceover(narration, outputDir, options).catch((err) => {
-      console.error('[layer5] voiceover failed:', err.message);
-      return null;
-    }),
-    writeSubtitles(timeline, outputDir, narration).catch((err) => {
-      console.error('[layer5] subtitles failed:', err.message);
-      return null;
-    }),
-    generateCaptions(job, options).catch((err) => {
-      console.error('[layer5] captions failed:', err.message);
-      return null;
-    })
-  ]);
-  const subtitleOverlays = await writeSubtitleOverlays(narration, outputDir).catch((err) => {
-    console.error('[layer5] subtitle overlays failed:', err.message);
-    return [];
+  const musicPath = await getMusicBedPath(job).catch(() => null);
+  const finalVideoPath = await simpleAssemble(job, outputDir, musicPath).catch((err) => {
+    console.error('[layer5] assembly failed:', err.message);
+    return null;
   });
 
-  const finalVideoPath = await renderTimeline(job, assetBank, timeline, review, {
-    ...options,
-    outputDir,
-    voiceoverPath,
-    subtitlesPath,
-    subtitleOverlays
-  }).catch((err) => {
-      console.error('[layer5] render failed:', err.stderr || err.message);
-      return fallbackAssemble(job, outputDir).catch((fallbackErr) => {
-        console.error('[layer5] fallback render failed:', fallbackErr.message);
-        return null;
-      });
-    });
-
-  const artifactPaths = await persistArtifacts(outputDir, { assetBank, shotManifest, timeline, review, narration });
   return {
     final_video_path: finalVideoPath,
-    captions,
-    narration_script: narration.text,
-    narration_plan: narration,
-    narration_plan_path: artifactPaths.narration_plan_path,
-    voiceover_path: voiceoverPath,
-    subtitles_path: subtitlesPath,
-    subtitle_overlay_paths: subtitleOverlays.map((overlay) => overlay.path),
-    asset_bank: assetBank,
-    asset_bank_path: artifactPaths.asset_bank_path,
-    shot_manifest: shotManifest,
-    shot_manifest_path: artifactPaths.shot_manifest_path,
-    timeline,
-    timeline_path: artifactPaths.timeline_path,
-    review_report: review,
-    review_report_path: artifactPaths.review_report_path
+    captions: null,
+    narration_script: null,
+    narration_plan: null,
+    narration_plan_path: null,
+    voiceover_path: null,
+    subtitles_path: null,
+    subtitle_overlay_paths: [],
+    asset_bank: null,
+    asset_bank_path: null,
+    shot_manifest: null,
+    shot_manifest_path: null,
+    timeline: null,
+    timeline_path: null,
+    review_report: null,
+    review_report_path: null,
   };
 }
 
@@ -163,7 +139,7 @@ async function renderTimeline(job, assetBank, timeline, review, options) {
     '-map', audioPlan.outputLabel,
     '-c:v', 'libx264',
     '-preset', 'fast',
-    '-crf', '18',
+    '-crf', '23',
     '-pix_fmt', 'yuv420p',
     '-c:a', 'aac',
     '-b:a', '160k',
@@ -220,15 +196,55 @@ function buildVideoFilters(segment) {
 }
 
 function buildImageFilters(segment) {
-  const totalFrames = Math.max(1, Math.round(segment.output_duration * FPS));
-  const endScale = segment.zoom_keyframes?.at(-1)?.scale ?? 1.08;
   return [
     `scale=${OUTPUT_W}:${OUTPUT_H}:force_original_aspect_ratio=increase`,
     `crop=${OUTPUT_W}:${OUTPUT_H}`,
-    `zoompan=z='min(zoom+${((endScale - 1) / totalFrames).toFixed(5)},${endScale})':d=${totalFrames}:s=${OUTPUT_W}x${OUTPUT_H}:fps=${FPS}`,
+    `fps=${FPS}`,
+    `trim=duration=${segment.output_duration}`,
     'format=yuv420p',
     'setpts=PTS-STARTPTS'
   ].join(',');
+}
+
+async function simpleAssemble(job, outputDir, musicPath) {
+  const clips = (job.artifacts?.approved_room_clips ?? []).filter((c) => c.path);
+  if (clips.length === 0) return null;
+
+  const outputPath = path.join(outputDir, 'final_16x9.mp4');
+  const n = clips.length;
+  const videoInputs = clips.flatMap((c) => ['-i', c.path]);
+  const totalDuration = n * 5;
+
+  const vFilters = clips.map((_, i) =>
+    `[${i}:v]scale=${OUTPUT_W}:${OUTPUT_H}:force_original_aspect_ratio=decrease,pad=${OUTPUT_W}:${OUTPUT_H}:(ow-iw)/2:(oh-ih)/2,fps=${FPS},format=yuv420p[v${i}]`
+  );
+  const concatInputs = clips.map((_, i) => `[v${i}]`).join('');
+  vFilters.push(`${concatInputs}concat=n=${n}:v=1:a=0[vout]`);
+
+  const audioArgs = musicPath
+    ? ['-stream_loop', '-1', '-i', musicPath]
+    : ['-f', 'lavfi', '-t', String(totalDuration), '-i', 'anullsrc=r=44100:cl=stereo'];
+  const aFilter = musicPath
+    ? `[${n}:a]atrim=0:${totalDuration},asetpts=PTS-STARTPTS,volume=0.18[aout]`
+    : `[${n}:a]atrim=0:${totalDuration}[aout]`;
+  vFilters.push(aFilter);
+
+  await execFileAsync('ffmpeg', [
+    '-y',
+    ...videoInputs,
+    ...audioArgs,
+    '-filter_complex', vFilters.join(';'),
+    '-map', '[vout]',
+    '-map', '[aout]',
+    '-c:v', 'libx264', '-preset', 'fast', '-crf', '23',
+    '-pix_fmt', 'yuv420p',
+    '-c:a', 'aac', '-b:a', '128k',
+    '-shortest',
+    '-movflags', '+faststart',
+    outputPath,
+  ]);
+
+  return outputPath;
 }
 
 async function fallbackAssemble(job, outputDir) {
@@ -240,7 +256,7 @@ async function fallbackAssemble(job, outputDir) {
     await execWith(null, 'ffmpeg', [
       '-y', '-i', clips[0].path,
       '-vf', `fps=${FPS},scale=${OUTPUT_W}:${OUTPUT_H}:force_original_aspect_ratio=decrease,pad=${OUTPUT_W}:${OUTPUT_H}:(ow-iw)/2:(oh-ih)/2,format=yuv420p`,
-      '-c:v', 'libx264', '-preset', 'fast', '-crf', '18',
+      '-c:v', 'libx264', '-preset', 'fast', '-crf', '23',
       '-movflags', '+faststart',
       outputPath
     ]);
@@ -262,7 +278,7 @@ async function fallbackAssemble(job, outputDir) {
     '-shortest',
     '-c:v', 'libx264',
     '-preset', 'fast',
-    '-crf', '18',
+    '-crf', '23',
     '-pix_fmt', 'yuv420p',
     '-c:a', 'aac',
     '-b:a', '160k',
