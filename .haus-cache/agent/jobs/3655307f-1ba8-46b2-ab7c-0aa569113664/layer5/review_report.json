@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "issues": [],
+  "warnings": [],
+  "metrics": {
+    "total_duration": 24,
+    "total_segments": 5,
+    "covered_rooms": [
+      "nest_living_room",
+      "dream_bedroom",
+      "taste_kitchen",
+      "dine_dining_room",
+      "revive_bathroom"
+    ]
+  }
+}

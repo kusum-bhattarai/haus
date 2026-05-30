@@ -4,50 +4,51 @@
   "density": "balanced",
   "style_era": "japandi",
   "dominant_colors": [
-    "#D8B886",
-    "#EDE6DB",
-    "#CBB79D",
-    "#A8A39A",
-    "#3B2F2B"
+    "#EDE6DE",
+    "#D2BFA3",
+    "#B58E61",
+    "#8A6E52",
+    "#6A736A",
+    "#2F3230"
   ],
   "mood_words": [
-    "calm meditative",
-    "soft organic warmth",
-    "textured minimalism",
-    "grounded natural materials",
-    "quiet hygge comfort",
-    "uncluttered balance"
+    "calm minimal warmth",
+    "organic/textural layering",
+    "low-profile seating",
+    "soft ambient glow",
+    "biophilic serenity",
+    "ceramic & woven accents"
   ],
   "pinterest_cluster_labels": [
-    "light-wood Japandi dining — round table + woven pendant",
-    "floor-level tea nook — floor cushions + bamboo screens",
-    "neutral Japandi living — low sofa, sculptural wooden coffee table"
+    "Japandi neutral dining set with woven pendant",
+    "Low-floor Japanese reading/tea nook",
+    "Minimal plant-forward living room with low wood table"
   ],
   "cluster_summary": [
     {
-      "label": "light-wood Japandi dining — round table + woven pendant",
+      "label": "Japandi neutral dining set with woven pendant",
       "pin_ids": [
         "1012465559998684270"
       ],
-      "visual_notes": "Round oak dining table, curved mid-height upholstered chairs in linen textures, woven rattan pendant for warm upward glow; staging uses ceramic tableware, single sculptural vase and subtle wall wood slatting to elongate vertical lines.",
-      "weight": 0.35
+      "visual_notes": "Round light-oak dining table, slim tapered legs, textured neutral upholstery, oversized woven pendant as focal point, ceramic tableware and hand-thrown vases. Flooring and paneling in pale oak unify the composition—stage with a single sculptural vase, linen place settings, and warm-toned tabletop ceramics.",
+      "weight": 0.4
     },
     {
-      "label": "floor-level tea nook — floor cushions + bamboo screens",
+      "label": "Low-floor Japanese reading/tea nook",
       "pin_ids": [
         "1012465559998684267"
       ],
-      "visual_notes": "Intimate floor seating with oversized cushioned loungers, layered natural fiber rugs and bamboo/shoji screening; low wooden tray table, ambient paper lanterns and small green plantings to create a cozy, meditative corner.",
+      "visual_notes": "Intimate corner with floor cushions and low coffee tray, bamboo/shōji screening, layered natural-fiber rugs and woven poufs. Warm paper/lantern lighting creates deep amber glow—use soft cushions, round woven floor mats, low tray table and minimal potted greenery to recreate cozy scale.",
       "weight": 0.3
     },
     {
-      "label": "neutral Japandi living — low sofa, sculptural wooden coffee table",
+      "label": "Minimal plant-forward living room with low wood table",
       "pin_ids": [
         "1012465559998684162"
       ],
-      "visual_notes": "Light neutral linen sofa on low wooden base, asymmetrical sculpted oak coffee table, textured area rug and potted greenery; pared-back art and vertical wood slat accents emphasize calm proportion and organic materiality.",
-      "weight": 0.35
+      "visual_notes": "Low, neutral sofa on wooden base, organic-shaped low coffee table, vertical wood slat accent and sparse framed art. Emphasize neutral textiles, textured rug, and multiple medium potted plants for vertical green accents—keep decor minimal: 2–3 dark ceramic vessels and one sculptural plant grouping.",
+      "weight": 0.3
     }
   ],
-  "confidence": 0.88
+  "confidence": 0.89
 }

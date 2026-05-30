@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "b8ed23b7-0f89-40fa-9874-3868d6097159",
+  "session_id": "f1b97c96-37c4-4e3e-aed1-2a46129e53fc",
+  "created_at": "2026-05-10T17:19:43.072Z",
+  "source_payload": {
+    "floor_plan_url": "file:///Users/quamos/Repos/haus/.haus-cache/floor-plans/a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6.png",
+    "floor_plan_metadata": {
+      "source": "local_upload",
+      "mime_type": "image/png",
+      "size_bytes": 64138,
+      "width_px": 448,
+      "height_px": 480,
+      "sha256": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6",
+      "cache_key": "a2a3a3fe4942f6b982f5333a7b9c70b254ec2c82164872a3bf121f97eff375e6"
+    },
+    "floor_plan_measurements": {
+      "source": "ml_parser",
+      "unit": "ft",
+      "scale": null,
+      "rooms": [
+        {
+          "room_id": null,
+          "name": "Dream",
+          "dimensions": {
+            "width": 12.5,
+            "length": 11.583,
+            "area": 144.792
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Nest",
+          "dimensions": {
+            "width": 11.917,
+            "length": 11.667,
+            "area": 139.028
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        },
+        {
+          "room_id": null,
+          "name": "Dine",
+          "dimensions": {
+            "width": 7.833,
+            "length": 8,
+            "area": 62.667
+          },
+          "unit": "ft",
+          "confidence": 0.95
+        }
+      ],
+      "notes": null
+    },
+    "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+    "brief": "Warm, calm home for a young family that needs a cozy work corner.",
+    "objects": [
+      "standing_desk",
+      "bookshelf"
+    ],
+    "platform": "all",
+    "timestamp": "2026-05-10T17:19:43.064Z",
+    "session_id": "f1b97c96-37c4-4e3e-aed1-2a46129e53fc"
+  },
+  "aesthetic_profile": {
+    "palette": "warm_neutral",
+    "lighting": "soft_ambient",
+    "density": "balanced",
+    "style_era": "japandi",
+    "dominant_colors": [
+      "#EDE6DE",
+      "#D2BFA3",
+      "#B58E61",
+      "#8A6E52",
+      "#6A736A",
+      "#2F3230"
+    ],
+    "mood_words": [
+      "calm minimal warmth",
+      "organic/textural layering",
+      "low-profile seating",
+      "soft ambient glow",
+      "biophilic serenity",
+      "ceramic & woven accents"
+    ],
+    "pinterest_cluster_labels": [
+      "Japandi neutral dining set with woven pendant",
+      "Low-floor Japanese reading/tea nook",
+      "Minimal plant-forward living room with low wood table"
+    ],
+    "confidence": 0.89
+  },
+  "pins": [
+    {
+      "pin_id": "1012465559998684270",
+      "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "image_url": "https://i.pinimg.com/1200x/87/c2/ff/87c2ffd657991b8cba7e91b508c13848.jpg",
+      "title": "Japandi Dining Room with Neutral Decor",
+      "description": "A Japandi dining room with neutral décor blends Japanese simplicity and Scandinavian warmth. Soft beige, warm wood, and gentle earth tones create a calm, inviting space. Clean lines, natural materials, and minimal furnishings keep the room feeling open and uncluttered, while subtle textures like linen, ceramic, and light wood add quiet elegance and comfort.",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Japandi neutral dining set with woven pendant",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998684267",
+      "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "image_url": "https://i.pinimg.com/1200x/7e/9f/71/7e9f71efa20a307977036346b7de8cd9.jpg",
+      "title": "Japandi nook area",
+      "description": "Home aesthetics",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Low-floor Japanese reading/tea nook",
+      "selected_for_mood_board": true
+    },
+    {
+      "pin_id": "1012465559998684162",
+      "source_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "image_url": "https://i.pinimg.com/1200x/10/a5/ce/10a5cea5365b36e587c39a3144cbc8a2.jpg",
+      "title": "Japandi Living Room: Calm Minimal Decor, Natural Wood & Indoor Plants",
+      "description": "Calm Japandi living room inspiration with a light neutral sofa, low wooden coffee table, soft textured rug, and plenty of indoor plants for a serene, balanced space. Minimal wall art, natural materials, and clean lines create an airy, soothing aesthetic—perfect for Japanese style interiors, minimalist living room ideas, and warm neutral home decor. Save for Japandi decor and plant-filled living room styling.",
+      "save_count": null,
+      "hashtags": [],
+      "cluster_label": "Minimal plant-forward living room with low wood table",
+      "selected_for_mood_board": true
+    }
+  ],
+  "cluster_summary": [
+    {
+      "label": "Japandi neutral dining set with woven pendant",
+      "pin_ids": [
+        "1012465559998684270"
+      ],
+      "visual_notes": "Round light-oak dining table, slim tapered legs, textured neutral upholstery, oversized woven pendant as focal point, ceramic tableware and hand-thrown vases. Flooring and paneling in pale oak unify the composition—stage with a single sculptural vase, linen place settings, and warm-toned tabletop ceramics.",
+      "weight": 0.4
+    },
+    {
+      "label": "Low-floor Japanese reading/tea nook",
+      "pin_ids": [
+        "1012465559998684267"
+      ],
+      "visual_notes": "Intimate corner with floor cushions and low coffee tray, bamboo/shōji screening, layered natural-fiber rugs and woven poufs. Warm paper/lantern lighting creates deep amber glow—use soft cushions, round woven floor mats, low tray table and minimal potted greenery to recreate cozy scale.",
+      "weight": 0.3
+    },
+    {
+      "label": "Minimal plant-forward living room with low wood table",
+      "pin_ids": [
+        "1012465559998684162"
+      ],
+      "visual_notes": "Low, neutral sofa on wooden base, organic-shaped low coffee table, vertical wood slat accent and sparse framed art. Emphasize neutral textiles, textured rug, and multiple medium potted plants for vertical green accents—keep decor minimal: 2–3 dark ceramic vessels and one sculptural plant grouping.",
+      "weight": 0.3
+    }
+  ],
+  "floor_plan": {
+    "rooms": [
+      {
+        "room_id": "nest_living_room",
+        "name": "Nest",
+        "room_type": "living_room",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 11.917,
+          "length": 11.667,
+          "area": 139.028
+        },
+        "measured_unit": "ft",
+        "windows": "bay window / large glazed opening toward relax area",
+        "natural_light": "high",
+        "adjoins": [
+          "dine_dining_room",
+          "taste_kitchen",
+          "dream_bedroom"
+        ],
+        "generation_priority": 1
+      },
+      {
+        "room_id": "dream_bedroom",
+        "name": "Dream",
+        "room_type": "bedroom",
+        "area_estimate": "medium",
+        "measured_dimensions": {
+          "width": 12.5,
+          "length": 11.583,
+          "area": 144.792
+        },
+        "measured_unit": "ft",
+        "windows": "single exterior window on top wall",
+        "natural_light": "medium",
+        "adjoins": [
+          "revive_bathroom",
+          "nest_living_room"
+        ],
+        "generation_priority": 2
+      },
+      {
+        "room_id": "taste_kitchen",
+        "name": "Taste",
+        "room_type": "kitchen",
+        "area_estimate": "small",
+        "measured_dimensions": null,
+        "measured_unit": null,
+        "windows": "small window/vent above counter (adjacent exterior wall)",
+        "natural_light": "medium",
+        "adjoins": [
+          "nest_living_room",
+          "dine_dining_room",
+          "revive_bathroom"
+        ],
+        "generation_priority": 3
+      },
+      {
+        "room_id": "dine_dining_room",
+        "name": "Dine",
+        "room_type": "dining_room",
+        "area_estimate": "small",
+        "measured_dimensions": {
+          "width": 7.833,
+          "length": 8,
+          "area": 62.667
+        },
+        "measured_unit": "ft",
+        "windows": "bay-style multi-pane window on exterior corner",
+        "natural_light": "high",
+        "adjoins": [
+          "nest_living_room",
+          "taste_kitchen"
+        ],
+        "generation_priority": 4
+      },
+      {
+        "room_id": "revive_bathroom",
+        "name": "Revive",
+        "room_type": "bathroom",
+        "area_estimate": "small",
+        "measured_dimensions": null,
+        "measured_unit": null,
+        "windows": "small frosted window near tub",
+        "natural_light": "low",
+        "adjoins": [
+          "dream_bedroom",
+          "taste_kitchen"
+        ],
+        "generation_priority": 5
+      }
+    ],
+    "total_rooms": 5,
+    "layout_type": "open_plan",
+    "confidence": 0.85,
+    "notes": "Used ML-provided measurements for Dream, Nest, and Dine. Other room sizes estimated; excluded service/circulation spaces per instructions."
+  },
+  "provenance": {
+    "pinterest": {
+      "provider": "apify",
+      "requested_limit": 10,
+      "returned_count": 3,
+      "actor_id": "fatihtahta~pinterest-scraper-search"
+    },
+    "models": {
+      "aesthetic_extraction": "gpt-5-mini",
+      "floor_plan_parsing": "gpt-5-mini"
+    }
+  },
+  "warnings": []
+}

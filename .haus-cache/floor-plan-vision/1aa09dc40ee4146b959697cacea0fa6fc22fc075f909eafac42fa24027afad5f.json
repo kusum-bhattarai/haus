@@ -7,9 +7,9 @@
       "room_id": null,
       "name": "Bedroom",
       "dimensions": {
-        "width": 11.6666666667,
-        "length": 13.6666666667,
-        "area": 159.4444444444
+        "width": 11.6667,
+        "length": 13.6667,
+        "area": 159.44
       },
       "unit": "ft",
       "confidence": 0.95
@@ -18,9 +18,20 @@
       "room_id": null,
       "name": "Bedroom",
       "dimensions": {
-        "width": 11.6666666667,
-        "length": 12.3333333333,
-        "area": 143.8888888889
+        "width": 11.6667,
+        "length": 12.3333,
+        "area": 143.89
+      },
+      "unit": "ft",
+      "confidence": 0.95
+    },
+    {
+      "room_id": null,
+      "name": "Dining Room",
+      "dimensions": {
+        "width": 7.6667,
+        "length": 9.6667,
+        "area": 74.11
       },
       "unit": "ft",
       "confidence": 0.95
@@ -30,19 +41,8 @@
       "name": "Living Room",
       "dimensions": {
         "width": 12.5,
-        "length": 14.5833333333,
-        "area": 182.2916666663
-      },
-      "unit": "ft",
-      "confidence": 0.95
-    },
-    {
-      "room_id": null,
-      "name": "Dining Room",
-      "dimensions": {
-        "width": 7.6666666667,
-        "length": 9.6666666667,
-        "area": 74.1111111111
+        "length": 14.5833,
+        "area": 182.29
       },
       "unit": "ft",
       "confidence": 0.95

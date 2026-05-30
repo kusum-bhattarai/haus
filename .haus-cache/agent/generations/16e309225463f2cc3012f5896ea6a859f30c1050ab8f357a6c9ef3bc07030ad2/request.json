@@ -1,0 +1,16 @@
+{
+  "endpoint_id": "fal-ai/gemini-3.1-flash-image-preview/edit",
+  "params": {
+    "image_urls": [
+      "https://v3b.fal.media/files/b/0a99aca5/KxIVOjix328YVkA2iPoUg_SWxzUUL1.png",
+      "https://v3b.fal.media/files/b/0a99aca4/4TKD7JeuIfAtueaDuy1IU_rRBWYEaQ.png"
+    ],
+    "prompt": "Transform this room image into a cinematic editorial real-estate still. Preserve exact architecture, perspective, walls, windows, door openings, furniture layout, lens realism, and room scale. Maintain believable residential scale for Revive at roughly small. Low natural light from frosted window; supplement with warm wall sconce above vanity for evening. Retain moody yet readable shadows. A calm, family-friendly Japandi interior that balances warm neutrals, low-profile furniture, and layered natural textures. Prioritize a cozy work corner in the bedroom while keeping sightlines clean across the open-plan living, dining, and kitchen. Light is soft and directional from windows; materials focus on light oak, warm walnut accents, hand-glazed ceramics, woven pendants, and tactile textiles. Keep these fixed unless the user explicitly wants transformation: exact architecture room geometry furniture layout lens realism vertical line integrity believable scale light entering from visible sources only VISUAL CONSISTENCY REQUIREMENT (reference image provided): The vanity, mirror, bathroom tile, matte black fixtures (#2F3230), pale sand tile or microcement (#D2BFA3) in this room must exactly match the style, materials, and form shown in reference image — treat it as the definitive source of truth for these pieces. Previous failure modes to correct: object_missing, lighting_unrealistic. The image does not fully comply with the staging requirements. While the room matches the overall aesthetic and structure, it lacks the specified matte black fixtures and pale sand tiling or microcement. Additionally, the lighting appears overly bright and does not convey the requested moody atmosphere.",
+    "resolution": "2K",
+    "aspect_ratio": "16:9",
+    "output_format": "png",
+    "num_images": 1
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

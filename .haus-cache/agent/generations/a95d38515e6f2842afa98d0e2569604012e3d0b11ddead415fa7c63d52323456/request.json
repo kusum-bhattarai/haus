@@ -1,0 +1,12 @@
+{
+  "endpoint_id": "fal-ai/nano-banana-2",
+  "params": {
+    "prompt": "Photorealistic editorial interior reference photograph of a Nest. Focus tightly on: sofa, coffee table, area rug, low-profile 3-seater sofa — pale oat linen upholstery, dark walnut tapered legs, low 18\" seat height, chaise-free symmetrical form, large woven area rug — handwoven jute in warm sand (#EDE6DE), 8x10, flatweave with subtle chevron texture, compact standing desk — warm ash veneer top, matte black steel legs, 48\" width, integrated cable channel, minimal apron, organic low coffee table — oval solid walnut coffee table, matte oil finish, rounded edges, 36in x 20in, low 12\" height, bookshelf. Styled in japandi aesthetic, warm_neutral palette, soft_ambient lighting. A calm, warm Japandi interior that balances Japanese minimal restraint with Scandinavian warmth. Prioritize low-profile furniture, natural materials (light oak, walnut, jute), layered textures, and a single cozy work corner for a young family. Keep decoration minimal and purposeful: 2–3 ceramics, one sculptural plant cluster, and a woven pendant as focal punctuation above the dining table. This image is a visual consistency reference — every detail of the featured furniture and fixtures must be clearly visible and precisely rendered. No people. No visible brand logos. Sharp architectural photography. Luxury real estate staging.",
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

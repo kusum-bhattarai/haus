@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99b0ca/_z9Xhs_61yeJjHvOXmOpS_GGrY4tF5.png",
+    "prompt": "Extreme close-up detail shot with smooth tracking camera following harsh directional light as it grows and spreads across textured surface. Crisp shadow edges crawl and shift in real time. Camera moves with the light's path revealing texture in wood grain, fabric weave, architectural detail. Editorial film style. Neutral white balance, balanced exposure — deep dramatic shadows without underexposure. Shallow depth of field. Super smooth camera glides horizontally from right to left, slow truck revealing table and pendant while light shifts gently across the tabletop, consistent exposure, cinematic, photorealistic Dine, Warm minimal Japandi — calm, textural, family-friendly Maintain believable residential scale for a 7.833 by 8 ft Dine. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "2819764f9ebd0f508c6ce67c948ba435ce8b983f30a5bb5a01f8f6e5b713301b"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

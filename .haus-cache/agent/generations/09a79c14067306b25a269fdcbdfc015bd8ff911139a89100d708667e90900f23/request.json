@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99ac5e/Wvdkjr_Wlj35syG8e4qtQ_r6aTioG4.png",
+    "prompt": "Very slow truck right, time-lapse light progression, camera slides laterally while light shifts across the space, shadows gradually move and lengthen, parallax effect, consistent exposure, stable motion, cinematic, photorealistic Very slow truck right, camera slides laterally to reveal dining nook and pendant, directional light from windows shifts across table surface, shadow edges remain crisp, consistent exposure, cinematic, photorealistic. Preserve architecture and sightlines. Dine, Botanical‑spa warmth with artful, collected mid‑century character Maintain believable residential scale for a 7.6667 by 9.6667 ft Dine. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "fb84b3e93670c85e06f2782751d2bf42ff696dfe71fe6d4d2b5ad6b087dd94aa"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

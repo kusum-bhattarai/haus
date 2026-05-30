@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99b148/_ZExJf4JY5z6umTQcUtJ3_qajpCUUa.png",
+    "prompt": "Very slow truck right, time-lapse light progression, camera slides laterally while light shifts across the space, shadows gradually move and lengthen, parallax effect, consistent exposure, stable motion, cinematic, photorealistic Very slow truck right, camera glides laterally to reveal the dining table beneath the woven pendant while light creeps across the tabletop, directional shadows move gradually, consistent exposure, cinematic, photorealistic Dine, Quiet, warm, family-ready Japandi — tactile surfaces, low silhouettes, and a single cozy work corner. Maintain believable residential scale for a 7.833 by 8 ft Dine. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "20144eb380bc9df976ec320dec5cb4f5ac1835eb4efb3090822861b3e8f0572f"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

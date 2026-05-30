@@ -1,0 +1,274 @@
+{
+  "vibe_report": {
+    "aesthetic_name": "Warm Japandi Family Home",
+    "summary": "A calm, minimal Japandi palette tuned for a young family — warm neutrals, low-profile furniture, and a few sculptural, tactile accents. Prioritize organic textures, soft ambient light from practical fixtures and windows, and a compact, child-friendly layout with a discreet standing-desk work corner in the bedroom.",
+    "palette_rationale": "Use warm neutrals anchored by pale oat and warm sand tones (#EDE6DE, #D2BFA3) with mid-tone walnut/terracotta anchors (#8A6E52, #B58E61). Accents in muted slate/olive (#6A736A, #6A736A) for depth. This keeps rooms visually cohesive across open sightlines while retaining the lighter, airy Japandi feel.",
+    "lighting_mood": "Soft ambient daylight from bay and exterior windows combined with warm practical fixtures (woven pendant, bedside pendant, floor lamp). Directional daylight shapes texture and creates gentle contrast; interior lamps add warm pool lighting for evening shots.",
+    "materials": [
+      "light oak (matt oiled finish)",
+      "solid walnut veneer (matte lacquer)",
+      "pale oat linen upholstery",
+      "hon ed quartz countertop (light grey)",
+      "matte terracotta ceramics",
+      "natural seagrass (woven pendant)",
+      "wool area rugs"
+    ],
+    "textures": [
+      "low-pile hand-knotted wool",
+      "linen upholstery",
+      "matte oiled wood grain",
+      "subtle honed stone",
+      "woven natural fibers"
+    ],
+    "furniture_language": [
+      "low-profile seating with wooden base",
+      "slim tapered legs on tables and chairs",
+      "rounded organic tabletop forms",
+      "minimal open shelving, sparse ceramics",
+      "integrated utility pieces (compact island, hidden storage)"
+    ],
+    "styling_rules": [
+      "Limit decorative objects to 2–3 per vignette: one sculptural ceramic, one hand-thrown vase, one small stack of books.",
+      "Keep color accents within the palette hexes — no bright primaries.",
+      "Maintain low visual clutter on horizontal surfaces; leave negative space around key objects.",
+      "Use plants in odd-numbered groupings and vary heights for vertical interest.",
+      "Work corner must feel compact and calm: slim standing desk, single task lamp, minimal shelving."
+    ],
+    "avoid": [
+      "bright or saturated color pops",
+      "high-shine reflective finishes",
+      "overstuffed upholstered furniture",
+      "excessive ornamentation or heavy framed art"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living_room",
+        "headline": "Low, plant-forward living area — make the bay window the hero",
+        "guidance": "Stage a low-profile seating cluster oriented to the bay window. Keep furniture scale low and horizontal; place a single tall plant near the bay and a low walnut coffee table on a neutral wool rug. Use a warm floor lamp as a practical in-frame light source for evening continuity. Keep surfaces minimally styled with one ceramic vessel and a small stack of books.",
+        "must_include": [
+          "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), solid oak base stained dark walnut, 18in seat height, recessed tapered legs, low back, no visible feet from side angle",
+          "low organic-shaped walnut coffee table — oval 42x22in, matte walnut veneer (#8A6E52), soft rounded edges, 12in height",
+          "hand-knotted neutral wool rug — 8x10, warm beige tonal weave (#EDE6DE/#D2BFA3), low pile, subtle linear pattern",
+          "tall fiddle-leaf fig — approx 6ft Ficus lyrata in matte terracotta pot (muted rust #B58E61)"
+        ],
+        "must_avoid": [
+          "high-backed sofas",
+          "large TV screens visible in primary shot",
+          "bright patterned textiles"
+        ]
+      },
+      {
+        "room_id": "dream_bedroom",
+        "headline": "Calm bedroom with a cozy standing-desk corner",
+        "guidance": "Keep the bed low and simple with light linens. Place a compact standing desk in one corner with a slim task lamp and minimal shelving for the bookshelf object requested. Use a bedside pendant or small wall sconce for warm evening glow. Maintain a single plant or small vase to tie into the living room palette.",
+        "must_include": [
+          "compact standing desk — pale oak top (#D2BFA3), slim black metal legs, minimal cable management (local object, not shared across rooms)",
+          "slim bedside pendant — warm amber diffuser, brass mount (local practical fixture)"
+        ],
+        "must_avoid": [
+          "bulky office furniture",
+          "strong, directional studio lighting (keep practical and plausible)"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Compact, efficient kitchen with visible island and warm materials",
+        "guidance": "Keep counters clear and show the small window/vent as the primary daylight source. Use under-cabinet strip lighting as a practical fill. The compact island should read as a pale-oak anchor in the sightline toward the dining area; stage two low stools tucked in and a single ceramic bowl.",
+        "must_include": [
+          "compact kitchen island — 48in x 24in, pale oak base 'Warm Sand' (#D2BFA3) with honed light-grey quartz countertop (#6A736A), integrated 12in overhang"
+        ],
+        "must_avoid": [
+          "cluttering counters with small appliances",
+          "introducing additional island colors outside the palette"
+        ]
+      },
+      {
+        "room_id": "dine_dining_room",
+        "headline": "Small dining nook with woven pendant as focal point",
+        "guidance": "Center the round light-oak dining table under the oversized woven pendant. Use two to four slim, textured upholstered chairs. Keep table styling minimal: single sculptural vase or ceramic bowl with linen napkin. Bay-style window should provide soft daylight; pendant is the practical evening light.",
+        "must_include": [
+          "round light-oak dining table — 48in diameter, light oak veneer 'Warm Sand' (#D2BFA3), slim tapered legs, matte oiled finish",
+          "oversized woven pendant — natural seagrass dome 24in diameter, warm amber inner diffuser, thin black braided cord, matte finish"
+        ],
+        "must_avoid": [
+          "large linear chandeliers",
+          "mismatched dining chairs"
+        ]
+      },
+      {
+        "room_id": "revive_bathroom",
+        "headline": "Small calm bathroom — keep finishes soft and tiled neutrals",
+        "guidance": "Use the frosted window as the primary daylight source and a warm wall sconce or mirror light as the interior practical. Use small ceramic accessories and woven hand towel. Keep the palette restrained and avoid heavy patterns.",
+        "must_include": [
+          "frosted window soft daylight",
+          "warm wall sconce near mirror (practical fixture)"
+        ],
+        "must_avoid": [
+          "bright white clinical lighting",
+          "large sculptural objects that crowd the small footprint"
+        ]
+      }
+    ],
+    "confidence": 0.89,
+    "warnings": [
+      "Open-plan sightlines require strict color and material consistency for all visible surfaces.",
+      "Avoid adding objects that would block circulation between living/dining/kitchen in this compact plan."
+    ]
+  },
+  "overall_mood": "Calm minimal warmth — tactile Japandi with family-friendly scale",
+  "global_style_notes": [
+    "Maintain exact wood tones across sightlines (use same 'Warm Sand' light-oak finish).",
+    "Prioritize low furniture profiles to preserve sightlines and visual flow.",
+    "All artificial light should read as practical fixtures visible in the frame (no unseen light sources).",
+    "Keep decorative accents sparse and within the palette hex codes provided."
+  ],
+  "negative_prompt": "blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift, no color inconsistency between rooms, no mismatched furniture across sightlines",
+  "room_plans": [
+    {
+      "room_id": "nest_living_room",
+      "lighting_instruction": "Primary: strong directional daylight from the bay window (soft morning light). Secondary: warm floor lamp near sofa for evening continuity. Maintain plausible shadow direction from window only.",
+      "dalle_scene_details": "Wide interior composition at eye height (~48in/1.2m). Place the following shared objects as anchors: low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), solid oak base stained dark walnut, 18in seat height, recessed tapered legs, low back, no visible feet from side angle; low organic-shaped walnut coffee table — oval 42x22in, matte walnut veneer (#8A6E52), soft rounded edges, 12in height; hand-knotted neutral wool rug — 8x10, warm beige tonal weave (#EDE6DE/#D2BFA3), low pile, subtle linear pattern; tall fiddle-leaf fig — approx 6ft Ficus lyrata in matte terracotta pot (muted rust #B58E61). Add one slim floor lamp with warm filament (practical fixture) to the right of the sofa; sparse styling on coffee table: one dark ceramic vessel and a single book stack. Keep verticals true and visible window view slightly out of focus but naturally lit. Preserve measured sofa scale to room dimensions (approx 3-seat across 11.9ft width).",
+      "video_prompt": "Wide interior shot with a slow and smooth dolly in. Super smooth camera moves forward slightly toward the bay window and sofa, directional sunlight shifts gently across the rug and oak surfaces, consistent exposure, stable motion, cinematic, photorealistic.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), solid oak base stained dark walnut, 18in seat height, recessed tapered legs, low back, no visible feet from side angle",
+        "hand-knotted neutral wool rug — 8x10, warm beige tonal weave (#EDE6DE/#D2BFA3), low pile, subtle linear pattern",
+        "tall fiddle-leaf fig — approx 6ft Ficus lyrata in matte terracotta pot (muted rust #B58E61)"
+      ],
+      "must_avoid": [
+        "television screens in main composition",
+        "introducing furniture finishes outside the shared appearance specs",
+        "visible clutter on surfaces"
+      ]
+    },
+    {
+      "room_id": "dream_bedroom",
+      "lighting_instruction": "Medium daylight from a single exterior window; bedside pendant and a small desk task lamp are the practical interior sources. Keep window-derived shadows soft and consistent with window placement.",
+      "dalle_scene_details": "Intimate bedroom frame at ~42in camera height. Low platform bed with light linens in palette, simple headboard in pale oak. Compact standing desk placed in a corner as a calm work nook with a slim task lamp and minimal shelving for books. Include a single ceramic vase and a small plant on the desk. Use bedside pendant (warm amber) as a visible practical fixture for evening composition. Maintain believable scale relative to measured room dimensions (12.5ft x 11.58ft). Do not repeat shared objects descriptions here (no redefinition) — room may show sightline into living room doorway but shared objects are described in the shared_objects list.",
+      "video_prompt": "Very slow static-to-zoom detail shot. Camera holds and slowly tightens on the standing-desk corner, warm bedside pendant glows, natural daylight from window remains primary, consistent exposure, cinematic, photorealistic.",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "compact standing desk — pale oak top (#D2BFA3), slim black metal legs, minimal cable management (local object)"
+      ],
+      "must_avoid": [
+        "large office monitors or bulky office chairs",
+        "bright task lighting that contradicts bedside pendant"
+      ]
+    },
+    {
+      "room_id": "taste_kitchen",
+      "lighting_instruction": "Medium daylight from the small window above the counter (primary). Under-cabinet strips and pendant over the island are visible practical light sources for evening. All interior highlights must derive from these fixtures/windows only.",
+      "dalle_scene_details": "Kitchen-wide composition at ~54in camera height capturing the compact island and flow to the dining area. Include the shared compact kitchen island — 48in x 24in, pale oak base 'Warm Sand' (#D2BFA3) with honed light-grey quartz countertop (#6A736A), integrated 12in overhang. Keep counters tidy with a single ceramic bowl. If the dining table is visible in the sightline, reference the shared appearance spec rather than redefining it. Ensure cabinet faces read matte and window vent is visible to justify daylight direction.",
+      "video_prompt": "Super smooth truck right, camera glides laterally across the compact kitchen toward the island and opens slightly to reveal the dining area, directional window light shifts slowly across quartz countertop, consistent exposure, cinematic, photorealistic.",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "compact kitchen island — 48in x 24in, pale oak base 'Warm Sand' (#D2BFA3) with honed light-grey quartz countertop (#6A736A), integrated 12in overhang"
+      ],
+      "must_avoid": [
+        "stacked dishes or small appliances scattered on counters",
+        "introducing kitchen finishes outside the palette"
+      ]
+    },
+    {
+      "room_id": "dine_dining_room",
+      "lighting_instruction": "High natural light from the bay-style multi-pane window. Oversized woven pendant is the primary practical fixture for evening shots; daylight should shape the table and slow-moving shadows across the floor.",
+      "dalle_scene_details": "Centered composition on the round table at ~46in camera height. Use the shared round light-oak dining table — 48in diameter, light oak veneer 'Warm Sand' (#D2BFA3), slim tapered legs, matte oiled finish and the shared oversized woven pendant — natural seagrass dome 24in diameter, warm amber inner diffuser, thin black braided cord, matte finish. Seat two to four slim upholstered chairs in a textured neutral fabric. Minimal table setting: one sculptural ceramic vase, linen napkin. If the living area is visible in the frame, reference shared objects via the shared_objects specs rather than redefining them.",
+      "video_prompt": "Super smooth camera travels in a gentle arc around the dining table (parallax orbit), pendant remains centered, daylight rolls slowly across oak surfaces, consistent exposure, cinematic, photorealistic.",
+      "camera_motion": "orbital_pan",
+      "duration_seconds": 5,
+      "must_include": [
+        "round light-oak dining table — 48in diameter, light oak veneer 'Warm Sand' (#D2BFA3), slim tapered legs, matte oiled finish",
+        "oversized woven pendant — natural seagrass dome 24in diameter, warm amber inner diffuser, thin black braided cord, matte finish"
+      ],
+      "must_avoid": [
+        "mismatched chairs",
+        "bright colored linens or tableware"
+      ]
+    },
+    {
+      "room_id": "revive_bathroom",
+      "lighting_instruction": "Low natural light from frosted window (primary). Mirror light or small wall sconce is the visible practical interior light for evening shots. All light must be physically motivated by fixtures in frame.",
+      "dalle_scene_details": "Tight bathroom composition at ~50in camera height, focusing on vanity and tub area. Keep tiles and finishes in soft neutral tones; show frosted window as diffuse daylight source. Stylistically include one folded linen towel, a small ceramic soap dish and a single small plant or sprig. Preserve modest scale; do not introduce large furniture.",
+      "video_prompt": "Very slow static zoom-in detail. Camera holds and slowly tightens on vanity and frosted window area, soft natural daylight diffuses through glass, consistent exposure, cinematic, photorealistic.",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "frosted window soft daylight",
+        "warm wall sconce near mirror (practical fixture)"
+      ],
+      "must_avoid": [
+        "clinical/blue-tinted lighting",
+        "large decorative objects that overcrowd the small space"
+      ]
+    }
+  ],
+  "shared_objects": [
+    {
+      "object_name": "low-profile sofa (Nest sightline)",
+      "appearance_spec": "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), solid oak base stained dark walnut, 18in seat height, recessed tapered legs, low back, no visible feet from side angle",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    },
+    {
+      "object_name": "round dining table",
+      "appearance_spec": "round light-oak dining table — 48in diameter, light oak veneer 'Warm Sand' (#D2BFA3), slim tapered legs, matte oiled finish",
+      "room_ids": [
+        "dine_dining_room",
+        "taste_kitchen",
+        "nest_living_room"
+      ]
+    },
+    {
+      "object_name": "oversized woven pendant",
+      "appearance_spec": "oversized woven pendant — natural seagrass dome 24in diameter, warm amber inner diffuser, thin black braided cord, matte finish",
+      "room_ids": [
+        "dine_dining_room",
+        "nest_living_room",
+        "taste_kitchen"
+      ]
+    },
+    {
+      "object_name": "low walnut coffee table",
+      "appearance_spec": "low organic-shaped walnut coffee table — oval 42x22in, matte walnut veneer (#8A6E52), soft rounded edges, 12in height",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    },
+    {
+      "object_name": "neutral wool rug",
+      "appearance_spec": "hand-knotted neutral wool rug — 8x10, warm beige tonal weave (#EDE6DE/#D2BFA3), low pile, subtle linear pattern",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    },
+    {
+      "object_name": "tall fiddle-leaf plant",
+      "appearance_spec": "tall fiddle-leaf fig — approx 6ft Ficus lyrata in matte terracotta pot (muted rust #B58E61)",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    },
+    {
+      "object_name": "kitchen island (compact)",
+      "appearance_spec": "compact kitchen island — 48in x 24in, pale oak base 'Warm Sand' (#D2BFA3) with honed light-grey quartz countertop (#6A736A), integrated 12in overhang",
+      "room_ids": [
+        "taste_kitchen",
+        "dine_dining_room",
+        "nest_living_room"
+      ]
+    }
+  ],
+  "warnings": [
+    "Preserve architecture and sightlines exactly — do not reposition walls or windows.",
+    "Ensure all shared object color/finish specs are applied identically in every room render to prevent visible mismatches.",
+    "When generating motion clips, run an image-pass editorial correction if source photos lack directional light or vertical stability."
+  ]
+}

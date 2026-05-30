@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99ac5e/1KJI_Fd3WygxGuRbINHdn_bn1wez2d.png",
+    "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Wide slide (truck right to left): Super smooth camera glides horizontally from right to left across the kitchen plane, time-lapse light progression from the east window creates a subtle shift in shadow on counters, consistent exposure, stable motion, cinematic, photorealistic. Taste, intimate, cinematic, quietly luxurious — dark tonal anchors warmed by smoked oak and brass accents Maintain believable residential scale for a 8.5 by 10.583333333333334 ft Taste. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "d5b47a6c73875875be5db9350b09e8a767aac71cf6f8df087847adeccf038d60"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

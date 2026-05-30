@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99ac5e/54P8pFM9LtdaVacXHrCby_PvXlFB28.png",
+    "prompt": "Extreme close-up detail shot with smooth tracking camera following harsh directional light as it grows and spreads across textured surface. Crisp shadow edges crawl and shift in real time. Camera moves with the light's path revealing texture in wood grain, fabric weave, architectural detail. Editorial film style. Neutral white balance, balanced exposure — deep dramatic shadows without underexposure. Shallow depth of field. Static detail (static zoom): Slow static zoom in to a composed desk vignette at the window, warm window light fills the desk surface, slight depth-of-field to emphasize texture, consistent exposure, photorealistic. Dream, intimate, cinematic, quietly luxurious — dark tonal anchors warmed by smoked oak and brass accents Maintain believable residential scale for a 11.25 by 11.333333333333334 ft Dream. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "8141ba835d538391cde28f097b1a74c2cecf60b08b86657f161c3ed6c5e9392d"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

@@ -2,18 +2,46 @@
   "schema_version": "1.0",
   "styles": [
     {
-      "style_id": "earthy-mid-century-botanical-6f717066",
-      "aesthetic_name": "Earthy Mid‑Century Botanical",
-      "summary": "A warm, layered mid‑century inspired home with an earthy palette anchored in emerald greens, reclaimed walnut, brass accents and tactile woven surfaces. The overall direction is calm and artistic — think botanical spa meets curated gallery: lush plants, handcrafted textures, and intentional pops of warm terracotta and ochre. Light should feel soft and directional from existing windows, sculpting materials rather than flattening them.",
+      "style_id": "earthy-mid-century-artistic-6f717066",
+      "aesthetic_name": "Earthy Mid‑Century Artistic",
+      "summary": "A warm, collected interior blending mid‑century forms with artisanal textures and an earthy palette. Deep emerald accents and terracotta art punctuate warm walnut wood, aged‑brass fixtures, and layered natural textiles to create a botanical‑spa, gallery‑like living environment. Prioritize honest daylight from bay/exterior windows and warm practicals to sculpt texture and glaze.",
       "pinterest_board_url": "https://www.pinterest.com/tarive22/artistic-interior/",
-      "path": "/Users/quamos/Repos/haus/.haus-cache/style-library/earthy-mid-century-botanical-6f717066.json"
+      "path": "/Users/quamos/Repos/haus/.haus-cache/style-library/earthy-mid-century-artistic-6f717066.json"
     },
     {
-      "style_id": "warm-japandi-family-calm-8b43cf81",
-      "aesthetic_name": "Warm Japandi Family Calm",
-      "summary": "A warm, restrained Japandi approach that balances Scandinavian lightness with Japanese restraint to create a calm, family-friendly home. Soft, warm neutrals, layered natural textures, and simple, low-profile furniture compose spaces that feel meditative yet practical — with a compact, comfortable work corner and a safe, serene sleep area for a young child.",
+      "style_id": "japandi-noir-low-key-luxury-55b68745",
+      "aesthetic_name": "Japandi Noir — Low‑Key Luxury",
+      "summary": "A restrained, textural Japandi‑inspired interior that balances deep, matte dark surfaces with warm natural wood and minimal, sculptural accents. The mood is calm and intimate: low ambient illumination, focused warm accent lights, and deliberately curated negative space. Materials read tactile and honest — smoked oak, matte black stone, warm brass — with a limited warm‑neutral palette to keep visual cohesion across connected spaces.",
+      "pinterest_board_url": "https://www.pinterest.com/tarive22/dark-interior/",
+      "path": "/Users/quamos/Repos/haus/.haus-cache/style-library/japandi-noir-low-key-luxury-55b68745.json"
+    },
+    {
+      "style_id": "japandi-noir-warm-japandi-noir-55b68745",
+      "aesthetic_name": "Japandi Noir — Warm Japandi Noir",
+      "summary": "A measured, low-key luxury Japandi interior: deep matte walls and smoked oak joinery warmed by brass accents, natural textiles and a restrained plant presence. Spaces feel intimate and textural with layered ambient light; styling is sparse, family-ready and includes a compact standing work corner. Prioritize calm sightlines between living, dining and kitchen; keep material and color consistency across shared objects.",
+      "pinterest_board_url": "https://www.pinterest.com/tarive22/dark-interior/",
+      "path": "/Users/quamos/Repos/haus/.haus-cache/style-library/japandi-noir-warm-japandi-noir-55b68745.json"
+    },
+    {
+      "style_id": "warm-japandi-family-8b43cf81",
+      "aesthetic_name": "Warm Japandi Family",
+      "summary": "A calm, warm Japandi interior tuned for a young family: low-profile furniture, warm neutrals, tactile natural materials, and a small dedicated work corner. Prioritize organic shapes, layered natural textures, and biophilic accents while keeping sightlines uncluttered for an open-plan flow between living, dining, and kitchen.",
       "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
-      "path": "/Users/quamos/Repos/haus/.haus-cache/style-library/warm-japandi-family-calm-8b43cf81.json"
+      "path": "/Users/quamos/Repos/haus/.haus-cache/style-library/warm-japandi-family-8b43cf81.json"
+    },
+    {
+      "style_id": "warm-japandi-family-home-8b43cf81",
+      "aesthetic_name": "Warm Japandi Family Home",
+      "summary": "A calm, family-friendly Japandi interior that balances warm neutrals, low-profile furniture, and layered natural textures. Prioritize a cozy work corner in the bedroom while keeping sightlines clean across the open-plan living, dining, and kitchen. Light is soft and directional from windows; materials focus on light oak, warm walnut accents, hand-glazed ceramics, woven pendants, and tactile textiles.",
+      "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "path": "/Users/quamos/Repos/haus/.haus-cache/style-library/warm-japandi-family-home-8b43cf81.json"
+    },
+    {
+      "style_id": "warm-japandi-family-nest-8b43cf81",
+      "aesthetic_name": "Warm Japandi Family Nest",
+      "summary": "Calm, minimal Japandi interiors tuned for a young family: warm neutrals, low-profile furniture, natural materials, and a compact cozy work corner. Prioritize layered textures (linen, jute, hand-thrown ceramics), sculptural plant groupings, and a single woven pendant as a dining focal point. Keep decor minimal and purposeful so sightlines between living, dining and kitchen feel cohesive and uncluttered.",
+      "pinterest_board_url": "https://www.pinterest.com/tarive22/japandi-interior-design/",
+      "path": "/Users/quamos/Repos/haus/.haus-cache/style-library/warm-japandi-family-nest-8b43cf81.json"
     }
   ]
 }

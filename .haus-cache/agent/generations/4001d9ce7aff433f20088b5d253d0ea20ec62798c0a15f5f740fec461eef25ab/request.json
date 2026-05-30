@@ -1,0 +1,12 @@
+{
+  "endpoint_id": "fal-ai/nano-banana-2",
+  "params": {
+    "prompt": "Photorealistic editorial interior reference photograph of a Nest. Focus tightly on: sofa, coffee table, area rug, low-profile 3-seater sofa — charcoal slate linen upholstery (Charcoal Slate #2F2F2F), smoked oak tapered legs, low bench form, black marble coffee table — round monolithic black marble, honed finish (Jet Black #0B0B0B), neutral woven area rug — low-pile wool blend in warm oat, standing desk — compact adjustable-height standing desk, dark-stained oak top, matte black steel T-leg base, open bookshelf — freestanding smoked oak 5-shelf unit, matte finish, bonsai plant — small rounded ficus bonsai in unglazed ceramic pot, bookshelf. Styled in japandi aesthetic, warm_neutral palette, soft_ambient lighting. A measured, low-key luxury Japandi interior: deep matte walls and smoked oak joinery warmed by brass accents, natural textiles and a restrained plant presence. Spaces feel intimate and textural with layered ambient light; styling is sparse, family-ready and includes a compact standing work corner. Prioritize calm sightlines between living, dining and kitchen; keep material and color consistency across shared objects. This image is a visual consistency reference — every detail of the featured furniture and fixtures must be clearly visible and precisely rendered. No people. No visible brand logos. Sharp architectural photography. Luxury real estate staging.",
+    "aspect_ratio": "16:9",
+    "resolution": "1K",
+    "num_images": 1,
+    "output_format": "png"
+  },
+  "source_hashes": [],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

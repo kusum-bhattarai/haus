@@ -63,11 +63,13 @@ let floorPlans = [
 const progressSteps = [
   'Validating selected floor plan',
   'Extracting room dimensions',
-  'Reading Pinterest board',
+  'Reading Pinterest board — scraping aesthetic pins',
   'Building structured vibe report',
-  'Preparing Layer 3 handoff',
-  'Ready for staged images and fal video',
-  'Showing personalized preview shell'
+  'Planning room-by-room generation (Layer 3)',
+  'Generating styled stills with fal.ai',
+  'Rendering room videos (Seedance/Kling)',
+  'Assembling final 16×9 reel with music',
+  'Preview ready'
 ];
 
 let selectedPlan = floorPlans[0];
@@ -81,6 +83,7 @@ const activePlanHotspots = new Map();
 let selectedAgentRoomId = null;
 
 const views = {
+  landing: document.querySelector('#landing-view'),
   portal: document.querySelector('#portal-view'),
   personalize: document.querySelector('#personalize-view'),
   generation: document.querySelector('#generation-view'),
@@ -113,6 +116,8 @@ const editorMaxClipSeconds = document.querySelector('#editor-max-clip-seconds');
 const editorMaxClipLabel = document.querySelector('#editor-max-clip-label');
 const editorStoryHook = document.querySelector('#editor-story-hook');
 const copyReelEditJson = document.querySelector('#copy-reel-edit-json');
+const videoFeedPlayer = document.querySelector('#video-feed-player');
+const videoFeedStatus = document.querySelector('#video-feed-status');
 const mediaModal = document.querySelector('#media-modal');
 const mediaModalImage = document.querySelector('#media-modal-image');
 const mediaModalTitle = document.querySelector('#media-modal-title');
@@ -120,12 +125,17 @@ const roomFocusPanel = document.querySelector('#room-focus-panel');
 const agentRoomSelect = document.querySelector('#agent-room-select');
 const agentCanvasImage = document.querySelector('#agent-canvas-image');
 
-loadFloorPlans();
+loadFloorPlans().then(restoreSession);
+loadDemoAesthetics();
 renderProgressSteps();
-setView('portal');
+setView('landing');
 addChatMessage('agent', 'After you watch the video, ask for a specific change. I can isolate the affected room and keep the rest of the cached video intact.');
 
-document.querySelector('#back-to-plans').addEventListener('click', () => setView('portal'));
+document.querySelector('#landing-cta').addEventListener('click', () => setView('portal'));
+document.querySelector('#back-to-plans').addEventListener('click', () => {
+  localStorage.removeItem('haus_session');
+  setView('portal');
+});
 document.querySelector('#open-agent').addEventListener('click', () => setView('agent'));
 document.querySelector('#back-to-results').addEventListener('click', () => setView('results'));
 document.querySelector('#back-video-to-results').addEventListener('click', () => setView('results'));
@@ -150,7 +160,6 @@ document.querySelectorAll('[data-close-media-modal]').forEach((element) => {
 
 document.querySelector('#personalization-form').addEventListener('submit', (event) => {
   event.preventDefault();
-  setView('generation');
   runGenerationSequence(new FormData(event.currentTarget));
 });
 
@@ -218,8 +227,8 @@ regenerateButton.addEventListener('click', async () => {
     placement = null;
     placementMarker.classList.add('is-hidden');
     placementInstruction.textContent = '';
-    cacheNote.textContent = 'Edit queued. Only affected rooms regenerate — unchanged rooms stay cached.';
-    addChatMessage('agent', 'Edit is running. Watch the room cards for progress. Unchanged rooms remain cached.');
+    cacheNote.textContent = 'Edit queued. Only affected rooms update — unchanged rooms stay locked.';
+    addChatMessage('agent', 'Edit is running. Watch the room cards for progress. Unchanged rooms stay locked.');
   } catch (error) {
     addChatMessage('agent', `Something went wrong: ${error.message}`);
     regenerateButton.disabled = false;
@@ -280,6 +289,9 @@ copyReelEditJson?.addEventListener('click', async () => {
 document.querySelectorAll('[data-view-jump]').forEach((button) => {
   button.addEventListener('click', () => {
     const target = button.dataset.viewJump;
+    if (target === 'landing') {
+      localStorage.removeItem('haus_session');
+    }
     if ((target === 'results' || target === 'video') && views.results.classList.contains('is-hidden')) {
       setView('personalize');
       return;
@@ -304,6 +316,157 @@ async function loadFloorPlans() {
   renderSelectedPlan();
 }
 
+function saveSession() {
+  try {
+    localStorage.setItem('haus_session', JSON.stringify({
+      jobId: currentJobId,
+      planId: selectedPlan?.id ?? null,
+    }));
+  } catch { /* storage unavailable */ }
+}
+
+async function restoreSession() {
+  try {
+    const raw = localStorage.getItem('haus_session');
+    if (!raw) return;
+    const { jobId, planId } = JSON.parse(raw);
+    if (!jobId) return;
+
+    const res = await fetch(`/api/jobs/${jobId}`);
+    if (!res.ok) return;
+    const job = await res.json();
+    if (job.status !== 'completed') return;
+
+    // Restore plan selection
+    const plan = floorPlans.find((p) => p.id === planId) ?? floorPlans[0];
+    selectedPlan = plan;
+    renderFloorPlans();
+    renderSelectedPlan();
+
+    // Restore job state
+    currentJobId = jobId;
+    currentJob = job;
+    currentPipelineResult = job;
+    syncSelectedPlanFromJob(job);
+    renderPipelineResult(job);
+    renderPinterestReferences(job);
+    renderGeneratedStills(job);
+    renderRuntimeRooms(job);
+    renderReelEditor(job);
+    syncAgentView(job);
+
+    setView('results');
+  } catch { /* silently skip restore on any error */ }
+}
+
+async function loadDemoAesthetics() {
+  const grid = document.querySelector('#aesthetic-demo-grid');
+  if (!grid) return;
+  try {
+    const response = await fetch('/api/demo-aesthetics');
+    if (!response.ok) return;
+    const aesthetics = await response.json();
+    renderLandingAesthetics(aesthetics, grid);
+  } catch {
+    grid.innerHTML = '';
+  }
+}
+
+function renderLandingAesthetics(aesthetics, grid) {
+  if (!aesthetics?.length) { grid.innerHTML = ''; return; }
+
+  grid.innerHTML = aesthetics.map((a, cardIndex) => {
+    const videoRooms = a.rooms.filter((r) => r.video_url);
+    const stillRooms = a.rooms.filter((r) => r.still_url);
+    const hasVideo = videoRooms.length > 0;
+    const hasMedia = hasVideo || stillRooms.length > 0;
+
+    if (!hasMedia) {
+      return `
+        <div class="aesthetic-demo-card is-placeholder" data-card-index="${cardIndex}">
+          <div class="aesthetic-demo-info">
+            <div class="aesthetic-demo-placeholder-badge">Generation pending</div>
+            <div class="aesthetic-demo-name">${escapeHtml(a.aesthetic_name)}</div>
+            <p class="aesthetic-demo-summary">${escapeHtml(a.summary)}</p>
+          </div>
+        </div>
+      `;
+    }
+
+    const rooms = hasVideo ? videoRooms : stillRooms;
+    const first = rooms[0];
+    const mediaTag = hasVideo
+      ? `<video class="aesthetic-demo-media" src="${escapeHtml(first.video_url)}" autoplay muted loop playsinline></video>`
+      : `<img class="aesthetic-demo-media" src="${escapeHtml(first.still_url)}" alt="${escapeHtml(first.room_name)}">`;
+    const dots = rooms.map((_, i) => `<span class="aesthetic-dot${i === 0 ? ' is-active' : ''}" data-dot="${i}"></span>`).join('');
+
+    return `
+      <div class="aesthetic-demo-card${hasVideo ? '' : ' is-stills'}" data-card-index="${cardIndex}">
+        ${mediaTag}
+        <div class="aesthetic-demo-scrim"></div>
+        <div class="aesthetic-demo-info">
+          <div class="aesthetic-demo-room-label">${escapeHtml(first.room_name)}</div>
+          <div class="aesthetic-demo-name">${escapeHtml(a.aesthetic_name)}</div>
+          <p class="aesthetic-demo-summary">${escapeHtml(a.summary)}</p>
+          ${rooms.length > 1 ? `<div class="aesthetic-demo-dots">${dots}</div>` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  aesthetics.forEach((a, cardIndex) => {
+    const card = grid.querySelector(`[data-card-index="${cardIndex}"]`);
+    if (!card || card.classList.contains('is-placeholder')) return;
+    const videoRooms = a.rooms.filter((r) => r.video_url);
+    const stillRooms = a.rooms.filter((r) => r.still_url);
+    const hasVideo = videoRooms.length > 0;
+    const rooms = hasVideo ? videoRooms : stillRooms;
+    if (rooms.length <= 1) return;
+    startRoomCycle(card, rooms, hasVideo);
+  });
+}
+
+function startRoomCycle(card, rooms, hasVideo) {
+  let current = 0;
+  let errorCount = 0;
+  const media = card.querySelector('.aesthetic-demo-media');
+  const roomLabel = card.querySelector('.aesthetic-demo-room-label');
+  const dots = card.querySelectorAll('.aesthetic-dot');
+
+  if (hasVideo) {
+    media.addEventListener('error', () => {
+      errorCount += 1;
+      if (errorCount >= rooms.length) {
+        const still = rooms[current]?.still_url;
+        if (still) {
+          const img = document.createElement('img');
+          img.className = 'aesthetic-demo-media';
+          img.src = still;
+          img.alt = rooms[current]?.room_name ?? '';
+          media.replaceWith(img);
+        }
+      }
+    }, { passive: true });
+  }
+
+  function advance() {
+    current = (current + 1) % rooms.length;
+    const room = rooms[current];
+    if (hasVideo) {
+      media.src = room.video_url;
+      media.load();
+      media.play().catch(() => {});
+    } else {
+      media.src = room.still_url;
+      media.alt = room.room_name;
+    }
+    if (roomLabel) roomLabel.textContent = room.room_name;
+    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === current));
+  }
+
+  window.setInterval(advance, 4500);
+}
+
 function renderFloorPlans() {
   floorplanGrid.innerHTML = floorPlans.map((plan) => `
     <article class="floorplan-card ${plan.id === selectedPlan.id ? 'is-selected' : ''}">
@@ -326,6 +489,7 @@ function renderFloorPlans() {
   floorplanGrid.querySelectorAll('[data-plan-id]').forEach((button) => {
     button.addEventListener('click', () => {
       selectedPlan = floorPlans.find((plan) => plan.id === button.dataset.planId);
+      saveSession();
       renderFloorPlans();
       renderSelectedPlan();
       setView('personalize');
@@ -343,7 +507,6 @@ function renderSelectedPlan() {
     <span>${selectedPlan.price}</span>
     <span>${selectedPlan.available}</span>
   `;
-  renderRoomFocus(jobForPlan(selectedPlan));
 }
 
 function renderFloorPlanMedia(plan, altText) {
@@ -366,6 +529,11 @@ function renderProgressSteps(activeIndex = -1, complete = false) {
 }
 
 async function runGenerationSequence(formData) {
+  if (generationPinterestGallery) generationPinterestGallery.innerHTML = '';
+  if (resultsPinterestGallery) resultsPinterestGallery.innerHTML = '';
+  if (generatedStillsGallery) generatedStillsGallery.innerHTML = '';
+
+  setView('generation');
   let index = 0;
   renderProgressSteps(index);
   progressCaption.textContent = 'Creating a backend job and starting the room pipeline.';
@@ -386,8 +554,38 @@ async function runGenerationSequence(formData) {
   try {
     const job = await jobPromise;
     window.clearInterval(interval);
-    renderProgressSteps(1);
     currentJobId = job.job_id;
+    saveSession();
+
+    if (job.status === 'completed') {
+      // Load job data into state without triggering the auto-jump in refreshJob
+      const fullJobRes = await fetch(`/api/jobs/${currentJobId}`);
+      const fullJob = await fullJobRes.json();
+      currentJob = fullJob;
+      currentPipelineResult = fullJob;
+      syncSelectedPlanFromJob(fullJob);
+      renderPipelineResult(fullJob);
+      renderPinterestReferences(fullJob);
+      renderGeneratedStills(fullJob);
+      renderRuntimeRooms(fullJob);
+      renderReelEditor(fullJob);
+      renderSelectedPlan();
+      syncAgentView(fullJob);
+
+      // Walk through steps theatrically so the audience can follow the pipeline story
+      for (let i = 0; i < progressSteps.length; i++) {
+        renderProgressSteps(i);
+        progressCaption.textContent = progressSteps[i];
+        await new Promise((r) => window.setTimeout(r, 750));
+      }
+      renderProgressSteps(progressSteps.length, true);
+      progressCaption.textContent = 'All room clips assembled. Loading your preview…';
+      await new Promise((r) => window.setTimeout(r, 600));
+      setView('results');
+      return;
+    }
+
+    renderProgressSteps(1);
     subscribeToJob(currentJobId);
     await refreshJob(currentJobId);
     progressCaption.textContent = 'Backend job created. Waiting for room events.';
@@ -540,13 +738,14 @@ function renderResultsVideo(job) {
   if (!videoFrame) return;
 
   const finalPath = job.artifacts?.final_video_path;
+  const cachedFinalUrl = job.artifacts?.final_reel_url;
   const jobId = job.job_id;
   const firstClip = (job.artifacts?.approved_room_clips ?? [])[0];
   const clipUrl = firstClip?.url;
 
   const relPath = finalPath && jobId ? finalPath.split(`/${jobId}/`)[1] : null;
-  const localVideoUrl = relPath ? `/api/jobs/${jobId}/assets/${relPath}` : null;
-  const videoUrl = localVideoUrl ?? clipUrl ?? null;
+  const localVideoUrl = relPath ? `/api/jobs/${jobId}/assets/${relPath}?t=${job.updated_at ?? Date.now()}` : null;
+  const videoUrl = cachedFinalUrl ?? localVideoUrl ?? clipUrl ?? null;
 
   const duration = job.artifacts?.timeline?.total_duration ?? (job.artifacts?.approved_room_clips ?? []).reduce((sum, c) => {
     const roomJob = job.handoff?.room_generation_jobs?.find((r) => r.room_id === c.room_id);
@@ -771,8 +970,8 @@ function renderRuntimeRooms(job) {
     if (approvedRooms.length > 0) {
       roomStrip.innerHTML = approvedRooms.map((room) => `
         <article>
-          ${room.artifacts?.video_url ? `<video src="${escapeHtml(room.artifacts.video_url)}" controls playsinline></video>` : `<img src="${escapeHtml(room.artifacts?.styled_image_url ?? '')}" alt="${escapeHtml(room.room_name)} still">`}
-          <div><strong>${escapeHtml(room.room_name)}</strong><span>${escapeHtml(room.current_motion_mode ?? 'room clip')} · ${room.video_attempt_count} attempt</span></div>
+          ${room.artifacts?.video_url ? `<video src="${escapeHtml(room.artifacts.video_url)}" controls playsinline muted preload="metadata"></video>` : `<div class="runtime-placeholder">Video will appear here</div>`}
+          <div><strong>${escapeHtml(room.room_name)}</strong><span>${escapeHtml(room.current_motion_mode ?? 'room clip')} · video</span></div>
         </article>
       `).join('');
     }
@@ -815,6 +1014,23 @@ function renderRoomFocus(job) {
   `;
 }
 
+function titleFromId(value) {
+  return String(value ?? 'Room').replace(/[_-]+/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+function roomLabel(room, roomId) {
+  return room?.room_name ?? titleFromId(roomId);
+}
+
+function formatBytes(bytes) {
+  if (!Number.isFinite(Number(bytes))) return '0 MB';
+  return `${(Number(bytes) / 1024 / 1024).toFixed(1)} MB`;
+}
+
+function formatSeconds(seconds) {
+  if (!Number.isFinite(Number(seconds))) return '0s';
+  return `${Number(seconds).toFixed(1)}s`;
+}
 
 function renderPinterestPin(pin) {
   return `
@@ -973,7 +1189,7 @@ function syncAgentView(job) {
   } else if (fullRoom.state?.startsWith('VIDEO_')) {
     cacheNoteEl.textContent = 'Video generating — takes 1–3 min. Results will appear automatically.';
   } else if (fullRoom.state?.startsWith('STILL_')) {
-    cacheNoteEl.textContent = 'Only this room is being regenerated. All other clips stay cached.';
+    cacheNoteEl.textContent = 'Only this room is being regenerated. All other clips stay locked.';
   }
 }
 

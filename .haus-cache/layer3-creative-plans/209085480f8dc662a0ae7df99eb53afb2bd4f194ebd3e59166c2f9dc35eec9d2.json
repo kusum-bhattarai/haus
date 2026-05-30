@@ -1,0 +1,295 @@
+{
+  "vibe_report": {
+    "aesthetic_name": "Japandi Noir — Warm Japandi Noir",
+    "summary": "A measured, low-key luxury Japandi interior: deep matte walls and smoked oak joinery warmed by brass accents, natural textiles and a restrained plant presence. Spaces feel intimate and textural with layered ambient light; styling is sparse, family-ready and includes a compact standing work corner. Prioritize calm sightlines between living, dining and kitchen; keep material and color consistency across shared objects.",
+    "palette_rationale": "A warm-neutral palette anchored in charcoal and smoked oak (#0B0B0B / #2F2F2F / Smoked Oak #73503A) provides the dark, graphic base from the Pinterest cluster. Accents in warm brass (#D99A48) and mid-gray upholstery (#8F8F8F) introduce glow and tactile contrast without brightening the scheme. Use one soft warm-neutral rug tone to ground the floor planes.",
+    "lighting_mood": "Soft ambient with directional window pulls. Primary illumination comes from exterior daylight through bay glazing and a single bedroom window; supplement with warm practicals (aged-brass pendant, brass wall sconces, low-wattage floor lamp) and concealed warm LED cove or ribbed-panel backlight to create an intimate glow. Avoid overhead high-CRI cool white fixtures that break the warm tone.",
+    "materials": [
+      "matte painted walls (deep charcoal/near-black)",
+      "smoked oak joinery and slatted panels (matte finish)",
+      "honed black marble (coffee table)",
+      "low-pile wool-blend rug (warm oat tone)",
+      "charcoal linen upholstery",
+      "aged warm brass metalwork",
+      "matte black steel for task furniture"
+    ],
+    "textures": [
+      "vertical wood slats (smoked oak)",
+      "soft linen and layered bedding",
+      "honed stone surfaces",
+      "subtle woven rug",
+      "unglazed ceramics for plant pots"
+    ],
+    "furniture_language": [
+      "low-profile, rectilinear seating",
+      "slim-profile tables with minimal aprons",
+      "vertical slat backs and open shelving",
+      "compact utilitarian standing desk with concealed cable runs",
+      "curated single-object displays rather than clusters"
+    ],
+    "styling_rules": [
+      "one sculptural metallic accent (aged brass) per vignette",
+      "layer bedding and cushions in 2–3 tonal steps (light gray -> charcoal -> black)",
+      "leave negative space on shelving; use books and 1–2 ceramics per shelf",
+      "place a single bonsai or sculptural plant as organic counterpoint in living/dining sightlines",
+      "keep visible tech minimal and integrated (monitor arm, cable channel)"
+    ],
+    "avoid": [
+      "bright primary colors",
+      "high-gloss finishes that reflect too strongly",
+      "overcrowded shelves or heavy decorative sets",
+      "mismatched furniture visible across open sightlines"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living_room",
+        "headline": "Japandi Noir living hub — low sectional, sculptural coffee, work corner by the bay",
+        "guidance": "Frame the bay window as the primary light source. Anchor the seating on the neutral woven area rug with the low-profile 3-seater sofa and the black marble coffee table centered. Locate the adjustable standing desk + bookshelf at the bay return to form a calm work corner: keep desk facing the window, bookshelf perpendicular to sightline. Add one floor lamp or recessed slat backlight for evening warmth.",
+        "must_include": [
+          "low-profile 3-seater sofa — charcoal slate linen upholstery (Charcoal Slate #2F2F2F), smoked oak tapered legs, low bench form",
+          "black marble coffee table — round monolithic black marble, honed finish (Jet Black #0B0B0B)",
+          "neutral woven area rug — low-pile wool blend in warm oat",
+          "standing desk — compact adjustable-height standing desk, dark-stained oak top, matte black steel T-leg base",
+          "open bookshelf — freestanding smoked oak 5-shelf unit, matte finish",
+          "bonsai plant — small rounded ficus bonsai in unglazed ceramic pot"
+        ],
+        "must_avoid": [
+          "bright table lamps or cool white overheads",
+          "large ottomans that block the bay window sightline",
+          "cluttered desk with exposed cables"
+        ]
+      },
+      {
+        "room_id": "dream_bedroom",
+        "headline": "Moody, calm bedroom — black tactile backdrop, warm brass bedside accents",
+        "guidance": "Use matte charcoal walls with a smoked oak vertical-slatted headboard wall. Keep the bed low and centrally composed under the window. Add layered bedding textures and one brass bedside lamp per side with sculptural ceramics on a single floating shelf. Keep styling minimal: one plant and one framed print max.",
+        "must_include": [
+          "vertical smoked oak slat accent (use same Smoked Oak finish as living joinery)",
+          "layered bedding in light gray and charcoal",
+          "sculptural brass dome bedside lamp (aged warm brass accent)",
+          "neutral woven textiles and one small plant"
+        ],
+        "must_avoid": [
+          "bright patterned rugs",
+          "large metallic photo frames that reflect light",
+          "overhead cool white fixtures"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Compact warm kitchen — smoked oak accents, matte surfaces, visible prep zone",
+        "guidance": "Keep cabinetry matte and low-contrast; use smoked oak open shelves and a short run of countertop under the small window. Visible cooking surfaces should be matte black or dark stone; position small practical pendants only over the prep/island if present. Keep dishware simple and neutral, with one small plant or ceramic as the organic touch.",
+        "must_include": [
+          "smoked oak open shelving (matching Smoked Oak finish)",
+          "muted dark stone or matte black counter for visible prep",
+          "aged warm brass small task sconce or pendant (if pendant over island, match dining pendant finish)"
+        ],
+        "must_avoid": [
+          "bright stainless appliances in high-gloss",
+          "exposed fluorescent strips",
+          "contrasting bright backsplashes"
+        ]
+      },
+      {
+        "room_id": "dine_dining_room",
+        "headline": "Intimate corner dining — compact smoked oak table, single aged-brass pendant, bonsai vignette",
+        "guidance": "Place the rectangular smoked oak dining table close to the bay corner window so daylight sculpts the table surface. Hang the aged warm brass dome pendant centered 60cm above table. Keep seating minimal — 4 slim chairs — and use the same neutral woven rug if the sightline benefits from continuity with the living area.",
+        "must_include": [
+          "rectangular smoked oak dining table — matte smoked oak finish (Smoked Oak #73503A)",
+          "aged warm brass dome pendant — centered over table",
+          "bonsai plant (shared) if visible from living sightline"
+        ],
+        "must_avoid": [
+          "oversized chandeliers",
+          "mismatched dining chairs visible from living room"
+        ]
+      },
+      {
+        "room_id": "revive_bathroom",
+        "headline": "Quiet micro-bath — soft materials, frosted window, minimal monochrome fixtures",
+        "guidance": "Keep finishes matte and restrained. Use warm LED mirror strip or brass sconce for task light, derive ambient light only from the frosted window and practical fixtures. Keep towels and accessories in warm neutral tones.",
+        "must_include": [
+          "matte black or dark stone vanity top",
+          "warm LED mirror or brass sconce (aged warm brass accent)",
+          "neutral towels and single small plant or ceramic"
+        ],
+        "must_avoid": [
+          "bright white tile expanses",
+          "reflective polished chrome fixtures"
+        ]
+      }
+    ],
+    "confidence": 0.86,
+    "warnings": [
+      "Dining footprint is small (7.8 x 8 ft): select a compact table (approx 150 cm length) and slim chairs to prevent blocking the living sightline.",
+      "Kitchen measured dimensions were not provided — avoid oversized islands or appliances that would violate the open-plan sightline scale."
+    ]
+  },
+  "overall_mood": "low-key intimate Japandi with warm brass accents and smoked oak discipline",
+  "global_style_notes": [
+    "Preserve exact joinery and layout from the floor plan; do not change window locations or major openings.",
+    "Derive all light direction from visible windows and placed practical fixtures only.",
+    "Maintain identical finish names across rooms: 'Smoked Oak' for wood joinery, 'Charcoal Slate' for main upholstery, 'Jet Black' for honed stone, 'Warm Brass' for metal accents.",
+    "Keep scale believable: low seating heights, compact desk, and human-scale pendant drops."
+  ],
+  "negative_prompt": "no color inconsistency between rooms, no mismatched furniture across sightlines, blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift",
+  "room_plans": [
+    {
+      "room_id": "nest_living_room",
+      "lighting_instruction": "Primary daylight from bay window (daylight warm ~5500K). Evening: low-output warm LED cove behind slatted panel and one floor lamp (warm 2200–2700K). Keep exposure stable; emphasize directional window pull with soft shadow edges.",
+      "dalle_scene_details": "Wide living shot, frontal 3/4 view toward bay window. Keep vertical lines true and furniture layout stable. Foreground: neutral woven area rug and centered black marble coffee table. Seating: reference shared object 'low-profile 3-seater sofa — charcoal slate linen upholstery (Charcoal Slate #2F2F2F), smoked oak tapered legs, low bench form'. Work corner at bay return: reference 'standing desk — compact adjustable-height standing desk, dark-stained oak top, matte black steel T-leg base' with 'open bookshelf — freestanding smoked oak 5-shelf unit, matte finish' placed perpendicular to sightline. Add bonsai plant on low stand near window (reference 'bonsai plant — small rounded ficus bonsai in unglazed ceramic pot'). Visible light sources: bay glazing and subtle cove backlight behind slat wall; no additional overheads. Materials: matte charcoal walls, smoked oak slats, low-pile warm oat rug, honed black marble.",
+      "video_prompt": "Very slow dolly in, camera moves forward from living-room edge toward bay window while light from bay window shifts gently, shadows lengthen subtly, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "low-profile 3-seater sofa — charcoal slate linen upholstery (Charcoal Slate #2F2F2F), smoked oak tapered legs, low bench form",
+        "black marble coffee table — round monolithic black marble, honed finish (Jet Black #0B0B0B)",
+        "neutral woven area rug — low-pile wool blend in warm oat",
+        "standing desk — compact adjustable-height standing desk, dark-stained oak top, matte black steel T-leg base",
+        "open bookshelf — freestanding smoked oak 5-shelf unit, matte finish",
+        "bonsai plant — small rounded ficus bonsai in unglazed ceramic pot"
+      ],
+      "must_avoid": [
+        "visible clutter on desk (exposed cables, many papers)",
+        "bright or cool-toned lamps",
+        "furniture or objects that break the line-of-sight proportions"
+      ]
+    },
+    {
+      "room_id": "dine_dining_room",
+      "lighting_instruction": "Daylight from bay corner window sculpts table surface. Single aged-brass dome pendant centered over table (warm 2200–2700K) provides evening key. Maintain consistent pendant finish and drop across scenes.",
+      "dalle_scene_details": "3/4 angle from living-room perspective looking toward the bay dining corner so the dining table is visible within the larger open plan. Place 'rectangular smoked oak dining table — matte smoked oak finish (Smoked Oak #73503A)' under the pendant 'aged warm brass dome pendant — single centered over table, finish \"aged warm brass\" (Warm Brass #D99A48), interior white diffuser'. If rug continuity is beneficial, include 'neutral woven area rug — low-pile wool blend in warm oat' partially under table aligned with living area rug edge. Keep chairs slim and finished in smoked oak or dark metal to match table. Visible light sources: bay glazing and the single pendant only.",
+      "video_prompt": "Super smooth camera glides horizontally from right to left, slow truck across the open plan revealing the dining corner, directional sunlight moves across table surface, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "orbital_pan",
+      "duration_seconds": 5,
+      "must_include": [
+        "rectangular smoked oak dining table — matte smoked oak finish (Smoked Oak #73503A)",
+        "aged warm brass dome pendant — single centered over table, finish \"aged warm brass\" (Warm Brass #D99A48), interior white diffuser",
+        "neutral woven area rug — low-pile wool blend in warm oat",
+        "bonsai plant — small rounded ficus bonsai in unglazed ceramic pot"
+      ],
+      "must_avoid": [
+        "oversized decorative centerpieces",
+        "mismatched chair finishes visible from the living room"
+      ]
+    },
+    {
+      "room_id": "taste_kitchen",
+      "lighting_instruction": "Daylight from the small kitchen window (cooler tone relative to bay). Supplement with under-cabinet warm LED (2700–3000K) and one small aged-brass task pendant or sconce over prep. Do not introduce extra ceiling sources.",
+      "dalle_scene_details": "Counter-level view focusing on the visible prep run and open shelving. Use smoked oak open shelving (match 'Smoked Oak' finish) with minimal dishware and one small plant or ceramic. Visible finishes: matte dark stone countertop and matte cabinetry; if a pendant is present reference 'aged warm brass dome pendant — finish \"aged warm brass\" (Warm Brass #D99A48)' but scaled small for kitchen. Keep composition tight to avoid showing unmeasured parts of the plan. Visible sightlines to the dining table should include the exact 'rectangular smoked oak dining table' or pendant when framed.",
+      "video_prompt": "Super smooth camera drifts gently upward and sideways (aerial drift) revealing prep surfaces, subtle light shift from window and under-cabinet LEDs, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "aerial_drift",
+      "duration_seconds": 5,
+      "must_include": [
+        "smoked oak open shelving (matching Smoked Oak finish)",
+        "aged warm brass dome pendant — finish \"aged warm brass\" (Warm Brass #D99A48) if present",
+        "matte dark stone countertop (visible prep surface)"
+      ],
+      "must_avoid": [
+        "bright reflective stainless surfaces in the camera frame",
+        "unrealistic backlit cabinets"
+      ]
+    },
+    {
+      "room_id": "dream_bedroom",
+      "lighting_instruction": "Window on top wall is the only natural source. Use low-warm bedside lamps (aged-brass finish), and a concealed warm LED strip behind the slatted headboard for evening ambience. Keep exposure restrained to preserve mood.",
+      "dalle_scene_details": "Tight-to-wide bedroom framing: low bed centered under single window with smoked oak vertical slat headboard wall. Use layered bedding (light gray sheets, charcoal duvet) and two sculptural brass bedside lamps (reference brass finish 'Warm Brass #D99A48'). Keep decorative objects minimal: one small ceramic and one plant. Maintain material continuity: smoked oak slats same finish as living/dining joinery. Visible sightline to bathroom should show consistent finishes but no duplicated furniture between bedroom and living beyond the shared slat language.",
+      "video_prompt": "Static slow push-in (static zoom) into bed vignette, camera holds and then tightens for detail on layered textiles and brass bedside lamp, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "vertical smoked oak slat accent (use same Smoked Oak finish as living joinery)",
+        "layered bedding in light gray and charcoal",
+        "sculptural brass dome bedside lamp (aged warm brass accent)"
+      ],
+      "must_avoid": [
+        "bright decorative mirrors that reflect light sources unnaturally",
+        "over-styled bedside clutter"
+      ]
+    },
+    {
+      "room_id": "revive_bathroom",
+      "lighting_instruction": "Frosted window is the ambient source; add warm LED mirror strip or single aged-brass sconce for task light only. Keep overall light low and warm; no daylight from other rooms should be simulated.",
+      "dalle_scene_details": "Small bathroom frame focusing on vanity and frosted window. Use matte dark vanity top and warm LED mirror or single brass sconce (match 'Warm Brass' finish). Towels and accessories limited to warm neutrals. Keep tile and wall textures matte; do not show extraneous fixtures beyond the measured plan. Preserve verticals and believable scale.",
+      "video_prompt": "Static slow push-in (static zoom) into vanity detail, steady camera holds on material textures and warm mirror light, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "matte black or dark stone vanity top",
+        "warm LED mirror or brass sconce (aged warm brass accent)"
+      ],
+      "must_avoid": [
+        "bright bathroom fluorescents",
+        "high-gloss reflective chrome finishes"
+      ]
+    }
+  ],
+  "shared_objects": [
+    {
+      "object_name": "low-profile 3-seater sofa",
+      "appearance_spec": "low-profile 3-seater sofa — charcoal slate linen upholstery (Charcoal Slate #2F2F2F), smoked oak tapered legs, low bench form, seat height 38 cm, no visible feet from side angle",
+      "room_ids": [
+        "nest_living_room"
+      ]
+    },
+    {
+      "object_name": "black marble coffee table",
+      "appearance_spec": "black marble coffee table — round monolithic black marble, honed finish (Jet Black #0B0B0B), low profile, 90 cm diameter",
+      "room_ids": [
+        "nest_living_room"
+      ]
+    },
+    {
+      "object_name": "neutral woven area rug",
+      "appearance_spec": "neutral woven area rug — low-pile wool blend in warm oat (warm oat neutral), rectangular under living area ~8x5 ft, subtle linear weave, fringe-free",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    },
+    {
+      "object_name": "rectangular smoked oak dining table",
+      "appearance_spec": "rectangular smoked oak dining table — matte smoked oak finish (Smoked Oak #73503A), compact 6-seat footprint (approx 150 cm length), slender square legs",
+      "room_ids": [
+        "dine_dining_room",
+        "nest_living_room",
+        "taste_kitchen"
+      ]
+    },
+    {
+      "object_name": "aged warm brass dome pendant",
+      "appearance_spec": "aged warm brass dome pendant — single centered over table, aged warm brass finish (Warm Brass #D99A48), interior white diffuser, diameter approx 45 cm, recommended 60 cm drop above table",
+      "room_ids": [
+        "dine_dining_room",
+        "taste_kitchen"
+      ]
+    },
+    {
+      "object_name": "standing desk",
+      "appearance_spec": "standing desk — compact adjustable-height standing desk, dark-stained oak top (Dark Oak/Smoked Oak family), matte black steel T-leg base, single monitor arm, integrated cable channel",
+      "room_ids": [
+        "nest_living_room"
+      ]
+    },
+    {
+      "object_name": "open bookshelf",
+      "appearance_spec": "open bookshelf — freestanding smoked oak 5-shelf unit, matte finish (Smoked Oak #73503A), vertical slat back, slim profile",
+      "room_ids": [
+        "nest_living_room"
+      ]
+    },
+    {
+      "object_name": "bonsai plant",
+      "appearance_spec": "bonsai plant — small rounded ficus bonsai in unglazed ceramic pot (soft stone color), placed on low stand",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    }
+  ],
+  "warnings": [
+    "Ensure all shared object specs are used verbatim in visual generations to avoid cross-room mismatches.",
+    "Dining room is tight — verify chosen dining table scale in production so chairs do not block the bay glazing in camera moves.",
+    "Preserve vertical lines and window geometry exactly; do not push heavy perspective corrections that alter the floor plan."
+  ]
+}

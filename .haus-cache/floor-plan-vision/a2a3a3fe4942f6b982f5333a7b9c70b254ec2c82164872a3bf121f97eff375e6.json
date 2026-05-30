@@ -5,36 +5,36 @@
   "rooms": [
     {
       "room_id": null,
-      "name": "Dream (bedroom)",
+      "name": "Dream",
       "dimensions": {
         "width": 12.5,
-        "length": 11.583333333333334,
-        "area": 144.79
+        "length": 11.583,
+        "area": 144.792
       },
       "unit": "ft",
-      "confidence": 1
+      "confidence": 0.95
     },
     {
       "room_id": null,
-      "name": "Nest (living area)",
+      "name": "Nest",
       "dimensions": {
-        "width": 11.916666666666666,
-        "length": 11.666666666666666,
-        "area": 139.03
+        "width": 11.917,
+        "length": 11.667,
+        "area": 139.028
       },
       "unit": "ft",
-      "confidence": 1
+      "confidence": 0.95
     },
     {
       "room_id": null,
-      "name": "Dine (dining)",
+      "name": "Dine",
       "dimensions": {
-        "width": 7.833333333333333,
+        "width": 7.833,
         "length": 8,
-        "area": 62.67
+        "area": 62.667
       },
       "unit": "ft",
-      "confidence": 1
+      "confidence": 0.95
     }
   ],
   "notes": null

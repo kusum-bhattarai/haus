@@ -1,0 +1,285 @@
+{
+  "vibe_report": {
+    "aesthetic_name": "Warm Japandi Family Home",
+    "summary": "A calm, family-friendly Japandi interior that balances warm neutrals, low-profile furniture, and layered natural textures. Prioritize a cozy work corner in the bedroom while keeping sightlines clean across the open-plan living, dining, and kitchen. Light is soft and directional from windows; materials focus on light oak, warm walnut accents, hand-glazed ceramics, woven pendants, and tactile textiles.",
+    "palette_rationale": "Use the warm_neutral palette to create a cohesive, family-ready backdrop: warm off-white surfaces (#EDE6DE) as base, pale sand oak (#D2BFA3) for primary woodwork, tan accents (#B58E61) for upholstery and ceramics, deeper walnut (#8A6E52) as anchor for occasional furniture, muted green foliage (#6A736A) for biophilic moments, and charcoal (#2F3230) for minimal metal details. Keep contrast gentle — mid-contrast tonal layering rather than stark black/white.",
+    "lighting_mood": "Soft ambient daylight with directional window pulls that create warm, sculpted shadows. Use low-level practical lamps and a woven pendant over the dining table for evening warmth. Avoid hard, top-down commercial lighting: keep all highlights plausible from visible windows and fixtures.",
+    "materials": [
+      "light oak veneer — tabletops, shelving, flooring accents",
+      "warm walnut — low coffee table and occasional accents",
+      "linen and cotton — sofa and cushions",
+      "hand-glazed ceramic — vases, tabletop",
+      "natural seagrass/woven fibers — pendant and poufs",
+      "matte black steel — desk legs and small hardware"
+    ],
+    "textures": [
+      "soft low-pile wool rug with subtle weave",
+      "linen upholstery with light slub",
+      "hand-thrown matte ceramics",
+      "woven seagrass pendant texture",
+      "light sanded oak grain"
+    ],
+    "furniture_language": [
+      "low-profile, horizontal emphasis",
+      "slim tapered legs or plinth bases",
+      "rounded organic tabletops and edges",
+      "integrated, minimal hardware",
+      "functional, decluttered surfaces for family use"
+    ],
+    "styling_rules": [
+      "limit tabletop decor to 2–3 ceramic vessels or a single sculptural vase",
+      "keep color accents confined to tan and muted green — no bright primary colors",
+      "balance low furniture with vertical plant elements to guide sightlines",
+      "place family-work corner in bedroom with clean cable management and soft task lighting",
+      "use layered rugs/poufs in reading nook for tactile warmth"
+    ],
+    "avoid": [
+      "high-gloss lacquer or slick chrome finishes",
+      "busy patterns and saturated color pops",
+      "over-styling with many small objects",
+      "large, tall sofas that block sightlines in the open-plan"
+    ],
+    "room_guidance": [
+      {
+        "room_id": "nest_living_room",
+        "headline": "Calm low-profile living hub visible from dining & kitchen",
+        "guidance": "Stage a low, pale-oat linen sofa facing toward the bay window and subtly angled toward the dining table to foster connection. Keep coffee table and rug proportions low and organic. Add a medium tall plant near the bay window for vertical balance. Limit decor to two ceramic vessels and a stack of family books. Ensure visual continuity with the dining set and pendant.",
+        "must_include": [
+          "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), low wooden plinth base in light oak (#D2BFA3), single long seat cushion, no visible legs",
+          "textured wool rug — warm oatmeal (#EDE6DE) with subtle charcoal linear weave (#2F3230), 8x10ft, low pile",
+          "low organic coffee table — organic-shaped low coffee table, solid walnut stained warm brown (#8A6E52), matte finish, curved edges",
+          "tall potted fiddle-leaf fig — matte terra-cotta pot in muted green (#6A736A), height ~5ft"
+        ],
+        "must_avoid": [
+          "tall, bulky sofas that obstruct sightlines",
+          "bright colored throw cushions",
+          "large floor lamps that block the opening to Dine"
+        ]
+      },
+      {
+        "room_id": "dine_dining_room",
+        "headline": "Inviting Japandi dining nook with woven pendant focal",
+        "guidance": "Center a round light-oak dining table beneath an oversized woven pendant. Keep seating slim and textured in neutral linen; stage the tabletop with a single sculptural hand-glazed vase and one linen place setting. The pendant should read as the primary focal point visible from the living area.",
+        "must_include": [
+          "round light-oak dining table — round 48in diameter, light oak veneer tabletop (#D2BFA3), slim tapered legs, matte finish",
+          "oversized woven pendant — dome-shaped woven seagrass pendant, warm tan (#B58E61), diameter 28in, interior white diffuser",
+          "one small ceramic vase (tan) and linen napkin styling"
+        ],
+        "must_avoid": [
+          "high-gloss pendant finishes",
+          "glass or metallic chandeliers that break the Japandi read"
+        ]
+      },
+      {
+        "room_id": "taste_kitchen",
+        "headline": "Compact, tactile kitchen visible to dining & living",
+        "guidance": "Keep counters minimal and tactile — pale oak shelving or drawer fronts, matte black hardware, and one small grouping of ceramic wares. Ensure window light above the sink is the primary highlight; any pendant or fixture must align with the woven, warm aesthetic of the dining pendant. Keep appliances unobtrusive.",
+        "must_include": [
+          "visible edge of round light-oak dining table spec (see shared objects)",
+          "small ceramic canister group in tan (#B58E61) near the sink"
+        ],
+        "must_avoid": [
+          "stainless-steel reflections that read cold",
+          "overhead fluorescent-style fixtures"
+        ]
+      },
+      {
+        "room_id": "dream_bedroom",
+        "headline": "Serene bedroom with a cozy standing-desk corner for working parents",
+        "guidance": "Keep the bed low and simple, with warm linen bedding. Place the standing desk and bookshelf in a dedicated corner that reads as a calm work nook — desk faces the interior, with soft task lamp and cable management. Add a small woven pouf or floor cushion for a low reading moment.",
+        "must_include": [
+          "compact standing desk — pale oak tabletop (#D2BFA3), black matte steel legs (#2F3230), 48in width, slim profile",
+          "open 5-shelf light oak bookshelf — light oak finish (#D2BFA3), slim vertical form, matte finish"
+        ],
+        "must_avoid": [
+          "cluttered desk with many monitors or bright stickers",
+          "high-throne chairs that break low Japandi scale"
+        ]
+      },
+      {
+        "room_id": "revive_bathroom",
+        "headline": "Small spa-like bathroom with frosted window and natural tile",
+        "guidance": "Use warm, textured tile or microcement in a pale sand tone, simple matte black fixtures, and a single potted plant by the tub. Keep the palette consistent with the rest of the home and minimize patterned surfaces.",
+        "must_include": [
+          "matte black fixtures (#2F3230)",
+          "pale sand tile or microcement (#D2BFA3)"
+        ],
+        "must_avoid": [
+          "bright white clinical tiles",
+          "shiny chrome hardware"
+        ]
+      }
+    ],
+    "confidence": 0.87,
+    "warnings": [
+      "Open-plan sightlines require strict furniture color consistency — any mismatch will be noticeable",
+      "Kitchen and bathroom dimensions were estimated; verify placement relative to windows before final staging"
+    ]
+  },
+  "overall_mood": "Warm minimal Japandi — calm, textural, family-friendly",
+  "global_style_notes": [
+    "Preserve architecture and sightlines: keep low furniture and horizontal emphasis to maintain openness.",
+    "Derive all directional light from visible windows and the woven pendant/practical lamps only.",
+    "Keep props minimal and hand-made in feel: ceramics, woven textiles, a small book stack, one tray."
+  ],
+  "negative_prompt": "no color inconsistency between rooms, no mismatched furniture across sightlines, blur, distort, low quality, warped architecture, flicker, unstable camera, unrealistic lighting, muddy shadows, layout drift",
+  "room_plans": [
+    {
+      "room_id": "nest_living_room",
+      "lighting_instruction": "Soft morning directional light from bay window; boost midtones slightly for readability while preserving sculpted shadows. Use warm practical lamp for evening shots.",
+      "dalle_scene_details": "Wide open-plan living area with low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), low wooden plinth base in light oak (#D2BFA3), single long seat cushion, no visible legs — positioned facing bay window. Place textured wool rug — warm oatmeal (#EDE6DE) with subtle charcoal linear weave (#2F3230), 8x10ft, low pile — centered under seating. Low organic coffee table — organic-shaped low coffee table, solid walnut stained warm brown (#8A6E52), matte finish, curved edges — in front of sofa with two ceramic vessels. Tall potted fiddle-leaf fig — matte terra-cotta pot in muted green (#6A736A), ~5ft — near the bay. Ensure the round light-oak dining table — round 48in diameter, light oak veneer tabletop (#D2BFA3), slim tapered legs, matte finish — and oversized woven pendant — dome-shaped woven seagrass pendant, warm tan (#B58E61), diameter 28in, interior white diffuser — are visible across the opening to the dining nook. Keep wall art minimal and aligned to sofa height. Maintain believable scale and verticals; do not add objects that obstruct the circulation path to the kitchen.",
+      "video_prompt": "Wide interior shot with a slow and smooth dolly in, camera moves forward from the dining toward the living area revealing layered textures, directional window light shifts across textiles and plants, shadows crawl gently, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), low wooden plinth base in light oak (#D2BFA3), single long seat cushion, no visible legs",
+        "textured wool rug — warm oatmeal (#EDE6DE) with subtle charcoal linear weave (#2F3230), 8x10ft, low pile",
+        "low organic coffee table — organic-shaped low coffee table, solid walnut stained warm brown (#8A6E52), matte finish, curved edges",
+        "tall potted fiddle-leaf fig — matte terra-cotta pot in muted green (#6A736A), height ~5ft",
+        "round light-oak dining table — round 48in diameter, light oak veneer tabletop (#D2BFA3), slim tapered legs, matte finish",
+        "oversized woven pendant — dome-shaped woven seagrass pendant, warm tan (#B58E61), diameter 28in, interior white diffuser"
+      ],
+      "must_avoid": [
+        "sofa color or finish that deviates from specified pale oat linen",
+        "adding extra large furniture that alters the open-plan sightline"
+      ]
+    },
+    {
+      "room_id": "dine_dining_room",
+      "lighting_instruction": "High natural light from bay-style multi-pane window; highlight woven pendant as the main practical light for evening frames. Keep reflections soft and warm.",
+      "dalle_scene_details": "Compact dining nook with round light-oak dining table — round 48in diameter, light oak veneer tabletop (#D2BFA3), slim tapered legs, matte finish — centered beneath oversized woven pendant — dome-shaped woven seagrass pendant, warm tan (#B58E61), diameter 28in, interior white diffuser — hung approximately 30in above tabletop. Four slim dining chairs with textured neutral linen upholstery and light oak legs. Table staged with a single hand-glazed tan ceramic vase and one linen place setting. From camera angle include partial view of low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), low wooden plinth base in light oak (#D2BFA3), single long seat cushion, no visible legs — and the textured wool rug at the edge of frame to preserve cross-room continuity. Ensure window mullions read natural and verticals are true.",
+      "video_prompt": "Super smooth camera glides horizontally from right to left, slow truck revealing table and pendant while light shifts gently across the tabletop, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "static_zoom",
+      "duration_seconds": 5,
+      "must_include": [
+        "round light-oak dining table — round 48in diameter, light oak veneer tabletop (#D2BFA3), slim tapered legs, matte finish",
+        "oversized woven pendant — dome-shaped woven seagrass pendant, warm tan (#B58E61), diameter 28in, interior white diffuser",
+        "one hand-glazed tan ceramic vase"
+      ],
+      "must_avoid": [
+        "pendants or fixtures that clash in material or color with the woven seagrass pendant",
+        "over-decorating the tabletop with many small objects"
+      ]
+    },
+    {
+      "room_id": "taste_kitchen",
+      "lighting_instruction": "Directional window light above counter as primary source; maintain soft ambient fill from dining pendant when visible. Keep countertop highlights controlled.",
+      "dalle_scene_details": "Small tactile kitchen plane with pale oak lower cabinets or open shelving (light oak veneer #D2BFA3), matte black hardware (#2F3230), and a small window/vent above the counter. Keep counters clear except for a small ceramic canister group in tan (#B58E61) and a single wooden cutting board. From the kitchen-angle include partial sightline to round light-oak dining table — round 48in diameter, light oak veneer tabletop (#D2BFA3), slim tapered legs, matte finish — and the edge of low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), low wooden plinth base in light oak (#D2BFA3). Do not introduce reflective stainless surfaces that dominate the frame.",
+      "video_prompt": "Very slow truck right, camera slides laterally across the compact kitchen toward the dining nook, directional window light moves across textured surfaces, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "orbital_pan",
+      "duration_seconds": 5,
+      "must_include": [
+        "small ceramic canister group in tan (#B58E61)",
+        "round light-oak dining table — round 48in diameter, light oak veneer tabletop (#D2BFA3), slim tapered legs, matte finish"
+      ],
+      "must_avoid": [
+        "bright appliance reflections or added glossy surfaces",
+        "extra hanging lights that compete with the woven pendant"
+      ]
+    },
+    {
+      "room_id": "dream_bedroom",
+      "lighting_instruction": "Medium soft daylight from single exterior window; add a warm task lamp at the standing desk for evening shots. Keep shadows soft and pleasant.",
+      "dalle_scene_details": "Serene bedroom with low platform bed, warm linen bedding in off-white (#EDE6DE) and a soft tan throw. Work corner contains compact standing desk — pale oak tabletop (#D2BFA3), black matte steel legs (#2F3230), 48in width, slim profile — paired with a small warm LED task lamp. Nearby, open 5-shelf light oak bookshelf — light oak finish (#D2BFA3), slim vertical form, matte finish — holds neatly arranged books, a small ceramic vessel, and a woven pouf. Keep desk cables hidden and avoid large monitors; emphasize calm and usable family work corner.",
+      "video_prompt": "Super smooth camera travels in a short arc around the bedroom work corner, gentle orbital pan keeping the desk and bookshelf centered, warm lamp illumination engages as daylight softens, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "orbital_pan",
+      "duration_seconds": 5,
+      "must_include": [
+        "compact standing desk — pale oak tabletop (#D2BFA3), black matte steel legs (#2F3230), 48in width, slim profile",
+        "open 5-shelf light oak bookshelf — light oak finish (#D2BFA3), slim vertical form, matte finish"
+      ],
+      "must_avoid": [
+        "desktop clutter and multiple monitors",
+        "office task chairs that break the low Japandi aesthetic"
+      ]
+    },
+    {
+      "room_id": "revive_bathroom",
+      "lighting_instruction": "Low natural light from frosted window; supplement with warm wall sconce above vanity for evening. Retain moody yet readable shadows.",
+      "dalle_scene_details": "Small spa-like bathroom with pale sand microcement or tile (#D2BFA3), matte black fixtures (#2F3230), and a frosted window near the tub. Add a single potted plant on a low stool and a folded linen towel in warm tan (#B58E61). Keep styling minimal and cohesive with the home's palette; avoid glossy ceramic subway tiles or chrome fixtures.",
+      "video_prompt": "Very slow dolly out revealing bathroom from doorway, soft directional light through frosted window, shadows remain stable, consistent exposure, cinematic, photorealistic",
+      "camera_motion": "slow_dolly",
+      "duration_seconds": 5,
+      "must_include": [
+        "matte black fixtures (#2F3230)",
+        "pale sand tile or microcement (#D2BFA3)"
+      ],
+      "must_avoid": [
+        "clinical white tiles or shiny chrome hardware",
+        "excessive decorative items on counters"
+      ]
+    }
+  ],
+  "shared_objects": [
+    {
+      "object_name": "low-profile 3-seater sofa",
+      "appearance_spec": "low-profile 3-seater sofa — pale oat linen upholstery (#EDE6DE), low wooden plinth base in light oak (#D2BFA3), single long seat cushion, no visible legs",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room",
+        "taste_kitchen"
+      ]
+    },
+    {
+      "object_name": "round light-oak dining table",
+      "appearance_spec": "round light-oak dining table — round 48in diameter, light oak veneer tabletop (#D2BFA3), slim tapered legs, matte finish",
+      "room_ids": [
+        "dine_dining_room",
+        "nest_living_room",
+        "taste_kitchen"
+      ]
+    },
+    {
+      "object_name": "oversized woven pendant",
+      "appearance_spec": "oversized woven pendant — dome-shaped woven seagrass pendant, warm tan (#B58E61), diameter 28in, interior white diffuser",
+      "room_ids": [
+        "dine_dining_room",
+        "nest_living_room",
+        "taste_kitchen"
+      ]
+    },
+    {
+      "object_name": "low organic coffee table",
+      "appearance_spec": "low organic coffee table — organic-shaped low coffee table, solid walnut stained warm brown (#8A6E52), matte finish, curved edges",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    },
+    {
+      "object_name": "textured wool rug",
+      "appearance_spec": "textured wool rug — warm oatmeal (#EDE6DE) with subtle charcoal linear weave (#2F3230), 8x10ft, low pile",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    },
+    {
+      "object_name": "tall potted fiddle-leaf fig",
+      "appearance_spec": "tall potted fiddle-leaf fig — matte terra-cotta pot in muted green (#6A736A), height ~5ft",
+      "room_ids": [
+        "nest_living_room",
+        "dine_dining_room"
+      ]
+    },
+    {
+      "object_name": "compact standing desk",
+      "appearance_spec": "compact standing desk — pale oak tabletop (#D2BFA3), black matte steel legs (#2F3230), 48in width, slim profile",
+      "room_ids": [
+        "dream_bedroom"
+      ]
+    },
+    {
+      "object_name": "open 5-shelf light oak bookshelf",
+      "appearance_spec": "open 5-shelf light oak bookshelf — light oak finish (#D2BFA3), slim vertical form, matte finish",
+      "room_ids": [
+        "dream_bedroom"
+      ]
+    }
+  ],
+  "warnings": [
+    "Confirm actual locations of doors/windows against the floor plan before finalizing camera paths — some room dimensions were estimated by ML.",
+    "Because the living/dining/kitchen share open sightlines, any deviation in material or color across rooms will be highly visible; adhere strictly to the shared_objects appearance_spec.",
+    "For video passes, run one editorial image-pass (AutoHDR editorial correction) on each representative still before generating the 5s Fal clips to ensure verticals and window pulls are correct."
+  ]
+}

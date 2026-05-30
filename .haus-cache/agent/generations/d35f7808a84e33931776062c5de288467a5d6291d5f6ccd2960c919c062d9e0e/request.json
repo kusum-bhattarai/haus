@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99aca9/wNgvExKeyRZm4qO7W1U9N_uYrRFXcE.png",
+    "prompt": "Wide interior shot with a slow and smooth dolly in. Dramatic shadows crawl and shift across walls, furnishings, and architectural surfaces. Crisp shadow edges in motion. Editorial film style. Neutral white balance, balanced exposure, stable motion. Atmospheric architectural cinematography. Very slow dolly out revealing bathroom from doorway, soft directional light through frosted window, shadows remain stable, consistent exposure, cinematic, photorealistic Revive, Warm minimal Japandi — calm, textural, family-friendly Maintain believable residential scale for Revive at roughly small. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "a2a051864d7780c9b26d8fa7cc32a600931bdb6f425fd34d13c60ff7aa01895b"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

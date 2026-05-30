@@ -1,0 +1,189 @@
+{
+  "floor_plan_id": "1b1",
+  "manifest_path": null,
+  "avatar_base_image_path": null,
+  "music_bed_path": "/Users/quamos/Repos/haus/frontend/assets/music/warm-japandi.mp3",
+  "assets": [
+    {
+      "asset_id": "still:nest_living_room",
+      "label": "Nest still",
+      "kind": "room_still",
+      "shot_type": "footage",
+      "media_type": "image",
+      "room_id": "nest_living_room",
+      "room_name": "Nest",
+      "sequence_index": 0,
+      "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/c8661a34ebd5f0fbc686eee100b11c5a526121f40c71a546e18ea7fd891089a2/still-0.png",
+      "url": "https://v3b.fal.media/files/b/0a99ada4/BknNj9zd5tQiHXjC9J9Ww_stK6xxw3.png",
+      "duration_seconds": 4,
+      "motion_preset": "slow_dolly",
+      "tags": [
+        "room",
+        "still"
+      ]
+    },
+    {
+      "asset_id": "still:dream_bedroom",
+      "label": "Dream still",
+      "kind": "room_still",
+      "shot_type": "footage",
+      "media_type": "image",
+      "room_id": "dream_bedroom",
+      "room_name": "Dream",
+      "sequence_index": 1,
+      "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/ab1e4d2444b3a875a29fc09fbedc8f8f3fb2ca0cdcb89c0a7dfa79bdba81a9c0/still-0.png",
+      "url": "https://v3b.fal.media/files/b/0a99aca5/4wWqq1609XL1dZe46dvH9_WAS1CmqJ.png",
+      "duration_seconds": 4,
+      "motion_preset": "orbital_pan",
+      "tags": [
+        "room",
+        "still"
+      ]
+    },
+    {
+      "asset_id": "still:taste_kitchen",
+      "label": "Taste still",
+      "kind": "room_still",
+      "shot_type": "footage",
+      "media_type": "image",
+      "room_id": "taste_kitchen",
+      "room_name": "Taste",
+      "sequence_index": 2,
+      "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/f9b78fd613a047dffbe85138b26fdfe402aa7accbc6b0fa6328e8de566a4e964/still-0.png",
+      "url": "https://v3b.fal.media/files/b/0a99aca5/ztNJdpm95BlHQjasfCySE_eigmFJ0D.png",
+      "duration_seconds": 4,
+      "motion_preset": "orbital_pan",
+      "tags": [
+        "room",
+        "still"
+      ]
+    },
+    {
+      "asset_id": "still:dine_dining_room",
+      "label": "Dine still",
+      "kind": "room_still",
+      "shot_type": "footage",
+      "media_type": "image",
+      "room_id": "dine_dining_room",
+      "room_name": "Dine",
+      "sequence_index": 3,
+      "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/53e0c558839c8ad1998f995485b631678a27d973da2221a8d671a6857ee85c6a/still-0.png",
+      "url": "https://v3b.fal.media/files/b/0a99aca5/2kuHc_KRrKMjoeLnuPJVk_fm8HBaMw.png",
+      "duration_seconds": 4,
+      "motion_preset": "static_zoom",
+      "tags": [
+        "room",
+        "still"
+      ]
+    },
+    {
+      "asset_id": "still:revive_bathroom",
+      "label": "Revive still",
+      "kind": "room_still",
+      "shot_type": "footage",
+      "media_type": "image",
+      "room_id": "revive_bathroom",
+      "room_name": "Revive",
+      "sequence_index": 4,
+      "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/16e309225463f2cc3012f5896ea6a859f30c1050ab8f357a6c9ef3bc07030ad2/still-0.png",
+      "url": "https://v3b.fal.media/files/b/0a99aca9/wNgvExKeyRZm4qO7W1U9N_uYrRFXcE.png",
+      "duration_seconds": 4,
+      "motion_preset": "slow_dolly",
+      "tags": [
+        "room",
+        "still"
+      ]
+    },
+    {
+      "asset_id": "clip:nest_living_room",
+      "label": "Nest clip",
+      "kind": "approved_room_clip",
+      "shot_type": "footage",
+      "media_type": "video",
+      "room_id": "nest_living_room",
+      "room_name": "Nest",
+      "sequence_index": 0,
+      "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/58d783d2df08371c84df26aad35cf3ebd0154cb91f36809120ad73b20c1cd637/video-0.mp4",
+      "url": "https://v3b.fal.media/files/b/0a99adba/kSBDA-5uwFaJzQVKHMjCm_video.mp4",
+      "duration_seconds": 5,
+      "motion_preset": "slow_dolly",
+      "tags": [
+        "room",
+        "video"
+      ]
+    },
+    {
+      "asset_id": "clip:dream_bedroom",
+      "label": "Dream clip",
+      "kind": "approved_room_clip",
+      "shot_type": "footage",
+      "media_type": "video",
+      "room_id": "dream_bedroom",
+      "room_name": "Dream",
+      "sequence_index": 1,
+      "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/0602ee7e82d7430153d38deeba501ef54323b001b55a52950d34d1cf1a187329/video-0.mp4",
+      "url": "https://v3b.fal.media/files/b/0a99acd7/QSaxvXWogZg21l8vpsnwR_video.mp4",
+      "duration_seconds": 5,
+      "motion_preset": "orbital_pan",
+      "tags": [
+        "room",
+        "video"
+      ]
+    },
+    {
+      "asset_id": "clip:taste_kitchen",
+      "label": "Taste clip",
+      "kind": "approved_room_clip",
+      "shot_type": "footage",
+      "media_type": "video",
+      "room_id": "taste_kitchen",
+      "room_name": "Taste",
+      "sequence_index": 2,
+      "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/92c75724879965e6fd273fd6f57d2f3d88a7982db12c1b6c4ae51e78ad133384/video-0.mp4",
+      "url": "https://v3b.fal.media/files/b/0a99acd5/d-C8mYYsuzEwW-D9m1XJb_video.mp4",
+      "duration_seconds": 5,
+      "motion_preset": "orbital_pan",
+      "tags": [
+        "room",
+        "video"
+      ]
+    },
+    {
+      "asset_id": "clip:dine_dining_room",
+      "label": "Dine clip",
+      "kind": "approved_room_clip",
+      "shot_type": "footage",
+      "media_type": "video",
+      "room_id": "dine_dining_room",
+      "room_name": "Dine",
+      "sequence_index": 3,
+      "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/a78b6cd334605ce80421b0e160dc73d5312059e2ea0c98cb9ec6bd8e84de7399/video-0.mp4",
+      "url": "https://v3b.fal.media/files/b/0a99acbf/TOhNT_qMPJJ2x1YxKuUoP_video.mp4",
+      "duration_seconds": 5,
+      "motion_preset": "static_zoom",
+      "tags": [
+        "room",
+        "video"
+      ]
+    },
+    {
+      "asset_id": "clip:revive_bathroom",
+      "label": "Revive clip",
+      "kind": "approved_room_clip",
+      "shot_type": "footage",
+      "media_type": "video",
+      "room_id": "revive_bathroom",
+      "room_name": "Revive",
+      "sequence_index": 4,
+      "path": "/Users/quamos/Repos/haus/.haus-cache/agent/generations/d35f7808a84e33931776062c5de288467a5d6291d5f6ccd2960c919c062d9e0e/video-0.mp4",
+      "url": "https://v3b.fal.media/files/b/0a99acc5/jmz9Ce3W-kPHWUrZd2EWT_video.mp4",
+      "duration_seconds": 5,
+      "motion_preset": "slow_dolly",
+      "tags": [
+        "room",
+        "video"
+      ]
+    }
+  ],
+  "warnings": []
+}

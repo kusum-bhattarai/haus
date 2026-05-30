@@ -4,61 +4,60 @@
   "density": "layered",
   "style_era": "mid_century",
   "dominant_colors": [
-    "#144d35",
-    "#b88b4d",
-    "#6b4026",
-    "#d9c2a6",
-    "#c85a34"
+    "#1E4B3A",
+    "#B78A40",
+    "#6B4328",
+    "#C45A2C",
+    "#E6D7C6"
   ],
   "mood_words": [
     "botanical spa",
-    "brass hardware glow",
-    "handmade tile texture",
-    "reclaimed walnut warmth",
-    "textured woven accents",
-    "curated global art"
+    "aged-brass warmth",
+    "handmade zellige texture",
+    "earthy walnut warmth",
+    "collected vintage-art"
   ],
   "pinterest_cluster_labels": [
-    "emerald zellige bathroom with brass fixtures",
-    "compact green-tile shower + natural stone sink",
-    "dark-green tile kitchen with walnut cabinets",
-    "mid-century gallery bedroom with warm orange accents",
-    "earthy paint & palette direction"
+    "Emerald zellige bathroom with brass fixtures",
+    "Compact green-tile bathroom with raw wood vanity",
+    "Walnut kitchen with deep green vertical tile backsplash",
+    "Art-forward warm bedroom / living — terracotta & collected pieces"
   ],
   "cluster_summary": [
     {
-      "label": "emerald zellige bathroom + brass spa",
+      "label": "Emerald zellige bathroom with brass fixtures",
       "pin_ids": [
         "1012465559998726645",
         "1012465559998726635"
       ],
-      "visual_notes": "Glossy emerald green rectangular/ zellige tiles fully enveloping shower and vanity; warm brass fixtures (shower, sconces, mirror frames); stone basin and woven textiles to add organic contrast — stage with potted foliage and textured baskets.",
-      "weight": 0.3
+      "visual_notes": "Deep glossy emerald zellige tiles laid in stacked/brick patterns, warm brushed brass fittings (shower, sconces, mirrors), layered natural stone or terrazzo shower floors, live botanicals and woven basket textures. Stage with matte-black or dark planter, brass hardware, stone vessel sink, soft warm LED sconces to emphasize glaze depth.",
+      "weight": 0.35
     },
     {
-      "label": "green tile + walnut kitchen",
-      "pin_ids": [
-        "1012465559998726622"
-      ],
-      "visual_notes": "Deep green vertical tiles as backsplash against rich walnut cabinetry and light marble counters; minimal hardware, geometric floor for grounding — emphasize wood grain, brass/bronze accents, and warm under-cabinet light for depth.",
-      "weight": 0.25
-    },
-    {
-      "label": "mid-century bedroom gallery",
+      "label": "Compact green-tile bathroom with raw wood vanity",
       "pin_ids": [
         "1012465559998726571"
       ],
-      "visual_notes": "Low-profile walnut platform bed, dense gallery wall of framed art in warm ochres and orange, layered kilim/handwoven rugs — stage with leather/wood bedside pieces and terracotta textiles to reinforce vintage mid-century temperament.",
+      "visual_notes": "Narrow vertical/stacked green tiles with high gloss finish paired with a floating reclaimed-wood vanity and rounded brass mirror. Add warm filament bulbs, small hanging plant, and textured woven rug to soften tile reflectivity and create a cozy, spa-like micro-bath.",
       "weight": 0.25
     },
     {
-      "label": "earthy color & material palette",
+      "label": "Walnut kitchen with deep green vertical tile backsplash",
       "pin_ids": [
+        "1012465559998726635"
+      ],
+      "visual_notes": "Warm walnut cabinetry and marble counters combined with deep green, slightly textured vertical subway tiles. Use minimal brass accents (pendant hardware or pulls), pale marble countertops and geometric floor patterning. Stage with wooden cutting boards, matte ceramic canisters and muted greenery.",
+      "weight": 0.2
+    },
+    {
+      "label": "Art-forward warm bedroom / living — terracotta & collected pieces",
+      "pin_ids": [
+        "1012465559998726622",
         "1012465559998726657"
       ],
-      "visual_notes": "Swatch and material guidance: emerald greens, warm brass/gold, walnut browns, terracotta accents and warm beiges; recommend matte paints for walls, glazed tiles for wet areas, tactile woven rugs and natural stone surfaces.",
+      "visual_notes": "Mid-century low-profile furniture and gallery-style wall composition with bold terracotta/orange artworks and mixed vintage frames. Layer rugs with tribal motifs, velvet or wool upholstery in rust/brown tones, and sculptural lighting. Stage with curated objects, books, and a few large plants to keep the composition grounded and warm.",
       "weight": 0.2
     }
   ],
-  "confidence": 0.86
+  "confidence": 0.89
 }

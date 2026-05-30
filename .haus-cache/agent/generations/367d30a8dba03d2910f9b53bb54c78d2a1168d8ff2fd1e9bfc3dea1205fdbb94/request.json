@@ -1,0 +1,15 @@
+{
+  "endpoint_id": "bytedance/seedance-2.0/image-to-video",
+  "params": {
+    "image_url": "https://v3b.fal.media/files/b/0a99ac5e/IFPCXJJemiiBODkWjQNrU_WVNLQ0t6.png",
+    "prompt": "Very slow truck right, time-lapse light progression, camera slides laterally while light shifts across the space, shadows gradually move and lengthen, parallax effect, consistent exposure, stable motion, cinematic, photorealistic Super smooth camera travels in a gentle arc around the dining table (parallax orbit), pendant remains centered, daylight rolls slowly across oak surfaces, consistent exposure, cinematic, photorealistic. Dine, Calm minimal warmth — tactile Japandi with family-friendly scale Maintain believable residential scale for a 7.833 by 8 ft Dine. Plausible light drift from visible sources only, consistent exposure, straight architecture, stable walls and windows, premium real-estate cinematography.",
+    "duration": "5",
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "generate_audio": false
+  },
+  "source_hashes": [
+    "feb7a41e8f1f72bef2d3c711bfb68cd56f25ace3fb74909995f7c21ab267b02a"
+  ],
+  "skill_version": "57211e1e9ccfd1d8732aff54114143ee94bad76f384da5a81016be2466db7e55"
+}

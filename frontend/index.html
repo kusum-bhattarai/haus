@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Haus | Springmarc at San Marcos</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="topbar">
@@ -16,6 +18,7 @@
         </div>
       </div>
       <nav class="topnav" aria-label="Demo sections">
+        <button class="nav-button" data-view-jump="landing" id="nav-landing">Home</button>
         <button class="nav-button is-active" data-view-jump="portal">Floor plans</button>
         <button class="nav-button" data-view-jump="results">Preview</button>
         <button class="nav-button" data-view-jump="video">Video</button>
@@ -24,7 +27,35 @@
     </header>
 
     <main>
-      <section class="portal-shell" id="portal-view">
+      <section class="landing-shell" id="landing-view">
+
+        <div class="landing-hero">
+          <div class="landing-hero-inner">
+            <div class="landing-eyebrow">Haus · AI Interior Visualization</div>
+            <h1 class="landing-headline">
+              <span class="lh-primary">Any aesthetic.</span>
+              <span class="lh-secondary">Same floor plan.</span>
+            </h1>
+            <p class="landing-subtext">Paste a public Pinterest board. Haus reads the style, applies it room-by-room to the real floor plan layout, and generates a video of the home you'd actually live in — before you sign a lease.</p>
+            <button class="landing-cta" id="landing-cta" type="button">Explore floor plans &rarr;</button>
+          </div>
+          <div class="landing-hero-rule"></div>
+        </div>
+
+        <div class="landing-aesthetics-section">
+          <div class="landing-section-header">
+            <div class="landing-section-eyebrow">Live from the pipeline</div>
+            <h2 class="landing-section-title">The same floor plan. Three Pinterest boards. Three completely different homes.</h2>
+            <p class="landing-section-desc">Every clip is AI-generated from a real board — no templates, no stock photos. The layout stays fixed. Only your aesthetic changes.</p>
+          </div>
+          <div class="aesthetic-demo-grid" id="aesthetic-demo-grid">
+            <div class="aesthetic-demo-loading">Loading visualizations&hellip;</div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="portal-shell is-hidden" id="portal-view">
         <div class="property-hero">
           <img
             src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85"
@@ -76,7 +107,8 @@
                 id="pinterest-url"
                 name="pinterestUrl"
                 type="url"
-                value="https://www.pinterest.com/example/warm-japandi-home/"
+                value="https://www.pinterest.com/tarive22/japandi-interior-design/"
+                list="cached-pinterest-boards"
                 required
               >
               <span class="field-help">Paste a public board with interiors, furniture, colors, or lifestyle inspiration.</span>
@@ -88,9 +120,9 @@
             <fieldset>
               <legend>Objects to include</legend>
               <div class="object-grid">
-                <label><input type="checkbox" name="objects" value="crib" checked> Crib</label>
+                <label><input type="checkbox" name="objects" value="crib"> Crib</label>
                 <label><input type="checkbox" name="objects" value="standing_desk" checked> Standing desk</label>
-                <label><input type="checkbox" name="objects" value="bookshelf"> Bookshelf</label>
+                <label><input type="checkbox" name="objects" value="bookshelf" checked> Bookshelf</label>
                 <label><input type="checkbox" name="objects" value="yoga_mat"> Yoga mat</label>
               </div>
             </fieldset>
@@ -151,27 +183,23 @@
           </article>
         </div>
 
-        <section class="room-focus-panel" id="room-focus-panel"></section>
-
-        <div class="results-grid">
-          <aside class="vibe-report">
-            <h3>Vibe report</h3>
-            <div class="vibe-name" id="vibe-name">Warm Japandi Family Calm</div>
-            <p id="vibe-summary">A calm warm-neutral direction with oak, linen, rounded silhouettes, and soft golden light.</p>
-            <div class="palette-row">
-              <span style="--swatch:#f2e8da"></span>
-              <span style="--swatch:#c7aa7a"></span>
-              <span style="--swatch:#7d6b58"></span>
-              <span style="--swatch:#f7f4ee"></span>
-            </div>
-            <dl class="vibe-details">
-              <div><dt>Lighting</dt><dd id="vibe-lighting">Golden natural</dd></div>
-              <div><dt>Density</dt><dd id="vibe-density">Minimal, lived-in</dd></div>
-              <div><dt>Materials</dt><dd id="vibe-materials">Oak, linen, ceramic</dd></div>
-              <div><dt>Avoid</dt><dd id="vibe-avoid">Gloss, clutter, busy pattern</dd></div>
-            </dl>
-          </aside>
-        </div>
+        <aside class="vibe-report">
+          <h3>Vibe report</h3>
+          <div class="vibe-name" id="vibe-name">Warm Japandi Family Calm</div>
+          <p id="vibe-summary">A calm warm-neutral direction with oak, linen, rounded silhouettes, and soft golden light.</p>
+          <div class="palette-row">
+            <span style="--swatch:#f2e8da"></span>
+            <span style="--swatch:#c7aa7a"></span>
+            <span style="--swatch:#7d6b58"></span>
+            <span style="--swatch:#f7f4ee"></span>
+          </div>
+          <dl class="vibe-details">
+            <div><dt>Lighting</dt><dd id="vibe-lighting">Golden natural</dd></div>
+            <div><dt>Density</dt><dd id="vibe-density">Minimal, lived-in</dd></div>
+            <div><dt>Materials</dt><dd id="vibe-materials">Oak, linen, ceramic</dd></div>
+            <div><dt>Avoid</dt><dd id="vibe-avoid">Gloss, clutter, busy pattern</dd></div>
+          </dl>
+        </aside>
         <section class="reference-gallery" id="results-pinterest-gallery"></section>
         <section class="reference-gallery" id="generated-stills-gallery"></section>
 
@@ -234,6 +262,7 @@
             </aside>
           </div>
 
+          <div class="cache-reel-browser" id="cache-reel-browser"></div>
           <div class="scene-editor-list" id="scene-editor-list"></div>
         </section>
       </section>
@@ -275,7 +304,7 @@
               <div class="placement-marker is-hidden" id="placement-marker">+</div>
             </div>
             <div class="cache-note" id="cache-note">
-              Previous final video is cached. Only the living room image and video segment will be regenerated, then the final video is reassembled.
+              Previous final video is ready. Only the living room image and video segment will be regenerated, then the final video is reassembled.
             </div>
           </article>
         </div>
@@ -291,6 +320,6 @@
       </div>
     </div>
 
-    <script src="./app.js" type="module"></script>
+    <script src="./app.js?v=hackfair-1" type="module"></script>
   </body>
 </html>
